@@ -12,7 +12,7 @@
 
     <meta
         name="description"
-        content="دليل الأدوية في بوابة التمريض. ابحث عن اسم الدواء أو المادة الفعالة واعرف المعلومات التعليمية الأساسية."
+        content="دليل الأدوية في بوابة التمريض - ابحث عن الأدوية والمادة الفعالة والتصنيف والمعلومات التعليمية."
     >
 
     <meta
@@ -29,7 +29,6 @@
         دليل الأدوية | بوابة التمريض
     </title>
 
-
     <link
         rel="stylesheet"
         href="css/global.css"
@@ -39,7 +38,7 @@
     <style>
 
         /* =====================================================
-           DRUG GUIDE
+           PAGE
            ===================================================== */
 
         .drugs-page {
@@ -48,8 +47,20 @@
         }
 
 
+        .drugs-container {
+            width:
+                min(
+                    1100px,
+                    calc(100% - 30px)
+                );
+
+            margin:
+                auto;
+        }
+
+
         /* =====================================================
-           HEADER
+           HERO
            ===================================================== */
 
         .drugs-hero {
@@ -63,19 +74,8 @@
                     #176b82
                 );
 
-            color: white;
-        }
-
-
-        .drugs-container {
-            width:
-                min(
-                    1100px,
-                    calc(100% - 30px)
-                );
-
-            margin:
-                auto;
+            color:
+                white;
         }
 
 
@@ -296,7 +296,7 @@
                 16px;
 
             background:
-                #fff;
+                white;
 
             border:
                 1px solid #e2eaee;
@@ -422,7 +422,7 @@
 
 
         /* =====================================================
-           RESULTS
+           RESULTS HEADER
            ===================================================== */
 
         .drug-results-header {
@@ -464,6 +464,10 @@
         }
 
 
+        /* =====================================================
+           GRID
+           ===================================================== */
+
         .drugs-grid {
             display:
                 grid;
@@ -483,7 +487,7 @@
 
 
         /* =====================================================
-           DRUG CARD
+           CARD
            ===================================================== */
 
         .drug-card {
@@ -817,729 +821,726 @@
 
 <body>
 
-
-    <main class="drugs-page">
-
-
-        <!-- =================================================
-             HERO
-             ================================================= -->
-
-        <section class="drugs-hero">
-
-            <div class="drugs-container">
-
-                <div class="drugs-hero-content">
-
-                    <div class="drugs-icon">
-                        💊
-                    </div>
+<main class="drugs-page">
 
 
-                    <h1>
-                        دليل الأدوية
-                    </h1>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="drugs-hero">
+
+        <div class="drugs-container">
+
+            <div class="drugs-hero-content">
+
+                <div class="drugs-icon">
+                    💊
+                </div>
 
 
-                    <p>
-                        ابحث عن اسم الدواء أو المادة الفعالة
-                        للوصول إلى المعلومات التعليمية المتاحة
-                        في بوابة التمريض.
-                    </p>
+                <h1>
+                    دليل الأدوية
+                </h1>
 
 
-                    <form
-                        class="drug-search-box"
-                        id="drugSearchForm"
+                <p>
+                    ابحث عن اسم الدواء أو المادة الفعالة
+                    للوصول إلى المعلومات التعليمية المتاحة
+                    في بوابة التمريض.
+                </p>
+
+
+                <form
+                    class="drug-search-box"
+                    id="drugSearchForm"
+                >
+
+                    <span class="drug-search-icon">
+                        🔍
+                    </span>
+
+
+                    <input
+                        type="search"
+                        id="drugSearchInput"
+                        placeholder="ابحث باسم الدواء أو المادة الفعالة..."
+                        autocomplete="off"
                     >
 
-                        <span
-                            class="drug-search-icon"
-                        >
-                            🔍
-                        </span>
+
+                    <button
+                        type="submit"
+                        class="drug-search-button"
+                    >
+                        بحث
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-                        <input
-                            type="search"
-                            id="drugSearchInput"
-                            placeholder="ابحث باسم الدواء أو المادة الفعالة..."
-                            autocomplete="off"
-                        >
+    <!-- =====================================================
+         CONTENT
+         ===================================================== -->
+
+    <section class="drugs-content">
+
+        <div class="drugs-container">
 
 
-                        <button
-                            type="submit"
-                            class="drug-search-button"
-                        >
-                            بحث
-                        </button>
+            <div class="drug-info-banner">
 
-                    </form>
+                <div class="drug-info-banner-icon">
+                    ℹ️
+                </div>
+
+                <div>
+
+                    <strong>
+                        دليل تعليمي
+                    </strong>
+
+                    <span>
+                        المعلومات المعروضة هنا للتثقيف
+                        والمعرفة العامة، ولا تُعد وصفة
+                        علاجية أو بديلًا عن الطبيب أو الصيدلي.
+                    </span>
 
                 </div>
 
             </div>
 
-        </section>
+
+            <!-- =================================================
+                 CATEGORIES
+                 ================================================= -->
+
+            <div
+                class="drug-categories"
+                id="drugCategories"
+            >
+
+                <button
+                    class="drug-category active"
+                    data-category="all"
+                >
+                    الكل
+                </button>
 
 
-        <!-- =================================================
-             CONTENT
-             ================================================= -->
-
-        <section class="drugs-content">
-
-            <div class="drugs-container">
-
-
-                <div class="drug-info-banner">
-
-                    <div
-                        class="drug-info-banner-icon"
-                    >
-                        ℹ️
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            دليل تعليمي
-                        </strong>
-
-                        <span>
-                            المعلومات المعروضة هنا للتثقيف
-                            والمعرفة العامة، ولا تُعد وصفة
-                            علاجية أو بديلًا عن الطبيب أو الصيدلي.
-                        </span>
-
-                    </div>
-
-                </div>
+                <button
+                    class="drug-category"
+                    data-category="analgesics"
+                >
+                    💢 مسكنات
+                </button>
 
 
-                <!-- =================================================
-                     CATEGORIES
-                     ================================================= -->
+                <button
+                    class="drug-category"
+                    data-category="antibiotics"
+                >
+                    🦠 مضادات حيوية
+                </button>
+
+
+                <button
+                    class="drug-category"
+                    data-category="gastro"
+                >
+                    🫃 الجهاز الهضمي
+                </button>
+
+
+                <button
+                    class="drug-category"
+                    data-category="cardio"
+                >
+                    ❤️ القلب
+                </button>
+
+
+                <button
+                    class="drug-category"
+                    data-category="respiratory"
+                >
+                    🫁 الجهاز التنفسي
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULTS HEADER
+                 ================================================= -->
+
+            <div class="drug-results-header">
+
+                <h2>
+                    الأدوية
+                </h2>
+
+                <span
+                    class="drug-count"
+                    id="drugCount"
+                >
+                    0 دواء
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 GRID
+                 ================================================= -->
+
+            <div
+                class="drugs-grid"
+                id="drugsGrid"
+            >
+            </div>
+
+
+            <!-- =================================================
+                 DISCLAIMER
+                 ================================================= -->
+
+            <div class="drug-disclaimer">
+
+                <strong>
+                    ⚠️ تنبيه مهم:
+                </strong>
+
+                محتوى هذا القسم تعليمي فقط.
+                لا تستخدم أي دواء أو تغيّر الجرعة
+                أو طريقة الاستخدام بناءً على المعلومات
+                الموجودة بالموقع دون الرجوع إلى الطبيب
+                أو الصيدلي المختص.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     DATA
+     ========================================================= -->
+
+<script src="data/site-data.js"></script>
+
+<script src="data/drugs/drugs-data.js"></script>
+
+
+<script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const searchForm =
+        document.getElementById(
+            "drugSearchForm"
+        );
+
+
+    const searchInput =
+        document.getElementById(
+            "drugSearchInput"
+        );
+
+
+    const drugsGrid =
+        document.getElementById(
+            "drugsGrid"
+        );
+
+
+    const drugCount =
+        document.getElementById(
+            "drugCount"
+        );
+
+
+    const categoryButtons =
+        document.querySelectorAll(
+            ".drug-category"
+        );
+
+
+    let activeCategory =
+        "all";
+
+
+    /* =====================================================
+       DATABASE SAFETY CHECK
+       ===================================================== */
+
+    const drugs =
+        Array.isArray(
+            window.BAWABET_DRUGS
+        )
+            ?
+            window.BAWABET_DRUGS
+            :
+            [];
+
+
+    /* =====================================================
+       NORMALIZE ARABIC + ENGLISH
+       ===================================================== */
+
+    function normalizeText(
+        text
+    ) {
+
+        return String(text || "")
+            .toLowerCase()
+            .trim()
+
+            .replace(
+                /[أإآ]/g,
+                "ا"
+            )
+
+            .replace(
+                /ة/g,
+                "ه"
+            )
+
+            .replace(
+                /ى/g,
+                "ي"
+            )
+
+            .replace(
+                /[ًٌٍَُِّْـ]/g,
+                ""
+            )
+
+            .replace(
+                /\s+/g,
+                " "
+            );
+
+    }
+
+
+    /* =====================================================
+       ESCAPE HTML
+       ===================================================== */
+
+    function escapeHTML(
+        value
+    ) {
+
+        return String(
+            value || ""
+        )
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+    }
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    function getFilteredDrugs() {
+
+        const query =
+            normalizeText(
+                searchInput.value
+            );
+
+
+        return drugs.filter(
+            function (drug) {
+
+                const categoryMatch =
+                    activeCategory ===
+                    "all"
+                    ||
+                    drug.category ===
+                    activeCategory;
+
+
+                if (
+                    !categoryMatch
+                ) {
+
+                    return false;
+
+                }
+
+
+                if (!query) {
+
+                    return true;
+
+                }
+
+
+                const searchable =
+                    normalizeText(
+
+                        [
+                            drug.name,
+                            drug.arabicName,
+                            drug.genericName,
+                            drug.categoryName,
+                            drug.searchable,
+                            drug.description
+                        ].join(" ")
+
+                    );
+
+
+                return searchable.includes(
+                    query
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       CARD
+       ===================================================== */
+
+    function createDrugCard(
+        drug
+    ) {
+
+        const name =
+            escapeHTML(
+                drug.arabicName
+            );
+
+
+        const englishName =
+            escapeHTML(
+                drug.name
+            );
+
+
+        const generic =
+            escapeHTML(
+                drug.genericName
+            );
+
+
+        const category =
+            escapeHTML(
+                drug.categoryName
+            );
+
+
+        const description =
+            escapeHTML(
+                drug.uses &&
+                drug.uses.length
+                    ?
+                    drug.uses[0]
+                    :
+                    "معلومات تعليمية عن الدواء."
+            );
+
+
+        return `
+
+            <article
+                class="drug-card"
+            >
 
                 <div
-                    class="drug-categories"
-                    id="drugCategories"
+                    class="drug-card-top"
                 >
 
-                    <button
-                        class="drug-category active"
-                        data-category="all"
+                    <span
+                        class="drug-card-icon"
                     >
-                        الكل
-                    </button>
+                        💊
+                    </span>
 
-
-                    <button
-                        class="drug-category"
-                        data-category="analgesics"
-                    >
-                        💢 مسكنات
-                    </button>
-
-
-                    <button
-                        class="drug-category"
-                        data-category="antibiotics"
-                    >
-                        🦠 مضادات حيوية
-                    </button>
-
-
-                    <button
-                        class="drug-category"
-                        data-category="gastro"
-                    >
-                        🫃 الجهاز الهضمي
-                    </button>
-
-
-                    <button
-                        class="drug-category"
-                        data-category="cardio"
-                    >
-                        ❤️ القلب
-                    </button>
-
-
-                    <button
-                        class="drug-category"
-                        data-category="respiratory"
-                    >
-                        🫁 الجهاز التنفسي
-                    </button>
-
-                </div>
-
-
-                <!-- =================================================
-                     RESULTS HEADER
-                     ================================================= -->
-
-                <div class="drug-results-header">
-
-                    <h2>
-                        الأدوية
-                    </h2>
 
                     <span
-                        class="drug-count"
-                        id="drugCount"
+                        class="drug-status"
                     >
-                        0 دواء
+                        معلومات تعليمية
                     </span>
 
                 </div>
 
 
-                <!-- =================================================
-                     DRUGS GRID
-                     ================================================= -->
+                <h3>
+                    ${name}
+                </h3>
+
 
                 <div
-                    class="drugs-grid"
-                    id="drugsGrid"
+                    class="drug-generic"
                 >
+                    ${englishName}
                 </div>
 
 
-                <!-- =================================================
-                     DISCLAIMER
-                     ================================================= -->
+                <p>
+                    ${description}
+                </p>
 
-                <div class="drug-disclaimer">
 
-                    <strong>
-                        ⚠️ تنبيه مهم:
-                    </strong>
+                <div
+                    class="drug-card-footer"
+                >
 
-                    محتوى هذا القسم تعليمي فقط.
-                    لا تستخدم أي دواء أو تغيّر الجرعة
-                    أو طريقة الاستخدام بناءً على المعلومات
-                    الموجودة بالموقع دون الرجوع إلى الطبيب
-                    أو الصيدلي المختص.
+                    <span
+                        class="drug-category-label"
+                    >
+                        ${category}
+                        ·
+                        ${generic}
+                    </span>
+
+
+                    <a
+                        href="drug.html?id=${encodeURIComponent(drug.id)}"
+                        class="drug-open"
+                    >
+                        التفاصيل ←
+                    </a>
 
                 </div>
 
-            </div>
+            </article>
 
-        </section>
+        `;
 
-    </main>
+    }
 
 
-    <!-- =====================================================
-         DRUG DATA
-         ===================================================== -->
+    /* =====================================================
+       RENDER
+       ===================================================== */
 
-    <script
-        src="data/site-data.js"
-    ></script>
+    function renderDrugs() {
 
+        const results =
+            getFilteredDrugs();
 
-    <script>
 
-        /* =====================================================
-           SAMPLE DATA
-           =====================================================
+        drugCount.textContent =
+            results.length +
+            " دواء";
 
-           دي بيانات تجريبية فقط لتشغيل الواجهة.
-           هنفصل قاعدة بيانات الأدوية الحقيقية في ملف مستقل
-           في الخطوة القادمة.
-        */
 
-        const DRUGS = [
-
-            {
-                id:
-                    "paracetamol",
-
-                name:
-                    "Paracetamol",
-
-                arabicName:
-                    "باراسيتامول",
-
-                generic:
-                    "Paracetamol",
-
-                category:
-                    "analgesics",
-
-                description:
-                    "مسكن وخافض للحرارة يُستخدم في العديد من الحالات الشائعة.",
-
-                status:
-                    "معلومات تعليمية",
-
-                url:
-                    "#"
-
-            },
-
-
-            {
-                id:
-                    "amoxicillin",
-
-                name:
-                    "Amoxicillin",
-
-                arabicName:
-                    "أموكسيسيلين",
-
-                generic:
-                    "Amoxicillin",
-
-                category:
-                    "antibiotics",
-
-                description:
-                    "مضاد حيوي من مجموعة البنسلين ويُستخدم في بعض أنواع العدوى البكتيرية.",
-
-                status:
-                    "معلومات تعليمية",
-
-                url:
-                    "#"
-
-            },
-
-
-            {
-                id:
-                    "omeprazole",
-
-                name:
-                    "Omeprazole",
-
-                arabicName:
-                    "أوميبرازول",
-
-                generic:
-                    "Omeprazole",
-
-                category:
-                    "gastro",
-
-                description:
-                    "دواء يعمل على تقليل إفراز حمض المعدة ويستخدم في بعض اضطرابات الجهاز الهضمي.",
-
-                status:
-                    "معلومات تعليمية",
-
-                url:
-                    "#"
-
-            },
-
-
-            {
-                id:
-                    "salbutamol",
-
-                name:
-                    "Salbutamol",
-
-                arabicName:
-                    "سالبوتامول",
-
-                generic:
-                    "Salbutamol",
-
-                category:
-                    "respiratory",
-
-                description:
-                    "دواء موسع للشعب الهوائية ويستخدم في بعض حالات ضيق الشعب الهوائية.",
-
-                status:
-                    "معلومات تعليمية",
-
-                url:
-                    "#"
-
-            }
-
-        ];
-
-
-        /* =====================================================
-           ELEMENTS
-           ===================================================== */
-
-        const searchForm =
-            document.getElementById(
-                "drugSearchForm"
-            );
-
-
-        const searchInput =
-            document.getElementById(
-                "drugSearchInput"
-            );
-
-
-        const drugsGrid =
-            document.getElementById(
-                "drugsGrid"
-            );
-
-
-        const drugCount =
-            document.getElementById(
-                "drugCount"
-            );
-
-
-        const categoryButtons =
-            document.querySelectorAll(
-                ".drug-category"
-            );
-
-
-        let activeCategory =
-            "all";
-
-
-        /* =====================================================
-           NORMALIZE
-           ===================================================== */
-
-        function normalizeDrugText(
-            text
+        if (
+            results.length === 0
         ) {
 
-            return String(text || "")
-                .toLowerCase()
-                .trim()
+            drugsGrid.innerHTML = `
 
-                .replace(
-                    /[أإآ]/g,
-                    "ا"
-                )
+                <div
+                    class="drug-empty"
+                >
 
-                .replace(
-                    /ة/g,
-                    "ه"
-                )
+                    <div
+                        class="drug-empty-icon"
+                    >
+                        🔎
+                    </div>
 
-                .replace(
-                    /ى/g,
-                    "ي"
-                )
 
-                .replace(
-                    /[ًٌٍَُِّْـ]/g,
-                    ""
-                )
+                    <h3>
+                        لم نجد الدواء الذي تبحث عنه
+                    </h3>
 
-                .replace(
-                    /\s+/g,
-                    " "
-                );
+
+                    <p>
+                        جرّب الاسم العربي
+                        أو الإنجليزي
+                        أو المادة الفعالة.
+                    </p>
+
+                </div>
+
+            `;
+
+            return;
 
         }
 
 
-        /* =====================================================
-           SEARCH
-           ===================================================== */
+        drugsGrid.innerHTML =
+            results
+                .map(
+                    createDrugCard
+                )
+                .join("");
 
-        function getFilteredDrugs() {
+    }
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    searchForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
 
             const query =
-                normalizeDrugText(
-                    searchInput.value
-                );
+                searchInput.value.trim();
 
 
-            return DRUGS.filter(
-                function (drug) {
-
-                    const matchesCategory =
-                        activeCategory ===
-                        "all" ||
-                        drug.category ===
-                        activeCategory;
-
-
-                    if (
-                        !matchesCategory
-                    ) {
-
-                        return false;
-
-                    }
+            const url =
+                query
+                    ?
+                    "drugs.html?search=" +
+                    encodeURIComponent(
+                        query
+                    )
+                    :
+                    "drugs.html";
 
 
-                    if (!query) {
+            window.history.replaceState(
+                {},
+                "",
+                url
+            );
 
-                        return true;
 
-                    }
+            renderDrugs();
+
+        }
+    );
 
 
-                    const searchable =
-                        normalizeDrugText(
-                            [
-                                drug.name,
-                                drug.arabicName,
-                                drug.generic,
-                                drug.description
-                            ].join(" ")
+    /* =====================================================
+       LIVE SEARCH
+       ===================================================== */
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            renderDrugs();
+
+        }
+    );
+
+
+    /* =====================================================
+       CATEGORY FILTER
+       ===================================================== */
+
+    categoryButtons.forEach(
+        function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    categoryButtons
+                        .forEach(
+                            function (btn) {
+
+                                btn.classList
+                                    .remove(
+                                        "active"
+                                    );
+
+                            }
                         );
 
 
-                    return searchable
-                        .includes(query);
+                    button.classList
+                        .add("active");
+
+
+                    activeCategory =
+                        button.dataset
+                            .category;
+
+
+                    renderDrugs();
 
                 }
             );
 
         }
+    );
 
 
-        /* =====================================================
-           RENDER
-           ===================================================== */
+    /* =====================================================
+       LOAD SEARCH FROM URL
+       ===================================================== */
 
-        function renderDrugs() {
-
-            const results =
-                getFilteredDrugs();
-
-
-            drugCount.textContent =
-                results.length +
-                " دواء";
-
-
-            if (
-                results.length === 0
-            ) {
-
-                drugsGrid.innerHTML = `
-
-                    <div class="drug-empty">
-
-                        <div
-                            class="drug-empty-icon"
-                        >
-                            🔎
-                        </div>
-
-                        <h3>
-                            لم نجد الدواء الذي تبحث عنه
-                        </h3>
-
-                        <p>
-                            جرّب البحث بالاسم الإنجليزي
-                            أو العربي أو المادة الفعالة.
-                        </p>
-
-                    </div>
-
-                `;
-
-                return;
-
-            }
-
-
-            drugsGrid.innerHTML =
-                results
-                    .map(
-                        function (drug) {
-
-                            return `
-
-                                <article
-                                    class="drug-card"
-                                >
-
-                                    <div
-                                        class="drug-card-top"
-                                    >
-
-                                        <span
-                                            class="drug-card-icon"
-                                        >
-                                            💊
-                                        </span>
-
-                                        <span
-                                            class="drug-status"
-                                        >
-                                            ${drug.status}
-                                        </span>
-
-                                    </div>
-
-
-                                    <h3>
-                                        ${drug.arabicName}
-                                    </h3>
-
-
-                                    <div
-                                        class="drug-generic"
-                                    >
-                                        ${drug.name}
-                                    </div>
-
-
-                                    <p>
-                                        ${drug.description}
-                                    </p>
-
-
-                                    <div
-                                        class="drug-card-footer"
-                                    >
-
-                                        <span
-                                            class="drug-category-label"
-                                        >
-                                            المادة الفعالة:
-                                            ${drug.generic}
-                                        </span>
-
-
-                                        <a
-                                            href="${drug.url}"
-                                            class="drug-open"
-                                        >
-                                            التفاصيل ←
-                                        </a>
-
-                                    </div>
-
-                                </article>
-
-                            `;
-
-                        }
-                    )
-                    .join("");
-
-        }
-
-
-        /* =====================================================
-           SEARCH SUBMIT
-           ===================================================== */
-
-        searchForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-                renderDrugs();
-
-                const query =
-                    searchInput.value.trim();
-
-
-                const url =
-                    query
-                        ?
-                        "drugs.html?search=" +
-                        encodeURIComponent(
-                            query
-                        )
-                        :
-                        "drugs.html";
-
-
-                window.history.replaceState(
-                    {},
-                    "",
-                    url
-                );
-
-            }
+    const params =
+        new URLSearchParams(
+            window.location.search
         );
 
 
-        /* =====================================================
-           CATEGORY FILTER
-           ===================================================== */
-
-        categoryButtons.forEach(
-            function (button) {
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        categoryButtons
-                            .forEach(
-                                function (btn) {
-
-                                    btn.classList
-                                        .remove(
-                                            "active"
-                                        );
-
-                                }
-                            );
+    const initialSearch =
+        params.get("search") ||
+        "";
 
 
-                        button.classList
-                            .add("active");
+    if (initialSearch) {
+
+        searchInput.value =
+            initialSearch;
+
+    }
 
 
-                        activeCategory =
-                            button.dataset
-                                .category;
+    /* =====================================================
+       INITIAL RENDER
+       ===================================================== */
 
+    renderDrugs();
 
-                        renderDrugs();
-
-                    }
-                );
-
-            }
-        );
-
-
-        /* =====================================================
-           LOAD URL SEARCH
-           ===================================================== */
-
-        const params =
-            new URLSearchParams(
-                window.location.search
-            );
-
-
-        const initialSearch =
-            params.get("search") ||
-            "";
-
-
-        if (initialSearch) {
-
-            searchInput.value =
-                initialSearch;
-
-        }
-
-
-        /* =====================================================
-           INITIAL RENDER
-           ===================================================== */
-
-        renderDrugs();
-
-    </script>
+</script>
 
 
 </body>
