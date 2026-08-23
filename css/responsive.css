@@ -1,0 +1,574 @@
+/* =========================================================
+   BAWABET ALTAMREED
+   RESPONSIVE SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .container {
+        max-width: 1280px;
+    }
+
+    .hero-title {
+        font-size: 3.7rem;
+    }
+
+    .hero-description {
+        max-width: 720px;
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(94%, 1120px);
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        width: min(94%, 900px);
+    }
+
+    /* Header */
+
+    .main-header {
+        position: sticky;
+        top: 0;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 75px 0;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero-title {
+        font-size: 2.7rem;
+    }
+
+    /* Generic grids */
+
+    .two-column,
+    .three-column,
+    .four-column {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET / LARGE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        width: min(92%, 680px);
+    }
+
+    /* Header */
+
+    .header-inner {
+        min-height: 66px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Mobile menu */
+
+    .mobile-menu {
+        width: 100%;
+        max-height: calc(100vh - 66px);
+        overflow-y: auto;
+    }
+
+    .mobile-menu a {
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 15px;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 65px 0;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-inline: auto;
+    }
+
+    .hero-title {
+        font-size: clamp(2.15rem, 8vw, 2.8rem);
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        margin-inline: auto;
+        font-size: 0.88rem;
+        line-height: 1.9;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Generic grids */
+
+    .two-column,
+    .three-column,
+    .four-column {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sections */
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Search */
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-box {
+        min-height: 54px;
+    }
+
+    /* CTA */
+
+    .cta-card {
+        padding: 25px;
+    }
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    /* Header */
+
+    .header-inner {
+        min-height: 62px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.82rem;
+    }
+
+    .hero-actions {
+        display: grid;
+        width: 100%;
+        gap: 9px;
+    }
+
+    .hero-actions .btn,
+    .hero-actions a {
+        width: 100%;
+    }
+
+    /* Buttons */
+
+    .btn {
+        min-height: 43px;
+        padding-inline: 14px;
+    }
+
+    /* Page hero */
+
+    .page-hero {
+        padding: 45px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero p {
+        font-size: 0.8rem;
+    }
+
+    /* Cards */
+
+    .card-body {
+        padding: 18px;
+    }
+
+    /* Section */
+
+    .content-section,
+    .section {
+        padding: 45px 0;
+    }
+
+    /* Search */
+
+    .search-field {
+        min-height: 53px;
+        padding-inline-start: 12px;
+    }
+
+    .search-field input {
+        font-size: 0.78rem;
+    }
+
+    /* Tables */
+
+    .table-wrapper {
+        margin-inline: -14px;
+        width: calc(100% + 28px);
+        border-radius: 0;
+        border-inline: 0;
+    }
+
+    /* Article */
+
+    .article {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .article-title {
+        font-size: 1.65rem;
+    }
+
+    .article-content {
+        font-size: 0.84rem;
+    }
+
+    /* Drug details */
+
+    .drug-overview {
+        padding: 18px;
+    }
+
+    .drug-overview-header {
+        align-items: flex-start;
+    }
+
+    .drug-overview-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 15px;
+        font-size: 27px;
+    }
+
+    .drug-overview h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Forms */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-input,
+    .form-select {
+        min-height: 45px;
+    }
+
+    /* Quiz */
+
+    .quiz-header,
+    .quiz-question {
+        padding: 18px;
+    }
+
+    .quiz-question-text {
+        font-size: 1rem;
+    }
+
+    .quiz-option {
+        padding: 12px;
+    }
+
+    .quiz-option-letter {
+        width: 31px;
+        height: 31px;
+    }
+
+    /* Flashcard */
+
+    .flashcard,
+    .flashcard-inner {
+        min-height: 300px;
+    }
+
+    .flashcard-front,
+    .flashcard-back {
+        padding: 25px 18px;
+    }
+
+    .flashcard h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Modal */
+
+    .modal {
+        padding: 8px;
+    }
+
+    .modal-dialog {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .modal-body {
+        padding: 18px;
+    }
+
+    /* Toast */
+
+    .toast-container {
+        left: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 0.73rem;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .mobile-menu {
+        max-height: calc(100vh - 62px);
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+
+    .main-header,
+    .mobile-menu,
+    .main-footer,
+    .hero-actions,
+    .btn,
+    .toast-container,
+    .modal {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .article,
+    .card,
+    .drug-overview,
+    .info-section {
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+}
