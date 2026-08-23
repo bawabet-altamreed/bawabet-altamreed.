@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="دليل مهارات التمريض العملية - شرح مبسط للمهارات الأساسية والمتقدمة لطلاب وممارسي التمريض."
+    >
+
+    <meta
+        name="keywords"
+        content="مهارات التمريض, nursing skills, تمريض, أساسيات التمريض, vital signs, infection control"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>
+        مهارات التمريض | بوابة التمريض
+    </title>
+
+
+    <!-- GLOBAL CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+    <!-- PAGE CSS -->
+
+    <style>
+
+        /* =========================================
+           SKILLS PAGE
+           ========================================= */
+
+        .skills-page {
+            min-height: 100vh;
+        }
+
+
+        .skills-hero {
+            padding: 70px 20px 45px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(12, 53, 85, 0.97),
+                    rgba(21, 101, 130, 0.94)
+                );
+            color: white;
+        }
+
+
+        .skills-container {
+            width: min(
+                1200px,
+                calc(100% - 30px)
+            );
+
+            margin: auto;
+        }
+
+
+        .skills-hero-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        .skills-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+
+        .skills-hero h1 {
+            margin: 0 0 15px;
+            font-size: clamp(
+                32px,
+                5vw,
+                54px
+            );
+        }
+
+
+        .skills-hero p {
+            margin: 0 auto;
+            max-width: 720px;
+            line-height: 1.9;
+            opacity: 0.9;
+            font-size: 17px;
+        }
+
+
+        /* SEARCH */
+
+        .skills-search-wrapper {
+            margin-top: 30px;
+            position: relative;
+        }
+
+
+        .skills-search {
+            width: 100%;
+            box-sizing: border-box;
+
+            padding: 19px 55px 19px 20px;
+
+            border: none;
+            border-radius: 18px;
+
+            background: white;
+            color: #17202a;
+
+            font-size: 16px;
+
+            outline: none;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.18);
+        }
+
+
+        .skills-search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            font-size: 21px;
+            pointer-events: none;
+        }
+
+
+        /* CONTENT */
+
+        .skills-content {
+            padding: 45px 0 80px;
+        }
+
+
+        .skills-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            margin-bottom: 25px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .skills-result-count {
+            font-size: 15px;
+            color: #65727d;
+        }
+
+
+        .skills-result-count strong {
+            color: #0c3555;
+            font-size: 18px;
+        }
+
+
+        /* FILTERS */
+
+        .skills-filters {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+
+        .skill-filter {
+            border: 1px solid #dce4e9;
+
+            background: white;
+
+            padding: 10px 15px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            transition:
+                0.2s ease;
+
+            font-family: inherit;
+
+            color: #34424d;
+        }
+
+
+        .skill-filter:hover {
+            border-color: #2b7a91;
+            transform: translateY(-1px);
+        }
+
+
+        .skill-filter.active {
+            background: #0c3555;
+            color: white;
+            border-color: #0c3555;
+        }
+
+
+        /* GRID */
+
+        [data-skills-results] {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(
+                        270px,
+                        1fr
+                    )
+                );
+
+            gap: 18px;
+        }
+
+
+        /* CARD */
+
+        .skill-card {
+            background: white;
+
+            border:
+                1px solid #e5ebef;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+            box-shadow:
+                0 5px 20px
+                rgba(15,35,50,0.05);
+        }
+
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(15,35,50,0.1);
+        }
+
+
+        .skill-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 17px 18px 0;
+        }
+
+
+        .skill-category,
+        .skill-level {
+            font-size: 12px;
+
+            padding: 6px 9px;
+
+            border-radius: 8px;
+
+            background: #f1f6f8;
+        }
+
+
+        .skill-level {
+            background: #eef7f1;
+        }
+
+
+        .skill-card-body {
+            padding: 20px 18px;
+        }
+
+
+        .skill-english {
+            display: block;
+
+            color: #71808a;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .skill-card h3 {
+            margin: 0 0 12px;
+
+            font-size: 21px;
+
+            color: #102f46;
+        }
+
+
+        .skill-card p {
+            margin: 0;
+
+            color: #697983;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        .skill-card-footer {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 14px 18px;
+
+            border-top:
+                1px solid #edf1f3;
+
+            color: #156582;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        /* EMPTY */
+
+        .skills-empty,
+        .skills-error {
+            grid-column: 1 / -1;
+
+            text-align: center;
+
+            background: white;
+
+            border:
+                1px solid #e5ebef;
+
+            border-radius: 20px;
+
+            padding: 55px 20px;
+        }
+
+
+        .skills-empty-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+
+        .skills-empty h3,
+        .skills-error h3 {
+            margin: 0 0 10px;
+        }
+
+
+        .skills-empty p,
+        .skills-error p {
+            color: #71808a;
+            line-height: 1.8;
+        }
+
+
+        /* MODAL */
+
+        .skill-modal {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            visibility: hidden;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.25s ease,
+                visibility 0.25s ease;
+        }
+
+
+        .skill-modal.open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .skill-modal-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(5,18,27,0.72);
+
+            backdrop-filter:
+                blur(4px);
+        }
+
+
+        .skill-modal-content {
+            position: relative;
+
+            width: min(
+                760px,
+                calc(100% - 25px)
+            );
+
+            max-height:
+                calc(100vh - 35px);
+
+            overflow-y: auto;
+
+            margin:
+                17px auto;
+
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            box-sizing: border-box;
+
+            transform:
+                translateY(20px);
+
+            transition:
+                transform 0.25s ease;
+        }
+
+
+        .skill-modal.open
+        .skill-modal-content {
+            transform:
+                translateY(0);
+        }
+
+
+        .skill-modal-close {
+            position: sticky;
+
+            top: 0;
+
+            float: left;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #f0f3f5;
+
+            cursor: pointer;
+
+            font-size: 17px;
+        }
+
+
+        .skill-modal-header {
+            padding-bottom: 25px;
+
+            border-bottom:
+                1px solid #e7edef;
+        }
+
+
+        .skill-modal-category {
+            display: inline-block;
+
+            background: #eef6f8;
+
+            color: #156582;
+
+            padding: 7px 10px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+        }
+
+
+        .skill-modal-level {
+            display: inline-block;
+
+            margin-right: 7px;
+
+            padding: 7px 10px;
+
+            border-radius: 9px;
+
+            background: #f1f5f2;
+
+            font-size: 13px;
+        }
+
+
+        .skill-modal-english {
+            display: block;
+
+            margin-top: 20px;
+
+            color: #71808a;
+
+            font-size: 14px;
+        }
+
+
+        .skill-modal-header h2 {
+            margin:
+                7px 0 12px;
+
+            color: #0d3148;
+
+            font-size: 30px;
+        }
+
+
+        .skill-modal-header p {
+            color: #667781;
+
+            line-height: 1.9;
+
+            margin: 0;
+        }
+
+
+        .skill-section {
+            padding: 22px 0;
+
+            border-bottom:
+                1px solid #edf1f3;
+        }
+
+
+        .skill-section h4 {
+            margin:
+                0 0 15px;
+
+            color: #123b55;
+
+            font-size: 18px;
+        }
+
+
+        .skill-section ul {
+            margin: 0;
+
+            padding-right: 22px;
+        }
+
+
+        .skill-section li {
+            margin-bottom: 10px;
+
+            line-height: 1.8;
+
+            color: #465761;
+        }
+
+
+        .skill-steps {
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+
+            display: grid;
+
+            gap: 12px;
+        }
+
+
+        .skill-steps li {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+            margin: 0;
+
+            padding: 12px;
+
+            border-radius: 12px;
+
+            background: #f7f9fa;
+        }
+
+
+        .step-number {
+            flex:
+                0 0 29px;
+
+            height: 29px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 13px;
+        }
+
+
+        .skill-learning-note {
+            margin-top: 22px;
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            background: #fff8e8;
+
+            border:
+                1px solid #f1dfad;
+        }
+
+
+        .skill-learning-note strong {
+            display: block;
+
+            margin-bottom: 7px;
+        }
+
+
+        .skill-learning-note p {
+            margin: 0;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .skills-hero {
+                padding:
+                    45px 15px 35px;
+            }
+
+
+            .skills-hero p {
+                font-size: 15px;
+            }
+
+
+            .skills-content {
+                padding-top: 30px;
+            }
+
+
+            .skills-toolbar {
+                align-items:
+                    flex-start;
+            }
+
+
+            .skill-modal-content {
+                padding: 22px 18px;
+
+                margin:
+                    10px auto;
+            }
+
+
+            .skill-modal-header h2 {
+                font-size: 25px;
+            }
+
+        }
+
+
+        body.skill-modal-open {
+            overflow: hidden;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="skills-page">
+
+
+        <!-- =========================================
+             HERO
+             ========================================= -->
+
+        <section class="skills-hero">
+
+            <div class="skills-container">
+
+                <div class="skills-hero-content">
+
+                    <span class="skills-badge">
+                        🩺 دليل التمريض العملي
+                    </span>
+
+
+                    <h1>
+                        مهارات التمريض
+                    </h1>
+
+
+                    <p>
+                        مرجع مبسط لمهارات التمريض
+                        الأساسية والعملية،
+                        من العلامات الحيوية ومكافحة العدوى
+                        إلى رعاية المريض والطوارئ.
+                    </p>
+
+
+                    <div
+                        class="skills-search-wrapper"
+                    >
+
+                        <span
+                            class="skills-search-icon"
+                        >
+                            🔍
+                        </span>
+
+
+                        <input
+                            type="search"
+                            class="skills-search"
+                            data-skills-search
+                            placeholder="ابحث عن مهارة... مثال: ضغط الدم، Hand Hygiene"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CONTENT
+             ========================================= -->
+
+        <section class="skills-content">
+
+            <div class="skills-container">
+
+
+                <div class="skills-toolbar">
+
+                    <div
+                        class="skills-result-count"
+                    >
+
+                        <strong
+                            data-skills-count
+                        >
+                            0
+                        </strong>
+
+                        مهارة متاحة
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skills-clear
+                    >
+                        إعادة ضبط
+                    </button>
+
+                </div>
+
+
+                <!-- CATEGORY FILTERS -->
+
+                <div
+                    class="skills-filters"
+                    aria-label="تصنيف المهارات"
+                >
+
+                    <button
+                        type="button"
+                        class="skill-filter active"
+                        data-skill-category="all"
+                    >
+                        📚 الكل
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="basic-nursing"
+                    >
+                        🩺 أساسيات التمريض
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="vital-signs"
+                    >
+                        ❤️ العلامات الحيوية
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="infection-control"
+                    >
+                        🧼 مكافحة العدوى
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="medication"
+                    >
+                        💊 الأدوية
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="emergency"
+                    >
+                        🚑 الطوارئ
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-category="patient-care"
+                    >
+                        🏥 رعاية المريض
+                    </button>
+
+                </div>
+
+
+                <!-- LEVEL FILTERS -->
+
+                <div
+                    class="skills-filters"
+                    aria-label="مستوى المهارة"
+                >
+
+                    <button
+                        type="button"
+                        class="skill-filter active"
+                        data-skill-level="all"
+                    >
+                        كل المستويات
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-level="beginner"
+                    >
+                        🟢 مبتدئ
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-level="intermediate"
+                    >
+                        🟡 متوسط
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="skill-filter"
+                        data-skill-level="advanced"
+                    >
+                        🔴 متقدم
+                    </button>
+
+                </div>
+
+
+                <!-- RESULTS -->
+
+                <div
+                    data-skills
+                    data-skills-results
+                >
+
+                    <div class="skills-empty">
+
+                        <div class="skills-empty-icon">
+                            🩺
+                        </div>
+
+                        <h3>
+                            جاري تحميل المهارات...
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+    <script
+        src="js/skills.js"
+    ></script>
+
+
+</body>
+
+</html>
