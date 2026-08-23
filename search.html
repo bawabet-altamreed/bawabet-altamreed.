@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="نتائج البحث في بوابة التمريض - ابحث عن الأدوية ومهارات التمريض والمصطلحات والأدوات والمراجع."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>
+        نتائج البحث | بوابة التمريض
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           SEARCH PAGE
+           ===================================================== */
+
+        .search-page {
+            min-height: 100vh;
+            background: #f6f9fb;
+        }
+
+
+        .search-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #176b82
+                );
+
+            color: white;
+
+            padding:
+                55px 20px 60px;
+        }
+
+
+        .search-container {
+            width:
+                min(
+                    1100px,
+                    calc(100% - 30px)
+                );
+
+            margin:
+                auto;
+        }
+
+
+        .search-header-content {
+            max-width:
+                850px;
+
+            margin:
+                auto;
+
+            text-align:
+                center;
+        }
+
+
+        .search-header h1 {
+            margin:
+                0 0 12px;
+
+            font-size:
+                clamp(
+                    30px,
+                    5vw,
+                    45px
+                );
+        }
+
+
+        .search-header p {
+            margin:
+                0;
+
+            opacity:
+                0.85;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           SEARCH BOX
+           ===================================================== */
+
+        .results-search {
+            position:
+                relative;
+
+            margin:
+                28px auto 0;
+
+            max-width:
+                780px;
+        }
+
+
+        .results-search input {
+            width:
+                100%;
+
+            height:
+                60px;
+
+            border:
+                none;
+
+            outline:
+                none;
+
+            border-radius:
+                16px;
+
+            padding:
+                0 55px 0 115px;
+
+            font-family:
+                inherit;
+
+            font-size:
+                16px;
+
+            color:
+                #182b38;
+
+            box-shadow:
+                0 15px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.17
+                );
+        }
+
+
+        .results-search-icon {
+            position:
+                absolute;
+
+            right:
+                19px;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+
+            font-size:
+                21px;
+
+            pointer-events:
+                none;
+        }
+
+
+        .results-search button {
+            position:
+                absolute;
+
+            left:
+                7px;
+
+            top:
+                7px;
+
+            bottom:
+                7px;
+
+            width:
+                95px;
+
+            border:
+                none;
+
+            border-radius:
+                11px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            font-family:
+                inherit;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+        }
+
+
+        /* =====================================================
+           RESULTS AREA
+           ===================================================== */
+
+        .results-content {
+            padding:
+                50px 0 80px;
+        }
+
+
+        .results-top {
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                25px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .results-title {
+            margin:
+                0;
+
+            font-size:
+                23px;
+
+            color:
+                #102f46;
+        }
+
+
+        .results-title span {
+            color:
+                #156582;
+        }
+
+
+        .results-count {
+            color:
+                #71808a;
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           FILTERS
+           ===================================================== */
+
+        .results-filters {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                8px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .result-filter {
+            border:
+                1px solid #dce5e9;
+
+            background:
+                white;
+
+            color:
+                #53636d;
+
+            padding:
+                9px 13px;
+
+            border-radius:
+                10px;
+
+            cursor:
+                pointer;
+
+            font-family:
+                inherit;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .result-filter:hover {
+            border-color:
+                #8ebbc6;
+        }
+
+
+        .result-filter.active {
+            background:
+                #0c3555;
+
+            border-color:
+                #0c3555;
+
+            color:
+                white;
+        }
+
+
+        /* =====================================================
+           RESULTS GRID
+           ===================================================== */
+
+        .results-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(
+                        280px,
+                        1fr
+                    )
+                );
+
+            gap:
+                17px;
+        }
+
+
+        /* =====================================================
+           RESULT CARD
+           ===================================================== */
+
+        .result-card {
+            display:
+                block;
+
+            background:
+                white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                18px;
+
+            padding:
+                21px;
+
+            transition:
+                0.2s ease;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.04
+                );
+        }
+
+
+        .result-card:hover {
+            transform:
+                translateY(-4px);
+
+            border-color:
+                #b4d0d7;
+
+            box-shadow:
+                0 15px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.09
+                );
+        }
+
+
+        .result-card-top {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                12px;
+
+            margin-bottom:
+                17px;
+        }
+
+
+        .result-icon {
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                #eef6f8;
+
+            font-size:
+                24px;
+        }
+
+
+        .result-category {
+            padding:
+                6px 9px;
+
+            border-radius:
+                8px;
+
+            background:
+                #f3f6f7;
+
+            color:
+                #65757f;
+
+            font-size:
+                11px;
+        }
+
+
+        .result-card h3 {
+            margin:
+                0 0 8px;
+
+            color:
+                #10344c;
+
+            font-size:
+                20px;
+        }
+
+
+        .result-card p {
+            margin:
+                0 0 17px;
+
+            color:
+                #71808a;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.8;
+        }
+
+
+        .result-open {
+            color:
+                #156582;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+           ===================================================== */
+
+        .search-empty {
+            padding:
+                65px 20px;
+
+            text-align:
+                center;
+
+            background:
+                white;
+
+            border:
+                1px solid #e3eaee;
+
+            border-radius:
+                20px;
+        }
+
+
+        .search-empty-icon {
+            font-size:
+                48px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .search-empty h2 {
+            margin:
+                0 0 10px;
+
+            color:
+                #153a51;
+        }
+
+
+        .search-empty p {
+            margin:
+                0 auto;
+
+            max-width:
+                580px;
+
+            color:
+                #71808a;
+
+            line-height:
+                1.9;
+        }
+
+
+        .back-home {
+            display:
+                inline-block;
+
+            margin-top:
+                20px;
+
+            padding:
+                10px 16px;
+
+            border-radius:
+                11px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           LOADING
+           ===================================================== */
+
+        .search-loading {
+            text-align:
+                center;
+
+            padding:
+                50px;
+
+            color:
+                #71808a;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .search-header {
+                padding:
+                    42px 15px 45px;
+            }
+
+
+            .results-search input {
+                padding-left:
+                    95px;
+            }
+
+
+            .results-search button {
+                width:
+                    80px;
+            }
+
+
+            .results-content {
+                padding:
+                    35px 0 60px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="search-page">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <section class="search-header">
+
+            <div class="search-container">
+
+                <div class="search-header-content">
+
+                    <h1>
+                        🔎 البحث في بوابة التمريض
+                    </h1>
+
+                    <p>
+                        ابحث عن الأدوية والمهارات
+                        والمصطلحات والأدوات والمراجع.
+                    </p>
+
+
+                    <form
+                        class="results-search"
+                        id="resultsSearch"
+                    >
+
+                        <span
+                            class="results-search-icon"
+                        >
+                            🔍
+                        </span>
+
+
+                        <input
+                            type="search"
+                            id="resultsSearchInput"
+                            placeholder="اكتب ما تبحث عنه..."
+                            autocomplete="off"
+                        >
+
+
+                        <button
+                            type="submit"
+                        >
+                            بحث
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULTS
+             ================================================= -->
+
+        <section class="results-content">
+
+            <div class="search-container">
+
+
+                <div class="results-top">
+
+                    <h2
+                        class="results-title"
+                        id="resultsTitle"
+                    >
+                        نتائج البحث
+                    </h2>
+
+
+                    <span
+                        class="results-count"
+                        id="resultsCount"
+                    >
+                        0 نتيجة
+                    </span>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div
+                    class="results-filters"
+                    id="resultsFilters"
+                >
+
+                    <button
+                        class="result-filter active"
+                        data-filter="all"
+                    >
+                        الكل
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="الأدوية"
+                    >
+                        💊 الأدوية
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="مهارات التمريض"
+                    >
+                        🩺 المهارات
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="مصطلحات طبية"
+                    >
+                        🧠 المصطلحات
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="أدوات طبية"
+                    >
+                        🧮 الأدوات
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="تحاليل طبية"
+                    >
+                        🧪 التحاليل
+                    </button>
+
+                    <button
+                        class="result-filter"
+                        data-filter="حالات مرضية"
+                    >
+                        🫀 الحالات
+                    </button>
+
+                </div>
+
+
+                <!-- RESULTS -->
+
+                <div
+                    class="results-grid"
+                    id="resultsGrid"
+                >
+
+                    <div class="search-loading">
+
+                        جاري تحميل النتائج...
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SEARCH ENGINE
+         ===================================================== -->
+
+    <script
+        src="js/search.js"
+    ></script>
+
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const input =
+                    document.getElementById(
+                        "resultsSearchInput"
+                    );
+
+
+                const form =
+                    document.getElementById(
+                        "resultsSearch"
+                    );
+
+
+                const grid =
+                    document.getElementById(
+                        "resultsGrid"
+                    );
+
+
+                const title =
+                    document.getElementById(
+                        "resultsTitle"
+                    );
+
+
+                const count =
+                    document.getElementById(
+                        "resultsCount"
+                    );
+
+
+                const filters =
+                    document.querySelectorAll(
+                        ".result-filter"
+                    );
+
+
+                let currentFilter =
+                    "all";
+
+
+                /* =================================================
+                   GET QUERY
+                   ================================================= */
+
+                const params =
+                    new URLSearchParams(
+                        window.location.search
+                    );
+
+
+                const initialQuery =
+                    params.get("q") ||
+                    params.get("search") ||
+                    "";
+
+
+                input.value =
+                    initialQuery;
+
+
+                /* =================================================
+                   RENDER RESULTS
+                   ================================================= */
+
+                function renderResults() {
+
+                    const query =
+                        input.value.trim();
+
+
+                    if (!query) {
+
+                        title.textContent =
+                            "ابحث في بوابة التمريض";
+
+                        count.textContent =
+                            "اكتب كلمة للبحث";
+
+                        grid.innerHTML = `
+
+                            <div class="search-empty">
+
+                                <div
+                                    class="search-empty-icon"
+                                >
+                                    🔍
+                                </div>
+
+                                <h2>
+                                    ماذا تريد أن تبحث عنه؟
+                                </h2>
+
+                                <p>
+                                    يمكنك البحث عن دواء،
+                                    مهارة تمريض، مصطلح طبي،
+                                    تحليل أو أي محتوى
+                                    متاح في بوابة التمريض.
+                                </p>
+
+                            </div>
+
+                        `;
+
+                        return;
+
+                    }
+
+
+                    let results = [];
+
+
+                    if (
+                        window.BawabetSearch &&
+                        typeof
+                        window.BawabetSearch.search
+                        === "function"
+                    ) {
+
+                        results =
+                            window.BawabetSearch
+                                .search(query);
+
+                    }
+
+
+                    if (
+                        currentFilter !== "all"
+                    ) {
+
+                        results =
+                            results.filter(
+                                function (item) {
+
+                                    return (
+                                        item.category ===
+                                        currentFilter
+                                    );
+
+                                }
+                            );
+
+                    }
+
+
+                    title.innerHTML =
+                        "نتائج البحث عن <span>\"" +
+                        escapeHTML(query) +
+                        "\"</span>";
+
+
+                    count.textContent =
+                        results.length +
+                        " نتيجة";
+
+
+                    if (
+                        results.length === 0
+                    ) {
+
+                        grid.innerHTML = `
+
+                            <div class="search-empty">
+
+                                <div
+                                    class="search-empty-icon"
+                                >
+                                    😕
+                                </div>
+
+                                <h2>
+                                    مفيش نتائج مطابقة
+                                </h2>
+
+                                <p>
+                                    جرّب كتابة كلمة أخرى
+                                    أو استخدم كلمة أبسط،
+                                    مثل اسم الدواء أو اسم
+                                    المهارة.
+                                </p>
+
+                                <a
+                                    href="index.html"
+                                    class="back-home"
+                                >
+                                    العودة للرئيسية
+                                </a>
+
+                            </div>
+
+                        `;
+
+                        return;
+
+                    }
+
+
+                    grid.innerHTML =
+                        results
+                            .map(
+                                createResultCard
+                            )
+                            .join("");
+
+                }
+
+
+                /* =================================================
+                   RESULT CARD
+                   ================================================= */
+
+                function createResultCard(
+                    item
+                ) {
+
+                    const safeTitle =
+                        escapeHTML(
+                            item.title
+                        );
+
+
+                    const safeDescription =
+                        escapeHTML(
+                            item.description
+                        );
+
+
+                    const safeCategory =
+                        escapeHTML(
+                            item.category
+                        );
+
+
+                    const url =
+                        item.url || "#";
+
+
+                    if (url === "#") {
+
+                        return `
+
+                            <article
+                                class="result-card"
+                                title="هذا القسم قيد التطوير"
+                            >
+
+                                <div
+                                    class="result-card-top"
+                                >
+
+                                    <span
+                                        class="result-icon"
+                                    >
+                                        ${item.icon}
+                                    </span>
+
+                                    <span
+                                        class="result-category"
+                                    >
+                                        ${safeCategory}
+                                    </span>
+
+                                </div>
+
+
+                                <h3>
+                                    ${safeTitle}
+                                </h3>
+
+
+                                <p>
+                                    ${safeDescription}
+                                </p>
+
+
+                                <span
+                                    class="result-open"
+                                >
+                                    قريبًا ←
+                                </span>
+
+                            </article>
+
+                        `;
+
+                    }
+
+
+                    return `
+
+                        <a
+                            href="${url}"
+                            class="result-card"
+                        >
+
+                            <div
+                                class="result-card-top"
+                            >
+
+                                <span
+                                    class="result-icon"
+                                >
+                                    ${item.icon}
+                                </span>
+
+                                <span
+                                    class="result-category"
+                                >
+                                    ${safeCategory}
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                ${safeTitle}
+                            </h3>
+
+
+                            <p>
+                                ${safeDescription}
+                            </p>
+
+
+                            <span
+                                class="result-open"
+                            >
+                                فتح القسم ←
+                            </span>
+
+                        </a>
+
+                    `;
+
+                }
+
+
+                /* =================================================
+                   ESCAPE HTML
+                   ================================================= */
+
+                function escapeHTML(
+                    value
+                ) {
+
+                    return String(value)
+                        .replace(
+                            /&/g,
+                            "&amp;"
+                        )
+                        .replace(
+                            /</g,
+                            "&lt;"
+                        )
+                        .replace(
+                            />/g,
+                            "&gt;"
+                        )
+                        .replace(
+                            /"/g,
+                            "&quot;"
+                        )
+                        .replace(
+                            /'/g,
+                            "&#039;"
+                        );
+
+                }
+
+
+                /* =================================================
+                   SEARCH SUBMIT
+                   ================================================= */
+
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        const query =
+                            input.value.trim();
+
+
+                        if (!query) {
+
+                            input.focus();
+
+                            return;
+
+                        }
+
+
+                        const newURL =
+                            "search.html?q=" +
+                            encodeURIComponent(
+                                query
+                            );
+
+
+                        window.history
+                            .replaceState(
+                                {},
+                                "",
+                                newURL
+                            );
+
+
+                        currentFilter =
+                            "all";
+
+
+                        filters.forEach(
+                            function (filter) {
+
+                                filter.classList
+                                    .remove(
+                                        "active"
+                                    );
+
+                            }
+                        );
+
+
+                        filters[0]
+                            .classList
+                            .add("active");
+
+
+                        renderResults();
+
+                    }
+                );
+
+
+                /* =================================================
+                   FILTERS
+                   ================================================= */
+
+                filters.forEach(
+                    function (filter) {
+
+                        filter.addEventListener(
+                            "click",
+                            function () {
+
+                                filters.forEach(
+                                    function (button) {
+
+                                        button.classList
+                                            .remove(
+                                                "active"
+                                            );
+
+                                    }
+                                );
+
+
+                                filter.classList
+                                    .add("active");
+
+
+                                currentFilter =
+                                    filter.dataset
+                                        .filter;
+
+
+                                renderResults();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   INITIAL RENDER
+                   ================================================= */
+
+                renderResults();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
