@@ -12,12 +12,7 @@
 
     <meta
         name="description"
-        content="دليل الأدوية في بوابة التمريض. ابحث عن اسم الدواء وتعرف على المادة الفعالة والاستخدامات والأشكال الدوائية والتنبيهات المهمة."
-    >
-
-    <meta
-        name="keywords"
-        content="دليل الأدوية, الأدوية, اسم الدواء, المادة الفعالة, nursing drugs, medicines, pharmacology, تمريض"
+        content="دليل الأدوية في بوابة التمريض. ابحث عن اسم الدواء أو المادة الفعالة واعرف المعلومات التعليمية الأساسية."
     >
 
     <meta
@@ -25,9 +20,15 @@
         content="index, follow"
     >
 
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/drugs.html"
+    >
+
     <title>
         دليل الأدوية | بوابة التمريض
     </title>
+
 
     <link
         rel="stylesheet"
@@ -37,9 +38,9 @@
 
     <style>
 
-        /* =================================================
-           DRUGS PAGE
-           ================================================= */
+        /* =====================================================
+           DRUG GUIDE
+           ===================================================== */
 
         .drugs-page {
             min-height: 100vh;
@@ -47,56 +48,70 @@
         }
 
 
-        /* =================================================
-           HERO
-           ================================================= */
+        /* =====================================================
+           HEADER
+           ===================================================== */
 
         .drugs-hero {
-            padding: 70px 20px 55px;
-
-            color: white;
+            padding:
+                65px 20px 70px;
 
             background:
                 linear-gradient(
                     135deg,
-                    #0c3555,
+                    #092d49,
                     #176b82
                 );
+
+            color: white;
         }
 
 
         .drugs-container {
             width:
                 min(
-                    1200px,
+                    1100px,
                     calc(100% - 30px)
                 );
 
-            margin: auto;
+            margin:
+                auto;
         }
 
 
         .drugs-hero-content {
-            max-width: 850px;
+            max-width:
+                850px;
 
-            margin: auto;
+            margin:
+                auto;
 
-            text-align: center;
+            text-align:
+                center;
         }
 
 
-        .drugs-badge {
-            display: inline-flex;
+        .drugs-icon {
+            width:
+                70px;
 
-            align-items: center;
+            height:
+                70px;
 
-            gap: 8px;
+            display:
+                flex;
 
-            padding:
-                8px 15px;
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin:
+                0 auto 18px;
 
             border-radius:
-                50px;
+                20px;
 
             background:
                 rgba(
@@ -106,330 +121,512 @@
                     0.12
                 );
 
-            border:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.2
-                );
-
-            font-size: 14px;
-
-            margin-bottom: 18px;
+            font-size:
+                36px;
         }
 
 
         .drugs-hero h1 {
             margin:
-                0 0 15px;
+                0 0 12px;
 
             font-size:
                 clamp(
                     32px,
-                    5vw,
-                    54px
+                    6vw,
+                    48px
                 );
         }
 
 
         .drugs-hero p {
-            max-width: 720px;
+            margin:
+                0;
+
+            line-height:
+                1.9;
+
+            opacity:
+                0.86;
+        }
+
+
+        /* =====================================================
+           SEARCH
+           ===================================================== */
+
+        .drug-search-box {
+            position:
+                relative;
+
+            max-width:
+                800px;
 
             margin:
-                0 auto;
-
-            line-height: 1.9;
-
-            font-size: 17px;
-
-            opacity: 0.9;
+                30px auto 0;
         }
 
 
-        /* =================================================
-           SEARCH
-           ================================================= */
+        .drug-search-box input {
+            width:
+                100%;
 
-        .drugs-search-wrapper {
-            position: relative;
-
-            margin-top: 30px;
-        }
-
-
-        .drugs-search {
-            width: 100%;
-
-            box-sizing: border-box;
+            height:
+                62px;
 
             padding:
-                20px 58px 20px 20px;
+                0 55px 0 125px;
 
-            border: none;
+            border:
+                none;
 
-            border-radius: 18px;
+            outline:
+                none;
 
-            outline: none;
+            border-radius:
+                16px;
 
-            background: white;
+            font-family:
+                inherit;
 
-            color: #17202a;
+            font-size:
+                16px;
 
-            font-family: inherit;
-
-            font-size: 16px;
+            color:
+                #152c3c;
 
             box-shadow:
-                0 15px 40px
+                0 15px 35px
                 rgba(
                     0,
                     0,
                     0,
-                    0.18
+                    0.17
                 );
         }
 
 
-        .drugs-search-icon {
-            position: absolute;
+        .drug-search-icon {
+            position:
+                absolute;
 
-            right: 20px;
+            right:
+                19px;
 
-            top: 50%;
+            top:
+                50%;
 
             transform:
                 translateY(-50%);
 
-            font-size: 22px;
+            font-size:
+                21px;
 
-            pointer-events: none;
+            pointer-events:
+                none;
         }
 
 
-        /* =================================================
+        .drug-search-button {
+            position:
+                absolute;
+
+            left:
+                7px;
+
+            top:
+                7px;
+
+            bottom:
+                7px;
+
+            width:
+                105px;
+
+            border:
+                none;
+
+            border-radius:
+                11px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            font-family:
+                inherit;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+        }
+
+
+        /* =====================================================
            CONTENT
-           ================================================= */
+           ===================================================== */
 
         .drugs-content {
             padding:
-                45px 0 80px;
+                50px 0 80px;
         }
 
 
-        .drugs-toolbar {
-            display: flex;
+        .drug-info-banner {
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content:
-                space-between;
-
-            gap: 15px;
-
-            flex-wrap: wrap;
-
-            margin-bottom: 22px;
-        }
-
-
-        .drugs-count {
-            color: #697983;
-
-            font-size: 15px;
-        }
-
-
-        .drugs-count strong {
-            color: #0c3555;
-
-            font-size: 18px;
-        }
-
-
-        /* =================================================
-           FILTERS
-           ================================================= */
-
-        .drugs-filters {
-            display: flex;
-
-            gap: 9px;
-
-            flex-wrap: wrap;
-
-            margin-bottom: 30px;
-        }
-
-
-        .drug-filter {
-            border:
-                1px solid #dce4e9;
-
-            background: white;
-
-            color: #34424d;
+            gap:
+                20px;
 
             padding:
-                10px 15px;
+                20px;
 
-            border-radius: 12px;
+            margin-bottom:
+                30px;
 
-            cursor: pointer;
+            border-radius:
+                16px;
 
-            font-family: inherit;
+            background:
+                #fff;
+
+            border:
+                1px solid #e2eaee;
+        }
+
+
+        .drug-info-banner-icon {
+            width:
+                48px;
+
+            height:
+                48px;
+
+            flex:
+                0 0 48px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                #eef6f8;
+
+            font-size:
+                24px;
+        }
+
+
+        .drug-info-banner strong {
+            display:
+                block;
+
+            margin-bottom:
+                4px;
+
+            color:
+                #153a51;
+        }
+
+
+        .drug-info-banner span {
+            color:
+                #71808a;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =====================================================
+           CATEGORIES
+           ===================================================== */
+
+        .drug-categories {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                9px;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .drug-category {
+            padding:
+                9px 14px;
+
+            border:
+                1px solid #dce6ea;
+
+            background:
+                white;
+
+            border-radius:
+                10px;
+
+            color:
+                #596a73;
+
+            cursor:
+                pointer;
+
+            font-family:
+                inherit;
 
             transition:
                 0.2s ease;
         }
 
 
-        .drug-filter:hover {
-            transform:
-                translateY(-1px);
-
+        .drug-category:hover {
             border-color:
-                #2b7a91;
+                #9fc4cc;
         }
 
 
-        .drug-filter.active {
+        .drug-category.active {
             background:
                 #0c3555;
 
-            color: white;
+            color:
+                white;
 
             border-color:
                 #0c3555;
         }
 
 
-        /* =================================================
-           DRUG GRID
-           ================================================= */
+        /* =====================================================
+           RESULTS
+           ===================================================== */
 
-        [data-drugs-results] {
-            display: grid;
+        .drug-results-header {
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .drug-results-header h2 {
+            margin:
+                0;
+
+            font-size:
+                23px;
+
+            color:
+                #153a51;
+        }
+
+
+        .drug-count {
+            color:
+                #71808a;
+
+            font-size:
+                14px;
+        }
+
+
+        .drugs-grid {
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(
                     auto-fit,
                     minmax(
-                        270px,
+                        280px,
                         1fr
                     )
                 );
 
-            gap: 18px;
+            gap:
+                17px;
         }
 
 
-        /* =================================================
+        /* =====================================================
            DRUG CARD
-           ================================================= */
+           ===================================================== */
 
         .drug-card {
-            background: white;
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            background:
+                white;
 
             border:
-                1px solid #e3eaee;
+                1px solid #e1e9ed;
 
-            border-radius: 20px;
+            border-radius:
+                18px;
 
-            overflow: hidden;
+            padding:
+                21px;
 
-            cursor: pointer;
+            transition:
+                0.2s ease;
 
             box-shadow:
-                0 5px 20px
+                0 5px 18px
                 rgba(
                     15,
                     35,
                     50,
-                    0.05
+                    0.04
                 );
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
         }
 
 
         .drug-card:hover {
             transform:
-                translateY(-5px);
+                translateY(-4px);
 
             box-shadow:
-                0 16px 35px
+                0 15px 30px
                 rgba(
                     15,
                     35,
                     50,
-                    0.11
+                    0.08
                 );
         }
 
 
         .drug-card-top {
-            display: flex;
+            display:
+                flex;
+
+            align-items:
+                center;
 
             justify-content:
                 space-between;
 
-            align-items: center;
+            gap:
+                10px;
 
-            gap: 10px;
-
-            padding:
-                17px 18px 0;
+            margin-bottom:
+                17px;
         }
 
 
-        .drug-form {
+        .drug-card-icon {
+            width:
+                50px;
+
+            height:
+                50px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                14px;
+
             background:
                 #eef6f8;
 
-            color:
-                #156582;
+            font-size:
+                25px;
+        }
 
+
+        .drug-status {
             padding:
                 6px 9px;
 
             border-radius:
                 8px;
 
-            font-size:
-                12px;
-        }
-
-
-        .drug-category {
             background:
-                #f3f5f6;
-
-            padding:
-                6px 9px;
-
-            border-radius:
-                8px;
-
-            font-size:
-                12px;
+                #f1f5f6;
 
             color:
-                #65727d;
+                #66757e;
+
+            font-size:
+                11px;
         }
 
 
-        .drug-card-body {
-            padding:
-                20px 18px;
+        .drug-card h3 {
+            margin:
+                0 0 7px;
+
+            color:
+                #123a52;
+
+            font-size:
+                20px;
         }
 
 
         .drug-generic {
-            display: block;
+            margin:
+                0 0 13px;
+
+            color:
+                #176b82;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+
+        .drug-card p {
+            margin:
+                0 0 18px;
 
             color:
                 #71808a;
@@ -437,71 +634,66 @@
             font-size:
                 13px;
 
-            margin-bottom:
-                7px;
-        }
-
-
-        .drug-card h3 {
-            margin:
-                0 0 8px;
-
-            color:
-                #102f46;
-
-            font-size:
-                22px;
-        }
-
-
-        .drug-card p {
-            margin:
-                0;
-
-            color:
-                #697983;
-
             line-height:
                 1.8;
-
-            font-size:
-                14px;
         }
 
 
         .drug-card-footer {
-            display: flex;
+            margin-top:
+                auto;
 
-            align-items: center;
+            padding-top:
+                14px;
+
+            border-top:
+                1px solid #edf1f2;
+
+            display:
+                flex;
 
             justify-content:
                 space-between;
 
-            padding:
-                14px 18px;
+            align-items:
+                center;
 
-            border-top:
-                1px solid #edf1f3;
+            gap:
+                10px;
+        }
 
+
+        .drug-category-label {
+            color:
+                #7a8991;
+
+            font-size:
+                11px;
+        }
+
+
+        .drug-open {
             color:
                 #156582;
 
             font-size:
-                14px;
+                13px;
 
             font-weight:
-                600;
+                700;
         }
 
 
-        /* =================================================
-           EMPTY / ERROR
-           ================================================= */
+        /* =====================================================
+           EMPTY
+           ===================================================== */
 
-        .drugs-empty,
-        .drugs-error {
+        .drug-empty {
             grid-column:
                 1 / -1;
+
+            padding:
+                65px 20px;
 
             text-align:
                 center;
@@ -510,346 +702,112 @@
                 white;
 
             border:
-                1px solid #e5ebef;
+                1px solid #e3eaee;
 
             border-radius:
                 20px;
-
-            padding:
-                55px 20px;
         }
 
 
-        .drugs-empty-icon {
+        .drug-empty-icon {
             font-size:
-                45px;
+                48px;
 
             margin-bottom:
-                15px;
-        }
-
-
-        .drugs-empty h3,
-        .drugs-error h3 {
-            margin:
-                0 0 10px;
-        }
-
-
-        .drugs-empty p,
-        .drugs-error p {
-            color:
-                #71808a;
-
-            line-height:
-                1.8;
-        }
-
-
-        /* =================================================
-           MODAL
-           ================================================= */
-
-        .drug-modal {
-            position:
-                fixed;
-
-            inset:
-                0;
-
-            z-index:
-                9999;
-
-            visibility:
-                hidden;
-
-            opacity:
-                0;
-
-            transition:
-                opacity 0.25s ease,
-                visibility 0.25s ease;
-        }
-
-
-        .drug-modal.open {
-            visibility:
-                visible;
-
-            opacity:
-                1;
-        }
-
-
-        .drug-modal-overlay {
-            position:
-                absolute;
-
-            inset:
-                0;
-
-            background:
-                rgba(
-                    5,
-                    18,
-                    27,
-                    0.72
-                );
-
-            backdrop-filter:
-                blur(4px);
-        }
-
-
-        .drug-modal-content {
-            position:
-                relative;
-
-            width:
-                min(
-                    780px,
-                    calc(100% - 25px)
-                );
-
-            max-height:
-                calc(100vh - 35px);
-
-            overflow-y:
-                auto;
-
-            margin:
-                17px auto;
-
-            padding:
-                30px;
-
-            box-sizing:
-                border-box;
-
-            background:
-                white;
-
-            border-radius:
-                22px;
-
-            transform:
-                translateY(20px);
-
-            transition:
-                transform 0.25s ease;
-        }
-
-
-        .drug-modal.open
-        .drug-modal-content {
-            transform:
-                translateY(0);
-        }
-
-
-        .drug-modal-close {
-            position:
-                sticky;
-
-            top:
-                0;
-
-            float:
-                left;
-
-            width:
-                38px;
-
-            height:
-                38px;
-
-            border:
-                none;
-
-            border-radius:
-                50%;
-
-            background:
-                #f0f3f5;
-
-            cursor:
-                pointer;
-
-            font-size:
-                17px;
-        }
-
-
-        .drug-modal-header {
-            padding-bottom:
-                25px;
-
-            border-bottom:
-                1px solid #e7edef;
-        }
-
-
-        .drug-modal-category {
-            display:
-                inline-block;
-
-            padding:
-                7px 10px;
-
-            border-radius:
-                9px;
-
-            background:
-                #eef6f8;
-
-            color:
-                #156582;
-
-            font-size:
-                13px;
-        }
-
-
-        .drug-modal-header h2 {
-            margin:
-                17px 0 7px;
-
-            color:
-                #0d3148;
-
-            font-size:
-                31px;
-        }
-
-
-        .drug-modal-generic {
-            color:
-                #71808a;
-
-            font-size:
-                15px;
-        }
-
-
-        .drug-modal-section {
-            padding:
-                22px 0;
-
-            border-bottom:
-                1px solid #edf1f3;
-        }
-
-
-        .drug-modal-section h4 {
-            margin:
-                0 0 14px;
-
-            color:
-                #123b55;
-
-            font-size:
-                18px;
-        }
-
-
-        .drug-modal-section ul {
-            margin:
-                0;
-
-            padding-right:
-                22px;
-        }
-
-
-        .drug-modal-section li {
-            margin-bottom:
-                10px;
-
-            line-height:
-                1.8;
-
-            color:
-                #465761;
-        }
-
-
-        .drug-warning {
-            margin-top:
-                22px;
-
-            padding:
-                18px;
-
-            border-radius:
-                15px;
-
-            background:
-                #fff8e8;
-
-            border:
-                1px solid #f1dfad;
-        }
-
-
-        .drug-warning strong {
-            display:
-                block;
-
-            margin-bottom:
-                7px;
-        }
-
-
-        .drug-warning p {
-            margin:
-                0;
-
-            line-height:
-                1.8;
-
-            font-size:
                 14px;
         }
 
 
-        /* =================================================
+        .drug-empty h3 {
+            margin:
+                0 0 9px;
+
+            color:
+                #153a51;
+        }
+
+
+        .drug-empty p {
+            margin:
+                0;
+
+            color:
+                #71808a;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+           ===================================================== */
+
+        .drug-disclaimer {
+            margin-top:
+                35px;
+
+            padding:
+                18px;
+
+            border-radius:
+                14px;
+
+            background:
+                #fffaf0;
+
+            border:
+                1px solid #f0e0b8;
+
+            color:
+                #75613b;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.9;
+        }
+
+
+        /* =====================================================
            MOBILE
-           ================================================= */
+           ===================================================== */
 
         @media (max-width: 600px) {
 
             .drugs-hero {
                 padding:
-                    45px 15px 35px;
+                    45px 15px 50px;
             }
 
 
-            .drugs-hero p {
-                font-size:
-                    15px;
+            .drug-search-box input {
+                padding-left:
+                    95px;
             }
 
 
-            .drug-modal-content {
-                padding:
-                    22px 18px;
-
-                margin:
-                    10px auto;
+            .drug-search-button {
+                width:
+                    80px;
             }
 
 
-            .drug-modal-header h2 {
-                font-size:
-                    25px;
+            .drug-results-header {
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
             }
 
-        }
 
+            .drug-info-banner {
+                align-items:
+                    flex-start;
+            }
 
-        body.drug-modal-open {
-            overflow:
-                hidden;
         }
 
     </style>
@@ -873,29 +831,30 @@
 
                 <div class="drugs-hero-content">
 
-                    <span class="drugs-badge">
-                        💊 دليل الأدوية
-                    </span>
+                    <div class="drugs-icon">
+                        💊
+                    </div>
 
 
                     <h1>
-                        ابحث عن دوائك
+                        دليل الأدوية
                     </h1>
 
 
                     <p>
                         ابحث عن اسم الدواء أو المادة الفعالة
-                        للوصول إلى معلومات تعليمية منظمة
-                        عن الدواء واستخداماته وتنبيهاته.
+                        للوصول إلى المعلومات التعليمية المتاحة
+                        في بوابة التمريض.
                     </p>
 
 
-                    <div
-                        class="drugs-search-wrapper"
+                    <form
+                        class="drug-search-box"
+                        id="drugSearchForm"
                     >
 
                         <span
-                            class="drugs-search-icon"
+                            class="drug-search-icon"
                         >
                             🔍
                         </span>
@@ -903,13 +862,20 @@
 
                         <input
                             type="search"
-                            class="drugs-search"
-                            data-drugs-search
+                            id="drugSearchInput"
                             placeholder="ابحث باسم الدواء أو المادة الفعالة..."
                             autocomplete="off"
                         >
 
-                    </div>
+
+                        <button
+                            type="submit"
+                            class="drug-search-button"
+                        >
+                            بحث
+                        </button>
+
+                    </form>
 
                 </div>
 
@@ -927,121 +893,136 @@
             <div class="drugs-container">
 
 
-                <div class="drugs-toolbar">
+                <div class="drug-info-banner">
 
-                    <div class="drugs-count">
-
-                        <strong
-                            data-drugs-count
-                        >
-                            0
-                        </strong>
-
-                        دواء متاح
-
+                    <div
+                        class="drug-info-banner-icon"
+                    >
+                        ℹ️
                     </div>
 
+                    <div>
 
-                    <button
-                        type="button"
-                        class="drug-filter"
-                        data-drugs-clear
-                    >
-                        إعادة ضبط
-                    </button>
+                        <strong>
+                            دليل تعليمي
+                        </strong>
+
+                        <span>
+                            المعلومات المعروضة هنا للتثقيف
+                            والمعرفة العامة، ولا تُعد وصفة
+                            علاجية أو بديلًا عن الطبيب أو الصيدلي.
+                        </span>
+
+                    </div>
 
                 </div>
 
 
-                <!-- CATEGORY FILTERS -->
+                <!-- =================================================
+                     CATEGORIES
+                     ================================================= -->
 
                 <div
-                    class="drugs-filters"
-                    aria-label="تصنيف الأدوية"
+                    class="drug-categories"
+                    id="drugCategories"
                 >
 
                     <button
-                        type="button"
-                        class="drug-filter active"
-                        data-drug-category="all"
+                        class="drug-category active"
+                        data-category="all"
                     >
-                        💊 الكل
+                        الكل
                     </button>
 
 
                     <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="analgesics"
+                        class="drug-category"
+                        data-category="analgesics"
                     >
-                        🤕 مسكنات
+                        💢 مسكنات
                     </button>
 
 
                     <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="antibiotics"
+                        class="drug-category"
+                        data-category="antibiotics"
                     >
                         🦠 مضادات حيوية
                     </button>
 
 
                     <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="cardiovascular"
+                        class="drug-category"
+                        data-category="gastro"
                     >
-                        ❤️ القلب والضغط
+                        🫃 الجهاز الهضمي
                     </button>
 
 
                     <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="gastrointestinal"
+                        class="drug-category"
+                        data-category="cardio"
                     >
-                        🥣 الجهاز الهضمي
+                        ❤️ القلب
                     </button>
 
 
                     <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="respiratory"
+                        class="drug-category"
+                        data-category="respiratory"
                     >
                         🫁 الجهاز التنفسي
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="drug-filter"
-                        data-drug-category="other"
-                    >
-                        📦 أخرى
                     </button>
 
                 </div>
 
 
-                <!-- RESULTS -->
+                <!-- =================================================
+                     RESULTS HEADER
+                     ================================================= -->
+
+                <div class="drug-results-header">
+
+                    <h2>
+                        الأدوية
+                    </h2>
+
+                    <span
+                        class="drug-count"
+                        id="drugCount"
+                    >
+                        0 دواء
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     DRUGS GRID
+                     ================================================= -->
 
                 <div
-                    data-drugs-results
+                    class="drugs-grid"
+                    id="drugsGrid"
                 >
+                </div>
 
-                    <div class="drugs-empty">
 
-                        <div class="drugs-empty-icon">
-                            💊
-                        </div>
+                <!-- =================================================
+                     DISCLAIMER
+                     ================================================= -->
 
-                        <h3>
-                            جاري تحميل دليل الأدوية...
-                        </h3>
+                <div class="drug-disclaimer">
 
-                    </div>
+                    <strong>
+                        ⚠️ تنبيه مهم:
+                    </strong>
+
+                    محتوى هذا القسم تعليمي فقط.
+                    لا تستخدم أي دواء أو تغيّر الجرعة
+                    أو طريقة الاستخدام بناءً على المعلومات
+                    الموجودة بالموقع دون الرجوع إلى الطبيب
+                    أو الصيدلي المختص.
 
                 </div>
 
@@ -1052,13 +1033,513 @@
     </main>
 
 
-    <!-- =================================================
-         JAVASCRIPT
-         ================================================= -->
+    <!-- =====================================================
+         DRUG DATA
+         ===================================================== -->
 
     <script
-        src="js/drugs.js"
+        src="data/site-data.js"
     ></script>
+
+
+    <script>
+
+        /* =====================================================
+           SAMPLE DATA
+           =====================================================
+
+           دي بيانات تجريبية فقط لتشغيل الواجهة.
+           هنفصل قاعدة بيانات الأدوية الحقيقية في ملف مستقل
+           في الخطوة القادمة.
+        */
+
+        const DRUGS = [
+
+            {
+                id:
+                    "paracetamol",
+
+                name:
+                    "Paracetamol",
+
+                arabicName:
+                    "باراسيتامول",
+
+                generic:
+                    "Paracetamol",
+
+                category:
+                    "analgesics",
+
+                description:
+                    "مسكن وخافض للحرارة يُستخدم في العديد من الحالات الشائعة.",
+
+                status:
+                    "معلومات تعليمية",
+
+                url:
+                    "#"
+
+            },
+
+
+            {
+                id:
+                    "amoxicillin",
+
+                name:
+                    "Amoxicillin",
+
+                arabicName:
+                    "أموكسيسيلين",
+
+                generic:
+                    "Amoxicillin",
+
+                category:
+                    "antibiotics",
+
+                description:
+                    "مضاد حيوي من مجموعة البنسلين ويُستخدم في بعض أنواع العدوى البكتيرية.",
+
+                status:
+                    "معلومات تعليمية",
+
+                url:
+                    "#"
+
+            },
+
+
+            {
+                id:
+                    "omeprazole",
+
+                name:
+                    "Omeprazole",
+
+                arabicName:
+                    "أوميبرازول",
+
+                generic:
+                    "Omeprazole",
+
+                category:
+                    "gastro",
+
+                description:
+                    "دواء يعمل على تقليل إفراز حمض المعدة ويستخدم في بعض اضطرابات الجهاز الهضمي.",
+
+                status:
+                    "معلومات تعليمية",
+
+                url:
+                    "#"
+
+            },
+
+
+            {
+                id:
+                    "salbutamol",
+
+                name:
+                    "Salbutamol",
+
+                arabicName:
+                    "سالبوتامول",
+
+                generic:
+                    "Salbutamol",
+
+                category:
+                    "respiratory",
+
+                description:
+                    "دواء موسع للشعب الهوائية ويستخدم في بعض حالات ضيق الشعب الهوائية.",
+
+                status:
+                    "معلومات تعليمية",
+
+                url:
+                    "#"
+
+            }
+
+        ];
+
+
+        /* =====================================================
+           ELEMENTS
+           ===================================================== */
+
+        const searchForm =
+            document.getElementById(
+                "drugSearchForm"
+            );
+
+
+        const searchInput =
+            document.getElementById(
+                "drugSearchInput"
+            );
+
+
+        const drugsGrid =
+            document.getElementById(
+                "drugsGrid"
+            );
+
+
+        const drugCount =
+            document.getElementById(
+                "drugCount"
+            );
+
+
+        const categoryButtons =
+            document.querySelectorAll(
+                ".drug-category"
+            );
+
+
+        let activeCategory =
+            "all";
+
+
+        /* =====================================================
+           NORMALIZE
+           ===================================================== */
+
+        function normalizeDrugText(
+            text
+        ) {
+
+            return String(text || "")
+                .toLowerCase()
+                .trim()
+
+                .replace(
+                    /[أإآ]/g,
+                    "ا"
+                )
+
+                .replace(
+                    /ة/g,
+                    "ه"
+                )
+
+                .replace(
+                    /ى/g,
+                    "ي"
+                )
+
+                .replace(
+                    /[ًٌٍَُِّْـ]/g,
+                    ""
+                )
+
+                .replace(
+                    /\s+/g,
+                    " "
+                );
+
+        }
+
+
+        /* =====================================================
+           SEARCH
+           ===================================================== */
+
+        function getFilteredDrugs() {
+
+            const query =
+                normalizeDrugText(
+                    searchInput.value
+                );
+
+
+            return DRUGS.filter(
+                function (drug) {
+
+                    const matchesCategory =
+                        activeCategory ===
+                        "all" ||
+                        drug.category ===
+                        activeCategory;
+
+
+                    if (
+                        !matchesCategory
+                    ) {
+
+                        return false;
+
+                    }
+
+
+                    if (!query) {
+
+                        return true;
+
+                    }
+
+
+                    const searchable =
+                        normalizeDrugText(
+                            [
+                                drug.name,
+                                drug.arabicName,
+                                drug.generic,
+                                drug.description
+                            ].join(" ")
+                        );
+
+
+                    return searchable
+                        .includes(query);
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           RENDER
+           ===================================================== */
+
+        function renderDrugs() {
+
+            const results =
+                getFilteredDrugs();
+
+
+            drugCount.textContent =
+                results.length +
+                " دواء";
+
+
+            if (
+                results.length === 0
+            ) {
+
+                drugsGrid.innerHTML = `
+
+                    <div class="drug-empty">
+
+                        <div
+                            class="drug-empty-icon"
+                        >
+                            🔎
+                        </div>
+
+                        <h3>
+                            لم نجد الدواء الذي تبحث عنه
+                        </h3>
+
+                        <p>
+                            جرّب البحث بالاسم الإنجليزي
+                            أو العربي أو المادة الفعالة.
+                        </p>
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            drugsGrid.innerHTML =
+                results
+                    .map(
+                        function (drug) {
+
+                            return `
+
+                                <article
+                                    class="drug-card"
+                                >
+
+                                    <div
+                                        class="drug-card-top"
+                                    >
+
+                                        <span
+                                            class="drug-card-icon"
+                                        >
+                                            💊
+                                        </span>
+
+                                        <span
+                                            class="drug-status"
+                                        >
+                                            ${drug.status}
+                                        </span>
+
+                                    </div>
+
+
+                                    <h3>
+                                        ${drug.arabicName}
+                                    </h3>
+
+
+                                    <div
+                                        class="drug-generic"
+                                    >
+                                        ${drug.name}
+                                    </div>
+
+
+                                    <p>
+                                        ${drug.description}
+                                    </p>
+
+
+                                    <div
+                                        class="drug-card-footer"
+                                    >
+
+                                        <span
+                                            class="drug-category-label"
+                                        >
+                                            المادة الفعالة:
+                                            ${drug.generic}
+                                        </span>
+
+
+                                        <a
+                                            href="${drug.url}"
+                                            class="drug-open"
+                                        >
+                                            التفاصيل ←
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+                            `;
+
+                        }
+                    )
+                    .join("");
+
+        }
+
+
+        /* =====================================================
+           SEARCH SUBMIT
+           ===================================================== */
+
+        searchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                renderDrugs();
+
+                const query =
+                    searchInput.value.trim();
+
+
+                const url =
+                    query
+                        ?
+                        "drugs.html?search=" +
+                        encodeURIComponent(
+                            query
+                        )
+                        :
+                        "drugs.html";
+
+
+                window.history.replaceState(
+                    {},
+                    "",
+                    url
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           CATEGORY FILTER
+           ===================================================== */
+
+        categoryButtons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        categoryButtons
+                            .forEach(
+                                function (btn) {
+
+                                    btn.classList
+                                        .remove(
+                                            "active"
+                                        );
+
+                                }
+                            );
+
+
+                        button.classList
+                            .add("active");
+
+
+                        activeCategory =
+                            button.dataset
+                                .category;
+
+
+                        renderDrugs();
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           LOAD URL SEARCH
+           ===================================================== */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const initialSearch =
+            params.get("search") ||
+            "";
+
+
+        if (initialSearch) {
+
+            searchInput.value =
+                initialSearch;
+
+        }
+
+
+        /* =====================================================
+           INITIAL RENDER
+           ===================================================== */
+
+        renderDrugs();
+
+    </script>
 
 
 </body>
