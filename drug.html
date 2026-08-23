@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        id="metaDescription"
+        content="معلومات تعليمية عن الدواء | بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title id="pageTitle">
+        تفاصيل الدواء | بوابة التمريض
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .drug-page {
+            min-height: 100vh;
+            background: #f6f9fb;
+        }
+
+
+        .drug-container {
+            width:
+                min(
+                    1000px,
+                    calc(100% - 30px)
+                );
+
+            margin:
+                auto;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .drug-detail-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #176b82
+                );
+
+            color:
+                white;
+
+            padding:
+                55px 20px 65px;
+        }
+
+
+        .drug-breadcrumb {
+            margin-bottom:
+                30px;
+
+            font-size:
+                13px;
+
+            opacity:
+                0.8;
+        }
+
+
+        .drug-breadcrumb a {
+            color:
+                white;
+
+            text-decoration:
+                none;
+        }
+
+
+        .drug-main-info {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                22px;
+        }
+
+
+        .drug-main-icon {
+            width:
+                82px;
+
+            height:
+                82px;
+
+            flex:
+                0 0 82px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                22px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.13
+                );
+
+            font-size:
+                40px;
+        }
+
+
+        .drug-main-info h1 {
+            margin:
+                0 0 8px;
+
+            font-size:
+                clamp(
+                    30px,
+                    5vw,
+                    44px
+                );
+        }
+
+
+        .drug-english-name {
+            margin:
+                0 0 9px;
+
+            font-size:
+                17px;
+
+            opacity:
+                0.9;
+        }
+
+
+        .drug-category-name {
+            display:
+                inline-block;
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                8px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.12
+                );
+
+            font-size:
+                12px;
+        }
+
+
+        /* =====================================================
+           CONTENT
+           ===================================================== */
+
+        .drug-detail-content {
+            padding:
+                45px 0 80px;
+        }
+
+
+        .drug-warning {
+            padding:
+                18px 20px;
+
+            margin-bottom:
+                25px;
+
+            border-radius:
+                15px;
+
+            background:
+                #fff8e9;
+
+            border:
+                1px solid #f0dfb6;
+
+            color:
+                #705d38;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.9;
+        }
+
+
+        .drug-sections {
+            display:
+                grid;
+
+            gap:
+                18px;
+        }
+
+
+        /* =====================================================
+           SECTION CARD
+           ===================================================== */
+
+        .drug-section {
+            background:
+                white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius:
+                18px;
+
+            padding:
+                25px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.035
+                );
+        }
+
+
+        .drug-section h2 {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            margin:
+                0 0 18px;
+
+            color:
+                #123a52;
+
+            font-size:
+                21px;
+        }
+
+
+        .drug-section h2 span {
+            font-size:
+                22px;
+        }
+
+
+        .drug-section p {
+            margin:
+                0;
+
+            color:
+                #61727c;
+
+            line-height:
+                2;
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           BASIC INFORMATION
+           ===================================================== */
+
+        .drug-basic-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(
+                        220px,
+                        1fr
+                    )
+                );
+
+            gap:
+                12px;
+        }
+
+
+        .drug-basic-item {
+            padding:
+                15px;
+
+            border-radius:
+                12px;
+
+            background:
+                #f7fafb;
+
+            border:
+                1px solid #edf1f3;
+        }
+
+
+        .drug-basic-item small {
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                #87949b;
+
+            font-size:
+                11px;
+        }
+
+
+        .drug-basic-item strong {
+            color:
+                #17425a;
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================================
+           LIST
+           ===================================================== */
+
+        .drug-list {
+            margin:
+                0;
+
+            padding:
+                0 22px 0 0;
+
+            color:
+                #61727c;
+        }
+
+
+        .drug-list li {
+            margin-bottom:
+                10px;
+
+            line-height:
+                1.9;
+
+            font-size:
+                14px;
+        }
+
+
+        .drug-list li:last-child {
+            margin-bottom:
+                0;
+        }
+
+
+        /* =====================================================
+           DOSAGE FORMS
+           ===================================================== */
+
+        .dosage-forms {
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                9px;
+        }
+
+
+        .dosage-form {
+            padding:
+                8px 12px;
+
+            border-radius:
+                9px;
+
+            background:
+                #eef6f8;
+
+            color:
+                #17647b;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           BACK
+           ===================================================== */
+
+        .drug-back {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            margin-top:
+                25px;
+
+            padding:
+                11px 17px;
+
+            border-radius:
+                11px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            text-decoration:
+                none;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================================
+           NOT FOUND
+           ===================================================== */
+
+        .drug-not-found {
+            padding:
+                80px 20px;
+
+            text-align:
+                center;
+        }
+
+
+        .drug-not-found-icon {
+            font-size:
+                55px;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .drug-not-found h1 {
+            margin:
+                0 0 10px;
+
+            color:
+                #153a51;
+        }
+
+
+        .drug-not-found p {
+            margin:
+                0;
+
+            color:
+                #71808a;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .drug-detail-hero {
+                padding:
+                    40px 15px 50px;
+            }
+
+
+            .drug-main-info {
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+            }
+
+
+            .drug-main-icon {
+                width:
+                    65px;
+
+                height:
+                    65px;
+
+                flex-basis:
+                    65px;
+
+                font-size:
+                    32px;
+            }
+
+
+            .drug-section {
+                padding:
+                    20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<main
+    class="drug-page"
+    id="drugPage"
+>
+
+
+    <!-- =====================================================
+         DRUG HERO
+         ===================================================== -->
+
+    <section
+        class="drug-detail-hero"
+        id="drugHero"
+    >
+
+        <div class="drug-container">
+
+
+            <div class="drug-breadcrumb">
+
+                <a href="index.html">
+                    الرئيسية
+                </a>
+
+                &nbsp; / &nbsp;
+
+                <a href="drugs.html">
+                    دليل الأدوية
+                </a>
+
+                &nbsp; / &nbsp;
+
+                <span id="breadcrumbName">
+                    الدواء
+                </span>
+
+            </div>
+
+
+            <div class="drug-main-info">
+
+                <div class="drug-main-icon">
+                    💊
+                </div>
+
+
+                <div>
+
+                    <h1 id="drugName">
+                        جاري التحميل...
+                    </h1>
+
+
+                    <p
+                        class="drug-english-name"
+                        id="drugEnglishName"
+                    >
+                    </p>
+
+
+                    <span
+                        class="drug-category-name"
+                        id="drugCategory"
+                    >
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTENT
+         ===================================================== -->
+
+    <section class="drug-detail-content">
+
+        <div class="drug-container">
+
+
+            <div class="drug-warning">
+
+                <strong>
+                    ⚠️ تنبيه:
+                </strong>
+
+                هذه الصفحة مخصصة للمعلومات التعليمية
+                فقط، ولا تمثل وصفة علاجية أو بديلًا عن
+                الطبيب أو الصيدلي. الجرعات وطريقة الاستخدام
+                تعتمد على الحالة وتشخيص المختص.
+
+            </div>
+
+
+            <div
+                class="drug-sections"
+                id="drugSections"
+            >
+            </div>
+
+
+            <a
+                href="drugs.html"
+                class="drug-back"
+            >
+                ← العودة إلى دليل الأدوية
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="data/drugs/drugs-data.js"></script>
+
+
+<script>
+
+    /* =====================================================
+       HELPERS
+       ===================================================== */
+
+    function escapeHTML(
+        value
+    ) {
+
+        return String(
+            value || ""
+        )
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+    }
+
+
+    /* =====================================================
+       GET DRUG ID
+       ===================================================== */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const drugId =
+        params.get("id");
+
+
+    /* =====================================================
+       FIND DRUG
+       ===================================================== */
+
+    const drugs =
+        Array.isArray(
+            window.BAWABET_DRUGS
+        )
+            ?
+            window.BAWABET_DRUGS
+            :
+            [];
+
+
+    const drug =
+        drugs.find(
+            function (item) {
+
+                return (
+                    item.id ===
+                    drugId
+                );
+
+            }
+        );
+
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const drugName =
+        document.getElementById(
+            "drugName"
+        );
+
+
+    const drugEnglishName =
+        document.getElementById(
+            "drugEnglishName"
+        );
+
+
+    const drugCategory =
+        document.getElementById(
+            "drugCategory"
+        );
+
+
+    const breadcrumbName =
+        document.getElementById(
+            "breadcrumbName"
+        );
+
+
+    const sections =
+        document.getElementById(
+            "drugSections"
+        );
+
+
+    const pageTitle =
+        document.getElementById(
+            "pageTitle"
+        );
+
+
+    const metaDescription =
+        document.getElementById(
+            "metaDescription"
+        );
+
+
+    /* =====================================================
+       NOT FOUND
+       ===================================================== */
+
+    if (!drug) {
+
+        drugName.textContent =
+            "الدواء غير موجود";
+
+
+        drugEnglishName.textContent =
+            "";
+
+
+        drugCategory.textContent =
+            "";
+
+
+        breadcrumbName.textContent =
+            "غير موجود";
+
+
+        sections.innerHTML = `
+
+            <div
+                class="drug-section drug-not-found"
+            >
+
+                <div
+                    class="drug-not-found-icon"
+                >
+                    🔎
+                </div>
+
+
+                <h1>
+                    لم يتم العثور على الدواء
+                </h1>
+
+
+                <p>
+                    تأكد من أن الرابط صحيح
+                    أو ارجع إلى دليل الأدوية
+                    للبحث مرة أخرى.
+                </p>
+
+            </div>
+
+        `;
+
+
+        pageTitle.textContent =
+            "الدواء غير موجود | بوابة التمريض";
+
+
+    } else {
+
+
+        /* =================================================
+           BASIC DATA
+           ================================================= */
+
+        const safeArabicName =
+            escapeHTML(
+                drug.arabicName
+            );
+
+
+        const safeEnglishName =
+            escapeHTML(
+                drug.name
+            );
+
+
+        const safeCategory =
+            escapeHTML(
+                drug.categoryName
+            );
+
+
+        const safeGeneric =
+            escapeHTML(
+                drug.genericName
+            );
+
+
+        drugName.innerHTML =
+            safeArabicName;
+
+
+        drugEnglishName.innerHTML =
+            safeEnglishName;
+
+
+        drugCategory.innerHTML =
+            safeCategory;
+
+
+        breadcrumbName.innerHTML =
+            safeArabicName;
+
+
+        pageTitle.textContent =
+            safeArabicName +
+            " | معلومات الدواء | بوابة التمريض";
+
+
+        metaDescription.setAttribute(
+            "content",
+            "معلومات تعليمية عن " +
+            drug.name +
+            " - " +
+            drug.arabicName +
+            " في بوابة التمريض."
+        );
+
+
+        /* =================================================
+           DOSAGE FORMS
+           ================================================= */
+
+        const dosageForms =
+            Array.isArray(
+                drug.dosageForms
+            )
+                ?
+                drug.dosageForms
+                :
+                [];
+
+
+        const dosageHTML =
+            dosageForms.length
+                ?
+
+                `
+
+                    <div
+                        class="dosage-forms"
+                    >
+
+                        ${dosageForms
+                            .map(
+                                function (form) {
+
+                                    return `
+
+                                        <span
+                                            class="dosage-form"
+                                        >
+                                            ${escapeHTML(form)}
+                                        </span>
+
+                                    `;
+
+                                }
+                            )
+                            .join("")
+                        }
+
+                    </div>
+
+                `
+
+                :
+
+                `<p>لا توجد بيانات متاحة.</p>`;
+
+
+        /* =================================================
+           USES
+           ================================================= */
+
+        const uses =
+            Array.isArray(
+                drug.uses
+            )
+                ?
+                drug.uses
+                :
+                [];
+
+
+        const usesHTML =
+            uses.length
+                ?
+
+                `
+
+                    <ul
+                        class="drug-list"
+                    >
+
+                        ${uses
+                            .map(
+                                function (item) {
+
+                                    return `
+
+                                        <li>
+                                            ${escapeHTML(item)}
+                                        </li>
+
+                                    `;
+
+                                }
+                            )
+                            .join("")
+                        }
+
+                    </ul>
+
+                `
+
+                :
+
+                `<p>لا توجد بيانات متاحة.</p>`;
+
+
+        /* =================================================
+           NURSING NOTES
+           ================================================= */
+
+        const nursingNotes =
+            Array.isArray(
+                drug.nursingNotes
+            )
+                ?
+                drug.nursingNotes
+                :
+                [];
+
+
+        const nursingHTML =
+            nursingNotes.length
+                ?
+
+                `
+
+                    <ul
+                        class="drug-list"
+                    >
+
+                        ${nursingNotes
+                            .map(
+                                function (item) {
+
+                                    return `
+
+                                        <li>
+                                            ${escapeHTML(item)}
+                                        </li>
+
+                                    `;
+
+                                }
+                            )
+                            .join("")
+                        }
+
+                    </ul>
+
+                `
+
+                :
+
+                `<p>لا توجد بيانات متاحة.</p>`;
+
+
+        /* =================================================
+           WARNINGS
+           ================================================= */
+
+        const warnings =
+            Array.isArray(
+                drug.warnings
+            )
+                ?
+                drug.warnings
+                :
+                [];
+
+
+        const warningsHTML =
+            warnings.length
+                ?
+
+                `
+
+                    <ul
+                        class="drug-list"
+                    >
+
+                        ${warnings
+                            .map(
+                                function (item) {
+
+                                    return `
+
+                                        <li>
+                                            ${escapeHTML(item)}
+                                        </li>
+
+                                    `;
+
+                                }
+                            )
+                            .join("")
+                        }
+
+                    </ul>
+
+                `
+
+                :
+
+                `<p>لا توجد بيانات متاحة.</p>`;
+
+
+        /* =================================================
+           SECTIONS
+           ================================================= */
+
+        sections.innerHTML = `
+
+
+            <!-- BASIC INFORMATION -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>📋</span>
+                    معلومات أساسية
+                </h2>
+
+
+                <div
+                    class="drug-basic-grid"
+                >
+
+                    <div
+                        class="drug-basic-item"
+                    >
+
+                        <small>
+                            الاسم العربي
+                        </small>
+
+                        <strong>
+                            ${safeArabicName}
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="drug-basic-item"
+                    >
+
+                        <small>
+                            الاسم الإنجليزي
+                        </small>
+
+                        <strong>
+                            ${safeEnglishName}
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="drug-basic-item"
+                    >
+
+                        <small>
+                            المادة الفعالة
+                        </small>
+
+                        <strong>
+                            ${safeGeneric}
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="drug-basic-item"
+                    >
+
+                        <small>
+                            التصنيف
+                        </small>
+
+                        <strong>
+                            ${safeCategory}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DOSAGE FORMS -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>💊</span>
+                    الأشكال الدوائية
+                </h2>
+
+
+                ${dosageHTML}
+
+            </section>
+
+
+            <!-- USES -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>🎯</span>
+                    الاستخدامات
+                </h2>
+
+
+                ${usesHTML}
+
+            </section>
+
+
+            <!-- MECHANISM -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>🧬</span>
+                    آلية العمل
+                </h2>
+
+
+                <p>
+                    ${escapeHTML(
+                        drug.mechanism ||
+                        "لا توجد بيانات متاحة."
+                    )}
+                </p>
+
+            </section>
+
+
+            <!-- NURSING NOTES -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>🩺</span>
+                    Nursing Notes
+                </h2>
+
+
+                ${nursingHTML}
+
+            </section>
+
+
+            <!-- WARNINGS -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>⚠️</span>
+                    التحذيرات والاحتياطات
+                </h2>
+
+
+                ${warningsHTML}
+
+            </section>
+
+
+            <!-- INTERACTIONS -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>🔄</span>
+                    التداخلات الدوائية
+                </h2>
+
+
+                <p>
+                    ${escapeHTML(
+                        drug.interactions ||
+                        "لا توجد بيانات متاحة."
+                    )}
+                </p>
+
+            </section>
+
+
+            <!-- PREGNANCY -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>🤰</span>
+                    الحمل والرضاعة
+                </h2>
+
+
+                <p>
+                    ${escapeHTML(
+                        drug.pregnancy ||
+                        "يجب استشارة الطبيب أو الصيدلي المختص."
+                    )}
+                </p>
+
+            </section>
+
+
+            <!-- EDUCATIONAL NOTE -->
+
+            <section
+                class="drug-section"
+            >
+
+                <h2>
+                    <span>📚</span>
+                    ملاحظة تعليمية
+                </h2>
+
+
+                <p>
+                    المعلومات الموجودة في هذه الصفحة
+                    مخصصة للتثقيف والدراسة فقط.
+                    لا تعتمد عليها لاتخاذ قرار علاجي
+                    أو تغيير جرعة أو إيقاف دواء.
+                    القرار العلاجي يجب أن يتم بواسطة
+                    الطبيب أو الصيدلي المختص.
+                </p>
+
+            </section>
+
+        `;
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
