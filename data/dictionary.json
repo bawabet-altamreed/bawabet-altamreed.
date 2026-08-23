@@ -1,0 +1,471 @@
+{
+  "version": "1.0",
+  "language": "ar",
+  "lastUpdated": "2026-08-24",
+
+  "categories": [
+    {
+      "id": "general-nursing",
+      "name": "مصطلحات تمريض عامة",
+      "icon": "🩺"
+    },
+    {
+      "id": "anatomy",
+      "name": "Anatomy",
+      "icon": "🫀"
+    },
+    {
+      "id": "physiology",
+      "name": "Physiology",
+      "icon": "🧠"
+    },
+    {
+      "id": "medical-surgical",
+      "name": "Medical-Surgical Nursing",
+      "icon": "🏥"
+    },
+    {
+      "id": "pharmacology",
+      "name": "Pharmacology",
+      "icon": "💊"
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency",
+      "icon": "🚑"
+    },
+    {
+      "id": "community-health",
+      "name": "Community Health",
+      "icon": "🌍"
+    }
+  ],
+
+  "terms": [
+    {
+      "id": "vital-signs",
+      "term": "Vital Signs",
+      "arabic": "العلامات الحيوية",
+      "category": "general-nursing",
+      "shortDefinition": "مجموعة من القياسات الأساسية التي تساعد على تقييم الحالة العامة للمريض.",
+      "definition": "تشمل العلامات الحيوية الأساسية عادةً درجة الحرارة، معدل النبض، معدل التنفس وضغط الدم، وقد تُضاف إليها قياسات أخرى مثل تشبع الأكسجين حسب الحالة.",
+      "keywords": [
+        "vital signs",
+        "العلامات الحيوية",
+        "temperature",
+        "pulse",
+        "respiration",
+        "blood pressure"
+      ]
+    },
+
+    {
+      "id": "temperature",
+      "term": "Temperature",
+      "arabic": "درجة الحرارة",
+      "category": "general-nursing",
+      "shortDefinition": "قياس يعكس درجة حرارة الجسم.",
+      "definition": "تُقاس درجة حرارة الجسم باستخدام وسائل وأماكن قياس مختلفة حسب حالة المريض والطريقة المتاحة.",
+      "keywords": [
+        "temperature",
+        "درجة الحرارة",
+        "fever",
+        "حرارة"
+      ]
+    },
+
+    {
+      "id": "pulse",
+      "term": "Pulse",
+      "arabic": "النبض",
+      "category": "general-nursing",
+      "shortDefinition": "عدد ضربات القلب المحسوسة خلال فترة زمنية محددة.",
+      "definition": "يُستخدم قياس النبض لتقييم معدل ضربات القلب وانتظامها وقوتها، مع مراعاة عمر المريض وحالته.",
+      "keywords": [
+        "pulse",
+        "النبض",
+        "heart rate"
+      ]
+    },
+
+    {
+      "id": "respiratory-rate",
+      "term": "Respiratory Rate",
+      "arabic": "معدل التنفس",
+      "category": "general-nursing",
+      "shortDefinition": "عدد مرات التنفس خلال دقيقة واحدة.",
+      "definition": "يُعد معدل التنفس أحد العلامات الحيوية المهمة، ويُقيّم عادةً مع ملاحظة نمط وعمق التنفس.",
+      "keywords": [
+        "respiratory rate",
+        "معدل التنفس",
+        "respiration"
+      ]
+    },
+
+    {
+      "id": "blood-pressure",
+      "term": "Blood Pressure",
+      "arabic": "ضغط الدم",
+      "category": "general-nursing",
+      "shortDefinition": "القوة التي يؤثر بها الدم على جدران الأوعية الدموية.",
+      "definition": "يُعبّر ضغط الدم عادةً عن ضغط انقباضي وضغط انبساطي ويتم قياسه باستخدام جهاز مناسب.",
+      "keywords": [
+        "blood pressure",
+        "ضغط الدم",
+        "systolic",
+        "diastolic"
+      ]
+    },
+
+    {
+      "id": "oxygen-saturation",
+      "term": "Oxygen Saturation",
+      "arabic": "تشبع الأكسجين",
+      "category": "general-nursing",
+      "shortDefinition": "نسبة تشبع الهيموغلوبين بالأكسجين في الدم.",
+      "definition": "يمكن تقدير تشبع الأكسجين بشكل غير جراحي باستخدام جهاز قياس التأكسج النبضي، مع تفسير النتيجة في سياق حالة المريض.",
+      "keywords": [
+        "oxygen saturation",
+        "SpO2",
+        "تشبع الأكسجين",
+        "pulse oximeter"
+      ]
+    },
+
+    {
+      "id": "anatomical-position",
+      "term": "Anatomical Position",
+      "arabic": "الوضع التشريحي",
+      "category": "anatomy",
+      "shortDefinition": "وضع مرجعي يستخدم لوصف أجزاء الجسم واتجاهاتها.",
+      "definition": "يكون الشخص في الوضع التشريحي واقفًا بشكل مستقيم، والوجه والعينان إلى الأمام، والذراعان بجانب الجسم، وراحَتا اليدين إلى الأمام.",
+      "keywords": [
+        "anatomical position",
+        "الوضع التشريحي",
+        "anatomy"
+      ]
+    },
+
+    {
+      "id": "anterior",
+      "term": "Anterior",
+      "arabic": "أمامي",
+      "category": "anatomy",
+      "shortDefinition": "مصطلح يصف الاتجاه نحو الجزء الأمامي من الجسم.",
+      "definition": "يُستخدم مصطلح Anterior في التشريح للإشارة إلى موقع أقرب إلى الجزء الأمامي من الجسم.",
+      "keywords": [
+        "anterior",
+        "أمامي",
+        "body directions"
+      ]
+    },
+
+    {
+      "id": "posterior",
+      "term": "Posterior",
+      "arabic": "خلفي",
+      "category": "anatomy",
+      "shortDefinition": "مصطلح يصف الاتجاه نحو الجزء الخلفي من الجسم.",
+      "definition": "يُستخدم مصطلح Posterior في التشريح للإشارة إلى موقع أقرب إلى الجزء الخلفي من الجسم.",
+      "keywords": [
+        "posterior",
+        "خلفي",
+        "body directions"
+      ]
+    },
+
+    {
+      "id": "medial",
+      "term": "Medial",
+      "arabic": "إنسي",
+      "category": "anatomy",
+      "shortDefinition": "أقرب إلى الخط المتوسط للجسم.",
+      "definition": "يُستخدم Medial لوصف تركيب يقع أقرب إلى الخط المتوسط للجسم مقارنة بتركيب آخر.",
+      "keywords": [
+        "medial",
+        "إنسي",
+        "midline"
+      ]
+    },
+
+    {
+      "id": "lateral",
+      "term": "Lateral",
+      "arabic": "وحشي",
+      "category": "anatomy",
+      "shortDefinition": "أبعد عن الخط المتوسط للجسم.",
+      "definition": "يُستخدم Lateral لوصف تركيب يقع بعيدًا عن الخط المتوسط للجسم مقارنة بتركيب آخر.",
+      "keywords": [
+        "lateral",
+        "وحشي",
+        "midline"
+      ]
+    },
+
+    {
+      "id": "proximal",
+      "term": "Proximal",
+      "arabic": "قريب",
+      "category": "anatomy",
+      "shortDefinition": "أقرب إلى نقطة اتصال الطرف بالجسم.",
+      "definition": "يُستخدم Proximal لوصف جزء يقع أقرب إلى نقطة اتصال الطرف بالجسم.",
+      "keywords": [
+        "proximal",
+        "قريب",
+        "limb"
+      ]
+    },
+
+    {
+      "id": "distal",
+      "term": "Distal",
+      "arabic": "بعيد",
+      "category": "anatomy",
+      "shortDefinition": "أبعد عن نقطة اتصال الطرف بالجسم.",
+      "definition": "يُستخدم Distal لوصف جزء يقع أبعد عن نقطة اتصال الطرف بالجسم.",
+      "keywords": [
+        "distal",
+        "بعيد",
+        "limb"
+      ]
+    },
+
+    {
+      "id": "superior",
+      "term": "Superior",
+      "arabic": "علوي",
+      "category": "anatomy",
+      "shortDefinition": "أقرب إلى الرأس أو أعلى الجسم.",
+      "definition": "يصف Superior تركيبًا يقع أعلى أو أقرب إلى الرأس مقارنة بتركيب آخر.",
+      "keywords": [
+        "superior",
+        "علوي",
+        "body direction"
+      ]
+    },
+
+    {
+      "id": "inferior",
+      "term": "Inferior",
+      "arabic": "سفلي",
+      "category": "anatomy",
+      "shortDefinition": "أقرب إلى القدمين أو أسفل الجسم.",
+      "definition": "يصف Inferior تركيبًا يقع أسفل أو أبعد عن الرأس مقارنة بتركيب آخر.",
+      "keywords": [
+        "inferior",
+        "سفلي",
+        "body direction"
+      ]
+    },
+
+    {
+      "id": "tachycardia",
+      "term": "Tachycardia",
+      "arabic": "تسرع القلب",
+      "category": "medical-surgical",
+      "shortDefinition": "زيادة معدل ضربات القلب عن المعدل المتوقع حسب الحالة والعمر.",
+      "definition": "Tachycardia هو مصطلح يُستخدم لوصف تسارع معدل ضربات القلب، ويجب تفسيره وفق عمر الشخص وحالته السريرية والسياق.",
+      "keywords": [
+        "tachycardia",
+        "تسرع القلب",
+        "heart rate"
+      ]
+    },
+
+    {
+      "id": "bradycardia",
+      "term": "Bradycardia",
+      "arabic": "بطء القلب",
+      "category": "medical-surgical",
+      "shortDefinition": "انخفاض معدل ضربات القلب عن المعدل المتوقع حسب الحالة والعمر.",
+      "definition": "Bradycardia هو مصطلح يُستخدم لوصف بطء معدل ضربات القلب، ويحتاج تفسيره إلى مراعاة العمر والحالة السريرية.",
+      "keywords": [
+        "bradycardia",
+        "بطء القلب",
+        "heart rate"
+      ]
+    },
+
+    {
+      "id": "dyspnea",
+      "term": "Dyspnea",
+      "arabic": "ضيق التنفس",
+      "category": "medical-surgical",
+      "shortDefinition": "إحساس المريض بصعوبة أو عدم الراحة أثناء التنفس.",
+      "definition": "Dyspnea هو وصف لعرض يشعر فيه الشخص بصعوبة أو مجهود أو عدم راحة أثناء التنفس.",
+      "keywords": [
+        "dyspnea",
+        "ضيق التنفس",
+        "shortness of breath"
+      ]
+    },
+
+    {
+      "id": "edema",
+      "term": "Edema",
+      "arabic": "الوذمة",
+      "category": "medical-surgical",
+      "shortDefinition": "تجمع زائد للسوائل في الأنسجة.",
+      "definition": "Edema هو تورم ناتج عن زيادة السوائل في الأنسجة، وقد تكون له أسباب متعددة ويحتاج تقييم السبب.",
+      "keywords": [
+        "edema",
+        "الوذمة",
+        "swelling"
+      ]
+    },
+
+    {
+      "id": "aseptic-technique",
+      "term": "Aseptic Technique",
+      "arabic": "التقنية المعقمة",
+      "category": "general-nursing",
+      "shortDefinition": "مجموعة من الإجراءات التي تهدف إلى تقليل انتقال الكائنات الدقيقة أثناء تقديم الرعاية.",
+      "definition": "تُستخدم التقنيات المعقمة وفق الإجراء والحالة لتقليل خطر التلوث وانتقال العدوى.",
+      "keywords": [
+        "aseptic technique",
+        "التقنية المعقمة",
+        "infection control"
+      ]
+    },
+
+    {
+      "id": "infection-control",
+      "term": "Infection Control",
+      "arabic": "مكافحة العدوى",
+      "category": "general-nursing",
+      "shortDefinition": "مجموعة من الإجراءات والممارسات التي تهدف إلى منع وتقليل انتقال العدوى.",
+      "definition": "تشمل مكافحة العدوى ممارسات متعددة مثل نظافة اليدين واستخدام وسائل الوقاية المناسبة والتعامل الصحيح مع الأدوات والنفايات.",
+      "keywords": [
+        "infection control",
+        "مكافحة العدوى",
+        "hand hygiene"
+      ]
+    },
+
+    {
+      "id": "hand-hygiene",
+      "term": "Hand Hygiene",
+      "arabic": "نظافة اليدين",
+      "category": "general-nursing",
+      "shortDefinition": "تنظيف اليدين بطريقة مناسبة لتقليل انتقال الكائنات الدقيقة.",
+      "definition": "تُعد نظافة اليدين من أهم ممارسات مكافحة العدوى، ويجب تطبيقها في الأوقات المناسبة وبالطريقة الصحيحة.",
+      "keywords": [
+        "hand hygiene",
+        "نظافة اليدين",
+        "hand washing"
+      ]
+    },
+
+    {
+      "id": "intravenous",
+      "term": "Intravenous",
+      "arabic": "وريدي",
+      "category": "general-nursing",
+      "shortDefinition": "متعلق بإعطاء مادة أو دواء عبر الوريد.",
+      "definition": "يشير المصطلح Intravenous أو IV إلى طريق إعطاء يتم من خلال الوصول إلى الوريد.",
+      "keywords": [
+        "intravenous",
+        "IV",
+        "وريدي"
+      ]
+    },
+
+    {
+      "id": "intramuscular",
+      "term": "Intramuscular",
+      "arabic": "عضلي",
+      "category": "general-nursing",
+      "shortDefinition": "متعلق بإعطاء دواء داخل العضلة.",
+      "definition": "يشير Intramuscular أو IM إلى طريق إعطاء الدواء داخل نسيج العضلة وفق الطريقة والموقع المناسبين.",
+      "keywords": [
+        "intramuscular",
+        "IM",
+        "عضلي"
+      ]
+    },
+
+    {
+      "id": "subcutaneous",
+      "term": "Subcutaneous",
+      "arabic": "تحت الجلد",
+      "category": "general-nursing",
+      "shortDefinition": "متعلق بالأنسجة الموجودة أسفل الجلد أو بإعطاء الدواء فيها.",
+      "definition": "يشير Subcutaneous أو SC إلى طبقة الأنسجة الموجودة أسفل الجلد، ويُستخدم المصطلح أيضًا لوصف طريق إعطاء بعض الأدوية.",
+      "keywords": [
+        "subcutaneous",
+        "SC",
+        "تحت الجلد"
+      ]
+    },
+
+    {
+      "id": "triage",
+      "term": "Triage",
+      "arabic": "الفرز الطبي",
+      "category": "emergency",
+      "shortDefinition": "عملية تقييم وترتيب المرضى حسب درجة الأولوية والحاجة إلى الرعاية.",
+      "definition": "يُستخدم الفرز الطبي في الطوارئ لتحديد أولوية التعامل مع الحالات بناءً على شدة الحالة والاحتياج للرعاية.",
+      "keywords": [
+        "triage",
+        "الفرز الطبي",
+        "emergency"
+      ]
+    },
+
+    {
+      "id": "shock",
+      "term": "Shock",
+      "arabic": "الصدمة",
+      "category": "emergency",
+      "shortDefinition": "حالة خطيرة يحدث فيها قصور في إيصال الدم والأكسجين بشكل كافٍ إلى الأنسجة.",
+      "definition": "الصدمة حالة طارئة لها أنواع وأسباب متعددة وتتطلب تقييمًا وعلاجًا طبيًا عاجلًا.",
+      "keywords": [
+        "shock",
+        "الصدمة",
+        "emergency"
+      ]
+    },
+
+    {
+      "id": "hypoglycemia",
+      "term": "Hypoglycemia",
+      "arabic": "انخفاض سكر الدم",
+      "category": "medical-surgical",
+      "shortDefinition": "انخفاض مستوى الجلوكوز في الدم إلى مستوى قد يسبب أعراضًا ومضاعفات.",
+      "definition": "Hypoglycemia هو انخفاض سكر الدم، وقد تظهر أعراض مختلفة حسب شدة الانخفاض وسرعته وحالة الشخص.",
+      "keywords": [
+        "hypoglycemia",
+        "انخفاض السكر",
+        "low blood glucose"
+      ]
+    },
+
+    {
+      "id": "hyperglycemia",
+      "term": "Hyperglycemia",
+      "arabic": "ارتفاع سكر الدم",
+      "category": "medical-surgical",
+      "shortDefinition": "ارتفاع مستوى الجلوكوز في الدم.",
+      "definition": "Hyperglycemia هو ارتفاع مستوى سكر الدم، ويُفسر وفق حالة الشخص وقياسات الجلوكوز والسياق السريري.",
+      "keywords": [
+        "hyperglycemia",
+        "ارتفاع السكر",
+        "high blood glucose"
+      ]
+    },
+
+    {
+      "id": "pulse-oximeter",
+      "term": "Pulse Oximeter",
+      "arabic": "جهاز قياس التأكسج النبضي",
+      "category": "general-nursing",
+      "shortDefinition": "جهاز يستخدم لتقدير تشبع الأكسجين ومعدل النبض.",
+      "definition": "جهاز غير جراحي يوضع عادةً على الإصبع أو موضع مناسب لتقدير تشبع الأكسجين في الدم ومعدل النبض.",
+      "keywords": [
+        "pulse oximeter",
+        "SpO2",
+        "oxygen saturation"
+      ]
+    }
+  ]
+}
