@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="قاموس المصطلحات الطبية لطلاب وممارسي التمريض. ابحث وتعرف على معنى المصطلحات الطبية بالإنجليزية والعربية بطريقة سهلة ومنظمة."
+        content="قاموس المصطلحات الطبية والتمريضية لطلاب التمريض. ابحث عن أكثر من 98 ألف مصطلح طبي باللغة الإنجليزية والعربية."
     >
 
     <meta
@@ -43,11 +43,6 @@
         rel="canonical"
         href="https://bawabet-altamreed.com/dictionary/medical-terms.html"
     >
-
-
-    <!-- =====================================================
-         STYLES
-    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -88,8 +83,7 @@
 
 
         button,
-        input,
-        select {
+        input {
             font-family: inherit;
         }
 
@@ -211,49 +205,6 @@
             background: #edf5f7;
 
             color: #0b526b;
-        }
-
-
-        .header-search {
-            display: flex;
-
-            width: 200px;
-
-            background: #f1f5f7;
-
-            border:
-                1px solid #dfe8ec;
-
-            border-radius: 11px;
-
-            overflow: hidden;
-        }
-
-
-        .header-search input {
-            width: 100%;
-
-            border: 0;
-            outline: 0;
-
-            background: transparent;
-
-            padding: 9px;
-
-            font-size: 12px;
-        }
-
-
-        .header-search button {
-            width: 40px;
-
-            border: 0;
-
-            background: transparent;
-
-            cursor: pointer;
-
-            font-size: 16px;
         }
 
 
@@ -499,7 +450,7 @@
 
 
         /* =====================================================
-           SEARCH BOX
+           SEARCH
         ===================================================== */
 
         .dictionary-main {
@@ -609,14 +560,14 @@
 
             flex-wrap: wrap;
 
-            gap: 8px;
+            gap: 7px;
 
             margin-top: 15px;
         }
 
 
         .filter-button {
-            padding: 7px 13px;
+            padding: 7px 11px;
 
             border:
                 1px solid #dce7ea;
@@ -629,7 +580,7 @@
 
             cursor: pointer;
 
-            font-size: 12px;
+            font-size: 11px;
 
             transition: .2s;
         }
@@ -642,6 +593,44 @@
             color: white;
 
             border-color: #0b526b;
+        }
+
+
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        .loading-box {
+            background: white;
+
+            border:
+                1px solid #e0e8ec;
+
+            border-radius: 16px;
+
+            padding: 40px 20px;
+
+            text-align: center;
+
+            color: #71828a;
+
+            margin-bottom: 15px;
+        }
+
+
+        .loading-icon {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .loading-box strong {
+            display: block;
+
+            color: #173247;
+
+            margin-bottom: 5px;
         }
 
 
@@ -829,7 +818,7 @@
 
 
         /* =====================================================
-           INFO BOX
+           INFO
         ===================================================== */
 
         .info-box {
@@ -977,10 +966,7 @@
 
             .mobile-button {
                 display: block;
-            }
 
-
-            .header-search {
                 margin-right: auto;
             }
 
@@ -1018,11 +1004,6 @@
 
 
             .logo-text small {
-                display: none;
-            }
-
-
-            .header-search {
                 display: none;
             }
 
@@ -1132,9 +1113,9 @@
 
 
             .filter-button {
-                font-size: 11px;
+                font-size: 10px;
 
-                padding: 6px 10px;
+                padding: 6px 9px;
             }
 
         }
@@ -1219,29 +1200,11 @@
         </nav>
 
 
-        <form
-            class="header-search"
-            id="headerSearch"
-        >
-
-            <input
-                type="search"
-                id="headerSearchInput"
-                placeholder="بحث..."
-            >
-
-            <button type="submit">
-                🔎
-            </button>
-
-        </form>
-
-
         <button
             class="mobile-button"
             type="button"
             onclick="toggleMobileMenu()"
-            aria-label="القائمة"
+            aria-label="فتح القائمة"
         >
             ☰
         </button>
@@ -1340,17 +1303,13 @@
                     الرئيسية
                 </a>
 
-                <span>
-                    /
-                </span>
+                <span>/</span>
 
                 <a href="../dictionary.html">
                     قاموس التمريض
                 </a>
 
-                <span>
-                    /
-                </span>
+                <span>/</span>
 
                 <span>
                     Medical Terms
@@ -1377,8 +1336,8 @@
             <p>
                 قاموس المصطلحات الطبية والتمريضية.
                 ابحث عن المصطلح باللغة الإنجليزية
-                وتعرف على معناه باللغة العربية
-                بطريقة سهلة وسريعة.
+                أو العربية للوصول إلى المعلومات
+                بسرعة وسهولة.
             </p>
 
         </div>
@@ -1448,7 +1407,7 @@
 
 
             <!-- =================================================
-                 MAIN DICTIONARY
+                 MAIN
             ================================================== -->
 
             <section class="dictionary-main">
@@ -1460,9 +1419,10 @@
                         🔎 ابحث عن مصطلح طبي
                     </h2>
 
+
                     <p>
-                        اكتب اسم المصطلح بالإنجليزية
-                        أو العربية للبحث داخل المصطلحات.
+                        اكتب المصطلح بالإنجليزية أو العربية.
+                        سيتم البحث داخل قاعدة البيانات الطبية.
                     </p>
 
 
@@ -1475,7 +1435,7 @@
                         <input
                             type="search"
                             id="termSearch"
-                            placeholder="مثال: Anatomy أو القلب أو Infection..."
+                            placeholder="مثال: Anatomy أو Abdomen..."
                             autocomplete="off"
                         >
 
@@ -1492,117 +1452,32 @@
                             الكل
                         </button>
 
-                        <button
-                            class="filter-button"
-                            data-letter="A"
-                            type="button"
-                        >
-                            A
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="B"
-                            type="button"
-                        >
-                            B
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="C"
-                            type="button"
-                        >
-                            C
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="D"
-                            type="button"
-                        >
-                            D
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="E"
-                            type="button"
-                        >
-                            E
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="F"
-                            type="button"
-                        >
-                            F
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="G"
-                            type="button"
-                        >
-                            G
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="H"
-                            type="button"
-                        >
-                            H
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="I"
-                            type="button"
-                        >
-                            I
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="M"
-                            type="button"
-                        >
-                            M
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="N"
-                            type="button"
-                        >
-                            N
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="P"
-                            type="button"
-                        >
-                            P
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="S"
-                            type="button"
-                        >
-                            S
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="T"
-                            type="button"
-                        >
-                            T
-                        </button>
+                        <button class="filter-button" data-letter="A" type="button">A</button>
+                        <button class="filter-button" data-letter="B" type="button">B</button>
+                        <button class="filter-button" data-letter="C" type="button">C</button>
+                        <button class="filter-button" data-letter="D" type="button">D</button>
+                        <button class="filter-button" data-letter="E" type="button">E</button>
+                        <button class="filter-button" data-letter="F" type="button">F</button>
+                        <button class="filter-button" data-letter="G" type="button">G</button>
+                        <button class="filter-button" data-letter="H" type="button">H</button>
+                        <button class="filter-button" data-letter="I" type="button">I</button>
+                        <button class="filter-button" data-letter="J" type="button">J</button>
+                        <button class="filter-button" data-letter="K" type="button">K</button>
+                        <button class="filter-button" data-letter="L" type="button">L</button>
+                        <button class="filter-button" data-letter="M" type="button">M</button>
+                        <button class="filter-button" data-letter="N" type="button">N</button>
+                        <button class="filter-button" data-letter="O" type="button">O</button>
+                        <button class="filter-button" data-letter="P" type="button">P</button>
+                        <button class="filter-button" data-letter="Q" type="button">Q</button>
+                        <button class="filter-button" data-letter="R" type="button">R</button>
+                        <button class="filter-button" data-letter="S" type="button">S</button>
+                        <button class="filter-button" data-letter="T" type="button">T</button>
+                        <button class="filter-button" data-letter="U" type="button">U</button>
+                        <button class="filter-button" data-letter="V" type="button">V</button>
+                        <button class="filter-button" data-letter="W" type="button">W</button>
+                        <button class="filter-button" data-letter="X" type="button">X</button>
+                        <button class="filter-button" data-letter="Y" type="button">Y</button>
+                        <button class="filter-button" data-letter="Z" type="button">Z</button>
 
                     </div>
 
@@ -1611,7 +1486,7 @@
 
 
                 <!-- =================================================
-                     RESULTS
+                     RESULTS HEADER
                 ================================================== -->
 
                 <div class="results-header">
@@ -1624,512 +1499,46 @@
                         class="results-count"
                         id="resultsCount"
                     >
-                        عرض المصطلحات
+                        جاري تحميل قاعدة البيانات...
                     </span>
 
                 </div>
 
 
+
+                <!-- =================================================
+                     LOADING
+                ================================================== -->
+
+                <div
+                    class="loading-box"
+                    id="loadingBox"
+                >
+
+                    <div class="loading-icon">
+                        🩺
+                    </div>
+
+                    <strong>
+                        جاري تحميل قاموس التمريض...
+                    </strong>
+
+                    <span>
+                        يرجى الانتظار لحظات.
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TERMS
+                ================================================== -->
+
                 <div
                     class="terms-grid"
                     id="termsGrid"
-                >
-
-
-                    <article
-                        class="term-card"
-                        data-term="Anatomy تشريح"
-                        data-letter="A"
-                    >
-
-                        <div class="term-letter">
-                            A
-                        </div>
-
-                        <h3>
-                            Anatomy
-                        </h3>
-
-                        <div class="term-arabic">
-                            علم التشريح
-                        </div>
-
-                        <p>
-                            العلم الذي يدرس تركيب جسم الإنسان
-                            وأعضاءه وأجزائه المختلفة.
-                        </p>
-
-                        <span class="term-tag">
-                            Anatomy
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Anemia أنيميا فقر الدم"
-                        data-letter="A"
-                    >
-
-                        <div class="term-letter">
-                            A
-                        </div>
-
-                        <h3>
-                            Anemia
-                        </h3>
-
-                        <div class="term-arabic">
-                            فقر الدم
-                        </div>
-
-                        <p>
-                            حالة يقل فيها عدد كرات الدم الحمراء
-                            أو كمية الهيموجلوبين عن المعدل الطبيعي.
-                        </p>
-
-                        <span class="term-tag">
-                            Hematology
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Blood Pressure ضغط الدم"
-                        data-letter="B"
-                    >
-
-                        <div class="term-letter">
-                            B
-                        </div>
-
-                        <h3>
-                            Blood Pressure
-                        </h3>
-
-                        <div class="term-arabic">
-                            ضغط الدم
-                        </div>
-
-                        <p>
-                            القوة التي يضغط بها الدم على جدران
-                            الأوعية الدموية أثناء دورانه.
-                        </p>
-
-                        <span class="term-tag">
-                            Vital Signs
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Cardiac القلب قلبي"
-                        data-letter="C"
-                    >
-
-                        <div class="term-letter">
-                            C
-                        </div>
-
-                        <h3>
-                            Cardiac
-                        </h3>
-
-                        <div class="term-arabic">
-                            قلبي
-                        </div>
-
-                        <p>
-                            مصطلح يشير إلى كل ما يتعلق بالقلب.
-                        </p>
-
-                        <span class="term-tag">
-                            Cardiology
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Diabetes السكري مرض السكر"
-                        data-letter="D"
-                    >
-
-                        <div class="term-letter">
-                            D
-                        </div>
-
-                        <h3>
-                            Diabetes
-                        </h3>
-
-                        <div class="term-arabic">
-                            مرض السكري
-                        </div>
-
-                        <p>
-                            اضطراب مزمن يؤثر على تنظيم مستوى
-                            الجلوكوز في الدم.
-                        </p>
-
-                        <span class="term-tag">
-                            Endocrinology
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Edema وذمة تورم"
-                        data-letter="E"
-                    >
-
-                        <div class="term-letter">
-                            E
-                        </div>
-
-                        <h3>
-                            Edema
-                        </h3>
-
-                        <div class="term-arabic">
-                            وذمة
-                        </div>
-
-                        <p>
-                            تجمع غير طبيعي للسوائل داخل أنسجة الجسم
-                            مما قد يؤدي إلى ظهور التورم.
-                        </p>
-
-                        <span class="term-tag">
-                            Clinical
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Fever حمى ارتفاع الحرارة"
-                        data-letter="F"
-                    >
-
-                        <div class="term-letter">
-                            F
-                        </div>
-
-                        <h3>
-                            Fever
-                        </h3>
-
-                        <div class="term-arabic">
-                            الحمى
-                        </div>
-
-                        <p>
-                            ارتفاع درجة حرارة الجسم عن المستوى
-                            الطبيعي نتيجة أسباب مختلفة.
-                        </p>
-
-                        <span class="term-tag">
-                            Symptoms
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Glucose جلوكوز سكر الدم"
-                        data-letter="G"
-                    >
-
-                        <div class="term-letter">
-                            G
-                        </div>
-
-                        <h3>
-                            Glucose
-                        </h3>
-
-                        <div class="term-arabic">
-                            الجلوكوز
-                        </div>
-
-                        <p>
-                            نوع من السكريات يمثل مصدرًا أساسيًا
-                            للطاقة في الجسم.
-                        </p>
-
-                        <span class="term-tag">
-                            Laboratory
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Hypertension ارتفاع ضغط الدم"
-                        data-letter="H"
-                    >
-
-                        <div class="term-letter">
-                            H
-                        </div>
-
-                        <h3>
-                            Hypertension
-                        </h3>
-
-                        <div class="term-arabic">
-                            ارتفاع ضغط الدم
-                        </div>
-
-                        <p>
-                            حالة يكون فيها ضغط الدم مرتفعًا
-                            بشكل مستمر عن المستوى الطبيعي.
-                        </p>
-
-                        <span class="term-tag">
-                            Cardiovascular
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Infection عدوى"
-                        data-letter="I"
-                    >
-
-                        <div class="term-letter">
-                            I
-                        </div>
-
-                        <h3>
-                            Infection
-                        </h3>
-
-                        <div class="term-arabic">
-                            العدوى
-                        </div>
-
-                        <p>
-                            دخول وتكاثر كائنات ممرضة داخل الجسم
-                            وقد يؤدي ذلك إلى ظهور علامات وأعراض.
-                        </p>
-
-                        <span class="term-tag">
-                            Infection Control
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Medical History التاريخ المرضي"
-                        data-letter="M"
-                    >
-
-                        <div class="term-letter">
-                            M
-                        </div>
-
-                        <h3>
-                            Medical History
-                        </h3>
-
-                        <div class="term-arabic">
-                            التاريخ المرضي
-                        </div>
-
-                        <p>
-                            المعلومات المتعلقة بتاريخ المريض الصحي
-                            والأمراض والعلاجات السابقة.
-                        </p>
-
-                        <span class="term-tag">
-                            Nursing
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Nausea غثيان"
-                        data-letter="N"
-                    >
-
-                        <div class="term-letter">
-                            N
-                        </div>
-
-                        <h3>
-                            Nausea
-                        </h3>
-
-                        <div class="term-arabic">
-                            الغثيان
-                        </div>
-
-                        <p>
-                            شعور مزعج بالرغبة في القيء.
-                        </p>
-
-                        <span class="term-tag">
-                            Symptoms
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Pulse النبض"
-                        data-letter="P"
-                    >
-
-                        <div class="term-letter">
-                            P
-                        </div>
-
-                        <h3>
-                            Pulse
-                        </h3>
-
-                        <div class="term-arabic">
-                            النبض
-                        </div>
-
-                        <p>
-                            الموجة الناتجة عن ضخ القلب للدم
-                            ويمكن جسها في بعض الشرايين.
-                        </p>
-
-                        <span class="term-tag">
-                            Vital Signs
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Respiration التنفس"
-                        data-letter="R"
-                    >
-
-                        <div class="term-letter">
-                            R
-                        </div>
-
-                        <h3>
-                            Respiration
-                        </h3>
-
-                        <div class="term-arabic">
-                            التنفس
-                        </div>
-
-                        <p>
-                            عملية دخول وخروج الهواء من الرئتين
-                            وتبادل الغازات المرتبط بها.
-                        </p>
-
-                        <span class="term-tag">
-                            Respiratory
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Surgery الجراحة"
-                        data-letter="S"
-                    >
-
-                        <div class="term-letter">
-                            S
-                        </div>
-
-                        <h3>
-                            Surgery
-                        </h3>
-
-                        <div class="term-arabic">
-                            الجراحة
-                        </div>
-
-                        <p>
-                            تخصص طبي يعتمد على الإجراءات الجراحية
-                            لعلاج أو تشخيص بعض الحالات.
-                        </p>
-
-                        <span class="term-tag">
-                            Medical-Surgical
-                        </span>
-
-                    </article>
-
-
-
-                    <article
-                        class="term-card"
-                        data-term="Temperature درجة الحرارة"
-                        data-letter="T"
-                    >
-
-                        <div class="term-letter">
-                            T
-                        </div>
-
-                        <h3>
-                            Temperature
-                        </h3>
-
-                        <div class="term-arabic">
-                            درجة الحرارة
-                        </div>
-
-                        <p>
-                            مقياس لدرجة حرارة الجسم ويعد أحد
-                            العلامات الحيوية الأساسية.
-                        </p>
-
-                        <span class="term-tag">
-                            Vital Signs
-                        </span>
-
-                    </article>
-
-
-                </div>
+                ></div>
 
 
 
@@ -2151,8 +1560,7 @@
                     </h3>
 
                     <p>
-                        جرّب كتابة المصطلح بطريقة مختلفة
-                        أو البحث باللغة العربية أو الإنجليزية.
+                        جرّب كتابة كلمة أخرى أو البحث باللغة الإنجليزية.
                     </p>
 
                 </div>
@@ -2294,7 +1702,6 @@
 
 <script>
 
-
     /* =====================================================
        MOBILE MENU
     ===================================================== */
@@ -2323,14 +1730,33 @@
 
 
     /* =====================================================
-       SEARCH
+       DATABASE CONFIG
+    ===================================================== */
+
+    const SEARCH_INDEX_URL =
+        "../data/search-index.json";
+
+    const TERMS_PATH =
+        "../data/terms/";
+
+
+    let searchIndex = [];
+
+    let loadedFiles = new Map();
+
+    let selectedLetter = "all";
+
+
+
+    /* =====================================================
+       ELEMENTS
     ===================================================== */
 
     const searchInput =
         document.getElementById("termSearch");
 
-    const cards =
-        document.querySelectorAll(".term-card");
+    const termsGrid =
+        document.getElementById("termsGrid");
 
     const noResults =
         document.getElementById("noResults");
@@ -2338,82 +1764,104 @@
     const resultsCount =
         document.getElementById("resultsCount");
 
+    const loadingBox =
+        document.getElementById("loadingBox");
+
     const filterButtons =
         document.querySelectorAll(".filter-button");
 
 
-    let selectedLetter = "all";
+
+    /* =====================================================
+       NORMALIZE TEXT
+    ===================================================== */
+
+    function normalizeText(text) {
+
+        return String(text || "")
+            .toLowerCase()
+            .trim();
+
+    }
 
 
 
-    function filterTerms() {
+    /* =====================================================
+       LOAD SEARCH INDEX
+    ===================================================== */
 
-        const query =
-            searchInput.value
-                .trim()
-                .toLowerCase();
+    async function loadSearchIndex() {
 
+        try {
 
-        let visibleCount = 0;
-
-
-        cards.forEach(function(card) {
-
-            const term =
-                card
-                    .getAttribute("data-term")
-                    .toLowerCase();
+            resultsCount.textContent =
+                "جاري تحميل قاعدة البحث...";
 
 
-            const letter =
-                card
-                    .getAttribute("data-letter");
+            const response =
+                await fetch(
+                    SEARCH_INDEX_URL,
+                    {
+                        cache: "force-cache"
+                    }
+                );
 
 
-            const matchesSearch =
-                !query ||
-                term.includes(query);
+            if (!response.ok) {
 
-
-            const matchesLetter =
-                selectedLetter === "all" ||
-                letter === selectedLetter;
-
-
-            if (
-                matchesSearch &&
-                matchesLetter
-            ) {
-
-                card.style.display =
-                    "block";
-
-                visibleCount++;
-
-            } else {
-
-                card.style.display =
-                    "none";
+                throw new Error(
+                    "HTTP " + response.status
+                );
 
             }
 
-        });
+
+            searchIndex =
+                await response.json();
 
 
-        resultsCount.textContent =
-            "عدد النتائج: " +
-            visibleCount;
+            console.log(
+                "✅ Search Index loaded:",
+                searchIndex.length
+            );
 
 
-        if (visibleCount === 0) {
-
-            noResults.style.display =
-                "block";
-
-        } else {
-
-            noResults.style.display =
+            loadingBox.style.display =
                 "none";
+
+
+            resultsCount.textContent =
+                "إجمالي المصطلحات: " +
+                searchIndex.length.toLocaleString("en-US");
+
+
+            renderInitialTerms();
+
+
+        } catch (error) {
+
+            console.error(
+                "❌ Failed to load search index:",
+                error
+            );
+
+
+            loadingBox.innerHTML = `
+
+                <div class="loading-icon">
+                    ⚠️
+                </div>
+
+                <strong>
+                    تعذر تحميل قاعدة البيانات
+                </strong>
+
+                <span>
+                    تأكد من وجود:
+                    data/search-index.json
+                </span>
+
+            `;
 
         }
 
@@ -2421,9 +1869,540 @@
 
 
 
+    /* =====================================================
+       GET FILE NAME
+    ===================================================== */
+
+    function getFileName(item) {
+
+        if (!Array.isArray(item)) {
+            return null;
+        }
+
+
+        return item[2] || null;
+
+    }
+
+
+
+    /* =====================================================
+       GET TERM NAME
+    ===================================================== */
+
+    function getTermName(item) {
+
+        if (!Array.isArray(item)) {
+            return "";
+        }
+
+
+        return item[0] || "";
+
+    }
+
+
+
+    /* =====================================================
+       LOAD TERM FILE
+    ===================================================== */
+
+    async function loadTermFile(fileName) {
+
+        if (!fileName) {
+            return [];
+        }
+
+
+        if (loadedFiles.has(fileName)) {
+
+            return loadedFiles.get(fileName);
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    TERMS_PATH +
+                    fileName,
+                    {
+                        cache: "force-cache"
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "HTTP " + response.status
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            loadedFiles.set(
+                fileName,
+                data
+            );
+
+
+            return data;
+
+
+        } catch (error) {
+
+            console.error(
+                "❌ Failed to load:",
+                fileName,
+                error
+            );
+
+
+            return [];
+
+        }
+
+    }
+
+
+
+    /* =====================================================
+       CREATE TERM CARD
+    ===================================================== */
+
+    function createTermCard(term) {
+
+        const article =
+            document.createElement("article");
+
+
+        article.className =
+            "term-card";
+
+
+        const termName =
+            term.term ||
+            term.name ||
+            "";
+
+
+        const arabic =
+            term.arabic ||
+            "";
+
+
+        const definition =
+            term.definition ||
+            "";
+
+
+        const category =
+            term.category ||
+            "Medical";
+
+
+        const firstLetter =
+            termName
+                .charAt(0)
+                .toUpperCase();
+
+
+        article.innerHTML = `
+
+            <div class="term-letter">
+                ${escapeHTML(firstLetter)}
+            </div>
+
+            <h3>
+                ${escapeHTML(termName)}
+            </h3>
+
+            ${
+                arabic
+                ?
+                `
+                <div class="term-arabic">
+                    ${escapeHTML(arabic)}
+                </div>
+                `
+                :
+                ""
+            }
+
+            ${
+                definition
+                ?
+                `
+                <p>
+                    ${escapeHTML(definition)}
+                </p>
+                `
+                :
+                `
+                <p>
+                    لا يوجد تعريف متاح حاليًا.
+                </p>
+                `
+            }
+
+            <span class="term-tag">
+                ${escapeHTML(category)}
+            </span>
+
+        `;
+
+
+        return article;
+
+    }
+
+
+
+    /* =====================================================
+       ESCAPE HTML
+    ===================================================== */
+
+    function escapeHTML(value) {
+
+        return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+
+    /* =====================================================
+       SHOW TERMS
+    ===================================================== */
+
+    async function showTerms(items) {
+
+        termsGrid.innerHTML = "";
+
+        noResults.style.display =
+            "none";
+
+
+        if (!items.length) {
+
+            noResults.style.display =
+                "block";
+
+            resultsCount.textContent =
+                "عدد النتائج: 0";
+
+            return;
+
+        }
+
+
+        /*
+         * نعرض عددًا محدودًا من النتائج
+         * حتى لا نحمل آلاف العناصر مرة واحدة.
+         */
+
+        const maxResults = 100;
+
+        const visibleItems =
+            items.slice(0, maxResults);
+
+
+        const files =
+            [
+                ...new Set(
+                    visibleItems
+                        .map(getFileName)
+                        .filter(Boolean)
+                )
+            ];
+
+
+        const loadedData =
+            await Promise.all(
+                files.map(
+                    file =>
+                        loadTermFile(file)
+                )
+            );
+
+
+        const allTerms = [];
+
+
+        loadedData.forEach(
+            function(data) {
+
+                if (
+                    Array.isArray(data)
+                ) {
+
+                    allTerms.push(
+                        ...data
+                    );
+
+                }
+
+            }
+        );
+
+
+        const ids =
+            new Set(
+                visibleItems.map(
+                    item =>
+                        Array.isArray(item)
+                        ? String(item[1])
+                        : ""
+                )
+            );
+
+
+        const matchedTerms =
+            allTerms.filter(
+                term =>
+                    ids.has(
+                        String(term.id)
+                    )
+            );
+
+
+        /*
+         * في حالة عدم وجود ID مطابق،
+         * نستخدم اسم المصطلح كخطة بديلة.
+         */
+
+        if (
+            matchedTerms.length === 0
+        ) {
+
+            const names =
+                new Set(
+                    visibleItems.map(
+                        getTermName
+                    )
+                );
+
+
+            allTerms.forEach(
+                function(term) {
+
+                    if (
+                        names.has(
+                            term.term
+                        )
+                    ) {
+
+                        matchedTerms.push(
+                            term
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        matchedTerms
+            .slice(0, maxResults)
+            .forEach(
+                function(term) {
+
+                    termsGrid.appendChild(
+                        createTermCard(term)
+                    );
+
+                }
+            );
+
+
+        resultsCount.textContent =
+            "عدد النتائج: " +
+            items.length.toLocaleString("en-US") +
+            (
+                items.length > maxResults
+                ?
+                " — عرض أول " +
+                maxResults
+                :
+                ""
+            );
+
+
+        if (
+            matchedTerms.length === 0
+        ) {
+
+            noResults.style.display =
+                "block";
+
+        }
+
+    }
+
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    async function searchTerms() {
+
+        const query =
+            normalizeText(
+                searchInput.value
+            );
+
+
+        let results;
+
+
+        /*
+         * بدون بحث:
+         * نعرض مجموعة بسيطة من المصطلحات.
+         */
+
+        if (!query) {
+
+            renderInitialTerms();
+
+            return;
+
+        }
+
+
+        results =
+            searchIndex.filter(
+                function(item) {
+
+                    const term =
+                        normalizeText(
+                            getTermName(item)
+                        );
+
+
+                    return term.includes(
+                        query
+                    );
+
+                }
+            );
+
+
+        if (
+            selectedLetter !== "all"
+        ) {
+
+            results =
+                results.filter(
+                    function(item) {
+
+                        const term =
+                            getTermName(item);
+
+
+                        return (
+                            term
+                                .charAt(0)
+                                .toUpperCase()
+                            ===
+                            selectedLetter
+                        );
+
+                    }
+                );
+
+        }
+
+
+        await showTerms(results);
+
+    }
+
+
+
+    /* =====================================================
+       INITIAL TERMS
+    ===================================================== */
+
+    async function renderInitialTerms() {
+
+        let items =
+            searchIndex;
+
+
+        if (
+            selectedLetter !== "all"
+        ) {
+
+            items =
+                items.filter(
+                    function(item) {
+
+                        const term =
+                            getTermName(item);
+
+
+                        return (
+                            term
+                                .charAt(0)
+                                .toUpperCase()
+                            ===
+                            selectedLetter
+                        );
+
+                    }
+                );
+
+        }
+
+
+        /*
+         * أول 24 نتيجة فقط.
+         */
+
+        await showTerms(
+            items.slice(0, 24)
+        );
+
+    }
+
+
+
+    /* =====================================================
+       SEARCH INPUT
+    ===================================================== */
+
+    let searchTimer;
+
+
     searchInput.addEventListener(
         "input",
-        filterTerms
+        function() {
+
+            clearTimeout(
+                searchTimer
+            );
+
+
+            searchTimer =
+                setTimeout(
+                    searchTerms,
+                    180
+                );
+
+        }
     );
 
 
@@ -2432,159 +2411,54 @@
        LETTER FILTER
     ===================================================== */
 
-    filterButtons.forEach(function(button) {
+    filterButtons.forEach(
+        function(button) {
 
-        button.addEventListener(
-            "click",
-            function() {
+            button.addEventListener(
+                "click",
+                async function() {
 
+                    filterButtons.forEach(
+                        function(btn) {
 
-                filterButtons.forEach(
-                    function(btn) {
+                            btn.classList.remove(
+                                "active"
+                            );
 
-                        btn.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                button.classList.add(
-                    "active"
-                );
-
-
-                selectedLetter =
-                    button.getAttribute(
-                        "data-letter"
+                        }
                     );
 
 
-                filterTerms();
-
-            }
-        );
-
-    });
+                    button.classList.add(
+                        "active"
+                    );
 
 
-
-    /* =====================================================
-       HEADER SEARCH
-    ===================================================== */
-
-    document
-        .getElementById("headerSearch")
-        .addEventListener(
-            "submit",
-            function(event) {
-
-                event.preventDefault();
+                    selectedLetter =
+                        button.getAttribute(
+                            "data-letter"
+                        );
 
 
-                const value =
-                    document
-                        .getElementById(
-                            "headerSearchInput"
-                        )
-                        .value
-                        .trim();
+                    await searchTerms();
 
-
-                if (!value) {
-                    return;
                 }
+            );
 
-
-                searchInput.value =
-                    value;
-
-
-                filterTerms();
-
-
-                document
-                    .querySelector(
-                        ".search-card"
-                    )
-                    .scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-            }
-        );
+        }
+    );
 
 
 
     /* =====================================================
-       INITIAL COUNT
+       START
     ===================================================== */
 
-    filterTerms();
-
+    loadSearchIndex();
 
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", async () => {
 
-    console.log("🩺 بدء اختبار قاعدة بيانات قاموس التمريض...");
-
-    // اختبار Search Index
-    try {
-
-        const indexResponse = await fetch("data/search-index.json");
-
-        if (!indexResponse.ok) {
-            throw new Error(
-                `HTTP ${indexResponse.status} - ${indexResponse.statusText}`
-            );
-        }
-
-        const searchIndex = await indexResponse.json();
-
-        console.log("✅ search-index.json تم تحميله بنجاح");
-        console.log("📊 عدد عناصر Search Index:", searchIndex.length);
-
-    } catch (error) {
-
-        console.error(
-            "❌ فشل تحميل search-index.json:",
-            error
-        );
-
-    }
-
-
-    // اختبار ملف A
-    try {
-
-        const termsResponse = await fetch("data/terms/a.json");
-
-        if (!termsResponse.ok) {
-            throw new Error(
-                `HTTP ${termsResponse.status} - ${termsResponse.statusText}`
-            );
-        }
-
-        const termsA = await termsResponse.json();
-
-        console.log("✅ terms/a.json تم تحميله بنجاح");
-        console.log("📊 عدد المصطلحات داخل a.json:", termsA.length);
-
-    } catch (error) {
-
-        console.error(
-            "❌ فشل تحميل terms/a.json:",
-            error
-        );
-
-    }
-
-});
-</script>
-    
 </body>
 
 </html>
