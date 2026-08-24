@@ -2651,3 +2651,184 @@ p {
             100%;
     }
 }
+
+/* =====================================================
+   DEVELOPER CARD
+===================================================== */
+
+.developer-card {
+
+    position: relative;
+
+    padding: 32px 28px;
+
+    min-height: 240px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 26px;
+
+    background:
+        rgba(255,255,255,.11);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+    backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 25px 55px
+        rgba(0,0,0,.18);
+
+    overflow: hidden;
+}
+
+
+.developer-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139,232,240,.08);
+
+    top: -90px;
+    right: -70px;
+}
+
+
+.developer-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.05);
+
+    bottom: -80px;
+    left: -60px;
+}
+
+
+.developer-icon {
+
+    position: relative;
+    z-index: 2;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    font-size: 31px;
+
+    margin-bottom: 15px;
+}
+
+
+.developer-label {
+
+    position: relative;
+    z-index: 2;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+
+.developer-card h2 {
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+}
+
+
+.developer-card p {
+
+    position: relative;
+    z-index: 2;
+
+    margin:
+        3px 0 12px;
+
+    color: #8be8f0;
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+.developer-line {
+
+    position: relative;
+    z-index: 2;
+
+    width: 70px;
+    height: 2px;
+
+    background:
+        rgba(139,232,240,.65);
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+.developer-card small {
+
+    position: relative;
+    z-index: 2;
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 10px;
+
+    letter-spacing: .5px;
+}
