@@ -1,0 +1,2649 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>حاسبة GCS | Glasgow Coma Scale | بوابة التمريض</title>
+
+    <meta
+        name="description"
+        content="حاسبة Glasgow Coma Scale - GCS لطلاب التمريض. احسب درجة الوعي من خلال تقييم Eye وVerbal وMotor."
+    >
+
+    <meta
+        name="keywords"
+        content="GCS, Glasgow Coma Scale, GCS Calculator, حاسبة GCS, مقياس غلاسكو للغيبوبة, تقييم الوعي, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/tools/gcs.html"
+    >
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                Tahoma,
+                sans-serif;
+
+            background: #f5f8fa;
+
+            color: #102f46;
+
+        }
+
+
+        .gcs-page {
+
+            min-height: 100vh;
+
+        }
+
+
+        .gcs-container {
+
+            width:
+                min(
+                    1120px,
+                    calc(100% - 32px)
+                );
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .gcs-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e2eaee;
+
+        }
+
+
+        .gcs-header-inner {
+
+            min-height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .gcs-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #0c3555;
+
+            text-decoration: none;
+
+            font-weight: 900;
+
+        }
+
+
+        .gcs-brand-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .gcs-brand-title {
+
+            display: block;
+
+            font-size: 18px;
+
+        }
+
+
+        .gcs-brand-subtitle {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #78909c;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+        }
+
+
+        .gcs-home {
+
+            padding: 10px 15px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .gcs-hero {
+
+            padding: 55px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .gcs-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 8px 15px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.18
+                );
+
+            font-size: 12px;
+
+        }
+
+
+        .gcs-hero h1 {
+
+            margin: 0 0 12px;
+
+            font-size:
+                clamp(
+                    32px,
+                    5vw,
+                    52px
+                );
+
+            line-height: 1.2;
+
+        }
+
+
+        .gcs-hero h1 span {
+
+            color: #8ee7f2;
+
+        }
+
+
+        .gcs-hero p {
+
+            max-width: 760px;
+
+            margin: auto;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+            opacity: 0.88;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+        ===================================================== */
+
+        .gcs-main {
+
+            padding: 50px 0 75px;
+
+        }
+
+
+        .gcs-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                1.35fr
+                0.85fr;
+
+            gap: 25px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           CALCULATOR
+        ===================================================== */
+
+        .gcs-card {
+
+            background: white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius: 20px;
+
+            padding: 28px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.06
+                );
+
+        }
+
+
+        .gcs-card-title {
+
+            margin: 0 0 7px;
+
+            color: #173b53;
+
+            font-size: 23px;
+
+        }
+
+
+        .gcs-card-description {
+
+            margin: 0 0 25px;
+
+            color: #74838d;
+
+            line-height: 1.8;
+
+            font-size: 13px;
+
+        }
+
+
+        .gcs-section {
+
+            margin-bottom: 22px;
+
+            padding-bottom: 22px;
+
+            border-bottom:
+                1px solid #edf1f3;
+
+        }
+
+
+        .gcs-section:last-of-type {
+
+            margin-bottom: 20px;
+
+            padding-bottom: 0;
+
+            border-bottom: none;
+
+        }
+
+
+        .gcs-section-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .gcs-section-title {
+
+            margin: 0;
+
+            color: #173b53;
+
+            font-size: 16px;
+
+        }
+
+
+        .gcs-section-score {
+
+            min-width: 35px;
+
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background: #edf6f8;
+
+            color: #0c5e75;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+        }
+
+
+        .gcs-options {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap: 9px;
+
+        }
+
+
+        .gcs-option {
+
+            position: relative;
+
+        }
+
+
+        .gcs-option input {
+
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+        }
+
+
+        .gcs-option label {
+
+            min-height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 12px;
+
+            padding: 11px 13px;
+
+            border:
+                1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            background: #fbfdfe;
+
+            color: #526a77;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .gcs-option label:hover {
+
+            border-color: #9fc8d1;
+
+            background: #f3f9fa;
+
+        }
+
+
+        .gcs-option input:checked + label {
+
+            border-color: #23829a;
+
+            background: #edf6f8;
+
+            color: #0c5e75;
+
+            box-shadow:
+                0 0 0 2px
+                rgba(
+                    35,
+                    130,
+                    154,
+                    0.08
+                );
+
+        }
+
+
+        .gcs-option-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 3px;
+
+        }
+
+
+        .gcs-option-title {
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+        }
+
+
+        .gcs-option-en {
+
+            direction: ltr;
+
+            text-align: right;
+
+            color: #8a989f;
+
+            font-size: 10px;
+
+        }
+
+
+        .gcs-option-score {
+
+            width: 30px;
+
+            height: 30px;
+
+            flex: 0 0 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: #0c3555;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            box-shadow:
+                0 2px 7px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.05
+                );
+
+        }
+
+
+        .gcs-calculate {
+
+            width: 100%;
+
+            height: 52px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #176b82
+                );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .gcs-calculate:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    12,
+                    53,
+                    85,
+                    0.2
+                );
+
+        }
+
+
+        .gcs-reset {
+
+            width: 100%;
+
+            height: 45px;
+
+            margin-top: 10px;
+
+            border:
+                1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            background: white;
+
+            color: #58717d;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+        }
+
+
+        .gcs-reset:hover {
+
+            background: #f3f7f8;
+
+        }
+
+
+        /* =====================================================
+           RESULT
+        ===================================================== */
+
+        .gcs-result-card {
+
+            position: sticky;
+
+            top: 95px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6f8,
+                    #f8fbfc
+                );
+
+            border:
+                1px solid #dcebed;
+
+            border-radius: 20px;
+
+            padding: 30px;
+
+            text-align: center;
+
+        }
+
+
+        .gcs-result-icon {
+
+            width: 68px;
+
+            height: 68px;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: white;
+
+            font-size: 31px;
+
+            box-shadow:
+                0 7px 20px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.06
+                );
+
+        }
+
+
+        .gcs-result-label {
+
+            margin-bottom: 8px;
+
+            color: #70838d;
+
+            font-size: 12px;
+
+        }
+
+
+        .gcs-result-number {
+
+            margin: 0;
+
+            color: #0c3555;
+
+            font-size: 62px;
+
+            font-weight: 900;
+
+            line-height: 1;
+
+        }
+
+
+        .gcs-result-total {
+
+            margin-top: 5px;
+
+            color: #7b8c94;
+
+            font-size: 11px;
+
+        }
+
+
+        .gcs-result-category {
+
+            display: inline-block;
+
+            margin-top: 16px;
+
+            padding: 9px 16px;
+
+            border-radius: 50px;
+
+            background: white;
+
+            color: #0c5e75;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+        }
+
+
+        .gcs-result-message {
+
+            margin: 18px auto 0;
+
+            color: #6f818a;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .gcs-breakdown {
+
+            display: none;
+
+            margin-top: 22px;
+
+            padding-top: 18px;
+
+            border-top:
+                1px solid #dcebed;
+
+            text-align: right;
+
+        }
+
+
+        .gcs-breakdown-title {
+
+            margin: 0 0 12px;
+
+            color: #173b53;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+        }
+
+
+        .gcs-breakdown-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 8px 0;
+
+            color: #657983;
+
+            font-size: 11px;
+
+        }
+
+
+        .gcs-breakdown-row strong {
+
+            color: #0c5e75;
+
+        }
+
+
+        .gcs-placeholder {
+
+            color: #78909c;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =====================================================
+           INFORMATION
+        ===================================================== */
+
+        .gcs-info {
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            background: white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius: 20px;
+
+        }
+
+
+        .gcs-info h2 {
+
+            margin: 0 0 15px;
+
+            color: #173b53;
+
+            font-size: 21px;
+
+        }
+
+
+        .gcs-table-wrapper {
+
+            overflow-x: auto;
+
+        }
+
+
+        .gcs-table {
+
+            width: 100%;
+
+            min-width: 550px;
+
+            border-collapse: collapse;
+
+        }
+
+
+        .gcs-table th,
+        .gcs-table td {
+
+            padding: 13px 12px;
+
+            border-bottom:
+                1px solid #edf1f3;
+
+            text-align: right;
+
+            font-size: 12px;
+
+        }
+
+
+        .gcs-table th {
+
+            background: #f4f8f9;
+
+            color: #36586a;
+
+            font-weight: 900;
+
+        }
+
+
+        .gcs-table td {
+
+            color: #6e8089;
+
+        }
+
+
+        .gcs-note {
+
+            margin: 15px 0 0;
+
+            padding: 13px 15px;
+
+            border-radius: 10px;
+
+            background: #fff8e8;
+
+            color: #80672f;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .gcs-footer {
+
+            padding: 30px 0;
+
+            background: #092d49;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .gcs-footer p {
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .gcs-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .gcs-result-card {
+
+                position: static;
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .gcs-options {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .gcs-container {
+
+                width:
+                    calc(
+                        100% - 24px
+                    );
+
+            }
+
+
+            .gcs-header-inner {
+
+                min-height: 62px;
+
+            }
+
+
+            .gcs-home {
+
+                padding: 9px 11px;
+
+                font-size: 11px;
+
+            }
+
+
+            .gcs-brand-title {
+
+                font-size: 16px;
+
+            }
+
+
+            .gcs-brand-subtitle {
+
+                display: none;
+
+            }
+
+
+            .gcs-hero {
+
+                padding: 45px 0;
+
+            }
+
+
+            .gcs-card,
+            .gcs-result-card,
+            .gcs-info {
+
+                padding: 22px;
+
+            }
+
+
+            .gcs-result-number {
+
+                font-size: 54px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="gcs-page">
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="gcs-header">
+
+        <div class="gcs-container gcs-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="gcs-brand"
+            >
+
+                <span class="gcs-brand-icon">
+                    🩺
+                </span>
+
+
+                <span>
+
+                    <span class="gcs-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="gcs-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="gcs-home"
+            >
+                🏠 الرئيسية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="gcs-hero">
+
+        <div class="gcs-container">
+
+
+            <span class="gcs-badge">
+                🧠 Clinical Assessment Tool
+            </span>
+
+
+            <h1>
+
+                حاسبة
+                <span>GCS</span>
+
+            </h1>
+
+
+            <p>
+
+                احسب درجة مقياس غلاسكو للغيبوبة
+                Glasgow Coma Scale من خلال تقييم
+                Eye وVerbal وMotor Response.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main class="gcs-main">
+
+        <div class="gcs-container">
+
+
+            <div class="gcs-layout">
+
+
+                <!-- =================================================
+                     CALCULATOR
+                ================================================= -->
+
+                <section class="gcs-card">
+
+
+                    <h2 class="gcs-card-title">
+                        🧠 تقييم مستوى الوعي
+                    </h2>
+
+
+                    <p class="gcs-card-description">
+
+                        اختر أفضل استجابة موجودة لكل جزء
+                        من أجزاء مقياس GCS ثم اضغط على
+                        زر حساب النتيجة.
+
+                    </p>
+
+
+
+                    <!-- =================================================
+                         EYE
+                    ================================================= -->
+
+                    <div class="gcs-section">
+
+
+                        <div class="gcs-section-header">
+
+                            <h3 class="gcs-section-title">
+                                👁️ فتح العين
+                                <span dir="ltr">
+                                    (Eye Response)
+                                </span>
+                            </h3>
+
+
+                            <span
+                                class="gcs-section-score"
+                                id="eyeScore"
+                            >
+                                4
+                            </span>
+
+                        </div>
+
+
+                        <div class="gcs-options">
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="eye"
+                                    id="eye4"
+                                    value="4"
+                                    checked
+                                >
+
+                                <label for="eye4">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            تلقائيًا
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Spontaneous
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        4
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="eye"
+                                    id="eye3"
+                                    value="3"
+                                >
+
+                                <label for="eye3">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            عند الكلام
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            To Speech
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        3
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="eye"
+                                    id="eye2"
+                                    value="2"
+                                >
+
+                                <label for="eye2">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            عند الألم
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            To Pain
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        2
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="eye"
+                                    id="eye1"
+                                    value="1"
+                                >
+
+                                <label for="eye1">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            لا يوجد
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            None
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        1
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         VERBAL
+                    ================================================= -->
+
+                    <div class="gcs-section">
+
+
+                        <div class="gcs-section-header">
+
+                            <h3 class="gcs-section-title">
+                                🗣️ الاستجابة اللفظية
+                                <span dir="ltr">
+                                    (Verbal Response)
+                                </span>
+                            </h3>
+
+
+                            <span
+                                class="gcs-section-score"
+                                id="verbalScore"
+                            >
+                                5
+                            </span>
+
+                        </div>
+
+
+                        <div class="gcs-options">
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="verbal"
+                                    id="verbal5"
+                                    value="5"
+                                    checked
+                                >
+
+                                <label for="verbal5">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            واعٍ ومدرك
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Oriented
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        5
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="verbal"
+                                    id="verbal4"
+                                    value="4"
+                                >
+
+                                <label for="verbal4">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            مشوش
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Confused
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        4
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="verbal"
+                                    id="verbal3"
+                                    value="3"
+                                >
+
+                                <label for="verbal3">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            كلمات غير مناسبة
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Inappropriate Words
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        3
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="verbal"
+                                    id="verbal2"
+                                    value="2"
+                                >
+
+                                <label for="verbal2">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            أصوات غير مفهومة
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Incomprehensible Sounds
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        2
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="verbal"
+                                    id="verbal1"
+                                    value="1"
+                                >
+
+                                <label for="verbal1">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            لا يوجد
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            None
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        1
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         MOTOR
+                    ================================================= -->
+
+                    <div class="gcs-section">
+
+
+                        <div class="gcs-section-header">
+
+                            <h3 class="gcs-section-title">
+                                💪 الاستجابة الحركية
+                                <span dir="ltr">
+                                    (Motor Response)
+                                </span>
+                            </h3>
+
+
+                            <span
+                                class="gcs-section-score"
+                                id="motorScore"
+                            >
+                                6
+                            </span>
+
+                        </div>
+
+
+                        <div class="gcs-options">
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor6"
+                                    value="6"
+                                    checked
+                                >
+
+                                <label for="motor6">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            ينفذ الأوامر
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Obeys Commands
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        6
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor5"
+                                    value="5"
+                                >
+
+                                <label for="motor5">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            يحدد مكان الألم
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Localizes Pain
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        5
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor4"
+                                    value="4"
+                                >
+
+                                <label for="motor4">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            ينسحب من الألم
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Withdraws
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        4
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor3"
+                                    value="3"
+                                >
+
+                                <label for="motor3">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            انثناء غير طبيعي
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Abnormal Flexion
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        3
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor2"
+                                    value="2"
+                                >
+
+                                <label for="motor2">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            بسط غير طبيعي
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            Abnormal Extension
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        2
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+
+                            <div class="gcs-option">
+
+                                <input
+                                    type="radio"
+                                    name="motor"
+                                    id="motor1"
+                                    value="1"
+                                >
+
+                                <label for="motor1">
+
+                                    <span class="gcs-option-text">
+
+                                        <span class="gcs-option-title">
+                                            لا يوجد
+                                        </span>
+
+                                        <span class="gcs-option-en">
+                                            None
+                                        </span>
+
+                                    </span>
+
+
+                                    <span class="gcs-option-score">
+                                        1
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        class="gcs-calculate"
+                        id="calculateGCS"
+                    >
+                        🧠 احسب درجة GCS
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="gcs-reset"
+                        id="resetGCS"
+                    >
+                        إعادة ضبط
+                    </button>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     RESULT
+                ================================================= -->
+
+                <section class="gcs-result-card">
+
+
+                    <div
+                        class="gcs-result-icon"
+                        id="resultIcon"
+                    >
+                        🧠
+                    </div>
+
+
+                    <div class="gcs-result-label">
+                        نتيجة Glasgow Coma Scale
+                    </div>
+
+
+                    <div
+                        class="gcs-placeholder"
+                        id="resultPlaceholder"
+                    >
+
+                        اختر الاستجابات المناسبة
+                        ثم احسب النتيجة.
+
+                    </div>
+
+
+                    <h2
+                        class="gcs-result-number"
+                        id="gcsResult"
+                        style="display:none;"
+                    >
+                        15
+                    </h2>
+
+
+                    <div
+                        class="gcs-result-total"
+                        id="gcsResultTotal"
+                        style="display:none;"
+                    >
+                        من 15
+                    </div>
+
+
+                    <div
+                        class="gcs-result-category"
+                        id="gcsCategory"
+                        style="display:none;"
+                    >
+                    </div>
+
+
+                    <p
+                        class="gcs-result-message"
+                        id="gcsMessage"
+                        style="display:none;"
+                    >
+                    </p>
+
+
+                    <div
+                        class="gcs-breakdown"
+                        id="gcsBreakdown"
+                    >
+
+                        <h3 class="gcs-breakdown-title">
+                            تفاصيل النتيجة
+                        </h3>
+
+
+                        <div class="gcs-breakdown-row">
+
+                            <span>
+                                👁️ Eye
+                            </span>
+
+                            <strong id="breakdownEye">
+                                4
+                            </strong>
+
+                        </div>
+
+
+                        <div class="gcs-breakdown-row">
+
+                            <span>
+                                🗣️ Verbal
+                            </span>
+
+                            <strong id="breakdownVerbal">
+                                5
+                            </strong>
+
+                        </div>
+
+
+                        <div class="gcs-breakdown-row">
+
+                            <span>
+                                💪 Motor
+                            </span>
+
+                            <strong id="breakdownMotor">
+                                6
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INFORMATION
+            ================================================= -->
+
+            <section class="gcs-info">
+
+
+                <h2>
+                    📊 مكونات مقياس GCS
+                </h2>
+
+
+                <div class="gcs-table-wrapper">
+
+
+                    <table class="gcs-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    المكون
+                                </th>
+
+                                <th>
+                                    أعلى درجة
+                                </th>
+
+                                <th>
+                                    أقل درجة
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    👁️ Eye Response
+                                </td>
+
+                                <td>
+                                    4
+                                </td>
+
+                                <td>
+                                    1
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    🗣️ Verbal Response
+                                </td>
+
+                                <td>
+                                    5
+                                </td>
+
+                                <td>
+                                    1
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    💪 Motor Response
+                                </td>
+
+                                <td>
+                                    6
+                                </td>
+
+                                <td>
+                                    1
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    🧠 المجموع الكلي
+                                </td>
+
+                                <td>
+                                    15
+                                </td>
+
+                                <td>
+                                    3
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+                <p class="gcs-note">
+
+                    ⚠️ ملاحظة تعليمية: مقياس GCS أداة لتقييم
+                    مستوى الوعي ولا يُستخدم بمفرده لتحديد تشخيص
+                    المريض. يجب تفسير النتيجة في سياق الحالة
+                    السريرية وبواسطة الفريق الصحي المختص.
+
+                </p>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="gcs-footer">
+
+        <div class="gcs-container">
+
+            <p>
+
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+                <br>
+
+                Nursing Portal 🩺
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    const calculateGCS =
+        document.getElementById(
+            "calculateGCS"
+        );
+
+
+    const resetGCS =
+        document.getElementById(
+            "resetGCS"
+        );
+
+
+    const gcsResult =
+        document.getElementById(
+            "gcsResult"
+        );
+
+
+    const gcsResultTotal =
+        document.getElementById(
+            "gcsResultTotal"
+        );
+
+
+    const gcsCategory =
+        document.getElementById(
+            "gcsCategory"
+        );
+
+
+    const gcsMessage =
+        document.getElementById(
+            "gcsMessage"
+        );
+
+
+    const resultPlaceholder =
+        document.getElementById(
+            "resultPlaceholder"
+        );
+
+
+    const resultIcon =
+        document.getElementById(
+            "resultIcon"
+        );
+
+
+    const gcsBreakdown =
+        document.getElementById(
+            "gcsBreakdown"
+        );
+
+
+    const breakdownEye =
+        document.getElementById(
+            "breakdownEye"
+        );
+
+
+    const breakdownVerbal =
+        document.getElementById(
+            "breakdownVerbal"
+        );
+
+
+    const breakdownMotor =
+        document.getElementById(
+            "breakdownMotor"
+        );
+
+
+    const eyeScore =
+        document.getElementById(
+            "eyeScore"
+        );
+
+
+    const verbalScore =
+        document.getElementById(
+            "verbalScore"
+        );
+
+
+    const motorScore =
+        document.getElementById(
+            "motorScore"
+        );
+
+
+
+    function getSelectedValue(
+        name
+    ) {
+
+        const selected =
+            document.querySelector(
+                'input[name="' +
+                name +
+                '"]:checked'
+            );
+
+
+        if (!selected) {
+
+            return null;
+
+        }
+
+
+        return Number(
+            selected.value
+        );
+
+    }
+
+
+
+    function updateSectionScores() {
+
+        const eye =
+            getSelectedValue(
+                "eye"
+            );
+
+
+        const verbal =
+            getSelectedValue(
+                "verbal"
+            );
+
+
+        const motor =
+            getSelectedValue(
+                "motor"
+            );
+
+
+        if (eye !== null) {
+
+            eyeScore.textContent =
+                eye;
+
+        }
+
+
+        if (verbal !== null) {
+
+            verbalScore.textContent =
+                verbal;
+
+        }
+
+
+        if (motor !== null) {
+
+            motorScore.textContent =
+                motor;
+
+        }
+
+    }
+
+
+
+    document
+        .querySelectorAll(
+            'input[type="radio"]'
+        )
+        .forEach(
+            function (radio) {
+
+                radio.addEventListener(
+                    "change",
+                    updateSectionScores
+                );
+
+            }
+        );
+
+
+
+    calculateGCS.addEventListener(
+        "click",
+        function () {
+
+
+            const eye =
+                getSelectedValue(
+                    "eye"
+                );
+
+
+            const verbal =
+                getSelectedValue(
+                    "verbal"
+                );
+
+
+            const motor =
+                getSelectedValue(
+                    "motor"
+                );
+
+
+            if (
+                eye === null ||
+                verbal === null ||
+                motor === null
+            ) {
+
+                alert(
+                    "من فضلك اختر الاستجابة المناسبة لكل جزء من أجزاء GCS."
+                );
+
+                return;
+
+            }
+
+
+            const total =
+                eye +
+                verbal +
+                motor;
+
+
+            let category = "";
+            let message = "";
+            let icon = "🧠";
+
+
+            if (total >= 13) {
+
+                category =
+                    "وعي جيد نسبيًا";
+
+                message =
+                    "النتيجة تقع ضمن نطاق GCS المرتفع. يجب دائمًا تفسير الدرجة مع الحالة السريرية الكاملة للمريض.";
+
+                icon = "🟢";
+
+            }
+
+            else if (total >= 9) {
+
+                category =
+                    "اضطراب متوسط في مستوى الوعي";
+
+                message =
+                    "النتيجة تقع ضمن النطاق المتوسط. تحتاج النتيجة إلى تقييم سريري مستمر ومتكامل.";
+
+                icon = "🟡";
+
+            }
+
+            else {
+
+                category =
+                    "اضطراب شديد في مستوى الوعي";
+
+                message =
+                    "النتيجة منخفضة وتشير إلى اضطراب شديد في مستوى الوعي وتحتاج إلى تقييم طبي عاجل حسب الحالة.";
+
+                icon = "🔴";
+
+            }
+
+
+            gcsResult.textContent =
+                total;
+
+
+            gcsResultTotal.textContent =
+                "من 15";
+
+
+            gcsCategory.textContent =
+                category;
+
+
+            gcsMessage.textContent =
+                message;
+
+
+            resultIcon.textContent =
+                icon;
+
+
+            breakdownEye.textContent =
+                eye;
+
+
+            breakdownVerbal.textContent =
+                verbal;
+
+
+            breakdownMotor.textContent =
+                motor;
+
+
+            resultPlaceholder.style.display =
+                "none";
+
+
+            gcsResult.style.display =
+                "block";
+
+
+            gcsResultTotal.style.display =
+                "block";
+
+
+            gcsCategory.style.display =
+                "inline-block";
+
+
+            gcsMessage.style.display =
+                "block";
+
+
+            gcsBreakdown.style.display =
+                "block";
+
+        }
+    );
+
+
+
+    resetGCS.addEventListener(
+        "click",
+        function () {
+
+
+            document
+                .getElementById(
+                    "eye4"
+                )
+                .checked = true;
+
+
+            document
+                .getElementById(
+                    "verbal5"
+                )
+                .checked = true;
+
+
+            document
+                .getElementById(
+                    "motor6"
+                )
+                .checked = true;
+
+
+            eyeScore.textContent =
+                "4";
+
+
+            verbalScore.textContent =
+                "5";
+
+
+            motorScore.textContent =
+                "6";
+
+
+            gcsResult.textContent =
+                "15";
+
+
+            gcsResultTotal.textContent =
+                "من 15";
+
+
+            gcsCategory.textContent =
+                "";
+
+
+            gcsMessage.textContent =
+                "";
+
+
+            breakdownEye.textContent =
+                "4";
+
+
+            breakdownVerbal.textContent =
+                "5";
+
+
+            breakdownMotor.textContent =
+                "6";
+
+
+            resultIcon.textContent =
+                "🧠";
+
+
+            resultPlaceholder.style.display =
+                "block";
+
+
+            gcsResult.style.display =
+                "none";
+
+
+            gcsResultTotal.style.display =
+                "none";
+
+
+            gcsCategory.style.display =
+                "none";
+
+
+            gcsMessage.style.display =
+                "none";
+
+
+            gcsBreakdown.style.display =
+                "none";
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
