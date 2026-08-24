@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        حاسبة MAP | Mean Arterial Pressure | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="حاسبة ضغط الدم المتوسط MAP للتمريض. احسب Mean Arterial Pressure بسهولة باستخدام ضغط الدم الانقباضي والانبساطي."
+    >
+
+    <meta
+        name="keywords"
+        content="MAP Calculator, Mean Arterial Pressure, حاسبة MAP, الضغط الشرياني المتوسط, Nursing Calculator, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/tools/map.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="حاسبة MAP | Mean Arterial Pressure"
+    >
+
+    <meta
+        property="og:description"
+        content="احسب الضغط الشرياني المتوسط MAP بسهولة باستخدام ضغط الدم الانقباضي والانبساطي."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/tools/map.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .map-page {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f5f9fb 0%,
+                    #eef5f8 100%
+                );
+
+            color: #102f46;
+
+        }
+
+
+        .map-container {
+
+            width: min(
+                1100px,
+                calc(100% - 40px)
+            );
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .map-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 5000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e2eaee;
+
+        }
+
+
+        .map-header-inner {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .map-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            color: #0c3555;
+
+            text-decoration: none;
+
+            font-weight: 900;
+
+        }
+
+
+        .map-brand-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .map-brand-title {
+
+            display: block;
+
+            font-size: 18px;
+
+        }
+
+
+        .map-brand-subtitle {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #78909c;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+        }
+
+
+        .map-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+        }
+
+
+        .map-nav a {
+
+            padding: 9px 12px;
+
+            border-radius: 9px;
+
+            color: #52636e;
+
+            font-size: 13px;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .map-nav a:hover {
+
+            background: #eef5f7;
+
+            color: #0c3555;
+
+        }
+
+
+        .map-home-button {
+
+            padding: 10px 15px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .map-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 65px 0 60px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color: white;
+
+        }
+
+
+        .map-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+
+            height: 420px;
+
+            border-radius: 50%;
+
+            top: -240px;
+
+            left: -120px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .map-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            bottom: -220px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .map-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        .map-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.17
+                );
+
+            font-size: 12px;
+
+        }
+
+
+        .map-hero h1 {
+
+            margin: 0 0 13px;
+
+            font-size:
+                clamp(
+                    35px,
+                    5vw,
+                    55px
+                );
+
+            line-height: 1.2;
+
+        }
+
+
+        .map-hero h1 span {
+
+            color: #8ee7f2;
+
+        }
+
+
+        .map-hero-description {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 14px;
+
+            line-height: 2;
+
+            opacity: 0.88;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .map-main {
+
+            padding: 50px 0 80px;
+
+        }
+
+
+        .map-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 22px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           CALCULATOR CARD
+           ===================================================== */
+
+        .map-card {
+
+            padding: 28px;
+
+            background: white;
+
+            border:
+                1px solid #e0e9ed;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.055
+                );
+
+        }
+
+
+        .map-card-header {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .map-card-header h2 {
+
+            margin: 0 0 7px;
+
+            color: #173b53;
+
+            font-size: 23px;
+
+        }
+
+
+        .map-card-header p {
+
+            margin: 0;
+
+            color: #788892;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        .map-form-group {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .map-form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #27495e;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        .map-input-wrapper {
+
+            position: relative;
+
+        }
+
+
+        .map-input {
+
+            width: 100%;
+
+            height: 54px;
+
+            box-sizing: border-box;
+
+            padding: 0 16px;
+
+            border:
+                1px solid #d9e4e8;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            background: #fbfdfe;
+
+            color: #173b53;
+
+            font-family: inherit;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .map-input:focus {
+
+            border-color: #23829a;
+
+            background: white;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    35,
+                    130,
+                    154,
+                    0.10
+                );
+
+        }
+
+
+        .map-input::placeholder {
+
+            color: #a2afb5;
+
+            font-weight: 400;
+
+        }
+
+
+        .map-unit {
+
+            position: absolute;
+
+            left: 16px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color: #8a989f;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            pointer-events: none;
+
+        }
+
+
+        .map-input.has-unit {
+
+            padding-left: 55px;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+           ===================================================== */
+
+        .map-calculate-button {
+
+            width: 100%;
+
+            height: 54px;
+
+            margin-top: 8px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #176b82
+                );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .map-calculate-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    12,
+                    53,
+                    85,
+                    0.20
+                );
+
+        }
+
+
+        .map-calculate-button:active {
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        .map-reset-button {
+
+            width: 100%;
+
+            height: 45px;
+
+            margin-top: 10px;
+
+            border:
+                1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            background: white;
+
+            color: #607681;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .map-reset-button:hover {
+
+            background: #f4f8fa;
+
+            color: #0c3555;
+
+        }
+
+
+        /* =====================================================
+           RESULT
+           ===================================================== */
+
+        .map-result {
+
+            display: none;
+
+            margin-top: 22px;
+
+            padding: 22px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf7f8,
+                    #f8fbfc
+                );
+
+            border:
+                1px solid #d8eaed;
+
+            text-align: center;
+
+        }
+
+
+        .map-result.show {
+
+            display: block;
+
+            animation:
+                mapResultIn
+                0.25s ease;
+
+        }
+
+
+        @keyframes mapResultIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(8px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .map-result-label {
+
+            margin-bottom: 5px;
+
+            color: #66808c;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .map-result-value {
+
+            color: #0c5e75;
+
+            font-size: 42px;
+
+            line-height: 1;
+
+            font-weight: 900;
+
+        }
+
+
+        .map-result-unit {
+
+            margin-top: 7px;
+
+            color: #78909c;
+
+            font-size: 11px;
+
+        }
+
+
+        .map-result-status {
+
+            display: inline-block;
+
+            margin-top: 13px;
+
+            padding: 7px 12px;
+
+            border-radius: 50px;
+
+            background: #e4f4e9;
+
+            color: #24723e;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+        }
+
+
+        .map-result-status.low {
+
+            background: #fff3df;
+
+            color: #9a6517;
+
+        }
+
+
+        .map-result-status.high {
+
+            background: #fde8e8;
+
+            color: #a53b3b;
+
+        }
+
+
+        .map-error {
+
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 12px 14px;
+
+            border-radius: 10px;
+
+            background: #fff0f0;
+
+            border:
+                1px solid #f3d0d0;
+
+            color: #a33d3d;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .map-error.show {
+
+            display: block;
+
+        }
+
+
+        /* =====================================================
+           INFORMATION CARD
+           ===================================================== */
+
+        .map-info-card {
+
+            padding: 28px;
+
+            background: white;
+
+            border:
+                1px solid #e0e9ed;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.055
+                );
+
+        }
+
+
+        .map-info-card h2 {
+
+            margin: 0 0 18px;
+
+            color: #173b53;
+
+            font-size: 21px;
+
+        }
+
+
+        .map-info-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 13px;
+
+            padding: 14px 0;
+
+            border-bottom:
+                1px solid #edf1f3;
+
+        }
+
+
+        .map-info-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .map-info-icon {
+
+            width: 38px;
+
+            height: 38px;
+
+            flex: 0 0 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #edf6f8;
+
+            font-size: 18px;
+
+        }
+
+
+        .map-info-item strong {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: #294c61;
+
+            font-size: 13px;
+
+        }
+
+
+        .map-info-item p {
+
+            margin: 0;
+
+            color: #788892;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FORMULA
+           ===================================================== */
+
+        .map-formula {
+
+            margin-top: 20px;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            background: #092d49;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .map-formula-title {
+
+            margin-bottom: 9px;
+
+            color: #9edce5;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+        }
+
+
+        .map-formula-equation {
+
+            direction: ltr;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.3px;
+
+        }
+
+
+        .map-formula-note {
+
+            margin-top: 8px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           RANGE TABLE
+           ===================================================== */
+
+        .map-ranges {
+
+            margin-top: 22px;
+
+            padding: 25px;
+
+            background: white;
+
+            border:
+                1px solid #e0e9ed;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.04
+                );
+
+        }
+
+
+        .map-ranges h2 {
+
+            margin: 0 0 16px;
+
+            color: #173b53;
+
+            font-size: 19px;
+
+        }
+
+
+        .map-range-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr 1.3fr;
+
+            gap: 10px;
+
+            align-items: center;
+
+            padding: 12px 0;
+
+            border-bottom:
+                1px solid #edf1f3;
+
+            font-size: 12px;
+
+        }
+
+
+        .map-range-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .map-range-label {
+
+            color: #486471;
+
+            font-weight: 800;
+
+        }
+
+
+        .map-range-value {
+
+            direction: ltr;
+
+            text-align: center;
+
+            color: #173b53;
+
+            font-weight: 900;
+
+        }
+
+
+        .map-range-note {
+
+            color: #7d8d95;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+           ===================================================== */
+
+        .map-disclaimer {
+
+            margin-top: 22px;
+
+            padding: 18px 20px;
+
+            border-radius: 14px;
+
+            background: #fff9eb;
+
+            border:
+                1px solid #f0dfb8;
+
+            color: #795f27;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .map-disclaimer strong {
+
+            color: #614b1e;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .map-footer {
+
+            padding: 40px 0 20px;
+
+            background: #092d49;
+
+            color: white;
+
+        }
+
+
+        .map-footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 30px;
+
+            padding-bottom: 25px;
+
+            border-bottom:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.11
+                );
+
+        }
+
+
+        .map-footer-brand h3 {
+
+            margin: 0 0 9px;
+
+            font-size: 18px;
+
+        }
+
+
+        .map-footer-brand p {
+
+            max-width: 420px;
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .map-footer-column h4 {
+
+            margin: 0 0 13px;
+
+            font-size: 13px;
+
+        }
+
+
+        .map-footer-column a {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size: 11px;
+
+            text-decoration: none;
+
+        }
+
+
+        .map-footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .map-footer-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding-top: 17px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.42
+                );
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .map-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .map-footer-grid {
+
+                grid-template-columns:
+                    2fr 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .map-nav {
+
+                display: none;
+
+            }
+
+
+            .map-home-button {
+
+                display: none;
+
+            }
+
+
+            .map-container {
+
+                width:
+                    min(
+                        calc(100% - 24px),
+                        1100px
+                    );
+
+            }
+
+
+            .map-hero {
+
+                padding:
+                    52px 0 48px;
+
+            }
+
+
+            .map-hero h1 {
+
+                font-size: 35px;
+
+            }
+
+
+            .map-main {
+
+                padding:
+                    35px 0 60px;
+
+            }
+
+
+            .map-card,
+            .map-info-card {
+
+                padding: 22px;
+
+            }
+
+
+            .map-range-row {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .map-range-note {
+
+                grid-column:
+                    1 / -1;
+
+            }
+
+
+            .map-footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .map-footer-bottom {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="map-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="map-header">
+
+        <div class="map-container map-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="map-brand"
+                aria-label="العودة إلى الصفحة الرئيسية"
+            >
+
+                <span class="map-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="map-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="map-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <nav
+                class="map-nav"
+                aria-label="القائمة الرئيسية"
+            >
+
+                <a href="../index.html">
+                    الرئيسية
+                </a>
+
+                <a href="../drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a href="../knowledge/index.html">
+                    المعرفة التمريضية
+                </a>
+
+                <a
+                    href="../tools.html"
+                    class="active"
+                >
+                    الأدوات والحاسبات
+                </a>
+
+                <a href="../dictionary.html">
+                    قاموس التمريض
+                </a>
+
+            </nav>
+
+
+            <a
+                href="../index.html"
+                class="map-home-button"
+            >
+                🏠 الرئيسية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="map-hero">
+
+        <div class="map-container">
+
+            <div class="map-hero-content">
+
+
+                <span class="map-badge">
+                    🩺 Nursing Calculator
+                </span>
+
+
+                <h1>
+
+                    حاسبة
+                    <span>
+                        MAP
+                    </span>
+
+                </h1>
+
+
+                <p class="map-hero-description">
+
+                    احسب الضغط الشرياني المتوسط
+                    Mean Arterial Pressure
+                    باستخدام ضغط الدم الانقباضي
+                    والانبساطي بطريقة سريعة وبسيطة.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="map-main">
+
+        <div class="map-container">
+
+
+            <div class="map-layout">
+
+
+                <!-- =================================================
+                     CALCULATOR
+                     ================================================= -->
+
+                <section class="map-card">
+
+                    <div class="map-card-header">
+
+                        <h2>
+                            🧮 احسب MAP
+                        </h2>
+
+                        <p>
+                            أدخل قيم ضغط الدم ثم اضغط على زر الحساب.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SYSTOLIC -->
+
+                    <div class="map-form-group">
+
+                        <label for="systolic">
+                            الضغط الانقباضي
+                            Systolic Blood Pressure
+                        </label>
+
+
+                        <div class="map-input-wrapper">
+
+                            <input
+                                type="number"
+                                id="systolic"
+                                class="map-input has-unit"
+                                placeholder="مثال: 120"
+                                min="1"
+                                max="300"
+                                inputmode="numeric"
+                            >
+
+                            <span class="map-unit">
+                                mmHg
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DIASTOLIC -->
+
+                    <div class="map-form-group">
+
+                        <label for="diastolic">
+                            الضغط الانبساطي
+                            Diastolic Blood Pressure
+                        </label>
+
+
+                        <div class="map-input-wrapper">
+
+                            <input
+                                type="number"
+                                id="diastolic"
+                                class="map-input has-unit"
+                                placeholder="مثال: 80"
+                                min="1"
+                                max="250"
+                                inputmode="numeric"
+                            >
+
+                            <span class="map-unit">
+                                mmHg
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        id="calculateMap"
+                        class="map-calculate-button"
+                    >
+                        🧮 احسب MAP
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="resetMap"
+                        class="map-reset-button"
+                    >
+                        إعادة تعيين
+                    </button>
+
+
+
+                    <!-- ERROR -->
+
+                    <div
+                        id="mapError"
+                        class="map-error"
+                    >
+                        من فضلك أدخل قيمًا صحيحة لضغط الدم.
+                    </div>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        id="mapResult"
+                        class="map-result"
+                    >
+
+                        <div class="map-result-label">
+                            Mean Arterial Pressure
+                        </div>
+
+
+                        <div
+                            id="mapValue"
+                            class="map-result-value"
+                        >
+                            —
+                        </div>
+
+
+                        <div class="map-result-unit">
+                            mmHg
+                        </div>
+
+
+                        <div
+                            id="mapStatus"
+                            class="map-result-status"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     INFORMATION
+                     ================================================= -->
+
+                <section class="map-info-card">
+
+                    <h2>
+                        📚 ما هو MAP؟
+                    </h2>
+
+
+                    <div class="map-info-item">
+
+                        <div class="map-info-icon">
+                            ❤️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Mean Arterial Pressure
+                            </strong>
+
+                            <p>
+                                هو متوسط الضغط في الشرايين خلال
+                                دورة القلب، ويُستخدم كمؤشر مهم
+                                على وصول الدم إلى الأعضاء.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="map-info-item">
+
+                        <div class="map-info-icon">
+                            🩸
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                لماذا نهتم به؟
+                            </strong>
+
+                            <p>
+                                يساعد MAP في تقييم كفاية التروية
+                                للأعضاء والأنسجة، خاصة في الحالات
+                                الحرجة.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="map-info-item">
+
+                        <div class="map-info-icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                المعادلة
+                            </strong>
+
+                            <p>
+                                يتم حساب MAP تقريبًا باستخدام
+                                الضغط الانقباضي والانبساطي.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="map-formula">
+
+                        <div class="map-formula-title">
+                            MAP FORMULA
+                        </div>
+
+                        <div class="map-formula-equation">
+                            MAP ≈ (SBP + 2 × DBP) ÷ 3
+                        </div>
+
+                        <div class="map-formula-note">
+                            SBP = Systolic Blood Pressure
+                            &nbsp; | &nbsp;
+                            DBP = Diastolic Blood Pressure
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =====================================================
+                 RANGE
+                 ===================================================== -->
+
+            <section class="map-ranges">
+
+                <h2>
+                    📊 قراءة النتيجة بشكل عام
+                </h2>
+
+
+                <div class="map-range-row">
+
+                    <div class="map-range-label">
+                        منخفض
+                    </div>
+
+                    <div class="map-range-value">
+                        &lt; 65 mmHg
+                    </div>
+
+                    <div class="map-range-note">
+                        قد يشير إلى انخفاض التروية ويحتاج إلى تقييم سريري.
+                    </div>
+
+                </div>
+
+
+                <div class="map-range-row">
+
+                    <div class="map-range-label">
+                        نطاق شائع مناسب
+                    </div>
+
+                    <div class="map-range-value">
+                        65–100 mmHg
+                    </div>
+
+                    <div class="map-range-note">
+                        نطاق عام يُستخدم لتقييم التروية، مع اختلاف الحالة حسب المريض.
+                    </div>
+
+                </div>
+
+
+                <div class="map-range-row">
+
+                    <div class="map-range-label">
+                        مرتفع
+                    </div>
+
+                    <div class="map-range-value">
+                        &gt; 100 mmHg
+                    </div>
+
+                    <div class="map-range-note">
+                        يحتاج إلى تفسير النتيجة مع باقي العلامات والحالة السريرية.
+                    </div>
+
+                </div>
+
+
+                <div class="map-disclaimer">
+
+                    <strong>
+                        ⚠️ تنبيه:
+                    </strong>
+
+                    هذه الحاسبة أداة تعليمية للطلاب
+                    وليست بديلًا عن التقييم السريري أو
+                    تعليمات الطبيب. تفسير MAP يعتمد على
+                    حالة المريض والسياق السريري وباقي
+                    العلامات الحيوية.
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="map-footer">
+
+        <div class="map-container">
+
+
+            <div class="map-footer-grid">
+
+
+                <div class="map-footer-brand">
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+                        مرجع رقمي يساعد طلاب وممارسي
+                        التمريض في الوصول إلى المعلومات
+                        والأدوات التمريضية بشكل أسرع وأسهل.
+                    </p>
+
+                </div>
+
+
+                <div class="map-footer-column">
+
+                    <h4>
+                        استكشف
+                    </h4>
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="../knowledge/index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../tools.html">
+                        الأدوات والحاسبات
+                    </a>
+
+                </div>
+
+
+                <div class="map-footer-column">
+
+                    <h4>
+                        الأدوات
+                    </h4>
+
+                    <a href="iv-drip-rate.html">
+                        IV Drip Rate
+                    </a>
+
+                    <a href="iv-flow-rate.html">
+                        IV Flow Rate
+                    </a>
+
+                    <a href="bmi.html">
+                        BMI
+                    </a>
+
+                    <a href="gcs.html">
+                        GCS
+                    </a>
+
+                </div>
+
+
+                <div class="map-footer-column">
+
+                    <h4>
+                        معلومات
+                    </h4>
+
+                    <a href="../pages/about.html">
+                        من نحن
+                    </a>
+
+                    <a href="../pages/contact.html">
+                        تواصل معنا
+                    </a>
+
+                    <a href="../pages/privacy.html">
+                        سياسة الخصوصية
+                    </a>
+
+                    <a href="../pages/medical-disclaimer.html">
+                        إخلاء المسؤولية الطبية
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="map-footer-bottom">
+
+                <span>
+                    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                </span>
+
+                <span>
+                    Built for Nursing. 🩺
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const systolicInput =
+        document.getElementById(
+            "systolic"
+        );
+
+
+    const diastolicInput =
+        document.getElementById(
+            "diastolic"
+        );
+
+
+    const calculateButton =
+        document.getElementById(
+            "calculateMap"
+        );
+
+
+    const resetButton =
+        document.getElementById(
+            "resetMap"
+        );
+
+
+    const mapResult =
+        document.getElementById(
+            "mapResult"
+        );
+
+
+    const mapValue =
+        document.getElementById(
+            "mapValue"
+        );
+
+
+    const mapStatus =
+        document.getElementById(
+            "mapStatus"
+        );
+
+
+    const mapError =
+        document.getElementById(
+            "mapError"
+        );
+
+
+    /* =====================================================
+       CALCULATE MAP
+       ===================================================== */
+
+    function calculateMAP() {
+
+        const systolic =
+            Number(
+                systolicInput.value
+            );
+
+
+        const diastolic =
+            Number(
+                diastolicInput.value
+            );
+
+
+        mapError.classList.remove(
+            "show"
+        );
+
+
+        mapResult.classList.remove(
+            "show"
+        );
+
+
+        /* -------------------------------------------------
+           VALIDATION
+           ------------------------------------------------- */
+
+        if (
+            !systolic ||
+            !diastolic ||
+            systolic <= 0 ||
+            diastolic <= 0
+        ) {
+
+            mapError.textContent =
+                "من فضلك أدخل قيمًا صحيحة لضغط الدم.";
+
+            mapError.classList.add(
+                "show"
+            );
+
+            return;
+
+        }
+
+
+        if (
+            diastolic >= systolic
+        ) {
+
+            mapError.textContent =
+                "يجب أن يكون الضغط الانقباضي أكبر من الضغط الانبساطي.";
+
+            mapError.classList.add(
+                "show"
+            );
+
+            return;
+
+        }
+
+
+        /* -------------------------------------------------
+           CALCULATION
+           ------------------------------------------------- */
+
+        const map =
+            (
+                systolic +
+                (2 * diastolic)
+            ) / 3;
+
+
+        const roundedMap =
+            Math.round(
+                map * 10
+            ) / 10;
+
+
+        mapValue.textContent =
+            roundedMap;
+
+
+        /* -------------------------------------------------
+           STATUS
+           ------------------------------------------------- */
+
+        mapStatus.className =
+            "map-result-status";
+
+
+        if (
+            roundedMap < 65
+        ) {
+
+            mapStatus.textContent =
+                "MAP منخفض";
+
+
+            mapStatus.classList.add(
+                "low"
+            );
+
+        }
+
+        else if (
+            roundedMap <= 100
+        ) {
+
+            mapStatus.textContent =
+                "MAP ضمن النطاق الشائع";
+
+        }
+
+        else {
+
+            mapStatus.textContent =
+                "MAP مرتفع";
+
+
+            mapStatus.classList.add(
+                "high"
+            );
+
+        }
+
+
+        mapResult.classList.add(
+            "show"
+        );
+
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetMAP() {
+
+        systolicInput.value = "";
+
+        diastolicInput.value = "";
+
+        mapValue.textContent =
+            "—";
+
+        mapStatus.textContent =
+            "—";
+
+        mapStatus.className =
+            "map-result-status";
+
+        mapResult.classList.remove(
+            "show"
+        );
+
+        mapError.classList.remove(
+            "show"
+        );
+
+        systolicInput.focus();
+
+    }
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateButton.addEventListener(
+        "click",
+        calculateMAP
+    );
+
+
+    resetButton.addEventListener(
+        "click",
+        resetMAP
+    );
+
+
+    systolicInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                diastolicInput.focus();
+
+            }
+
+        }
+    );
+
+
+    diastolicInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                calculateMAP();
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
