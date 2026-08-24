@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        المعرفة التمريضية | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="المعرفة التمريضية من بوابة التمريض: معلومات ومقالات تعليمية عن أساسيات التمريض، العلامات الحيوية، مكافحة العدوى، المهارات السريرية والحالات المرضية."
+    >
+
+    <meta
+        name="keywords"
+        content="المعرفة التمريضية, تمريض, Nursing, Nursing Knowledge, أساسيات التمريض, مهارات التمريض, مكافحة العدوى, العلامات الحيوية"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/knowledge.html"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b2239"
+    >
+
+    <meta
+        property="og:title"
+        content="المعرفة التمريضية | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="مرجع معرفي شامل لطلاب وممارسي التمريض."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/knowledge.html"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           KNOWLEDGE PAGE
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f8fa;
+            color: #102f46;
+            font-family: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .knowledge-container {
+            width: min(1200px, calc(100% - 40px));
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .knowledge-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e4ebef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .knowledge-header-inner {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .knowledge-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 20px;
+            font-weight: 900;
+
+            color: #0b3555;
+
+            white-space: nowrap;
+        }
+
+        .knowledge-logo-icon {
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b3555,
+                    #217f96
+                );
+
+            color: white;
+            font-size: 22px;
+        }
+
+        .knowledge-nav {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .knowledge-nav a {
+            padding: 9px 12px;
+
+            border-radius: 9px;
+
+            color: #596b75;
+
+            font-size: 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .knowledge-nav a:hover,
+        .knowledge-nav a.active {
+            background: #edf5f7;
+            color: #0b3555;
+        }
+
+        .knowledge-home-button {
+            padding: 10px 16px;
+
+            background: #0b3555;
+            color: white;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .knowledge-hero {
+            padding: 75px 0 70px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #14657b
+                );
+
+            color: white;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .knowledge-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            top: -180px;
+            left: -100px;
+        }
+
+        .knowledge-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            bottom: -170px;
+            right: -80px;
+        }
+
+        .knowledge-hero-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .knowledge-badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.16);
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        .knowledge-hero h1 {
+            margin: 0 0 18px;
+
+            font-size:
+                clamp(38px, 6vw, 62px);
+
+            line-height: 1.2;
+        }
+
+        .knowledge-hero h1 span {
+            color: #8ee7f2;
+        }
+
+        .knowledge-hero p {
+            max-width: 760px;
+
+            margin: auto;
+
+            line-height: 2;
+
+            font-size: 17px;
+
+            opacity: 0.9;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .knowledge-search {
+            max-width: 720px;
+
+            margin: 30px auto 0;
+
+            position: relative;
+        }
+
+        .knowledge-search input {
+            width: 100%;
+
+            height: 58px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 15px;
+
+            padding: 0 55px 0 120px;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.15);
+        }
+
+        .knowledge-search-icon {
+            position: absolute;
+
+            right: 18px;
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            font-size: 21px;
+        }
+
+        .knowledge-search button {
+            position: absolute;
+
+            left: 7px;
+            top: 7px;
+            bottom: 7px;
+
+            width: 100px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #0b3555;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           CATEGORY SECTION
+        ===================================================== */
+
+        .knowledge-section {
+            padding: 65px 0;
+        }
+
+        .knowledge-heading {
+            display: flex;
+
+            align-items: end;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 28px;
+        }
+
+        .knowledge-heading h2 {
+            margin: 0 0 7px;
+
+            font-size: 30px;
+        }
+
+        .knowledge-heading p {
+            margin: 0;
+
+            color: #71808a;
+
+            line-height: 1.8;
+        }
+
+        .knowledge-heading-link {
+            color: #156582;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CATEGORIES
+        ===================================================== */
+
+        .knowledge-categories {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 17px;
+        }
+
+        .knowledge-category {
+            background: white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius: 19px;
+
+            padding: 23px;
+
+            min-height: 180px;
+
+            transition: 0.2s ease;
+
+            box-shadow:
+                0 5px 20px
+                rgba(15,35,50,0.035);
+        }
+
+        .knowledge-category:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #b8d2d9;
+
+            box-shadow:
+                0 15px 32px
+                rgba(15,35,50,0.08);
+        }
+
+        .category-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #edf6f8;
+
+            border-radius: 15px;
+
+            font-size: 28px;
+
+            margin-bottom: 17px;
+        }
+
+        .knowledge-category h3 {
+            margin:
+                0 0 8px;
+
+            font-size: 18px;
+        }
+
+        .knowledge-category p {
+            margin: 0;
+
+            color: #71808a;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           ARTICLES
+        ===================================================== */
+
+        .articles-section {
+            background: #ffffff;
+
+            border-top:
+                1px solid #e7edef;
+
+            border-bottom:
+                1px solid #e7edef;
+        }
+
+        .articles-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .article-card {
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 19px;
+
+            overflow: hidden;
+
+            transition: 0.2s ease;
+        }
+
+        .article-card:hover {
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(15,35,50,0.08);
+        }
+
+        .article-card-top {
+            min-height: 145px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf5f7,
+                    #f6fafb
+                );
+
+            font-size: 55px;
+        }
+
+        .article-card-body {
+            padding: 22px;
+        }
+
+        .article-category {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            padding: 5px 9px;
+
+            border-radius: 7px;
+
+            background: #edf6f8;
+
+            color: #156582;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+        .article-card h3 {
+            margin:
+                0 0 10px;
+
+            font-size: 19px;
+
+            line-height: 1.5;
+        }
+
+        .article-card p {
+            margin:
+                0 0 18px;
+
+            color: #71808a;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .article-link {
+            color: #156582;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           POPULAR TOPICS
+        ===================================================== */
+
+        .topics-box {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 14px;
+        }
+
+        .topic-link {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 17px;
+
+            background: white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius: 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .topic-link:hover {
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #a9cbd3;
+        }
+
+        .topic-link-icon {
+            width: 44px;
+            height: 44px;
+
+            flex: 0 0 44px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #eef6f8;
+
+            border-radius: 11px;
+
+            font-size: 21px;
+        }
+
+        .topic-link strong {
+            display: block;
+
+            margin-bottom: 3px;
+        }
+
+        .topic-link small {
+            color: #7b8991;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .knowledge-cta {
+            padding: 50px 0;
+        }
+
+        .knowledge-cta-box {
+            padding: 38px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b3555,
+                    #176c82
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .knowledge-cta-box h2 {
+            margin:
+                0 0 9px;
+        }
+
+        .knowledge-cta-box p {
+            margin: 0;
+
+            line-height: 1.8;
+
+            opacity: 0.85;
+        }
+
+        .knowledge-cta-button {
+            padding:
+                12px 19px;
+
+            background: white;
+
+            color: #0b3555;
+
+            border-radius: 11px;
+
+            font-weight: 800;
+
+            font-size: 13px;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .knowledge-footer {
+            background: #092d49;
+
+            color: white;
+
+            padding: 45px 0 25px;
+        }
+
+        .knowledge-footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 35px;
+
+            padding-bottom: 30px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.12);
+        }
+
+        .knowledge-footer h3,
+        .knowledge-footer h4 {
+            margin:
+                0 0 14px;
+        }
+
+        .knowledge-footer p {
+            max-width: 430px;
+
+            margin: 0;
+
+            color:
+                rgba(255,255,255,0.65);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+        .knowledge-footer a {
+            display: block;
+
+            margin-bottom: 9px;
+
+            color:
+                rgba(255,255,255,0.68);
+
+            font-size: 13px;
+        }
+
+        .knowledge-footer a:hover {
+            color: white;
+        }
+
+        .knowledge-footer-bottom {
+            padding-top: 20px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            color:
+                rgba(255,255,255,0.5);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .knowledge-categories {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .articles-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .topics-box {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .knowledge-footer-grid {
+                grid-template-columns:
+                    2fr 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .knowledge-container {
+                width:
+                    min(
+                        100% - 24px,
+                        1200px
+                    );
+            }
+
+            .knowledge-nav {
+                display: none;
+            }
+
+            .knowledge-home-button {
+                display: none;
+            }
+
+            .knowledge-hero {
+                padding:
+                    55px 0;
+            }
+
+            .knowledge-hero p {
+                font-size: 15px;
+            }
+
+            .knowledge-search input {
+                padding-left: 95px;
+            }
+
+            .knowledge-search button {
+                width: 80px;
+            }
+
+            .knowledge-categories,
+            .articles-grid,
+            .topics-box {
+                grid-template-columns: 1fr;
+            }
+
+            .knowledge-heading {
+                flex-direction: column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .knowledge-cta-box {
+                flex-direction: column;
+
+                align-items:
+                    flex-start;
+            }
+
+            .knowledge-footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .knowledge-footer-bottom {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="knowledge-header">
+
+    <div class="knowledge-container knowledge-header-inner">
+
+        <a
+            href="index.html"
+            class="knowledge-logo"
+        >
+
+            <span class="knowledge-logo-icon">
+                🩺
+            </span>
+
+            <span>
+                بوابة التمريض
+            </span>
+
+        </a>
+
+
+        <nav
+            class="knowledge-nav"
+            aria-label="القائمة الرئيسية"
+        >
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a
+                href="knowledge.html"
+                class="active"
+            >
+                المعرفة
+            </a>
+
+            <a href="drugs.html">
+                الأدوية
+            </a>
+
+            <a href="tools.html">
+                الأدوات
+            </a>
+
+            <a href="dictionary.html">
+                القاموس
+            </a>
+
+            <a href="egypt.html">
+                التمريض في مصر
+            </a>
+
+        </nav>
+
+
+        <a
+            href="index.html"
+            class="knowledge-home-button"
+        >
+            🏠 الرئيسية
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="knowledge-hero">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-hero-content">
+
+            <span class="knowledge-badge">
+                🩺 Nursing Knowledge
+            </span>
+
+
+            <h1>
+
+                المعرفة
+                <span>
+                    التمريضية
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                مرجع معرفي يساعدك على فهم التمريض
+                بشكل عملي ومنظم، من أساسيات التمريض
+                وحتى المهارات والمفاهيم السريرية.
+
+            </p>
+
+
+            <form
+                class="knowledge-search"
+                id="knowledgeSearch"
+            >
+
+                <span class="knowledge-search-icon">
+                    🔎
+                </span>
+
+
+                <input
+                    type="search"
+                    id="knowledgeSearchInput"
+                    placeholder="ابحث عن موضوع تمريضي..."
+                    autocomplete="off"
+                >
+
+
+                <button type="submit">
+                    بحث
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section class="knowledge-section">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-heading">
+
+            <div>
+
+                <h2>
+                    استكشف المعرفة
+                </h2>
+
+                <p>
+                    اختر المجال الذي تريد التعرف عليه.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="knowledge-categories">
+
+
+            <a
+                href="knowledge/nursing-basics.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    أساسيات التمريض
+                </h3>
+
+                <p>
+                    المفاهيم الأساسية التي يحتاجها
+                    كل طالب وممارس تمريض.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/vital-signs.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    العلامات الحيوية
+                </h3>
+
+                <p>
+                    معلومات عن الحرارة والنبض
+                    والتنفس وضغط الدم وغيرها.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/infection-control.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    🧼
+                </div>
+
+                <h3>
+                    مكافحة العدوى
+                </h3>
+
+                <p>
+                    أساسيات Infection Control
+                    والوقاية من العدوى.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/clinical-skills.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    💉
+                </div>
+
+                <h3>
+                    المهارات السريرية
+                </h3>
+
+                <p>
+                    مفاهيم ومعلومات مرتبطة
+                    بالممارسة التمريضية العملية.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/medical-conditions.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    🫀
+                </div>
+
+                <h3>
+                    الحالات المرضية
+                </h3>
+
+                <p>
+                    معلومات تعليمية عن الحالات
+                    والأمراض المهمة للتمريض.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/patient-care.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    🛏️
+                </div>
+
+                <h3>
+                    رعاية المريض
+                </h3>
+
+                <p>
+                    مبادئ ومعلومات تساعد في
+                    تقديم رعاية تمريضية أفضل.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/medication-safety.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    💊
+                </div>
+
+                <h3>
+                    سلامة الأدوية
+                </h3>
+
+                <p>
+                    مفاهيم مهمة حول Medication
+                    Safety واستخدام الأدوية.
+                </p>
+
+            </a>
+
+
+            <a
+                href="knowledge/emergency-nursing.html"
+                class="knowledge-category"
+            >
+
+                <div class="category-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    تمريض الطوارئ
+                </h3>
+
+                <p>
+                    معلومات أساسية عن التعامل
+                    مع حالات الطوارئ.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARTICLES
+===================================================== -->
+
+<section class="knowledge-section articles-section">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-heading">
+
+            <div>
+
+                <h2>
+                    مقالات تمريضية
+                </h2>
+
+                <p>
+                    محتوى معرفي مبسط وسهل الوصول.
+                </p>
+
+            </div>
+
+            <a
+                href="articles.html"
+                class="knowledge-heading-link"
+            >
+                جميع المقالات ←
+            </a>
+
+        </div>
+
+
+        <div class="articles-grid">
+
+
+            <article class="article-card">
+
+                <div class="article-card-top">
+                    ❤️
+                </div>
+
+                <div class="article-card-body">
+
+                    <span class="article-category">
+                        Nursing Basics
+                    </span>
+
+                    <h3>
+                        العلامات الحيوية الأساسية
+                    </h3>
+
+                    <p>
+                        تعرف على أهم العلامات الحيوية
+                        وما الذي يجب على طالب التمريض
+                        معرفته عنها.
+                    </p>
+
+                    <a
+                        href="knowledge/vital-signs.html"
+                        class="article-link"
+                    >
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-card-top">
+                    🧼
+                </div>
+
+                <div class="article-card-body">
+
+                    <span class="article-category">
+                        Infection Control
+                    </span>
+
+                    <h3>
+                        أساسيات مكافحة العدوى
+                    </h3>
+
+                    <p>
+                        مفاهيم أساسية تساعدك على فهم
+                        طرق الوقاية من العدوى.
+                    </p>
+
+                    <a
+                        href="knowledge/infection-control.html"
+                        class="article-link"
+                    >
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-card-top">
+                    💉
+                </div>
+
+                <div class="article-card-body">
+
+                    <span class="article-category">
+                        Clinical Skills
+                    </span>
+
+                    <h3>
+                        أساسيات المهارات السريرية
+                    </h3>
+
+                    <p>
+                        تعرف على المفاهيم الأساسية
+                        المرتبطة بالممارسة التمريضية.
+                    </p>
+
+                    <a
+                        href="knowledge/clinical-skills.html"
+                        class="article-link"
+                    >
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     POPULAR TOPICS
+===================================================== -->
+
+<section class="knowledge-section">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-heading">
+
+            <div>
+
+                <h2>
+                    موضوعات مهمة
+                </h2>
+
+                <p>
+                    ابدأ بأكثر الموضوعات التي يحتاجها طلاب التمريض.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="topics-box">
+
+
+            <a
+                href="knowledge/nursing-basics.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <strong>
+                        Nursing Basics
+                    </strong>
+
+                    <small>
+                        أساسيات التمريض
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="knowledge/vital-signs.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    ❤️
+                </span>
+
+                <span>
+
+                    <strong>
+                        Vital Signs
+                    </strong>
+
+                    <small>
+                        العلامات الحيوية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="knowledge/infection-control.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    🧼
+                </span>
+
+                <span>
+
+                    <strong>
+                        Infection Control
+                    </strong>
+
+                    <small>
+                        مكافحة العدوى
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="knowledge/clinical-skills.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    💉
+                </span>
+
+                <span>
+
+                    <strong>
+                        Clinical Skills
+                    </strong>
+
+                    <small>
+                        المهارات السريرية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="knowledge/medical-conditions.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    🫀
+                </span>
+
+                <span>
+
+                    <strong>
+                        Medical Conditions
+                    </strong>
+
+                    <small>
+                        الحالات المرضية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="knowledge/emergency-nursing.html"
+                class="topic-link"
+            >
+
+                <span class="topic-link-icon">
+                    🚑
+                </span>
+
+                <span>
+
+                    <strong>
+                        Emergency Nursing
+                    </strong>
+
+                    <small>
+                        تمريض الطوارئ
+                    </small>
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="knowledge-cta">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-cta-box">
+
+            <div>
+
+                <h2>
+                    🔎 مش لاقي المعلومة؟
+                </h2>
+
+                <p>
+                    استخدم البحث الشامل للوصول إلى
+                    الأدوية والأدوات والمصطلحات
+                    والمعلومات التمريضية.
+                </p>
+
+            </div>
+
+
+            <a
+                href="search.html"
+                class="knowledge-cta-button"
+            >
+                افتح البحث الشامل
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="knowledge-footer">
+
+    <div class="knowledge-container">
+
+        <div class="knowledge-footer-grid">
+
+
+            <div>
+
+                <h3>
+                    🩺 بوابة التمريض
+                </h3>
+
+                <p>
+                    مرجع رقمي يهدف إلى مساعدة طلاب
+                    وممارسي التمريض في الوصول إلى
+                    المعلومات والأدوات والمصادر
+                    بطريقة منظمة وسهلة.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    المعرفة
+                </h4>
+
+                <a href="knowledge.html">
+                    المعرفة التمريضية
+                </a>
+
+                <a href="articles.html">
+                    المقالات
+                </a>
+
+                <a href="dictionary.html">
+                    قاموس التمريض
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    الأدوات
+                </h4>
+
+                <a href="drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a href="tools.html">
+                    الحاسبات والأدوات
+                </a>
+
+                <a href="quizzes.html">
+                    الاختبارات
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    بوابة التمريض
+                </h4>
+
+                <a href="index.html">
+                    الرئيسية
+                </a>
+
+                <a href="egypt.html">
+                    التمريض في مصر
+                </a>
+
+                <a href="jobs.html">
+                    وظائف التمريض
+                </a>
+
+                <a href="pages/about.html">
+                    من نحن
+                </a>
+
+                <a href="pages/contact.html">
+                    تواصل معنا
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="knowledge-footer-bottom">
+
+            <span>
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة
+            </span>
+
+            <span>
+                Built for Nursing 🩺
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SEARCH SCRIPT
+===================================================== -->
+
+<script>
+
+    document
+        .getElementById("knowledgeSearch")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                const input =
+                    document.getElementById(
+                        "knowledgeSearchInput"
+                    );
+
+                const query =
+                    input.value.trim();
+
+                if (!query) {
+
+                    input.focus();
+
+                    return;
+                }
+
+                window.location.href =
+                    "search.html?q=" +
+                    encodeURIComponent(query);
+
+            }
+        );
+
+</script>
+
+
+</body>
+</html>
