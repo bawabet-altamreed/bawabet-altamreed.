@@ -2526,7 +2526,65 @@
 
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
 
+    console.log("🩺 بدء اختبار قاعدة بيانات قاموس التمريض...");
+
+    // اختبار Search Index
+    try {
+
+        const indexResponse = await fetch("data/search-index.json");
+
+        if (!indexResponse.ok) {
+            throw new Error(
+                `HTTP ${indexResponse.status} - ${indexResponse.statusText}`
+            );
+        }
+
+        const searchIndex = await indexResponse.json();
+
+        console.log("✅ search-index.json تم تحميله بنجاح");
+        console.log("📊 عدد عناصر Search Index:", searchIndex.length);
+
+    } catch (error) {
+
+        console.error(
+            "❌ فشل تحميل search-index.json:",
+            error
+        );
+
+    }
+
+
+    // اختبار ملف A
+    try {
+
+        const termsResponse = await fetch("data/terms/a.json");
+
+        if (!termsResponse.ok) {
+            throw new Error(
+                `HTTP ${termsResponse.status} - ${termsResponse.statusText}`
+            );
+        }
+
+        const termsA = await termsResponse.json();
+
+        console.log("✅ terms/a.json تم تحميله بنجاح");
+        console.log("📊 عدد المصطلحات داخل a.json:", termsA.length);
+
+    } catch (error) {
+
+        console.error(
+            "❌ فشل تحميل terms/a.json:",
+            error
+        );
+
+    }
+
+});
+</script>
+    
 </body>
 
 </html>
