@@ -1,0 +1,802 @@
+[
+  {
+    "id": "anatomy-001",
+    "term": "Anatomy",
+    "arabic": "علم التشريح",
+    "definition": "العلم الذي يدرس تركيب جسم الإنسان وأجزائه وعلاقاتها ببعضها.",
+    "category": "Anatomy",
+    "searchTerms": ["Anatomy", "تشريح", "علم التشريح"]
+  },
+  {
+    "id": "anatomy-002",
+    "term": "Abdomen",
+    "arabic": "البطن",
+    "definition": "الجزء من الجسم الواقع بين الصدر والحوض ويحتوي على العديد من الأعضاء الداخلية.",
+    "category": "Anatomy",
+    "searchTerms": ["Abdomen", "البطن"]
+  },
+  {
+    "id": "anatomy-003",
+    "term": "Abdominal Cavity",
+    "arabic": "التجويف البطني",
+    "definition": "الحيز الموجود داخل البطن والذي يحتوي على أعضاء مثل المعدة والأمعاء والكبد.",
+    "category": "Anatomy",
+    "searchTerms": ["Abdominal Cavity", "التجويف البطني"]
+  },
+  {
+    "id": "anatomy-004",
+    "term": "Adrenal Gland",
+    "arabic": "الغدة الكظرية",
+    "definition": "غدة صماء تقع فوق كل كلية وتفرز عدة هرمونات مهمة.",
+    "category": "Endocrine System",
+    "searchTerms": ["Adrenal Gland", "الغدة الكظرية"]
+  },
+  {
+    "id": "anatomy-005",
+    "term": "Aorta",
+    "arabic": "الشريان الأورطي",
+    "definition": "أكبر شريان في الجسم ويخرج من البطين الأيسر للقلب وينقل الدم المؤكسج إلى أجزاء الجسم.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Aorta", "الشريان الأورطي", "الأبهر"]
+  },
+  {
+    "id": "anatomy-006",
+    "term": "Appendix",
+    "arabic": "الزائدة الدودية",
+    "definition": "أنبوب صغير متصل ببداية الأمعاء الغليظة في منطقة الأعور.",
+    "category": "Digestive System",
+    "searchTerms": ["Appendix", "الزائدة الدودية"]
+  },
+  {
+    "id": "anatomy-007",
+    "term": "Artery",
+    "arabic": "شريان",
+    "definition": "وعاء دموي ينقل الدم بعيدًا عن القلب إلى أنسجة الجسم.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Artery", "Arteries", "شريان", "شرايين"]
+  },
+  {
+    "id": "anatomy-008",
+    "term": "Atrium",
+    "arabic": "الأذين",
+    "definition": "إحدى الحجرتين العلويتين في القلب وتستقبل الدم العائد إلى القلب.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Atrium", "Atria", "الأذين"]
+  },
+  {
+    "id": "anatomy-009",
+    "term": "Bladder",
+    "arabic": "المثانة البولية",
+    "definition": "عضو عضلي أجوف يخزن البول قبل خروجه من الجسم.",
+    "category": "Urinary System",
+    "searchTerms": ["Bladder", "Urinary Bladder", "المثانة"]
+  },
+  {
+    "id": "anatomy-010",
+    "term": "Blood",
+    "arabic": "الدم",
+    "definition": "نسيج سائل يدور داخل الأوعية الدموية وينقل الأكسجين والمواد الغذائية والفضلات.",
+    "category": "Circulatory System",
+    "searchTerms": ["Blood", "الدم"]
+  },
+  {
+    "id": "anatomy-011",
+    "term": "Bone",
+    "arabic": "عظم",
+    "definition": "نسيج صلب يشكل الهيكل العظمي ويدعم الجسم ويحمي الأعضاء.",
+    "category": "Skeletal System",
+    "searchTerms": ["Bone", "Bones", "عظم", "عظام"]
+  },
+  {
+    "id": "anatomy-012",
+    "term": "Brain",
+    "arabic": "الدماغ",
+    "definition": "العضو الرئيسي في الجهاز العصبي المركزي والمسؤول عن التحكم في العديد من وظائف الجسم.",
+    "category": "Nervous System",
+    "searchTerms": ["Brain", "الدماغ", "المخ"]
+  },
+  {
+    "id": "anatomy-013",
+    "term": "Bronchus",
+    "arabic": "الشعبة الهوائية",
+    "definition": "أحد الممرات الهوائية الرئيسية التي تتفرع من القصبة الهوائية إلى الرئتين.",
+    "category": "Respiratory System",
+    "searchTerms": ["Bronchus", "Bronchi", "الشعبة الهوائية"]
+  },
+  {
+    "id": "anatomy-014",
+    "term": "Capillary",
+    "arabic": "الشعيرة الدموية",
+    "definition": "أوعية دموية دقيقة تصل بين الشرايين والأوردة وتسمح بتبادل المواد بين الدم والأنسجة.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Capillary", "Capillaries", "الشعيرات الدموية"]
+  },
+  {
+    "id": "anatomy-015",
+    "term": "Cerebellum",
+    "arabic": "المخيخ",
+    "definition": "جزء من الدماغ يساعد في تنسيق الحركة والتوازن والتنسيق العضلي.",
+    "category": "Nervous System",
+    "searchTerms": ["Cerebellum", "المخيخ"]
+  },
+  {
+    "id": "anatomy-016",
+    "term": "Cerebrum",
+    "arabic": "المخ",
+    "definition": "أكبر جزء من الدماغ ويشارك في التفكير والإحساس والحركة والذاكرة.",
+    "category": "Nervous System",
+    "searchTerms": ["Cerebrum", "المخ"]
+  },
+  {
+    "id": "anatomy-017",
+    "term": "Cervical Spine",
+    "arabic": "الفقرات العنقية",
+    "definition": "الجزء العلوي من العمود الفقري ويتكون من سبع فقرات في منطقة الرقبة.",
+    "category": "Skeletal System",
+    "searchTerms": ["Cervical Spine", "Cervical Vertebrae", "الفقرات العنقية"]
+  },
+  {
+    "id": "anatomy-018",
+    "term": "Chest",
+    "arabic": "الصدر",
+    "definition": "منطقة الجسم الواقعة بين الرقبة والبطن وتحتوي على القلب والرئتين.",
+    "category": "Anatomy",
+    "searchTerms": ["Chest", "Thorax", "الصدر"]
+  },
+  {
+    "id": "anatomy-019",
+    "term": "Colon",
+    "arabic": "القولون",
+    "definition": "الجزء الرئيسي من الأمعاء الغليظة ويساعد في امتصاص الماء وتكوين البراز.",
+    "category": "Digestive System",
+    "searchTerms": ["Colon", "القولون"]
+  },
+  {
+    "id": "anatomy-020",
+    "term": "Diaphragm",
+    "arabic": "الحجاب الحاجز",
+    "definition": "عضلة رئيسية للتنفس تفصل بين التجويف الصدري والتجويف البطني.",
+    "category": "Respiratory System",
+    "searchTerms": ["Diaphragm", "الحجاب الحاجز"]
+  },
+  {
+    "id": "anatomy-021",
+    "term": "Duodenum",
+    "arabic": "الاثنا عشر",
+    "definition": "أول جزء من الأمعاء الدقيقة ويستقبل الطعام المهضوم جزئيًا من المعدة.",
+    "category": "Digestive System",
+    "searchTerms": ["Duodenum", "الاثنا عشر"]
+  },
+  {
+    "id": "anatomy-022",
+    "term": "Esophagus",
+    "arabic": "المريء",
+    "definition": "أنبوب عضلي ينقل الطعام من البلعوم إلى المعدة.",
+    "category": "Digestive System",
+    "searchTerms": ["Esophagus", "المريء"]
+  },
+  {
+    "id": "anatomy-023",
+    "term": "Femur",
+    "arabic": "عظم الفخذ",
+    "definition": "أطول وأقوى عظم في جسم الإنسان ويقع في الطرف السفلي.",
+    "category": "Skeletal System",
+    "searchTerms": ["Femur", "Thigh Bone", "عظم الفخذ"]
+  },
+  {
+    "id": "anatomy-024",
+    "term": "Gallbladder",
+    "arabic": "المرارة",
+    "definition": "عضو صغير يخزن العصارة الصفراوية التي ينتجها الكبد.",
+    "category": "Digestive System",
+    "searchTerms": ["Gallbladder", "المرارة"]
+  },
+  {
+    "id": "anatomy-025",
+    "term": "Heart",
+    "arabic": "القلب",
+    "definition": "عضو عضلي يضخ الدم إلى جميع أجزاء الجسم.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Heart", "القلب"]
+  },
+  {
+    "id": "anatomy-026",
+    "term": "Humerus",
+    "arabic": "عظم العضد",
+    "definition": "العظم الطويل الموجود في الجزء العلوي من الذراع.",
+    "category": "Skeletal System",
+    "searchTerms": ["Humerus", "Upper Arm Bone", "عظم العضد"]
+  },
+  {
+    "id": "anatomy-027",
+    "term": "Ileum",
+    "arabic": "اللفائفي",
+    "definition": "الجزء الأخير من الأمعاء الدقيقة ويتصل بالأمعاء الغليظة.",
+    "category": "Digestive System",
+    "searchTerms": ["Ileum", "اللفائفي"]
+  },
+  {
+    "id": "anatomy-028",
+    "term": "Intestine",
+    "arabic": "الأمعاء",
+    "definition": "جزء من الجهاز الهضمي مسؤول عن هضم وامتصاص المواد الغذائية والتخلص من الفضلات.",
+    "category": "Digestive System",
+    "searchTerms": ["Intestine", "الأمعاء"]
+  },
+  {
+    "id": "anatomy-029",
+    "term": "Jejunum",
+    "arabic": "الصائم",
+    "definition": "الجزء الأوسط من الأمعاء الدقيقة ويشارك بشكل كبير في امتصاص العناصر الغذائية.",
+    "category": "Digestive System",
+    "searchTerms": ["Jejunum", "الصائم"]
+  },
+  {
+    "id": "anatomy-030",
+    "term": "Kidney",
+    "arabic": "الكلية",
+    "definition": "عضو مسؤول عن تنقية الدم وتكوين البول وتنظيم السوائل والأملاح.",
+    "category": "Urinary System",
+    "searchTerms": ["Kidney", "Kidneys", "الكلية", "الكلى"]
+  },
+  {
+    "id": "anatomy-031",
+    "term": "Larynx",
+    "arabic": "الحنجرة",
+    "definition": "جزء من الجهاز التنفسي يقع بين البلعوم والقصبة الهوائية ويحتوي على الأحبال الصوتية.",
+    "category": "Respiratory System",
+    "searchTerms": ["Larynx", "Voice Box", "الحنجرة"]
+  },
+  {
+    "id": "anatomy-032",
+    "term": "Liver",
+    "arabic": "الكبد",
+    "definition": "أكبر غدة في الجسم وله وظائف متعددة تشمل معالجة المواد الغذائية وإنتاج العصارة الصفراوية.",
+    "category": "Digestive System",
+    "searchTerms": ["Liver", "الكبد"]
+  },
+  {
+    "id": "anatomy-033",
+    "term": "Lung",
+    "arabic": "الرئة",
+    "definition": "عضو رئيسي في الجهاز التنفسي مسؤول عن تبادل الأكسجين وثاني أكسيد الكربون.",
+    "category": "Respiratory System",
+    "searchTerms": ["Lung", "Lungs", "الرئة", "الرئتين"]
+  },
+  {
+    "id": "anatomy-034",
+    "term": "Lymph Node",
+    "arabic": "العقدة الليمفاوية",
+    "definition": "بنية صغيرة من الجهاز الليمفاوي تساعد في ترشيح اللمف والمشاركة في الاستجابة المناعية.",
+    "category": "Lymphatic System",
+    "searchTerms": ["Lymph Node", "Lymph Nodes", "العقد الليمفاوية"]
+  },
+  {
+    "id": "anatomy-035",
+    "term": "Pancreas",
+    "arabic": "البنكرياس",
+    "definition": "غدة تقع خلف المعدة وتشارك في الهضم وتنظيم مستوى الجلوكوز في الدم.",
+    "category": "Digestive System",
+    "searchTerms": ["Pancreas", "البنكرياس"]
+  },
+  {
+    "id": "anatomy-036",
+    "term": "Pharynx",
+    "arabic": "البلعوم",
+    "definition": "ممر عضلي مشترك للهواء والطعام يقع خلف الأنف والفم.",
+    "category": "Respiratory System",
+    "searchTerms": ["Pharynx", "البلعوم"]
+  },
+  {
+    "id": "anatomy-037",
+    "term": "Pituitary Gland",
+    "arabic": "الغدة النخامية",
+    "definition": "غدة صماء صغيرة في قاعدة الدماغ وتؤثر في العديد من وظائف الغدد الأخرى.",
+    "category": "Endocrine System",
+    "searchTerms": ["Pituitary Gland", "الغدة النخامية"]
+  },
+  {
+    "id": "anatomy-038",
+    "term": "Rectum",
+    "arabic": "المستقيم",
+    "definition": "الجزء الأخير من الأمعاء الغليظة قبل فتحة الشرج ويخزن البراز مؤقتًا.",
+    "category": "Digestive System",
+    "searchTerms": ["Rectum", "المستقيم"]
+  },
+  {
+    "id": "anatomy-039",
+    "term": "Small Intestine",
+    "arabic": "الأمعاء الدقيقة",
+    "definition": "جزء طويل من الجهاز الهضمي تتم فيه معظم عملية هضم وامتصاص العناصر الغذائية.",
+    "category": "Digestive System",
+    "searchTerms": ["Small Intestine", "الأمعاء الدقيقة"]
+  },
+  {
+    "id": "anatomy-040",
+    "term": "Spinal Cord",
+    "arabic": "الحبل الشوكي",
+    "definition": "جزء من الجهاز العصبي المركزي يمتد داخل القناة الفقرية وينقل الإشارات العصبية بين الدماغ والجسم.",
+    "category": "Nervous System",
+    "searchTerms": ["Spinal Cord", "الحبل الشوكي"]
+  },
+  {
+    "id": "anatomy-041",
+    "term": "Spleen",
+    "arabic": "الطحال",
+    "definition": "عضو يقع في الجزء العلوي الأيسر من البطن ويساهم في وظائف الدم والمناعة.",
+    "category": "Lymphatic System",
+    "searchTerms": ["Spleen", "الطحال"]
+  },
+  {
+    "id": "anatomy-042",
+    "term": "Stomach",
+    "arabic": "المعدة",
+    "definition": "عضو عضلي أجوف يستقبل الطعام ويساعد في هضمه.",
+    "category": "Digestive System",
+    "searchTerms": ["Stomach", "المعدة"]
+  },
+  {
+    "id": "anatomy-043",
+    "term": "Thyroid Gland",
+    "arabic": "الغدة الدرقية",
+    "definition": "غدة تقع في مقدمة الرقبة وتنتج هرمونات تساعد في تنظيم عمليات الأيض.",
+    "category": "Endocrine System",
+    "searchTerms": ["Thyroid Gland", "Thyroid", "الغدة الدرقية"]
+  },
+  {
+    "id": "anatomy-044",
+    "term": "Trachea",
+    "arabic": "القصبة الهوائية",
+    "definition": "أنبوب هوائي ينقل الهواء من الحنجرة إلى الشعب الهوائية.",
+    "category": "Respiratory System",
+    "searchTerms": ["Trachea", "Windpipe", "القصبة الهوائية"]
+  },
+  {
+    "id": "anatomy-045",
+    "term": "Ureter",
+    "arabic": "الحالب",
+    "definition": "أنبوب ينقل البول من الكلية إلى المثانة.",
+    "category": "Urinary System",
+    "searchTerms": ["Ureter", "Ureters", "الحالب"]
+  },
+  {
+    "id": "anatomy-046",
+    "term": "Urethra",
+    "arabic": "الإحليل",
+    "definition": "أنبوب يمر من خلاله البول من المثانة إلى خارج الجسم.",
+    "category": "Urinary System",
+    "searchTerms": ["Urethra", "الإحليل"]
+  },
+  {
+    "id": "anatomy-047",
+    "term": "Urinary System",
+    "arabic": "الجهاز البولي",
+    "definition": "الجهاز المسؤول عن تكوين البول وإخراجه وتنظيم توازن السوائل والأملاح.",
+    "category": "Urinary System",
+    "searchTerms": ["Urinary System", "الجهاز البولي"]
+  },
+  {
+    "id": "anatomy-048",
+    "term": "Vein",
+    "arabic": "وريد",
+    "definition": "وعاء دموي يعيد الدم من أنسجة الجسم باتجاه القلب.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Vein", "Veins", "وريد", "أوردة"]
+  },
+  {
+    "id": "anatomy-049",
+    "term": "Ventricle",
+    "arabic": "البطين",
+    "definition": "إحدى الحجرتين السفليتين في القلب وتضخ الدم خارج القلب.",
+    "category": "Cardiovascular System",
+    "searchTerms": ["Ventricle", "Ventricles", "البطين"]
+  },
+  {
+    "id": "anatomy-050",
+    "term": "Appendicular Skeleton",
+    "arabic": "الهيكل العظمي الطرفي",
+    "definition": "جزء من الهيكل العظمي يتكون من عظام الأطراف والأحزمة التي تربطها بالجذع.",
+    "category": "Skeletal System",
+    "searchTerms": ["Appendicular Skeleton", "الهيكل الطرفي"]
+  },
+  {
+    "id": "anatomy-051",
+    "term": "Axial Skeleton",
+    "arabic": "الهيكل العظمي المحوري",
+    "definition": "الجزء المركزي من الهيكل العظمي ويشمل الجمجمة والعمود الفقري والقفص الصدري.",
+    "category": "Skeletal System",
+    "searchTerms": ["Axial Skeleton", "الهيكل المحوري"]
+  },
+  {
+    "id": "anatomy-052",
+    "term": "Clavicle",
+    "arabic": "الترقوة",
+    "definition": "عظم يربط الطرف العلوي بالهيكل المحوري ويقع بين القص والكتف.",
+    "category": "Skeletal System",
+    "searchTerms": ["Clavicle", "Collarbone", "الترقوة"]
+  },
+  {
+    "id": "anatomy-053",
+    "term": "Scapula",
+    "arabic": "لوح الكتف",
+    "definition": "عظم مسطح مثلث الشكل يقع في الجزء الخلفي من الكتف.",
+    "category": "Skeletal System",
+    "searchTerms": ["Scapula", "Shoulder Blade", "لوح الكتف"]
+  },
+  {
+    "id": "anatomy-054",
+    "term": "Sternum",
+    "arabic": "عظم القص",
+    "definition": "عظم مسطح يقع في منتصف الجزء الأمامي من الصدر ويرتبط بالأضلاع.",
+    "category": "Skeletal System",
+    "searchTerms": ["Sternum", "Breastbone", "القص"]
+  },
+  {
+    "id": "anatomy-055",
+    "term": "Rib",
+    "arabic": "ضلع",
+    "definition": "عظم منحني يشكل جزءًا من القفص الصدري ويساعد في حماية أعضاء الصدر.",
+    "category": "Skeletal System",
+    "searchTerms": ["Rib", "Ribs", "ضلع", "الأضلاع"]
+  },
+  {
+    "id": "anatomy-056",
+    "term": "Pelvis",
+    "arabic": "الحوض",
+    "definition": "بنية عظمية تقع في الجزء السفلي من الجذع وتدعم الجسم وتحمي بعض الأعضاء الداخلية.",
+    "category": "Skeletal System",
+    "searchTerms": ["Pelvis", "Pelvic Bone", "الحوض"]
+  },
+  {
+    "id": "anatomy-057",
+    "term": "Patella",
+    "arabic": "عظمة الرضفة",
+    "definition": "عظمة صغيرة أمام مفصل الركبة تساعد في حماية المفصل وتحسين عمل عضلات الفخذ.",
+    "category": "Skeletal System",
+    "searchTerms": ["Patella", "Kneecap", "الرضفة"]
+  },
+  {
+    "id": "anatomy-058",
+    "term": "Tibia",
+    "arabic": "عظم القصبة",
+    "definition": "العظم الأكبر والأقوى في الجزء السفلي من الساق.",
+    "category": "Skeletal System",
+    "searchTerms": ["Tibia", "Shin Bone", "القصبة"]
+  },
+  {
+    "id": "anatomy-059",
+    "term": "Fibula",
+    "arabic": "عظم الشظية",
+    "definition": "عظم طويل رفيع يقع على الجانب الخارجي من الجزء السفلي للساق.",
+    "category": "Skeletal System",
+    "searchTerms": ["Fibula", "الشظية"]
+  },
+  {
+    "id": "anatomy-060",
+    "term": "Radius",
+    "arabic": "عظم الكعبرة",
+    "definition": "أحد عظمي الساعد ويقع في الجهة نفسها التي يوجد فيها الإبهام.",
+    "category": "Skeletal System",
+    "searchTerms": ["Radius", "الكعبرة"]
+  },
+  {
+    "id": "anatomy-061",
+    "term": "Ulna",
+    "arabic": "عظم الزند",
+    "definition": "أحد عظمي الساعد ويقع في الجهة نفسها التي يوجد فيها الإصبع الصغير.",
+    "category": "Skeletal System",
+    "searchTerms": ["Ulna", "الزند"]
+  },
+  {
+    "id": "anatomy-062",
+    "term": "Joint",
+    "arabic": "مفصل",
+    "definition": "موضع اتصال عظمتين أو أكثر ويسمح بالحركة أو يوفر الثبات.",
+    "category": "Musculoskeletal System",
+    "searchTerms": ["Joint", "Joints", "مفصل", "مفاصل"]
+  },
+  {
+    "id": "anatomy-063",
+    "term": "Ligament",
+    "arabic": "رباط",
+    "definition": "نسيج ضام قوي يربط العظام ببعضها ويساعد على تثبيت المفاصل.",
+    "category": "Musculoskeletal System",
+    "searchTerms": ["Ligament", "Ligaments", "رباط", "أربطة"]
+  },
+  {
+    "id": "anatomy-064",
+    "term": "Tendon",
+    "arabic": "وتر",
+    "definition": "نسيج ضام قوي يربط العضلة بالعظم ويساعد على نقل قوة العضلة.",
+    "category": "Musculoskeletal System",
+    "searchTerms": ["Tendon", "Tendons", "وتر", "أوتار"]
+  },
+  {
+    "id": "anatomy-065",
+    "term": "Muscle",
+    "arabic": "عضلة",
+    "definition": "نسيج قادر على الانقباض ويساهم في الحركة والحفاظ على وضعية الجسم.",
+    "category": "Muscular System",
+    "searchTerms": ["Muscle", "Muscles", "عضلة", "عضلات"]
+  },
+  {
+    "id": "anatomy-066",
+    "term": "Skeletal Muscle",
+    "arabic": "العضلات الهيكلية",
+    "definition": "عضلات ترتبط بالعظام وتساعد على الحركة الإرادية للجسم.",
+    "category": "Muscular System",
+    "searchTerms": ["Skeletal Muscle", "العضلات الهيكلية"]
+  },
+  {
+    "id": "anatomy-067",
+    "term": "Cardiac Muscle",
+    "arabic": "عضلة القلب",
+    "definition": "نوع متخصص من العضلات يوجد في القلب وينقبض بصورة مستمرة لضخ الدم.",
+    "category": "Muscular System",
+    "searchTerms": ["Cardiac Muscle", "عضلة القلب"]
+  },
+  {
+    "id": "anatomy-068",
+    "term": "Smooth Muscle",
+    "arabic": "العضلات الملساء",
+    "definition": "عضلات لا إرادية توجد في جدران العديد من الأعضاء الداخلية والأوعية الدموية.",
+    "category": "Muscular System",
+    "searchTerms": ["Smooth Muscle", "العضلات الملساء"]
+  },
+  {
+    "id": "anatomy-069",
+    "term": "Neuron",
+    "arabic": "خلية عصبية",
+    "definition": "خلية متخصصة في استقبال ونقل الإشارات العصبية.",
+    "category": "Nervous System",
+    "searchTerms": ["Neuron", "Neurons", "خلية عصبية", "الخلايا العصبية"]
+  },
+  {
+    "id": "anatomy-070",
+    "term": "Nerve",
+    "arabic": "عصب",
+    "definition": "حزمة من الألياف العصبية تنقل الإشارات بين الجهاز العصبي وأجزاء الجسم.",
+    "category": "Nervous System",
+    "searchTerms": ["Nerve", "Nerves", "عصب", "أعصاب"]
+  },
+  {
+    "id": "anatomy-071",
+    "term": "Cranial Nerve",
+    "arabic": "العصب القحفي",
+    "definition": "أحد الأعصاب التي تنشأ من الدماغ أو جذع الدماغ وتؤدي وظائف حسية أو حركية أو مختلطة.",
+    "category": "Nervous System",
+    "searchTerms": ["Cranial Nerve", "Cranial Nerves", "الأعصاب القحفية"]
+  },
+  {
+    "id": "anatomy-072",
+    "term": "Spinal Nerve",
+    "arabic": "العصب الشوكي",
+    "definition": "عصب ينشأ من الحبل الشوكي وينقل الإشارات العصبية بين الحبل الشوكي والجسم.",
+    "category": "Nervous System",
+    "searchTerms": ["Spinal Nerve", "Spinal Nerves", "الأعصاب الشوكية"]
+  },
+  {
+    "id": "anatomy-073",
+    "term": "Meninges",
+    "arabic": "السحايا",
+    "definition": "أغشية تحيط بالدماغ والحبل الشوكي وتحمي الجهاز العصبي المركزي.",
+    "category": "Nervous System",
+    "searchTerms": ["Meninges", "السحايا"]
+  },
+  {
+    "id": "anatomy-074",
+    "term": "Cerebral Cortex",
+    "arabic": "القشرة المخية",
+    "definition": "الطبقة الخارجية من المخ وتشارك في العديد من الوظائف العقلية والحسية والحركية.",
+    "category": "Nervous System",
+    "searchTerms": ["Cerebral Cortex", "القشرة المخية"]
+  },
+  {
+    "id": "anatomy-075",
+    "term": "Alveoli",
+    "arabic": "الحويصلات الهوائية",
+    "definition": "أكياس هوائية صغيرة في الرئتين يحدث فيها تبادل الأكسجين وثاني أكسيد الكربون.",
+    "category": "Respiratory System",
+    "searchTerms": ["Alveoli", "Alveolus", "الحويصلات الهوائية"]
+  },
+  {
+    "id": "anatomy-076",
+    "term": "Pleura",
+    "arabic": "غشاء الجنب",
+    "definition": "غشاء مزدوج يحيط بالرئتين ويبطن الجزء الداخلي من جدار الصدر.",
+    "category": "Respiratory System",
+    "searchTerms": ["Pleura", "غشاء الجنب"]
+  },
+  {
+    "id": "anatomy-077",
+    "term": "Nasal Cavity",
+    "arabic": "التجويف الأنفي",
+    "definition": "الحيز الداخلي للأنف الذي يمر خلاله الهواء ويساعد في ترطيبه وتنقيته وتدفئته.",
+    "category": "Respiratory System",
+    "searchTerms": ["Nasal Cavity", "التجويف الأنفي"]
+  },
+  {
+    "id": "anatomy-078",
+    "term": "Oral Cavity",
+    "arabic": "التجويف الفموي",
+    "definition": "الحيز الموجود داخل الفم ويشارك في استقبال الطعام وبدء عملية الهضم.",
+    "category": "Digestive System",
+    "searchTerms": ["Oral Cavity", "Mouth", "التجويف الفموي", "الفم"]
+  },
+  {
+    "id": "anatomy-079",
+    "term": "Tongue",
+    "arabic": "اللسان",
+    "definition": "عضو عضلي في الفم يشارك في التذوق والمضغ والبلع والكلام.",
+    "category": "Digestive System",
+    "searchTerms": ["Tongue", "اللسان"]
+  },
+  {
+    "id": "anatomy-080",
+    "term": "Salivary Gland",
+    "arabic": "الغدة اللعابية",
+    "definition": "غدة تنتج اللعاب الذي يساعد في ترطيب الطعام وبدء عملية الهضم.",
+    "category": "Digestive System",
+    "searchTerms": ["Salivary Gland", "Salivary Glands", "الغدد اللعابية"]
+  },
+  {
+    "id": "anatomy-081",
+    "term": "Pancreatic Duct",
+    "arabic": "القناة البنكرياسية",
+    "definition": "قناة تنقل إفرازات البنكرياس الهضمية إلى الاثنا عشر.",
+    "category": "Digestive System",
+    "searchTerms": ["Pancreatic Duct", "القناة البنكرياسية"]
+  },
+  {
+    "id": "anatomy-082",
+    "term": "Bile Duct",
+    "arabic": "القناة الصفراوية",
+    "definition": "قناة تنقل العصارة الصفراوية من الكبد والمرارة إلى الأمعاء الدقيقة.",
+    "category": "Digestive System",
+    "searchTerms": ["Bile Duct", "القناة الصفراوية"]
+  },
+  {
+    "id": "anatomy-083",
+    "term": "Large Intestine",
+    "arabic": "الأمعاء الغليظة",
+    "definition": "جزء من الجهاز الهضمي يمتص الماء ويساهم في تكوين البراز.",
+    "category": "Digestive System",
+    "searchTerms": ["Large Intestine", "الأمعاء الغليظة"]
+  },
+  {
+    "id": "anatomy-084",
+    "term": "Cecum",
+    "arabic": "الأعور",
+    "definition": "بداية الأمعاء الغليظة ويتصل باللفائفي والزائدة الدودية.",
+    "category": "Digestive System",
+    "searchTerms": ["Cecum", "الأعور"]
+  },
+  {
+    "id": "anatomy-085",
+    "term": "Anus",
+    "arabic": "فتحة الشرج",
+    "definition": "الفتحة النهائية للجهاز الهضمي التي يخرج من خلالها البراز.",
+    "category": "Digestive System",
+    "searchTerms": ["Anus", "فتحة الشرج"]
+  },
+  {
+    "id": "anatomy-086",
+    "term": "Nephron",
+    "arabic": "النيفرون",
+    "definition": "الوحدة الوظيفية الأساسية في الكلية والمسؤولة عن تكوين البول.",
+    "category": "Urinary System",
+    "searchTerms": ["Nephron", "Nephrons", "النيفرون"]
+  },
+  {
+    "id": "anatomy-087",
+    "term": "Glomerulus",
+    "arabic": "الكبيبة",
+    "definition": "شبكة من الشعيرات الدموية داخل النيفرون تشارك في ترشيح الدم.",
+    "category": "Urinary System",
+    "searchTerms": ["Glomerulus", "الكبيبة"]
+  },
+  {
+    "id": "anatomy-088",
+    "term": "Renal Cortex",
+    "arabic": "قشرة الكلية",
+    "definition": "الجزء الخارجي من الكلية ويحتوي على أجزاء مهمة من النيفرونات.",
+    "category": "Urinary System",
+    "searchTerms": ["Renal Cortex", "قشرة الكلية"]
+  },
+  {
+    "id": "anatomy-089",
+    "term": "Renal Medulla",
+    "arabic": "لب الكلية",
+    "definition": "الجزء الداخلي من الكلية ويتكون من تراكيب تسمى الأهرامات الكلوية.",
+    "category": "Urinary System",
+    "searchTerms": ["Renal Medulla", "لب الكلية"]
+  },
+  {
+    "id": "anatomy-090",
+    "term": "Ureter",
+    "arabic": "الحالب",
+    "definition": "أنبوب عضلي ينقل البول من حوض الكلية إلى المثانة.",
+    "category": "Urinary System",
+    "searchTerms": ["Ureter", "الحالب"]
+  },
+  {
+    "id": "anatomy-091",
+    "term": "Ovary",
+    "arabic": "المبيض",
+    "definition": "غدة تناسلية أنثوية تنتج البويضات وتفرز هرمونات جنسية.",
+    "category": "Reproductive System",
+    "searchTerms": ["Ovary", "Ovaries", "المبيض", "المبايض"]
+  },
+  {
+    "id": "anatomy-092",
+    "term": "Uterus",
+    "arabic": "الرحم",
+    "definition": "عضو عضلي في الجهاز التناسلي الأنثوي يحدث فيه انغراس الجنين ونموه أثناء الحمل.",
+    "category": "Reproductive System",
+    "searchTerms": ["Uterus", "الرحم"]
+  },
+  {
+    "id": "anatomy-093",
+    "term": "Fallopian Tube",
+    "arabic": "قناة فالوب",
+    "definition": "أنبوب يصل بين المبيض والرحم ويساعد في نقل البويضة.",
+    "category": "Reproductive System",
+    "searchTerms": ["Fallopian Tube", "قناة فالوب"]
+  },
+  {
+    "id": "anatomy-094",
+    "term": "Vagina",
+    "arabic": "المهبل",
+    "definition": "قناة عضلية تصل عنق الرحم بالجزء الخارجي من الجهاز التناسلي الأنثوي.",
+    "category": "Reproductive System",
+    "searchTerms": ["Vagina", "المهبل"]
+  },
+  {
+    "id": "anatomy-095",
+    "term": "Testis",
+    "arabic": "الخصية",
+    "definition": "الغدة التناسلية الذكرية التي تنتج الحيوانات المنوية وهرمون التستوستيرون.",
+    "category": "Reproductive System",
+    "searchTerms": ["Testis", "Testicle", "Testes", "الخصية"]
+  },
+  {
+    "id": "anatomy-096",
+    "term": "Prostate Gland",
+    "arabic": "غدة البروستاتا",
+    "definition": "غدة في الجهاز التناسلي الذكري تقع أسفل المثانة وتساهم في تكوين السائل المنوي.",
+    "category": "Reproductive System",
+    "searchTerms": ["Prostate Gland", "Prostate", "البروستاتا"]
+  },
+  {
+    "id": "anatomy-097",
+    "term": "Skin",
+    "arabic": "الجلد",
+    "definition": "أكبر عضو في جسم الإنسان ويغطي الجسم ويحميه ويساهم في الإحساس وتنظيم الحرارة.",
+    "category": "Integumentary System",
+    "searchTerms": ["Skin", "الجلد"]
+  },
+  {
+    "id": "anatomy-098",
+    "term": "Epidermis",
+    "arabic": "البشرة",
+    "definition": "الطبقة الخارجية من الجلد وتشكل حاجزًا واقيًا للجسم.",
+    "category": "Integumentary System",
+    "searchTerms": ["Epidermis", "البشرة"]
+  },
+  {
+    "id": "anatomy-099",
+    "term": "Dermis",
+    "arabic": "الأدمة",
+    "definition": "طبقة من الجلد تقع أسفل البشرة وتحتوي على أوعية دموية وأعصاب وغدد وبصيلات الشعر.",
+    "category": "Integumentary System",
+    "searchTerms": ["Dermis", "الأدمة"]
+  },
+  {
+    "id": "anatomy-100",
+    "term": "Hypodermis",
+    "arabic": "النسيج تحت الجلد",
+    "definition": "طبقة تقع أسفل الأدمة وتحتوي بشكل رئيسي على نسيج دهني وضام وتساعد في العزل وتخزين الطاقة.",
+    "category": "Integumentary System",
+    "searchTerms": ["Hypodermis", "Subcutaneous Tissue", "النسيج تحت الجلد"]
+  }
+]
