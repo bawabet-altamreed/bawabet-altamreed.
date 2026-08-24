@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "physiology-001",
+    "term": "Physiology",
+    "arabic": "علم وظائف الأعضاء",
+    "definition": "العلم الذي يدرس كيفية عمل أعضاء الجسم وأجهزته والعمليات الحيوية التي تحدث فيها.",
+    "category": "General Physiology",
+    "searchTerms": ["Physiology", "علم وظائف الأعضاء", "فسيولوجي"]
+  },
+  {
+    "id": "physiology-002",
+    "term": "Homeostasis",
+    "arabic": "الاتزان الداخلي",
+    "definition": "قدرة الجسم على الحفاظ على بيئة داخلية مستقرة نسبيًا رغم التغيرات الداخلية والخارجية.",
+    "category": "General Physiology",
+    "searchTerms": ["Homeostasis", "الاتزان الداخلي"]
+  },
+  {
+    "id": "physiology-003",
+    "term": "Metabolism",
+    "arabic": "الأيض",
+    "definition": "مجموع العمليات الكيميائية التي تحدث داخل خلايا الجسم لإنتاج الطاقة وبناء المواد والتخلص من نواتجها.",
+    "category": "General Physiology",
+    "searchTerms": ["Metabolism", "الأيض", "التمثيل الغذائي"]
+  },
+  {
+    "id": "physiology-004",
+    "term": "Anabolism",
+    "arabic": "البناء الغذائي",
+    "definition": "مجموعة التفاعلات التي تستخدم الطاقة لبناء جزيئات ومواد أكبر من جزيئات أصغر.",
+    "category": "Metabolism",
+    "searchTerms": ["Anabolism", "البناء الغذائي", "البناء"]
+  },
+  {
+    "id": "physiology-005",
+    "term": "Catabolism",
+    "arabic": "الهدم الغذائي",
+    "definition": "مجموعة التفاعلات التي تكسر الجزيئات الكبيرة إلى جزيئات أصغر مع إطلاق الطاقة.",
+    "category": "Metabolism",
+    "searchTerms": ["Catabolism", "الهدم الغذائي", "الهدم"]
+  },
+  {
+    "id": "physiology-006",
+    "term": "Cell",
+    "arabic": "الخلية",
+    "definition": "الوحدة الأساسية في تركيب ووظيفة الكائن الحي.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Cell", "Cells", "الخلية", "الخلايا"]
+  },
+  {
+    "id": "physiology-007",
+    "term": "Cell Membrane",
+    "arabic": "غشاء الخلية",
+    "definition": "غشاء يحيط بالخلية وينظم مرور المواد من وإلى داخلها.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Cell Membrane", "Plasma Membrane", "غشاء الخلية"]
+  },
+  {
+    "id": "physiology-008",
+    "term": "Cytoplasm",
+    "arabic": "السيتوبلازم",
+    "definition": "المادة الموجودة داخل الخلية خارج النواة وتحتوي على العضيات والمكونات الخلوية المختلفة.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Cytoplasm", "السيتوبلازم"]
+  },
+  {
+    "id": "physiology-009",
+    "term": "Nucleus",
+    "arabic": "النواة",
+    "definition": "عضية تحتوي على معظم المادة الوراثية للخلية وتشارك في تنظيم أنشطة الخلية.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Nucleus", "النواة"]
+  },
+  {
+    "id": "physiology-010",
+    "term": "Mitochondria",
+    "arabic": "الميتوكوندريا",
+    "definition": "عضيات تنتج معظم الطاقة القابلة للاستخدام في الخلية على هيئة ATP.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Mitochondria", "Mitochondrion", "الميتوكوندريا"]
+  },
+  {
+    "id": "physiology-011",
+    "term": "Ribosome",
+    "arabic": "الريبوسوم",
+    "definition": "بنية خلوية مسؤولة عن تصنيع البروتينات.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Ribosome", "Ribosomes", "الريبوسوم"]
+  },
+  {
+    "id": "physiology-012",
+    "term": "Protein Synthesis",
+    "arabic": "تخليق البروتين",
+    "definition": "العملية التي تستخدم فيها الخلية المعلومات الوراثية لإنتاج البروتينات.",
+    "category": "Cell Physiology",
+    "searchTerms": ["Protein Synthesis", "تخليق البروتين"]
+  },
+  {
+    "id": "physiology-013",
+    "term": "DNA",
+    "arabic": "الحمض النووي منقوص الأكسجين",
+    "definition": "المادة الوراثية التي تحمل المعلومات اللازمة لبناء البروتينات وتنظيم وظائف الخلايا.",
+    "category": "Cell Physiology",
+    "searchTerms": ["DNA", "الحمض النووي", "Deoxyribonucleic Acid"]
+  },
+  {
+    "id": "physiology-014",
+    "term": "RNA",
+    "arabic": "الحمض النووي الريبي",
+    "definition": "نوع من الأحماض النووية يشارك في نقل واستخدام المعلومات الوراثية وتخليق البروتين.",
+    "category": "Cell Physiology",
+    "searchTerms": ["RNA", "Ribonucleic Acid", "الحمض النووي الريبي"]
+  },
+  {
+    "id": "physiology-015",
+    "term": "ATP",
+    "arabic": "أدينوسين ثلاثي الفوسفات",
+    "definition": "جزيء رئيسي لتخزين ونقل الطاقة التي تستخدمها الخلايا في العديد من العمليات الحيوية.",
+    "category": "Cell Physiology",
+    "searchTerms": ["ATP", "Adenosine Triphosphate", "أدينوسين ثلاثي الفوسفات"]
+  },
+  {
+    "id": "physiology-016",
+    "term": "Diffusion",
+    "arabic": "الانتشار",
+    "definition": "حركة الجزيئات من منطقة ذات تركيز مرتفع إلى منطقة ذات تركيز منخفض.",
+    "category": "Cell Transport",
+    "searchTerms": ["Diffusion", "الانتشار"]
+  },
+  {
+    "id": "physiology-017",
+    "term": "Osmosis",
+    "arabic": "التناضح",
+    "definition": "حركة الماء عبر غشاء شبه منفذ من منطقة ذات تركيز منخفض للمواد المذابة إلى منطقة ذات تركيز أعلى.",
+    "category": "Cell Transport",
+    "searchTerms": ["Osmosis", "التناضح", "الأسموزية"]
+  },
+  {
+    "id": "physiology-018",
+    "term": "Active Transport",
+    "arabic": "النقل النشط",
+    "definition": "انتقال المواد عبر الغشاء الخلوي باستخدام الطاقة غالبًا عكس تدرج التركيز.",
+    "category": "Cell Transport",
+    "searchTerms": ["Active Transport", "النقل النشط"]
+  },
+  {
+    "id": "physiology-019",
+    "term": "Facilitated Diffusion",
+    "arabic": "الانتشار الميسر",
+    "definition": "انتقال المواد عبر الغشاء بمساعدة بروتينات ناقلة أو قنوات دون استهلاك مباشر للطاقة.",
+    "category": "Cell Transport",
+    "searchTerms": ["Facilitated Diffusion", "الانتشار الميسر"]
+  },
+  {
+    "id": "physiology-020",
+    "term": "Endocytosis",
+    "arabic": "الإدخال الخلوي",
+    "definition": "عملية تدخل فيها المواد إلى الخلية عن طريق انغلاف غشاء الخلية وتكوين حويصلة.",
+    "category": "Cell Transport",
+    "searchTerms": ["Endocytosis", "الإدخال الخلوي"]
+  },
+  {
+    "id": "physiology-021",
+    "term": "Exocytosis",
+    "arabic": "الإخراج الخلوي",
+    "definition": "عملية تخرج فيها المواد من الخلية عندما تندمج الحويصلات مع غشاء الخلية.",
+    "category": "Cell Transport",
+    "searchTerms": ["Exocytosis", "الإخراج الخلوي"]
+  },
+  {
+    "id": "physiology-022",
+    "term": "Receptor",
+    "arabic": "المستقبل",
+    "definition": "بروتين أو بنية تستقبل إشارة أو مادة معينة وتبدأ استجابة خلوية.",
+    "category": "Cell Signaling",
+    "searchTerms": ["Receptor", "Receptors", "المستقبل"]
+  },
+  {
+    "id": "physiology-023",
+    "term": "Stimulus",
+    "arabic": "المحفز",
+    "definition": "تغير داخلي أو خارجي يمكن أن يسبب استجابة في الخلية أو الجسم.",
+    "category": "General Physiology",
+    "searchTerms": ["Stimulus", "Stimuli", "المحفز", "منبه"]
+  },
+  {
+    "id": "physiology-024",
+    "term": "Response",
+    "arabic": "الاستجابة",
+    "definition": "التغير الذي يحدث في الجسم أو الخلية نتيجة التعرض لمحفز.",
+    "category": "General Physiology",
+    "searchTerms": ["Response", "الاستجابة"]
+  },
+  {
+    "id": "physiology-025",
+    "term": "Negative Feedback",
+    "arabic": "التغذية الراجعة السلبية",
+    "definition": "آلية تنظيم تقلل التغير الناتج عن محفز وتساعد على الحفاظ على الاتزان الداخلي.",
+    "category": "Homeostasis",
+    "searchTerms": ["Negative Feedback", "التغذية الراجعة السلبية"]
+  },
+  {
+    "id": "physiology-026",
+    "term": "Positive Feedback",
+    "arabic": "التغذية الراجعة الإيجابية",
+    "definition": "آلية تنظيم تزيد الاستجابة للمحفز حتى الوصول إلى حدث أو نقطة نهاية معينة.",
+    "category": "Homeostasis",
+    "searchTerms": ["Positive Feedback", "التغذية الراجعة الإيجابية"]
+  },
+  {
+    "id": "physiology-027",
+    "term": "Body Temperature",
+    "arabic": "درجة حرارة الجسم",
+    "definition": "مقياس لدرجة الحرارة الداخلية للجسم والتي يحافظ عليها الجسم ضمن نطاق مناسب.",
+    "category": "Thermoregulation",
+    "searchTerms": ["Body Temperature", "درجة حرارة الجسم"]
+  },
+  {
+    "id": "physiology-028",
+    "term": "Thermoregulation",
+    "arabic": "تنظيم الحرارة",
+    "definition": "العمليات التي يستخدمها الجسم للحفاظ على درجة حرارة داخلية مناسبة.",
+    "category": "Thermoregulation",
+    "searchTerms": ["Thermoregulation", "تنظيم الحرارة"]
+  },
+  {
+    "id": "physiology-029",
+    "term": "Fever",
+    "arabic": "الحمى",
+    "definition": "ارتفاع منظم في درجة حرارة الجسم نتيجة تغير نقطة الضبط الحراري غالبًا استجابة للعدوى أو الالتهاب.",
+    "category": "Thermoregulation",
+    "searchTerms": ["Fever", "حمى", "الحمى"]
+  },
+  {
+    "id": "physiology-030",
+    "term": "Hypothermia",
+    "arabic": "انخفاض حرارة الجسم",
+    "definition": "انخفاض خطير في درجة حرارة الجسم الأساسية إلى أقل من المستوى الطبيعي.",
+    "category": "Thermoregulation",
+    "searchTerms": ["Hypothermia", "انخفاض حرارة الجسم"]
+  },
+  {
+    "id": "physiology-031",
+    "term": "Sweating",
+    "arabic": "التعرق",
+    "definition": "إفراز العرق من الغدد العرقية ويساعد في تبريد الجسم من خلال تبخر الماء.",
+    "category": "Thermoregulation",
+    "searchTerms": ["Sweating", "Perspiration", "التعرق"]
+  },
+  {
+    "id": "physiology-032",
+    "term": "Vasodilation",
+    "arabic": "توسع الأوعية الدموية",
+    "definition": "اتساع الأوعية الدموية مما يزيد تدفق الدم خلالها ويمكن أن يساعد في فقدان الحرارة.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Vasodilation", "توسع الأوعية"]
+  },
+  {
+    "id": "physiology-033",
+    "term": "Vasoconstriction",
+    "arabic": "تضيق الأوعية الدموية",
+    "definition": "انقباض الأوعية الدموية مما يقلل قطرها ويمكن أن يقلل فقدان الحرارة ويرفع المقاومة الوعائية.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Vasoconstriction", "تضيق الأوعية"]
+  },
+  {
+    "id": "physiology-034",
+    "term": "Blood Pressure",
+    "arabic": "ضغط الدم",
+    "definition": "القوة التي يؤثر بها الدم على جدران الأوعية الدموية أثناء دورانه.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Blood Pressure", "ضغط الدم"]
+  },
+  {
+    "id": "physiology-035",
+    "term": "Systolic Pressure",
+    "arabic": "الضغط الانقباضي",
+    "definition": "أعلى ضغط في الشرايين ويحدث عادة أثناء انقباض البطينين.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Systolic Pressure", "الضغط الانقباضي"]
+  },
+  {
+    "id": "physiology-036",
+    "term": "Diastolic Pressure",
+    "arabic": "الضغط الانبساطي",
+    "definition": "الضغط الأقل في الشرايين ويحدث أثناء ارتخاء القلب بين الانقباضات.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Diastolic Pressure", "الضغط الانبساطي"]
+  },
+  {
+    "id": "physiology-037",
+    "term": "Pulse",
+    "arabic": "النبض",
+    "definition": "موجة ضغط تنتج عن انقباض القلب وتنتقل عبر الشرايين.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Pulse", "النبض"]
+  },
+  {
+    "id": "physiology-038",
+    "term": "Heart Rate",
+    "arabic": "معدل ضربات القلب",
+    "definition": "عدد ضربات القلب التي تحدث خلال دقيقة واحدة.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Heart Rate", "معدل ضربات القلب"]
+  },
+  {
+    "id": "physiology-039",
+    "term": "Cardiac Cycle",
+    "arabic": "الدورة القلبية",
+    "definition": "التتابع الكامل للأحداث التي تحدث في القلب خلال نبضة واحدة.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Cardiac Cycle", "الدورة القلبية"]
+  },
+  {
+    "id": "physiology-040",
+    "term": "Systole",
+    "arabic": "الانقباض القلبي",
+    "definition": "مرحلة من الدورة القلبية ينقبض فيها القلب لدفع الدم إلى الخارج.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Systole", "الانقباض"]
+  },
+  {
+    "id": "physiology-041",
+    "term": "Diastole",
+    "arabic": "الانبساط القلبي",
+    "definition": "مرحلة من الدورة القلبية يرتخي فيها القلب ويمتلئ بالدم.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Diastole", "الانبساط"]
+  },
+  {
+    "id": "physiology-042",
+    "term": "Cardiac Output",
+    "arabic": "النتاج القلبي",
+    "definition": "كمية الدم التي يضخها أحد البطينين خلال دقيقة واحدة.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Cardiac Output", "النتاج القلبي"]
+  },
+  {
+    "id": "physiology-043",
+    "term": "Stroke Volume",
+    "arabic": "حجم الضربة",
+    "definition": "كمية الدم التي يضخها البطين في كل انقباضة قلبية.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Stroke Volume", "حجم الضربة"]
+  },
+  {
+    "id": "physiology-044",
+    "term": "Preload",
+    "arabic": "الحمل القبلي",
+    "definition": "درجة امتلاء وتمدد ألياف عضلة البطين قبل انقباض القلب.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Preload", "الحمل القبلي"]
+  },
+  {
+    "id": "physiology-045",
+    "term": "Afterload",
+    "arabic": "الحمل البعدي",
+    "definition": "المقاومة التي يجب أن يتغلب عليها البطين لضخ الدم إلى الدورة الدموية.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Afterload", "الحمل البعدي"]
+  },
+  {
+    "id": "physiology-046",
+    "term": "Contractility",
+    "arabic": "قوة انقباض عضلة القلب",
+    "definition": "قدرة عضلة القلب على الانقباض بقوة مستقلة نسبيًا عن درجة امتلائها.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Contractility", "قوة الانقباض"]
+  },
+  {
+    "id": "physiology-047",
+    "term": "Cardiac Conduction",
+    "arabic": "التوصيل القلبي",
+    "definition": "انتقال الإشارات الكهربائية داخل القلب لتنظيم وتسلسل انقباض عضلته.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Cardiac Conduction", "التوصيل القلبي"]
+  },
+  {
+    "id": "physiology-048",
+    "term": "Sinoatrial Node",
+    "arabic": "العقدة الجيبية الأذينية",
+    "definition": "مجموعة من الخلايا في الأذين الأيمن تعمل عادة كمُنظم طبيعي لضربات القلب.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Sinoatrial Node", "SA Node", "العقدة الجيبية"]
+  },
+  {
+    "id": "physiology-049",
+    "term": "Atrioventricular Node",
+    "arabic": "العقدة الأذينية البطينية",
+    "definition": "جزء من نظام التوصيل القلبي ينقل الإشارة من الأذينين إلى البطينين مع تأخير بسيط.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Atrioventricular Node", "AV Node", "العقدة الأذينية البطينية"]
+  },
+  {
+    "id": "physiology-050",
+    "term": "Purkinje Fibers",
+    "arabic": "ألياف بركنجي",
+    "definition": "ألياف متخصصة تنقل الإشارة الكهربائية بسرعة داخل عضلة البطينين.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Purkinje Fibers", "ألياف بركنجي"]
+  },
+  {
+    "id": "physiology-051",
+    "term": "Electrocardiogram",
+    "arabic": "تخطيط كهربية القلب",
+    "definition": "تسجيل للنشاط الكهربائي للقلب باستخدام أقطاب توضع على سطح الجسم.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Electrocardiogram", "ECG", "EKG", "تخطيط القلب"]
+  },
+  {
+    "id": "physiology-052",
+    "term": "P Wave",
+    "arabic": "موجة P",
+    "definition": "الموجة في تخطيط القلب التي تمثل إزالة الاستقطاب في الأذينين.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["P Wave", "موجة P"]
+  },
+  {
+    "id": "physiology-053",
+    "term": "QRS Complex",
+    "arabic": "مركب QRS",
+    "definition": "جزء من تخطيط القلب يمثل إزالة الاستقطاب في البطينين.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["QRS Complex", "مركب QRS"]
+  },
+  {
+    "id": "physiology-054",
+    "term": "T Wave",
+    "arabic": "موجة T",
+    "definition": "الموجة التي تمثل إعادة الاستقطاب في البطينين على تخطيط القلب.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["T Wave", "موجة T"]
+  },
+  {
+    "id": "physiology-055",
+    "term": "Circulation",
+    "arabic": "الدورة الدموية",
+    "definition": "حركة الدم عبر القلب والأوعية الدموية لتوصيل المواد إلى الأنسجة وإزالة الفضلات.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Circulation", "الدورة الدموية"]
+  },
+  {
+    "id": "physiology-056",
+    "term": "Systemic Circulation",
+    "arabic": "الدورة الدموية الجهازية",
+    "definition": "الدورة التي ينقل فيها الدم من القلب إلى أنسجة الجسم ثم يعود إلى القلب.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Systemic Circulation", "الدورة الجهازية"]
+  },
+  {
+    "id": "physiology-057",
+    "term": "Pulmonary Circulation",
+    "arabic": "الدورة الدموية الرئوية",
+    "definition": "الدورة التي ينتقل فيها الدم بين القلب والرئتين لإجراء تبادل الغازات.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Pulmonary Circulation", "الدورة الرئوية"]
+  },
+  {
+    "id": "physiology-058",
+    "term": "Capillary Exchange",
+    "arabic": "التبادل الشعيري",
+    "definition": "انتقال الغازات والمواد الغذائية والماء والفضلات بين الدم والأنسجة عبر الشعيرات الدموية.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Capillary Exchange", "التبادل الشعيري"]
+  },
+  {
+    "id": "physiology-059",
+    "term": "Blood Flow",
+    "arabic": "تدفق الدم",
+    "definition": "حركة الدم عبر الأوعية الدموية نتيجة فروق الضغط.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Blood Flow", "تدفق الدم"]
+  },
+  {
+    "id": "physiology-060",
+    "term": "Vascular Resistance",
+    "arabic": "المقاومة الوعائية",
+    "definition": "المقاومة التي تواجه حركة الدم داخل الأوعية الدموية.",
+    "category": "Cardiovascular Physiology",
+    "searchTerms": ["Vascular Resistance", "المقاومة الوعائية"]
+  },
+  {
+    "id": "physiology-061",
+    "term": "Respiration",
+    "arabic": "التنفس",
+    "definition": "عملية الحصول على الأكسجين والتخلص من ثاني أكسيد الكربون وتشمل عمليات تهوية وتبادل الغازات.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Respiration", "التنفس"]
+  },
+  {
+    "id": "physiology-062",
+    "term": "Ventilation",
+    "arabic": "التهوية الرئوية",
+    "definition": "حركة الهواء من وإلى الرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Ventilation", "Pulmonary Ventilation", "التهوية الرئوية"]
+  },
+  {
+    "id": "physiology-063",
+    "term": "Inspiration",
+    "arabic": "الشهيق",
+    "definition": "عملية دخول الهواء إلى الرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Inspiration", "Inhalation", "الشهيق"]
+  },
+  {
+    "id": "physiology-064",
+    "term": "Expiration",
+    "arabic": "الزفير",
+    "definition": "عملية خروج الهواء من الرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Expiration", "Exhalation", "الزفير"]
+  },
+  {
+    "id": "physiology-065",
+    "term": "Tidal Volume",
+    "arabic": "الحجم الجاري",
+    "definition": "حجم الهواء الذي يدخل أو يخرج من الرئتين خلال نفس طبيعي.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Tidal Volume", "TV", "الحجم الجاري"]
+  },
+  {
+    "id": "physiology-066",
+    "term": "Inspiratory Reserve Volume",
+    "arabic": "حجم الاحتياطي الشهيقي",
+    "definition": "أقصى حجم إضافي من الهواء يمكن استنشاقه بعد الشهيق الطبيعي.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Inspiratory Reserve Volume", "IRV", "حجم الاحتياطي الشهيقي"]
+  },
+  {
+    "id": "physiology-067",
+    "term": "Expiratory Reserve Volume",
+    "arabic": "حجم الاحتياطي الزفيري",
+    "definition": "أقصى حجم إضافي من الهواء يمكن إخراجه بعد الزفير الطبيعي.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Expiratory Reserve Volume", "ERV", "حجم الاحتياطي الزفيري"]
+  },
+  {
+    "id": "physiology-068",
+    "term": "Residual Volume",
+    "arabic": "الحجم المتبقي",
+    "definition": "حجم الهواء الذي يبقى في الرئتين بعد أقصى زفير ممكن.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Residual Volume", "RV", "الحجم المتبقي"]
+  },
+  {
+    "id": "physiology-069",
+    "term": "Vital Capacity",
+    "arabic": "السعة الحيوية",
+    "definition": "أكبر حجم من الهواء يمكن إخراجه بعد أخذ أقصى شهيق.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Vital Capacity", "VC", "السعة الحيوية"]
+  },
+  {
+    "id": "physiology-070",
+    "term": "Total Lung Capacity",
+    "arabic": "السعة الرئوية الكلية",
+    "definition": "إجمالي حجم الهواء الموجود في الرئتين بعد أقصى شهيق.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Total Lung Capacity", "TLC", "السعة الرئوية الكلية"]
+  },
+  {
+    "id": "physiology-071",
+    "term": "Functional Residual Capacity",
+    "arabic": "السعة المتبقية الوظيفية",
+    "definition": "حجم الهواء المتبقي في الرئتين بعد زفير طبيعي.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Functional Residual Capacity", "FRC", "السعة المتبقية الوظيفية"]
+  },
+  {
+    "id": "physiology-072",
+    "term": "Minute Ventilation",
+    "arabic": "التهوية الدقيقة",
+    "definition": "حجم الهواء الذي يدخل أو يخرج من الرئتين خلال دقيقة واحدة.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Minute Ventilation", "التهوية الدقيقة"]
+  },
+  {
+    "id": "physiology-073",
+    "term": "Alveolar Ventilation",
+    "arabic": "التهوية السنخية",
+    "definition": "حجم الهواء الذي يصل إلى الحويصلات الهوائية ويشارك في تبادل الغازات خلال الدقيقة.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Alveolar Ventilation", "التهوية السنخية"]
+  },
+  {
+    "id": "physiology-074",
+    "term": "Gas Exchange",
+    "arabic": "تبادل الغازات",
+    "definition": "انتقال الأكسجين وثاني أكسيد الكربون بين الهواء السنخي والدم.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Gas Exchange", "تبادل الغازات"]
+  },
+  {
+    "id": "physiology-075",
+    "term": "Oxygen",
+    "arabic": "الأكسجين",
+    "definition": "غاز ضروري لمعظم الخلايا لإنتاج الطاقة من خلال عمليات الأيض الهوائي.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Oxygen", "O2", "الأكسجين"]
+  },
+  {
+    "id": "physiology-076",
+    "term": "Carbon Dioxide",
+    "arabic": "ثاني أكسيد الكربون",
+    "definition": "غاز ينتج عن عمليات الأيض الخلوي ويتم التخلص منه بصورة رئيسية عن طريق الرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Carbon Dioxide", "CO2", "ثاني أكسيد الكربون"]
+  },
+  {
+    "id": "physiology-077",
+    "term": "Hemoglobin",
+    "arabic": "الهيموجلوبين",
+    "definition": "بروتين موجود في كريات الدم الحمراء يرتبط بالأكسجين ويساعد في نقله.",
+    "category": "Blood Physiology",
+    "searchTerms": ["Hemoglobin", "Hb", "الهيموجلوبين"]
+  },
+  {
+    "id": "physiology-078",
+    "term": "Oxyhemoglobin",
+    "arabic": "الهيموجلوبين المؤكسج",
+    "definition": "الهيموجلوبين المرتبط بالأكسجين.",
+    "category": "Blood Physiology",
+    "searchTerms": ["Oxyhemoglobin", "الهيموجلوبين المؤكسج"]
+  },
+  {
+    "id": "physiology-079",
+    "term": "Deoxyhemoglobin",
+    "arabic": "الهيموجلوبين غير المؤكسج",
+    "definition": "الهيموجلوبين الذي لا يكون مرتبطًا بالأكسجين.",
+    "category": "Blood Physiology",
+    "searchTerms": ["Deoxyhemoglobin", "الهيموجلوبين غير المؤكسج"]
+  },
+  {
+    "id": "physiology-080",
+    "term": "Oxygen Saturation",
+    "arabic": "تشبع الأكسجين",
+    "definition": "نسبة مواقع ارتباط الهيموجلوبين المشغولة بالأكسجين في الدم.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Oxygen Saturation", "SpO2", "تشبع الأكسجين"]
+  },
+  {
+    "id": "physiology-081",
+    "term": "Respiratory Rate",
+    "arabic": "معدل التنفس",
+    "definition": "عدد الأنفاس التي يأخذها الشخص خلال دقيقة واحدة.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Respiratory Rate", "RR", "معدل التنفس"]
+  },
+  {
+    "id": "physiology-082",
+    "term": "Respiratory Center",
+    "arabic": "مركز التنفس",
+    "definition": "مناطق عصبية في جذع الدماغ تنظم نمط ووتيرة التنفس.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Respiratory Center", "مركز التنفس"]
+  },
+  {
+    "id": "physiology-083",
+    "term": "Chemoreceptor",
+    "arabic": "المستقبل الكيميائي",
+    "definition": "مستقبل حسي يستجيب للتغيرات الكيميائية مثل مستويات الأكسجين وثاني أكسيد الكربون والحموضة.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Chemoreceptor", "Chemoreceptors", "المستقبل الكيميائي"]
+  },
+  {
+    "id": "physiology-084",
+    "term": "Pleural Pressure",
+    "arabic": "الضغط الجنبي",
+    "definition": "الضغط داخل الحيز الجنبي المحيط بالرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Pleural Pressure", "الضغط الجنبي"]
+  },
+  {
+    "id": "physiology-085",
+    "term": "Surfactant",
+    "arabic": "المادة الخافضة للتوتر السطحي",
+    "definition": "مادة تنتجها خلايا الرئة وتقلل التوتر السطحي داخل الحويصلات الهوائية وتساعد على منع انهيارها.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Surfactant", "Pulmonary Surfactant", "المادة الخافضة للتوتر"]
+  },
+  {
+    "id": "physiology-086",
+    "term": "Respiratory Membrane",
+    "arabic": "الغشاء التنفسي",
+    "definition": "حاجز رقيق بين الهواء الموجود في الحويصلات والدم يسمح بتبادل الغازات.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Respiratory Membrane", "الغشاء التنفسي"]
+  },
+  {
+    "id": "physiology-087",
+    "term": "Perfusion",
+    "arabic": "الإرواء",
+    "definition": "مرور الدم عبر الشعيرات الدموية في الأنسجة أو الرئتين.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Perfusion", "الإرواء"]
+  },
+  {
+    "id": "physiology-088",
+    "term": "Ventilation-Perfusion Ratio",
+    "arabic": "نسبة التهوية إلى الإرواء",
+    "definition": "العلاقة بين كمية الهواء التي تصل إلى الحويصلات وكمية الدم التي تمر عبر الشعيرات الرئوية.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Ventilation-Perfusion Ratio", "V/Q Ratio", "نسبة التهوية والإرواء"]
+  },
+  {
+    "id": "physiology-089",
+    "term": "Hypoxia",
+    "arabic": "نقص الأكسجة",
+    "definition": "حالة يكون فيها إمداد الأنسجة بالأكسجين غير كافٍ لاحتياجاتها.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Hypoxia", "نقص الأكسجة"]
+  },
+  {
+    "id": "physiology-090",
+    "term": "Hypoxemia",
+    "arabic": "نقص أكسجين الدم",
+    "definition": "انخفاض مستوى الأكسجين في الدم الشرياني.",
+    "category": "Respiratory Physiology",
+    "searchTerms": ["Hypoxemia", "نقص أكسجين الدم"]
+  },
+  {
+    "id": "physiology-091",
+    "term": "Digestive Physiology",
+    "arabic": "فسيولوجيا الجهاز الهضمي",
+    "definition": "دراسة العمليات التي يقوم بها الجهاز الهضمي لهضم الطعام وامتصاص المغذيات والتخلص من الفضلات.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Digestive Physiology", "فسيولوجيا الجهاز الهضمي"]
+  },
+  {
+    "id": "physiology-092",
+    "term": "Digestion",
+    "arabic": "الهضم",
+    "definition": "عملية تكسير الطعام إلى جزيئات أصغر يمكن امتصاصها واستخدامها بواسطة الجسم.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Digestion", "الهضم"]
+  },
+  {
+    "id": "physiology-093",
+    "term": "Mechanical Digestion",
+    "arabic": "الهضم الميكانيكي",
+    "definition": "تفتيت الطعام إلى أجزاء أصغر دون تغيير تركيبه الكيميائي.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Mechanical Digestion", "الهضم الميكانيكي"]
+  },
+  {
+    "id": "physiology-094",
+    "term": "Chemical Digestion",
+    "arabic": "الهضم الكيميائي",
+    "definition": "تفكيك جزيئات الطعام كيميائيًا بواسطة الإنزيمات والعصارات الهضمية.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Chemical Digestion", "الهضم الكيميائي"]
+  },
+  {
+    "id": "physiology-095",
+    "term": "Absorption",
+    "arabic": "الامتصاص",
+    "definition": "انتقال نواتج الهضم والماء والمواد الأخرى من الجهاز الهضمي إلى الدم أو اللمف.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Absorption", "الامتصاص"]
+  },
+  {
+    "id": "physiology-096",
+    "term": "Peristalsis",
+    "arabic": "الحركة الدودية",
+    "definition": "انقباضات عضلية متتابعة تدفع محتويات القناة الهضمية إلى الأمام.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Peristalsis", "الحركة الدودية"]
+  },
+  {
+    "id": "physiology-097",
+    "term": "Segmentation",
+    "arabic": "التقسيم المعوي",
+    "definition": "انقباضات عضلية في الأمعاء تساعد على خلط محتوياتها وتحسين التلامس مع جدار الأمعاء.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Segmentation", "التقسيم المعوي"]
+  },
+  {
+    "id": "physiology-098",
+    "term": "Saliva",
+    "arabic": "اللعاب",
+    "definition": "سائل تفرزه الغدد اللعابية ويساعد في ترطيب الطعام وبدء هضم بعض مكوناته.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Saliva", "اللعاب"]
+  },
+  {
+    "id": "physiology-099",
+    "term": "Salivary Amylase",
+    "arabic": "الأميليز اللعابي",
+    "definition": "إنزيم موجود في اللعاب يبدأ هضم النشويات إلى جزيئات أصغر.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Salivary Amylase", "الأميليز اللعابي"]
+  },
+  {
+    "id": "physiology-100",
+    "term": "Gastric Juice",
+    "arabic": "العصارة المعدية",
+    "definition": "سائل تنتجه المعدة ويحتوي على حمض وإنزيمات ومواد أخرى تساعد في الهضم.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Gastric Juice", "العصارة المعدية"]
+  },
+  {
+    "id": "physiology-101",
+    "term": "Hydrochloric Acid",
+    "arabic": "حمض الهيدروكلوريك",
+    "definition": "حمض تفرزه المعدة ويساعد في هضم البروتينات وقتل العديد من الكائنات الدقيقة.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Hydrochloric Acid", "HCl", "حمض الهيدروكلوريك"]
+  },
+  {
+    "id": "physiology-102",
+    "term": "Pepsin",
+    "arabic": "البيبسين",
+    "definition": "إنزيم معدي يساعد على تكسير البروتينات إلى أجزاء أصغر.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Pepsin", "البيبسين"]
+  },
+  {
+    "id": "physiology-103",
+    "term": "Bile",
+    "arabic": "العصارة الصفراوية",
+    "definition": "سائل ينتجه الكبد ويساعد على استحلاب الدهون وتسهيل هضمها وامتصاصها.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Bile", "العصارة الصفراوية", "الصفراء"]
+  },
+  {
+    "id": "physiology-104",
+    "term": "Bile Salts",
+    "arabic": "أملاح الصفراء",
+    "definition": "مكونات في العصارة الصفراوية تساعد على استحلاب الدهون وتحسين هضمها وامتصاصها.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Bile Salts", "أملاح الصفراء"]
+  },
+  {
+    "id": "physiology-105",
+    "term": "Pancreatic Juice",
+    "arabic": "العصارة البنكرياسية",
+    "definition": "سائل يفرزه البنكرياس ويحتوي على إنزيمات وبيكربونات تساعد في هضم الطعام ومعادلة حمض المعدة.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Pancreatic Juice", "العصارة البنكرياسية"]
+  },
+  {
+    "id": "physiology-106",
+    "term": "Amylase",
+    "arabic": "الأميليز",
+    "definition": "إنزيم يساعد على تكسير النشويات إلى سكريات أبسط.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Amylase", "الأميليز"]
+  },
+  {
+    "id": "physiology-107",
+    "term": "Lipase",
+    "arabic": "الليباز",
+    "definition": "إنزيم يساعد على هضم الدهون إلى أحماض دهنية ومكونات أخرى.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Lipase", "الليباز"]
+  },
+  {
+    "id": "physiology-108",
+    "term": "Trypsin",
+    "arabic": "التربسين",
+    "definition": "إنزيم بنكرياسي يساعد على تكسير البروتينات إلى ببتيدات أصغر.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Trypsin", "التربسين"]
+  },
+  {
+    "id": "physiology-109",
+    "term": "Chyme",
+    "arabic": "الكيموس",
+    "definition": "مزيج شبه سائل من الطعام والعصارات الهضمية ينتقل من المعدة إلى الأمعاء الدقيقة.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Chyme", "الكيموس"]
+  },
+  {
+    "id": "physiology-110",
+    "term": "Gastrin",
+    "arabic": "الجاسترين",
+    "definition": "هرمون يساعد على تنظيم إفراز حمض المعدة ونشاطها الحركي.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Gastrin", "الجاسترين"]
+  },
+  {
+    "id": "physiology-111",
+    "term": "Secretin",
+    "arabic": "السيكريتين",
+    "definition": "هرمون يفرز من الأمعاء الدقيقة ويساعد على تحفيز إفراز البيكربونات من البنكرياس.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Secretin", "السيكريتين"]
+  },
+  {
+    "id": "physiology-112",
+    "term": "Cholecystokinin",
+    "arabic": "كوليسيستوكينين",
+    "definition": "هرمون معوي يحفز انقباض المرارة وإفراز إنزيمات البنكرياس ويساهم في تنظيم الهضم.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Cholecystokinin", "CCK", "كوليسيستوكينين"]
+  },
+  {
+    "id": "physiology-113",
+    "term": "Gastrointestinal Motility",
+    "arabic": "حركة الجهاز الهضمي",
+    "definition": "حركات العضلات الملساء في القناة الهضمية التي تخلط وتدفع محتويات الجهاز الهضمي.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Gastrointestinal Motility", "حركة الجهاز الهضمي"]
+  },
+  {
+    "id": "physiology-114",
+    "term": "Defecation",
+    "arabic": "التغوط",
+    "definition": "عملية إخراج البراز من المستقيم عبر فتحة الشرج.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Defecation", "التغوط"]
+  },
+  {
+    "id": "physiology-115",
+    "term": "Hunger",
+    "arabic": "الجوع",
+    "definition": "إحساس يدفع الشخص إلى تناول الطعام ويرتبط بتنظيم الطاقة وإشارات الجهاز الهضمي والعصبي.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Hunger", "الجوع"]
+  },
+  {
+    "id": "physiology-116",
+    "term": "Satiety",
+    "arabic": "الشبع",
+    "definition": "الإحساس بالامتلاء الذي يقلل الرغبة في تناول المزيد من الطعام.",
+    "category": "Digestive Physiology",
+    "searchTerms": ["Satiety", "الشبع"]
+  },
+  {
+    "id": "physiology-117",
+    "term": "Carbohydrate",
+    "arabic": "الكربوهيدرات",
+    "definition": "نوع من المغذيات يوفر مصدرًا مهمًا للطاقة للجسم.",
+    "category": "Nutrition Physiology",
+    "searchTerms": ["Carbohydrate", "Carbohydrates", "الكربوهيدرات"]
+  },
+  {
+    "id": "physiology-118",
+    "term": "Protein",
+    "arabic": "البروتين",
+    "definition": "مركبات تتكون من الأحماض الأمينية وتستخدم في بناء وإصلاح الأنسجة وإنتاج العديد من المواد الحيوية.",
+    "category": "Nutrition Physiology",
+    "searchTerms": ["Protein", "Proteins", "البروتين"]
+  },
+  {
+    "id": "physiology-119",
+    "term": "Fat",
+    "arabic": "الدهون",
+    "definition": "مغذيات عالية الطاقة تدخل في تخزين الطاقة وبناء الأغشية وإنتاج بعض الهرمونات.",
+    "category": "Nutrition Physiology",
+    "searchTerms": ["Fat", "Fats", "الدهون"]
+  },
+  {
+    "id": "physiology-120",
+    "term": "Glucose",
+    "arabic": "الجلوكوز",
+    "definition": "سكر بسيط يعد مصدرًا رئيسيًا للطاقة للعديد من خلايا الجسم.",
+    "category": "Metabolism",
+    "searchTerms": ["Glucose", "الجلوكوز", "سكر الدم"]
+  },
+  {
+    "id": "physiology-121",
+    "term": "Glycogen",
+    "arabic": "الجليكوجين",
+    "definition": "الشكل الرئيسي لتخزين الجلوكوز في الكبد والعضلات.",
+    "category": "Metabolism",
+    "searchTerms": ["Glycogen", "الجليكوجين"]
+  },
+  {
+    "id": "physiology-122",
+    "term": "Glycogenesis",
+    "arabic": "تكوين الجليكوجين",
+    "definition": "عملية تحويل الجلوكوز إلى جليكوجين لتخزينه في الكبد والعضلات.",
+    "category": "Metabolism",
+    "searchTerms": ["Glycogenesis", "تكوين الجليكوجين"]
+  },
+  {
+    "id": "physiology-123",
+    "term": "Glycogenolysis",
+    "arabic": "تحلل الجليكوجين",
+    "definition": "عملية تكسير الجليكوجين لإنتاج وحدات يمكن استخدامها لتوفير الجلوكوز والطاقة.",
+    "category": "Metabolism",
+    "searchTerms": ["Glycogenolysis", "تحلل الجليكوجين"]
+  },
+  {
+    "id": "physiology-124",
+    "term": "Gluconeogenesis",
+    "arabic": "استحداث الجلوكوز",
+    "definition": "إنتاج الجلوكوز من مواد غير كربوهيدراتية مثل بعض الأحماض الأمينية واللاكتات.",
+    "category": "Metabolism",
+    "searchTerms": ["Gluconeogenesis", "استحداث الجلوكوز"]
+  },
+  {
+    "id": "physiology-125",
+    "term": "Insulin",
+    "arabic": "الإنسولين",
+    "definition": "هرمون يفرزه البنكرياس ويساعد على خفض مستوى الجلوكوز في الدم وتعزيز دخوله إلى الخلايا.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Insulin", "الإنسولين"]
+  },
+  {
+    "id": "physiology-126",
+    "term": "Glucagon",
+    "arabic": "الجلوكاجون",
+    "definition": "هرمون يفرزه البنكرياس ويساعد على رفع مستوى الجلوكوز في الدم خاصة من خلال تحفيز تحلل الجليكوجين.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Glucagon", "الجلوكاجون"]
+  },
+  {
+    "id": "physiology-127",
+    "term": "Blood Glucose",
+    "arabic": "جلوكوز الدم",
+    "definition": "كمية الجلوكوز الموجودة في الدم والتي يتم تنظيمها بواسطة عدة هرمونات وعمليات أيضية.",
+    "category": "Metabolism",
+    "searchTerms": ["Blood Glucose", "Blood Sugar", "جلوكوز الدم", "سكر الدم"]
+  },
+  {
+    "id": "physiology-128",
+    "term": "Glycolysis",
+    "arabic": "تحلل الجلوكوز",
+    "definition": "سلسلة من التفاعلات التي تكسر الجلوكوز لإنتاج الطاقة ومركبات وسيطة.",
+    "category": "Metabolism",
+    "searchTerms": ["Glycolysis", "تحلل الجلوكوز"]
+  },
+  {
+    "id": "physiology-129",
+    "term": "Aerobic Respiration",
+    "arabic": "التنفس الهوائي",
+    "definition": "إنتاج الطاقة من المواد الغذائية باستخدام الأكسجين داخل الخلايا.",
+    "category": "Metabolism",
+    "searchTerms": ["Aerobic Respiration", "التنفس الهوائي"]
+  },
+  {
+    "id": "physiology-130",
+    "term": "Anaerobic Respiration",
+    "arabic": "التنفس اللاهوائي",
+    "definition": "إنتاج الطاقة في غياب الأكسجين أو عند عدم كفايته، ويكون أقل كفاءة من التنفس الهوائي.",
+    "category": "Metabolism",
+    "searchTerms": ["Anaerobic Respiration", "التنفس اللاهوائي"]
+  },
+  {
+    "id": "physiology-131",
+    "term": "Lactic Acid",
+    "arabic": "حمض اللاكتيك",
+    "definition": "مركب ينتج أثناء استقلاب الجلوكوز عندما يكون إنتاج الطاقة اللاهوائي مرتفعًا.",
+    "category": "Metabolism",
+    "searchTerms": ["Lactic Acid", "Lactate", "حمض اللاكتيك"]
+  },
+  {
+    "id": "physiology-132",
+    "term": "Basal Metabolic Rate",
+    "arabic": "معدل الأيض الأساسي",
+    "definition": "كمية الطاقة التي يحتاجها الجسم للحفاظ على الوظائف الحيوية أثناء الراحة.",
+    "category": "Metabolism",
+    "searchTerms": ["Basal Metabolic Rate", "BMR", "معدل الأيض الأساسي"]
+  },
+  {
+    "id": "physiology-133",
+    "term": "Energy Balance",
+    "arabic": "توازن الطاقة",
+    "definition": "العلاقة بين كمية الطاقة التي يحصل عليها الجسم من الغذاء والطاقة التي يستهلكها.",
+    "category": "Nutrition Physiology",
+    "searchTerms": ["Energy Balance", "توازن الطاقة"]
+  },
+  {
+    "id": "physiology-134",
+    "term": "Calorie",
+    "arabic": "السعر الحراري",
+    "definition": "وحدة تستخدم للتعبير عن الطاقة الموجودة في الغذاء أو التي يستهلكها الجسم.",
+    "category": "Nutrition Physiology",
+    "searchTerms": ["Calorie", "Calories", "السعر الحراري", "السعرات"]
+  },
+  {
+    "id": "physiology-135",
+    "term": "Water Balance",
+    "arabic": "توازن الماء",
+    "definition": "تنظيم كمية الماء في الجسم من خلال التحكم في دخوله وفقده وتوزيعه.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Water Balance", "توازن الماء"]
+  },
+  {
+    "id": "physiology-136",
+    "term": "Electrolyte",
+    "arabic": "إلكتروليت",
+    "definition": "مادة تنتج أيونات عند ذوبانها في الماء وتشارك في وظائف عصبية وعضلية وتنظيم السوائل.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Electrolyte", "Electrolytes", "إلكتروليت"]
+  },
+  {
+    "id": "physiology-137",
+    "term": "Sodium",
+    "arabic": "الصوديوم",
+    "definition": "إلكتروليت رئيسي في السائل خارج الخلايا ويساهم في تنظيم حجم السوائل ووظائف الأعصاب والعضلات.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Sodium", "Na+", "الصوديوم"]
+  },
+  {
+    "id": "physiology-138",
+    "term": "Potassium",
+    "arabic": "البوتاسيوم",
+    "definition": "إلكتروليت رئيسي داخل الخلايا وله دور مهم في وظائف الأعصاب والعضلات والقلب.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Potassium", "K+", "البوتاسيوم"]
+  },
+  {
+    "id": "physiology-139",
+    "term": "Calcium",
+    "arabic": "الكالسيوم",
+    "definition": "معدن مهم للعظام وانقباض العضلات ونقل الإشارات العصبية وتخثر الدم.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Calcium", "Ca2+", "الكالسيوم"]
+  },
+  {
+    "id": "physiology-140",
+    "term": "Magnesium",
+    "arabic": "المغنيسيوم",
+    "definition": "إلكتروليت ومعدن يشارك في العديد من التفاعلات الإنزيمية ووظائف العضلات والأعصاب.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Magnesium", "Mg2+", "المغنيسيوم"]
+  },
+  {
+    "id": "physiology-141",
+    "term": "Chloride",
+    "arabic": "الكلوريد",
+    "definition": "أيون رئيسي خارج الخلايا يساهم في توازن السوائل والشوارد والتوازن الحمضي القاعدي.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Chloride", "Cl-", "الكلوريد"]
+  },
+  {
+    "id": "physiology-142",
+    "term": "Bicarbonate",
+    "arabic": "البيكربونات",
+    "definition": "مكوّن مهم في نظام تنظيم الحموضة في الدم ويساعد على المحافظة على توازن الحمض والقاعدة.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Bicarbonate", "HCO3", "البيكربونات"]
+  },
+  {
+    "id": "physiology-143",
+    "term": "Osmolarity",
+    "arabic": "الأسمولارية",
+    "definition": "مقياس لتركيز الجزيئات الذائبة في حجم معين من المحلول.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Osmolarity", "الأسمولارية"]
+  },
+  {
+    "id": "physiology-144",
+    "term": "Osmolality",
+    "arabic": "الأسمولالية",
+    "definition": "مقياس لتركيز الجزيئات الذائبة في كتلة معينة من المذيب.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Osmolality", "الأسمولالية"]
+  },
+  {
+    "id": "physiology-145",
+    "term": "Intracellular Fluid",
+    "arabic": "السائل داخل الخلايا",
+    "definition": "السائل الموجود داخل خلايا الجسم.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Intracellular Fluid", "ICF", "السائل داخل الخلايا"]
+  },
+  {
+    "id": "physiology-146",
+    "term": "Extracellular Fluid",
+    "arabic": "السائل خارج الخلايا",
+    "definition": "السائل الموجود خارج الخلايا ويشمل السائل الموجود بين الخلايا وفي الأوعية الدموية.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Extracellular Fluid", "ECF", "السائل خارج الخلايا"]
+  },
+  {
+    "id": "physiology-147",
+    "term": "Interstitial Fluid",
+    "arabic": "السائل الخلالي",
+    "definition": "السائل الموجود في المسافات بين خلايا الأنسجة.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Interstitial Fluid", "السائل الخلالي"]
+  },
+  {
+    "id": "physiology-148",
+    "term": "Plasma",
+    "arabic": "البلازما",
+    "definition": "الجزء السائل من الدم الذي يحمل الخلايا والبروتينات والمواد الذائبة.",
+    "category": "Blood Physiology",
+    "searchTerms": ["Plasma", "بلازما الدم", "البلازما"]
+  },
+  {
+    "id": "physiology-149",
+    "term": "Edema",
+    "arabic": "الوذمة",
+    "definition": "تراكم غير طبيعي للسوائل في الأنسجة.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Edema", "الوذمة"]
+  },
+  {
+    "id": "physiology-150",
+    "term": "Osmotic Pressure",
+    "arabic": "الضغط الأسموزي",
+    "definition": "الضغط المرتبط بحركة الماء عبر غشاء شبه منفذ نتيجة اختلاف تركيز المواد المذابة.",
+    "category": "Fluid and Electrolytes",
+    "searchTerms": ["Osmotic Pressure", "الضغط الأسموزي"]
+  },
+  {
+    "id": "physiology-151",
+    "term": "Kidney Function",
+    "arabic": "وظيفة الكلى",
+    "definition": "مجموعة وظائف الكلى التي تشمل ترشيح الدم وتنظيم الماء والشوارد والتخلص من الفضلات وإنتاج بعض الهرمونات.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Kidney Function", "وظيفة الكلى"]
+  },
+  {
+    "id": "physiology-152",
+    "term": "Nephron",
+    "arabic": "النيفرون",
+    "definition": "الوحدة الوظيفية الأساسية في الكلية التي تقوم بترشيح الدم وتكوين البول.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Nephron", "Nephrons", "النيفرون"]
+  },
+  {
+    "id": "physiology-153",
+    "term": "Glomerulus",
+    "arabic": "الكبيبة",
+    "definition": "شبكة من الشعيرات الدموية داخل النفرون يتم فيها ترشيح جزء من بلازما الدم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Glomerulus", "الكبيبة"]
+  },
+  {
+    "id": "physiology-154",
+    "term": "Bowman's Capsule",
+    "arabic": "محفظة بومان",
+    "definition": "تركيب يحيط بالكبيبة ويستقبل السائل المرشح منها.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Bowman's Capsule", "Glomerular Capsule", "محفظة بومان"]
+  },
+  {
+    "id": "physiology-155",
+    "term": "Glomerular Filtration",
+    "arabic": "الترشيح الكبيبي",
+    "definition": "عملية انتقال الماء والمواد الصغيرة من الدم في الكبيبة إلى محفظة بومان.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Glomerular Filtration", "الترشيح الكبيبي"]
+  },
+  {
+    "id": "physiology-156",
+    "term": "Glomerular Filtration Rate",
+    "arabic": "معدل الترشيح الكبيبي",
+    "definition": "معدل تكوين الرشاحة الكبيبية بواسطة الكليتين ويستخدم لتقييم وظيفة الكلى.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Glomerular Filtration Rate", "GFR", "معدل الترشيح الكبيبي"]
+  },
+  {
+    "id": "physiology-157",
+    "term": "Tubular Reabsorption",
+    "arabic": "إعادة الامتصاص الأنبوبي",
+    "definition": "عودة الماء والمواد المفيدة من السائل الأنبوبي إلى الدم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Tubular Reabsorption", "إعادة الامتصاص الأنبوبي"]
+  },
+  {
+    "id": "physiology-158",
+    "term": "Tubular Secretion",
+    "arabic": "الإفراز الأنبوبي",
+    "definition": "انتقال بعض المواد من الدم إلى السائل الأنبوبي للمساعدة في التخلص منها وتنظيم تركيب الدم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Tubular Secretion", "الإفراز الأنبوبي"]
+  },
+  {
+    "id": "physiology-159",
+    "term": "Urine",
+    "arabic": "البول",
+    "definition": "سائل تنتجه الكلى ويحتوي على الماء والفضلات ومواد أخرى يتم التخلص منها من الجسم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Urine", "البول"]
+  },
+  {
+    "id": "physiology-160",
+    "term": "Urine Formation",
+    "arabic": "تكوين البول",
+    "definition": "عملية تكوين البول في الكلى من خلال الترشيح وإعادة الامتصاص والإفراز.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Urine Formation", "تكوين البول"]
+  },
+  {
+    "id": "physiology-161",
+    "term": "Renal Clearance",
+    "arabic": "التصفية الكلوية",
+    "definition": "معدل إزالة مادة معينة من البلازما بواسطة الكلى.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Renal Clearance", "التصفية الكلوية"]
+  },
+  {
+    "id": "physiology-162",
+    "term": "Creatinine",
+    "arabic": "الكرياتينين",
+    "definition": "مادة تنتج من أيض العضلات وتستخدم مستوياتها في الدم والبول لتقييم وظيفة الكلى.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Creatinine", "الكرياتينين"]
+  },
+  {
+    "id": "physiology-163",
+    "term": "Urea",
+    "arabic": "اليوريا",
+    "definition": "ناتج فضلات ينتج من استقلاب البروتين ويتم التخلص منه بصورة رئيسية عن طريق الكلى.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Urea", "اليوريا"]
+  },
+  {
+    "id": "physiology-164",
+    "term": "Renin",
+    "arabic": "الرينين",
+    "definition": "إنزيم تفرزه الكلى ويساهم في تنظيم ضغط الدم وتوازن السوائل من خلال نظام الرينين والأنجيوتنسين.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Renin", "الرينين"]
+  },
+  {
+    "id": "physiology-165",
+    "term": "Renin-Angiotensin-Aldosterone System",
+    "arabic": "نظام الرينين والأنجيوتنسين والألدوستيرون",
+    "definition": "نظام هرموني يساهم في تنظيم ضغط الدم وحجم الدم وتوازن الصوديوم والماء.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Renin Angiotensin Aldosterone System", "RAAS", "نظام الرينين"]
+  },
+  {
+    "id": "physiology-166",
+    "term": "Angiotensin II",
+    "arabic": "الأنجيوتنسين II",
+    "definition": "هرمون قوي يسبب تضيق الأوعية ويحفز احتباس الصوديوم والماء ويساهم في رفع ضغط الدم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Angiotensin II", "الأنجيوتنسين الثاني"]
+  },
+  {
+    "id": "physiology-167",
+    "term": "Aldosterone",
+    "arabic": "الألدوستيرون",
+    "definition": "هرمون تفرزه قشرة الغدة الكظرية ويساعد على زيادة إعادة امتصاص الصوديوم والماء وإخراج البوتاسيوم.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Aldosterone", "الألدوستيرون"]
+  },
+  {
+    "id": "physiology-168",
+    "term": "Antidiuretic Hormone",
+    "arabic": "الهرمون المضاد لإدرار البول",
+    "definition": "هرمون يزيد إعادة امتصاص الماء في الكلى ويساعد على المحافظة على توازن الماء.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Antidiuretic Hormone", "ADH", "Vasopressin", "الهرمون المضاد لإدرار البول"]
+  },
+  {
+    "id": "physiology-169",
+    "term": "Atrial Natriuretic Peptide",
+    "arabic": "الببتيد الأذيني المدر للصوديوم",
+    "definition": "هرمون يفرزه القلب عند زيادة تمدد الأذينين ويساعد على زيادة إخراج الصوديوم والماء وخفض ضغط الدم.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Atrial Natriuretic Peptide", "ANP", "الببتيد الأذيني"]
+  },
+  {
+    "id": "physiology-170",
+    "term": "Micturition",
+    "arabic": "التبول",
+    "definition": "عملية إفراغ البول من المثانة إلى خارج الجسم.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Micturition", "Urination", "التبول"]
+  },
+  {
+    "id": "physiology-171",
+    "term": "Bladder Reflex",
+    "arabic": "منعكس المثانة",
+    "definition": "منعكس عصبي يساهم في تنظيم انقباض المثانة وبدء عملية التبول.",
+    "category": "Renal Physiology",
+    "searchTerms": ["Bladder Reflex", "منعكس المثانة"]
+  },
+  {
+    "id": "physiology-172",
+    "term": "Acid-Base Balance",
+    "arabic": "توازن الحمض والقاعدة",
+    "definition": "تنظيم تركيز أيونات الهيدروجين للحفاظ على درجة حموضة مناسبة للسوائل الداخلية.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Acid-Base Balance", "توازن الحمض والقاعدة"]
+  },
+  {
+    "id": "physiology-173",
+    "term": "pH",
+    "arabic": "الرقم الهيدروجيني",
+    "definition": "مقياس يعبّر عن حموضة أو قلوية المحلول اعتمادًا على تركيز أيونات الهيدروجين.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["pH", "الرقم الهيدروجيني"]
+  },
+  {
+    "id": "physiology-174",
+    "term": "Acidosis",
+    "arabic": "الحماض",
+    "definition": "حالة يحدث فيها ميل سوائل الجسم، وخاصة الدم، نحو زيادة الحموضة.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Acidosis", "الحماض"]
+  },
+  {
+    "id": "physiology-175",
+    "term": "Alkalosis",
+    "arabic": "القلاء",
+    "definition": "حالة يحدث فيها ميل سوائل الجسم، وخاصة الدم، نحو زيادة القلوية.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Alkalosis", "القلاء"]
+  },
+  {
+    "id": "physiology-176",
+    "term": "Respiratory Acidosis",
+    "arabic": "الحماض التنفسي",
+    "definition": "اضطراب حمضي قاعدي ينتج عادة عن احتباس ثاني أكسيد الكربون بسبب نقص التهوية.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Respiratory Acidosis", "الحماض التنفسي"]
+  },
+  {
+    "id": "physiology-177",
+    "term": "Respiratory Alkalosis",
+    "arabic": "القلاء التنفسي",
+    "definition": "اضطراب حمضي قاعدي يحدث عادة بسبب انخفاض ثاني أكسيد الكربون نتيجة زيادة التهوية.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Respiratory Alkalosis", "القلاء التنفسي"]
+  },
+  {
+    "id": "physiology-178",
+    "term": "Metabolic Acidosis",
+    "arabic": "الحماض الأيضي",
+    "definition": "اضطراب يحدث عند زيادة الأحماض أو فقدان البيكربونات مما يؤدي إلى انخفاض pH.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Metabolic Acidosis", "الحماض الأيضي"]
+  },
+  {
+    "id": "physiology-179",
+    "term": "Metabolic Alkalosis",
+    "arabic": "القلاء الأيضي",
+    "definition": "اضطراب يحدث عند زيادة القواعد أو فقدان الأحماض مما يؤدي إلى ارتفاع pH.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Metabolic Alkalosis", "القلاء الأيضي"]
+  },
+  {
+    "id": "physiology-180",
+    "term": "Buffer System",
+    "arabic": "نظام العازل",
+    "definition": "نظام كيميائي يساعد على مقاومة التغيرات المفاجئة في درجة الحموضة.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Buffer System", "نظام العازل"]
+  },
+  {
+    "id": "physiology-181",
+    "term": "Bicarbonate Buffer",
+    "arabic": "عازل البيكربونات",
+    "definition": "نظام عازل رئيسي في الدم يعتمد على التوازن بين البيكربونات وثاني أكسيد الكربون.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Bicarbonate Buffer", "عازل البيكربونات"]
+  },
+  {
+    "id": "physiology-182",
+    "term": "Respiratory Compensation",
+    "arabic": "التعويض التنفسي",
+    "definition": "استجابة تنفسية تساعد على تصحيح اضطرابات الحمض والقاعدة من خلال تغيير التخلص من ثاني أكسيد الكربون.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Respiratory Compensation", "التعويض التنفسي"]
+  },
+  {
+    "id": "physiology-183",
+    "term": "Renal Compensation",
+    "arabic": "التعويض الكلوي",
+    "definition": "استجابة الكلى لاضطرابات الحمض والقاعدة من خلال تغيير إخراج الأحماض وإعادة امتصاص البيكربونات.",
+    "category": "Acid Base Physiology",
+    "searchTerms": ["Renal Compensation", "التعويض الكلوي"]
+  },
+  {
+    "id": "physiology-184",
+    "term": "Nervous System Physiology",
+    "arabic": "فسيولوجيا الجهاز العصبي",
+    "definition": "دراسة كيفية استقبال الجهاز العصبي للمعلومات ومعالجتها ونقلها وتنظيم استجابات الجسم.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Nervous System Physiology", "فسيولوجيا الجهاز العصبي"]
+  },
+  {
+    "id": "physiology-185",
+    "term": "Central Nervous System",
+    "arabic": "الجهاز العصبي المركزي",
+    "definition": "يتكون من الدماغ والحبل الشوكي ويعد مركز معالجة وتنظيم المعلومات العصبية.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Central Nervous System", "CNS", "الجهاز العصبي المركزي"]
+  },
+  {
+    "id": "physiology-186",
+    "term": "Peripheral Nervous System",
+    "arabic": "الجهاز العصبي الطرفي",
+    "definition": "يشمل الأعصاب والعقد العصبية خارج الدماغ والحبل الشوكي ويربط الجهاز العصبي المركزي بباقي الجسم.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Peripheral Nervous System", "PNS", "الجهاز العصبي الطرفي"]
+  },
+  {
+    "id": "physiology-187",
+    "term": "Sensory Neuron",
+    "arabic": "العصبون الحسي",
+    "definition": "خلية عصبية تنقل المعلومات الحسية من المستقبلات إلى الجهاز العصبي المركزي.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Sensory Neuron", "Afferent Neuron", "العصبون الحسي"]
+  },
+  {
+    "id": "physiology-188",
+    "term": "Motor Neuron",
+    "arabic": "العصبون الحركي",
+    "definition": "خلية عصبية تنقل الأوامر من الجهاز العصبي المركزي إلى العضلات أو الغدد.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Motor Neuron", "Efferent Neuron", "العصبون الحركي"]
+  },
+  {
+    "id": "physiology-189",
+    "term": "Interneuron",
+    "arabic": "العصبون البيني",
+    "definition": "خلية عصبية تربط بين الخلايا العصبية داخل الجهاز العصبي المركزي وتشارك في معالجة المعلومات.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Interneuron", "العصبون البيني"]
+  },
+  {
+    "id": "physiology-190",
+    "term": "Action Potential",
+    "arabic": "جهد الفعل",
+    "definition": "تغير سريع ومؤقت في جهد غشاء الخلية العصبية أو العضلية يسمح بنقل الإشارة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Action Potential", "جهد الفعل"]
+  },
+  {
+    "id": "physiology-191",
+    "term": "Resting Membrane Potential",
+    "arabic": "جهد الغشاء في الراحة",
+    "definition": "فرق الجهد الكهربائي عبر غشاء الخلية عندما تكون الخلية في حالة الراحة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Resting Membrane Potential", "جهد الغشاء في الراحة"]
+  },
+  {
+    "id": "physiology-192",
+    "term": "Depolarization",
+    "arabic": "إزالة الاستقطاب",
+    "definition": "تغير في جهد الغشاء يجعل داخله أقل سلبية مقارنة بحالة الراحة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Depolarization", "إزالة الاستقطاب"]
+  },
+  {
+    "id": "physiology-193",
+    "term": "Repolarization",
+    "arabic": "إعادة الاستقطاب",
+    "definition": "عودة جهد غشاء الخلية باتجاه قيمته السالبة بعد إزالة الاستقطاب.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Repolarization", "إعادة الاستقطاب"]
+  },
+  {
+    "id": "physiology-194",
+    "term": "Hyperpolarization",
+    "arabic": "فرط الاستقطاب",
+    "definition": "زيادة سلبية جهد غشاء الخلية مقارنة بجهد الراحة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Hyperpolarization", "فرط الاستقطاب"]
+  },
+  {
+    "id": "physiology-195",
+    "term": "Threshold Potential",
+    "arabic": "جهد العتبة",
+    "definition": "مستوى من تغير جهد الغشاء إذا تم الوصول إليه يمكن أن يبدأ جهد الفعل.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Threshold Potential", "جهد العتبة"]
+  },
+  {
+    "id": "physiology-196",
+    "term": "Synapse",
+    "arabic": "المشبك العصبي",
+    "definition": "منطقة اتصال وظيفي تسمح بانتقال الإشارة من خلية عصبية إلى خلية أخرى أو إلى خلية مستهدفة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Synapse", "Synapses", "المشبك العصبي"]
+  },
+  {
+    "id": "physiology-197",
+    "term": "Neurotransmitter",
+    "arabic": "ناقل عصبي",
+    "definition": "مادة كيميائية تفرزها الخلايا العصبية لنقل الإشارات عبر المشابك.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Neurotransmitter", "Neurotransmitters", "ناقل عصبي"]
+  },
+  {
+    "id": "physiology-198",
+    "term": "Acetylcholine",
+    "arabic": "أستيل كولين",
+    "definition": "ناقل عصبي يشارك في نقل الإشارات العصبية وتنشيط العضلات وبعض وظائف الجهاز العصبي الذاتي.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Acetylcholine", "ACh", "أستيل كولين"]
+  },
+  {
+    "id": "physiology-199",
+    "term": "Dopamine",
+    "arabic": "الدوبامين",
+    "definition": "ناقل عصبي يشارك في الحركة والتحفيز والمكافأة وبعض الوظائف المعرفية.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Dopamine", "الدوبامين"]
+  },
+  {
+    "id": "physiology-200",
+    "term": "Serotonin",
+    "arabic": "السيروتونين",
+    "definition": "ناقل عصبي يشارك في تنظيم المزاج والنوم والشهية ووظائف أخرى.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Serotonin", "السيروتونين"]
+  },
+  {
+    "id": "physiology-201",
+    "term": "Norepinephrine",
+    "arabic": "النورإبينفرين",
+    "definition": "ناقل عصبي وهرمون يشارك في تنظيم الانتباه والاستجابة للتوتر وضغط الدم.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Norepinephrine", "Noradrenaline", "النورإبينفرين"]
+  },
+  {
+    "id": "physiology-202",
+    "term": "Gamma-Aminobutyric Acid",
+    "arabic": "حمض جاما أمينوبيوتيريك",
+    "definition": "ناقل عصبي مثبط رئيسي في الجهاز العصبي المركزي.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Gamma-Aminobutyric Acid", "GABA", "حمض جاما أمينوبيوتيريك"]
+  },
+  {
+    "id": "physiology-203",
+    "term": "Glutamate",
+    "arabic": "الجلوتامات",
+    "definition": "ناقل عصبي استثاري رئيسي في الجهاز العصبي المركزي وله دور في التعلم والذاكرة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Glutamate", "الجلوتامات"]
+  },
+  {
+    "id": "physiology-204",
+    "term": "Reflex",
+    "arabic": "المنعكس",
+    "definition": "استجابة سريعة ولا إرادية لمحفز معين تتم من خلال مسار عصبي محدد.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Reflex", "Reflexes", "المنعكس"]
+  },
+  {
+    "id": "physiology-205",
+    "term": "Reflex Arc",
+    "arabic": "القوس الانعكاسي",
+    "definition": "المسار العصبي الذي تنتقل خلاله الإشارة أثناء حدوث المنعكس.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Reflex Arc", "القوس الانعكاسي"]
+  },
+  {
+    "id": "physiology-206",
+    "term": "Autonomic Nervous System",
+    "arabic": "الجهاز العصبي الذاتي",
+    "definition": "جزء من الجهاز العصبي ينظم العديد من الوظائف اللاإرادية مثل ضربات القلب والهضم وضغط الدم.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Autonomic Nervous System", "ANS", "الجهاز العصبي الذاتي"]
+  },
+  {
+    "id": "physiology-207",
+    "term": "Sympathetic Nervous System",
+    "arabic": "الجهاز العصبي السمبثاوي",
+    "definition": "جزء من الجهاز العصبي الذاتي يساهم في استجابة الجسم للتوتر والطوارئ.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Sympathetic Nervous System", "الجهاز السمبثاوي"]
+  },
+  {
+    "id": "physiology-208",
+    "term": "Parasympathetic Nervous System",
+    "arabic": "الجهاز العصبي الباراسمبثاوي",
+    "definition": "جزء من الجهاز العصبي الذاتي يساهم في الراحة والهضم والحفاظ على وظائف الجسم الأساسية.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Parasympathetic Nervous System", "الجهاز الباراسمبثاوي"]
+  },
+  {
+    "id": "physiology-209",
+    "term": "Fight or Flight Response",
+    "arabic": "استجابة الكر أو الفر",
+    "definition": "استجابة فسيولوجية تحدث عند التوتر أو الخطر وتجهز الجسم للتعامل مع الموقف.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Fight or Flight Response", "استجابة الكر أو الفر"]
+  },
+  {
+    "id": "physiology-210",
+    "term": "Rest and Digest",
+    "arabic": "الراحة والهضم",
+    "definition": "حالة ترتبط بنشاط الجهاز الباراسمبثاوي وتدعم الهضم والاسترخاء والحفاظ على الطاقة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Rest and Digest", "الراحة والهضم"]
+  },
+  {
+    "id": "physiology-211",
+    "term": "Endocrine System",
+    "arabic": "جهاز الغدد الصماء",
+    "definition": "مجموعة الغدد التي تفرز الهرمونات إلى الدم لتنظيم وظائف الجسم.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Endocrine System", "جهاز الغدد الصماء"]
+  },
+  {
+    "id": "physiology-212",
+    "term": "Hormone",
+    "arabic": "هرمون",
+    "definition": "مادة كيميائية تنتجها خلايا أو غدد وتنتقل لتؤثر في خلايا أو أنسجة مستهدفة.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Hormone", "Hormones", "هرمون", "هرمونات"]
+  },
+  {
+    "id": "physiology-213",
+    "term": "Target Cell",
+    "arabic": "الخلية المستهدفة",
+    "definition": "خلية تحتوي على مستقبلات مناسبة لهرمون أو إشارة معينة وتستجيب لها.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Target Cell", "الخلية المستهدفة"]
+  },
+  {
+    "id": "physiology-214",
+    "term": "Hypothalamus",
+    "arabic": "تحت المهاد",
+    "definition": "منطقة في الدماغ تربط بين الجهاز العصبي وجهاز الغدد الصماء وتشارك في تنظيم الحرارة والجوع والعطش والهرمونات.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Hypothalamus", "تحت المهاد", "الوطاء"]
+  },
+  {
+    "id": "physiology-215",
+    "term": "Pituitary Gland Physiology",
+    "arabic": "وظائف الغدة النخامية",
+    "definition": "تنظيم إفراز عدد من الهرمونات التي تؤثر في النمو والغدة الدرقية والغدد التناسلية والغدة الكظرية وتوازن الماء.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Pituitary Gland Physiology", "وظائف الغدة النخامية"]
+  },
+  {
+    "id": "physiology-216",
+    "term": "Growth Hormone",
+    "arabic": "هرمون النمو",
+    "definition": "هرمون تفرزه الغدة النخامية ويساهم في نمو الأنسجة وتنظيم عمليات الأيض.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Growth Hormone", "GH", "هرمون النمو"]
+  },
+  {
+    "id": "physiology-217",
+    "term": "Thyroid Stimulating Hormone",
+    "arabic": "الهرمون المنبه للغدة الدرقية",
+    "definition": "هرمون تفرزه الغدة النخامية ويحفز الغدة الدرقية لإنتاج هرموناتها.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Thyroid Stimulating Hormone", "TSH", "الهرمون المنبه للدرقية"]
+  },
+  {
+    "id": "physiology-218",
+    "term": "Thyroxine",
+    "arabic": "الثيروكسين",
+    "definition": "هرمون تنتجه الغدة الدرقية ويساهم في تنظيم معدل الأيض والنمو والتطور.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Thyroxine", "T4", "الثيروكسين"]
+  },
+  {
+    "id": "physiology-219",
+    "term": "Triiodothyronine",
+    "arabic": "ثلاثي يودوثيرونين",
+    "definition": "هرمون درقي نشط يساهم في تنظيم معدل الأيض والنمو والتطور.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Triiodothyronine", "T3", "ثلاثي يودوثيرونين"]
+  },
+  {
+    "id": "physiology-220",
+    "term": "Parathyroid Hormone",
+    "arabic": "هرمون الغدة جار الدرقية",
+    "definition": "هرمون يساعد على تنظيم مستوى الكالسيوم في الدم.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Parathyroid Hormone", "PTH", "هرمون جار الدرقية"]
+  },
+  {
+    "id": "physiology-221",
+    "term": "Calcitonin",
+    "arabic": "الكالسيتونين",
+    "definition": "هرمون تفرزه الغدة الدرقية ويساهم في خفض مستوى الكالسيوم في الدم.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Calcitonin", "الكالسيتونين"]
+  },
+  {
+    "id": "physiology-222",
+    "term": "Cortisol",
+    "arabic": "الكورتيزول",
+    "definition": "هرمون تفرزه قشرة الغدة الكظرية ويساهم في تنظيم الاستجابة للتوتر والأيض والمناعة.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Cortisol", "الكورتيزول"]
+  },
+  {
+    "id": "physiology-223",
+    "term": "Epinephrine",
+    "arabic": "الإبينفرين",
+    "definition": "هرمون وناقل عصبي يساعد على تجهيز الجسم للاستجابة السريعة للتوتر والطوارئ.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Epinephrine", "Adrenaline", "الإبينفرين", "الأدرينالين"]
+  },
+  {
+    "id": "physiology-224",
+    "term": "Melatonin",
+    "arabic": "الميلاتونين",
+    "definition": "هرمون تفرزه الغدة الصنوبرية ويساهم في تنظيم دورة النوم واليقظة.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Melatonin", "الميلاتونين"]
+  },
+  {
+    "id": "physiology-225",
+    "term": "Prolactin",
+    "arabic": "البرولاكتين",
+    "definition": "هرمون تفرزه الغدة النخامية ويساهم بصورة رئيسية في إنتاج حليب الثدي.",
+    "category": "Endocrine Physiology",
+    "searchTerms": ["Prolactin", "PRL", "البرولاكتين"]
+  },
+  {
+    "id": "physiology-226",
+    "term": "Oxytocin",
+    "arabic": "الأوكسيتوسين",
+    "definition": "هرمون يساهم في انقباض الرحم أثناء الولادة وفي قذف الحليب أثناء الرضاعة.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Oxytocin", "الأوكسيتوسين"]
+  },
+  {
+    "id": "physiology-227",
+    "term": "Follicle Stimulating Hormone",
+    "arabic": "الهرمون المنبه للجريبات",
+    "definition": "هرمون نخامي يساهم في نمو الجريبات المبيضية وإنتاج الحيوانات المنوية.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Follicle Stimulating Hormone", "FSH", "الهرمون المنبه للجريبات"]
+  },
+  {
+    "id": "physiology-228",
+    "term": "Luteinizing Hormone",
+    "arabic": "الهرمون اللوتيني",
+    "definition": "هرمون نخامي يساهم في حدوث الإباضة وإنتاج الهرمونات الجنسية وتنظيم وظيفة الخصية.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Luteinizing Hormone", "LH", "الهرمون اللوتيني"]
+  },
+  {
+    "id": "physiology-229",
+    "term": "Estrogen",
+    "arabic": "الإستروجين",
+    "definition": "مجموعة من الهرمونات الجنسية التي تساهم في تنظيم الدورة التناسلية وتطور الصفات الجنسية الأنثوية وصحة العظام.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Estrogen", "الإستروجين"]
+  },
+  {
+    "id": "physiology-230",
+    "term": "Progesterone",
+    "arabic": "البروجسترون",
+    "definition": "هرمون جنسي يساهم في تنظيم الدورة الشهرية وتجهيز بطانة الرحم والحفاظ على الحمل.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Progesterone", "البروجسترون"]
+  },
+  {
+    "id": "physiology-231",
+    "term": "Testosterone",
+    "arabic": "التستوستيرون",
+    "definition": "هرمون جنسي رئيسي في الذكور يساهم في إنتاج الحيوانات المنوية وتطور الصفات الجنسية ونمو العضلات.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Testosterone", "التستوستيرون"]
+  },
+  {
+    "id": "physiology-232",
+    "term": "Menstrual Cycle",
+    "arabic": "الدورة الشهرية",
+    "definition": "سلسلة من التغيرات الهرمونية والمبيضية والرحمية التي تحدث بصورة دورية خلال سنوات الخصوبة.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Menstrual Cycle", "الدورة الشهرية"]
+  },
+  {
+    "id": "physiology-233",
+    "term": "Ovulation",
+    "arabic": "الإباضة",
+    "definition": "خروج بويضة ناضجة من المبيض.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Ovulation", "الإباضة"]
+  },
+  {
+    "id": "physiology-234",
+    "term": "Fertilization",
+    "arabic": "الإخصاب",
+    "definition": "اتحاد الحيوان المنوي مع البويضة لتكوين اللاقحة.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Fertilization", "الإخصاب"]
+  },
+  {
+    "id": "physiology-235",
+    "term": "Spermatogenesis",
+    "arabic": "تكوين الحيوانات المنوية",
+    "definition": "عملية إنتاج الحيوانات المنوية في الخصيتين.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Spermatogenesis", "تكوين الحيوانات المنوية"]
+  },
+  {
+    "id": "physiology-236",
+    "term": "Oogenesis",
+    "arabic": "تكوين البويضات",
+    "definition": "عملية تكوين وتطور الخلايا الجنسية الأنثوية في المبيض.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Oogenesis", "تكوين البويضات"]
+  },
+  {
+    "id": "physiology-237",
+    "term": "Pregnancy",
+    "arabic": "الحمل",
+    "definition": "الفترة التي ينمو خلالها الجنين داخل الرحم بعد حدوث الإخصاب والانغراس.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Pregnancy", "الحمل"]
+  },
+  {
+    "id": "physiology-238",
+    "term": "Lactation",
+    "arabic": "إدرار الحليب",
+    "definition": "عملية إنتاج وإفراز حليب الثدي بعد الولادة.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Lactation", "إدرار الحليب", "الرضاعة"]
+  },
+  {
+    "id": "physiology-239",
+    "term": "Milk Ejection Reflex",
+    "arabic": "منعكس قذف الحليب",
+    "definition": "منعكس يؤدي إلى خروج الحليب من الغدد اللبنية نتيجة تحفيز إفراز الأوكسيتوسين.",
+    "category": "Reproductive Physiology",
+    "searchTerms": ["Milk Ejection Reflex", "Let-Down Reflex", "منعكس قذف الحليب"]
+  },
+  {
+    "id": "physiology-240",
+    "term": "Muscle Contraction",
+    "arabic": "انقباض العضلة",
+    "definition": "عملية تنتج فيها العضلة قوة نتيجة تفاعل مكوناتها البروتينية.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Muscle Contraction", "انقباض العضلات"]
+  },
+  {
+    "id": "physiology-241",
+    "term": "Neuromuscular Junction",
+    "arabic": "الوصلة العصبية العضلية",
+    "definition": "منطقة الاتصال بين نهاية العصب الحركي والعضلة الهيكلية التي تنتقل عبرها الإشارة العصبية.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Neuromuscular Junction", "NMJ", "الوصلة العصبية العضلية"]
+  },
+  {
+    "id": "physiology-242",
+    "term": "Motor Unit",
+    "arabic": "الوحدة الحركية",
+    "definition": "عصبون حركي وجميع الألياف العضلية التي يتحكم فيها.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Motor Unit", "الوحدة الحركية"]
+  },
+  {
+    "id": "physiology-243",
+    "term": "Actin",
+    "arabic": "الأكتين",
+    "definition": "بروتين عضلي يتفاعل مع الميوسين للمساهمة في انقباض العضلات.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Actin", "الأكتين"]
+  },
+  {
+    "id": "physiology-244",
+    "term": "Myosin",
+    "arabic": "الميوسين",
+    "definition": "بروتين حركي عضلي يتفاعل مع الأكتين لإنتاج القوة والانقباض.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Myosin", "الميوسين"]
+  },
+  {
+    "id": "physiology-245",
+    "term": "Calcium in Muscle Contraction",
+    "arabic": "الكالسيوم في انقباض العضلات",
+    "definition": "أيون ضروري لبدء التفاعل بين الأكتين والميوسين في العضلات.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Calcium Muscle Contraction", "الكالسيوم وانقباض العضلات"]
+  },
+  {
+    "id": "physiology-246",
+    "term": "Tetanus",
+    "arabic": "التقلص العضلي المستمر",
+    "definition": "حالة من الانقباض العضلي المستمر تنتج عن تكرار التنبيه بحيث لا تحصل العضلة على وقت كافٍ للارتخاء.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Tetanus", "Muscle Tetanus", "التقلص المستمر"]
+  },
+  {
+    "id": "physiology-247",
+    "term": "Muscle Tone",
+    "arabic": "توتر العضلات",
+    "definition": "درجة الانقباض الخفيف والمستمر الموجودة في العضلات أثناء الراحة.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Muscle Tone", "توتر العضلات"]
+  },
+  {
+    "id": "physiology-248",
+    "term": "Fatigue",
+    "arabic": "الإجهاد العضلي",
+    "definition": "انخفاض مؤقت في قدرة العضلة على توليد القوة بعد نشاط متكرر أو مستمر.",
+    "category": "Muscle Physiology",
+    "searchTerms": ["Fatigue", "Muscle Fatigue", "الإجهاد العضلي"]
+  },
+  {
+    "id": "physiology-249",
+    "term": "Motor Control",
+    "arabic": "التحكم الحركي",
+    "definition": "تنظيم الجهاز العصبي لحركة العضلات وتنسيقها لتحقيق حركة مناسبة.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Motor Control", "التحكم الحركي"]
+  },
+  {
+    "id": "physiology-250",
+    "term": "Proprioception",
+    "arabic": "الإحساس بوضعية الجسم",
+    "definition": "القدرة على إدراك وضعية وحركة أجزاء الجسم دون الحاجة إلى رؤيتها.",
+    "category": "Nervous System Physiology",
+    "searchTerms": ["Proprioception", "الإحساس بوضعية الجسم", "الإحساس العميق"]
+  }
+]
