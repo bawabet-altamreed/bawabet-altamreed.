@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        IV Flow Rate Calculator | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="حاسبة IV Flow Rate لطلاب التمريض لحساب معدل تدفق المحاليل الوريدية بطريقة سهلة وسريعة."
+    >
+
+    <meta
+        name="keywords"
+        content="IV Flow Rate, IV Flow Rate Calculator, حاسبة المحاليل, معدل تدفق المحلول, تمريض, Nursing Calculator"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/tools/iv-flow-rate.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="IV Flow Rate Calculator | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="حاسبة معدل تدفق المحاليل الوريدية لطلاب التمريض."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/tools/iv-flow-rate.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .iv-page {
+
+            min-height: 100vh;
+
+            background: #f5f8fa;
+
+            color: #102f46;
+
+        }
+
+
+        .iv-container {
+
+            width: min(
+                1100px,
+                calc(100% - 40px)
+            );
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .iv-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 5000;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.96
+            );
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e4ebef;
+
+        }
+
+
+        .iv-header-inner {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .iv-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            color: #0c3555;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+        }
+
+
+        .iv-brand-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #23829a
+            );
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .iv-brand-title {
+
+            display: block;
+
+            font-size: 19px;
+
+        }
+
+
+        .iv-brand-subtitle {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #78909c;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+        }
+
+
+        .iv-home-button {
+
+            padding: 10px 16px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .iv-hero {
+
+            padding: 60px 0;
+
+            background: linear-gradient(
+                135deg,
+                #092d49,
+                #12657d
+            );
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+        .iv-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+
+            border: 1px solid rgba(
+                255,
+                255,
+                255,
+                0.16
+            );
+
+            font-size: 13px;
+
+        }
+
+
+        .iv-hero h1 {
+
+            margin: 0 0 14px;
+
+            font-size: clamp(
+                34px,
+                5vw,
+                52px
+            );
+
+            line-height: 1.2;
+
+        }
+
+
+        .iv-hero h1 span {
+
+            color: #8ee7f2;
+
+        }
+
+
+        .iv-hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            opacity: 0.88;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .iv-main {
+
+            padding: 50px 0 80px;
+
+        }
+
+
+        .iv-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            gap: 22px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           CALCULATOR CARD
+           ===================================================== */
+
+        .iv-card {
+
+            padding: 30px;
+
+            background: white;
+
+            border: 1px solid #e1eaee;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.05
+                );
+
+        }
+
+
+        .iv-card-header {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .iv-card-header h2 {
+
+            margin: 0 0 7px;
+
+            color: #173b53;
+
+            font-size: 24px;
+
+        }
+
+
+        .iv-card-header p {
+
+            margin: 0;
+
+            color: #778892;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        .iv-form-group {
+
+            margin-bottom: 19px;
+
+        }
+
+
+        .iv-form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #294b5f;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        .iv-input-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 120px;
+
+            gap: 10px;
+
+        }
+
+
+        .iv-input,
+        .iv-select {
+
+            width: 100%;
+
+            height: 50px;
+
+            box-sizing: border-box;
+
+            border: 1px solid #d9e4e9;
+
+            border-radius: 11px;
+
+            outline: none;
+
+            background: #fbfdfe;
+
+            color: #173b53;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            padding: 0 14px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .iv-input:focus,
+        .iv-select:focus {
+
+            border-color: #23829a;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    35,
+                    130,
+                    154,
+                    0.10
+                );
+
+        }
+
+
+        .iv-button {
+
+            width: 100%;
+
+            height: 52px;
+
+            margin-top: 5px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #176b82
+            );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .iv-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 20px
+                rgba(
+                    12,
+                    53,
+                    85,
+                    0.18
+                );
+
+        }
+
+
+        .iv-reset {
+
+            width: 100%;
+
+            height: 44px;
+
+            margin-top: 10px;
+
+            border: 1px solid #dce6ea;
+
+            border-radius: 10px;
+
+            background: white;
+
+            color: #607681;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           RESULT
+           ===================================================== */
+
+        .iv-result {
+
+            display: none;
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            background: linear-gradient(
+                135deg,
+                #edf7f8,
+                #f8fcfd
+            );
+
+            border: 1px solid #d6e9ed;
+
+            text-align: center;
+
+        }
+
+
+        .iv-result.show {
+
+            display: block;
+
+        }
+
+
+        .iv-result-label {
+
+            margin-bottom: 7px;
+
+            color: #63808c;
+
+            font-size: 12px;
+
+        }
+
+
+        .iv-result-value {
+
+            color: #0c5e75;
+
+            font-size: 42px;
+
+            font-weight: 900;
+
+            line-height: 1.2;
+
+        }
+
+
+        .iv-result-unit {
+
+            margin-top: 5px;
+
+            color: #55717e;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        .iv-formula {
+
+            margin-top: 18px;
+
+            padding-top: 15px;
+
+            border-top: 1px solid #dcebed;
+
+            color: #6d818a;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           INFO
+           ===================================================== */
+
+        .iv-info {
+
+            padding: 27px;
+
+            border-radius: 20px;
+
+            background: #092d49;
+
+            color: white;
+
+        }
+
+
+        .iv-info h2 {
+
+            margin: 0 0 15px;
+
+            font-size: 22px;
+
+        }
+
+
+        .iv-info p {
+
+            margin: 0 0 20px;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.72
+            );
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .iv-info-box {
+
+            padding: 17px;
+
+            margin-bottom: 12px;
+
+            border-radius: 13px;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.07
+            );
+
+            border: 1px solid rgba(
+                255,
+                255,
+                255,
+                0.08
+            );
+
+        }
+
+
+        .iv-info-box strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-size: 13px;
+
+        }
+
+
+        .iv-info-box span {
+
+            display: block;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.66
+            );
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FORMULA SECTION
+           ===================================================== */
+
+        .iv-formula-section {
+
+            margin-top: 22px;
+
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid #e1eaee;
+
+            border-radius: 20px;
+
+        }
+
+
+        .iv-formula-section h2 {
+
+            margin: 0 0 14px;
+
+            color: #173b53;
+
+            font-size: 21px;
+
+        }
+
+
+        .iv-formula-display {
+
+            padding: 20px;
+
+            border-radius: 13px;
+
+            background: #f1f7f8;
+
+            color: #0c5e75;
+
+            text-align: center;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            direction: ltr;
+
+        }
+
+
+        .iv-example {
+
+            margin-top: 17px;
+
+            padding: 17px;
+
+            border-radius: 12px;
+
+            background: #fafcfd;
+
+            border: 1px solid #e4ecef;
+
+            color: #647984;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =====================================================
+           WARNING
+           ===================================================== */
+
+        .iv-warning {
+
+            margin-top: 22px;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            background: #fff8e8;
+
+            border: 1px solid #f1dfad;
+
+            color: #705a23;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .iv-warning strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #614d18;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .iv-footer {
+
+            padding: 35px 0 20px;
+
+            background: #092d49;
+
+            color: white;
+
+        }
+
+
+        .iv-footer-inner {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+
+        }
+
+
+        .iv-footer-brand {
+
+            font-size: 15px;
+
+            font-weight: 900;
+
+        }
+
+
+        .iv-footer-links {
+
+            display: flex;
+
+            gap: 18px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .iv-footer-links a {
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.65
+            );
+
+            font-size: 11px;
+
+            text-decoration: none;
+
+        }
+
+
+        .iv-footer-bottom {
+
+            padding-top: 17px;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.45
+            );
+
+            font-size: 10px;
+
+            text-align: center;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .iv-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .iv-container {
+
+                width: min(
+                    calc(100% - 24px),
+                    1100px
+                );
+
+            }
+
+
+            .iv-header-inner {
+
+                min-height: 64px;
+
+            }
+
+
+            .iv-home-button {
+
+                display: none;
+
+            }
+
+
+            .iv-hero {
+
+                padding: 50px 0;
+
+            }
+
+
+            .iv-hero h1 {
+
+                font-size: 35px;
+
+            }
+
+
+            .iv-card {
+
+                padding: 22px;
+
+            }
+
+
+            .iv-input-row {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .iv-footer-inner {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="iv-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="iv-header">
+
+        <div class="iv-container iv-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="iv-brand"
+            >
+
+                <span class="iv-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="iv-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="iv-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="iv-home-button"
+            >
+                🏠 الرئيسية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="iv-hero">
+
+        <div class="iv-container">
+
+            <span class="iv-badge">
+                🧮 Nursing Calculator
+            </span>
+
+
+            <h1>
+
+                حاسبة
+                <span>
+                    IV Flow Rate
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                احسب معدل تدفق المحلول الوريدي
+                بسهولة بناءً على حجم المحلول
+                والوقت المطلوب لإعطائه.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="iv-main">
+
+        <div class="iv-container">
+
+
+            <div class="iv-layout">
+
+
+                <!-- =================================================
+                     CALCULATOR
+                     ================================================= -->
+
+                <section class="iv-card">
+
+
+                    <div class="iv-card-header">
+
+                        <h2>
+                            🧮 احسب معدل التدفق
+                        </h2>
+
+                        <p>
+                            أدخل حجم المحلول والمدة الزمنية
+                            المطلوبة لإعطائه.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- VOLUME -->
+
+                    <div class="iv-form-group">
+
+                        <label for="volume">
+                            حجم المحلول
+                        </label>
+
+                        <div class="iv-input-row">
+
+                            <input
+                                type="number"
+                                id="volume"
+                                class="iv-input"
+                                placeholder="مثال: 1000"
+                                min="0"
+                                step="any"
+                            >
+
+                            <select
+                                id="volumeUnit"
+                                class="iv-select"
+                            >
+
+                                <option value="mL">
+                                    mL
+                                </option>
+
+                                <option value="L">
+                                    L
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIME -->
+
+                    <div class="iv-form-group">
+
+                        <label for="time">
+                            الوقت
+                        </label>
+
+                        <div class="iv-input-row">
+
+                            <input
+                                type="number"
+                                id="time"
+                                class="iv-input"
+                                placeholder="مثال: 8"
+                                min="0"
+                                step="any"
+                            >
+
+                            <select
+                                id="timeUnit"
+                                class="iv-select"
+                            >
+
+                                <option value="hour">
+                                    ساعة
+                                </option>
+
+                                <option value="minute">
+                                    دقيقة
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        class="iv-button"
+                        id="calculateButton"
+                    >
+                        🧮 احسب معدل التدفق
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="iv-reset"
+                        id="resetButton"
+                    >
+                        إعادة تعيين
+                    </button>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        class="iv-result"
+                        id="result"
+                    >
+
+                        <div class="iv-result-label">
+                            معدل التدفق
+                        </div>
+
+
+                        <div
+                            class="iv-result-value"
+                            id="resultValue"
+                        >
+                            —
+                        </div>
+
+
+                        <div class="iv-result-unit">
+                            mL / hour
+                        </div>
+
+
+                        <div class="iv-formula">
+                            Volume ÷ Time = Flow Rate
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     INFO
+                     ================================================= -->
+
+                <aside class="iv-info">
+
+                    <h2>
+                        💡 ما هو IV Flow Rate؟
+                    </h2>
+
+                    <p>
+
+                        هو معدل إعطاء المحلول الوريدي
+                        للمريض، ويتم التعبير عنه عادةً
+                        بوحدة mL/hour عند استخدام
+                        مضخة المحاليل الوريدية.
+
+                    </p>
+
+
+                    <div class="iv-info-box">
+
+                        <strong>
+                            📌 Volume
+                        </strong>
+
+                        <span>
+                            حجم المحلول الذي سيتم إعطاؤه للمريض.
+                        </span>
+
+                    </div>
+
+
+                    <div class="iv-info-box">
+
+                        <strong>
+                            ⏱️ Time
+                        </strong>
+
+                        <span>
+                            الوقت المحدد لإعطاء كمية المحلول.
+                        </span>
+
+                    </div>
+
+
+                    <div class="iv-info-box">
+
+                        <strong>
+                            🧮 Flow Rate
+                        </strong>
+
+                        <span>
+                            معدل تدفق المحلول بوحدة mL/hour.
+                        </span>
+
+                    </div>
+
+                </aside>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORMULA
+                 ================================================= -->
+
+            <section class="iv-formula-section">
+
+                <h2>
+                    📐 معادلة IV Flow Rate
+                </h2>
+
+
+                <div class="iv-formula-display">
+
+                    Flow Rate =
+                    Volume (mL)
+                    ÷
+                    Time (hours)
+
+                </div>
+
+
+                <div class="iv-example">
+
+                    <strong>
+                        مثال:
+                    </strong>
+
+                    إذا كان حجم المحلول
+                    <b>1000 mL</b>
+                    والمطلوب إعطاؤه خلال
+                    <b>8 ساعات</b>:
+
+                    <br>
+
+                    1000 ÷ 8 =
+
+                    <strong>
+                        125 mL/hour
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 WARNING
+                 ================================================= -->
+
+            <section class="iv-warning">
+
+                <strong>
+                    ⚠️ تنبيه تعليمي
+                </strong>
+
+                هذه الحاسبة مخصصة للتدريب والتعليم
+                على الحسابات التمريضية فقط.
+                يجب دائمًا مراجعة أمر الطبيب،
+                بروتوكول المنشأة الصحية،
+                وإعدادات جهاز الـInfusion Pump
+                قبل إعطاء أي محلول للمريض.
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="iv-footer">
+
+        <div class="iv-container">
+
+
+            <div class="iv-footer-inner">
+
+
+                <div class="iv-footer-brand">
+                    🩺 بوابة التمريض
+                </div>
+
+
+                <div class="iv-footer-links">
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="../knowledge/index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../dictionary.html">
+                        قاموس التمريض
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="iv-footer-bottom">
+
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    const volumeInput =
+        document.getElementById(
+            "volume"
+        );
+
+
+    const volumeUnit =
+        document.getElementById(
+            "volumeUnit"
+        );
+
+
+    const timeInput =
+        document.getElementById(
+            "time"
+        );
+
+
+    const timeUnit =
+        document.getElementById(
+            "timeUnit"
+        );
+
+
+    const calculateButton =
+        document.getElementById(
+            "calculateButton"
+        );
+
+
+    const resetButton =
+        document.getElementById(
+            "resetButton"
+        );
+
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    const resultValue =
+        document.getElementById(
+            "resultValue"
+        );
+
+
+
+    /* =====================================================
+       CALCULATE
+       ===================================================== */
+
+    calculateButton.addEventListener(
+        "click",
+        function () {
+
+            let volume =
+                parseFloat(
+                    volumeInput.value
+                );
+
+
+            let time =
+                parseFloat(
+                    timeInput.value
+                );
+
+
+            if (
+                isNaN(volume) ||
+                isNaN(time) ||
+                volume <= 0 ||
+                time <= 0
+            ) {
+
+                alert(
+                    "من فضلك أدخل قيمًا صحيحة أكبر من صفر."
+                );
+
+                return;
+
+            }
+
+
+            /* Convert volume to mL */
+
+            if (
+                volumeUnit.value === "L"
+            ) {
+
+                volume =
+                    volume * 1000;
+
+            }
+
+
+            /* Convert time to hours */
+
+            if (
+                timeUnit.value === "minute"
+            ) {
+
+                time =
+                    time / 60;
+
+            }
+
+
+            const flowRate =
+                volume / time;
+
+
+            resultValue.textContent =
+                flowRate
+                    .toFixed(2)
+                    .replace(
+                        /\.00$/,
+                        ""
+                    );
+
+
+            result.classList.add(
+                "show"
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    resetButton.addEventListener(
+        "click",
+        function () {
+
+            volumeInput.value = "";
+
+            timeInput.value = "";
+
+            volumeUnit.value = "mL";
+
+            timeUnit.value = "hour";
+
+            resultValue.textContent = "—";
+
+            result.classList.remove(
+                "show"
+            );
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
