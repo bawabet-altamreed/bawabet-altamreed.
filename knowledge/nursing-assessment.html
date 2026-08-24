@@ -1,0 +1,3855 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Nursing Assessment | تقييم المريض | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="شرح Nursing Assessment وتقييم المريض في التمريض. تعرف على خطوات تقييم المريض، Subjective Data، Objective Data، الفحص الجسدي، العلامات الحيوية، والتوثيق التمريضي."
+    >
+
+    <meta
+        name="keywords"
+        content="Nursing Assessment, Patient Assessment, تقييم المريض, التقييم التمريضي, Subjective Data, Objective Data, Physical Assessment, Nursing, تمريض, طلاب التمريض, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/knowledge/nursing-assessment.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:title"
+        content="Nursing Assessment | تقييم المريض | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="مرجع مبسط لفهم Nursing Assessment وخطوات تقييم المريض وجمع البيانات التمريضية."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/knowledge/nursing-assessment.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .assessment-page {
+
+            min-height:
+                100vh;
+
+            background:
+                #f5f8fa;
+
+            color:
+                #173b53;
+
+        }
+
+
+        .assessment-container {
+
+            width:
+                min(
+                    1120px,
+                    calc(100% - 40px)
+                );
+
+            margin:
+                auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .assessment-header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                5000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid #e3ebef;
+
+        }
+
+
+        .assessment-header-inner {
+
+            min-height:
+                72px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+        }
+
+
+        .assessment-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                11px;
+
+            color:
+                #0c3555;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                900;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        .assessment-brand-icon {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color:
+                white;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .assessment-brand-title {
+
+            display:
+                block;
+
+            font-size:
+                19px;
+
+        }
+
+
+        .assessment-brand-subtitle {
+
+            display:
+                block;
+
+            margin-top:
+                2px;
+
+            color:
+                #78909c;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .assessment-nav {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                5px;
+
+        }
+
+
+        .assessment-nav a {
+
+            padding:
+                9px 13px;
+
+            border-radius:
+                9px;
+
+            color:
+                #52636e;
+
+            font-size:
+                14px;
+
+            text-decoration:
+                none;
+
+            transition:
+                0.2s ease;
+
+        }
+
+
+        .assessment-nav a:hover {
+
+            background:
+                #eef5f7;
+
+            color:
+                #0c3555;
+
+        }
+
+
+        .assessment-nav .active {
+
+            background:
+                #eaf5f7;
+
+            color:
+                #0c5e75;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .assessment-home {
+
+            padding:
+                10px 16px;
+
+            border-radius:
+                10px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            text-decoration:
+                none;
+
+            font-size:
+                13px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .assessment-hero {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                70px 0 65px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .assessment-hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                420px;
+
+            height:
+                420px;
+
+            border-radius:
+                50%;
+
+            left:
+                -150px;
+
+            top:
+                -230px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .assessment-hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                330px;
+
+            height:
+                330px;
+
+            border-radius:
+                50%;
+
+            right:
+                -100px;
+
+            bottom:
+                -220px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .assessment-hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                850px;
+
+            margin:
+                auto;
+
+            text-align:
+                center;
+
+        }
+
+
+        .assessment-badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            padding:
+                9px 16px;
+
+            margin-bottom:
+                19px;
+
+            border-radius:
+                50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.17
+                );
+
+            font-size:
+                13px;
+
+        }
+
+
+        .assessment-hero h1 {
+
+            margin:
+                0 0 13px;
+
+            font-size:
+                clamp(
+                    35px,
+                    5vw,
+                    58px
+                );
+
+            line-height:
+                1.2;
+
+        }
+
+
+        .assessment-hero h1 span {
+
+            color:
+                #8ee7f2;
+
+        }
+
+
+        .assessment-hero p {
+
+            max-width:
+                750px;
+
+            margin:
+                auto;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.86
+                );
+
+            font-size:
+                16px;
+
+            line-height:
+                2;
+
+        }
+
+
+        /* =====================================================
+           BREADCRUMB
+           ===================================================== */
+
+        .assessment-breadcrumb {
+
+            padding:
+                18px 0;
+
+            background:
+                white;
+
+            border-bottom:
+                1px solid #e5ecef;
+
+        }
+
+
+        .assessment-breadcrumb-inner {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                7px;
+
+            color:
+                #81909a;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .assessment-breadcrumb a {
+
+            color:
+                #0c5e75;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                700;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .assessment-main {
+
+            padding:
+                48px 0 70px;
+
+        }
+
+
+        /* =====================================================
+           INTRO CARD
+           ===================================================== */
+
+        .assessment-intro {
+
+            padding:
+                28px;
+
+            margin-bottom:
+                25px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                19px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.035
+                );
+
+        }
+
+
+        .assessment-intro h2 {
+
+            margin:
+                0 0 12px;
+
+            color:
+                #0c3555;
+
+            font-size:
+                25px;
+
+        }
+
+
+        .assessment-intro p {
+
+            margin:
+                0;
+
+            color:
+                #657983;
+
+            font-size:
+                14px;
+
+            line-height:
+                2;
+
+        }
+
+
+        /* =====================================================
+           IMPORTANT NOTE
+           ===================================================== */
+
+        .assessment-note {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                15px;
+
+            margin:
+                25px 0;
+
+            padding:
+                20px;
+
+            border-radius:
+                16px;
+
+            background:
+                #edf7f8;
+
+            border:
+                1px solid #d6e9ec;
+
+        }
+
+
+        .assessment-note-icon {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            flex:
+                0 0 45px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                white;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .assessment-note strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                #0c4d63;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .assessment-note span {
+
+            color:
+                #66808a;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+           ===================================================== */
+
+        .assessment-section {
+
+            margin-top:
+                28px;
+
+            padding:
+                28px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                19px;
+
+        }
+
+
+        .assessment-section-heading {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                13px;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .assessment-section-icon {
+
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            flex:
+                0 0 48px;
+
+            border-radius:
+                13px;
+
+            background:
+                #edf6f8;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .assessment-section-heading h2 {
+
+            margin:
+                0;
+
+            color:
+                #173b53;
+
+            font-size:
+                23px;
+
+        }
+
+
+        .assessment-section-heading span {
+
+            display:
+                block;
+
+            margin-top:
+                3px;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            direction:
+                ltr;
+
+            text-align:
+                right;
+
+        }
+
+
+        .assessment-section p {
+
+            margin:
+                0 0 15px;
+
+            color:
+                #657983;
+
+            font-size:
+                14px;
+
+            line-height:
+                2;
+
+        }
+
+
+        /* =====================================================
+           STEPS
+           ===================================================== */
+
+        .assessment-steps {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    5,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+        }
+
+
+        .assessment-step {
+
+            padding:
+                19px 15px;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                14px;
+
+            background:
+                #fafcfd;
+
+            text-align:
+                center;
+
+        }
+
+
+        .assessment-step-number {
+
+            width:
+                36px;
+
+            height:
+                36px;
+
+            margin:
+                0 auto 11px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .assessment-step h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .assessment-step span {
+
+            color:
+                #7b8c95;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        /* =====================================================
+           DATA TYPES
+           ===================================================== */
+
+        .data-types {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                16px;
+
+        }
+
+
+        .data-type {
+
+            padding:
+                22px;
+
+            border-radius:
+                16px;
+
+            border:
+                1px solid #e2eaee;
+
+        }
+
+
+        .data-type.subjective {
+
+            background:
+                #f5f9ff;
+
+        }
+
+
+        .data-type.objective {
+
+            background:
+                #f5fbf8;
+
+        }
+
+
+        .data-type-icon {
+
+            font-size:
+                26px;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .data-type h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .data-type-en {
+
+            margin-bottom:
+                12px;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            direction:
+                ltr;
+
+            text-align:
+                right;
+
+        }
+
+
+        .data-type p {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .data-type ul {
+
+            margin:
+                0;
+
+            padding-right:
+                19px;
+
+            color:
+                #667984;
+
+            font-size:
+                12px;
+
+            line-height:
+                2;
+
+        }
+
+
+        /* =====================================================
+           ASSESSMENT METHODS
+           ===================================================== */
+
+        .methods-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+        }
+
+
+        .method-card {
+
+            padding:
+                20px;
+
+            background:
+                #fafcfd;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                14px;
+
+        }
+
+
+        .method-card-icon {
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .method-card h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .method-card .method-en {
+
+            margin-bottom:
+                9px;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            direction:
+                ltr;
+
+            text-align:
+                right;
+
+        }
+
+
+        .method-card p {
+
+            margin:
+                0;
+
+            color:
+                #778891;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           HEAD TO TOE
+           ===================================================== */
+
+        .body-assessment {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+        }
+
+
+        .body-item {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                12px;
+
+            padding:
+                16px;
+
+            background:
+                #fafcfd;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                13px;
+
+        }
+
+
+        .body-item-number {
+
+            width:
+                30px;
+
+            height:
+                30px;
+
+            flex:
+                0 0 30px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                9px;
+
+            background:
+                #edf6f8;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                12px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .body-item strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                4px;
+
+            color:
+                #173b53;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .body-item span {
+
+            color:
+                #788892;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           VITAL SIGNS
+           ===================================================== */
+
+        .vital-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+        }
+
+
+        .vital-card {
+
+            padding:
+                19px;
+
+            text-align:
+                center;
+
+            background:
+                #fafcfd;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                14px;
+
+        }
+
+
+        .vital-card-icon {
+
+            font-size:
+                26px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .vital-card h3 {
+
+            margin:
+                0 0 5px;
+
+            color:
+                #173b53;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .vital-card span {
+
+            color:
+                #788892;
+
+            font-size:
+                11px;
+
+        }
+
+
+        /* =====================================================
+           RED FLAGS
+           ===================================================== */
+
+        .red-flags {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                10px;
+
+        }
+
+
+        .red-flag {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                10px;
+
+            padding:
+                14px;
+
+            background:
+                #fff8f6;
+
+            border:
+                1px solid #f1ddd8;
+
+            border-radius:
+                12px;
+
+        }
+
+
+        .red-flag-icon {
+
+            font-size:
+                18px;
+
+        }
+
+
+        .red-flag span {
+
+            color:
+                #765f5a;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           DOCUMENTATION
+           ===================================================== */
+
+        .documentation-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                11px;
+
+        }
+
+
+        .documentation-item {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                14px;
+
+            background:
+                #fafcfd;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                11px;
+
+        }
+
+
+        .documentation-item-icon {
+
+            width:
+                31px;
+
+            height:
+                31px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                8px;
+
+            background:
+                #edf6f8;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .documentation-item span {
+
+            color:
+                #667984;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           EXAM TIPS
+           ===================================================== */
+
+        .exam-box {
+
+            padding:
+                22px;
+
+            border-radius:
+                16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #176b82
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .exam-box h3 {
+
+            margin:
+                0 0 12px;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .exam-box ul {
+
+            margin:
+                0;
+
+            padding-right:
+                20px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.85
+                );
+
+            font-size:
+                13px;
+
+            line-height:
+                2;
+
+        }
+
+
+        /* =====================================================
+           RELATED
+           ===================================================== */
+
+        .related-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+        }
+
+
+        .related-card {
+
+            display:
+                block;
+
+            padding:
+                19px;
+
+            background:
+                #fafcfd;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius:
+                14px;
+
+            color:
+                #173b53;
+
+            text-decoration:
+                none;
+
+            transition:
+                0.2s ease;
+
+        }
+
+
+        .related-card:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #b9d5dc;
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.06
+                );
+
+        }
+
+
+        .related-card-icon {
+
+            font-size:
+                24px;
+
+            margin-bottom:
+                9px;
+
+        }
+
+
+        .related-card h3 {
+
+            margin:
+                0 0 5px;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .related-card span {
+
+            color:
+                #7a8992;
+
+            font-size:
+                11px;
+
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+           ===================================================== */
+
+        .assessment-disclaimer {
+
+            margin-top:
+                28px;
+
+            padding:
+                18px;
+
+            border:
+                1px solid #e5e9eb;
+
+            border-radius:
+                14px;
+
+            background:
+                #f8fafb;
+
+            color:
+                #7b8b93;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.9;
+
+            text-align:
+                center;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .assessment-footer {
+
+            padding:
+                42px 0 20px;
+
+            background:
+                #092d49;
+
+            color:
+                white;
+
+        }
+
+
+        .assessment-footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap:
+                30px;
+
+            padding-bottom:
+                28px;
+
+            border-bottom:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.11
+                );
+
+        }
+
+
+        .assessment-footer-brand h3 {
+
+            margin:
+                0 0 9px;
+
+            font-size:
+                19px;
+
+        }
+
+
+        .assessment-footer-brand p {
+
+            max-width:
+                430px;
+
+            margin:
+                0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.63
+                );
+
+            font-size:
+                12px;
+
+            line-height:
+                1.9;
+
+        }
+
+
+        .assessment-footer-column h4 {
+
+            margin:
+                0 0 13px;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .assessment-footer-column a {
+
+            display:
+                block;
+
+            margin-bottom:
+                9px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.63
+                );
+
+            font-size:
+                12px;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .assessment-footer-column a:hover {
+
+            color:
+                white;
+
+        }
+
+
+        .assessment-footer-bottom {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            padding-top:
+                17px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.43
+                );
+
+            font-size:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .assessment-steps {
+
+                grid-template-columns:
+                    repeat(
+                        3,
+                        1fr
+                    );
+
+            }
+
+
+            .methods-grid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .vital-grid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .assessment-footer-grid {
+
+                grid-template-columns:
+                    2fr 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .assessment-nav {
+
+                display:
+                    none;
+
+            }
+
+
+            .data-types {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .body-assessment {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .related-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .assessment-container {
+
+                width:
+                    min(
+                        calc(100% - 24px),
+                        1120px
+                    );
+
+            }
+
+
+            .assessment-header-inner {
+
+                min-height:
+                    64px;
+
+            }
+
+
+            .assessment-home {
+
+                display:
+                    none;
+
+            }
+
+
+            .assessment-hero {
+
+                padding:
+                    52px 0 48px;
+
+            }
+
+
+            .assessment-hero h1 {
+
+                font-size:
+                    35px;
+
+            }
+
+
+            .assessment-hero p {
+
+                font-size:
+                    13px;
+
+            }
+
+
+            .assessment-main {
+
+                padding:
+                    32px 0 55px;
+
+            }
+
+
+            .assessment-section,
+            .assessment-intro {
+
+                padding:
+                    21px;
+
+            }
+
+
+            .assessment-steps {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .methods-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .body-assessment {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .vital-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .red-flags {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .documentation-list {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .assessment-footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .assessment-footer-bottom {
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="assessment-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="assessment-header">
+
+        <div class="assessment-container assessment-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="assessment-brand"
+                aria-label="العودة إلى الصفحة الرئيسية"
+            >
+
+                <span class="assessment-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="assessment-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="assessment-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <nav
+                class="assessment-nav"
+                aria-label="القائمة الرئيسية"
+            >
+
+                <a href="../index.html">
+                    الرئيسية
+                </a>
+
+                <a href="../drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    المعرفة التمريضية
+                </a>
+
+                <a href="../tools.html">
+                    الأدوات والحاسبات
+                </a>
+
+                <a href="../dictionary.html">
+                    قاموس التمريض
+                </a>
+
+            </nav>
+
+
+            <a
+                href="index.html"
+                class="assessment-home"
+            >
+                📚 المعرفة
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="assessment-hero">
+
+        <div class="assessment-container">
+
+            <div class="assessment-hero-content">
+
+                <span class="assessment-badge">
+                    🩺 Nursing Assessment
+                </span>
+
+
+                <h1>
+
+                    تقييم
+                    <span>
+                        المريض
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Nursing Assessment هو الخطوة الأساسية
+                    لفهم حالة المريض وجمع المعلومات اللازمة
+                    لتحديد احتياجاته ووضع خطة الرعاية التمريضية
+                    المناسبة.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BREADCRUMB
+         ===================================================== -->
+
+    <div class="assessment-breadcrumb">
+
+        <div class="assessment-container assessment-breadcrumb-inner">
+
+            <a href="index.html">
+                المعرفة التمريضية
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                Nursing Assessment
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="assessment-main">
+
+        <div class="assessment-container">
+
+
+            <!-- =================================================
+                 INTRO
+                 ================================================= -->
+
+            <section class="assessment-intro">
+
+                <h2>
+                    📋 ما هو Nursing Assessment؟
+                </h2>
+
+                <p>
+
+                    التقييم التمريضي هو عملية منظمة لجمع
+                    المعلومات عن الحالة الصحية للمريض،
+                    وتحليل هذه المعلومات وتوثيقها للمساعدة
+                    في تحديد المشكلات والاحتياجات التمريضية.
+
+                    ويشمل التقييم عادةً المعلومات التي يذكرها
+                    المريض بنفسه بالإضافة إلى البيانات التي
+                    يمكن للممرض ملاحظتها أو قياسها.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NOTE
+                 ================================================= -->
+
+            <div class="assessment-note">
+
+                <div class="assessment-note-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <strong>
+                        نقطة مهمة
+                    </strong>
+
+                    <span>
+
+                        Assessment ليس مجرد قياس العلامات الحيوية.
+                        بل هو عملية شاملة تشمل التاريخ الصحي،
+                        الملاحظة، الفحص الجسدي، البيانات الذاتية
+                        والموضوعية وغيرها من المعلومات المهمة.
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PURPOSE
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            أهداف التقييم التمريضي
+                        </h2>
+
+                        <span>
+                            Purposes of Nursing Assessment
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    الهدف من التقييم هو تكوين صورة واضحة
+                    عن حالة المريض واحتياجاته الصحية والتمريضية.
+                </p>
+
+
+                <div class="documentation-list">
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🧠
+                        </div>
+
+                        <span>
+                            التعرف على الحالة الصحية الحالية للمريض.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🔎
+                        </div>
+
+                        <span>
+                            اكتشاف المشكلات أو التغيرات الصحية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            📊
+                        </div>
+
+                        <span>
+                            الحصول على بيانات تساعد في اتخاذ القرارات التمريضية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            📝
+                        </div>
+
+                        <span>
+                            إنشاء قاعدة معلومات يمكن استخدامها في خطة الرعاية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🔄
+                        </div>
+
+                        <span>
+                            متابعة التغيرات في حالة المريض مع مرور الوقت.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🤝
+                        </div>
+
+                        <span>
+                            تحسين التواصل بين أعضاء فريق الرعاية الصحية.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NURSING PROCESS
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🔄
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            التقييم وعلاقته بـ Nursing Process
+                        </h2>
+
+                        <span>
+                            Nursing Process
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    Assessment هو المرحلة الأولى في عملية التمريض،
+                    وتأتي بعده المراحل الأخرى التي تعتمد على البيانات
+                    التي تم جمعها أثناء التقييم.
+
+                </p>
+
+
+                <div class="assessment-steps">
+
+
+                    <div class="assessment-step">
+
+                        <div class="assessment-step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            التقييم
+                        </h3>
+
+                        <span>
+                            Assessment
+                        </span>
+
+                    </div>
+
+
+                    <div class="assessment-step">
+
+                        <div class="assessment-step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            التشخيص التمريضي
+                        </h3>
+
+                        <span>
+                            Nursing Diagnosis
+                        </span>
+
+                    </div>
+
+
+                    <div class="assessment-step">
+
+                        <div class="assessment-step-number">
+                            3
+                        </div>
+
+                        <h3>
+                            التخطيط
+                        </h3>
+
+                        <span>
+                            Planning
+                        </span>
+
+                    </div>
+
+
+                    <div class="assessment-step">
+
+                        <div class="assessment-step-number">
+                            4
+                        </div>
+
+                        <h3>
+                            التنفيذ
+                        </h3>
+
+                        <span>
+                            Implementation
+                        </span>
+
+                    </div>
+
+
+                    <div class="assessment-step">
+
+                        <div class="assessment-step-number">
+                            5
+                        </div>
+
+                        <h3>
+                            التقييم النهائي
+                        </h3>
+
+                        <span>
+                            Evaluation
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DATA TYPES
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            أنواع بيانات المريض
+                        </h2>
+
+                        <span>
+                            Types of Patient Data
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-types">
+
+
+                    <article class="data-type subjective">
+
+                        <div class="data-type-icon">
+                            🗣️
+                        </div>
+
+                        <h3>
+                            البيانات الذاتية
+                        </h3>
+
+                        <div class="data-type-en">
+                            Subjective Data
+                        </div>
+
+                        <p>
+
+                            معلومات يشعر بها المريض ويصفها
+                            بنفسه، ولا يمكن للممرض قياسها بشكل
+                            مباشر بنفس الطريقة التي يقيس بها
+                            العلامات الحيوية.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                الألم الذي يصفه المريض.
+                            </li>
+
+                            <li>
+                                الشعور بالغثيان.
+                            </li>
+
+                            <li>
+                                الدوخة أو التعب كما يصفها المريض.
+                            </li>
+
+                            <li>
+                                التاريخ الصحي الذي يذكره المريض.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <article class="data-type objective">
+
+                        <div class="data-type-icon">
+                            👁️
+                        </div>
+
+                        <h3>
+                            البيانات الموضوعية
+                        </h3>
+
+                        <div class="data-type-en">
+                            Objective Data
+                        </div>
+
+                        <p>
+
+                            معلومات يمكن ملاحظتها أو قياسها
+                            أو الحصول عليها من الفحص والأجهزة
+                            والاختبارات.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                درجة الحرارة.
+                            </li>
+
+                            <li>
+                                Pulse وRespiration.
+                            </li>
+
+                            <li>
+                                Blood Pressure.
+                            </li>
+
+                            <li>
+                                الملاحظات الناتجة عن الفحص الجسدي.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ASSESSMENT METHODS
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🔍
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            طرق جمع البيانات أثناء الفحص
+                        </h2>
+
+                        <span>
+                            Physical Assessment Techniques
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    أثناء الفحص الجسدي يستخدم الممرض مجموعة
+                    من التقنيات الأساسية للحصول على معلومات
+                    عن حالة المريض.
+
+                </p>
+
+
+                <div class="methods-grid">
+
+
+                    <article class="method-card">
+
+                        <div class="method-card-icon">
+                            👀
+                        </div>
+
+                        <h3>
+                            الملاحظة
+                        </h3>
+
+                        <div class="method-en">
+                            Inspection
+                        </div>
+
+                        <p>
+                            ملاحظة المريض وشكل الجسم والجلد
+                            والتنفس والحركة وأي علامات ظاهرة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="method-card">
+
+                        <div class="method-card-icon">
+                            🤲
+                        </div>
+
+                        <h3>
+                            الجس
+                        </h3>
+
+                        <div class="method-en">
+                            Palpation
+                        </div>
+
+                        <p>
+                            استخدام اليدين لتقييم بعض الخصائص
+                            مثل الحرارة والملمس والتورم والألم.
+                        </p>
+
+                    </article>
+
+
+                    <article class="method-card">
+
+                        <div class="method-card-icon">
+                            🩺
+                        </div>
+
+                        <h3>
+                            القرع
+                        </h3>
+
+                        <div class="method-en">
+                            Percussion
+                        </div>
+
+                        <p>
+                            النقر بطريقة منظمة على سطح الجسم
+                            للمساعدة في تقييم الأنسجة أو الأعضاء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="method-card">
+
+                        <div class="method-card-icon">
+                            👂
+                        </div>
+
+                        <h3>
+                            الاستماع بالسماعة
+                        </h3>
+
+                        <div class="method-en">
+                            Auscultation
+                        </div>
+
+                        <p>
+                            الاستماع إلى أصوات الجسم مثل
+                            أصوات القلب والرئتين والأمعاء.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 HEAD TO TOE
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🧍
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Head-to-Toe Assessment
+                        </h2>
+
+                        <span>
+                            التقييم من الرأس إلى القدمين
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    يمكن إجراء التقييم الجسدي بطريقة منظمة
+                    من الرأس إلى القدمين حتى لا يتم نسيان
+                    جزء مهم من جسم المريض.
+
+                </p>
+
+
+                <div class="body-assessment">
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الرأس والوجه
+                            </strong>
+
+                            <span>
+                                المظهر العام، الوعي، العينان والفم.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الرقبة
+                            </strong>
+
+                            <span>
+                                الحركة والمظهر وأي تغيرات ظاهرة.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الجهاز التنفسي
+                            </strong>
+
+                            <span>
+                                معدل التنفس، الجهد التنفسي وأصوات الرئة.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                القلب والدورة الدموية
+                            </strong>
+
+                            <span>
+                                النبض، ضغط الدم، لون الجلد والتروية.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            5
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                البطن
+                            </strong>
+
+                            <span>
+                                الشكل والألم وأصوات الأمعاء حسب الحاجة.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            6
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الجهاز العضلي
+                            </strong>
+
+                            <span>
+                                الحركة والقوة والتوازن حسب الحالة.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            7
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الجلد
+                            </strong>
+
+                            <span>
+                                اللون، الحرارة، الرطوبة، سلامة الجلد.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            8
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الأطراف
+                            </strong>
+
+                            <span>
+                                الحركة، الإحساس، التورم والتروية.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="body-item">
+
+                        <div class="body-item-number">
+                            9
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الحالة العامة
+                            </strong>
+
+                            <span>
+                                مستوى الوعي والراحة والمظهر العام للمريض.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 VITAL SIGNS
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        ❤️
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            العلامات الحيوية أثناء التقييم
+                        </h2>
+
+                        <span>
+                            Vital Signs
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    العلامات الحيوية جزء مهم من تقييم حالة
+                    المريض، ويجب تفسيرها في سياق حالة المريض
+                    وليس الاعتماد على رقم منفرد فقط.
+
+                </p>
+
+
+                <div class="vital-grid">
+
+
+                    <div class="vital-card">
+
+                        <div class="vital-card-icon">
+                            🌡️
+                        </div>
+
+                        <h3>
+                            Temperature
+                        </h3>
+
+                        <span>
+                            درجة الحرارة
+                        </span>
+
+                    </div>
+
+
+                    <div class="vital-card">
+
+                        <div class="vital-card-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Pulse
+                        </h3>
+
+                        <span>
+                            معدل النبض
+                        </span>
+
+                    </div>
+
+
+                    <div class="vital-card">
+
+                        <div class="vital-card-icon">
+                            🫁
+                        </div>
+
+                        <h3>
+                            Respiration
+                        </h3>
+
+                        <span>
+                            معدل التنفس
+                        </span>
+
+                    </div>
+
+
+                    <div class="vital-card">
+
+                        <div class="vital-card-icon">
+                            🩸
+                        </div>
+
+                        <h3>
+                            Blood Pressure
+                        </h3>
+
+                        <span>
+                            ضغط الدم
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RED FLAGS
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🚨
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            علامات تستدعي الانتباه
+                        </h2>
+
+                        <span>
+                            Red Flags
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    أثناء التقييم يجب الانتباه إلى أي تغير
+                    مفاجئ أو غير طبيعي في حالة المريض وإبلاغ
+                    المسؤول أو الفريق الصحي وفقًا للبروتوكول
+                    المتبع في مكان الرعاية.
+
+                </p>
+
+
+                <div class="red-flags">
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            تغير مفاجئ في مستوى الوعي أو الاستجابة.
+                        </span>
+
+                    </div>
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            صعوبة واضحة أو تدهور في التنفس.
+                        </span>
+
+                    </div>
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            تغير شديد أو مفاجئ في العلامات الحيوية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            ألم شديد أو متزايد بشكل مفاجئ.
+                        </span>
+
+                    </div>
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            نزيف واضح أو علامات تدهور في الحالة العامة.
+                        </span>
+
+                    </div>
+
+
+                    <div class="red-flag">
+
+                        <div class="red-flag-icon">
+                            ⚠️
+                        </div>
+
+                        <span>
+                            تغير ملحوظ في لون الجلد أو التروية.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DOCUMENTATION
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            التوثيق التمريضي
+                        </h2>
+
+                        <span>
+                            Nursing Documentation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    تسجيل نتائج التقييم بدقة يساعد على متابعة
+                    حالة المريض والتواصل بين أعضاء الفريق الصحي.
+
+                </p>
+
+
+                <div class="documentation-list">
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            ✔️
+                        </div>
+
+                        <span>
+                            تسجيل البيانات بشكل واضح ودقيق.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🕐
+                        </div>
+
+                        <span>
+                            تسجيل الوقت والتاريخ عند الحاجة.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            📊
+                        </div>
+
+                        <span>
+                            تسجيل القياسات والنتائج الفعلية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🗣️
+                        </div>
+
+                        <span>
+                            توضيح كلام المريض عند توثيق البيانات الذاتية.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🔄
+                        </div>
+
+                        <span>
+                            توثيق التغيرات المهمة في حالة المريض.
+                        </span>
+
+                    </div>
+
+
+                    <div class="documentation-item">
+
+                        <div class="documentation-item-icon">
+                            🔒
+                        </div>
+
+                        <span>
+                            الحفاظ على سرية معلومات المريض.
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EXAM TIPS
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            أهم النقاط للامتحان
+                        </h2>
+
+                        <span>
+                            Nursing Exam Tips
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="exam-box">
+
+                    <h3>
+                        🔥 ركز في دول
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Assessment هو أول مرحلة في Nursing Process.
+                        </li>
+
+                        <li>
+                            Subjective Data = ما يشعر به المريض ويصفه بنفسه.
+                        </li>
+
+                        <li>
+                            Objective Data = بيانات يمكن ملاحظتها أو قياسها.
+                        </li>
+
+                        <li>
+                            Inspection = الملاحظة.
+                        </li>
+
+                        <li>
+                            Palpation = الجس.
+                        </li>
+
+                        <li>
+                            Percussion = القرع.
+                        </li>
+
+                        <li>
+                            Auscultation = الاستماع.
+                        </li>
+
+                        <li>
+                            Vital Signs جزء مهم من تقييم المريض.
+                        </li>
+
+                        <li>
+                            التوثيق الدقيق يساعد على استمرار الرعاية الآمنة.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RELATED
+                 ================================================= -->
+
+            <section class="assessment-section">
+
+                <div class="assessment-section-heading">
+
+                    <div class="assessment-section-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            موضوعات مرتبطة
+                        </h2>
+
+                        <span>
+                            Related Topics
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="related-grid">
+
+
+                    <a
+                        href="vital-signs.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-card-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            العلامات الحيوية
+                        </h3>
+
+                        <span>
+                            Vital Signs
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="infection-control.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-card-icon">
+                            🦠
+                        </div>
+
+                        <h3>
+                            مكافحة العدوى
+                        </h3>
+
+                        <span>
+                            Infection Control
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="medication-administration.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-card-icon">
+                            💊
+                        </div>
+
+                        <h3>
+                            إعطاء الأدوية
+                        </h3>
+
+                        <span>
+                            Medication Administration
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DISCLAIMER
+                 ================================================= -->
+
+            <div class="assessment-disclaimer">
+
+                ⚕️ هذه الصفحة تعليمية لطلاب التمريض وليست بديلًا
+                عن التدريب السريري أو السياسات والبروتوكولات
+                المعتمدة في المؤسسة الصحية. يجب تطبيق إجراءات
+                التقييم والرعاية وفقًا لتعليمات المشرفين والبروتوكولات
+                المحلية وحالة كل مريض.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="assessment-footer">
+
+        <div class="assessment-container">
+
+
+            <div class="assessment-footer-grid">
+
+
+                <div class="assessment-footer-brand">
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+
+                        مرجع رقمي يساعد طلاب التمريض على الوصول
+                        إلى المعلومات التعليمية والمهارات الأساسية
+                        بطريقة منظمة ومبسطة.
+
+                    </p>
+
+                </div>
+
+
+                <div class="assessment-footer-column">
+
+                    <h4>
+                        استكشف
+                    </h4>
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../tools.html">
+                        الأدوات والحاسبات
+                    </a>
+
+                </div>
+
+
+                <div class="assessment-footer-column">
+
+                    <h4>
+                        المعرفة
+                    </h4>
+
+                    <a href="vital-signs.html">
+                        Vital Signs
+                    </a>
+
+                    <a href="infection-control.html">
+                        Infection Control
+                    </a>
+
+                    <a href="medication-administration.html">
+                        Medication Administration
+                    </a>
+
+                    <a href="nursing-assessment.html">
+                        Nursing Assessment
+                    </a>
+
+                </div>
+
+
+                <div class="assessment-footer-column">
+
+                    <h4>
+                        معلومات
+                    </h4>
+
+                    <a href="../pages/about.html">
+                        من نحن
+                    </a>
+
+                    <a href="../pages/contact.html">
+                        تواصل معنا
+                    </a>
+
+                    <a href="../pages/privacy.html">
+                        سياسة الخصوصية
+                    </a>
+
+                    <a href="../pages/medical-disclaimer.html">
+                        إخلاء المسؤولية الطبية
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="assessment-footer-bottom">
+
+                <span>
+                    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                </span>
+
+                <span>
+                    Built for Nursing. 🩺
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
