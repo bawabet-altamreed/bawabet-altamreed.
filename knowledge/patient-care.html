@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        رعاية المريض | Patient Care | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="دليل مبسط عن رعاية المريض Patient Care لطلاب التمريض، يشمل أساسيات الرعاية، النظافة، الراحة، السلامة، التغذية، الحركة، المراقبة والتوثيق."
+    >
+
+    <meta
+        name="keywords"
+        content="Patient Care, رعاية المريض, Nursing Care, أساسيات التمريض, Nursing Basics, Nursing Students, تمريض, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/knowledge/patient-care.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:title"
+        content="رعاية المريض | Patient Care | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="دليل تعليمي مبسط لفهم أساسيات رعاية المريض في التمريض."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/knowledge/patient-care.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .patient-page {
+
+            min-height:
+                100vh;
+
+            background:
+                #f5f8fa;
+
+            color:
+                #173b53;
+
+        }
+
+
+        .patient-container {
+
+            width:
+                min(
+                    1120px,
+                    calc(100% - 40px)
+                );
+
+            margin:
+                auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .patient-header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                5000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid #e3ebef;
+
+        }
+
+
+        .patient-header-inner {
+
+            min-height:
+                72px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+        }
+
+
+        .patient-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            color:
+                #0c3555;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .patient-brand-icon {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color:
+                white;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .patient-brand-title {
+
+            display:
+                block;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .patient-brand-subtitle {
+
+            display:
+                block;
+
+            margin-top:
+                2px;
+
+            color:
+                #78909c;
+
+            font-size:
+                10px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .patient-back {
+
+            padding:
+                10px 15px;
+
+            border-radius:
+                10px;
+
+            background:
+                #edf6f8;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .patient-back:hover {
+
+            background:
+                #dceff2;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .patient-hero {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                65px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .patient-hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                400px;
+
+            height:
+                400px;
+
+            border-radius:
+                50%;
+
+            top:
+                -250px;
+
+            left:
+                -100px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .patient-hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                320px;
+
+            height:
+                320px;
+
+            border-radius:
+                50%;
+
+            right:
+                -130px;
+
+            bottom:
+                -220px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .patient-hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                850px;
+
+            margin:
+                auto;
+
+            text-align:
+                center;
+
+        }
+
+
+        .patient-badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            padding:
+                8px 15px;
+
+            margin-bottom:
+                18px;
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.18
+                );
+
+            border-radius:
+                50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            font-size:
+                12px;
+
+        }
+
+
+        .patient-hero h1 {
+
+            margin:
+                0 0 14px;
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            line-height:
+                1.2;
+
+        }
+
+
+        .patient-hero h1 span {
+
+            color:
+                #8ee7f2;
+
+        }
+
+
+        .patient-hero-description {
+
+            max-width:
+                750px;
+
+            margin:
+                auto;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.88
+                );
+
+            line-height:
+                2;
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           CONTENT
+           ===================================================== */
+
+        .patient-main {
+
+            padding:
+                50px 0 75px;
+
+        }
+
+
+        .patient-intro {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.5fr 1fr;
+
+            gap:
+                18px;
+
+            margin-bottom:
+                35px;
+
+        }
+
+
+        .patient-card {
+
+            padding:
+                25px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.035
+                );
+
+        }
+
+
+        .patient-card h2 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                #0c3555;
+
+            font-size:
+                23px;
+
+        }
+
+
+        .patient-card p {
+
+            margin:
+                0;
+
+            color:
+                #687b85;
+
+            line-height:
+                1.95;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .patient-highlight {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            padding:
+                23px;
+
+            border-radius:
+                18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6f8,
+                    #f8fbfc
+                );
+
+            border:
+                1px solid #dcebed;
+
+        }
+
+
+        .patient-highlight-icon {
+
+            width:
+                54px;
+
+            height:
+                54px;
+
+            flex:
+                0 0 54px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                14px;
+
+            background:
+                white;
+
+            font-size:
+                26px;
+
+        }
+
+
+        .patient-highlight strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                #0c3555;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .patient-highlight span {
+
+            color:
+                #71838d;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+           ===================================================== */
+
+        .patient-section {
+
+            margin-top:
+                35px;
+
+        }
+
+
+        .patient-section-title {
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .patient-section-title h2 {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #173b53;
+
+            font-size:
+                27px;
+
+        }
+
+
+        .patient-section-title p {
+
+            margin:
+                0;
+
+            color:
+                #74848d;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           PRINCIPLES
+           ===================================================== */
+
+        .patient-principles {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                15px;
+
+        }
+
+
+        .patient-principle {
+
+            padding:
+                21px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                17px;
+
+            transition:
+                0.2s ease;
+
+        }
+
+
+        .patient-principle:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.07
+                );
+
+        }
+
+
+        .patient-principle-icon {
+
+            width:
+                46px;
+
+            height:
+                46px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-bottom:
+                13px;
+
+            border-radius:
+                12px;
+
+            background:
+                #edf6f8;
+
+            font-size:
+                21px;
+
+        }
+
+
+        .patient-principle h3 {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #173b53;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .patient-principle p {
+
+            margin:
+                0;
+
+            color:
+                #788892;
+
+            line-height:
+                1.8;
+
+            font-size:
+                12px;
+
+        }
+
+
+        /* =====================================================
+           CARE AREAS
+           ===================================================== */
+
+        .patient-care-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                15px;
+
+        }
+
+
+        .patient-care-item {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            padding:
+                21px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                17px;
+
+        }
+
+
+        .patient-care-number {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            flex:
+                0 0 42px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                #edf6f8;
+
+            color:
+                #0c5e75;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .patient-care-item h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .patient-care-item p {
+
+            margin:
+                0;
+
+            color:
+                #788892;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           SAFETY
+           ===================================================== */
+
+        .patient-safety {
+
+            padding:
+                27px;
+
+            border-radius:
+                19px;
+
+            background:
+                #fff;
+
+            border:
+                1px solid #e1eaee;
+
+        }
+
+
+        .patient-safety-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+            margin-top:
+                17px;
+
+        }
+
+
+        .patient-safety-item {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                10px;
+
+            padding:
+                13px;
+
+            border-radius:
+                11px;
+
+            background:
+                #f7fafb;
+
+            color:
+                #62757f;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .patient-safety-item strong {
+
+            color:
+                #0c5e75;
+
+        }
+
+
+        /* =====================================================
+           BASIC CHECKLIST
+           ===================================================== */
+
+        .patient-checklist {
+
+            padding:
+                25px;
+
+            border-radius:
+                18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #176b82
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .patient-checklist h2 {
+
+            margin:
+                0 0 8px;
+
+            font-size:
+                23px;
+
+        }
+
+
+        .patient-checklist > p {
+
+            margin:
+                0 0 18px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.75
+                );
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .patient-checklist-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                10px;
+
+        }
+
+
+        .patient-check {
+
+            padding:
+                13px;
+
+            border-radius:
+                10px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.08
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           STUDENT TIPS
+           ===================================================== */
+
+        .patient-tips {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                15px;
+
+        }
+
+
+        .patient-tip {
+
+            padding:
+                20px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                16px;
+
+        }
+
+
+        .patient-tip span {
+
+            display:
+                block;
+
+            margin-bottom:
+                8px;
+
+            font-size:
+                21px;
+
+        }
+
+
+        .patient-tip h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .patient-tip p {
+
+            margin:
+                0;
+
+            color:
+                #788892;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+           ===================================================== */
+
+        .patient-disclaimer {
+
+            margin-top:
+                35px;
+
+            padding:
+                18px 20px;
+
+            border-right:
+                4px solid #23829a;
+
+            border-radius:
+                10px;
+
+            background:
+                #eef6f8;
+
+            color:
+                #5d717b;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .patient-disclaimer strong {
+
+            color:
+                #0c3555;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .patient-footer {
+
+            padding:
+                35px 0 20px;
+
+            background:
+                #092d49;
+
+            color:
+                white;
+
+        }
+
+
+        .patient-footer-top {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            padding-bottom:
+                22px;
+
+            border-bottom:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+        }
+
+
+        .patient-footer h3 {
+
+            margin:
+                0 0 6px;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .patient-footer p {
+
+            margin:
+                0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.60
+                );
+
+            font-size:
+                12px;
+
+        }
+
+
+        .patient-footer-link {
+
+            padding:
+                10px 15px;
+
+            border-radius:
+                9px;
+
+            background:
+                white;
+
+            color:
+                #0c3555;
+
+            text-decoration:
+                none;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .patient-footer-bottom {
+
+            padding-top:
+                17px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.45
+                );
+
+            font-size:
+                10px;
+
+            text-align:
+                center;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .patient-intro {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-principles {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .patient-tips {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .patient-container {
+
+                width:
+                    min(
+                        calc(100% - 24px),
+                        1120px
+                    );
+
+            }
+
+
+            .patient-header-inner {
+
+                min-height:
+                    64px;
+
+            }
+
+
+            .patient-hero {
+
+                padding:
+                    52px 0;
+
+            }
+
+
+            .patient-hero h1 {
+
+                font-size:
+                    35px;
+
+            }
+
+
+            .patient-hero-description {
+
+                font-size:
+                    13px;
+
+            }
+
+
+            .patient-principles {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-care-list {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-safety-list {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-checklist-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-tips {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .patient-footer-top {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="patient-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="patient-header">
+
+        <div class="patient-container patient-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="patient-brand"
+            >
+
+                <span class="patient-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="patient-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="patient-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="index.html"
+                class="patient-back"
+            >
+                ← المعرفة التمريضية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="patient-hero">
+
+        <div class="patient-container">
+
+            <div class="patient-hero-content">
+
+
+                <span class="patient-badge">
+                    🏥 Nursing Care
+                </span>
+
+
+                <h1>
+
+                    رعاية
+                    <span>
+                        المريض
+                    </span>
+
+                </h1>
+
+
+                <p class="patient-hero-description">
+
+                    Patient Care هي مجموعة من الإجراءات والممارسات
+                    التي تهدف إلى توفير رعاية آمنة ومنظمة وشاملة
+                    للمريض، مع الاهتمام باحتياجاته الجسدية والنفسية
+                    والتعليمية ومتابعة حالته الصحية.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="patient-main">
+
+        <div class="patient-container">
+
+
+            <!-- =================================================
+                 INTRO
+                 ================================================= -->
+
+            <section class="patient-intro">
+
+
+                <article class="patient-card">
+
+                    <h2>
+                        🩺 ما المقصود بـ Patient Care؟
+                    </h2>
+
+                    <p>
+
+                        رعاية المريض لا تعني تنفيذ إجراء واحد فقط،
+                        بل هي عملية مستمرة تبدأ بتقييم احتياجات
+                        المريض، ثم التخطيط للرعاية وتنفيذها ومتابعة
+                        استجابته وتوثيق المعلومات المهمة.
+
+                        <br><br>
+
+                        ويجب أن تكون الرعاية مبنية على حالة المريض
+                        وخطة الرعاية والتعليمات والسياسات المعتمدة
+                        في مكان تقديم الخدمة.
+
+                    </p>
+
+                </article>
+
+
+                <div class="patient-highlight">
+
+                    <div class="patient-highlight-icon">
+                        ❤️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            المريض أولًا
+                        </strong>
+
+                        <span>
+                            الهدف الأساسي هو تقديم رعاية آمنة
+                            تحافظ على كرامة المريض وخصوصيته
+                            وتراعي احتياجاته الفردية.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PRINCIPLES
+                 ================================================= -->
+
+            <section class="patient-section">
+
+
+                <div class="patient-section-title">
+
+                    <h2>
+                        ⭐ مبادئ أساسية في رعاية المريض
+                    </h2>
+
+                    <p>
+                        مجموعة من المبادئ التي تساعد طالب التمريض
+                        على فهم مفهوم الرعاية الشاملة.
+                    </p>
+
+                </div>
+
+
+                <div class="patient-principles">
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            🛡️
+                        </div>
+
+                        <h3>
+                            سلامة المريض
+                        </h3>
+
+                        <p>
+                            تقليل المخاطر وملاحظة أي تغيرات قد
+                            تؤثر على حالة المريض وإبلاغ المسؤول
+                            عنها في الوقت المناسب.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            🤝
+                        </div>
+
+                        <h3>
+                            احترام المريض
+                        </h3>
+
+                        <p>
+                            التعامل مع المريض باحترام والحفاظ
+                            على كرامته وخصوصيته أثناء تقديم
+                            الرعاية.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            الرعاية الفردية
+                        </h3>
+
+                        <p>
+                            تختلف احتياجات المرضى، لذلك يجب أن
+                            تتناسب الرعاية مع الحالة الصحية
+                            وقدرات واحتياجات كل مريض.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            💬
+                        </div>
+
+                        <h3>
+                            التواصل
+                        </h3>
+
+                        <p>
+                            التواصل الجيد مع المريض والفريق الصحي
+                            يساعد على فهم الاحتياجات ونقل المعلومات
+                            المهمة بشكل واضح.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            التوثيق
+                        </h3>
+
+                        <p>
+                            تسجيل المعلومات والإجراءات والاستجابة
+                            للرعاية وفق السياسات المتبعة في
+                            المؤسسة الصحية.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-principle">
+
+                        <div class="patient-principle-icon">
+                            🔄
+                        </div>
+
+                        <h3>
+                            المتابعة المستمرة
+                        </h3>
+
+                        <p>
+                            متابعة حالة المريض والاستجابة للتدخلات
+                            تساعد في اكتشاف التغيرات وتعديل الرعاية
+                            حسب الخطة والتعليمات.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CARE AREAS
+                 ================================================= -->
+
+            <section class="patient-section">
+
+
+                <div class="patient-section-title">
+
+                    <h2>
+                        🏥 أهم جوانب رعاية المريض
+                    </h2>
+
+                    <p>
+                        الرعاية التمريضية تشمل العديد من الجوانب
+                        التي تعمل معًا لتلبية احتياجات المريض.
+                    </p>
+
+                </div>
+
+
+                <div class="patient-care-list">
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🧼 النظافة والعناية الشخصية
+                            </h3>
+
+                            <p>
+                                المساعدة في النظافة الشخصية والعناية
+                                بالفم والجلد والشعر حسب احتياجات
+                                المريض وحالته.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🛏️ الراحة والنوم
+                            </h3>
+
+                            <p>
+                                توفير بيئة مناسبة للراحة والنوم
+                                ومساعدة المريض على اتخاذ وضعية
+                                مريحة وآمنة حسب حالته.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🚶 الحركة والتنقل
+                            </h3>
+
+                            <p>
+                                مساعدة المريض على الحركة والتنقل
+                                بأمان وفق قدرته وتعليمات الفريق
+                                الصحي.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            04
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🍽️ التغذية والسوائل
+                            </h3>
+
+                            <p>
+                                متابعة تناول الطعام والسوائل
+                                ومساعدة المريض وفق النظام الغذائي
+                                المقرر له.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            05
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🌡️ المراقبة
+                            </h3>
+
+                            <p>
+                                مراقبة العلامات الحيوية والحالة
+                                العامة وملاحظة أي تغيرات جديدة
+                                وإبلاغها حسب الحاجة.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            06
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                🧠 الدعم النفسي
+                            </h3>
+
+                            <p>
+                                الاستماع للمريض والتواصل معه
+                                بطريقة داعمة واحترام مشاعره
+                                واحتياجاته النفسية.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            07
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                💊 الأدوية
+                            </h3>
+
+                            <p>
+                                إعطاء الأدوية وفق الوصفة والتعليمات
+                                وسياسات المؤسسة مع التأكد من
+                                إجراءات السلامة المطلوبة.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="patient-care-item">
+
+                        <div class="patient-care-number">
+                            08
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                📚 تثقيف المريض
+                            </h3>
+
+                            <p>
+                                تقديم المعلومات والتعليمات المناسبة
+                                للمريض بما يتوافق مع خطة الرعاية
+                                ودور الممرض.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SAFETY
+                 ================================================= -->
+
+            <section class="patient-section">
+
+
+                <div class="patient-safety">
+
+                    <div class="patient-section-title">
+
+                        <h2>
+                            🛡️ سلامة المريض أثناء الرعاية
+                        </h2>
+
+                        <p>
+                            السلامة جزء أساسي من كل إجراء تمريضي.
+                        </p>
+
+                    </div>
+
+
+                    <div class="patient-safety-list">
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>تحقق:</strong>
+                                تأكد من هوية المريض قبل الإجراءات
+                                وفق سياسة المؤسسة.
+                            </span>
+                        </div>
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>نظافة اليدين:</strong>
+                                اتبع ممارسات Hand Hygiene المناسبة
+                                قبل وأثناء وبعد تقديم الرعاية.
+                            </span>
+                        </div>
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>الخصوصية:</strong>
+                                حافظ على خصوصية المريض وغطِّ الأجزاء
+                                غير الضرورية أثناء الرعاية.
+                            </span>
+                        </div>
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>الملاحظة:</strong>
+                                انتبه لأي تغير غير طبيعي في حالة
+                                المريض وأبلغ عنه.
+                            </span>
+                        </div>
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>الأدوات:</strong>
+                                استخدم الأدوات المناسبة وتأكد من
+                                سلامتها قبل الاستخدام.
+                            </span>
+                        </div>
+
+
+                        <div class="patient-safety-item">
+                            <span>✓</span>
+                            <span>
+                                <strong>التوثيق:</strong>
+                                وثق الرعاية والملاحظات المهمة
+                                حسب سياسة المكان.
+                            </span>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHECKLIST
+                 ================================================= -->
+
+            <section class="patient-section">
+
+
+                <div class="patient-checklist">
+
+                    <h2>
+                        📋 Patient Care Checklist
+                    </h2>
+
+                    <p>
+                        قبل وأثناء وبعد تقديم الرعاية، فكر في
+                        النقاط الأساسية التالية.
+                    </p>
+
+
+                    <div class="patient-checklist-grid">
+
+
+                        <div class="patient-check">
+                            🆔 هل تم التأكد من هوية المريض؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            🧼 هل تم تطبيق Hand Hygiene المناسب؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            🩺 هل تم تقييم حالة المريض؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            🛡️ هل الإجراء آمن ومناسب للمريض؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            💬 هل تم شرح الإجراء للمريض؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            👁️ هل تمت متابعة استجابة المريض؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            📝 هل تم توثيق الرعاية؟
+                        </div>
+
+
+                        <div class="patient-check">
+                            📢 هل تم الإبلاغ عن أي تغير مهم؟
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STUDENT TIPS
+                 ================================================= -->
+
+            <section class="patient-section">
+
+
+                <div class="patient-section-title">
+
+                    <h2>
+                        🎓 نصائح مهمة لطالب التمريض
+                    </h2>
+
+                    <p>
+                        نقاط تساعدك على فهم رعاية المريض أثناء
+                        الدراسة والتدريب العملي.
+                    </p>
+
+                </div>
+
+
+                <div class="patient-tips">
+
+
+                    <article class="patient-tip">
+
+                        <span>
+                            🧠
+                        </span>
+
+                        <h3>
+                            افهم قبل أن تحفظ
+                        </h3>
+
+                        <p>
+                            افهم لماذا يتم تنفيذ الإجراء وما الهدف
+                            منه بدلًا من حفظ الخطوات بشكل منفصل.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-tip">
+
+                        <span>
+                            👀
+                        </span>
+
+                        <h3>
+                            راقب المريض
+                        </h3>
+
+                        <p>
+                            لا تركز على الإجراء فقط؛ لاحظ حالة
+                            المريض واستجابته أثناء تقديم الرعاية.
+                        </p>
+
+                    </article>
+
+
+                    <article class="patient-tip">
+
+                        <span>
+                            📝
+                        </span>
+
+                        <h3>
+                            اهتم بالتوثيق
+                        </h3>
+
+                        <p>
+                            التوثيق جزء أساسي من الرعاية ويساعد
+                            أعضاء الفريق الصحي على متابعة حالة
+                            المريض.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DISCLAIMER
+                 ================================================= -->
+
+            <div class="patient-disclaimer">
+
+                <strong>
+                    ⚠️ ملاحظة تعليمية:
+                </strong>
+
+                هذه الصفحة مخصصة للتعليم والمراجعة العامة لطلاب
+                التمريض، ولا تُغني عن التدريب العملي أو تعليمات
+                المشرفين أو سياسات المؤسسة الصحية. يجب تنفيذ
+                الإجراءات التمريضية وفق التدريب والتعليمات
+                والبروتوكولات المعتمدة في مكان تقديم الرعاية.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="patient-footer">
+
+        <div class="patient-container">
+
+
+            <div class="patient-footer-top">
+
+                <div>
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+                        المعرفة التمريضية — Patient Care
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="index.html"
+                    class="patient-footer-link"
+                >
+                    ← العودة للمعرفة التمريضية
+                </a>
+
+            </div>
+
+
+            <div class="patient-footer-bottom">
+
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
