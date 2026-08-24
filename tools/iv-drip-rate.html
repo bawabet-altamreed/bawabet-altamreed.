@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        IV Drip Rate Calculator | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="حاسبة IV Drip Rate لحساب معدل التنقيط الوريدي بالقطرات في الدقيقة بطريقة سهلة وسريعة لطلاب التمريض."
+    >
+
+    <meta
+        name="keywords"
+        content="IV Drip Rate, IV Drip Rate Calculator, حساب معدل التنقيط, قطرات في الدقيقة, Nursing Calculator, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/tools/iv-drip-rate.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="IV Drip Rate Calculator | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="احسب معدل التنقيط الوريدي بالقطرات في الدقيقة باستخدام حاسبة IV Drip Rate."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/tools/iv-drip-rate.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .calculator-page {
+
+            min-height: 100vh;
+
+            background: #f5f8fa;
+
+            color: #102f46;
+
+        }
+
+
+        .calculator-container {
+
+            width: min(
+                1100px,
+                calc(100% - 40px)
+            );
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .calculator-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 5000;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.96
+            );
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #e4ebef;
+
+        }
+
+
+        .calculator-header-inner {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .calculator-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            color: #0c3555;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+        }
+
+
+        .calculator-brand-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #23829a
+            );
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .calculator-brand-title {
+
+            display: block;
+
+            font-size: 19px;
+
+        }
+
+
+        .calculator-brand-subtitle {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #78909c;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+        }
+
+
+        .calculator-back {
+
+            padding: 10px 16px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .calculator-back:hover {
+
+            background: #176b82;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .calculator-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 60px 0;
+
+            background: linear-gradient(
+                135deg,
+                #092d49,
+                #12657d
+            );
+
+            color: white;
+
+        }
+
+
+        .calculator-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+
+            height: 400px;
+
+            border-radius: 50%;
+
+            top: -250px;
+
+            left: -100px;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.045
+            );
+
+        }
+
+
+        .calculator-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            bottom: -220px;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.045
+            );
+
+        }
+
+
+        .calculator-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+        }
+
+
+        .calculator-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background: rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+
+            border: 1px solid rgba(
+                255,
+                255,
+                255,
+                0.16
+            );
+
+            font-size: 12px;
+
+        }
+
+
+        .calculator-hero h1 {
+
+            margin: 0 0 12px;
+
+            font-size: clamp(
+                34px,
+                5vw,
+                52px
+            );
+
+            line-height: 1.2;
+
+        }
+
+
+        .calculator-hero h1 span {
+
+            color: #8ee7f2;
+
+        }
+
+
+        .calculator-hero p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            opacity: 0.85;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .calculator-main {
+
+            padding: 55px 0 80px;
+
+        }
+
+
+        .calculator-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr 0.9fr;
+
+            gap: 22px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           CALCULATOR CARD
+           ===================================================== */
+
+        .calculator-card {
+
+            padding: 30px;
+
+            background: white;
+
+            border: 1px solid #e2eaee;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.045
+                );
+
+        }
+
+
+        .calculator-card-header {
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .calculator-card-header h2 {
+
+            margin: 0 0 7px;
+
+            color: #173b53;
+
+            font-size: 23px;
+
+        }
+
+
+        .calculator-card-header p {
+
+            margin: 0;
+
+            color: #778892;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        .form-group {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #26485c;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+        }
+
+
+        .form-group label span {
+
+            color: #84939b;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+        }
+
+
+        .form-input {
+
+            width: 100%;
+
+            height: 50px;
+
+            box-sizing: border-box;
+
+            padding: 0 15px;
+
+            border: 1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            outline: none;
+
+            background: #fbfdfe;
+
+            color: #173b53;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .form-input:focus {
+
+            border-color: #23829a;
+
+            background: white;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    35,
+                    130,
+                    154,
+                    0.10
+                );
+
+        }
+
+
+        .form-hint {
+
+            display: block;
+
+            margin-top: 6px;
+
+            color: #89979e;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+           ===================================================== */
+
+        .calculate-button {
+
+            width: 100%;
+
+            height: 52px;
+
+            margin-top: 5px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #176b82
+            );
+
+            color: white;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .calculate-button:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    12,
+                    53,
+                    85,
+                    0.18
+                );
+
+        }
+
+
+        .reset-button {
+
+            width: 100%;
+
+            height: 45px;
+
+            margin-top: 10px;
+
+            border: 1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            background: white;
+
+            color: #52636e;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .reset-button:hover {
+
+            background: #f4f8fa;
+
+            color: #0c3555;
+
+        }
+
+
+        /* =====================================================
+           RESULT
+           ===================================================== */
+
+        .result-box {
+
+            display: none;
+
+            margin-top: 25px;
+
+            padding: 22px;
+
+            border-radius: 16px;
+
+            background: linear-gradient(
+                135deg,
+                #edf7f8,
+                #f7fbfc
+            );
+
+            border: 1px solid #cfe5e9;
+
+            text-align: center;
+
+        }
+
+
+        .result-box.show {
+
+            display: block;
+
+            animation: resultAppear 0.25s ease;
+
+        }
+
+
+        @keyframes resultAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(8px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        .result-label {
+
+            margin-bottom: 8px;
+
+            color: #607982;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        .result-value {
+
+            color: #0c5e75;
+
+            font-size: 38px;
+
+            font-weight: 900;
+
+            line-height: 1.2;
+
+        }
+
+
+        .result-unit {
+
+            margin-top: 5px;
+
+            color: #6f858e;
+
+            font-size: 12px;
+
+        }
+
+
+        .error-message {
+
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            background: #fff1f1;
+
+            border: 1px solid #f0d0d0;
+
+            color: #a34b4b;
+
+            font-size: 11px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .error-message.show {
+
+            display: block;
+
+        }
+
+
+        /* =====================================================
+           INFO CARD
+           ===================================================== */
+
+        .info-card {
+
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid #e2eaee;
+
+            border-radius: 20px;
+
+        }
+
+
+        .info-card h2 {
+
+            margin: 0 0 18px;
+
+            color: #173b53;
+
+            font-size: 21px;
+
+        }
+
+
+        .formula-box {
+
+            padding: 18px;
+
+            margin-bottom: 20px;
+
+            border-radius: 14px;
+
+            background: #f1f7f9;
+
+            border: 1px solid #dcebed;
+
+            text-align: center;
+
+        }
+
+
+        .formula-title {
+
+            margin-bottom: 8px;
+
+            color: #71838d;
+
+            font-size: 10px;
+
+        }
+
+
+        .formula {
+
+            color: #0c5e75;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            direction: ltr;
+
+        }
+
+
+        .info-list {
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+
+        .info-list li {
+
+            position: relative;
+
+            padding: 11px 25px 11px 0;
+
+            border-bottom: 1px solid #edf1f3;
+
+            color: #647781;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .info-list li:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .info-list li::before {
+
+            content: "✓";
+
+            position: absolute;
+
+            right: 0;
+
+            top: 11px;
+
+            color: #23829a;
+
+            font-weight: 900;
+
+        }
+
+
+        /* =====================================================
+           WARNING
+           ===================================================== */
+
+        .medical-warning {
+
+            margin-top: 22px;
+
+            padding: 18px;
+
+            border-radius: 15px;
+
+            background: #fff9ed;
+
+            border: 1px solid #f1e1b9;
+
+        }
+
+
+        .medical-warning strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #765c20;
+
+            font-size: 13px;
+
+        }
+
+
+        .medical-warning p {
+
+            margin: 0;
+
+            color: #7b6e52;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .calculator-footer {
+
+            padding: 40px 0 20px;
+
+            background: #092d49;
+
+            color: white;
+
+        }
+
+
+        .calculator-footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 30px;
+
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid rgba(
+                255,
+                255,
+                255,
+                0.11
+            );
+
+        }
+
+
+        .calculator-footer h3 {
+
+            margin: 0 0 9px;
+
+            font-size: 18px;
+
+        }
+
+
+        .calculator-footer p {
+
+            max-width: 420px;
+
+            margin: 0;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.62
+            );
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .calculator-footer-column h4 {
+
+            margin: 0 0 13px;
+
+            font-size: 13px;
+
+        }
+
+
+        .calculator-footer-column a {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.62
+            );
+
+            font-size: 11px;
+
+            text-decoration: none;
+
+        }
+
+
+        .calculator-footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .calculator-footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding-top: 16px;
+
+            color: rgba(
+                255,
+                255,
+                255,
+                0.42
+            );
+
+            font-size: 10px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .calculator-layout {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .calculator-footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .calculator-container {
+
+                width: min(
+                    calc(100% - 24px),
+                    1100px
+                );
+
+            }
+
+
+            .calculator-header-inner {
+
+                min-height: 64px;
+
+            }
+
+
+            .calculator-brand-subtitle {
+
+                display: none;
+
+            }
+
+
+            .calculator-back {
+
+                padding: 9px 12px;
+
+                font-size: 11px;
+
+            }
+
+
+            .calculator-hero {
+
+                padding: 50px 0;
+
+            }
+
+
+            .calculator-hero h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .calculator-card,
+            .info-card {
+
+                padding: 22px;
+
+            }
+
+
+            .calculator-footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .calculator-footer-bottom {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="calculator-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="calculator-header">
+
+        <div class="calculator-container calculator-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="calculator-brand"
+                aria-label="بوابة التمريض"
+            >
+
+                <span class="calculator-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="calculator-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="calculator-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="../tools.html"
+                class="calculator-back"
+            >
+                ← أدوات وحاسبات التمريض
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="calculator-hero">
+
+        <div class="calculator-container">
+
+            <div class="calculator-hero-content">
+
+
+                <span class="calculator-badge">
+                    💧 IV Calculator
+                </span>
+
+
+                <h1>
+
+                    IV Drip Rate
+                    <span>
+                        Calculator
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    احسب معدل التنقيط الوريدي بالقطرات
+                    في الدقيقة بطريقة سهلة وسريعة.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="calculator-main">
+
+        <div class="calculator-container">
+
+
+            <div class="calculator-layout">
+
+
+                <!-- =================================================
+                     CALCULATOR
+                     ================================================= -->
+
+                <section class="calculator-card">
+
+
+                    <div class="calculator-card-header">
+
+                        <h2>
+                            🧮 احسب معدل التنقيط
+                        </h2>
+
+                        <p>
+                            أدخل حجم المحلول، الزمن، وعامل التنقيط
+                            الموجود على مجموعة الـ IV.
+                        </p>
+
+                    </div>
+
+
+                    <!-- VOLUME -->
+
+                    <div class="form-group">
+
+                        <label for="volume">
+
+                            حجم المحلول
+
+                            <span>
+                                Volume (mL)
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="volume"
+                            class="form-input"
+                            placeholder="مثال: 1000"
+                            min="0"
+                            step="any"
+                            inputmode="decimal"
+                        >
+
+
+                        <span class="form-hint">
+                            أدخل حجم المحلول بوحدة mL.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- TIME -->
+
+                    <div class="form-group">
+
+                        <label for="time">
+
+                            الزمن
+
+                            <span>
+                                Time (minutes)
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="time"
+                            class="form-input"
+                            placeholder="مثال: 480"
+                            min="0"
+                            step="any"
+                            inputmode="decimal"
+                        >
+
+
+                        <span class="form-hint">
+                            أدخل الزمن بالدقائق.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- DROP FACTOR -->
+
+                    <div class="form-group">
+
+                        <label for="dropFactor">
+
+                            عامل التنقيط
+
+                            <span>
+                                Drop Factor (gtt/mL)
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="number"
+                            id="dropFactor"
+                            class="form-input"
+                            placeholder="مثال: 15"
+                            min="0"
+                            step="any"
+                            inputmode="decimal"
+                        >
+
+
+                        <span class="form-hint">
+                            يوجد عامل التنقيط مطبوعًا على مجموعة الـ IV.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- CALCULATE -->
+
+                    <button
+                        type="button"
+                        class="calculate-button"
+                        id="calculateButton"
+                    >
+                        🧮 احسب معدل التنقيط
+                    </button>
+
+
+                    <!-- RESET -->
+
+                    <button
+                        type="button"
+                        class="reset-button"
+                        id="resetButton"
+                    >
+                        إعادة ضبط
+                    </button>
+
+
+
+                    <!-- ERROR -->
+
+                    <div
+                        class="error-message"
+                        id="errorMessage"
+                    >
+                        من فضلك أدخل قيمًا صحيحة وأكبر من صفر في جميع الخانات.
+                    </div>
+
+
+
+                    <!-- RESULT -->
+
+                    <div
+                        class="result-box"
+                        id="resultBox"
+                    >
+
+                        <div class="result-label">
+                            معدل التنقيط المطلوب
+                        </div>
+
+
+                        <div
+                            class="result-value"
+                            id="resultValue"
+                        >
+                            0
+                        </div>
+
+
+                        <div class="result-unit">
+                            gtt/min — قطرة / دقيقة
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     INFORMATION
+                     ================================================= -->
+
+                <aside class="info-card">
+
+
+                    <h2>
+                        📚 طريقة الحساب
+                    </h2>
+
+
+                    <div class="formula-box">
+
+                        <div class="formula-title">
+                            IV Drip Rate Formula
+                        </div>
+
+
+                        <div class="formula">
+                            (Volume × Drop Factor) ÷ Time
+                        </div>
+
+                    </div>
+
+
+                    <ul class="info-list">
+
+                        <li>
+                            Volume هو حجم المحلول بوحدة mL.
+                        </li>
+
+                        <li>
+                            Drop Factor هو عدد القطرات لكل mL
+                            ويُكتب على مجموعة الـ IV.
+                        </li>
+
+                        <li>
+                            Time يجب أن يكون بالدقائق عند استخدام هذه المعادلة.
+                        </li>
+
+                        <li>
+                            الناتج يكون بوحدة gtt/min أي قطرة في الدقيقة.
+                        </li>
+
+                        <li>
+                            يتم عادةً تقريب الناتج إلى أقرب قطرة كاملة
+                            عند الحاجة.
+                        </li>
+
+                    </ul>
+
+
+                    <div class="medical-warning">
+
+                        <strong>
+                            ⚠️ تنبيه
+                        </strong>
+
+                        <p>
+
+                            هذه الحاسبة أداة تعليمية للمراجعة
+                            والتدريب على الحسابات التمريضية.
+                            في الممارسة السريرية يجب التأكد من
+                            الوصفة الطبية وسياسات المؤسسة وعامل
+                            التنقيط الفعلي المستخدم.
+
+                        </p>
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="calculator-footer">
+
+        <div class="calculator-container">
+
+
+            <div class="calculator-footer-grid">
+
+
+                <div>
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+
+                        مرجع رقمي يساعد طلاب وممارسي
+                        التمريض في الوصول إلى المعلومات
+                        والأدوات والمصادر التمريضية
+                        بشكل أسرع وأسهل.
+
+                    </p>
+
+                </div>
+
+
+                <div class="calculator-footer-column">
+
+                    <h4>
+                        استكشف
+                    </h4>
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="../knowledge/index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../tools.html">
+                        الأدوات والحاسبات
+                    </a>
+
+                </div>
+
+
+                <div class="calculator-footer-column">
+
+                    <h4>
+                        الأدوات
+                    </h4>
+
+                    <a href="iv-drip-rate.html">
+                        IV Drip Rate
+                    </a>
+
+                    <a href="iv-flow-rate.html">
+                        IV Flow Rate
+                    </a>
+
+                    <a href="bmi.html">
+                        BMI
+                    </a>
+
+                    <a href="gcs.html">
+                        GCS
+                    </a>
+
+                    <a href="map.html">
+                        MAP
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="calculator-footer-bottom">
+
+                <span>
+                    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                </span>
+
+                <span>
+                    Built for Nursing. 🩺
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+    const volumeInput =
+        document.getElementById(
+            "volume"
+        );
+
+
+    const timeInput =
+        document.getElementById(
+            "time"
+        );
+
+
+    const dropFactorInput =
+        document.getElementById(
+            "dropFactor"
+        );
+
+
+    const calculateButton =
+        document.getElementById(
+            "calculateButton"
+        );
+
+
+    const resetButton =
+        document.getElementById(
+            "resetButton"
+        );
+
+
+    const resultBox =
+        document.getElementById(
+            "resultBox"
+        );
+
+
+    const resultValue =
+        document.getElementById(
+            "resultValue"
+        );
+
+
+    const errorMessage =
+        document.getElementById(
+            "errorMessage"
+        );
+
+
+
+    /* =====================================================
+       CALCULATE
+       ===================================================== */
+
+    function calculateDripRate() {
+
+
+        const volume =
+            parseFloat(
+                volumeInput.value
+            );
+
+
+        const time =
+            parseFloat(
+                timeInput.value
+            );
+
+
+        const dropFactor =
+            parseFloat(
+                dropFactorInput.value
+            );
+
+
+        /* =================================================
+           VALIDATION
+           ================================================= */
+
+        if (
+            !Number.isFinite(volume) ||
+            !Number.isFinite(time) ||
+            !Number.isFinite(dropFactor) ||
+            volume <= 0 ||
+            time <= 0 ||
+            dropFactor <= 0
+        ) {
+
+            resultBox.classList.remove(
+                "show"
+            );
+
+
+            errorMessage.classList.add(
+                "show"
+            );
+
+
+            return;
+
+        }
+
+
+        errorMessage.classList.remove(
+            "show"
+        );
+
+
+        /* =================================================
+           FORMULA
+
+           Drip Rate =
+           (Volume × Drop Factor) / Time
+           ================================================= */
+
+        const dripRate =
+            (
+                volume *
+                dropFactor
+            ) /
+            time;
+
+
+        /* =================================================
+           ROUND TO NEAREST WHOLE DROP
+           ================================================= */
+
+        const roundedRate =
+            Math.round(
+                dripRate
+            );
+
+
+        resultValue.textContent =
+            roundedRate;
+
+
+        resultBox.classList.add(
+            "show"
+        );
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetCalculator() {
+
+
+        volumeInput.value = "";
+
+        timeInput.value = "";
+
+        dropFactorInput.value = "";
+
+
+        resultValue.textContent =
+            "0";
+
+
+        resultBox.classList.remove(
+            "show"
+        );
+
+
+        errorMessage.classList.remove(
+            "show"
+        );
+
+
+        volumeInput.focus();
+
+    }
+
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateButton.addEventListener(
+        "click",
+        calculateDripRate
+    );
+
+
+    resetButton.addEventListener(
+        "click",
+        resetCalculator
+    );
+
+
+
+    /* =====================================================
+       ENTER KEY
+       ===================================================== */
+
+    [
+        volumeInput,
+        timeInput,
+        dropFactorInput
+    ].forEach(
+        function (input) {
+
+            input.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (
+                        event.key === "Enter"
+                    ) {
+
+                        calculateDripRate();
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
