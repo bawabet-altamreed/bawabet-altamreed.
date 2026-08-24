@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="قاموس المصطلحات الطبية والتمريضية لطلاب وممارسي التمريض. ابحث في آلاف المصطلحات الطبية باللغة الإنجليزية والعربية."
+        content="قاموس المصطلحات الطبية والتمريضية لطلاب وممارسي التمريض. ابحث عن أكثر من 98 ألف مصطلح طبي باللغة الإنجليزية والعربية."
     >
 
     <meta
@@ -48,7 +48,6 @@
         rel="stylesheet"
         href="../css/global.css"
     >
-
 
     <style>
 
@@ -84,10 +83,9 @@
             margin: auto;
         }
 
-
-        /* =====================================================
+        /* =========================
            HEADER
-        ===================================================== */
+        ========================== */
 
         .site-header {
             position: sticky;
@@ -98,7 +96,8 @@
 
             backdrop-filter: blur(14px);
 
-            border-bottom: 1px solid #e1e9ed;
+            border-bottom:
+                1px solid #e1e9ed;
         }
 
         .header-inner {
@@ -185,6 +184,7 @@
         .main-nav a:hover,
         .main-nav a.active {
             background: #edf5f7;
+
             color: #0b526b;
         }
 
@@ -194,7 +194,8 @@
             width: 42px;
             height: 42px;
 
-            border: 1px solid #dfe7ea;
+            border:
+                1px solid #dfe7ea;
 
             background: white;
 
@@ -205,17 +206,17 @@
             font-size: 20px;
         }
 
-
-        /* =====================================================
+        /* =========================
            MOBILE MENU
-        ===================================================== */
+        ========================== */
 
         #mobileMenu {
             display: none;
 
             background: white;
 
-            border-top: 1px solid #e4ebee;
+            border-top:
+                1px solid #e4ebee;
         }
 
         .mobile-menu-inner {
@@ -227,25 +228,20 @@
         }
 
         .mobile-menu-inner a {
-            padding: 9px 12px;
+            padding: 10px 12px;
 
-            border-radius: 8px;
+            border-radius: 9px;
+
+            background: #f7fafb;
+
+            color: #45606d;
 
             font-size: 13px;
-
-            color: #536772;
         }
 
-        .mobile-menu-inner a:hover {
-            background: #edf6f8;
-
-            color: #0b526b;
-        }
-
-
-        /* =====================================================
+        /* =========================
            HERO
-        ===================================================== */
+        ========================== */
 
         .page-hero {
             padding: 65px 0 55px;
@@ -371,10 +367,9 @@
             line-height: 1.9;
         }
 
-
-        /* =====================================================
+        /* =========================
            CONTENT
-        ===================================================== */
+        ========================== */
 
         .content-section {
             padding: 50px 0 70px;
@@ -392,10 +387,9 @@
             align-items: start;
         }
 
-
-        /* =====================================================
+        /* =========================
            SIDEBAR
-        ===================================================== */
+        ========================== */
 
         .sidebar {
             position: sticky;
@@ -451,19 +445,13 @@
             font-weight: 700;
         }
 
-
-        /* =====================================================
+        /* =========================
            MAIN
-        ===================================================== */
+        ========================== */
 
         .dictionary-main {
             min-width: 0;
         }
-
-
-        /* =====================================================
-           SEARCH
-        ===================================================== */
 
         .search-card {
             background: white;
@@ -549,10 +537,9 @@
             font-size: 19px;
         }
 
-
-        /* =====================================================
-           LETTER FILTER
-        ===================================================== */
+        /* =========================
+           FILTERS
+        ========================== */
 
         .filters {
             display: flex;
@@ -567,9 +554,7 @@
         }
 
         .filter-button {
-            min-width: 36px;
-
-            padding: 7px 11px;
+            padding: 7px 12px;
 
             border:
                 1px solid #dce7ea;
@@ -596,51 +581,50 @@
             border-color: #0b526b;
         }
 
-
-        /* =====================================================
-           DATABASE STATUS
-        ===================================================== */
+        /* =========================
+           STATUS
+        ========================== */
 
         .database-status {
-            display: none;
+            display: flex;
 
-            margin-top: 15px;
+            align-items: center;
+
+            gap: 8px;
 
             padding: 10px 13px;
 
+            margin-bottom: 18px;
+
             border-radius: 10px;
+
+            background: #f1f7f8;
+
+            color: #54717c;
 
             font-size: 12px;
         }
 
-        .database-status.loading {
-            display: block;
+        .status-dot {
+            width: 9px;
+            height: 9px;
 
-            background: #eef7f9;
+            border-radius: 50%;
 
-            color: #0b6177;
+            background: #f0a500;
         }
 
-        .database-status.success {
-            display: block;
-
-            background: #edf8f1;
-
-            color: #247043;
+        .database-status.success .status-dot {
+            background: #28a745;
         }
 
-        .database-status.error {
-            display: block;
-
-            background: #fff0f0;
-
-            color: #b32929;
+        .database-status.error .status-dot {
+            background: #dc3545;
         }
 
-
-        /* =====================================================
+        /* =========================
            RESULTS HEADER
-        ===================================================== */
+        ========================== */
 
         .results-header {
             display: flex;
@@ -666,10 +650,9 @@
             font-size: 12px;
         }
 
-
-        /* =====================================================
+        /* =========================
            TERMS GRID
-        ===================================================== */
+        ========================== */
 
         .terms-grid {
             display: grid;
@@ -723,7 +706,7 @@
 
             color: #0d6177;
 
-            font-size: 14px;
+            font-size: 15px;
 
             font-weight: 900;
 
@@ -776,71 +759,44 @@
             font-size: 10px;
         }
 
-
-        /* =====================================================
+        /* =========================
            LOADING
-        ===================================================== */
+        ========================== */
 
         .loading-box {
             background: white;
 
             border:
-                1px solid #e1e9ed;
+                1px solid #e0e8ec;
 
             border-radius: 16px;
 
             padding: 45px 20px;
 
             text-align: center;
-
-            color: #71828a;
         }
 
         .loading-icon {
-            font-size: 38px;
+            font-size: 40px;
 
             margin-bottom: 10px;
         }
 
+        .loading-box h3 {
+            margin-bottom: 5px;
 
-        /* =====================================================
-           LOAD MORE
-        ===================================================== */
-
-        .load-more-wrapper {
-            text-align: center;
-
-            padding-top: 25px;
+            color: #15354a;
         }
 
-        #loadMoreButton {
-            display: none;
-
-            border: 0;
-
-            padding: 11px 25px;
-
-            border-radius: 11px;
-
-            background: #0b2d46;
-
-            color: white;
+        .loading-box p {
+            color: #7c8b92;
 
             font-size: 13px;
-
-            font-weight: 800;
-
-            cursor: pointer;
         }
 
-        #loadMoreButton:hover {
-            background: #0b526b;
-        }
-
-
-        /* =====================================================
+        /* =========================
            NO RESULTS
-        ===================================================== */
+        ========================== */
 
         .no-results {
             display: none;
@@ -873,10 +829,42 @@
             font-size: 13px;
         }
 
+        /* =========================
+           ERROR
+        ========================== */
 
-        /* =====================================================
+        .error-box {
+            display: none;
+
+            background: #fff5f5;
+
+            border:
+                1px solid #f1caca;
+
+            color: #9b3434;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+        .error-box h3 {
+            margin-bottom: 7px;
+        }
+
+        .error-box p {
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
            INFO
-        ===================================================== */
+        ========================== */
 
         .info-box {
             margin-top: 25px;
@@ -912,10 +900,9 @@
             line-height: 1.9;
         }
 
-
-        /* =====================================================
+        /* =========================
            FOOTER
-        ===================================================== */
+        ========================== */
 
         .site-footer {
             background: #071f32;
@@ -930,7 +917,9 @@
             display: grid;
 
             grid-template-columns:
-                2fr 1fr 1fr;
+                2fr
+                1fr
+                1fr;
 
             gap: 35px;
 
@@ -973,6 +962,8 @@
             font-size: 12px;
 
             margin-bottom: 7px;
+
+            transition: .2s;
         }
 
         .footer-column a:hover {
@@ -988,16 +979,17 @@
 
             justify-content: space-between;
 
+            gap: 15px;
+
             color:
                 rgba(255,255,255,.4);
 
             font-size: 10px;
         }
 
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+        /* =========================
+           TABLET
+        ========================== */
 
         @media (max-width: 1000px) {
 
@@ -1017,6 +1009,9 @@
 
         }
 
+        /* =========================
+           MOBILE
+        ========================== */
 
         @media (max-width: 700px) {
 
@@ -1111,12 +1106,9 @@
 
                 align-items:
                     flex-start;
-
-                gap: 7px;
             }
 
         }
-
 
         @media (max-width: 450px) {
 
@@ -1130,10 +1122,14 @@
                     auto;
             }
 
+            .filters {
+                gap: 5px;
+            }
+
             .filter-button {
                 font-size: 11px;
 
-                padding: 6px 9px;
+                padding: 6px 10px;
             }
 
         }
@@ -1221,7 +1217,7 @@
             class="mobile-button"
             type="button"
             onclick="toggleMobileMenu()"
-            aria-label="فتح القائمة"
+            aria-label="القائمة"
         >
             ☰
         </button>
@@ -1266,7 +1262,6 @@
     </div>
 
 </header>
-
 
 
 <!-- =====================================================
@@ -1316,9 +1311,9 @@
 
 
             <p>
-                قاموس المصطلحات الطبية والتمريضية.
+                قاموس ضخم للمصطلحات الطبية والتمريضية.
                 ابحث عن المصطلح باللغة الإنجليزية أو العربية
-                بطريقة سهلة وسريعة.
+                واستعرض النتائج بسرعة.
             </p>
 
         </div>
@@ -1326,7 +1321,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -1340,9 +1334,9 @@
         <div class="dictionary-layout">
 
 
-            <!-- =================================================
+            <!-- =========================
                  SIDEBAR
-            ================================================== -->
+            ========================== -->
 
             <aside class="sidebar">
 
@@ -1385,10 +1379,9 @@
             </aside>
 
 
-
-            <!-- =================================================
-                 DICTIONARY
-            ================================================== -->
+            <!-- =========================
+                 MAIN DICTIONARY
+            ========================== -->
 
             <section class="dictionary-main">
 
@@ -1400,8 +1393,8 @@
                     </h2>
 
                     <p>
-                        ابحث داخل قاعدة البيانات الطبية
-                        باستخدام الاسم الإنجليزي أو العربي.
+                        اكتب المصطلح باللغة الإنجليزية أو العربية.
+                        سيتم البحث داخل قاعدة البيانات الضخمة للمصطلحات.
                     </p>
 
 
@@ -1431,51 +1424,80 @@
                             الكل
                         </button>
 
-                        <button class="filter-button" data-letter="A" type="button">A</button>
-                        <button class="filter-button" data-letter="B" type="button">B</button>
-                        <button class="filter-button" data-letter="C" type="button">C</button>
-                        <button class="filter-button" data-letter="D" type="button">D</button>
-                        <button class="filter-button" data-letter="E" type="button">E</button>
-                        <button class="filter-button" data-letter="F" type="button">F</button>
-                        <button class="filter-button" data-letter="G" type="button">G</button>
-                        <button class="filter-button" data-letter="H" type="button">H</button>
-                        <button class="filter-button" data-letter="I" type="button">I</button>
-                        <button class="filter-button" data-letter="J" type="button">J</button>
-                        <button class="filter-button" data-letter="K" type="button">K</button>
-                        <button class="filter-button" data-letter="L" type="button">L</button>
-                        <button class="filter-button" data-letter="M" type="button">M</button>
-                        <button class="filter-button" data-letter="N" type="button">N</button>
-                        <button class="filter-button" data-letter="O" type="button">O</button>
-                        <button class="filter-button" data-letter="P" type="button">P</button>
-                        <button class="filter-button" data-letter="Q" type="button">Q</button>
-                        <button class="filter-button" data-letter="R" type="button">R</button>
-                        <button class="filter-button" data-letter="S" type="button">S</button>
-                        <button class="filter-button" data-letter="T" type="button">T</button>
-                        <button class="filter-button" data-letter="U" type="button">U</button>
-                        <button class="filter-button" data-letter="V" type="button">V</button>
-                        <button class="filter-button" data-letter="W" type="button">W</button>
-                        <button class="filter-button" data-letter="X" type="button">X</button>
-                        <button class="filter-button" data-letter="Y" type="button">Y</button>
-                        <button class="filter-button" data-letter="Z" type="button">Z</button>
-                        <button class="filter-button" data-letter="other" type="button">#</button>
+                        <button class="filter-button" data-letter="a" type="button">A</button>
+                        <button class="filter-button" data-letter="b" type="button">B</button>
+                        <button class="filter-button" data-letter="c" type="button">C</button>
+                        <button class="filter-button" data-letter="d" type="button">D</button>
+                        <button class="filter-button" data-letter="e" type="button">E</button>
+                        <button class="filter-button" data-letter="f" type="button">F</button>
+                        <button class="filter-button" data-letter="g" type="button">G</button>
+                        <button class="filter-button" data-letter="h" type="button">H</button>
+                        <button class="filter-button" data-letter="i" type="button">I</button>
+                        <button class="filter-button" data-letter="j" type="button">J</button>
+                        <button class="filter-button" data-letter="k" type="button">K</button>
+                        <button class="filter-button" data-letter="l" type="button">L</button>
+                        <button class="filter-button" data-letter="m" type="button">M</button>
+                        <button class="filter-button" data-letter="n" type="button">N</button>
+                        <button class="filter-button" data-letter="o" type="button">O</button>
+                        <button class="filter-button" data-letter="p" type="button">P</button>
+                        <button class="filter-button" data-letter="q" type="button">Q</button>
+                        <button class="filter-button" data-letter="r" type="button">R</button>
+                        <button class="filter-button" data-letter="s" type="button">S</button>
+                        <button class="filter-button" data-letter="t" type="button">T</button>
+                        <button class="filter-button" data-letter="u" type="button">U</button>
+                        <button class="filter-button" data-letter="v" type="button">V</button>
+                        <button class="filter-button" data-letter="w" type="button">W</button>
+                        <button class="filter-button" data-letter="x" type="button">X</button>
+                        <button class="filter-button" data-letter="y" type="button">Y</button>
+                        <button class="filter-button" data-letter="z" type="button">Z</button>
 
-                    </div>
-
-
-                    <div
-                        id="databaseStatus"
-                        class="database-status loading"
-                    >
-                        ⏳ جاري تحميل قاعدة المصطلحات...
                     </div>
 
                 </div>
 
 
+                <!-- =========================
+                     STATUS
+                ========================== -->
 
-                <!-- =================================================
+                <div
+                    class="database-status"
+                    id="databaseStatus"
+                >
+
+                    <span class="status-dot"></span>
+
+                    <span id="statusText">
+                        جاري تحميل قاعدة بيانات المصطلحات...
+                    </span>
+
+                </div>
+
+
+                <!-- =========================
+                     ERROR
+                ========================== -->
+
+                <div
+                    class="error-box"
+                    id="errorBox"
+                >
+
+                    <h3>
+                        ⚠️ تعذر تحميل قاعدة البيانات
+                    </h3>
+
+                    <p id="errorText">
+                        تأكد من وجود:
+                        data/search-index.json
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
                      RESULTS HEADER
-                ================================================== -->
+                ========================== -->
 
                 <div class="results-header">
 
@@ -1493,29 +1515,43 @@
                 </div>
 
 
-
-                <!-- =================================================
-                     TERMS
-                ================================================== -->
+                <!-- =========================
+                     LOADING
+                ========================== -->
 
                 <div
-                    class="terms-grid"
-                    id="termsGrid"
+                    class="loading-box"
+                    id="loadingBox"
                 >
 
-                    <div class="loading-box">
-
-                        <div class="loading-icon">
-                            ⏳
-                        </div>
-
-                        جاري تحميل المصطلحات...
-
+                    <div class="loading-icon">
+                        🩺
                     </div>
+
+                    <h3>
+                        جاري تجهيز القاموس...
+                    </h3>
+
+                    <p>
+                        لحظات ويتم عرض المصطلحات.
+                    </p>
 
                 </div>
 
 
+                <!-- =========================
+                     TERMS
+                ========================== -->
+
+                <div
+                    class="terms-grid"
+                    id="termsGrid"
+                ></div>
+
+
+                <!-- =========================
+                     NO RESULTS
+                ========================== -->
 
                 <div
                     class="no-results"
@@ -1531,30 +1567,15 @@
                     </h3>
 
                     <p>
-                        جرّب كتابة المصطلح بطريقة مختلفة
-                        أو البحث باللغة العربية أو الإنجليزية.
+                        جرّب كتابة المصطلح بطريقة مختلفة.
                     </p>
 
                 </div>
 
 
-
-                <div class="load-more-wrapper">
-
-                    <button
-                        id="loadMoreButton"
-                        type="button"
-                    >
-                        تحميل المزيد
-                    </button>
-
-                </div>
-
-
-
-                <!-- =================================================
+                <!-- =========================
                      INFO
-                ================================================== -->
+                ========================== -->
 
                 <div class="info-box">
 
@@ -1581,7 +1602,6 @@
 </main>
 
 
-
 <!-- =====================================================
      FOOTER
 ====================================================== -->
@@ -1591,7 +1611,6 @@
     <div class="container">
 
         <div class="footer-top">
-
 
             <div class="footer-brand">
 
@@ -1651,12 +1670,11 @@
                     الأدوات والحاسبات
                 </a>
 
-                <a href="../egypt.html">
-                    تمريض مصر
+                <a href="../clinical-guides.html">
+                    Clinical Guides
                 </a>
 
             </div>
-
 
         </div>
 
@@ -1678,1223 +1696,1479 @@
 </footer>
 
 
-
 <!-- =====================================================
      JAVASCRIPT
 ====================================================== -->
 
 <script>
 
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
+"use strict";
 
-    function toggleMobileMenu() {
 
-        const menu =
-            document.getElementById("mobileMenu");
+/* =====================================================
+   CONFIGURATION
+===================================================== */
 
-        if (menu.style.display === "block") {
+const SEARCH_INDEX_PATH =
+    "data/search-index.json";
 
-            menu.style.display = "none";
+const TERMS_PATH =
+    "data/terms/";
 
-        } else {
 
-            menu.style.display = "block";
+const RESULTS_PER_PAGE = 40;
 
-        }
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const searchInput =
+    document.getElementById("termSearch");
+
+const termsGrid =
+    document.getElementById("termsGrid");
+
+const resultsCount =
+    document.getElementById("resultsCount");
+
+const noResults =
+    document.getElementById("noResults");
+
+const loadingBox =
+    document.getElementById("loadingBox");
+
+const databaseStatus =
+    document.getElementById("databaseStatus");
+
+const statusText =
+    document.getElementById("statusText");
+
+const errorBox =
+    document.getElementById("errorBox");
+
+const errorText =
+    document.getElementById("errorText");
+
+const filterButtons =
+    document.querySelectorAll(".filter-button");
+
+
+/* =====================================================
+   GLOBAL DATA
+===================================================== */
+
+let searchIndex = [];
+
+let loadedTerms = {};
+
+let selectedLetter = "all";
+
+let currentResults = [];
+
+let currentPage = 1;
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMobileMenu() {
+
+    const menu =
+        document.getElementById("mobileMenu");
+
+    if (!menu) {
+        return;
+    }
+
+    if (
+        menu.style.display === "none" ||
+        menu.style.display === ""
+    ) {
+
+        menu.style.display = "block";
+
+    } else {
+
+        menu.style.display = "none";
 
     }
 
+}
 
 
-    /* =====================================================
-       DATABASE CONFIG
-    ===================================================== */
+/* =====================================================
+   NORMALIZE TEXT
+===================================================== */
 
-    const DATA_PATH = "../data/";
+function normalizeText(value) {
 
-    const SEARCH_INDEX_PATH =
-        DATA_PATH + "search-index.json";
+    return String(value || "")
+        .toLowerCase()
+        .trim();
 
-    const TERMS_PATH =
-        DATA_PATH + "terms/";
-
-
-    const DISPLAY_LIMIT = 60;
+}
 
 
-    let searchIndex = [];
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
 
-    let loadedFiles = new Map();
+function escapeHTML(value) {
 
-    let currentResults = [];
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
-    let displayedResults = 0;
-
-    let selectedLetter = "all";
-
-    let currentQuery = "";
-
-
-
-    /* =====================================================
-       ELEMENTS
-    ===================================================== */
-
-    const searchInput =
-        document.getElementById("termSearch");
-
-    const termsGrid =
-        document.getElementById("termsGrid");
-
-    const noResults =
-        document.getElementById("noResults");
-
-    const resultsCount =
-        document.getElementById("resultsCount");
-
-    const databaseStatus =
-        document.getElementById("databaseStatus");
-
-    const loadMoreButton =
-        document.getElementById("loadMoreButton");
-
-    const filterButtons =
-        document.querySelectorAll(".filter-button");
+}
 
 
+/* =====================================================
+   GET LETTER
+===================================================== */
 
-    /* =====================================================
-       NORMALIZE TEXT
-    ===================================================== */
+function getTermLetter(term) {
 
-    function normalizeText(text) {
+    const first =
+        String(term || "")
+            .trim()
+            .charAt(0)
+            .toLowerCase();
 
-        return String(text || "")
-            .toLowerCase()
-            .trim();
+    if (
+        first >= "a" &&
+        first <= "z"
+    ) {
+
+        return first;
 
     }
 
+    return "other";
+
+}
 
 
-    /* =====================================================
-       GET FILE FROM INDEX
-       Supports:
-       [term,id,file]
-       OR
-       {term,id,file}
-    ===================================================== */
+/* =====================================================
+   SET STATUS
+===================================================== */
 
-    function getIndexItem(item) {
+function setStatus(
+    text,
+    type = ""
+) {
 
-        if (Array.isArray(item)) {
+    statusText.textContent = text;
 
-            return {
-                term: item[0] || "",
-                id: item[1] || "",
-                file: item[2] || ""
-            };
+    databaseStatus.classList.remove(
+        "success",
+        "error"
+    );
+
+    if (type) {
+
+        databaseStatus.classList.add(
+            type
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   LOAD SEARCH INDEX
+===================================================== */
+
+async function loadSearchIndex() {
+
+    try {
+
+        setStatus(
+            "جاري تحميل فهرس البحث..."
+        );
+
+        const response =
+            await fetch(
+                SEARCH_INDEX_PATH,
+                {
+                    cache: "no-cache"
+                }
+            );
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status +
+                " - " +
+                response.statusText
+            );
 
         }
+
+        searchIndex =
+            await response.json();
+
 
         if (
-            item &&
-            typeof item === "object"
+            !Array.isArray(searchIndex)
         ) {
 
-            return {
-                term:
-                    item.term ||
-                    "",
-
-                id:
-                    item.id ||
-                    "",
-
-                file:
-                    item.file ||
-                    ""
-            };
+            throw new Error(
+                "صيغة search-index.json غير صحيحة."
+            );
 
         }
 
+
+        setStatus(
+            "تم تحميل فهرس البحث بنجاح — " +
+            searchIndex.length.toLocaleString("en-US") +
+            " مصطلح",
+            "success"
+        );
+
+
+        loadingBox.style.display =
+            "none";
+
+
+        resultsCount.textContent =
+            "إجمالي المصطلحات: " +
+            searchIndex.length.toLocaleString("en-US");
+
+
+        /*
+         * لا نعرض 98 ألف عنصر عند فتح الصفحة.
+         * نعرض مجموعة أولية فقط.
+         */
+
+        showInitialTerms();
+
+
+    } catch (error) {
+
+        console.error(
+            "Search Index Error:",
+            error
+        );
+
+
+        loadingBox.style.display =
+            "none";
+
+        errorBox.style.display =
+            "block";
+
+        errorText.textContent =
+            "تعذر تحميل قاعدة البيانات. تأكد من وجود: data/search-index.json ثم قم بعمل Hard Refresh.";
+
+        setStatus(
+            "فشل تحميل قاعدة البيانات",
+            "error"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   LOAD LETTER FILE
+===================================================== */
+
+async function loadLetterFile(
+    letter
+) {
+
+    if (
+        loadedTerms[letter]
+    ) {
+
+        return loadedTerms[letter];
+
+    }
+
+
+    const path =
+        TERMS_PATH +
+        letter +
+        ".json";
+
+
+    try {
+
+        const response =
+            await fetch(
+                path,
+                {
+                    cache: "default"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !Array.isArray(data)
+        ) {
+
+            throw new Error(
+                "ملف " +
+                letter +
+                ".json ليس Array."
+            );
+
+        }
+
+
+        loadedTerms[letter] =
+            data;
+
+
+        return data;
+
+
+    } catch (error) {
+
+        console.error(
+            "Letter file error:",
+            letter,
+            error
+        );
+
+
+        throw error;
+
+    }
+
+}
+
+
+/* =====================================================
+   GET INDEX ITEM DATA
+===================================================== */
+
+function parseIndexItem(item) {
+
+    /*
+     * الصيغة المتوقعة:
+     *
+     * [term, id, file]
+     *
+     */
+
+    if (
+        Array.isArray(item)
+    ) {
+
         return {
-            term: "",
-            id: "",
-            file: ""
+
+            term:
+                item[0] || "",
+
+            id:
+                item[1] || "",
+
+            file:
+                item[2] || ""
+
         };
 
     }
 
 
+    /*
+     * دعم إضافي لو الملف كان Objects.
+     */
 
-    /* =====================================================
-       LOAD SEARCH INDEX
-    ===================================================== */
+    if (
+        item &&
+        typeof item === "object"
+    ) {
 
-    async function loadSearchIndex() {
+        return {
 
-        databaseStatus.className =
-            "database-status loading";
+            term:
+                item.term || "",
 
-        databaseStatus.textContent =
-            "⏳ جاري تحميل فهرس المصطلحات...";
+            id:
+                item.id || "",
 
+            file:
+                item.file ||
+                item.letter ||
+                ""
 
-        try {
+        };
 
-            const response =
-                await fetch(
-                    SEARCH_INDEX_PATH,
-                    {
-                        cache: "no-cache"
-                    }
-                );
+    }
 
 
-            if (!response.ok) {
+    return {
 
-                throw new Error(
-                    "HTTP " +
-                    response.status +
-                    " - " +
-                    response.statusText
-                );
+        term: "",
+        id: "",
+        file: ""
+
+    };
+
+}
+
+
+/* =====================================================
+   FIND TERM IN LETTER FILE
+===================================================== */
+
+function findTermInFile(
+    data,
+    id,
+    term
+) {
+
+    const normalizedTerm =
+        normalizeText(term);
+
+
+    return data.find(
+        function(item) {
+
+            if (!item) {
+                return false;
+            }
+
+
+            if (
+                String(item.id || "") ===
+                String(id || "")
+            ) {
+
+                return true;
 
             }
 
 
-            searchIndex =
-                await response.json();
+            if (
+                normalizeText(item.term) ===
+                normalizedTerm
+            ) {
 
-
-            if (!Array.isArray(searchIndex)) {
-
-                throw new Error(
-                    "صيغة search-index.json غير صحيحة"
-                );
+                return true;
 
             }
 
 
-            databaseStatus.className =
-                "database-status success";
+            return false;
 
-            databaseStatus.textContent =
-                "✅ تم تحميل قاعدة الفهرسة بنجاح — " +
-                searchIndex.length.toLocaleString("en-US") +
-                " مصطلح";
+        }
+    );
 
-
-            resultsCount.textContent =
-                "إجمالي المصطلحات: " +
-                searchIndex.length.toLocaleString("en-US");
+}
 
 
-            await applyFilters();
+/* =====================================================
+   CREATE CARD
+===================================================== */
+
+function createTermCard(
+    item
+) {
+
+    const term =
+        item.term || "Unknown";
+
+    const arabic =
+        item.arabic || "—";
+
+    const definition =
+        item.definition ||
+        "لا يوجد تعريف متاح لهذا المصطلح.";
+
+    const category =
+        item.category ||
+        "Medical Terms";
 
 
-        } catch (error) {
+    const letter =
+        getTermLetter(term);
 
-            console.error(
-                "Database Error:",
-                error
+
+    const article =
+        document.createElement("article");
+
+
+    article.className =
+        "term-card";
+
+
+    article.innerHTML = `
+
+        <div class="term-letter">
+            ${escapeHTML(
+                letter === "other"
+                    ? "#"
+                    : letter.toUpperCase()
+            )}
+        </div>
+
+        <h3>
+            ${escapeHTML(term)}
+        </h3>
+
+        <div class="term-arabic">
+            ${escapeHTML(arabic)}
+        </div>
+
+        <p>
+            ${escapeHTML(definition)}
+        </p>
+
+        <span class="term-tag">
+            ${escapeHTML(category)}
+        </span>
+
+    `;
+
+
+    return article;
+
+}
+
+
+/* =====================================================
+   RENDER TERMS
+===================================================== */
+
+function renderTerms(
+    terms
+) {
+
+    termsGrid.innerHTML =
+        "";
+
+    noResults.style.display =
+        "none";
+
+
+    if (
+        !terms ||
+        terms.length === 0
+    ) {
+
+        noResults.style.display =
+            "block";
+
+        resultsCount.textContent =
+            "عدد النتائج: 0";
+
+        return;
+
+    }
+
+
+    const start =
+        (currentPage - 1) *
+        RESULTS_PER_PAGE;
+
+
+    const end =
+        start +
+        RESULTS_PER_PAGE;
+
+
+    const pageTerms =
+        terms.slice(
+            start,
+            end
+        );
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    pageTerms.forEach(
+        function(item) {
+
+            fragment.appendChild(
+                createTermCard(item)
             );
 
-
-            databaseStatus.className =
-                "database-status error";
-
-            databaseStatus.innerHTML =
-                "❌ تعذر تحميل قاعدة البيانات.<br>" +
-                "تأكد من وجود:<br>" +
-                "<strong>data/search-index.json</strong>";
-
-
-            resultsCount.textContent =
-                "تعذر تحميل البيانات";
-
-
-            termsGrid.innerHTML = "";
-
         }
+    );
+
+
+    termsGrid.appendChild(
+        fragment
+    );
+
+
+    resultsCount.textContent =
+        "عدد النتائج: " +
+        terms.length.toLocaleString("en-US") +
+        " — عرض " +
+        Math.min(
+            end,
+            terms.length
+        ).toLocaleString("en-US") +
+        " من النتائج";
+
+
+    if (
+        terms.length > RESULTS_PER_PAGE
+    ) {
+
+        renderPagination(
+            terms.length
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+function renderPagination(
+    total
+) {
+
+    const old =
+        document.getElementById(
+            "pagination"
+        );
+
+
+    if (old) {
+
+        old.remove();
 
     }
 
 
-
-    /* =====================================================
-       GET LETTER
-    ===================================================== */
-
-    function getFirstLetter(term) {
-
-        const value =
-            String(term || "")
-                .trim()
-                .toUpperCase();
+    const totalPages =
+        Math.ceil(
+            total /
+            RESULTS_PER_PAGE
+        );
 
 
-        if (!value) {
-            return "other";
-        }
+    if (
+        totalPages <= 1
+    ) {
 
-
-        const first =
-            value.charAt(0);
-
-
-        if (
-            first >= "A" &&
-            first <= "Z"
-        ) {
-
-            return first;
-
-        }
-
-
-        return "other";
+        return;
 
     }
 
 
+    const pagination =
+        document.createElement("div");
 
-    /* =====================================================
-       LOAD TERM FILE
-    ===================================================== */
 
-    async function loadTermFile(fileName) {
+    pagination.id =
+        "pagination";
 
-        if (!fileName) {
-            return [];
+
+    pagination.style.cssText = `
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+        flex-wrap:wrap;
+        margin-top:25px;
+    `;
+
+
+    function createButton(
+        text,
+        page,
+        disabled = false
+    ) {
+
+        const button =
+            document.createElement("button");
+
+
+        button.type =
+            "button";
+
+
+        button.textContent =
+            text;
+
+
+        button.disabled =
+            disabled;
+
+
+        button.style.cssText = `
+            min-width:40px;
+            height:38px;
+            padding:0 12px;
+            border:1px solid #dce7ea;
+            border-radius:9px;
+            background:${page === currentPage ? "#0b526b" : "white"};
+            color:${page === currentPage ? "white" : "#526a75"};
+            cursor:${disabled ? "default" : "pointer"};
+            font-weight:700;
+        `;
+
+
+        if (!disabled) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    currentPage =
+                        page;
+
+                    renderTerms(
+                        currentResults
+                    );
+
+                    window.scrollTo({
+                        top:
+                            document
+                                .querySelector(
+                                    ".results-header"
+                                )
+                                .offsetTop -
+                            80,
+
+                        behavior:
+                            "smooth"
+                    });
+
+                }
+            );
+
         }
 
 
-        if (loadedFiles.has(fileName)) {
+        return button;
 
-            return loadedFiles.get(fileName);
-
-        }
+    }
 
 
-        let cleanFile =
-            String(fileName)
-                .trim()
+    pagination.appendChild(
+        createButton(
+            "السابق",
+            Math.max(
+                1,
+                currentPage - 1
+            ),
+            currentPage === 1
+        )
+    );
+
+
+    const startPage =
+        Math.max(
+            1,
+            currentPage - 2
+        );
+
+
+    const endPage =
+        Math.min(
+            totalPages,
+            currentPage + 2
+        );
+
+
+    for (
+        let page = startPage;
+        page <= endPage;
+        page++
+    ) {
+
+        pagination.appendChild(
+            createButton(
+                page,
+                page
+            )
+        );
+
+    }
+
+
+    pagination.appendChild(
+        createButton(
+            "التالي",
+            Math.min(
+                totalPages,
+                currentPage + 1
+            ),
+            currentPage === totalPages
+        )
+    );
+
+
+    termsGrid.after(
+        pagination
+    );
+
+}
+
+
+/* =====================================================
+   LOAD TERMS FROM INDEX
+===================================================== */
+
+async function resolveIndexResults(
+    indexResults
+) {
+
+    const grouped =
+        {};
+
+
+    indexResults.forEach(
+        function(rawItem) {
+
+            const item =
+                parseIndexItem(
+                    rawItem
+                );
+
+
+            if (
+                !item.term
+            ) {
+
+                return;
+
+            }
+
+
+            let file =
+                String(
+                    item.file || ""
+                )
                 .toLowerCase();
 
 
-        /*
-         * بعض الـindexes قد تحتوي:
-         * a.json
-         * أو
-         * terms/a.json
-         */
+            /*
+             * لو file يحتوي على ".json"
+             * نحذف الامتداد.
+             */
 
-        cleanFile =
-            cleanFile
-                .replace(/^terms\//, "")
-                .replace(/^data\/terms\//, "");
-
-
-        if (
-            !cleanFile.endsWith(".json")
-        ) {
-
-            cleanFile += ".json";
-
-        }
-
-
-        const url =
-            TERMS_PATH + cleanFile;
-
-
-        try {
-
-            const response =
-                await fetch(
-                    url,
-                    {
-                        cache: "force-cache"
-                    }
+            file =
+                file.replace(
+                    /\.json$/i,
+                    ""
                 );
 
 
-            if (!response.ok) {
+            /*
+             * لو الملف غير موجود في
+             * Search Index نحاول تحديده
+             * من أول حرف.
+             */
 
-                throw new Error(
-                    "HTTP " +
-                    response.status
-                );
+            if (!file) {
+
+                file =
+                    getTermLetter(
+                        item.term
+                    );
 
             }
 
 
-            const data =
-                await response.json();
+            if (
+                !grouped[file]
+            ) {
+
+                grouped[file] =
+                    [];
+
+            }
 
 
-            const terms =
-                Array.isArray(data)
-                    ? data
-                    : [];
-
-
-            loadedFiles.set(
-                fileName,
-                terms
+            grouped[file].push(
+                item
             );
 
+        }
+    );
 
-            return terms;
+
+    const resolved =
+        [];
+
+
+    const groups =
+        Object.keys(
+            grouped
+        );
+
+
+    for (
+        const file of groups
+    ) {
+
+        try {
+
+            const data =
+                await loadLetterFile(
+                    file
+                );
+
+
+            grouped[file].forEach(
+                function(indexItem) {
+
+                    const fullItem =
+                        findTermInFile(
+                            data,
+                            indexItem.id,
+                            indexItem.term
+                        );
+
+
+                    if (
+                        fullItem
+                    ) {
+
+                        resolved.push(
+                            fullItem
+                        );
+
+                    }
+
+                }
+            );
 
 
         } catch (error) {
 
             console.error(
                 "Failed loading:",
-                url,
+                file,
                 error
             );
 
-
-            return [];
-
         }
 
     }
 
 
+    return resolved;
 
-    /* =====================================================
-       GET TERM DATA
-    ===================================================== */
+}
 
-    function normalizeTermObject(item) {
 
-        if (
-            !item ||
-            typeof item !== "object"
-        ) {
+/* =====================================================
+   INITIAL TERMS
+===================================================== */
 
-            return null;
+async function showInitialTerms() {
 
-        }
+    /*
+     * أول تحميل:
+     * نستخدم أول 40 عنصر فقط.
+     */
 
-
-        return {
-
-            id:
-                item.id ??
-                "",
-
-            term:
-                item.term ??
-                "",
-
-            arabic:
-                item.arabic ??
-                "",
-
-            definition:
-                item.definition ??
-                "",
-
-            category:
-                item.category ??
-                "",
-
-            searchTerms:
-                Array.isArray(
-                    item.searchTerms
-                )
-                    ? item.searchTerms
-                    : []
-
-        };
-
-    }
-
-
-
-    /* =====================================================
-       SEARCH INDEX FILTER
-    ===================================================== */
-
-    function getMatchingIndexItems() {
-
-        const query =
-            normalizeText(
-                currentQuery
-            );
-
-
-        let results =
-            searchIndex
-                .map(getIndexItem)
-                .filter(function(item) {
-
-                    if (!item.term) {
-                        return false;
-                    }
-
-
-                    const letter =
-                        getFirstLetter(
-                            item.term
-                        );
-
-
-                    const matchesLetter =
-                        selectedLetter === "all" ||
-                        letter === selectedLetter;
-
-
-                    if (!matchesLetter) {
-                        return false;
-                    }
-
-
-                    if (!query) {
-                        return true;
-                    }
-
-
-                    return normalizeText(
-                        item.term
-                    ).includes(query);
-
-                });
-
-
-        return results;
-
-    }
-
-
-
-    /* =====================================================
-       SEARCH ARABIC
-       If Arabic query is used, we load term files
-       and search arabic/searchTerms too.
-    ===================================================== */
-
-    async function searchArabicInFiles() {
-
-        const query =
-            normalizeText(
-                currentQuery
-            );
-
-
-        if (!query) {
-            return [];
-        }
-
-
-        /*
-         * English query is handled by search-index.
-         * Arabic query requires checking the actual
-         * term objects because the compact index
-         * contains only term/id/file.
-         */
-
-        const isArabic =
-            /[\u0600-\u06FF]/.test(query);
-
-
-        if (!isArabic) {
-            return null;
-        }
-
-
-        const files =
-            new Set();
-
-
-        searchIndex
-            .map(getIndexItem)
-            .forEach(function(item) {
-
-                const letter =
-                    getFirstLetter(
-                        item.term
-                    );
-
-
-                if (
-                    selectedLetter === "all" ||
-                    letter === selectedLetter
-                ) {
-
-                    if (item.file) {
-                        files.add(item.file);
-                    }
-
-                }
-
-            });
-
-
-        const results = [];
-
-
-        for (
-            const file of files
-        ) {
-
-            const terms =
-                await loadTermFile(file);
-
-
-            terms.forEach(function(raw) {
-
-                const term =
-                    normalizeTermObject(raw);
-
-
-                if (!term) {
-                    return;
-                }
-
-
-                const searchableText = (
-
-                    term.term +
-                    " " +
-                    term.arabic +
-                    " " +
-                    term.definition +
-                    " " +
-                    term.category +
-                    " " +
-                    term.searchTerms.join(" ")
-
-                ).toLowerCase();
-
-
-                if (
-                    searchableText.includes(
-                        query
-                    )
-                ) {
-
-                    results.push(term);
-
-                }
-
-            });
-
-        }
-
-
-        return results;
-
-    }
-
-
-
-    /* =====================================================
-       FIND OBJECT BY ID
-    ===================================================== */
-
-    async function findTermsFromIndex(
-        indexItems
-    ) {
-
-        const grouped =
-            new Map();
-
-
-        indexItems.forEach(function(item) {
-
-            if (!item.file) {
-                return;
-            }
-
-
-            if (!grouped.has(item.file)) {
-
-                grouped.set(
-                    item.file,
-                    []
-                );
-
-            }
-
-
-            grouped
-                .get(item.file)
-                .push(item);
-
-        });
-
-
-        const output = [];
-
-
-        for (
-            const [
-                file,
-                items
-            ] of grouped
-        ) {
-
-            const terms =
-                await loadTermFile(file);
-
-
-            const ids =
-                new Map();
-
-
-            terms.forEach(function(raw) {
-
-                const term =
-                    normalizeTermObject(raw);
-
-
-                if (term && term.id !== "") {
-
-                    ids.set(
-                        String(term.id),
-                        term
-                    );
-
-                }
-
-            });
-
-
-            items.forEach(function(item) {
-
-                const found =
-                    ids.get(
-                        String(item.id)
-                    );
-
-
-                if (found) {
-
-                    output.push(found);
-
-                } else {
-
-                    /*
-                     * Fallback لو الـid غير موجود
-                     */
-
-                    const byTerm =
-                        terms.find(
-                            function(raw) {
-
-                                const term =
-                                    normalizeTermObject(
-                                        raw
-                                    );
-
-
-                                return (
-                                    term &&
-                                    normalizeText(
-                                        term.term
-                                    ) ===
-                                    normalizeText(
-                                        item.term
-                                    )
-                                );
-
-                            }
-                        );
-
-
-                    if (byTerm) {
-
-                        output.push(
-                            normalizeTermObject(
-                                byTerm
-                            )
-                        );
-
-                    }
-
-                }
-
-            });
-
-        }
-
-
-        return output;
-
-    }
-
-
-
-    /* =====================================================
-       APPLY FILTERS
-    ===================================================== */
-
-    async function applyFilters() {
-
-        currentQuery =
-            searchInput.value;
-
-
-        termsGrid.innerHTML =
-            '<div class="loading-box">' +
-            '<div class="loading-icon">⏳</div>' +
-            'جاري البحث في قاعدة البيانات...' +
-            '</div>';
-
-
-        noResults.style.display =
-            "none";
-
-
-        loadMoreButton.style.display =
-            "none";
-
-
-        displayedResults = 0;
-
-
-        /*
-         * Arabic Search
-         */
-
-        const arabicResults =
-            await searchArabicInFiles();
-
-
-        if (
-            arabicResults !== null
-        ) {
-
-            currentResults =
-                arabicResults;
-
-        } else {
-
-            /*
-             * English / normal search
-             */
-
-            const matches =
-                getMatchingIndexItems();
-
-
-            /*
-             * لو مفيش Search Query وفلتر all:
-             * نحمل أول مجموعة فقط.
-             *
-             * لكن لأن الـindex يحتوي على
-             * file لكل عنصر، سنأخذ أول DISPLAY_LIMIT.
-             */
-
-            currentResults =
-                await findTermsFromIndex(
-                    matches.slice(
-                        0,
-                        500
-                    )
-                );
-
-        }
-
-
-        /*
-         * Remove duplicates by ID
-         */
-
-        const unique =
-            new Map();
-
-
-        currentResults.forEach(function(term) {
-
-            if (!term) {
-                return;
-            }
-
-
-            const key =
-                term.id ||
-                term.term;
-
-
-            if (!unique.has(key)) {
-
-                unique.set(
-                    key,
-                    term
-                );
-
-            }
-
-        });
-
-
-        currentResults =
-            Array.from(
-                unique.values()
-            );
-
-
-        /*
-         * Sort alphabetically
-         */
-
-        currentResults.sort(
-            function(a,b) {
-
-                return String(
-                    a.term
-                ).localeCompare(
-                    String(b.term)
-                );
-
-            }
+    const firstItems =
+        searchIndex.slice(
+            0,
+            RESULTS_PER_PAGE
         );
 
 
-        /*
-         * Render
-         */
+    const terms =
+        await resolveIndexResults(
+            firstItems
+        );
 
-        termsGrid.innerHTML = "";
+
+    currentResults =
+        terms;
+
+
+    currentPage =
+        1;
+
+
+    renderTerms(
+        terms
+    );
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+let searchTimer =
+    null;
+
+
+async function performSearch() {
+
+    const query =
+        normalizeText(
+            searchInput.value
+        );
+
+
+    /*
+     * بدون بحث
+     */
+
+    if (!query) {
+
+        currentPage =
+            1;
 
 
         if (
-            currentResults.length === 0
+            selectedLetter ===
+            "all"
         ) {
 
-            noResults.style.display =
-                "block";
-
-
-            resultsCount.textContent =
-                "عدد النتائج: 0";
-
+            await showInitialTerms();
 
             return;
 
         }
 
 
-        noResults.style.display =
-            "none";
+        /*
+         * فلترة حسب الحرف
+         */
+
+        const letter =
+            selectedLetter;
 
 
-        renderMore();
+        try {
+
+            const data =
+                await loadLetterFile(
+                    letter
+                );
 
 
-        updateCount();
+            currentResults =
+                data;
 
+
+            renderTerms(
+                data
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+            noResults.style.display =
+                "block";
+
+        }
+
+
+        return;
 
     }
 
 
-
-    /* =====================================================
-       RENDER MORE
-    ===================================================== */
-
-    function renderMore() {
-
-        const next =
-            currentResults.slice(
-                displayedResults,
-                displayedResults +
-                DISPLAY_LIMIT
-            );
+    setStatus(
+        "جاري البحث..."
+    );
 
 
-        next.forEach(
-            function(term) {
+    /*
+     * البحث داخل Search Index
+     */
 
-                termsGrid.appendChild(
-                    createTermCard(term)
+    const matches =
+        searchIndex.filter(
+            function(rawItem) {
+
+                const item =
+                    parseIndexItem(
+                        rawItem
+                    );
+
+
+                const term =
+                    normalizeText(
+                        item.term
+                    );
+
+
+                return term.includes(
+                    query
                 );
 
             }
         );
 
 
-        displayedResults +=
-            next.length;
+    /*
+     * فلترة بالحرف أيضًا
+     */
+
+    const filteredMatches =
+        matches.filter(
+            function(rawItem) {
+
+                if (
+                    selectedLetter ===
+                    "all"
+                ) {
+
+                    return true;
+
+                }
 
 
-        if (
-            displayedResults <
-            currentResults.length
-        ) {
-
-            loadMoreButton.style.display =
-                "inline-block";
-
-        } else {
-
-            loadMoreButton.style.display =
-                "none";
-
-        }
-
-    }
+                const item =
+                    parseIndexItem(
+                        rawItem
+                    );
 
 
+                const file =
+                    String(
+                        item.file || ""
+                    )
+                    .toLowerCase()
+                    .replace(
+                        /\.json$/i,
+                        ""
+                    );
 
-    /* =====================================================
-       UPDATE COUNT
-    ===================================================== */
 
-    function updateCount() {
+                return (
+                    file ===
+                    selectedLetter
+                );
 
-        const total =
-            currentResults.length;
+            }
+        );
+
+
+    /*
+     * نأخذ عددًا محدودًا من النتائج
+     * حتى لا نحمل آلاف العناصر.
+     */
+
+    const limitedMatches =
+        filteredMatches.slice(
+            0,
+            200
+        );
+
+
+    if (
+        limitedMatches.length === 0
+    ) {
+
+        currentResults =
+            [];
+
+        renderTerms(
+            []
+        );
 
 
         resultsCount.textContent =
-            "عرض " +
-            Math.min(
-                displayedResults,
-                total
-            ).toLocaleString("en-US") +
-            " من " +
-            total.toLocaleString("en-US") +
-            " نتيجة";
+            "عدد النتائج: 0";
+
+
+        setStatus(
+            "لم يتم العثور على نتائج",
+            "success"
+        );
+
+
+        return;
 
     }
 
 
+    try {
 
-    /* =====================================================
-       CREATE CARD
-    ===================================================== */
-
-    function createTermCard(term) {
-
-        const article =
-            document.createElement(
-                "article"
+        const resolved =
+            await resolveIndexResults(
+                limitedMatches
             );
 
 
-        article.className =
-            "term-card";
+        currentResults =
+            resolved;
 
 
-        const letter =
-            getFirstLetter(
-                term.term
-            );
+        currentPage =
+            1;
 
 
-        const letterDiv =
-            document.createElement(
-                "div"
-            );
-
-
-        letterDiv.className =
-            "term-letter";
-
-
-        letterDiv.textContent =
-            letter === "other"
-                ? "#"
-                : letter;
-
-
-        const title =
-            document.createElement(
-                "h3"
-            );
-
-
-        title.textContent =
-            term.term ||
-            "Unknown Term";
-
-
-        const arabic =
-            document.createElement(
-                "div"
-            );
-
-
-        arabic.className =
-            "term-arabic";
-
-
-        arabic.textContent =
-            term.arabic ||
-            "لا توجد ترجمة عربية";
-
-
-        const definition =
-            document.createElement(
-                "p"
-            );
-
-
-        definition.textContent =
-            term.definition ||
-            "لا يوجد تعريف متاح لهذا المصطلح.";
-
-
-        const tag =
-            document.createElement(
-                "span"
-            );
-
-
-        tag.className =
-            "term-tag";
-
-
-        tag.textContent =
-            term.category ||
-            "Medical";
-
-
-        article.appendChild(
-            letterDiv
+        renderTerms(
+            resolved
         );
 
 
-        article.appendChild(
-            title
+        setStatus(
+            "تم العثور على " +
+            filteredMatches.length.toLocaleString("en-US") +
+            " نتيجة",
+            "success"
         );
 
 
-        article.appendChild(
-            arabic
+    } catch (error) {
+
+        console.error(
+            error
         );
 
 
-        article.appendChild(
-            definition
+        setStatus(
+            "حدث خطأ أثناء البحث",
+            "error"
         );
-
-
-        article.appendChild(
-            tag
-        );
-
-
-        return article;
 
     }
 
+}
 
 
-    /* =====================================================
-       SEARCH INPUT
-    ===================================================== */
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
 
-    let searchTimer = null;
+searchInput.addEventListener(
+    "input",
+    function() {
+
+        clearTimeout(
+            searchTimer
+        );
 
 
-    searchInput.addEventListener(
-        "input",
-        function() {
-
-            clearTimeout(
-                searchTimer
+        searchTimer =
+            setTimeout(
+                performSearch,
+                300
             );
 
+    }
+);
 
-            searchTimer =
-                setTimeout(
-                    function() {
 
-                        applyFilters();
+/* =====================================================
+   LETTER FILTER
+===================================================== */
 
-                    },
-                    250
+filterButtons.forEach(
+    function(button) {
+
+        button.addEventListener(
+            "click",
+            async function() {
+
+                filterButtons.forEach(
+                    function(btn) {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    }
                 );
 
-        }
-    );
+
+                button.classList.add(
+                    "active"
+                );
 
 
-
-    /* =====================================================
-       LETTER FILTER
-    ===================================================== */
-
-    filterButtons.forEach(
-        function(button) {
-
-            button.addEventListener(
-                "click",
-                function() {
-
-                    filterButtons.forEach(
-                        function(btn) {
-
-                            btn.classList.remove(
-                                "active"
-                            );
-
-                        }
+                selectedLetter =
+                    button.getAttribute(
+                        "data-letter"
                     );
 
 
-                    button.classList.add(
-                        "active"
+                /*
+                 * لو اختار الكل
+                 */
+
+                if (
+                    selectedLetter ===
+                    "all"
+                ) {
+
+                    searchInput.value =
+                        "";
+
+                    await showInitialTerms();
+
+                    setStatus(
+                        "تم تحميل القاموس",
+                        "success"
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                 * تحميل ملف الحرف فقط
+                 */
+
+                try {
+
+                    setStatus(
+                        "جاري تحميل مصطلحات " +
+                        selectedLetter.toUpperCase() +
+                        "..."
                     );
 
 
-                    selectedLetter =
-                        button.getAttribute(
-                            "data-letter"
+                    const data =
+                        await loadLetterFile(
+                            selectedLetter
                         );
 
 
-                    applyFilters();
+                    let filtered =
+                        data;
+
+
+                    const query =
+                        normalizeText(
+                            searchInput.value
+                        );
+
+
+                    if (query) {
+
+                        filtered =
+                            data.filter(
+                                function(item) {
+
+                                    const searchable =
+                                        normalizeText(
+                                            (
+                                                item.term ||
+                                                ""
+                                            ) +
+                                            " " +
+                                            (
+                                                item.arabic ||
+                                                ""
+                                            ) +
+                                            " " +
+                                            (
+                                                item.definition ||
+                                                ""
+                                            ) +
+                                            " " +
+                                            (
+                                                item.searchTerms || []
+                                            )
+                                        );
+
+
+                                    return searchable.includes(
+                                        query
+                                    );
+
+                                }
+                            );
+
+                    }
+
+
+                    currentResults =
+                        filtered;
+
+
+                    currentPage =
+                        1;
+
+
+                    renderTerms(
+                        filtered
+                    );
+
+
+                    setStatus(
+                        "تم تحميل مصطلحات " +
+                        selectedLetter.toUpperCase() +
+                        " — " +
+                        data.length.toLocaleString("en-US") +
+                        " مصطلح",
+                        "success"
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        error
+                    );
+
+
+                    setStatus(
+                        "تعذر تحميل ملف الحرف",
+                        "error"
+                    );
+
+
+                    noResults.style.display =
+                        "block";
 
                 }
-            );
 
-        }
-    );
+            }
+        );
 
-
-
-    /* =====================================================
-       LOAD MORE
-    ===================================================== */
-
-    loadMoreButton.addEventListener(
-        "click",
-        function() {
-
-            renderMore();
-
-            updateCount();
-
-        }
-    );
+    }
+);
 
 
+/* =====================================================
+   START
+===================================================== */
 
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
 
-    document.addEventListener(
-        "DOMContentLoaded",
-        function() {
+        loadSearchIndex();
 
-            loadSearchIndex();
-
-        }
-    );
+    }
+);
 
 </script>
 
