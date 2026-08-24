@@ -16,12 +16,12 @@
 
     <meta
         name="description"
-        content="المعرفة التمريضية من بوابة التمريض. أساسيات التمريض، العلامات الحيوية، مكافحة العدوى، إعطاء الأدوية، تقييم المريض، رعاية المريض، سلامة المريض، غسل اليدين، الألم، المدخلات والمخرجات، التشريح، التمريض الباطني والجراحي وصحة المجتمع."
+        content="المعرفة التمريضية من بوابة التمريض. مرجع تعليمي يضم أساسيات التمريض، العلامات الحيوية، مكافحة العدوى، إعطاء الأدوية، تقييم المريض، رعاية المريض، سلامة المريض، غسل اليدين، تقييم الألم، Intake & Output، التشريح، التمريض الباطني والجراحي وصحة المجتمع."
     >
 
     <meta
         name="keywords"
-        content="المعرفة التمريضية, Nursing Knowledge, Nursing Basics, Nursing Assessment, Patient Care, Patient Safety, Hand Hygiene, Pain Assessment, Intake Output, Vital Signs, Infection Control, Medication Administration, Anatomy, Medical Surgical Nursing, Community Health Nursing, تمريض, طلاب التمريض, بوابة التمريض"
+        content="المعرفة التمريضية, Nursing Knowledge, Nursing Basics, Vital Signs, Infection Control, Medication Administration, Nursing Assessment, Patient Care, Patient Safety, Hand Hygiene, Pain Assessment, Intake Output, Anatomy, Medical Surgical Nursing, Community Health Nursing, تمريض, طلاب التمريض, بوابة التمريض"
     >
 
     <meta
@@ -61,7 +61,7 @@
 
     <meta
         property="og:description"
-        content="مرجع تعليمي منظم لطلاب التمريض يضم أساسيات التمريض والتشريح والتمريض الباطني والجراحي وصحة المجتمع والمهارات التمريضية."
+        content="مركز المعرفة التمريضية من بوابة التمريض. تعلم أساسيات التمريض والمهارات السريرية والعلوم الطبية بشكل منظم."
     >
 
     <meta
@@ -98,9 +98,10 @@
 
     <style>
 
-        /* =====================================================
-           KNOWLEDGE PAGE
-           ===================================================== */
+        * {
+            box-sizing: border-box;
+        }
+
 
         .knowledge-page {
 
@@ -622,7 +623,8 @@
 
             background: white;
 
-            border: 1px solid #e2eaee;
+            border:
+                1px solid #e2eaee;
 
             border-radius: 18px;
 
@@ -681,7 +683,8 @@
                     #f7fbfc
                 );
 
-            border: 1px solid #dcebed;
+            border:
+                1px solid #dcebed;
 
         }
 
@@ -786,7 +789,7 @@
 
 
         /* =====================================================
-           CATEGORIES
+           KNOWLEDGE CARDS
            ===================================================== */
 
         .knowledge-categories {
@@ -814,9 +817,12 @@
 
             padding: 23px;
 
+            min-height: 235px;
+
             background: white;
 
-            border: 1px solid #e2eaee;
+            border:
+                1px solid #e2eaee;
 
             border-radius: 18px;
 
@@ -964,133 +970,6 @@
 
 
         /* =====================================================
-           FEATURED
-           ===================================================== */
-
-        .featured-section {
-
-            margin-top: 55px;
-
-        }
-
-
-        .featured-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
-            gap: 15px;
-
-        }
-
-
-        .featured-card {
-
-            padding: 21px;
-
-            background: white;
-
-            border: 1px solid #e2eaee;
-
-            border-radius: 17px;
-
-            text-decoration: none;
-
-            transition: 0.2s ease;
-
-        }
-
-
-        .featured-card:hover {
-
-            transform: translateY(-4px);
-
-            box-shadow:
-                0 14px 30px
-                rgba(
-                    15,
-                    35,
-                    50,
-                    0.07
-                );
-
-        }
-
-
-        .featured-icon {
-
-            width: 47px;
-
-            height: 47px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 14px;
-
-            border-radius: 13px;
-
-            background: #edf6f8;
-
-            font-size: 22px;
-
-        }
-
-
-        .featured-card h3 {
-
-            margin: 0 0 7px;
-
-            color: #173b53;
-
-            font-size: 17px;
-
-        }
-
-
-        .featured-card p {
-
-            margin: 0;
-
-            color: #7a8992;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-        }
-
-
-        .featured-tag {
-
-            display: inline-block;
-
-            margin-top: 13px;
-
-            padding: 5px 8px;
-
-            border-radius: 7px;
-
-            background: #f0f6f8;
-
-            color: #427184;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-        }
-
-
-        /* =====================================================
            QUICK TOPICS
            ===================================================== */
 
@@ -1122,7 +1001,8 @@
 
             padding: 10px 14px;
 
-            border: 1px solid #dce6ea;
+            border:
+                1px solid #dce6ea;
 
             border-radius: 10px;
 
@@ -1182,7 +1062,8 @@
 
             background: white;
 
-            border: 1px solid #e2eaee;
+            border:
+                1px solid #e2eaee;
 
             border-radius: 17px;
 
@@ -1267,6 +1148,46 @@
             font-size: 11px;
 
             font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+           ARTICLES BUTTON
+           ===================================================== */
+
+        .all-articles-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 11px 17px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .all-articles-button:hover {
+
+            background: #08283f;
+
+            transform: translateY(-2px);
 
         }
 
@@ -1491,17 +1412,6 @@
             }
 
 
-            .featured-grid {
-
-                grid-template-columns:
-                    repeat(
-                        2,
-                        1fr
-                    );
-
-            }
-
-
             .knowledge-articles-grid {
 
                 grid-template-columns:
@@ -1598,7 +1508,8 @@
 
             .knowledge-search-input {
 
-                padding: 0 50px 0 90px;
+                padding:
+                    0 50px 0 90px;
 
                 font-size: 13px;
 
@@ -1613,13 +1524,6 @@
 
 
             .knowledge-categories {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .featured-grid {
 
                 grid-template-columns: 1fr;
 
@@ -1859,12 +1763,12 @@
 
                     <p>
 
-                        هنا هتلاقي مجموعة منظمة من الموضوعات
+                        هنا هتلاقي مكتبة منظمة من الموضوعات
                         الأساسية والمهمة في دراسة التمريض،
-                        بداية من Nursing Basics وFundamentals،
+                        بداية من أساسيات التمريض والمهارات السريرية،
                         مرورًا بالتشريح والتمريض الباطني والجراحي،
-                        ووصولًا إلى Community Health والمهارات
-                        السريرية المختلفة.
+                        ووصولًا إلى صحة المجتمع والموضوعات الطبية
+                        المختلفة.
 
                     </p>
 
@@ -1898,10 +1802,11 @@
 
 
             <!-- =================================================
-                 MAIN CATEGORIES
+                 ALL KNOWLEDGE
                  ================================================= -->
 
             <section>
+
 
                 <div class="knowledge-section-heading">
 
@@ -1912,7 +1817,8 @@
                         </h2>
 
                         <p>
-                            اختر المجال الذي تريد دراسته.
+                            اختار الموضوع اللي محتاج تذاكره
+                            وابدأ القراءة مباشرة.
                         </p>
 
                     </div>
@@ -1923,7 +1829,100 @@
                 <div class="knowledge-categories">
 
 
-                    <!-- Nursing Basics -->
+                    <!-- 1 -->
+
+                    <a
+                        href="knowledge/vital-signs.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            العلامات الحيوية
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Vital Signs
+                        </div>
+
+                        <p>
+                            Temperature وPulse وRespiration
+                            وBlood Pressure وأهم الملاحظات التمريضية.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 2 -->
+
+                    <a
+                        href="knowledge/infection-control.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            🦠
+                        </div>
+
+                        <h3>
+                            مكافحة العدوى
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Infection Control
+                        </div>
+
+                        <p>
+                            مبادئ مكافحة العدوى وطرق منع
+                            انتقال العدوى داخل بيئة الرعاية الصحية.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 3 -->
+
+                    <a
+                        href="knowledge/medication-administration.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            💊
+                        </div>
+
+                        <h3>
+                            إعطاء الأدوية
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Medication Administration
+                        </div>
+
+                        <p>
+                            المبادئ الأساسية لإعطاء الأدوية
+                            والاحتياطات اللازمة لسلامة المريض.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 4 -->
 
                     <a
                         href="knowledge/nursing-basics.html"
@@ -1943,22 +1942,52 @@
                         </div>
 
                         <p>
-                            المفاهيم الأساسية التي يحتاجها
-                            طالب التمريض في بداية رحلته التعليمية.
+                            المبادئ والمفاهيم الأساسية التي يحتاجها
+                            طالب التمريض في بداية رحلته.
                         </p>
 
                         <span class="knowledge-category-link">
-                            استكشف القسم →
+                            اقرأ الموضوع →
                         </span>
 
                     </a>
 
 
-
-                    <!-- Medical Surgical -->
+                    <!-- 5 -->
 
                     <a
-                        href="knowledge/medical-surgical.html"
+                        href="knowledge/nursing-assessment.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            تقييم المريض
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Nursing Assessment
+                        </div>
+
+                        <p>
+                            خطوات ومبادئ تقييم حالة المريض
+                            وجمع المعلومات التمريضية المهمة.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 6 -->
+
+                    <a
+                        href="knowledge/patient-care.html"
                         class="knowledge-category"
                     >
 
@@ -1967,91 +1996,150 @@
                         </div>
 
                         <h3>
-                            التمريض الباطني والجراحي
+                            رعاية المريض
                         </h3>
 
                         <div class="knowledge-category-en">
-                            Medical-Surgical Nursing
+                            Patient Care
                         </div>
 
                         <p>
-                            معلومات ومفاهيم مرتبطة بالحالات
-                            المرضية والرعاية التمريضية والجراحية.
+                            المبادئ الأساسية للرعاية التمريضية
+                            والتعامل مع احتياجات المريض.
                         </p>
 
                         <span class="knowledge-category-link">
-                            استكشف القسم →
+                            اقرأ الموضوع →
                         </span>
 
                     </a>
 
 
-
-                    <!-- Fundamentals -->
+                    <!-- 7 -->
 
                     <a
-                        href="knowledge/nursing-basics.html"
+                        href="knowledge/patient-safety.html"
                         class="knowledge-category"
                     >
 
                         <div class="knowledge-category-icon">
-                            📋
+                            🛡️
                         </div>
 
                         <h3>
-                            أساسيات ومهارات التمريض
+                            سلامة المريض
                         </h3>
 
                         <div class="knowledge-category-en">
-                            Fundamentals of Nursing
+                            Patient Safety
                         </div>
 
                         <p>
-                            المهارات والمبادئ الأساسية للرعاية
-                            التمريضية والتعامل مع المريض.
+                            أهم الإجراءات والمبادئ التي تساعد
+                            على تقليل المخاطر والحفاظ على سلامة المريض.
                         </p>
 
                         <span class="knowledge-category-link">
-                            استكشف القسم →
+                            اقرأ الموضوع →
                         </span>
 
                     </a>
 
 
-
-                    <!-- Community Health -->
+                    <!-- 8 -->
 
                     <a
-                        href="knowledge/community-health.html"
+                        href="knowledge/hand-hygiene.html"
                         class="knowledge-category"
                     >
 
                         <div class="knowledge-category-icon">
-                            🌍
+                            🧼
                         </div>
 
                         <h3>
-                            تمريض صحة المجتمع
+                            غسل اليدين
                         </h3>
 
                         <div class="knowledge-category-en">
-                            Community Health Nursing
+                            Hand Hygiene
                         </div>
 
                         <p>
-                            مفاهيم صحة المجتمع والوقاية والتثقيف
-                            الصحي والرعاية خارج المستشفى.
+                            أهمية Hand Hygiene والخطوات الأساسية
+                            لمنع انتشار العدوى.
                         </p>
 
                         <span class="knowledge-category-link">
-                            استكشف القسم →
+                            اقرأ الموضوع →
                         </span>
 
                     </a>
 
 
+                    <!-- 9 -->
 
-                    <!-- Anatomy -->
+                    <a
+                        href="knowledge/pain-assessment.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            😣
+                        </div>
+
+                        <h3>
+                            تقييم الألم
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Pain Assessment
+                        </div>
+
+                        <p>
+                            طرق تقييم شدة الألم ومتابعة استجابة
+                            المريض للتدخلات المختلفة.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 10 -->
+
+                    <a
+                        href="knowledge/intake-output.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            💧
+                        </div>
+
+                        <h3>
+                            المدخلات والمخرجات
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Intake & Output
+                        </div>
+
+                        <p>
+                            فهم ومتابعة السوائل الداخلة والخارجة
+                            وأهميتها في الرعاية التمريضية.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 11 -->
 
                     <a
                         href="knowledge/anatomy.html"
@@ -2076,14 +2164,75 @@
                         </p>
 
                         <span class="knowledge-category-link">
-                            استكشف القسم →
+                            اقرأ الموضوع →
                         </span>
 
                     </a>
 
 
+                    <!-- 12 -->
 
-                    <!-- ARTICLES -->
+                    <a
+                        href="knowledge/medical-surgical.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            🏨
+                        </div>
+
+                        <h3>
+                            التمريض الباطني والجراحي
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Medical-Surgical Nursing
+                        </div>
+
+                        <p>
+                            مفاهيم الحالات المرضية والرعاية
+                            التمريضية للمرضى الباطنيين والجراحيين.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 13 -->
+
+                    <a
+                        href="knowledge/community-health.html"
+                        class="knowledge-category"
+                    >
+
+                        <div class="knowledge-category-icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            صحة المجتمع
+                        </h3>
+
+                        <div class="knowledge-category-en">
+                            Community Health Nursing
+                        </div>
+
+                        <p>
+                            الوقاية والتثقيف الصحي وصحة المجتمع
+                            والرعاية التمريضية خارج المستشفى.
+                        </p>
+
+                        <span class="knowledge-category-link">
+                            اقرأ الموضوع →
+                        </span>
+
+                    </a>
+
+
+                    <!-- 14 ARTICLES -->
 
                     <a
                         href="knowledge/articles.html"
@@ -2103,122 +2252,12 @@
                         </div>
 
                         <p>
-                            مقالات تعليمية مبسطة حول موضوعات
-                            تمريضية وطبية مختلفة.
+                            مجموعة من المقالات التعليمية المبسطة
+                            حول موضوعات تمريضية وطبية متنوعة.
                         </p>
 
                         <span class="knowledge-category-link">
-                            قراءة المقالات →
-                        </span>
-
-                    </a>
-
-
-                </div>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 FEATURED TOPICS
-                 ================================================= -->
-
-            <section class="featured-section">
-
-
-                <div class="knowledge-section-heading">
-
-                    <div>
-
-                        <h2>
-                            ⭐ موضوعات مهمة
-                        </h2>
-
-                        <p>
-                            أهم الصفحات التعليمية الجاهزة حاليًا.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="featured-grid">
-
-
-                    <a
-                        href="knowledge/vital-signs.html"
-                        class="featured-card"
-                    >
-
-                        <div class="featured-icon">
-                            ❤️
-                        </div>
-
-                        <h3>
-                            العلامات الحيوية
-                        </h3>
-
-                        <p>
-                            تعرف على Temperature وPulse وRespiration
-                            وBlood Pressure وأهم الملاحظات التمريضية.
-                        </p>
-
-                        <span class="featured-tag">
-                            Vital Signs
-                        </span>
-
-                    </a>
-
-
-
-                    <a
-                        href="knowledge/infection-control.html"
-                        class="featured-card"
-                    >
-
-                        <div class="featured-icon">
-                            🦠
-                        </div>
-
-                        <h3>
-                            مكافحة العدوى
-                        </h3>
-
-                        <p>
-                            مبادئ Infection Control وطرق تقليل
-                            انتقال العدوى داخل بيئة الرعاية الصحية.
-                        </p>
-
-                        <span class="featured-tag">
-                            Infection Control
-                        </span>
-
-                    </a>
-
-
-
-                    <a
-                        href="knowledge/medication-administration.html"
-                        class="featured-card"
-                    >
-
-                        <div class="featured-icon">
-                            💊
-                        </div>
-
-                        <h3>
-                            إعطاء الأدوية
-                        </h3>
-
-                        <p>
-                            مبادئ Medication Administration
-                            والاحتياطات التمريضية المرتبطة بالأدوية.
-                        </p>
-
-                        <span class="featured-tag">
-                            Medication Administration
+                            تصفح المقالات →
                         </span>
 
                     </a>
@@ -2242,11 +2281,11 @@
                     <div>
 
                         <h2>
-                            🔎 موضوعات سريعة
+                            🔎 وصول سريع
                         </h2>
 
                         <p>
-                            وصول مباشر إلى صفحات المعرفة التمريضية.
+                            افتح أي موضوع مباشرة من هنا.
                         </p>
 
                     </div>
@@ -2282,18 +2321,18 @@
 
 
                     <a
-                        href="knowledge/nursing-assessment.html"
+                        href="knowledge/nursing-basics.html"
                         class="quick-topic"
                     >
-                        🩺 Nursing Assessment
+                        🩺 Nursing Basics
                     </a>
 
 
                     <a
-                        href="knowledge/anatomy.html"
+                        href="knowledge/nursing-assessment.html"
                         class="quick-topic"
                     >
-                        🧠 Anatomy
+                        📝 Nursing Assessment
                     </a>
 
 
@@ -2338,10 +2377,10 @@
 
 
                     <a
-                        href="knowledge/nursing-basics.html"
+                        href="knowledge/anatomy.html"
                         class="quick-topic"
                     >
-                        🩺 Nursing Basics
+                        🧠 Anatomy
                     </a>
 
 
@@ -2349,7 +2388,7 @@
                         href="knowledge/medical-surgical.html"
                         class="quick-topic"
                     >
-                        🏥 Medical-Surgical
+                        🏨 Medical-Surgical
                     </a>
 
 
@@ -2361,6 +2400,14 @@
                     </a>
 
 
+                    <a
+                        href="knowledge/articles.html"
+                        class="quick-topic"
+                    >
+                        📖 Nursing Articles
+                    </a>
+
+
                 </div>
 
             </section>
@@ -2368,7 +2415,7 @@
 
 
             <!-- =================================================
-                 ARTICLES
+                 FEATURED CONTENT
                  ================================================= -->
 
             <section class="knowledge-articles-section">
@@ -2379,11 +2426,11 @@
                     <div>
 
                         <h2>
-                            📖 محتوى المعرفة التمريضية
+                            📚 ابدأ من هنا
                         </h2>
 
                         <p>
-                            مجموعة من الصفحات التعليمية الجاهزة للقراءة.
+                            مجموعة مختارة من أهم الموضوعات للبدء.
                         </p>
 
                     </div>
@@ -2391,9 +2438,9 @@
 
                     <a
                         href="knowledge/articles.html"
-                        class="knowledge-category-link"
+                        class="all-articles-button"
                     >
-                        كل المقالات →
+                        📖 كل المقالات
                     </a>
 
                 </div>
@@ -2403,21 +2450,46 @@
 
 
                     <a
+                        href="knowledge/vital-signs.html"
+                        class="knowledge-article"
+                    >
+
+                        <div class="knowledge-article-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            العلامات الحيوية
+                        </h3>
+
+                        <p>
+                            افهم أهم القياسات الأساسية التي
+                            يتم متابعتها عند المريض.
+                        </p>
+
+                        <span class="knowledge-article-link">
+                            اقرأ الآن →
+                        </span>
+
+                    </a>
+
+
+                    <a
                         href="knowledge/nursing-assessment.html"
                         class="knowledge-article"
                     >
 
                         <div class="knowledge-article-icon">
-                            🩺
+                            📝
                         </div>
 
                         <h3>
-                            أساسيات تقييم المريض
+                            Nursing Assessment
                         </h3>
 
                         <p>
-                            مقدمة عن Patient Assessment
-                            وأهم النقاط التي يجب أن يعرفها طالب التمريض.
+                            تعرف على أساسيات تقييم المريض
+                            وجمع البيانات التمريضية.
                         </p>
 
                         <span class="knowledge-article-link">
@@ -2427,23 +2499,22 @@
                     </a>
 
 
-
                     <a
-                        href="knowledge/hand-hygiene.html"
+                        href="knowledge/infection-control.html"
                         class="knowledge-article"
                     >
 
                         <div class="knowledge-article-icon">
-                            🧼
+                            🦠
                         </div>
 
                         <h3>
-                            أهمية غسل اليدين
+                            Infection Control
                         </h3>
 
                         <p>
-                            تعرف على Hand Hygiene وأهميتها
-                            في منع انتقال العدوى داخل بيئة الرعاية الصحية.
+                            تعلم المبادئ الأساسية لمنع ومكافحة
+                            العدوى داخل بيئة الرعاية الصحية.
                         </p>
 
                         <span class="knowledge-article-link">
@@ -2451,7 +2522,6 @@
                         </span>
 
                     </a>
-
 
 
                     <a
@@ -2464,12 +2534,12 @@
                         </div>
 
                         <h3>
-                            قواعد إعطاء الدواء
+                            Medication Administration
                         </h3>
 
                         <p>
-                            تعرف على المبادئ الأساسية لإعطاء
-                            الدواء بطريقة آمنة ومنظمة.
+                            أهم المبادئ الأساسية لإعطاء الدواء
+                            بطريقة آمنة ومنظمة.
                         </p>
 
                         <span class="knowledge-article-link">
@@ -2477,33 +2547,6 @@
                         </span>
 
                     </a>
-
-
-
-                    <a
-                        href="knowledge/patient-care.html"
-                        class="knowledge-article"
-                    >
-
-                        <div class="knowledge-article-icon">
-                            🏥
-                        </div>
-
-                        <h3>
-                            رعاية المريض
-                        </h3>
-
-                        <p>
-                            مبادئ Patient Care وأهم الجوانب
-                            الأساسية في تقديم الرعاية التمريضية.
-                        </p>
-
-                        <span class="knowledge-article-link">
-                            اقرأ الآن →
-                        </span>
-
-                    </a>
-
 
 
                     <a
@@ -2516,12 +2559,12 @@
                         </div>
 
                         <h3>
-                            سلامة المريض
+                            Patient Safety
                         </h3>
 
                         <p>
-                            أهم المبادئ والإجراءات التي تساعد
-                            على تقليل المخاطر والحفاظ على سلامة المريض.
+                            مبادئ سلامة المريض وتقليل الأخطاء
+                            والمخاطر أثناء تقديم الرعاية.
                         </p>
 
                         <span class="knowledge-article-link">
@@ -2531,23 +2574,22 @@
                     </a>
 
 
-
                     <a
-                        href="knowledge/pain-assessment.html"
+                        href="knowledge/hand-hygiene.html"
                         class="knowledge-article"
                     >
 
                         <div class="knowledge-article-icon">
-                            😣
+                            🧼
                         </div>
 
                         <h3>
-                            تقييم الألم
+                            Hand Hygiene
                         </h3>
 
                         <p>
-                            التعرف على Pain Assessment
-                            وطرق تقييم شدة الألم عند المريض.
+                            أهمية غسل اليدين في منع انتقال
+                            العدوى وحماية المريض ومقدم الرعاية.
                         </p>
 
                         <span class="knowledge-article-link">
@@ -2584,7 +2626,7 @@
 
 
                 <a href="knowledge/articles.html">
-                    📖 استكشف المقالات التعليمية
+                    📖 تصفح المقالات التعليمية
                 </a>
 
             </section>
@@ -2608,6 +2650,8 @@
             <div class="knowledge-footer-grid">
 
 
+                <!-- BRAND -->
+
                 <div class="knowledge-footer-brand">
 
                     <h3>
@@ -2616,16 +2660,17 @@
 
                     <p>
 
-                        مرجع رقمي يهدف إلى مساعدة طلاب
-                        وممارسي التمريض في الوصول إلى
-                        المعلومات والأدوات والمصادر التمريضية
-                        بشكل أسرع وأسهل.
+                        مرجع رقمي يساعد طلاب التمريض
+                        على الوصول إلى المعلومات التعليمية
+                        والمهارات والمصادر التمريضية
+                        بشكل منظم وسهل.
 
                     </p>
 
                 </div>
 
 
+                <!-- EXPLORE -->
 
                 <div class="knowledge-footer-column">
 
@@ -2633,21 +2678,26 @@
                         استكشف
                     </h4>
 
+
                     <a href="index.html">
                         الرئيسية
                     </a>
+
 
                     <a href="drugs.html">
                         مركز الأدوية
                     </a>
 
+
                     <a href="knowledge.html">
                         المعرفة التمريضية
                     </a>
 
+
                     <a href="tools.html">
                         الأدوات والحاسبات
                     </a>
+
 
                     <a href="dictionary.html">
                         قاموس التمريض
@@ -2656,6 +2706,7 @@
                 </div>
 
 
+                <!-- KNOWLEDGE -->
 
                 <div class="knowledge-footer-column">
 
@@ -2663,33 +2714,40 @@
                         المعرفة
                     </h4>
 
+
+                    <a href="knowledge/vital-signs.html">
+                        Vital Signs
+                    </a>
+
+
+                    <a href="knowledge/infection-control.html">
+                        Infection Control
+                    </a>
+
+
+                    <a href="knowledge/medication-administration.html">
+                        Medication Administration
+                    </a>
+
+
                     <a href="knowledge/nursing-basics.html">
                         Nursing Basics
                     </a>
+
 
                     <a href="knowledge/nursing-assessment.html">
                         Nursing Assessment
                     </a>
 
+
                     <a href="knowledge/patient-care.html">
                         Patient Care
-                    </a>
-
-                    <a href="knowledge/patient-safety.html">
-                        Patient Safety
-                    </a>
-
-                    <a href="knowledge/anatomy.html">
-                        Anatomy
-                    </a>
-
-                    <a href="knowledge/articles.html">
-                        Nursing Articles
                     </a>
 
                 </div>
 
 
+                <!-- MORE -->
 
                 <div class="knowledge-footer-column">
 
@@ -2697,39 +2755,50 @@
                         موضوعات أخرى
                     </h4>
 
-                    <a href="knowledge/vital-signs.html">
-                        Vital Signs
+
+                    <a href="knowledge/patient-safety.html">
+                        Patient Safety
                     </a>
 
-                    <a href="knowledge/infection-control.html">
-                        Infection Control
-                    </a>
-
-                    <a href="knowledge/medication-administration.html">
-                        Medication Administration
-                    </a>
 
                     <a href="knowledge/hand-hygiene.html">
                         Hand Hygiene
                     </a>
 
+
                     <a href="knowledge/pain-assessment.html">
                         Pain Assessment
                     </a>
+
 
                     <a href="knowledge/intake-output.html">
                         Intake & Output
                     </a>
 
+
+                    <a href="knowledge/anatomy.html">
+                        Anatomy
+                    </a>
+
+
+                    <a href="knowledge/medical-surgical.html">
+                        Medical-Surgical
+                    </a>
+
+
                     <a href="knowledge/community-health.html">
                         Community Health
+                    </a>
+
+
+                    <a href="knowledge/articles.html">
+                        📖 المقالات التعليمية
                     </a>
 
                 </div>
 
 
             </div>
-
 
 
             <div class="knowledge-footer-bottom">
@@ -2755,14 +2824,10 @@
 
 
 <!-- =====================================================
-     KNOWLEDGE JAVASCRIPT
+     SEARCH JAVASCRIPT
      ===================================================== -->
 
 <script>
-
-    /* =====================================================
-       KNOWLEDGE SEARCH
-       ===================================================== */
 
     const knowledgeSearchForm =
         document.getElementById(
@@ -2797,6 +2862,10 @@
 
                 }
 
+
+                /*
+                 * صفحة نتائج البحث الرئيسية
+                 */
 
                 window.location.href =
                     "search.html?q=" +
