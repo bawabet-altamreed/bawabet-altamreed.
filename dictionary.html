@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        قاموس التمريض | Medical Terms & Nursing Abbreviations
+    </title>
+
+    <meta
+        name="description"
+        content="قاموس التمريض الشامل: المصطلحات الطبية والتمريضية، الاختصارات التمريضية، عربي ↔ English والبحث عن المصطلحات."
+    >
+
+    <meta
+        name="keywords"
+        content="قاموس التمريض, Medical Terms, Nursing Abbreviations, مصطلحات طبية, مصطلحات تمريضية, Nursing Dictionary, Medical Dictionary, عربي English"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b2d46"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/dictionary.html"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Tahoma,
+                sans-serif;
+
+            background: #f5f8fa;
+
+            color: #173247;
+
+            line-height: 1.7;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+
+        .container {
+
+            width:
+                min(
+                    1240px,
+                    calc(100% - 40px)
+                );
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .site-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 9999;
+
+            background:
+                rgba(255,255,255,.96);
+
+            backdrop-filter:
+                blur(14px);
+
+            border-bottom:
+                1px solid #e3eaee;
+        }
+
+
+        .header-inner {
+
+            min-height: 74px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            min-width: 210px;
+
+            font-weight: 900;
+        }
+
+
+        .logo-icon {
+
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b2d46,
+                    #18758a
+                );
+
+            color: white;
+
+            font-size: 24px;
+        }
+
+
+        .logo-text strong {
+
+            display: block;
+
+            color: #0b2d46;
+
+            font-size: 18px;
+        }
+
+
+        .logo-text small {
+
+            display: block;
+
+            color: #78909c;
+
+            font-size: 10px;
+        }
+
+
+        .main-nav {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 3px;
+        }
+
+
+        .main-nav a {
+
+            padding:
+                9px 10px;
+
+            border-radius: 9px;
+
+            color: #536772;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: .2s ease;
+        }
+
+
+        .main-nav a:hover,
+        .main-nav a.active {
+
+            background: #edf5f7;
+
+            color: #0b526b;
+        }
+
+
+        .header-search {
+
+            display: flex;
+
+            align-items: center;
+
+            width: 210px;
+
+            background: #f1f5f7;
+
+            border:
+                1px solid #e0e8ec;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+        }
+
+
+        .header-search input {
+
+            width: 100%;
+
+            border: 0;
+
+            outline: 0;
+
+            background: transparent;
+
+            padding: 10px;
+
+            font-size: 13px;
+        }
+
+
+        .header-search button {
+
+            width: 42px;
+
+            height: 42px;
+
+            border: 0;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            font-size: 17px;
+        }
+
+
+        .mobile-button {
+
+            display: none;
+
+            width: 42px;
+
+            height: 42px;
+
+            border:
+                1px solid #dfe7ea;
+
+            background: white;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            font-size: 21px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .dictionary-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding:
+                70px 0 75px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #082c46 0%,
+                    #0b4b66 55%,
+                    #137b8d 100%
+                );
+
+            color: white;
+        }
+
+
+        .dictionary-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 470px;
+            height: 470px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.045);
+
+            top: -260px;
+            left: -160px;
+        }
+
+
+        .dictionary-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 390px;
+            height: 390px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.04);
+
+            bottom: -250px;
+            right: -120px;
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 950px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+
+        .hero-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding:
+                8px 15px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,.17);
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-content h1 {
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            line-height: 1.2;
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero-content h1 span {
+
+            color: #8be8f0;
+        }
+
+
+        .hero-description {
+
+            max-width: 760px;
+
+            margin:
+                0 auto 28px;
+
+            color:
+                rgba(255,255,255,.82);
+
+            font-size: 16px;
+
+            line-height: 2;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ====================================================== */
+
+        .dictionary-search {
+
+            position: relative;
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .dictionary-search input {
+
+            width: 100%;
+
+            height: 68px;
+
+            border: 0;
+
+            outline: none;
+
+            border-radius: 18px;
+
+            padding:
+                0 65px 0 125px;
+
+            font-size: 16px;
+
+            color: #17202a;
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,.2);
+        }
+
+
+        .dictionary-search-icon {
+
+            position: absolute;
+
+            right: 22px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            font-size: 24px;
+
+            pointer-events: none;
+        }
+
+
+        .dictionary-search button {
+
+            position: absolute;
+
+            left: 8px;
+
+            top: 8px;
+
+            bottom: 8px;
+
+            width: 105px;
+
+            border: 0;
+
+            border-radius: 12px;
+
+            background: #0b2d46;
+
+            color: white;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            font-size: 13px;
+        }
+
+
+        .search-hint {
+
+            margin-top: 13px;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           QUICK CATEGORIES
+        ====================================================== */
+
+        .section {
+
+            padding:
+                70px 0;
+        }
+
+
+        .section.alt {
+
+            background: white;
+        }
+
+
+        .section-heading {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 30px;
+
+            color: #102f46;
+
+            margin-bottom: 5px;
+        }
+
+
+        .section-heading p {
+
+            color: #73838c;
+
+            font-size: 14px;
+        }
+
+
+        .category-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .category-card {
+
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border:
+                1px solid #e0e8ec;
+
+            border-radius: 20px;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                border-color .2s ease;
+
+            overflow: hidden;
+        }
+
+
+        .category-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #b9d6dc;
+
+            box-shadow:
+                0 18px 40px
+                rgba(20,50,65,.09);
+        }
+
+
+        .category-icon {
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background: #eef6f8;
+
+            font-size: 29px;
+
+            margin-bottom: 17px;
+        }
+
+
+        .category-card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .category-card p {
+
+            color: #71818a;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .category-arrow {
+
+            position: absolute;
+
+            left: 20px;
+
+            bottom: 18px;
+
+            color: #15677d;
+
+            font-size: 19px;
+        }
+
+
+        /* =====================================================
+           SEARCH RESULT AREA
+        ====================================================== */
+
+        .dictionary-area {
+
+            display: grid;
+
+            grid-template-columns:
+                250px
+                minmax(0, 1fr);
+
+            gap: 25px;
+
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           SIDEBAR
+        ====================================================== */
+
+        .dictionary-sidebar {
+
+            position: sticky;
+
+            top: 100px;
+
+            padding: 20px;
+
+            background: white;
+
+            border:
+                1px solid #e0e8ec;
+
+            border-radius: 18px;
+        }
+
+
+        .dictionary-sidebar h3 {
+
+            font-size: 16px;
+
+            margin-bottom: 15px;
+
+            color: #173247;
+        }
+
+
+        .sidebar-link {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            width: 100%;
+
+            padding:
+                11px 12px;
+
+            margin-bottom: 7px;
+
+            border: 0;
+
+            border-radius: 10px;
+
+            background: transparent;
+
+            color: #61747e;
+
+            text-align: right;
+
+            cursor: pointer;
+
+            font-size: 13px;
+
+            transition: .2s;
+        }
+
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+
+            background: #edf6f8;
+
+            color: #0b526b;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           TERMS
+        ====================================================== */
+
+        .terms-header {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .terms-header h2 {
+
+            font-size: 25px;
+
+            color: #102f46;
+        }
+
+
+        .terms-count {
+
+            padding:
+                6px 11px;
+
+            border-radius: 20px;
+
+            background: #edf6f8;
+
+            color: #0b526b;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        .terms-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 13px;
+        }
+
+
+        .term-card {
+
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 16px;
+
+            padding: 20px;
+
+            transition: .2s;
+        }
+
+
+        .term-card:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(0,0,0,.06);
+
+            border-color:
+                #b9d6dc;
+        }
+
+
+        .term-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .term-english {
+
+            color: #0b526b;
+
+            font-size: 18px;
+
+            font-weight: 900;
+        }
+
+
+        .term-category {
+
+            padding:
+                4px 8px;
+
+            border-radius: 20px;
+
+            background: #f0f5f7;
+
+            color: #71818a;
+
+            font-size: 9px;
+
+            font-weight: 700;
+        }
+
+
+        .term-arabic {
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            color: #263f4f;
+
+            margin-bottom: 6px;
+        }
+
+
+        .term-definition {
+
+            color: #71818a;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        .no-results {
+
+            display: none;
+
+            padding: 45px 20px;
+
+            text-align: center;
+
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 17px;
+
+            color: #77868d;
+        }
+
+
+        .no-results-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =====================================================
+           ABBREVIATIONS
+        ====================================================== */
+
+        .abbreviation-table-wrapper {
+
+            overflow-x: auto;
+
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 18px;
+        }
+
+
+        .abbreviation-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 650px;
+        }
+
+
+        .abbreviation-table th {
+
+            background: #0b2d46;
+
+            color: white;
+
+            padding: 14px;
+
+            text-align: right;
+
+            font-size: 13px;
+        }
+
+
+        .abbreviation-table td {
+
+            padding: 14px;
+
+            border-bottom:
+                1px solid #edf1f3;
+
+            color: #526873;
+
+            font-size: 13px;
+        }
+
+
+        .abbreviation-table tr:last-child td {
+
+            border-bottom: 0;
+        }
+
+
+        .abbreviation {
+
+            color: #0b526b;
+
+            font-weight: 900;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           BILINGUAL
+        ====================================================== */
+
+        .translation-box {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        .translation-card {
+
+            padding: 25px;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 18px;
+
+            background: #f8fbfc;
+        }
+
+
+        .translation-card-icon {
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .translation-card h3 {
+
+            margin-bottom: 8px;
+
+            font-size: 18px;
+        }
+
+
+        .translation-card p {
+
+            color: #71818a;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .dictionary-cta {
+
+            padding:
+                55px 20px;
+
+            text-align: center;
+
+            background: #eef6f8;
+        }
+
+
+        .dictionary-cta h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .dictionary-cta p {
+
+            color: #71818a;
+
+            margin-bottom: 20px;
+
+            font-size: 14px;
+        }
+
+
+        .cta-button {
+
+            display: inline-block;
+
+            padding:
+                12px 22px;
+
+            background: #0b2d46;
+
+            color: white;
+
+            border-radius: 11px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .site-footer {
+
+            background: #071f32;
+
+            color: white;
+
+            padding:
+                55px 0 25px;
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 40px;
+
+            padding-bottom: 35px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.1);
+        }
+
+
+        .footer-brand h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .footer-brand p {
+
+            max-width: 430px;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .footer-column h4 {
+
+            margin-bottom: 14px;
+
+            font-size: 15px;
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 13px;
+
+            margin-bottom: 8px;
+
+            transition: .2s;
+        }
+
+
+        .footer-column a:hover {
+
+            color: white;
+        }
+
+
+        .footer-bottom {
+
+            padding-top: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color:
+                rgba(255,255,255,.45);
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 1100px) {
+
+            .main-nav {
+
+                display: none;
+            }
+
+
+            .header-search {
+
+                margin-right: auto;
+            }
+
+
+            .mobile-button {
+
+                display: block;
+            }
+
+
+            .dictionary-area {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .dictionary-sidebar {
+
+                position: static;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .container {
+
+                width:
+                    min(
+                        100% - 24px,
+                        1240px
+                    );
+            }
+
+
+            .header-inner {
+
+                min-height: 64px;
+
+                gap: 10px;
+            }
+
+
+            .logo {
+
+                min-width: auto;
+            }
+
+
+            .logo-text small {
+
+                display: none;
+            }
+
+
+            .header-search {
+
+                display: none;
+            }
+
+
+            .dictionary-hero {
+
+                padding:
+                    50px 0 55px;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 36px;
+            }
+
+
+            .hero-description {
+
+                font-size: 14px;
+            }
+
+
+            .dictionary-search input {
+
+                height: 59px;
+
+                padding:
+                    0 52px 0 95px;
+
+                font-size: 14px;
+            }
+
+
+            .dictionary-search button {
+
+                width: 78px;
+            }
+
+
+            .section {
+
+                padding:
+                    50px 0;
+            }
+
+
+            .section-heading {
+
+                flex-direction: column;
+
+                align-items:
+                    flex-start;
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 26px;
+            }
+
+
+            .category-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .terms-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .translation-box {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .footer-brand {
+
+                grid-column:
+                    1 / -1;
+            }
+
+
+            .footer-bottom {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap: 8px;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <span class="logo-icon">
+                🩺
+            </span>
+
+            <span class="logo-text">
+
+                <strong>
+                    بوابة التمريض
+                </strong>
+
+                <small>
+                    Nursing Portal
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav
+            class="main-nav"
+            aria-label="القائمة الرئيسية"
+        >
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            <a href="knowledge.html">
+                المعرفة
+            </a>
+
+            <a href="drugs.html">
+                الأدوية
+            </a>
+
+            <a href="tools.html">
+                الأدوات
+            </a>
+
+            <a
+                href="dictionary.html"
+                class="active"
+            >
+                القاموس
+            </a>
+
+            <a href="quizzes.html">
+                الاختبارات
+            </a>
+
+            <a href="egypt.html">
+                تمريض مصر
+            </a>
+
+        </nav>
+
+
+        <form
+            class="header-search"
+            id="headerSearch"
+        >
+
+            <input
+                type="search"
+                id="headerSearchInput"
+                placeholder="بحث..."
+            >
+
+            <button type="submit">
+                🔎
+            </button>
+
+        </form>
+
+
+        <button
+            class="mobile-button"
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-label="القائمة"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <div
+        id="mobileMenu"
+        style="
+            display:none;
+            background:white;
+            border-top:1px solid #e4ebee;
+        "
+    >
+
+        <div
+            class="container"
+            style="
+                padding:15px 0;
+                display:grid;
+                gap:7px;
+            "
+        >
+
+            <a href="index.html">
+                🏠 الرئيسية
+            </a>
+
+            <a href="knowledge.html">
+                🩺 المعرفة التمريضية
+            </a>
+
+            <a href="drugs.html">
+                💊 مركز الأدوية
+            </a>
+
+            <a href="tools.html">
+                🧮 الأدوات والحاسبات
+            </a>
+
+            <a href="dictionary.html">
+                📖 قاموس التمريض
+            </a>
+
+            <a href="quizzes.html">
+                📝 الاختبارات
+            </a>
+
+            <a href="flashcards.html">
+                🧠 Flashcards
+            </a>
+
+            <a href="clinical-guides.html">
+                📋 Clinical Guides
+            </a>
+
+            <a href="egypt.html">
+                🇪🇬 التمريض في مصر
+            </a>
+
+            <a href="jobs.html">
+                💼 وظائف التمريض
+            </a>
+
+            <a href="news.html">
+                📰 أخبار التمريض
+            </a>
+
+            <a href="resources.html">
+                📚 Resources
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="dictionary-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <span class="hero-badge">
+                📖 Nursing Dictionary
+            </span>
+
+
+            <h1>
+
+                قاموس
+                <span>
+                    التمريض
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                ابحث عن المصطلحات الطبية والتمريضية،
+                الاختصارات، والمعاني بالعربي والإنجليزي
+                في مكان واحد.
+
+            </p>
+
+
+            <form
+                class="dictionary-search"
+                id="dictionarySearch"
+            >
+
+                <span class="dictionary-search-icon">
+                    🔎
+                </span>
+
+                <input
+                    type="search"
+                    id="dictionarySearchInput"
+                    placeholder="ابحث عن Medical Term أو Nursing Abbreviation أو المعنى بالعربي..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    بحث
+                </button>
+
+            </form>
+
+
+            <p class="search-hint">
+                مثال: Blood Pressure • Hypertension • BP • ضغط الدم
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+====================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    📚 أقسام القاموس
+                </h2>
+
+                <p>
+                    اختر الطريقة التي تريد استخدامها للبحث والتعلم.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <a
+                href="#medical-terms"
+                class="category-card"
+            >
+
+                <div class="category-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Medical Terms
+                </h3>
+
+                <p>
+                    أهم المصطلحات الطبية والتمريضية
+                    مع شرح مبسط للمعنى.
+                </p>
+
+                <span class="category-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a
+                href="#abbreviations"
+                class="category-card"
+            >
+
+                <div class="category-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Nursing Abbreviations
+                </h3>
+
+                <p>
+                    أشهر الاختصارات المستخدمة
+                    في الدراسة والممارسة التمريضية.
+                </p>
+
+                <span class="category-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a
+                href="#translation"
+                class="category-card"
+            >
+
+                <div class="category-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    عربي ↔ English
+                </h3>
+
+                <p>
+                    فهم وترجمة المصطلحات الطبية
+                    والتمريضية بين العربية والإنجليزية.
+                </p>
+
+                <span class="category-arrow">
+                    ←
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEDICAL TERMS
+====================================================== -->
+
+<section
+    class="section alt"
+    id="medical-terms"
+>
+
+    <div class="container">
+
+
+        <div class="dictionary-area">
+
+
+            <aside class="dictionary-sidebar">
+
+                <h3>
+                    📚 تصفح القاموس
+                </h3>
+
+
+                <button
+                    class="sidebar-link active"
+                    type="button"
+                    onclick="showCategory('all')"
+                >
+                    📖 كل المصطلحات
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    type="button"
+                    onclick="showCategory('anatomy')"
+                >
+                    🫀 Anatomy
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    type="button"
+                    onclick="showCategory('nursing')"
+                >
+                    🩺 Nursing
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    type="button"
+                    onclick="showCategory('medicine')"
+                >
+                    🧪 Medicine
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    type="button"
+                    onclick="showCategory('conditions')"
+                >
+                    🏥 Conditions
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    type="button"
+                    onclick="showCategory('procedures')"
+                >
+                    📋 Procedures
+                </button>
+
+            </aside>
+
+
+
+            <div>
+
+
+                <div class="terms-header">
+
+                    <h2>
+                        📖 Medical Terms
+                    </h2>
+
+                    <span
+                        class="terms-count"
+                        id="termsCount"
+                    >
+                        12 مصطلح
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="terms-grid"
+                    id="termsGrid"
+                >
+
+
+                    <article
+                        class="term-card"
+                        data-category="anatomy"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Anatomy
+                            </span>
+
+                            <span class="term-category">
+                                ANATOMY
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            علم التشريح
+                        </div>
+
+                        <p class="term-definition">
+                            علم دراسة تركيب جسم الإنسان
+                            وأجزائه المختلفة.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="nursing"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Nursing
+                            </span>
+
+                            <span class="term-category">
+                                NURSING
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            التمريض
+                        </div>
+
+                        <p class="term-definition">
+                            مجال يهتم برعاية المريض وتعزيز
+                            الصحة والوقاية من المرض.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="medicine"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Diagnosis
+                            </span>
+
+                            <span class="term-category">
+                                MEDICINE
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            التشخيص
+                        </div>
+
+                        <p class="term-definition">
+                            تحديد المرض أو الحالة الصحية
+                            بناءً على التقييم والفحوصات.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="conditions"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Hypertension
+                            </span>
+
+                            <span class="term-category">
+                                CONDITIONS
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            ارتفاع ضغط الدم
+                        </div>
+
+                        <p class="term-definition">
+                            ارتفاع ضغط الدم بصورة مستمرة
+                            عن المعدلات الطبيعية.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="conditions"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Hypotension
+                            </span>
+
+                            <span class="term-category">
+                                CONDITIONS
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            انخفاض ضغط الدم
+                        </div>
+
+                        <p class="term-definition">
+                            انخفاض ضغط الدم عن المستوى
+                            المتوقع أو المناسب للحالة.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="nursing"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Vital Signs
+                            </span>
+
+                            <span class="term-category">
+                                NURSING
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            العلامات الحيوية
+                        </div>
+
+                        <p class="term-definition">
+                            مؤشرات أساسية تشمل مثلًا الحرارة
+                            والنبض والتنفس وضغط الدم.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="procedures"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Catheterization
+                            </span>
+
+                            <span class="term-category">
+                                PROCEDURES
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            القسطرة
+                        </div>
+
+                        <p class="term-definition">
+                            إجراء طبي يتم فيه إدخال قسطرة
+                            لتحقيق غرض تشخيصي أو علاجي.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="medicine"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Medication
+                            </span>
+
+                            <span class="term-category">
+                                MEDICINE
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            دواء
+                        </div>
+
+                        <p class="term-definition">
+                            مادة أو مستحضر يستخدم للوقاية
+                            من مرض أو علاجه أو السيطرة عليه.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="nursing"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Assessment
+                            </span>
+
+                            <span class="term-category">
+                                NURSING
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            التقييم
+                        </div>
+
+                        <p class="term-definition">
+                            جمع وتحليل المعلومات المتعلقة
+                            بحالة المريض.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="nursing"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Intervention
+                            </span>
+
+                            <span class="term-category">
+                                NURSING
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            التدخل التمريضي
+                        </div>
+
+                        <p class="term-definition">
+                            إجراء تمريضي يتم تنفيذه استجابة
+                            لاحتياجات المريض.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="procedures"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Sterilization
+                            </span>
+
+                            <span class="term-category">
+                                PROCEDURES
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            التعقيم
+                        </div>
+
+                        <p class="term-definition">
+                            عملية تهدف إلى القضاء على جميع
+                            أشكال الكائنات الدقيقة القابلة للحياة.
+                        </p>
+
+                    </article>
+
+
+
+                    <article
+                        class="term-card"
+                        data-category="anatomy"
+                    >
+
+                        <div class="term-top">
+
+                            <span class="term-english">
+                                Distal
+                            </span>
+
+                            <span class="term-category">
+                                ANATOMY
+                            </span>
+
+                        </div>
+
+                        <div class="term-arabic">
+                            بعيد عن نقطة اتصال الطرف بالجسم
+                        </div>
+
+                        <p class="term-definition">
+                            مصطلح تشريحي يصف الجزء الأبعد
+                            عن نقطة اتصال الطرف بالجسم.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <div class="no-results-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        لم يتم العثور على نتائج
+                    </h3>
+
+                    <p>
+                        جرّب البحث باستخدام مصطلح آخر.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABBREVIATIONS
+====================================================== -->
+
+<section
+    class="section"
+    id="abbreviations"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    🩺 Nursing Abbreviations
+                </h2>
+
+                <p>
+                    أشهر الاختصارات الطبية والتمريضية المستخدمة.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="abbreviation-table-wrapper">
+
+            <table class="abbreviation-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            الاختصار
+                        </th>
+
+                        <th>
+                            Full Term
+                        </th>
+
+                        <th>
+                            المعنى
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            BP
+                        </td>
+
+                        <td>
+                            Blood Pressure
+                        </td>
+
+                        <td>
+                            ضغط الدم
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            HR
+                        </td>
+
+                        <td>
+                            Heart Rate
+                        </td>
+
+                        <td>
+                            معدل ضربات القلب
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            RR
+                        </td>
+
+                        <td>
+                            Respiratory Rate
+                        </td>
+
+                        <td>
+                            معدل التنفس
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            T
+                        </td>
+
+                        <td>
+                            Temperature
+                        </td>
+
+                        <td>
+                            درجة الحرارة
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            SpO₂
+                        </td>
+
+                        <td>
+                            Oxygen Saturation
+                        </td>
+
+                        <td>
+                            تشبع الأكسجين
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            IV
+                        </td>
+
+                        <td>
+                            Intravenous
+                        </td>
+
+                        <td>
+                            عن طريق الوريد
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            IM
+                        </td>
+
+                        <td>
+                            Intramuscular
+                        </td>
+
+                        <td>
+                            في العضل
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td class="abbreviation">
+                            PO
+                        </td>
+
+                        <td>
+                            By Mouth
+                        </td>
+
+                        <td>
+                            عن طريق الفم
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARABIC / ENGLISH
+====================================================== -->
+
+<section
+    class="section alt"
+    id="translation"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    🌐 عربي ↔ English
+                </h2>
+
+                <p>
+                    تعلّم المصطلحات الطبية باللغتين بسهولة.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="translation-box">
+
+
+            <div class="translation-card">
+
+                <div class="translation-card-icon">
+                    🇬🇧
+                </div>
+
+                <h3>
+                    English → عربي
+                </h3>
+
+                <p>
+                    ابحث عن المصطلح الطبي باللغة الإنجليزية
+                    لمعرفة معناه باللغة العربية.
+                </p>
+
+            </div>
+
+
+            <div class="translation-card">
+
+                <div class="translation-card-icon">
+                    🇪🇬
+                </div>
+
+                <h3>
+                    عربي → English
+                </h3>
+
+                <p>
+                    ابحث باللغة العربية للوصول إلى
+                    المصطلح الطبي المقابل باللغة الإنجليزية.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section class="dictionary-cta">
+
+    <div class="container">
+
+        <h2>
+            📖 مصطلح جديد كل يوم
+        </h2>
+
+        <p>
+            استخدم قاموس التمريض لتوسيع معرفتك
+            بالمصطلحات الطبية والتمريضية.
+        </p>
+
+        <a
+            href="#medical-terms"
+            class="cta-button"
+        >
+            تصفح المصطلحات
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    🩺 بوابة التمريض
+                </h3>
+
+                <p>
+                    مرجع رقمي عربي يهدف إلى جمع المعرفة
+                    والأدوات والمصادر والمعلومات المفيدة
+                    لطلاب وممارسي التمريض في مكان واحد.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    المعرفة
+                </h4>
+
+                <a href="knowledge.html">
+                    المعرفة التمريضية
+                </a>
+
+                <a href="clinical-guides.html">
+                    Clinical Guides
+                </a>
+
+                <a href="dictionary.html">
+                    قاموس التمريض
+                </a>
+
+                <a href="flashcards.html">
+                    Flashcards
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    الخدمات
+                </h4>
+
+                <a href="drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a href="tools.html">
+                    الحاسبات والأدوات
+                </a>
+
+                <a href="quizzes.html">
+                    الاختبارات
+                </a>
+
+                <a href="resources.html">
+                    Resources
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    التمريض في مصر
+                </h4>
+
+                <a href="egypt.html">
+                    الدراسة والقبول
+                </a>
+
+                <a href="jobs.html">
+                    وظائف التمريض
+                </a>
+
+                <a href="news.html">
+                    أخبار التمريض
+                </a>
+
+                <a href="articles.html">
+                    المقالات
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+            </span>
+
+            <span>
+                Built for Nursing 🩺
+            </span>
+
+        </div>
+
+
+        <div
+            style="
+                margin-top:20px;
+                padding-top:18px;
+                border-top:1px solid rgba(255,255,255,.08);
+                text-align:center;
+                color:rgba(255,255,255,.65);
+                font-size:13px;
+                line-height:2;
+            "
+        >
+
+            تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
+
+            <strong
+                style="
+                    color:#8be8f0;
+                    font-size:15px;
+                    font-weight:900;
+                "
+            >
+                احــــــمــــــد بــــــــســـــــام
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       MOBILE MENU
+    ====================================================== */
+
+    function toggleMobileMenu() {
+
+        const menu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+
+        if (
+            menu.style.display === "none" ||
+            menu.style.display === ""
+        ) {
+
+            menu.style.display = "block";
+
+        } else {
+
+            menu.style.display = "none";
+
+        }
+
+    }
+
+
+
+    /* =====================================================
+       DICTIONARY DATA / SEARCH
+    ====================================================== */
+
+    const searchInput =
+        document.getElementById(
+            "dictionarySearchInput"
+        );
+
+
+    const termCards =
+        document.querySelectorAll(
+            ".term-card"
+        );
+
+
+    const noResults =
+        document.getElementById(
+            "noResults"
+        );
+
+
+    const termsCount =
+        document.getElementById(
+            "termsCount"
+        );
+
+
+
+    function searchDictionary(query) {
+
+        query =
+            query
+                .trim()
+                .toLowerCase();
+
+
+        let visibleCount = 0;
+
+
+        termCards.forEach(
+            function(card) {
+
+                const text =
+                    card.innerText
+                        .toLowerCase();
+
+
+                if (
+                    !query ||
+                    text.includes(query)
+                ) {
+
+                    card.style.display =
+                        "block";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        if (visibleCount === 0) {
+
+            noResults.style.display =
+                "block";
+
+        } else {
+
+            noResults.style.display =
+                "none";
+
+        }
+
+
+        termsCount.textContent =
+            visibleCount +
+            " مصطلح";
+
+    }
+
+
+
+    document
+        .getElementById(
+            "dictionarySearch"
+        )
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+                searchDictionary(
+                    searchInput.value
+                );
+
+                document
+                    .getElementById(
+                        "medical-terms"
+                    )
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+
+
+    searchInput.addEventListener(
+        "input",
+        function() {
+
+            searchDictionary(
+                this.value
+            );
+
+        }
+    );
+
+
+
+    /* =====================================================
+       CATEGORY FILTER
+    ====================================================== */
+
+    function showCategory(category) {
+
+        let visibleCount = 0;
+
+
+        termCards.forEach(
+            function(card) {
+
+                const cardCategory =
+                    card.dataset.category;
+
+
+                if (
+                    category === "all" ||
+                    cardCategory === category
+                ) {
+
+                    card.style.display =
+                        "block";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        termsCount.textContent =
+            visibleCount +
+            " مصطلح";
+
+
+        if (visibleCount === 0) {
+
+            noResults.style.display =
+                "block";
+
+        } else {
+
+            noResults.style.display =
+                "none";
+
+        }
+
+
+        document
+            .querySelectorAll(
+                ".sidebar-link"
+            )
+            .forEach(
+                function(button) {
+
+                    button.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+        event.currentTarget.classList.add(
+            "active"
+        );
+
+    }
+
+
+
+    /* =====================================================
+       HEADER SEARCH
+    ====================================================== */
+
+    function performHeaderSearch(query) {
+
+        query =
+            query.trim();
+
+
+        if (!query) {
+
+            return;
+
+        }
+
+
+        window.location.href =
+            "search.html?q=" +
+            encodeURIComponent(
+                query
+            );
+
+    }
+
+
+
+    document
+        .getElementById(
+            "headerSearch"
+        )
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const input =
+                    document.getElementById(
+                        "headerSearchInput"
+                    );
+
+
+                performHeaderSearch(
+                    input.value
+                );
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>
