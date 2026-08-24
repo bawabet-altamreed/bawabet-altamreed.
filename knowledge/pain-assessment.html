@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        تقييم الألم | Pain Assessment | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="تعلم تقييم الألم في التمريض، أنواع الألم، مقاييس الألم، PQRST، وتقييم شدة الألم بطريقة مبسطة لطلاب التمريض."
+    >
+
+    <meta
+        name="keywords"
+        content="Pain Assessment, تقييم الألم, Nursing Pain Assessment, PQRST, Pain Scale, Numeric Rating Scale, التمريض, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/knowledge/pain-assessment.html"
+    >
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:title"
+        content="تقييم الألم | Pain Assessment | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="شرح مبسط لتقييم الألم في التمريض ومقاييس الألم وطريقة PQRST."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/knowledge/pain-assessment.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+        }
+
+
+        .knowledge-page {
+
+            min-height: 100vh;
+
+            background: #f5f8fa;
+
+            color: #102f46;
+
+        }
+
+
+        .knowledge-container {
+
+            width:
+                min(
+                    1120px,
+                    calc(100% - 40px)
+                );
+
+            margin: auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .knowledge-header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 5000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #e4ebef;
+
+        }
+
+
+        .knowledge-header-inner {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        .knowledge-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            color: #0c3555;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+        }
+
+
+        .knowledge-brand-icon {
+
+            width: 44px;
+
+            height: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color: white;
+
+            font-size: 22px;
+
+        }
+
+
+        .knowledge-brand-title {
+
+            display: block;
+
+            font-size: 19px;
+
+        }
+
+
+        .knowledge-brand-subtitle {
+
+            display: block;
+
+            margin-top: 2px;
+
+            color: #78909c;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+        }
+
+
+        .knowledge-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+        }
+
+
+        .knowledge-nav a {
+
+            padding: 9px 13px;
+
+            border-radius: 9px;
+
+            color: #52636e;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .knowledge-nav a:hover {
+
+            background: #eef5f7;
+
+            color: #0c3555;
+
+        }
+
+
+        .knowledge-home-button {
+
+            padding: 10px 16px;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .pain-hero {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 70px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color: white;
+
+        }
+
+
+        .pain-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 430px;
+
+            height: 430px;
+
+            border-radius: 50%;
+
+            top: -260px;
+
+            left: -120px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .pain-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            bottom: -230px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .pain-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        .pain-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.16
+                );
+
+            font-size: 13px;
+
+        }
+
+
+        .pain-hero h1 {
+
+            margin: 0 0 15px;
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            line-height: 1.2;
+
+        }
+
+
+        .pain-hero h1 span {
+
+            color: #8ee7f2;
+
+        }
+
+
+        .pain-hero p {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            line-height: 2;
+
+            font-size: 16px;
+
+            opacity: 0.88;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .pain-main {
+
+            padding: 55px 0 75px;
+
+        }
+
+
+        .pain-card {
+
+            padding: 28px;
+
+            margin-bottom: 22px;
+
+            background: white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.035
+                );
+
+        }
+
+
+        .pain-card h2 {
+
+            margin: 0 0 15px;
+
+            color: #0c3555;
+
+            font-size: 25px;
+
+        }
+
+
+        .pain-card h3 {
+
+            margin: 22px 0 8px;
+
+            color: #17435c;
+
+            font-size: 18px;
+
+        }
+
+
+        .pain-card p {
+
+            margin: 0 0 12px;
+
+            color: #657984;
+
+            line-height: 2;
+
+            font-size: 14px;
+
+        }
+
+
+        .pain-card ul {
+
+            margin: 10px 0 0;
+
+            padding-right: 22px;
+
+            color: #657984;
+
+            line-height: 2;
+
+            font-size: 14px;
+
+        }
+
+
+        .pain-card li {
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =====================================================
+           DEFINITION
+           ===================================================== */
+
+        .definition-box {
+
+            padding: 22px;
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6f8,
+                    #f8fbfc
+                );
+
+            border:
+                1px solid #dcebed;
+
+        }
+
+
+        .definition-box strong {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #0c5e75;
+
+            font-size: 17px;
+
+        }
+
+
+        .definition-box span {
+
+            color: #627782;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           SCALE
+           ===================================================== */
+
+        .pain-scale {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    6,
+                    1fr
+                );
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .pain-scale-item {
+
+            padding: 17px 8px;
+
+            text-align: center;
+
+            border-radius: 13px;
+
+            background: #f5f8fa;
+
+            border:
+                1px solid #e1e9ed;
+
+        }
+
+
+        .pain-scale-number {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #0c3555;
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+        }
+
+
+        .pain-scale-label {
+
+            color: #71828b;
+
+            font-size: 11px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =====================================================
+           PQRST
+           ===================================================== */
+
+        .pqrst-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    5,
+                    1fr
+                );
+
+            gap: 12px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .pqrst-item {
+
+            padding: 20px;
+
+            background: #f8fafb;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 15px;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .pqrst-item:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.06
+                );
+
+        }
+
+
+        .pqrst-letter {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 12px;
+
+            border-radius: 12px;
+
+            background: #eaf5f7;
+
+            color: #0c5e75;
+
+            font-size: 19px;
+
+            font-weight: 900;
+
+            direction: ltr;
+
+        }
+
+
+        .pqrst-item h3 {
+
+            margin: 0 0 7px;
+
+            font-size: 16px;
+
+        }
+
+
+        .pqrst-item p {
+
+            margin: 0;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           ASSESSMENT STEPS
+           ===================================================== */
+
+        .steps {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap: 14px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .step {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 13px;
+
+            padding: 18px;
+
+            background: #f8fafb;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius: 14px;
+
+        }
+
+
+        .step-number {
+
+            width: 35px;
+
+            height: 35px;
+
+            flex: 0 0 35px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #0c3555;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+        }
+
+
+        .step strong {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #173b53;
+
+            font-size: 14px;
+
+        }
+
+
+        .step span {
+
+            color: #75858e;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           WARNING
+           ===================================================== */
+
+        .warning-box {
+
+            padding: 22px;
+
+            margin-top: 20px;
+
+            border-radius: 15px;
+
+            background: #fff8ed;
+
+            border:
+                1px solid #f0dfc5;
+
+        }
+
+
+        .warning-box strong {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #8a5a19;
+
+            font-size: 16px;
+
+        }
+
+
+        .warning-box p {
+
+            margin: 0;
+
+            color: #79694f;
+
+        }
+
+
+        /* =====================================================
+           EXAM
+           ===================================================== */
+
+        .exam-box {
+
+            padding: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6f8,
+                    #f7fbfc
+                );
+
+            border:
+                1px solid #dcebed;
+
+            border-radius: 16px;
+
+        }
+
+
+        .exam-box h3 {
+
+            margin-top: 0;
+
+            color: #0c3555;
+
+        }
+
+
+        .exam-box ul {
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =====================================================
+           RELATED
+           ===================================================== */
+
+        .related-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 14px;
+
+        }
+
+
+        .related-card {
+
+            padding: 20px;
+
+            background: white;
+
+            border:
+                1px solid #e2eaee;
+
+            border-radius: 16px;
+
+            text-decoration: none;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .related-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 28px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.07
+                );
+
+        }
+
+
+        .related-icon {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .related-card h3 {
+
+            margin: 0 0 6px;
+
+            color: #173b53;
+
+            font-size: 16px;
+
+        }
+
+
+        .related-card p {
+
+            margin: 0;
+
+            color: #7a8992;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .knowledge-footer {
+
+            padding: 45px 0 20px;
+
+            background: #092d49;
+
+            color: white;
+
+        }
+
+
+        .knowledge-footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 30px;
+
+            padding-bottom: 30px;
+
+            border-bottom:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.11
+                );
+
+        }
+
+
+        .knowledge-footer-brand h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 19px;
+
+        }
+
+
+        .knowledge-footer-brand p {
+
+            max-width: 430px;
+
+            margin: 0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.64
+                );
+
+            line-height: 1.9;
+
+            font-size: 13px;
+
+        }
+
+
+        .knowledge-footer-column h4 {
+
+            margin: 0 0 14px;
+
+            font-size: 14px;
+
+        }
+
+
+        .knowledge-footer-column a {
+
+            display: block;
+
+            margin-bottom: 9px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.65
+                );
+
+            font-size: 12px;
+
+            text-decoration: none;
+
+        }
+
+
+        .knowledge-footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .knowledge-footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding-top: 18px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.45
+                );
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .pqrst-grid {
+
+                grid-template-columns:
+                    repeat(
+                        3,
+                        1fr
+                    );
+
+            }
+
+
+            .pain-scale {
+
+                grid-template-columns:
+                    repeat(
+                        3,
+                        1fr
+                    );
+
+            }
+
+
+            .knowledge-footer-grid {
+
+                grid-template-columns:
+                    2fr 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            .knowledge-nav {
+
+                display: none;
+
+            }
+
+
+            .steps {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .related-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .knowledge-container {
+
+                width:
+                    calc(
+                        100% - 24px
+                    );
+
+            }
+
+
+            .knowledge-header-inner {
+
+                min-height: 64px;
+
+            }
+
+
+            .knowledge-home-button {
+
+                display: none;
+
+            }
+
+
+            .pain-hero {
+
+                padding: 55px 0 50px;
+
+            }
+
+
+            .pain-hero h1 {
+
+                font-size: 36px;
+
+            }
+
+
+            .pain-hero p {
+
+                font-size: 14px;
+
+            }
+
+
+            .pain-card {
+
+                padding: 22px;
+
+            }
+
+
+            .pqrst-grid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .pain-scale {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .knowledge-footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .knowledge-footer-bottom {
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="knowledge-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="knowledge-header">
+
+        <div class="knowledge-container knowledge-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="knowledge-brand"
+            >
+
+                <span class="knowledge-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="knowledge-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="knowledge-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <nav
+                class="knowledge-nav"
+                aria-label="القائمة الرئيسية"
+            >
+
+                <a href="../index.html">
+                    الرئيسية
+                </a>
+
+                <a href="../drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    المعرفة التمريضية
+                </a>
+
+                <a href="../tools.html">
+                    الأدوات والحاسبات
+                </a>
+
+                <a href="../dictionary.html">
+                    قاموس التمريض
+                </a>
+
+            </nav>
+
+
+            <a
+                href="../index.html"
+                class="knowledge-home-button"
+            >
+                🏠 الرئيسية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="pain-hero">
+
+        <div class="knowledge-container">
+
+            <div class="pain-hero-content">
+
+                <span class="pain-badge">
+                    🩹 Nursing Assessment
+                </span>
+
+
+                <h1>
+
+                    تقييم
+                    <span>
+                        الألم
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Pain Assessment من أهم مهارات التقييم
+                    التمريضي. تعرف على كيفية تقييم الألم،
+                    شدته، مكانه، طبيعته، والعوامل المؤثرة عليه
+                    بطريقة منظمة وسهلة.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="pain-main">
+
+        <div class="knowledge-container">
+
+
+            <!-- =================================================
+                 DEFINITION
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    🩹 ما هو الألم؟
+                </h2>
+
+
+                <div class="definition-box">
+
+                    <strong>
+                        Pain
+                    </strong>
+
+                    <span>
+
+                        الألم هو تجربة حسية وانفعالية غير مريحة
+                        ترتبط بتلف نسيجي فعلي أو محتمل، أو توصف
+                        بطريقة تشبه ذلك التلف.
+
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    لماذا نقيم الألم؟
+                </h3>
+
+                <ul>
+
+                    <li>
+                        تحديد شدة الألم ومكانه وطبيعته.
+                    </li>
+
+                    <li>
+                        معرفة العوامل التي تزيد أو تقلل الألم.
+                    </li>
+
+                    <li>
+                        تقييم تأثير الألم على نشاط وحياة المريض.
+                    </li>
+
+                    <li>
+                        المساعدة في اختيار التدخل المناسب.
+                    </li>
+
+                    <li>
+                        متابعة استجابة المريض للتدخلات العلاجية.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAIN TYPES
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    📚 أنواع الألم
+                </h2>
+
+
+                <h3>
+                    Acute Pain — الألم الحاد
+                </h3>
+
+                <p>
+
+                    يبدأ غالبًا بشكل مفاجئ ويرتبط عادةً بإصابة
+                    أو مرض أو إجراء طبي أو جراحي، وقد يستمر
+                    لفترة محدودة.
+
+                </p>
+
+
+                <h3>
+                    Chronic Pain — الألم المزمن
+                </h3>
+
+                <p>
+
+                    يستمر أو يتكرر لفترة طويلة وقد يحتاج إلى
+                    تقييم شامل يتجاوز مجرد قياس شدة الألم.
+
+                </p>
+
+
+                <h3>
+                    Nociceptive Pain
+                </h3>
+
+                <p>
+
+                    ينتج عن تنبيه مستقبلات الألم بسبب تلف أو
+                    التهاب في الأنسجة، وقد يكون Somatic أو Visceral.
+
+                </p>
+
+
+                <h3>
+                    Neuropathic Pain
+                </h3>
+
+                <p>
+
+                    يرتبط بخلل أو إصابة في الجهاز العصبي، وقد
+                    يصفه المريض بأنه حارق أو كالصعقة أو مع وخز.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PAIN SCALE
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    🔢 Numeric Pain Rating Scale
+                </h2>
+
+                <p>
+
+                    من المقاييس الشائعة سؤال المريض عن شدة
+                    الألم على مقياس من 0 إلى 10، مع تفسير
+                    الرقم وفق المقياس المستخدم في المؤسسة
+                    الصحية وحالة المريض.
+
+                </p>
+
+
+                <div class="pain-scale">
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            0
+                        </span>
+
+                        <span class="pain-scale-label">
+                            لا يوجد ألم
+                        </span>
+
+                    </div>
+
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            1–2
+                        </span>
+
+                        <span class="pain-scale-label">
+                            ألم بسيط
+                        </span>
+
+                    </div>
+
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            3–4
+                        </span>
+
+                        <span class="pain-scale-label">
+                            بسيط إلى متوسط
+                        </span>
+
+                    </div>
+
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            5–6
+                        </span>
+
+                        <span class="pain-scale-label">
+                            متوسط
+                        </span>
+
+                    </div>
+
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            7–8
+                        </span>
+
+                        <span class="pain-scale-label">
+                            شديد
+                        </span>
+
+                    </div>
+
+
+                    <div class="pain-scale-item">
+
+                        <span class="pain-scale-number">
+                            9–10
+                        </span>
+
+                        <span class="pain-scale-label">
+                            شديد جدًا
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="warning-box">
+
+                    <strong>
+                        ⚠️ ملاحظة مهمة
+                    </strong>
+
+                    <p>
+
+                        لا تعتمد على الرقم وحده. يجب تفسير
+                        شدة الألم في سياق حالة المريض، واستخدام
+                        مقياس مناسب لقدراته العمرية والإدراكية
+                        واللغوية.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PQRST
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    🧠 تقييم الألم باستخدام PQRST
+                </h2>
+
+                <p>
+
+                    يساعد إطار PQRST على جمع معلومات منظمة
+                    عن الألم بدلًا من الاكتفاء بسؤال المريض
+                    عن شدته فقط.
+
+                </p>
+
+
+                <div class="pqrst-grid">
+
+
+                    <div class="pqrst-item">
+
+                        <div class="pqrst-letter">
+                            P
+                        </div>
+
+                        <h3>
+                            Provocation / Palliation
+                        </h3>
+
+                        <p>
+                            ما الذي يزيد الألم؟ وما الذي
+                            يخففه؟
+                        </p>
+
+                    </div>
+
+
+                    <div class="pqrst-item">
+
+                        <div class="pqrst-letter">
+                            Q
+                        </div>
+
+                        <h3>
+                            Quality
+                        </h3>
+
+                        <p>
+                            كيف يصف المريض طبيعة الألم؟
+                            حارق؟ ضاغط؟ طاعن؟
+                        </p>
+
+                    </div>
+
+
+                    <div class="pqrst-item">
+
+                        <div class="pqrst-letter">
+                            R
+                        </div>
+
+                        <h3>
+                            Region / Radiation
+                        </h3>
+
+                        <p>
+                            أين يوجد الألم؟ وهل ينتشر إلى
+                            مكان آخر؟
+                        </p>
+
+                    </div>
+
+
+                    <div class="pqrst-item">
+
+                        <div class="pqrst-letter">
+                            S
+                        </div>
+
+                        <h3>
+                            Severity
+                        </h3>
+
+                        <p>
+                            ما شدة الألم؟ ويمكن استخدام
+                            مقياس مناسب مثل 0–10.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pqrst-item">
+
+                        <div class="pqrst-letter">
+                            T
+                        </div>
+
+                        <h3>
+                            Timing
+                        </h3>
+
+                        <p>
+                            متى بدأ الألم؟ وهل هو مستمر أم
+                            متقطع؟ وما مدته؟
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ASSESSMENT
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    🩺 خطوات تقييم الألم
+                </h2>
+
+
+                <div class="steps">
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                اسأل المريض
+                            </strong>
+
+                            <span>
+                                دع المريض يصف الألم بنفسه،
+                                خصوصًا عندما يكون قادرًا على
+                                التواصل.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                حدد المكان
+                            </strong>
+
+                            <span>
+                                اسأل عن مكان الألم وهل يوجد
+                                انتشار إلى مناطق أخرى.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                قيّم الشدة
+                            </strong>
+
+                            <span>
+                                استخدم مقياسًا مناسبًا لقدرات
+                                المريض وحالته.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                افهم طبيعة الألم
+                            </strong>
+
+                            <span>
+                                اسأل عن الوصف، البداية، المدة،
+                                والعوامل التي تزيد أو تخفف الألم.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            5
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                قيّم تأثيره
+                            </strong>
+
+                            <span>
+                                لاحظ تأثير الألم على النوم والحركة
+                                والنشاط والأكل والوظائف اليومية.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            6
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                أعد التقييم
+                            </strong>
+
+                            <span>
+                                بعد التدخل، أعد تقييم الألم وسجل
+                                استجابة المريض وفق سياسة المكان.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NONVERBAL
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    👀 العلامات غير اللفظية للألم
+                </h2>
+
+                <p>
+
+                    لا يستطيع كل المرضى وصف الألم لفظيًا؛
+                    لذلك يجب ملاحظة السلوك والعلامات المصاحبة
+                    مع عدم افتراض شدة الألم اعتمادًا عليها وحدها.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        تعبيرات الوجه مثل التكشير أو التجهم.
+                    </li>
+
+                    <li>
+                        حماية جزء مؤلم من الجسم.
+                    </li>
+
+                    <li>
+                        القلق أو التململ.
+                    </li>
+
+                    <li>
+                        تغيرات في الحركة أو النشاط.
+                    </li>
+
+                    <li>
+                        تغيرات في بعض العلامات الفسيولوجية
+                        قد ترافق الألم.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DOCUMENTATION
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    📝 توثيق تقييم الألم
+                </h2>
+
+                <p>
+                    يجب توثيق المعلومات المهمة وفق نظام
+                    التوثيق وسياسة المؤسسة الصحية.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        مكان الألم.
+                    </li>
+
+                    <li>
+                        شدة الألم والمقياس المستخدم.
+                    </li>
+
+                    <li>
+                        وصف وطبيعة الألم.
+                    </li>
+
+                    <li>
+                        وقت البداية والمدة والنمط.
+                    </li>
+
+                    <li>
+                        العوامل التي تزيد أو تخفف الألم.
+                    </li>
+
+                    <li>
+                        التدخل الذي تم اتخاذه.
+                    </li>
+
+                    <li>
+                        استجابة المريض وإعادة التقييم.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EXAM
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <div class="exam-box">
+
+                    <h3>
+                        🎯 أهم نقاط الامتحان
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            PQRST طريقة منظمة لجمع معلومات الألم.
+                        </li>
+
+                        <li>
+                            S = Severity أي شدة الألم.
+                        </li>
+
+                        <li>
+                            R = Region / Radiation.
+                        </li>
+
+                        <li>
+                            T = Timing.
+                        </li>
+
+                        <li>
+                            يجب اختيار Pain Scale مناسب لقدرات المريض.
+                        </li>
+
+                        <li>
+                            تقييم الألم لا ينتهي عند إعطاء التدخل؛
+                            يجب إعادة التقييم.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RELATED
+                 ================================================= -->
+
+            <section class="pain-card">
+
+                <h2>
+                    🔗 موضوعات مرتبطة
+                </h2>
+
+
+                <div class="related-grid">
+
+
+                    <a
+                        href="nursing-assessment.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-icon">
+                            🩺
+                        </div>
+
+                        <h3>
+                            Nursing Assessment
+                        </h3>
+
+                        <p>
+                            تعرف على المبادئ الأساسية
+                            لتقييم المريض.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="vital-signs.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Vital Signs
+                        </h3>
+
+                        <p>
+                            العلامات الحيوية وأهم الملاحظات
+                            التمريضية.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="patient-care.html"
+                        class="related-card"
+                    >
+
+                        <div class="related-icon">
+                            🏥
+                        </div>
+
+                        <h3>
+                            Patient Care
+                        </h3>
+
+                        <p>
+                            مبادئ الرعاية الأساسية للمريض.
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="knowledge-footer">
+
+        <div class="knowledge-container">
+
+
+            <div class="knowledge-footer-grid">
+
+
+                <div class="knowledge-footer-brand">
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+
+                        مرجع رقمي يساعد طلاب التمريض على
+                        الوصول إلى المعلومات والمهارات
+                        التمريضية بطريقة منظمة ومبسطة.
+
+                    </p>
+
+                </div>
+
+
+                <div class="knowledge-footer-column">
+
+                    <h4>
+                        استكشف
+                    </h4>
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../tools.html">
+                        الأدوات والحاسبات
+                    </a>
+
+                </div>
+
+
+                <div class="knowledge-footer-column">
+
+                    <h4>
+                        المعرفة
+                    </h4>
+
+                    <a href="nursing-basics.html">
+                        Nursing Basics
+                    </a>
+
+                    <a href="nursing-assessment.html">
+                        Nursing Assessment
+                    </a>
+
+                    <a href="patient-safety.html">
+                        Patient Safety
+                    </a>
+
+                    <a href="hand-hygiene.html">
+                        Hand Hygiene
+                    </a>
+
+                </div>
+
+
+                <div class="knowledge-footer-column">
+
+                    <h4>
+                        معلومات
+                    </h4>
+
+                    <a href="../pages/about.html">
+                        من نحن
+                    </a>
+
+                    <a href="../pages/contact.html">
+                        تواصل معنا
+                    </a>
+
+                    <a href="../pages/privacy.html">
+                        سياسة الخصوصية
+                    </a>
+
+                    <a href="../pages/medical-disclaimer.html">
+                        إخلاء المسؤولية الطبية
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="knowledge-footer-bottom">
+
+                <span>
+                    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                </span>
+
+                <span>
+                    Built for Nursing. 🩺
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
