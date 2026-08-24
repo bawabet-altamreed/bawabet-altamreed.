@@ -1,194 +1,872 @@
 /* =========================================================
-   BAWABET ALTAMREED
-   DRUGS DATABASE ENGINE
-   ========================================================= */
+   بوابة التمريض - Drug Center
+   Main Drug Database Engine
+   Database: data/drugs.json
+========================================================= */
 
 "use strict";
 
+const DRUG_DATABASE_URL = "data/drugs.json";
 
-const BAWABET_DRUGS = {
+let allDrugs = [];
+let filteredDrugs = [];
 
-    data: null,
+let currentPage = 1;
 
-    state: {
-        query: "",
-        category: "all",
-        currentDrug: null,
-        favorites: []
-    },
+const RESULTS_PER_PAGE = 24;
 
 
-    /* =====================================================
-       INITIALIZE
-       ===================================================== */
+/* =========================================================
+   DOM
+========================================================= */
 
-    async init() {
+const searchInput =
+    document.getElementById("drugSearch");
 
-        const container =
-            document.querySelector("[data-drugs]");
+const searchButton =
+    document.getElementById("drugSearchButton");
 
-        if (!container) {
-            return;
+const resultsContainer =
+    document.getElementById("drugResults");
+
+const resultsCount =
+    document.getElementById("drugResultsCount");
+
+const paginationContainer =
+    document.getElementById("drugPagination");
+
+const loadingState =
+    document.getElementById("drugLoading");
+
+const emptyState =
+    document.getElementById("drugEmpty");
+
+const errorState =
+    document.getElementById("drugError");
+
+
+/* =========================================================
+   Arabic Text Normalization
+========================================================= */
+
+function normalizeArabic(text) {
+
+    if (!text) {
+        return "";
+    }
+
+    return String(text)
+
+        .toLowerCase()
+
+        .replace(/[أإآ]/g, "ا")
+
+        .replace(/ى/g, "ي")
+
+        .replace(/ة/g, "ه")
+
+        .replace(/ؤ/g, "و")
+
+        .replace(/ئ/g, "ي")
+
+        .replace(/ـ/g, "")
+
+        .replace(/[ًٌٍَُِّْ]/g, "")
+
+        .replace(/\s+/g, " ")
+
+        .trim();
+}
+
+
+/* =========================================================
+   Generic Text
+========================================================= */
+
+function cleanText(value) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+        return "";
+    }
+
+    return String(value).trim();
+}
+
+
+/* =========================================================
+   Escape HTML
+========================================================= */
+
+function escapeHTML(value) {
+
+    return cleanText(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+}
+
+
+/* =========================================================
+   Get Drug Fields
+========================================================= */
+
+function getDrugName(drug) {
+
+    return cleanText(
+        drug.commercial_name_ar ||
+        drug.name_ar ||
+        drug.arabic_name ||
+        drug.commercial_name ||
+        drug.name ||
+        drug.brand_name ||
+        ""
+    );
+}
+
+
+function getDrugEnglishName(drug) {
+
+    return cleanText(
+        drug.commercial_name_en ||
+        drug.name_en ||
+        drug.english_name ||
+        drug.brand_name_en ||
+        ""
+    );
+}
+
+
+function getScientificName(drug) {
+
+    return cleanText(
+        drug.scientific_name ||
+        drug.active_ingredient ||
+        drug.active_ingredients ||
+        drug.composition ||
+        drug.generic_name ||
+        ""
+    );
+}
+
+
+function getManufacturer(drug) {
+
+    return cleanText(
+        drug.manufacturer ||
+        drug.company ||
+        drug.company_name ||
+        ""
+    );
+}
+
+
+function getDrugClass(drug) {
+
+    return cleanText(
+        drug.drug_class ||
+        drug.classification ||
+        drug.category ||
+        ""
+    );
+}
+
+
+function getRoute(drug) {
+
+    return cleanText(
+        drug.route ||
+        drug.administration_route ||
+        ""
+    );
+}
+
+
+function getPrice(drug) {
+
+    return cleanText(
+        drug.price_egp ||
+        drug.price ||
+        ""
+    );
+}
+
+
+/* =========================================================
+   Build Search Text
+========================================================= */
+
+function buildSearchText(drug) {
+
+    return normalizeArabic(
+
+        [
+            getDrugName(drug),
+
+            getDrugEnglishName(drug),
+
+            getScientificName(drug),
+
+            getManufacturer(drug),
+
+            getDrugClass(drug),
+
+            getRoute(drug)
+
+        ].join(" ")
+
+    );
+}
+
+
+/* =========================================================
+   Load Database
+========================================================= */
+
+async function loadDrugDatabase() {
+
+    showLoading();
+
+    try {
+
+        const response =
+            await fetch(
+                DRUG_DATABASE_URL,
+                {
+                    cache: "default"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "تعذر تحميل قاعدة بيانات الأدوية."
+            );
         }
 
 
-        await this.loadData();
+        const data =
+            await response.json();
 
-        if (!this.data) {
-            return;
+
+        if (!Array.isArray(data)) {
+
+            throw new Error(
+                "تنسيق قاعدة البيانات غير صحيح."
+            );
         }
 
 
-        this.loadFavorites();
+        allDrugs =
+            data.map(
+                (drug, index) => {
 
-        this.initSearch();
+                    return {
 
-        this.initCategoryFilter();
+                        ...drug,
 
-        this.initClearButton();
+                        _id:
+                            drug.id ||
+                            drug.ID ||
+                            `drug-${index + 1}`,
 
-        this.initEvents();
+                        _searchText:
+                            buildSearchText(drug)
 
-        this.render();
+                    };
 
-    },
-
-
-    /* =====================================================
-       LOAD DATABASE
-       ===================================================== */
-
-    async loadData() {
-
-        try {
-
-            const response =
-                await fetch("data/drugs.json");
+                }
+            );
 
 
-            if (!response.ok) {
+        filteredDrugs =
+            [...allDrugs];
 
-                throw new Error(
-                    `HTTP ${response.status}`
+
+        hideLoading();
+
+        updateResults();
+
+
+        console.log(
+            `Drug Database Loaded: ${allDrugs.length} records`
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Drug Database Error:",
+            error
+        );
+
+        showError();
+
+    }
+
+}
+
+
+/* =========================================================
+   Search Database
+========================================================= */
+
+function searchDrugs(query) {
+
+    const normalizedQuery =
+        normalizeArabic(query);
+
+
+    if (!normalizedQuery) {
+
+        filteredDrugs =
+            [...allDrugs];
+
+        currentPage = 1;
+
+        updateResults();
+
+        return;
+    }
+
+
+    const words =
+        normalizedQuery
+            .split(" ")
+            .filter(Boolean);
+
+
+    filteredDrugs =
+        allDrugs.filter(
+            drug => {
+
+                return words.every(
+                    word =>
+                        drug._searchText.includes(word)
+                );
+
+            }
+        );
+
+
+    /*
+       ترتيب النتائج:
+
+       1. الاسم العربي يبدأ بالكلمة
+       2. الاسم الإنجليزي يبدأ بالكلمة
+       3. المادة الفعالة
+       4. باقي النتائج
+    */
+
+    filteredDrugs.sort(
+        (a, b) => {
+
+            const aName =
+                normalizeArabic(
+                    getDrugName(a)
+                );
+
+            const bName =
+                normalizeArabic(
+                    getDrugName(b)
+                );
+
+
+            const aEnglish =
+                normalizeArabic(
+                    getDrugEnglishName(a)
+                );
+
+            const bEnglish =
+                normalizeArabic(
+                    getDrugEnglishName(b)
+                );
+
+
+            const aScientific =
+                normalizeArabic(
+                    getScientificName(a)
+                );
+
+            const bScientific =
+                normalizeArabic(
+                    getScientificName(b)
+                );
+
+
+            const aStarts =
+                aName.startsWith(
+                    normalizedQuery
+                ) ||
+                aEnglish.startsWith(
+                    normalizedQuery
+                );
+
+
+            const bStarts =
+                bName.startsWith(
+                    normalizedQuery
+                ) ||
+                bEnglish.startsWith(
+                    normalizedQuery
+                );
+
+
+            if (
+                aStarts &&
+                !bStarts
+            ) {
+                return -1;
+            }
+
+
+            if (
+                !aStarts &&
+                bStarts
+            ) {
+                return 1;
+            }
+
+
+            const aScientificStarts =
+                aScientific.startsWith(
+                    normalizedQuery
+                );
+
+
+            const bScientificStarts =
+                bScientific.startsWith(
+                    normalizedQuery
+                );
+
+
+            if (
+                aScientificStarts &&
+                !bScientificStarts
+            ) {
+                return -1;
+            }
+
+
+            if (
+                !aScientificStarts &&
+                bScientificStarts
+            ) {
+                return 1;
+            }
+
+
+            return aName.localeCompare(
+                bName,
+                "ar"
+            );
+
+        }
+    );
+
+
+    currentPage = 1;
+
+    updateResults();
+
+}
+
+
+/* =========================================================
+   Render Results
+========================================================= */
+
+function renderResults() {
+
+    if (!resultsContainer) {
+        return;
+    }
+
+
+    resultsContainer.innerHTML = "";
+
+
+    const start =
+        (currentPage - 1) *
+        RESULTS_PER_PAGE;
+
+
+    const end =
+        start +
+        RESULTS_PER_PAGE;
+
+
+    const pageResults =
+        filteredDrugs.slice(
+            start,
+            end
+        );
+
+
+    if (
+        pageResults.length === 0
+    ) {
+
+        showEmpty();
+
+        return;
+    }
+
+
+    hideEmpty();
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    pageResults.forEach(
+        drug => {
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "drug-card";
+
+
+            card.innerHTML = `
+
+                <div class="drug-card-icon">
+                    💊
+                </div>
+
+                <div class="drug-card-content">
+
+                    <h3>
+                        ${escapeHTML(
+                            getDrugName(drug) ||
+                            getDrugEnglishName(drug) ||
+                            "دواء"
+                        )}
+                    </h3>
+
+                    ${
+                        getDrugEnglishName(drug)
+                        ?
+                        `
+                        <div class="drug-name-en">
+                            ${escapeHTML(
+                                getDrugEnglishName(drug)
+                            )}
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    ${
+                        getScientificName(drug)
+                        ?
+                        `
+                        <div class="drug-field">
+                            <strong>
+                                المادة الفعالة:
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(
+                                    getScientificName(drug)
+                                )}
+                            </span>
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    ${
+                        getManufacturer(drug)
+                        ?
+                        `
+                        <div class="drug-field">
+                            <strong>
+                                الشركة:
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(
+                                    getManufacturer(drug)
+                                )}
+                            </span>
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    ${
+                        getDrugClass(drug)
+                        ?
+                        `
+                        <div class="drug-field">
+                            <strong>
+                                التصنيف:
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(
+                                    getDrugClass(drug)
+                                )}
+                            </span>
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    ${
+                        getRoute(drug)
+                        ?
+                        `
+                        <div class="drug-field">
+                            <strong>
+                                طريق الاستخدام:
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(
+                                    getRoute(drug)
+                                )}
+                            </span>
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    ${
+                        getPrice(drug)
+                        ?
+                        `
+                        <div class="drug-price">
+                            ${escapeHTML(
+                                getPrice(drug)
+                            )}
+                            جنيه
+                        </div>
+                        `
+                        :
+                        ""
+                    }
+
+                    <button
+                        type="button"
+                        class="drug-details-button"
+                        data-drug-id="${escapeHTML(
+                            drug._id
+                        )}"
+                    >
+                        عرض التفاصيل
+                    </button>
+
+                </div>
+            `;
+
+
+            const detailsButton =
+                card.querySelector(
+                    ".drug-details-button"
+                );
+
+
+            if (detailsButton) {
+
+                detailsButton.addEventListener(
+                    "click",
+                    () => {
+
+                        openDrugDetails(
+                            drug
+                        );
+
+                    }
                 );
 
             }
 
 
-            this.data =
-                await response.json();
-
-
-        } catch (error) {
-
-            console.error(
-                "Drugs database loading error:",
-                error
+            fragment.appendChild(
+                card
             );
-
-
-            this.showError();
 
         }
+    );
 
-    },
+
+    resultsContainer.appendChild(
+        fragment
+    );
 
 
-    /* =====================================================
-       SEARCH
-       ===================================================== */
+    renderPagination();
 
-    initSearch() {
+}
 
-        const inputs =
-            document.querySelectorAll(
-                "[data-drugs-search]"
+
+/* =========================================================
+   Update Results
+========================================================= */
+
+function updateResults() {
+
+    if (resultsCount) {
+
+        resultsCount.textContent =
+            `${filteredDrugs.length.toLocaleString("ar-EG")} دواء`;
+
+    }
+
+
+    renderResults();
+
+}
+
+
+/* =========================================================
+   Pagination
+========================================================= */
+
+function renderPagination() {
+
+    if (!paginationContainer) {
+        return;
+    }
+
+
+    paginationContainer.innerHTML = "";
+
+
+    const totalPages =
+        Math.ceil(
+            filteredDrugs.length /
+            RESULTS_PER_PAGE
+        );
+
+
+    if (
+        totalPages <= 1
+    ) {
+        return;
+    }
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    const previous =
+        createPaginationButton(
+            "السابق",
+            currentPage > 1
+        );
+
+
+    previous.addEventListener(
+        "click",
+        () => {
+
+            if (
+                currentPage > 1
+            ) {
+
+                currentPage--;
+
+                updateResults();
+
+                scrollToResults();
+
+            }
+
+        }
+    );
+
+
+    fragment.appendChild(
+        previous
+    );
+
+
+    let startPage =
+        Math.max(
+            1,
+            currentPage - 2
+        );
+
+
+    let endPage =
+        Math.min(
+            totalPages,
+            currentPage + 2
+        );
+
+
+    if (
+        currentPage <= 3
+    ) {
+
+        endPage =
+            Math.min(
+                totalPages,
+                5
             );
 
-
-        inputs.forEach(input => {
-
-            input.addEventListener(
-                "input",
-                this.debounce(
-                    () => {
-
-                        this.state.query =
-                            input.value
-                                .trim()
-                                .toLowerCase();
+    }
 
 
-                        this.render();
+    if (
+        currentPage >=
+        totalPages - 2
+    ) {
 
-                    },
-                    250
-                )
+        startPage =
+            Math.max(
+                1,
+                totalPages - 4
             );
 
-        });
-
-    },
+    }
 
 
-    /* =====================================================
-       CATEGORY FILTER
-       ===================================================== */
-
-    initCategoryFilter() {
-
-        const buttons =
-            document.querySelectorAll(
-                "[data-drug-category]"
-            );
-
-
-        buttons.forEach(button => {
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    this.state.category =
-                        button.dataset
-                            .drugCategory ||
-                        "all";
-
-
-                    buttons.forEach(item => {
-
-                        item.classList.toggle(
-                            "active",
-                            item === button
-                        );
-
-                    });
-
-
-                    this.render();
-
-                }
-            );
-
-        });
-
-    },
-
-
-    /* =====================================================
-       CLEAR SEARCH
-       ===================================================== */
-
-    initClearButton() {
+    for (
+        let page = startPage;
+        page <= endPage;
+        page++
+    ) {
 
         const button =
-            document.querySelector(
-                "[data-drugs-clear]"
+            createPaginationButton(
+                page,
+                true
             );
 
 
-        if (!button) {
-            return;
+        if (
+            page === currentPage
+        ) {
+
+            button.classList.add(
+                "active"
+            );
+
         }
 
 
@@ -196,1050 +874,562 @@ const BAWABET_DRUGS = {
             "click",
             () => {
 
-                const input =
-                    document.querySelector(
-                        "[data-drugs-search]"
-                    );
+                currentPage =
+                    page;
 
+                updateResults();
 
-                if (input) {
-                    input.value = "";
-                }
-
-
-                this.state.query = "";
-
-
-                this.render();
-
-            }
-        );
-
-    },
-
-
-    /* =====================================================
-       EVENTS
-       ===================================================== */
-
-    initEvents() {
-
-        document.addEventListener(
-            "click",
-            event => {
-
-
-                /* OPEN DRUG */
-
-                const drugButton =
-                    event.target.closest(
-                        "[data-drug-id]"
-                    );
-
-
-                if (
-                    drugButton &&
-                    !event.target.closest(
-                        "[data-drug-favorite]"
-                    )
-                ) {
-
-                    const id =
-                        drugButton.dataset.drugId;
-
-
-                    this.openDrug(id);
-
-
-                    return;
-
-                }
-
-
-                /* FAVORITE */
-
-                const favoriteButton =
-                    event.target.closest(
-                        "[data-drug-favorite]"
-                    );
-
-
-                if (favoriteButton) {
-
-                    const id =
-                        favoriteButton.dataset
-                            .drugFavorite;
-
-
-                    this.toggleFavorite(id);
-
-
-                    return;
-
-                }
-
-
-                /* CLOSE */
-
-                const closeButton =
-                    event.target.closest(
-                        "[data-drug-close]"
-                    );
-
-
-                if (closeButton) {
-
-                    this.closeDrug();
-
-                }
+                scrollToResults();
 
             }
         );
 
 
-        document.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key === "Escape" &&
-                    this.state.currentDrug
-                ) {
-
-                    this.closeDrug();
-
-                }
-
-            }
+        fragment.appendChild(
+            button
         );
 
-    },
+    }
 
 
-    /* =====================================================
-       FILTER DATABASE
-       ===================================================== */
+    const next =
+        createPaginationButton(
+            "التالي",
+            currentPage < totalPages
+        );
 
-    getFilteredDrugs() {
 
-        if (
-            !this.data ||
-            !Array.isArray(this.data.drugs)
-        ) {
+    next.addEventListener(
+        "click",
+        () => {
 
-            return [];
+            if (
+                currentPage <
+                totalPages
+            ) {
+
+                currentPage++;
+
+                updateResults();
+
+                scrollToResults();
+
+            }
 
         }
+    );
 
 
-        return this.data.drugs.filter(
-            drug => {
+    fragment.appendChild(
+        next
+    );
 
 
-                /* CATEGORY */
+    paginationContainer.appendChild(
+        fragment
+    );
 
-                const categoryMatch =
-                    this.state.category === "all" ||
-                    drug.category ===
-                    this.state.category;
-
-
-                if (!categoryMatch) {
-                    return false;
-                }
+}
 
 
-                /* SEARCH */
+/* =========================================================
+   Pagination Button
+========================================================= */
 
-                if (!this.state.query) {
-                    return true;
-                }
+function createPaginationButton(
+    text,
+    enabled
+) {
 
-
-                const searchable = [
-
-                    drug.genericName,
-
-                    drug.arabicName,
-
-                    drug.drugClass,
-
-                    drug.description,
-
-                    ...(drug.brandNames || []),
-
-                    ...(drug.keywords || [])
-
-                ]
-                    .join(" ")
-                    .toLowerCase();
-
-
-                return searchable.includes(
-                    this.state.query
-                );
-
-            }
-        );
-
-    },
-
-
-    /* =====================================================
-       RENDER
-       ===================================================== */
-
-    render() {
-
-        const container =
-            document.querySelector(
-                "[data-drugs-results]"
-            );
-
-
-        if (!container) {
-            return;
-        }
-
-
-        const drugs =
-            this.getFilteredDrugs();
-
-
-        this.updateCount(
-            drugs.length
+    const button =
+        document.createElement(
+            "button"
         );
 
 
-        if (!drugs.length) {
-
-            container.innerHTML = `
-
-                <div class="drugs-empty">
-
-                    <div class="drugs-empty-icon">
-                        💊
-                    </div>
-
-                    <h3>
-                        لم نجد دواء مطابقًا
-                    </h3>
-
-                    <p>
-                        جرّب كتابة الاسم العلمي
-                        أو التجاري أو كلمة مرتبطة بالدواء.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-drugs-clear
-                    >
-                        مسح البحث
-                    </button>
-
-                </div>
-
-            `;
-
-            return;
-        }
+    button.type =
+        "button";
 
 
-        container.innerHTML =
-            drugs
-                .map(
-                    drug =>
-                        this.createCard(drug)
-                )
-                .join("");
-
-    },
+    button.className =
+        "pagination-button";
 
 
-    /* =====================================================
-       CREATE DRUG CARD
-       ===================================================== */
-
-    createCard(drug) {
-
-        const favorite =
-            this.state.favorites.includes(
-                drug.id
-            );
+    button.textContent =
+        text;
 
 
-        return `
+    button.disabled =
+        !enabled;
 
-            <article
-                class="drug-card"
-                data-drug-id="${this.escape(
-                    drug.id
-                )}"
+
+    return button;
+
+}
+
+
+/* =========================================================
+   Drug Details
+========================================================= */
+
+function openDrugDetails(drug) {
+
+    const modal =
+        document.createElement(
+            "div"
+        );
+
+
+    modal.className =
+        "drug-modal";
+
+
+    modal.innerHTML = `
+
+        <div class="drug-modal-overlay"></div>
+
+        <div
+            class="drug-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="معلومات الدواء"
+        >
+
+            <button
+                type="button"
+                class="drug-modal-close"
+                aria-label="إغلاق"
             >
-
-                <div class="drug-card-top">
-
-                    <span class="drug-category">
-
-                        ${this.getCategoryName(
-                            drug.category
-                        )}
-
-                    </span>
+                ×
+            </button>
 
 
-                    <button
-                        type="button"
-                        class="drug-favorite ${
-                            favorite
-                                ? "active"
-                                : ""
-                        }"
-                        data-drug-favorite="${this.escape(
-                            drug.id
-                        )}"
-                        aria-label="إضافة للمفضلة"
-                    >
+            <div class="drug-modal-header">
 
-                        ${
-                            favorite
-                                ? "★"
-                                : "☆"
-                        }
-
-                    </button>
-
+                <div class="drug-modal-icon">
+                    💊
                 </div>
 
-
-                <div class="drug-card-body">
-
-                    <span class="drug-generic-name">
-
-                        ${this.escape(
-                            drug.genericName
-                        )}
-
-                    </span>
-
-
-                    <h3>
-
-                        ${this.escape(
-                            drug.arabicName
-                        )}
-
-                    </h3>
-
-
-                    <span class="drug-class">
-
-                        ${this.escape(
-                            drug.drugClass
-                        )}
-
-                    </span>
-
-
-                    <p>
-
-                        ${this.escape(
-                            drug.description
-                        )}
-
-                    </p>
-
-                </div>
-
-
-                <div class="drug-card-footer">
-
-                    <span>
-                        عرض التفاصيل
-                    </span>
-
-                    <span>
-                        ←
-                    </span>
-
-                </div>
-
-            </article>
-
-        `;
-
-    },
-
-
-    /* =====================================================
-       CATEGORY NAME
-       ===================================================== */
-
-    getCategoryName(id) {
-
-        if (
-            !this.data ||
-            !Array.isArray(
-                this.data.categories
-            )
-        ) {
-
-            return "";
-
-        }
-
-
-        const category =
-            this.data.categories.find(
-                item =>
-                    item.id === id
-            );
-
-
-        if (!category) {
-            return "";
-        }
-
-
-        return `
-            ${category.icon}
-            ${this.escape(
-                category.name
-            )}
-        `;
-
-    },
-
-
-    /* =====================================================
-       OPEN DRUG
-       ===================================================== */
-
-    openDrug(id) {
-
-        if (!this.data) {
-            return;
-        }
-
-
-        const drug =
-            this.data.drugs.find(
-                item =>
-                    item.id === id
-            );
-
-
-        if (!drug) {
-            return;
-        }
-
-
-        this.state.currentDrug =
-            drug;
-
-
-        let modal =
-            document.querySelector(
-                "[data-drug-modal]"
-            );
-
-
-        if (!modal) {
-
-            modal =
-                document.createElement(
-                    "div"
-                );
-
-
-            modal.className =
-                "drug-modal";
-
-
-            modal.dataset.drugModal =
-                "true";
-
-
-            document.body.appendChild(
-                modal
-            );
-
-        }
-
-
-        const favorite =
-            this.state.favorites.includes(
-                drug.id
-            );
-
-
-        modal.innerHTML = `
-
-            <div
-                class="drug-modal-overlay"
-                data-drug-close
-            ></div>
-
-
-            <div
-                class="drug-modal-content"
-                role="dialog"
-                aria-modal="true"
-                aria-label="معلومات الدواء"
-            >
-
-                <button
-                    type="button"
-                    class="drug-modal-close"
-                    data-drug-close
-                    aria-label="إغلاق"
-                >
-                    ✕
-                </button>
-
-
-                <div class="drug-modal-header">
-
-                    <span class="drug-modal-category">
-
-                        ${this.getCategoryName(
-                            drug.category
-                        )}
-
-                    </span>
-
+                <div>
 
                     <h2>
-
-                        ${this.escape(
-                            drug.genericName
+                        ${escapeHTML(
+                            getDrugName(drug) ||
+                            getDrugEnglishName(drug) ||
+                            "دواء"
                         )}
-
                     </h2>
 
-
-                    <h3>
-
-                        ${this.escape(
-                            drug.arabicName
-                        )}
-
-                    </h3>
-
-
-                    <span class="drug-modal-class">
-
-                        ${this.escape(
-                            drug.drugClass
-                        )}
-
-                    </span>
-
-                </div>
-
-
-                <div class="drug-section">
-
-                    <h4>
-                        📌 نبذة عن الدواء
-                    </h4>
-
-                    <p>
-
-                        ${this.escape(
-                            drug.description
-                        )}
-
-                    </p>
-
-                </div>
-
-
-                ${
-                    this.createListSection(
-                        "🩺 الاستخدامات",
-                        drug.uses
-                    )
-                }
-
-
-                ${
-                    this.createListSection(
-                        "💊 الأشكال الدوائية",
-                        drug.forms
-                    )
-                }
-
-
-                ${
-                    this.createListSection(
-                        "🛣️ طرق الإعطاء المذكورة",
-                        drug.routeExamples
-                    )
-                }
-
-
-                ${
-                    this.createListSection(
-                        "⚠️ تحذيرات مهمة",
-                        drug.importantWarnings
-                    )
-                }
-
-
-                ${
-                    this.createListSection(
-                        "📋 آثار جانبية شائعة",
-                        drug.commonSideEffects
-                    )
-                }
-
-
-                ${
-                    this.createListSection(
-                        "🩺 ملاحظات تمريضية",
-                        drug.nursingNotes
-                    )
-                }
-
-
-                <div class="drug-disclaimer">
-
-                    <strong>
-                        ⚠️ تنبيه
-                    </strong>
-
-                    <p>
-
-                        هذه المعلومات تعليمية فقط
-                        ولا تُستخدم بدلًا من وصفة الطبيب
-                        أو استشارة الطبيب أو الصيدلي.
-
-                    </p>
-
-                </div>
-
-
-                <div class="drug-modal-actions">
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-drug-favorite="${this.escape(
-                            drug.id
-                        )}"
-                    >
-
-                        ${
-                            favorite
-                                ? "★ إزالة من المفضلة"
-                                : "☆ إضافة للمفضلة"
-                        }
-
-                    </button>
+                    ${
+                        getDrugEnglishName(drug)
+                        ?
+                        `
+                        <p>
+                            ${escapeHTML(
+                                getDrugEnglishName(drug)
+                            )}
+                        </p>
+                        `
+                        :
+                        ""
+                    }
 
                 </div>
 
             </div>
 
-        `;
 
+            <div class="drug-details-grid">
 
-        requestAnimationFrame(
-            () => {
+                ${detailRow(
+                    "المادة الفعالة",
+                    getScientificName(drug)
+                )}
 
-                modal.classList.add(
-                    "open"
-                );
+                ${detailRow(
+                    "الشركة المصنعة",
+                    getManufacturer(drug)
+                )}
 
-            }
-        );
+                ${detailRow(
+                    "التصنيف الدوائي",
+                    getDrugClass(drug)
+                )}
 
+                ${detailRow(
+                    "طريق الاستخدام",
+                    getRoute(drug)
+                )}
 
-        document.body.classList.add(
-            "drug-modal-open"
-        );
+                ${detailRow(
+                    "السعر",
+                    getPrice(drug)
+                        ?
+                        `${getPrice(drug)} جنيه`
+                        :
+                        ""
+                )}
 
-    },
+            </div>
 
 
-    /* =====================================================
-       CREATE LIST SECTION
-       ===================================================== */
+            <div class="drug-medical-warning">
 
-    createListSection(title, items) {
-
-        if (
-            !Array.isArray(items) ||
-            !items.length
-        ) {
-
-            return "";
-
-        }
-
-
-        return `
-
-            <section class="drug-section">
-
-                <h4>
-                    ${title}
-                </h4>
-
-                <ul>
-
-                    ${items
-                        .map(
-                            item => `
-                                <li>
-                                    ${this.escape(
-                                        item
-                                    )}
-                                </li>
-                            `
-                        )
-                        .join("")
-                    }
-
-                </ul>
-
-            </section>
-
-        `;
-
-    },
-
-
-    /* =====================================================
-       CLOSE
-       ===================================================== */
-
-    closeDrug() {
-
-        const modal =
-            document.querySelector(
-                "[data-drug-modal]"
-            );
-
-
-        if (!modal) {
-            return;
-        }
-
-
-        modal.classList.remove(
-            "open"
-        );
-
-
-        setTimeout(
-            () => {
-
-                if (modal.parentNode) {
-                    modal.remove();
-                }
-
-            },
-            250
-        );
-
-
-        document.body.classList.remove(
-            "drug-modal-open"
-        );
-
-
-        this.state.currentDrug =
-            null;
-
-    },
-
-
-    /* =====================================================
-       FAVORITES
-       ===================================================== */
-
-    loadFavorites() {
-
-        try {
-
-            const key =
-                this.storageKey(
-                    "drug_favorites"
-                );
-
-
-            const saved =
-                localStorage.getItem(
-                    key
-                );
-
-
-            this.state.favorites =
-                saved
-                    ? JSON.parse(saved)
-                    : [];
-
-
-            if (
-                !Array.isArray(
-                    this.state.favorites
-                )
-            ) {
-
-                this.state.favorites =
-                    [];
-
-            }
-
-        } catch (error) {
-
-            console.warn(
-                "Could not load drug favorites.",
-                error
-            );
-
-
-            this.state.favorites =
-                [];
-
-        }
-
-    },
-
-
-    saveFavorites() {
-
-        localStorage.setItem(
-
-            this.storageKey(
-                "drug_favorites"
-            ),
-
-            JSON.stringify(
-                this.state.favorites
-            )
-
-        );
-
-    },
-
-
-    toggleFavorite(id) {
-
-        const index =
-            this.state.favorites.indexOf(
-                id
-            );
-
-
-        if (index === -1) {
-
-            this.state.favorites.push(
-                id
-            );
-
-        } else {
-
-            this.state.favorites.splice(
-                index,
-                1
-            );
-
-        }
-
-
-        this.saveFavorites();
-
-
-        this.render();
-
-
-        if (
-            this.state.currentDrug &&
-            this.state.currentDrug.id === id
-        ) {
-
-            this.openDrug(id);
-
-        }
-
-    },
-
-
-    /* =====================================================
-       COUNT
-       ===================================================== */
-
-    updateCount(count) {
-
-        document
-            .querySelectorAll(
-                "[data-drugs-count]"
-            )
-            .forEach(
-                element => {
-
-                    element.textContent =
-                        count.toLocaleString(
-                            "ar-EG"
-                        );
-
-                }
-            );
-
-    },
-
-
-    /* =====================================================
-       ERROR
-       ===================================================== */
-
-    showError() {
-
-        const container =
-            document.querySelector(
-                "[data-drugs-results]"
-            );
-
-
-        if (!container) {
-            return;
-        }
-
-
-        container.innerHTML = `
-
-            <div class="drugs-error">
-
-                <div>
-                    ⚠️
-                </div>
-
-                <h3>
-                    تعذر تحميل قاعدة الأدوية
-                </h3>
+                <strong>
+                    ⚠️ تنبيه طبي
+                </strong>
 
                 <p>
-                    حاول تحديث الصفحة مرة أخرى.
+                    المعلومات المعروضة تعليمية فقط
+                    ولا تُعد وصفة طبية أو بديلًا عن
+                    استشارة الطبيب أو الصيدلي.
+                    لا تستخدم أي دواء أو تغيّر الجرعة
+                    بناءً على هذه المعلومات فقط.
                 </p>
 
             </div>
 
-        `;
+        </div>
 
-    },
-
-
-    /* =====================================================
-       STORAGE KEY
-       ===================================================== */
-
-    storageKey(value) {
-
-        return `bawabet_altamreed_${value}`;
-
-    },
+    `;
 
 
-    /* =====================================================
-       DEBOUNCE
-       ===================================================== */
-
-    debounce(callback, delay = 250) {
-
-        let timer;
+    document.body.appendChild(
+        modal
+    );
 
 
-        return (...args) => {
-
-            clearTimeout(timer);
-
-
-            timer =
-                setTimeout(
-                    () => {
-
-                        callback(
-                            ...args
-                        );
-
-                    },
-                    delay
-                );
-
-        };
-
-    },
+    document.body.style.overflow =
+        "hidden";
 
 
-    /* =====================================================
-       ESCAPE HTML
-       ===================================================== */
-
-    escape(value) {
-
-        if (
-            value === null ||
-            value === undefined
-        ) {
-
-            return "";
-
-        }
+    const closeButton =
+        modal.querySelector(
+            ".drug-modal-close"
+        );
 
 
-        return String(value)
+    const overlay =
+        modal.querySelector(
+            ".drug-modal-overlay"
+        );
 
-            .replaceAll(
-                "&",
-                "&amp;"
-            )
 
-            .replaceAll(
-                "<",
-                "&lt;"
-            )
+    function closeModal() {
 
-            .replaceAll(
-                ">",
-                "&gt;"
-            )
+        modal.remove();
 
-            .replaceAll(
-                '"',
-                "&quot;"
-            )
-
-            .replaceAll(
-                "'",
-                "&#039;"
-            );
+        document.body.style.overflow =
+            "";
 
     }
 
-};
+
+    closeButton.addEventListener(
+        "click",
+        closeModal
+    );
+
+
+    overlay.addEventListener(
+        "click",
+        closeModal
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function escapeHandler(event) {
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+                closeModal();
+
+                document.removeEventListener(
+                    "keydown",
+                    escapeHandler
+                );
+
+            }
+
+        }
+    );
+
+}
 
 
 /* =========================================================
-   START
-   ========================================================= */
+   Detail Row
+========================================================= */
+
+function detailRow(
+    label,
+    value
+) {
+
+    if (!value) {
+        return "";
+    }
+
+
+    return `
+
+        <div class="drug-detail-row">
+
+            <span class="drug-detail-label">
+                ${escapeHTML(label)}
+            </span>
+
+            <span class="drug-detail-value">
+                ${escapeHTML(value)}
+            </span>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================================
+   Loading / Empty / Error
+========================================================= */
+
+function showLoading() {
+
+    if (loadingState) {
+
+        loadingState.style.display =
+            "";
+
+    }
+
+    if (emptyState) {
+
+        emptyState.style.display =
+            "none";
+
+    }
+
+    if (errorState) {
+
+        errorState.style.display =
+            "none";
+
+    }
+
+}
+
+
+function hideLoading() {
+
+    if (loadingState) {
+
+        loadingState.style.display =
+            "none";
+
+    }
+
+}
+
+
+function showEmpty() {
+
+    if (emptyState) {
+
+        emptyState.style.display =
+            "";
+
+    }
+
+}
+
+
+function hideEmpty() {
+
+    if (emptyState) {
+
+        emptyState.style.display =
+            "none";
+
+    }
+
+}
+
+
+function showError() {
+
+    hideLoading();
+
+    if (errorState) {
+
+        errorState.style.display =
+            "";
+
+    }
+
+}
+
+
+/* =========================================================
+   Scroll
+========================================================= */
+
+function scrollToResults() {
+
+    if (!resultsContainer) {
+        return;
+    }
+
+
+    resultsContainer.scrollIntoView(
+        {
+            behavior: "smooth",
+            block: "start"
+        }
+    );
+
+}
+
+
+/* =========================================================
+   Search Events
+========================================================= */
+
+function performSearch() {
+
+    if (!searchInput) {
+        return;
+    }
+
+
+    searchDrugs(
+        searchInput.value
+    );
+
+}
+
+
+if (searchButton) {
+
+    searchButton.addEventListener(
+        "click",
+        performSearch
+    );
+
+}
+
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        debounce(
+            performSearch,
+            250
+        )
+    );
+
+
+    searchInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key ===
+                "Enter"
+            ) {
+
+                event.preventDefault();
+
+                performSearch();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   Debounce
+========================================================= */
+
+function debounce(
+    callback,
+    delay
+) {
+
+    let timer;
+
+    return function (...args) {
+
+        clearTimeout(timer);
+
+        timer =
+            setTimeout(
+                () => {
+
+                    callback.apply(
+                        this,
+                        args
+                    );
+
+                },
+                delay
+            );
+
+    };
+
+}
+
+
+/* =========================================================
+   URL Search Support
+========================================================= */
+
+function loadSearchFromURL() {
+
+    if (!searchInput) {
+        return;
+    }
+
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const query =
+        params.get("search");
+
+
+    if (query) {
+
+        searchInput.value =
+            query;
+
+    }
+
+}
+
+
+/* =========================================================
+   Start
+========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        BAWABET_DRUGS.init();
+        loadSearchFromURL();
+
+        loadDrugDatabase();
 
     }
 );
-
-
-/* =========================================================
-   GLOBAL ACCESS
-   ========================================================= */
-
-window.BAWABET_DRUGS =
-    BAWABET_DRUGS;
