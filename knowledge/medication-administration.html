@@ -1,0 +1,3450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        إعطاء الأدوية | Medication Administration | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="دليل تمريضي مبسط عن إعطاء الأدوية Medication Administration، حقوق إعطاء الدواء، طرق إعطاء الأدوية، احتياطات التمريض، وسلامة المريض."
+    >
+
+    <meta
+        name="keywords"
+        content="Medication Administration, إعطاء الأدوية, Nursing Medication Administration, حقوق إعطاء الدواء, Medication Rights, Nursing, تمريض, طلاب التمريض, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/knowledge/medication-administration.html"
+    >
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+         ===================================================== -->
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:title"
+        content="إعطاء الأدوية | Medication Administration | بوابة التمريض"
+    >
+
+    <meta
+        property="og:description"
+        content="دليل تمريضي مبسط لفهم إعطاء الأدوية وحقوق الدواء وطرق إعطائه وأهم احتياطات التمريض."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/knowledge/medication-administration.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        .medication-page {
+
+            min-height:
+                100vh;
+
+            background:
+                #f5f8fa;
+
+            color:
+                #102f46;
+
+        }
+
+
+        .medication-container {
+
+            width:
+                min(
+                    1180px,
+                    calc(100% - 40px)
+                );
+
+            margin:
+                auto;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .medication-header {
+
+            position:
+                sticky;
+
+            top:
+                0;
+
+            z-index:
+                5000;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid #e3ebef;
+
+        }
+
+
+        .medication-header-inner {
+
+            min-height:
+                72px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+        }
+
+
+        .medication-brand {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                11px;
+
+            color:
+                #0c3555;
+
+            text-decoration:
+                none;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        .medication-brand-icon {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #23829a
+                );
+
+            color:
+                white;
+
+            font-size:
+                22px;
+
+        }
+
+
+        .medication-brand-title {
+
+            display:
+                block;
+
+            font-size:
+                19px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .medication-brand-subtitle {
+
+            display:
+                block;
+
+            margin-top:
+                2px;
+
+            color:
+                #78909c;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .medication-nav {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                5px;
+
+        }
+
+
+        .medication-nav a {
+
+            padding:
+                9px 12px;
+
+            border-radius:
+                9px;
+
+            color:
+                #52636e;
+
+            font-size:
+                13px;
+
+            text-decoration:
+                none;
+
+            transition:
+                0.2s ease;
+
+        }
+
+
+        .medication-nav a:hover {
+
+            background:
+                #eef5f7;
+
+            color:
+                #0c3555;
+
+        }
+
+
+        .medication-nav .active {
+
+            background:
+                #eaf5f7;
+
+            color:
+                #0c5e75;
+
+            font-weight:
+                800;
+
+        }
+
+
+        .medication-home {
+
+            padding:
+                10px 15px;
+
+            border-radius:
+                10px;
+
+            background:
+                #0c3555;
+
+            color:
+                white;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        /* =====================================================
+           BREADCRUMB
+           ===================================================== */
+
+        .medication-breadcrumb {
+
+            padding:
+                18px 0;
+
+            color:
+                #73848e;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .medication-breadcrumb a {
+
+            color:
+                #0c5e75;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                700;
+
+        }
+
+
+        .medication-breadcrumb span {
+
+            margin:
+                0 7px;
+
+            color:
+                #a8b5bb;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .medication-hero {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                65px 0 70px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #092d49,
+                    #12657d
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .medication-hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                430px;
+
+            height:
+                430px;
+
+            border-radius:
+                50%;
+
+            left:
+                -170px;
+
+            top:
+                -250px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .medication-hero::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                360px;
+
+            height:
+                360px;
+
+            border-radius:
+                50%;
+
+            right:
+                -130px;
+
+            bottom:
+                -230px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.045
+                );
+
+        }
+
+
+        .medication-hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                900px;
+
+            margin:
+                auto;
+
+            text-align:
+                center;
+
+        }
+
+
+        .medication-badge {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            padding:
+                9px 16px;
+
+            margin-bottom:
+                18px;
+
+            border-radius:
+                50px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.16
+                );
+
+            font-size:
+                13px;
+
+        }
+
+
+        .medication-hero h1 {
+
+            margin:
+                0 0 15px;
+
+            font-size:
+                clamp(
+                    36px,
+                    5vw,
+                    58px
+                );
+
+            line-height:
+                1.2;
+
+        }
+
+
+        .medication-hero h1 span {
+
+            color:
+                #8ee7f2;
+
+        }
+
+
+        .medication-hero-description {
+
+            max-width:
+                760px;
+
+            margin:
+                auto;
+
+            font-size:
+                15px;
+
+            line-height:
+                2;
+
+            opacity:
+                0.88;
+
+        }
+
+
+        /* =====================================================
+           MAIN
+           ===================================================== */
+
+        .medication-main {
+
+            padding:
+                45px 0 75px;
+
+        }
+
+
+        /* =====================================================
+           IMPORTANT NOTE
+           ===================================================== */
+
+        .medication-warning {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                16px;
+
+            margin-bottom:
+                35px;
+
+            padding:
+                21px 23px;
+
+            background:
+                #fffaf0;
+
+            border:
+                1px solid #f1dfb7;
+
+            border-right:
+                5px solid #d59a27;
+
+            border-radius:
+                15px;
+
+        }
+
+
+        .medication-warning-icon {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            flex:
+                0 0 44px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                #fff1ce;
+
+            font-size:
+                21px;
+
+        }
+
+
+        .medication-warning strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                #795711;
+
+            font-size:
+                14px;
+
+        }
+
+
+        .medication-warning p {
+
+            margin:
+                0;
+
+            color:
+                #76694d;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+           ===================================================== */
+
+        .medication-section {
+
+            margin-bottom:
+                48px;
+
+        }
+
+
+        .medication-section-heading {
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+        .medication-section-heading h2 {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #173b53;
+
+            font-size:
+                27px;
+
+        }
+
+
+        .medication-section-heading p {
+
+            margin:
+                0;
+
+            color:
+                #75858e;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           INTRO CARDS
+           ===================================================== */
+
+        .medication-intro-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.4fr 1fr;
+
+            gap:
+                18px;
+
+        }
+
+
+        .medication-card {
+
+            padding:
+                25px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.035
+                );
+
+        }
+
+
+        .medication-card h3 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                #173b53;
+
+            font-size:
+                19px;
+
+        }
+
+
+        .medication-card p {
+
+            margin:
+                0;
+
+            color:
+                #6d7e87;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.95;
+
+        }
+
+
+        .medication-highlight {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            padding:
+                23px;
+
+            border-radius:
+                18px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf6f8,
+                    #f8fbfc
+                );
+
+            border:
+                1px solid #dcebed;
+
+        }
+
+
+        .medication-highlight-icon {
+
+            width:
+                56px;
+
+            height:
+                56px;
+
+            flex:
+                0 0 56px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                15px;
+
+            background:
+                white;
+
+            font-size:
+                27px;
+
+            box-shadow:
+                0 5px 15px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.05
+                );
+
+        }
+
+
+        .medication-highlight strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                5px;
+
+            color:
+                #0c3555;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .medication-highlight span {
+
+            color:
+                #71838d;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           MEDICATION RIGHTS
+           ===================================================== */
+
+        .rights-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                14px;
+
+        }
+
+
+        .right-card {
+
+            position:
+                relative;
+
+            padding:
+                21px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                17px;
+
+            transition:
+                0.2s ease;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .right-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.07
+                );
+
+        }
+
+
+        .right-number {
+
+            position:
+                absolute;
+
+            left:
+                15px;
+
+            top:
+                12px;
+
+            color:
+                #e7eff2;
+
+            font-size:
+                34px;
+
+            font-weight:
+                900;
+
+            line-height:
+                1;
+
+        }
+
+
+        .right-icon {
+
+            width:
+                47px;
+
+            height:
+                47px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-bottom:
+                13px;
+
+            border-radius:
+                13px;
+
+            background:
+                #edf6f8;
+
+            font-size:
+                21px;
+
+        }
+
+
+        .right-card h3 {
+
+            margin:
+                0 0 6px;
+
+            color:
+                #173b53;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .right-card .english {
+
+            margin-bottom:
+                9px;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            direction:
+                ltr;
+
+            text-align:
+                right;
+
+        }
+
+
+        .right-card p {
+
+            margin:
+                0;
+
+            color:
+                #788892;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           ROUTES
+           ===================================================== */
+
+        .routes-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                14px;
+
+        }
+
+
+        .route-card {
+
+            padding:
+                21px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                17px;
+
+            text-align:
+                center;
+
+            transition:
+                0.2s ease;
+
+        }
+
+
+        .route-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(
+                    15,
+                    35,
+                    50,
+                    0.07
+                );
+
+        }
+
+
+        .route-icon {
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin:
+                0 auto 13px;
+
+            border-radius:
+                15px;
+
+            background:
+                #edf6f8;
+
+            font-size:
+                25px;
+
+        }
+
+
+        .route-card h3 {
+
+            margin:
+                0 0 5px;
+
+            color:
+                #173b53;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .route-card .route-en {
+
+            margin-bottom:
+                9px;
+
+            color:
+                #0c5e75;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            direction:
+                ltr;
+
+        }
+
+
+        .route-card p {
+
+            margin:
+                0;
+
+            color:
+                #788892;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           BEFORE ADMINISTRATION
+           ===================================================== */
+
+        .steps-list {
+
+            display:
+                grid;
+
+            gap:
+                12px;
+
+        }
+
+
+        .step {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            gap:
+                15px;
+
+            padding:
+                18px 20px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+            border-radius:
+                15px;
+
+        }
+
+
+        .step-number {
+
+            width:
+                39px;
+
+            height:
+                39px;
+
+            flex:
+                0 0 39px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                11px;
+
+            background:
+                #0c5e75;
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+            font-weight:
+                900;
+
+        }
+
+
+        .step h3 {
+
+            margin:
+                0 0 5px;
+
+            color:
+                #173b53;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .step p {
+
+            margin:
+                0;
+
+            color:
+                #778891;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           SAFETY GRID
+           ===================================================== */
+
+        .safety-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                15px;
+
+        }
+
+
+        .safety-card {
+
+            padding:
+                22px;
+
+            border-radius:
+                17px;
+
+            background:
+                white;
+
+            border:
+                1px solid #e1eaee;
+
+        }
+
+
+        .safety-card h3 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                #173b53;
+
+            font-size:
+                16px;
+
+        }
+
+
+        .safety-card ul {
+
+            margin:
+                0;
+
+            padding-right:
+                18px;
+
+        }
+
+
+        .safety-card li {
+
+            margin-bottom:
+                8px;
+
+            color:
+                #71828b;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.7;
+
+        }
+
+
+        .safety-card li:last-child {
+
+            margin-bottom:
+                0;
+
+        }
+
+
+        /* =====================================================
+           COMMON MISTAKES
+           ===================================================== */
+
+        .mistakes {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                14px;
+
+        }
+
+
+        .mistake {
+
+            padding:
+                20px;
+
+            background:
+                #fff;
+
+            border:
+                1px solid #eadfdf;
+
+            border-radius:
+                16px;
+
+        }
+
+
+        .mistake-icon {
+
+            width:
+                44px;
+
+            height:
+                44px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            margin-bottom:
+                12px;
+
+            border-radius:
+                12px;
+
+            background:
+                #fff1f1;
+
+            font-size:
+                20px;
+
+        }
+
+
+        .mistake h3 {
+
+            margin:
+                0 0 7px;
+
+            color:
+                #5b3434;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .mistake p {
+
+            margin:
+                0;
+
+            color:
+                #7f7070;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* =====================================================
+           QUICK REFERENCE
+           ===================================================== */
+
+        .reference-box {
+
+            padding:
+                27px;
+
+            border-radius:
+                19px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3555,
+                    #176b82
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .reference-box h2 {
+
+            margin:
+                0 0 10px;
+
+            font-size:
+                23px;
+
+        }
+
+
+        .reference-box p {
+
+            margin:
+                0 0 20px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.76
+                );
+
+            font-size:
+                12px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        .reference-list {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    5,
+                    1fr
+                );
+
+            gap:
+                10px;
+
+        }
+
+
+        .reference-item {
+
+            padding:
+                14px 10px;
+
+            border-radius:
+                12px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.09
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.11
+                );
+
+            text-align:
+                center;
+
+        }
+
+
+        .reference-item strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                4px;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .reference-item span {
+
+            display:
+                block;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.65
+                );
+
+            font-size:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           DISCLAIMER
+           ===================================================== */
+
+        .medication-disclaimer {
+
+            margin-top:
+                35px;
+
+            padding:
+                19px 22px;
+
+            background:
+                #f0f5f7;
+
+            border:
+                1px solid #dce7eb;
+
+            border-radius:
+                15px;
+
+            color:
+                #6d7d85;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.9;
+
+        }
+
+
+        .medication-disclaimer strong {
+
+            color:
+                #385766;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .medication-footer {
+
+            padding:
+                42px 0 20px;
+
+            background:
+                #092d49;
+
+            color:
+                white;
+
+        }
+
+
+        .medication-footer-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap:
+                30px;
+
+            padding-bottom:
+                28px;
+
+            border-bottom:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.11
+                );
+
+        }
+
+
+        .medication-footer-brand h3 {
+
+            margin:
+                0 0 10px;
+
+            font-size:
+                18px;
+
+        }
+
+
+        .medication-footer-brand p {
+
+            max-width:
+                420px;
+
+            margin:
+                0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size:
+                12px;
+
+            line-height:
+                1.9;
+
+        }
+
+
+        .medication-footer-column h4 {
+
+            margin:
+                0 0 13px;
+
+            font-size:
+                13px;
+
+        }
+
+
+        .medication-footer-column a {
+
+            display:
+                block;
+
+            margin-bottom:
+                8px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.62
+                );
+
+            font-size:
+                11px;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .medication-footer-column a:hover {
+
+            color:
+                white;
+
+        }
+
+
+        .medication-footer-bottom {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            padding-top:
+                17px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.42
+                );
+
+            font-size:
+                10px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .rights-grid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .routes-grid {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .mistakes {
+
+                grid-template-columns:
+                    repeat(
+                        2,
+                        1fr
+                    );
+
+            }
+
+
+            .reference-list {
+
+                grid-template-columns:
+                    repeat(
+                        3,
+                        1fr
+                    );
+
+            }
+
+
+            .medication-footer-grid {
+
+                grid-template-columns:
+                    2fr 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .medication-nav {
+
+                display:
+                    none;
+
+            }
+
+
+            .medication-intro-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .safety-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .medication-container {
+
+                width:
+                    min(
+                        calc(100% - 24px),
+                        1180px
+                    );
+
+            }
+
+
+            .medication-header-inner {
+
+                min-height:
+                    64px;
+
+            }
+
+
+            .medication-home {
+
+                display:
+                    none;
+
+            }
+
+
+            .medication-hero {
+
+                padding:
+                    50px 0 55px;
+
+            }
+
+
+            .medication-hero h1 {
+
+                font-size:
+                    35px;
+
+            }
+
+
+            .medication-hero-description {
+
+                font-size:
+                    13px;
+
+            }
+
+
+            .rights-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .routes-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .mistakes {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .reference-list {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .medication-warning {
+
+                padding:
+                    17px;
+
+            }
+
+
+            .medication-card {
+
+                padding:
+                    20px;
+
+            }
+
+
+            .medication-footer-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .medication-footer-bottom {
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="medication-page">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="medication-header">
+
+        <div class="medication-container medication-header-inner">
+
+
+            <a
+                href="../index.html"
+                class="medication-brand"
+                aria-label="العودة إلى الصفحة الرئيسية"
+            >
+
+                <span class="medication-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="medication-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="medication-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <nav
+                class="medication-nav"
+                aria-label="القائمة الرئيسية"
+            >
+
+                <a href="../index.html">
+                    الرئيسية
+                </a>
+
+                <a href="../drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    المعرفة التمريضية
+                </a>
+
+                <a href="../tools.html">
+                    الأدوات والحاسبات
+                </a>
+
+                <a href="../dictionary.html">
+                    قاموس التمريض
+                </a>
+
+            </nav>
+
+
+            <a
+                href="index.html"
+                class="medication-home"
+            >
+                🩺 المعرفة التمريضية
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         BREADCRUMB
+         ===================================================== -->
+
+    <div class="medication-container">
+
+        <div class="medication-breadcrumb">
+
+            <a href="../index.html">
+                الرئيسية
+            </a>
+
+            <span>
+                /
+            </span>
+
+            <a href="index.html">
+                المعرفة التمريضية
+            </a>
+
+            <span>
+                /
+            </span>
+
+            إعطاء الأدوية
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="medication-hero">
+
+        <div class="medication-container">
+
+            <div class="medication-hero-content">
+
+                <span class="medication-badge">
+                    💊 Medication Administration
+                </span>
+
+
+                <h1>
+
+                    إعطاء
+                    <span>
+                        الأدوية
+                    </span>
+
+                </h1>
+
+
+                <p class="medication-hero-description">
+
+                    دليل تمريضي مبسط لفهم المبادئ الأساسية
+                    لإعطاء الأدوية بأمان، وطرق إعطائها،
+                    وحقوق الدواء، وأهم احتياطات التمريض.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="medication-main">
+
+        <div class="medication-container">
+
+
+            <!-- =================================================
+                 WARNING
+                 ================================================= -->
+
+            <div class="medication-warning">
+
+                <div class="medication-warning-icon">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <strong>
+                        تنبيه مهم للسلامة
+                    </strong>
+
+                    <p>
+
+                        هذه الصفحة تعليمية لطلاب التمريض،
+                        ولا تُغني عن وصفة الطبيب أو سياسات
+                        المنشأة الصحية أو الإشراف السريري.
+                        يجب التأكد دائمًا من الدواء والجرعة
+                        والطريق المناسبين قبل الإعطاء.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INTRO
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-intro-grid">
+
+
+                    <article class="medication-card">
+
+                        <h3>
+                            💊 ما المقصود بـ Medication Administration؟
+                        </h3>
+
+                        <p>
+
+                            إعطاء الدواء هو عملية تمريضية تتضمن
+                            التحقق من أمر الدواء، والتأكد من هوية
+                            المريض، وتحضير الدواء وإعطائه بالطريقة
+                            الصحيحة، ثم متابعة استجابة المريض
+                            وتوثيق الإجراء وفق سياسة المنشأة.
+
+                        </p>
+
+                    </article>
+
+
+                    <div class="medication-highlight">
+
+                        <div class="medication-highlight-icon">
+                            🛡️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                الهدف الأساسي
+                            </strong>
+
+                            <span>
+                                إعطاء الدواء بأمان وتقليل احتمالية
+                                حدوث Medication Errors.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MEDICATION RIGHTS
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-section-heading">
+
+                    <h2>
+                        ✅ حقوق إعطاء الدواء
+                    </h2>
+
+                    <p>
+                        Medication Rights التي تساعد على تقليل أخطاء الدواء.
+                    </p>
+
+                </div>
+
+
+                <div class="rights-grid">
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            01
+                        </span>
+
+                        <div class="right-icon">
+                            👤
+                        </div>
+
+                        <h3>
+                            المريض الصحيح
+                        </h3>
+
+                        <div class="english">
+                            Right Patient
+                        </div>
+
+                        <p>
+                            تحقق من هوية المريض باستخدام وسائل
+                            التعريف المعتمدة في المنشأة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            02
+                        </span>
+
+                        <div class="right-icon">
+                            💊
+                        </div>
+
+                        <h3>
+                            الدواء الصحيح
+                        </h3>
+
+                        <div class="english">
+                            Right Medication
+                        </div>
+
+                        <p>
+                            تأكد من اسم الدواء وتركيزه ومطابقته
+                            لأمر الدواء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            03
+                        </span>
+
+                        <div class="right-icon">
+                            ⚖️
+                        </div>
+
+                        <h3>
+                            الجرعة الصحيحة
+                        </h3>
+
+                        <div class="english">
+                            Right Dose
+                        </div>
+
+                        <p>
+                            تحقق من الجرعة والوحدة والتركيز
+                            قبل إعطاء الدواء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            04
+                        </span>
+
+                        <div class="right-icon">
+                            💉
+                        </div>
+
+                        <h3>
+                            الطريق الصحيح
+                        </h3>
+
+                        <div class="english">
+                            Right Route
+                        </div>
+
+                        <p>
+                            تأكد من Route الصحيح مثل Oral أو
+                            IV أو IM أو غيره حسب أمر الدواء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            05
+                        </span>
+
+                        <div class="right-icon">
+                            ⏰
+                        </div>
+
+                        <h3>
+                            الوقت الصحيح
+                        </h3>
+
+                        <div class="english">
+                            Right Time
+                        </div>
+
+                        <p>
+                            أعطِ الدواء في الوقت المحدد مع مراعاة
+                            تعليمات الدواء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="right-card">
+
+                        <span class="right-number">
+                            06
+                        </span>
+
+                        <div class="right-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            التوثيق الصحيح
+                        </h3>
+
+                        <div class="english">
+                            Right Documentation
+                        </div>
+
+                        <p>
+                            وثّق إعطاء الدواء والملاحظات المرتبطة
+                            به وفق سياسة المنشأة.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ROUTES
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-section-heading">
+
+                    <h2>
+                        💉 طرق إعطاء الأدوية
+                    </h2>
+
+                    <p>
+                        تختلف طريقة إعطاء الدواء حسب نوعه وحالة المريض وأمر الدواء.
+                    </p>
+
+                </div>
+
+
+                <div class="routes-grid">
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            💊
+                        </div>
+
+                        <h3>
+                            فموي
+                        </h3>
+
+                        <div class="route-en">
+                            Oral
+                        </div>
+
+                        <p>
+                            يُعطى الدواء عن طريق الفم مثل
+                            الأقراص والكبسولات وبعض السوائل.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            💉
+                        </div>
+
+                        <h3>
+                            وريدي
+                        </h3>
+
+                        <div class="route-en">
+                            IV
+                        </div>
+
+                        <p>
+                            يُعطى الدواء مباشرة إلى الوريد
+                            وفق الأمر والإجراء المعتمد.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            🩹
+                        </div>
+
+                        <h3>
+                            عضلي
+                        </h3>
+
+                        <div class="route-en">
+                            IM
+                        </div>
+
+                        <p>
+                            يُحقن الدواء داخل العضلة باستخدام
+                            التقنية المناسبة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            💉
+                        </div>
+
+                        <h3>
+                            تحت الجلد
+                        </h3>
+
+                        <div class="route-en">
+                            Subcutaneous
+                        </div>
+
+                        <p>
+                            يُعطى الدواء في النسيج تحت الجلد
+                            وفق الطريقة المناسبة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            👅
+                        </div>
+
+                        <h3>
+                            تحت اللسان
+                        </h3>
+
+                        <div class="route-en">
+                            Sublingual
+                        </div>
+
+                        <p>
+                            يوضع الدواء تحت اللسان للسماح
+                            بامتصاصه بالطريقة المناسبة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            🧴
+                        </div>
+
+                        <h3>
+                            موضعي
+                        </h3>
+
+                        <div class="route-en">
+                            Topical
+                        </div>
+
+                        <p>
+                            يوضع الدواء على الجلد أو المنطقة
+                            المستهدفة حسب تعليماته.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            👁️
+                        </div>
+
+                        <h3>
+                            عيني
+                        </h3>
+
+                        <div class="route-en">
+                            Ophthalmic
+                        </div>
+
+                        <p>
+                            أدوية مخصصة للاستخدام في العين
+                            مع الالتزام بالتقنية الصحيحة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="route-card">
+
+                        <div class="route-icon">
+                            👂
+                        </div>
+
+                        <h3>
+                            أذني
+                        </h3>
+
+                        <div class="route-en">
+                            Otic
+                        </div>
+
+                        <p>
+                            أدوية مخصصة للاستخدام في قناة الأذن
+                            حسب التعليمات الطبية.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BEFORE ADMINISTRATION
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-section-heading">
+
+                    <h2>
+                        🔍 قبل إعطاء الدواء
+                    </h2>
+
+                    <p>
+                        خطوات أساسية تساعد الممرض على تنفيذ عملية إعطاء الدواء بأمان.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-list">
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                مراجعة أمر الدواء
+                            </h3>
+
+                            <p>
+                                راجع اسم الدواء والجرعة والطريق والوقت
+                                وأي تعليمات خاصة قبل التحضير.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                التحقق من هوية المريض
+                            </h3>
+
+                            <p>
+                                استخدم وسائل تعريف المريض المعتمدة
+                                وتأكد من مطابقة البيانات.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                مراجعة الحساسية
+                            </h3>
+
+                            <p>
+                                تحقق من وجود حساسية معروفة أو
+                                تحذيرات مرتبطة بالدواء.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                فحص الدواء
+                            </h3>
+
+                            <p>
+                                افحص اسم الدواء وتركيزه وشكله
+                                وتاريخ الصلاحية وحالة العبوة.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            5
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                تقييم حالة المريض
+                            </h3>
+
+                            <p>
+                                راجع المعلومات السريرية والعلامات
+                                أو التحاليل المطلوبة قبل إعطاء بعض الأدوية.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="step">
+
+                        <div class="step-number">
+                            6
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                التوثيق والمتابعة
+                            </h3>
+
+                            <p>
+                                بعد الإعطاء، وثّق الدواء وفق النظام
+                                المتبع وراقب استجابة المريض.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NURSING SAFETY
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-section-heading">
+
+                    <h2>
+                        🛡️ Nursing Considerations
+                    </h2>
+
+                    <p>
+                        نقاط تمريضية مهمة يجب وضعها في الاعتبار عند إعطاء الأدوية.
+                    </p>
+
+                </div>
+
+
+                <div class="safety-grid">
+
+
+                    <article class="safety-card">
+
+                        <h3>
+                            🔎 التحقق قبل الإعطاء
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                التأكد من أمر الدواء ومطابقته للدواء الموجود.
+                            </li>
+
+                            <li>
+                                التحقق من هوية المريض والحساسية.
+                            </li>
+
+                            <li>
+                                مراجعة الجرعة والطريق والوقت.
+                            </li>
+
+                            <li>
+                                الانتباه إلى أي تحذيرات أو موانع معروفة.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="safety-card">
+
+                        <h3>
+                            👀 المراقبة بعد الإعطاء
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                مراقبة استجابة المريض للدواء.
+                            </li>
+
+                            <li>
+                                ملاحظة أي علامات لرد فعل غير متوقع.
+                            </li>
+
+                            <li>
+                                متابعة العلامات الحيوية عندما يتطلب الدواء ذلك.
+                            </li>
+
+                            <li>
+                                الإبلاغ عن أي مشكلة وفق سياسة المنشأة.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="safety-card">
+
+                        <h3>
+                            🧼 منع العدوى
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                الالتزام بنظافة اليدين.
+                            </li>
+
+                            <li>
+                                استخدام تقنية آمنة ونظيفة حسب نوع الإجراء.
+                            </li>
+
+                            <li>
+                                عدم إعادة استخدام الأدوات المخصصة للاستخدام الواحد.
+                            </li>
+
+                            <li>
+                                التخلص من الأدوات الحادة بطريقة آمنة.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="safety-card">
+
+                        <h3>
+                            📝 التوثيق
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                توثيق إعطاء الدواء في الوقت المناسب.
+                            </li>
+
+                            <li>
+                                تسجيل المعلومات المطلوبة وفق سياسة المنشأة.
+                            </li>
+
+                            <li>
+                                توثيق أي ملاحظات أو استجابات مهمة.
+                            </li>
+
+                            <li>
+                                التعامل مع رفض المريض أو عدم إعطاء الدواء وفق الإجراءات المعتمدة.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMMON MISTAKES
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="medication-section-heading">
+
+                    <h2>
+                        ⚠️ أخطاء شائعة يجب تجنبها
+                    </h2>
+
+                    <p>
+                        أمثلة تعليمية على مواقف قد تزيد من احتمالية Medication Error.
+                    </p>
+
+                </div>
+
+
+                <div class="mistakes">
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            عدم التحقق من هوية المريض
+                        </h3>
+
+                        <p>
+                            الاعتماد على الذاكرة أو المكان فقط بدلًا
+                            من استخدام وسائل التعريف المعتمدة.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            تجاهل الحساسية
+                        </h3>
+
+                        <p>
+                            عدم مراجعة سجل الحساسية قبل إعطاء الدواء
+                            قد يؤدي إلى خطر على المريض.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            تجاهل اختلاف التركيز
+                        </h3>
+
+                        <p>
+                            يجب الانتباه إلى تركيز الدواء ووحدة الجرعة
+                            وعدم الاعتماد على شكل العبوة فقط.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            إعطاء الدواء بالطريق الخطأ
+                        </h3>
+
+                        <p>
+                            يجب مطابقة Route مع أمر الدواء وتعليماته
+                            قبل الإعطاء.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            عدم التوثيق
+                        </h3>
+
+                        <p>
+                            عدم توثيق الإعطاء أو عدم الإعطاء يمكن
+                            أن يسبب مشكلات في استمرارية الرعاية.
+                        </p>
+
+                    </article>
+
+
+                    <article class="mistake">
+
+                        <div class="mistake-icon">
+                            ❌
+                        </div>
+
+                        <h3>
+                            عدم متابعة المريض
+                        </h3>
+
+                        <p>
+                            إعطاء الدواء لا يعني انتهاء المهمة؛
+                            بعض الأدوية تتطلب مراقبة استجابة المريض.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK REFERENCE
+                 ================================================= -->
+
+            <section class="medication-section">
+
+                <div class="reference-box">
+
+                    <h2>
+                        📌 Quick Nursing Reference
+                    </h2>
+
+                    <p>
+                        تذكّر أهم النقاط الأساسية قبل وأثناء وبعد إعطاء الدواء.
+                    </p>
+
+
+                    <div class="reference-list">
+
+
+                        <div class="reference-item">
+
+                            <strong>
+                                Patient
+                            </strong>
+
+                            <span>
+                                المريض الصحيح
+                            </span>
+
+                        </div>
+
+
+                        <div class="reference-item">
+
+                            <strong>
+                                Medication
+                            </strong>
+
+                            <span>
+                                الدواء الصحيح
+                            </span>
+
+                        </div>
+
+
+                        <div class="reference-item">
+
+                            <strong>
+                                Dose
+                            </strong>
+
+                            <span>
+                                الجرعة الصحيحة
+                            </span>
+
+                        </div>
+
+
+                        <div class="reference-item">
+
+                            <strong>
+                                Route
+                            </strong>
+
+                            <span>
+                                الطريق الصحيح
+                            </span>
+
+                        </div>
+
+
+                        <div class="reference-item">
+
+                            <strong>
+                                Time
+                            </strong>
+
+                            <span>
+                                الوقت الصحيح
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 DISCLAIMER
+                 ================================================= -->
+
+            <div class="medication-disclaimer">
+
+                <strong>
+                    ⚕️ Medical Disclaimer:
+                </strong>
+
+                المعلومات الموجودة في هذه الصفحة مخصصة
+                للتعليم والمراجعة لطلاب التمريض، ولا تعتبر
+                بديلًا عن التدريب العملي أو أمر الطبيب أو
+                بروتوكولات وسياسات المنشأة الصحية.
+                يجب الرجوع إلى المصادر والبروتوكولات المعتمدة
+                عند تنفيذ أي إجراء سريري.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="medication-footer">
+
+        <div class="medication-container">
+
+
+            <div class="medication-footer-grid">
+
+
+                <div class="medication-footer-brand">
+
+                    <h3>
+                        🩺 بوابة التمريض
+                    </h3>
+
+                    <p>
+
+                        مرجع رقمي يساعد طلاب وممارسي التمريض
+                        على الوصول إلى المعلومات التعليمية
+                        والأدوات والمصادر التمريضية بسهولة.
+
+                    </p>
+
+                </div>
+
+
+                <div class="medication-footer-column">
+
+                    <h4>
+                        استكشف
+                    </h4>
+
+                    <a href="../index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="../drugs.html">
+                        مركز الأدوية
+                    </a>
+
+                    <a href="index.html">
+                        المعرفة التمريضية
+                    </a>
+
+                    <a href="../tools.html">
+                        الأدوات والحاسبات
+                    </a>
+
+                </div>
+
+
+                <div class="medication-footer-column">
+
+                    <h4>
+                        المعرفة
+                    </h4>
+
+                    <a href="vital-signs.html">
+                        Vital Signs
+                    </a>
+
+                    <a href="infection-control.html">
+                        Infection Control
+                    </a>
+
+                    <a href="medication-administration.html">
+                        Medication Administration
+                    </a>
+
+                    <a href="../articles.html">
+                        المقالات التعليمية
+                    </a>
+
+                </div>
+
+
+                <div class="medication-footer-column">
+
+                    <h4>
+                        معلومات
+                    </h4>
+
+                    <a href="../pages/about.html">
+                        من نحن
+                    </a>
+
+                    <a href="../pages/contact.html">
+                        تواصل معنا
+                    </a>
+
+                    <a href="../pages/privacy.html">
+                        سياسة الخصوصية
+                    </a>
+
+                    <a href="../pages/medical-disclaimer.html">
+                        إخلاء المسؤولية الطبية
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="medication-footer-bottom">
+
+                <span>
+                    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                </span>
+
+                <span>
+                    Built for Nursing. 🩺
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
