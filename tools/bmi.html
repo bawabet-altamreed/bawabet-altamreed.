@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>حاسبة BMI | مؤشر كتلة الجسم | بوابة التمريض</title>
+
+    <meta
+        name="description"
+        content="حاسبة مؤشر كتلة الجسم BMI لطلاب التمريض. احسب مؤشر كتلة الجسم بسهولة مع معرفة التصنيف التقريبي للنتيجة."
+    >
+
+    <meta
+        name="keywords"
+        content="BMI, BMI Calculator, حاسبة BMI, مؤشر كتلة الجسم, Body Mass Index, بوابة التمريض"
+    >
+
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="theme-color"
+        content="#092d49"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/tools/bmi.html"
+    >
+
+    <link
+        rel="icon"
+        href="../assets/icons/favicon.png"
+        type="image/png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f5f8fa;
+            color: #102f46;
+        }
+
+
+        .bmi-page {
+            min-height: 100vh;
+        }
+
+
+        .bmi-container {
+            width: min(1100px, calc(100% - 32px));
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .bmi-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2eaee;
+        }
+
+
+        .bmi-header-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        .bmi-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #0c3555;
+            font-weight: 900;
+        }
+
+
+        .bmi-brand-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #23829a
+            );
+            color: white;
+            font-size: 22px;
+        }
+
+
+        .bmi-brand-title {
+            display: block;
+            font-size: 18px;
+        }
+
+
+        .bmi-brand-subtitle {
+            display: block;
+            margin-top: 2px;
+            color: #78909c;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .bmi-home {
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: #0c3555;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .bmi-hero {
+            padding: 55px 0;
+            background: linear-gradient(
+                135deg,
+                #092d49,
+                #12657d
+            );
+            color: white;
+            text-align: center;
+        }
+
+
+        .bmi-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 15px;
+            margin-bottom: 18px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            font-size: 12px;
+        }
+
+
+        .bmi-hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.2;
+        }
+
+
+        .bmi-hero h1 span {
+            color: #8ee7f2;
+        }
+
+
+        .bmi-hero p {
+            max-width: 720px;
+            margin: auto;
+            line-height: 1.9;
+            font-size: 14px;
+            opacity: 0.88;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .bmi-main {
+            padding: 50px 0 75px;
+        }
+
+
+        .bmi-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+
+        /* =========================
+           CALCULATOR CARD
+        ========================= */
+
+        .bmi-card {
+            background: white;
+            border: 1px solid #e1eaee;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow:
+                0 10px 30px rgba(15,35,50,0.06);
+        }
+
+
+        .bmi-card-title {
+            margin: 0 0 7px;
+            color: #173b53;
+            font-size: 23px;
+        }
+
+
+        .bmi-card-description {
+            margin: 0 0 25px;
+            color: #74838d;
+            line-height: 1.8;
+            font-size: 13px;
+        }
+
+
+        .bmi-field {
+            margin-bottom: 18px;
+        }
+
+
+        .bmi-field label {
+            display: block;
+            margin-bottom: 8px;
+            color: #294b60;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        .bmi-input-wrapper {
+            position: relative;
+        }
+
+
+        .bmi-input {
+            width: 100%;
+            height: 52px;
+            padding: 0 15px 0 65px;
+            border: 1px solid #d7e3e8;
+            border-radius: 11px;
+            outline: none;
+            font-family: inherit;
+            font-size: 15px;
+            color: #173b53;
+            background: #fbfdfe;
+            transition: 0.2s ease;
+        }
+
+
+        .bmi-input:focus {
+            border-color: #23829a;
+            box-shadow:
+                0 0 0 3px rgba(35,130,154,0.1);
+            background: white;
+        }
+
+
+        .bmi-unit {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #78909c;
+            font-size: 11px;
+            font-weight: 800;
+            pointer-events: none;
+        }
+
+
+        .bmi-calculate {
+            width: 100%;
+            height: 52px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 11px;
+            background: linear-gradient(
+                135deg,
+                #0c3555,
+                #176b82
+            );
+            color: white;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+
+        .bmi-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 8px 20px rgba(12,53,85,0.2);
+        }
+
+
+        .bmi-reset {
+            width: 100%;
+            height: 45px;
+            margin-top: 10px;
+            border: 1px solid #dce6ea;
+            border-radius: 11px;
+            background: white;
+            color: #58717d;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+
+        .bmi-reset:hover {
+            background: #f3f7f8;
+        }
+
+
+        /* =========================
+           RESULT
+        ========================= */
+
+        .bmi-result-card {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(
+                135deg,
+                #edf6f8,
+                #f8fbfc
+            );
+            border: 1px solid #dcebed;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+
+        .bmi-result-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            background: white;
+            font-size: 32px;
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.06);
+        }
+
+
+        .bmi-result-label {
+            margin-bottom: 8px;
+            color: #70838d;
+            font-size: 12px;
+        }
+
+
+        .bmi-result-number {
+            margin: 0;
+            color: #0c3555;
+            font-size: 58px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+
+        .bmi-result-category {
+            margin-top: 15px;
+            padding: 9px 16px;
+            display: inline-block;
+            border-radius: 50px;
+            background: white;
+            color: #0c5e75;
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+
+        .bmi-result-message {
+            max-width: 420px;
+            margin: 18px auto 0;
+            color: #6f818a;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+
+        .bmi-placeholder {
+            color: #78909c;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           BMI TABLE
+        ========================= */
+
+        .bmi-info {
+            margin-top: 25px;
+            padding: 25px;
+            background: white;
+            border: 1px solid #e1eaee;
+            border-radius: 20px;
+        }
+
+
+        .bmi-info h2 {
+            margin: 0 0 15px;
+            color: #173b53;
+            font-size: 21px;
+        }
+
+
+        .bmi-table-wrapper {
+            overflow-x: auto;
+        }
+
+
+        .bmi-table {
+            width: 100%;
+            min-width: 500px;
+            border-collapse: collapse;
+        }
+
+
+        .bmi-table th,
+        .bmi-table td {
+            padding: 13px 12px;
+            border-bottom: 1px solid #edf1f3;
+            text-align: right;
+            font-size: 12px;
+        }
+
+
+        .bmi-table th {
+            background: #f4f8f9;
+            color: #36586a;
+            font-weight: 900;
+        }
+
+
+        .bmi-table td {
+            color: #6e8089;
+        }
+
+
+        .bmi-note {
+            margin: 15px 0 0;
+            padding: 13px 15px;
+            border-radius: 10px;
+            background: #fff8e8;
+            color: #80672f;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .bmi-footer {
+            padding: 30px 0;
+            background: #092d49;
+            color: white;
+            text-align: center;
+        }
+
+
+        .bmi-footer p {
+            margin: 0;
+            color: rgba(255,255,255,0.62);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .bmi-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .bmi-result-card {
+                min-height: 350px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .bmi-container {
+                width: calc(100% - 24px);
+            }
+
+            .bmi-header-inner {
+                min-height: 62px;
+            }
+
+            .bmi-home {
+                padding: 9px 11px;
+                font-size: 11px;
+            }
+
+            .bmi-brand-title {
+                font-size: 16px;
+            }
+
+            .bmi-brand-subtitle {
+                display: none;
+            }
+
+            .bmi-hero {
+                padding: 45px 0;
+            }
+
+            .bmi-card,
+            .bmi-result-card,
+            .bmi-info {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="bmi-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="bmi-header">
+
+        <div class="bmi-container bmi-header-inner">
+
+            <a
+                href="../index.html"
+                class="bmi-brand"
+            >
+
+                <span class="bmi-brand-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <span class="bmi-brand-title">
+                        بوابة التمريض
+                    </span>
+
+                    <span class="bmi-brand-subtitle">
+                        Nursing Portal
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="../index.html"
+                class="bmi-home"
+            >
+                🏠 الرئيسية
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="bmi-hero">
+
+        <div class="bmi-container">
+
+            <span class="bmi-badge">
+                🧮 Nursing Calculator
+            </span>
+
+            <h1>
+                حاسبة
+                <span>BMI</span>
+            </h1>
+
+            <p>
+                احسب مؤشر كتلة الجسم باستخدام الوزن والطول،
+                وتعرف على التصنيف التقريبي لقيمة BMI الخاصة بك.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="bmi-main">
+
+        <div class="bmi-container">
+
+
+            <div class="bmi-layout">
+
+
+                <!-- =====================
+                     CALCULATOR
+                ====================== -->
+
+                <section class="bmi-card">
+
+                    <h2 class="bmi-card-title">
+                        🧮 احسب مؤشر كتلة الجسم
+                    </h2>
+
+                    <p class="bmi-card-description">
+                        أدخل الوزن بالكيلوجرام والطول بالسنتيمتر،
+                        ثم اضغط على زر الحساب.
+                    </p>
+
+
+                    <div class="bmi-field">
+
+                        <label for="weight">
+                            ⚖️ الوزن
+                        </label>
+
+                        <div class="bmi-input-wrapper">
+
+                            <input
+                                type="number"
+                                id="weight"
+                                class="bmi-input"
+                                placeholder="مثال: 70"
+                                min="1"
+                                step="0.1"
+                            >
+
+                            <span class="bmi-unit">
+                                kg
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="bmi-field">
+
+                        <label for="height">
+                            📏 الطول
+                        </label>
+
+                        <div class="bmi-input-wrapper">
+
+                            <input
+                                type="number"
+                                id="height"
+                                class="bmi-input"
+                                placeholder="مثال: 175"
+                                min="1"
+                                step="0.1"
+                            >
+
+                            <span class="bmi-unit">
+                                cm
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="bmi-calculate"
+                        id="calculateBMI"
+                    >
+                        🧮 احسب BMI
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="bmi-reset"
+                        id="resetBMI"
+                    >
+                        إعادة ضبط
+                    </button>
+
+                </section>
+
+
+
+                <!-- =====================
+                     RESULT
+                ====================== -->
+
+                <section class="bmi-result-card">
+
+                    <div
+                        class="bmi-result-icon"
+                        id="resultIcon"
+                    >
+                        🩺
+                    </div>
+
+
+                    <div class="bmi-result-label">
+                        نتيجة مؤشر كتلة الجسم
+                    </div>
+
+
+                    <div
+                        class="bmi-placeholder"
+                        id="resultPlaceholder"
+                    >
+                        أدخل الوزن والطول لعرض النتيجة.
+                    </div>
+
+
+                    <h2
+                        class="bmi-result-number"
+                        id="bmiResult"
+                        style="display:none;"
+                    >
+                        0.0
+                    </h2>
+
+
+                    <div
+                        class="bmi-result-category"
+                        id="bmiCategory"
+                        style="display:none;"
+                    >
+                    </div>
+
+
+                    <p
+                        class="bmi-result-message"
+                        id="bmiMessage"
+                        style="display:none;"
+                    >
+                    </p>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 INFORMATION
+            ========================= -->
+
+            <section class="bmi-info">
+
+                <h2>
+                    📊 تصنيف BMI للبالغين
+                </h2>
+
+
+                <div class="bmi-table-wrapper">
+
+                    <table class="bmi-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    قيمة BMI
+                                </th>
+
+                                <th>
+                                    التصنيف
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    أقل من 18.5
+                                </td>
+
+                                <td>
+                                    نقص الوزن
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    18.5 – 24.9
+                                </td>
+
+                                <td>
+                                    الوزن الطبيعي
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    25.0 – 29.9
+                                </td>
+
+                                <td>
+                                    زيادة الوزن
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    30.0 فأكثر
+                                </td>
+
+                                <td>
+                                    السمنة
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <p class="bmi-note">
+                    ⚠️ ملاحظة: مؤشر BMI أداة تقديرية للبالغين
+                    ولا يُستخدم وحده لتشخيص الحالة الصحية.
+                    قد تختلف دلالته حسب العمر والحالة الصحية
+                    والعوامل الأخرى.
+                </p>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="bmi-footer">
+
+        <div class="bmi-container">
+
+            <p>
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+                <br>
+                Nursing Portal 🩺
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    const weightInput =
+        document.getElementById("weight");
+
+    const heightInput =
+        document.getElementById("height");
+
+    const calculateButton =
+        document.getElementById("calculateBMI");
+
+    const resetButton =
+        document.getElementById("resetBMI");
+
+    const bmiResult =
+        document.getElementById("bmiResult");
+
+    const bmiCategory =
+        document.getElementById("bmiCategory");
+
+    const bmiMessage =
+        document.getElementById("bmiMessage");
+
+    const resultPlaceholder =
+        document.getElementById("resultPlaceholder");
+
+    const resultIcon =
+        document.getElementById("resultIcon");
+
+
+    calculateButton.addEventListener(
+        "click",
+        function () {
+
+            const weight =
+                parseFloat(
+                    weightInput.value
+                );
+
+            const heightCm =
+                parseFloat(
+                    heightInput.value
+                );
+
+
+            if (
+                !weight ||
+                !heightCm ||
+                weight <= 0 ||
+                heightCm <= 0
+            ) {
+
+                alert(
+                    "من فضلك أدخل وزنًا وطولًا صحيحين."
+                );
+
+                return;
+
+            }
+
+
+            const heightM =
+                heightCm / 100;
+
+
+            const bmi =
+                weight /
+                (heightM * heightM);
+
+
+            bmiResult.textContent =
+                bmi.toFixed(1);
+
+
+            let category = "";
+            let message = "";
+            let icon = "🩺";
+
+
+            if (bmi < 18.5) {
+
+                category =
+                    "نقص الوزن";
+
+                message =
+                    "قيمة BMI أقل من النطاق المعتاد للبالغين. يُفضل تقييم الحالة الغذائية والصحية بشكل شامل.";
+
+                icon = "📉";
+
+            }
+
+            else if (bmi < 25) {
+
+                category =
+                    "الوزن الطبيعي";
+
+                message =
+                    "قيمة BMI تقع ضمن النطاق الطبيعي للبالغين وفق التصنيف المستخدم.";
+
+                icon = "✅";
+
+            }
+
+            else if (bmi < 30) {
+
+                category =
+                    "زيادة الوزن";
+
+                message =
+                    "قيمة BMI تقع ضمن نطاق زيادة الوزن. يُفضل النظر إلى الحالة الصحية ونمط الحياة بصورة شاملة.";
+
+                icon = "📈";
+
+            }
+
+            else {
+
+                category =
+                    "السمنة";
+
+                message =
+                    "قيمة BMI تقع ضمن نطاق السمنة. BMI مؤشر تقديري ويُفضل تقييم الحالة الصحية بشكل شامل.";
+
+                icon = "⚠️";
+
+            }
+
+
+            bmiCategory.textContent =
+                category;
+
+            bmiMessage.textContent =
+                message;
+
+            resultIcon.textContent =
+                icon;
+
+
+            resultPlaceholder.style.display =
+                "none";
+
+            bmiResult.style.display =
+                "block";
+
+            bmiCategory.style.display =
+                "inline-block";
+
+            bmiMessage.style.display =
+                "block";
+
+        }
+    );
+
+
+    resetButton.addEventListener(
+        "click",
+        function () {
+
+            weightInput.value = "";
+            heightInput.value = "";
+
+            bmiResult.textContent = "0.0";
+
+            bmiCategory.textContent = "";
+
+            bmiMessage.textContent = "";
+
+            resultIcon.textContent = "🩺";
+
+
+            resultPlaceholder.style.display =
+                "block";
+
+            bmiResult.style.display =
+                "none";
+
+            bmiCategory.style.display =
+                "none";
+
+            bmiMessage.style.display =
+                "none";
+
+        }
+    );
+
+
+    weightInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Enter") {
+                calculateButton.click();
+            }
+
+        }
+    );
+
+
+    heightInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Enter") {
+                calculateButton.click();
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
