@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        تقييم المريض Patient Assessment | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="شرح أساسيات Patient Assessment وتقييم المريض لطلاب التمريض، من جمع البيانات والتقييم الأولي إلى التوثيق والمتابعة."
+    >
+
+    <meta
+        name="keywords"
+        content="Patient Assessment, تقييم المريض, Nursing Assessment, التمريض, Nursing"
+    >
+
+    <meta name="author" content="بوابة التمريض">
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/article-patient-assessment.html"
+    >
+
+    <link rel="stylesheet" href="css/global.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial,Tahoma,sans-serif;
+            background: #f5f8fa;
+            color: #173247;
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px,calc(100% - 30px));
+            margin: auto;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e1e9ed;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 900;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            background: linear-gradient(135deg,#0b2d46,#18758a);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav a {
+            padding: 8px 10px;
+            color: #5d707a;
+            font-size: 13px;
+        }
+
+        .nav a:hover {
+            background: #edf5f7;
+            color: #0b526b;
+        }
+
+        .hero {
+            padding: 65px 0;
+            color: white;
+            background: linear-gradient(135deg,#082c46,#0b4b66,#137b8d);
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            color: rgba(255,255,255,.7);
+            margin-bottom: 18px;
+        }
+
+        .breadcrumb a {
+            color: #8be8f0;
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(30px,5vw,48px);
+        }
+
+        .hero p {
+            max-width: 800px;
+            color: rgba(255,255,255,.82);
+            font-size: 16px;
+        }
+
+        .content {
+            padding: 55px 0;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0,1fr) 280px;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #e1e9ed;
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .article h2 {
+            color: #0b2d46;
+            margin-top: 35px;
+            margin-bottom: 12px;
+        }
+
+        .article h3 {
+            color: #0b526b;
+        }
+
+        .article p {
+            color: #536872;
+            font-size: 15px;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #dce8ec;
+            background: #f7fbfc;
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .card h3 {
+            margin: 5px 0;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: step;
+        }
+
+        .steps li {
+            counter-increment: step;
+            margin: 12px 0;
+            padding: 15px;
+            background: #f7fafb;
+            border-radius: 12px;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b7085;
+            color: white;
+            border-radius: 50%;
+            margin-left: 10px;
+            font-weight: 900;
+        }
+
+        .note {
+            margin: 25px 0;
+            padding: 18px;
+            border-right: 4px solid #0b7085;
+            background: #eef7f9;
+            border-radius: 10px;
+        }
+
+        .soap {
+            display: grid;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .soap div {
+            padding: 15px 18px;
+            border-radius: 12px;
+            background: #f7fafb;
+            border: 1px solid #e2eaed;
+        }
+
+        .soap strong {
+            color: #0b7085;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 90px;
+        }
+
+        .side-card {
+            background: white;
+            border: 1px solid #e1e9ed;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .side-card h3 {
+            margin-top: 0;
+            color: #0b2d46;
+        }
+
+        .side-card a {
+            display: block;
+            padding: 7px 0;
+            color: #166a7e;
+            font-size: 13px;
+        }
+
+        .disclaimer {
+            margin-top: 30px;
+            padding: 17px;
+            border-radius: 11px;
+            background: #fff8e8;
+            border: 1px solid #f0dfb0;
+            color: #67572e;
+            font-size: 13px;
+        }
+
+        footer {
+            background: #071f32;
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 35px 0;
+            font-size: 12px;
+        }
+
+        @media(max-width:800px) {
+
+            .nav {
+                display: none;
+            }
+
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .assessment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                🩺
+            </span>
+
+            <strong>
+                بوابة التمريض
+            </strong>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html">الرئيسية</a>
+
+            <a href="knowledge.html">
+                المعرفة
+            </a>
+
+            <a href="drugs.html">
+                الأدوية
+            </a>
+
+            <a href="tools.html">
+                الأدوات
+            </a>
+
+            <a href="dictionary.html">
+                القاموس
+            </a>
+
+            <a href="articles.html">
+                المقالات
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+                الرئيسية
+            </a>
+
+            ←
+
+            <a href="articles.html">
+                المقالات
+            </a>
+
+            ←
+
+            Patient Assessment
+
+        </div>
+
+
+        <h1>
+            تقييم المريض
+        </h1>
+
+        <p>
+            Patient Assessment — نظرة منظمة على جمع
+            المعلومات عن المريض وتقييم حالته وتوثيق
+            النتائج ومتابعتها.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main class="content">
+
+    <div class="container">
+
+        <div class="layout">
+
+
+            <article class="article">
+
+
+                <h2>
+                    ما هو Patient Assessment؟
+                </h2>
+
+                <p>
+                    تقييم المريض هو عملية منظمة لجمع وتحليل
+                    المعلومات المتعلقة بحالة المريض الصحية.
+                    ويُستخدم التقييم للمساعدة في تحديد
+                    الاحتياجات والمشكلات الصحية وتوجيه
+                    الرعاية التمريضية.
+                </p>
+
+
+                <h2>
+                    أنواع البيانات
+                </h2>
+
+
+                <div class="assessment-grid">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🗣️
+                        </div>
+
+                        <h3>
+                            Subjective Data
+                        </h3>
+
+                        <p>
+                            معلومات يذكرها المريض أو مصدر موثوق
+                            مثل وصف الألم أو الأعراض التي يشعر بها.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            👁️
+                        </div>
+
+                        <h3>
+                            Objective Data
+                        </h3>
+
+                        <p>
+                            معلومات يمكن ملاحظتها أو قياسها
+                            مثل العلامات الحيوية ونتائج الفحص.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    مكونات التقييم
+                </h2>
+
+
+                <ol class="steps">
+
+                    <li>
+                        جمع التاريخ الصحي والمعلومات الأساسية
+                        من المريض والمصادر المناسبة.
+                    </li>
+
+                    <li>
+                        قياس العلامات الحيوية ومراجعة المعلومات
+                        المتاحة عن الحالة.
+                    </li>
+
+                    <li>
+                        إجراء الفحص الجسدي وفق نطاق الممارسة
+                        والتدريب والسياسات المعتمدة.
+                    </li>
+
+                    <li>
+                        تقييم الألم والأعراض والشكاوى الحالية.
+                    </li>
+
+                    <li>
+                        مراجعة الأدوية والحساسيات والمعلومات
+                        المهمة المتعلقة بالرعاية.
+                    </li>
+
+                    <li>
+                        تحديد المعلومات غير الطبيعية أو التي
+                        تحتاج إلى متابعة.
+                    </li>
+
+                    <li>
+                        توثيق النتائج والتواصل بشأن التغيرات
+                        المهمة مع الفريق الصحي.
+                    </li>
+
+                </ol>
+
+
+                <h2>
+                    التقييم من الرأس إلى القدم
+                </h2>
+
+                <p>
+                    Head-to-Toe Assessment هو أسلوب منظم لفحص
+                    أجهزة وأجزاء الجسم بشكل متسلسل، ويُستخدم
+                    حسب حالة المريض ونطاق ممارسة الممرض
+                    والسياسة المتبعة.
+                </p>
+
+
+                <div class="assessment-grid">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🧠
+                        </div>
+
+                        <h3>
+                            Neurological
+                        </h3>
+
+                        <p>
+                            الوعي والاستجابة والحالة العصبية
+                            وفق التقييم المناسب.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Cardiovascular
+                        </h3>
+
+                        <p>
+                            تقييم العلامات والمؤشرات المتعلقة
+                            بالدورة الدموية والقلب.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🫁
+                        </div>
+
+                        <h3>
+                            Respiratory
+                        </h3>
+
+                        <p>
+                            تقييم التنفس ومعدل التنفس والأكسجة
+                            وفق الحالة والأدوات المتاحة.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🍽️
+                        </div>
+
+                        <h3>
+                            Gastrointestinal
+                        </h3>
+
+                        <p>
+                            تقييم الأعراض والعادات والمعلومات
+                            المتعلقة بالجهاز الهضمي.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🚽
+                        </div>
+
+                        <h3>
+                            Genitourinary
+                        </h3>
+
+                        <p>
+                            تقييم التبول والإخراج والمعلومات
+                            ذات الصلة حسب الحالة.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🦴
+                        </div>
+
+                        <h3>
+                            Musculoskeletal
+                        </h3>
+
+                        <p>
+                            تقييم الحركة والقوة والقدرة الوظيفية
+                            وفق حالة المريض.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    أهمية التوثيق
+                </h2>
+
+                <p>
+                    التوثيق الدقيق يساعد على نقل المعلومات
+                    بين أعضاء الفريق الصحي، ومتابعة التغيرات
+                    في حالة المريض، ودعم استمرارية الرعاية.
+                </p>
+
+
+                <h2>
+                    SOAP كمثال على تنظيم الملاحظات
+                </h2>
+
+
+                <div class="soap">
+
+                    <div>
+                        <strong>
+                            S — Subjective
+                        </strong>
+                        <br>
+                        ما يذكره المريض أو المصدر عن الأعراض
+                        والشكاوى.
+                    </div>
+
+                    <div>
+                        <strong>
+                            O — Objective
+                        </strong>
+                        <br>
+                        النتائج التي يمكن ملاحظتها أو قياسها.
+                    </div>
+
+                    <div>
+                        <strong>
+                            A — Assessment
+                        </strong>
+                        <br>
+                        التقييم أو تفسير البيانات ضمن نطاق
+                        الممارسة المهنية.
+                    </div>
+
+                    <div>
+                        <strong>
+                            P — Plan
+                        </strong>
+                        <br>
+                        خطة المتابعة أو الرعاية وفق الخطة
+                        المعتمدة.
+                    </div>
+
+                </div>
+
+
+                <div class="note">
+
+                    <strong>
+                        💡 للطالب
+                    </strong>
+
+                    <br>
+
+                    التقييم ليس مجرد تسجيل أرقام؛ المهم هو
+                    جمع البيانات بطريقة منظمة، ملاحظة التغيرات،
+                    وتوصيل المعلومات المهمة في الوقت المناسب.
+
+                </div>
+
+
+                <div class="disclaimer">
+
+                    ⚠️
+                    هذا المقال تعليمي ولا يحل محل التدريب
+                    العملي أو سياسات المنشأة أو التقييم السريري
+                    الذي يجريه الفريق الصحي المختص.
+
+                </div>
+
+
+            </article>
+
+
+
+            <aside class="sidebar">
+
+
+                <div class="side-card">
+
+                    <h3>
+                        📚 مقالات مرتبطة
+                    </h3>
+
+                    <a href="article-vital-signs.html">
+                        Vital Signs
+                    </a>
+
+                    <a href="article-spo2.html">
+                        SpO₂
+                    </a>
+
+                    <a href="article-gcs.html">
+                        GCS
+                    </a>
+
+                    <a href="article-wound-assessment.html">
+                        Wound Assessment
+                    </a>
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <h3>
+                        🩺 استكشف
+                    </h3>
+
+                    <a href="clinical-guides.html">
+                        Clinical Guides
+                    </a>
+
+                    <a href="tools.html">
+                        Nursing Tools
+                    </a>
+
+                    <a href="dictionary.html">
+                        Nursing Dictionary
+                    </a>
+
+                    <a href="quizzes.html">
+                        Nursing Quiz
+                    </a>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<footer>
+
+    🩺 بوابة التمريض
+
+    <br><br>
+
+    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+</footer>
+
+
+</body>
+
+</html>
