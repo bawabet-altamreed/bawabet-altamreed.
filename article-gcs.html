@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Glasgow Coma Scale (GCS) | مقياس غلاسكو للغيبوبة | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="شرح Glasgow Coma Scale GCS، مكونات Eye Verbal Motor، طريقة حساب الدرجة وأهميتها في التقييم العصبي."
+    >
+
+    <meta
+        name="keywords"
+        content="GCS, Glasgow Coma Scale, Glasgow Coma Score, EVM, Eye Verbal Motor, مقياس غلاسكو, تمريض"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/article-gcs.html"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f5f8fa;
+            color: #173247;
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1050px, calc(100% - 30px));
+            margin: auto;
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid #e1e9ed;
+            padding: 16px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #0b2d46;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .back {
+            color: #12667c;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .hero {
+            background: linear-gradient(135deg,#082c46,#137b8d);
+            color: white;
+            padding: 65px 0;
+        }
+
+        .category {
+            display: inline-block;
+            background: rgba(255,255,255,.12);
+            padding: 6px 13px;
+            border-radius: 30px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(32px,5vw,52px);
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            max-width: 800px;
+            color: rgba(255,255,255,.82);
+        }
+
+        .article {
+            background: white;
+            margin: 35px auto;
+            padding: 40px;
+            border-radius: 22px;
+            border: 1px solid #e1e9ed;
+        }
+
+        h2 {
+            color: #0b2d46;
+            font-size: 26px;
+            margin: 35px 0 12px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-right: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .score-card {
+            background: #eef7f9;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .score {
+            font-size: 65px;
+            color: #0b526b;
+            font-weight: 900;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #dce6ea;
+            padding: 12px;
+            text-align: right;
+        }
+
+        th {
+            background: #edf6f8;
+            color: #0b2d46;
+        }
+
+        tr:nth-child(even) {
+            background: #fafcfd;
+        }
+
+        .info {
+            background: #eef7f9;
+            border-right: 5px solid #137b8d;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 22px 0;
+        }
+
+        .warning {
+            background: #fff7e8;
+            border-right: 5px solid #e2a229;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 22px 0;
+        }
+
+        .sources {
+            background: #f5f8fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 35px;
+            font-size: 13px;
+        }
+
+        footer {
+            background: #071f32;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+        }
+
+        @media(max-width:700px) {
+
+            .article {
+                padding: 22px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">
+            🩺 بوابة التمريض
+        </a>
+
+        <a href="articles.html" class="back">
+            ← المقالات
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <span class="category">
+            NEUROLOGICAL ASSESSMENT
+        </span>
+
+        <h1>
+            Glasgow Coma Scale (GCS)
+        </h1>
+
+        <p class="intro">
+            شرح مقياس غلاسكو للوعي، مكوناته الثلاثة،
+            طريقة تسجيل الدرجات وأهميته في التقييم العصبي.
+        </p>
+
+    </div>
+
+</section>
+
+
+<main class="container">
+
+<article class="article">
+
+    <h2>
+        ما هو GCS؟
+    </h2>
+
+    <p>
+        Glasgow Coma Scale هو مقياس سريري يُستخدم لوصف مستوى وعي المريض
+        من خلال تقييم ثلاث استجابات أساسية:
+    </p>
+
+    <ul>
+
+        <li>
+            <strong>E — Eye Opening</strong>
+        </li>
+
+        <li>
+            <strong>V — Verbal Response</strong>
+        </li>
+
+        <li>
+            <strong>M — Motor Response</strong>
+        </li>
+
+    </ul>
+
+
+    <div class="score-card">
+
+        <div>
+            مجموع GCS
+        </div>
+
+        <div class="score">
+            3–15
+        </div>
+
+        <small>
+            أقل مجموع = 3، وأعلى مجموع = 15.
+        </small>
+
+    </div>
+
+
+    <h2>
+        1. Eye Opening — E
+    </h2>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>الاستجابة</th>
+                    <th>الدرجة</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Spontaneous</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td>To sound</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>To pressure</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>None</td>
+                    <td>1</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <h2>
+        2. Verbal Response — V
+    </h2>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>الاستجابة</th>
+                    <th>الدرجة</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Oriented</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td>Confused</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td>Words</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Sounds</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>None</td>
+                    <td>1</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <h2>
+        3. Motor Response — M
+    </h2>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>الاستجابة</th>
+                    <th>الدرجة</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Obeys commands</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Localizes</td>
+                    <td>5</td>
+                </tr>
+
+                <tr>
+                    <td>Normal flexion</td>
+                    <td>4</td>
+                </tr>
+
+                <tr>
+                    <td>Abnormal flexion</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>Extension</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>None</td>
+                    <td>1</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <h2>
+        كيفية حساب GCS
+    </h2>
+
+    <p>
+        يتم تسجيل نتيجة كل مكون ثم جمعها:
+    </p>
+
+    <div class="info">
+
+        <strong>
+            GCS = E + V + M
+        </strong>
+
+        <br>
+
+        مثال تعليمي:
+
+        <br>
+
+        E4 + V5 + M6 = GCS 15
+
+    </div>
+
+
+    <h2>
+        ماذا تعني الدرجة؟
+    </h2>
+
+    <p>
+        الدرجة النهائية تتراوح من 3 إلى 15. لكن من المهم عدم الاعتماد
+        على الرقم وحده؛ يجب تسجيل المكونات نفسها لأن نفس المجموع قد ينتج
+        من تركيبات مختلفة من E وV وM.
+    </p>
+
+
+    <div class="warning">
+
+        <strong>
+            تنبيه:
+        </strong>
+
+        بعض المرضى قد لا يستطيعون إعطاء استجابة لفظية لأسباب مثل
+        وجود أنبوب حنجري أو مشاكل أخرى؛ لذلك يجب توثيق سبب عدم إمكانية
+        تقييم المكون بدل تفسيره بطريقة خاطئة.
+    </div>
+
+
+    <h2>
+        لماذا GCS مهم في التمريض؟
+    </h2>
+
+    <ul>
+
+        <li>يساعد على وصف مستوى الوعي بصورة منظمة.</li>
+
+        <li>يساعد على متابعة التغيرات في الحالة العصبية.</li>
+
+        <li>يساعد في التواصل بين أعضاء الفريق الصحي.</li>
+
+        <li>يمكن مقارنة النتائج مع القياسات السابقة.</li>
+
+    </ul>
+
+
+    <h2>
+        نقطة مهمة جدًا
+    </h2>
+
+    <p>
+        لا تحفظ الرقم النهائي فقط. احفظ:
+    </p>
+
+    <div class="info">
+
+        <strong>
+            E = 4
+            |
+            V = 5
+            |
+            M = 6
+        </strong>
+
+        <br><br>
+
+        المجموع الأقصى = 15
+
+    </div>
+
+
+    <h2>
+        الخلاصة
+    </h2>
+
+    <p>
+        GCS يعتمد على ثلاث مجموعات من الاستجابات:
+        Eye Opening وVerbal Response وMotor Response.
+        يتم تسجيل كل مكون بصورة منفصلة ثم جمع الدرجات للحصول على
+        المجموع النهائي.
+    </p>
+
+
+    <div class="sources">
+
+        <strong>المراجع:</strong>
+
+        <p>
+            Glasgow Coma Scale — Official FAQ and scoring information.
+        </p>
+
+    </div>
+
+</article>
+
+</main>
+
+
+<footer>
+
+    🩺 بوابة التمريض
+    <br>
+    المحتوى للتثقيف والدراسة ولا يغني عن التقييم السريري.
+
+</footer>
+
+</body>
+
+</html>
