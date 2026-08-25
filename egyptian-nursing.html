@@ -2,16 +2,15 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>التمريض في مصر | بوابة التمريض</title>
 
-    <meta name="description"
-          content="دليل التمريض في مصر - مدارس التمريض والمعاهد وكليات التمريض والقبول والتنسيق والمسارات المهنية.">
+    <meta
+        name="description"
+        content="دليل التمريض في مصر من بوابة التمريض: مدارس التمريض، المعاهد، كليات التمريض، القبول، التنسيق والمسارات المهنية."
+    >
 
     <style>
 
@@ -36,392 +35,155 @@
             );
 
             color: white;
-            padding: 28px 15px;
+            padding: 30px 20px;
             text-align: center;
 
             box-shadow:
-                0 4px 15px rgba(0,0,0,0.12);
+                0 4px 15px rgba(0, 0, 0, 0.12);
         }
 
         .header h1 {
             font-size: 30px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .header p {
             font-size: 15px;
-            opacity: 0.9;
+            opacity: 0.92;
+            line-height: 1.7;
         }
 
         .container {
             width: 94%;
-            max-width: 1100px;
-            margin: 25px auto;
+            max-width: 1000px;
+            margin: 25px auto 40px;
         }
 
         .intro {
             background: white;
             border-radius: 16px;
             padding: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
 
             box-shadow:
-                0 4px 15px rgba(0,0,0,0.06);
+                0 4px 15px rgba(0, 0, 0, 0.06);
         }
 
         .intro h2 {
             color: #0b3d62;
+            font-size: 23px;
             margin-bottom: 12px;
         }
 
         .intro p {
             color: #475569;
-            line-height: 1.8;
+            line-height: 1.9;
+            font-size: 15px;
         }
 
-        .last-update {
-            margin-top: 14px;
-            display: inline-block;
-
-            background: #eef7fb;
-            color: #087ea4;
-
-            padding: 7px 11px;
-            border-radius: 8px;
-
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .search-box {
-            margin-top: 18px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 14px 16px;
-
-            border: 2px solid #dce6ec;
-            border-radius: 11px;
-
-            font-size: 16px;
-            outline: none;
-
-            transition: 0.2s;
-        }
-
-        .search-box input:focus {
-            border-color: #087ea4;
-        }
-
-        .categories {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 12px;
-
-            margin-bottom: 22px;
-        }
-
-        .category-btn {
-            border: none;
-
-            background: white;
-            color: #334155;
-
-            padding: 15px 10px;
-
-            border-radius: 12px;
-
-            cursor: pointer;
-
-            font-size: 14px;
-            font-weight: bold;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.06);
-
-            transition: 0.2s;
-        }
-
-        .category-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .category-btn.active {
-            background: #087ea4;
-            color: white;
+        .section-title {
+            color: #0b3d62;
+            font-size: 23px;
+            margin-bottom: 15px;
         }
 
         .cards {
             display: grid;
-
             grid-template-columns:
-                repeat(2, 1fr);
+                repeat(2, minmax(0, 1fr));
 
-            gap: 18px;
+            gap: 16px;
         }
 
         .card {
             background: white;
-
             border-radius: 16px;
+            padding: 22px;
 
-            padding: 21px;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: inherit;
 
             border: 2px solid transparent;
 
-            transition: 0.2s;
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .card:hover {
             transform: translateY(-3px);
+
             border-color: #087ea4;
+
+            box-shadow:
+                0 8px 22px rgba(0, 0, 0, 0.09);
         }
 
         .card-icon {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        .badge {
-            display: inline-block;
-
-            background: #eaf7fb;
-            color: #087ea4;
-
-            padding: 5px 9px;
-
-            border-radius: 7px;
-
-            font-size: 12px;
-            font-weight: bold;
-
-            margin-bottom: 10px;
+            font-size: 34px;
+            margin-bottom: 12px;
         }
 
         .card h3 {
             color: #0b3d62;
-
             font-size: 20px;
-
-            margin-bottom: 9px;
+            margin-bottom: 8px;
         }
 
         .card p {
             color: #64748b;
-
+            font-size: 14px;
             line-height: 1.7;
-
-            font-size: 14px;
-
-            margin-bottom: 15px;
         }
 
-        .details-btn {
-            width: 100%;
-
-            border: none;
-
-            background: #087ea4;
-            color: white;
-
-            padding: 11px;
-
-            border-radius: 9px;
-
-            cursor: pointer;
-
+        .arrow {
+            display: inline-block;
+            margin-top: 14px;
+            color: #087ea4;
             font-weight: bold;
-
             font-size: 14px;
         }
 
-        .details-btn:hover {
-            opacity: 0.9;
-        }
+        .notice {
+            margin-top: 22px;
 
-        .empty {
-            display: none;
-
-            background: white;
-
-            padding: 35px;
-
-            text-align: center;
-
-            border-radius: 15px;
-
-            color: #64748b;
-        }
-
-        .loading {
-            background: white;
-
-            padding: 35px;
-
-            text-align: center;
-
-            border-radius: 15px;
-
-            color: #64748b;
-        }
-
-        .error {
-            display: none;
-
-            background: #fff1f2;
-            color: #be123c;
-
-            padding: 22px;
+            background: #eef7fb;
+            border-right: 4px solid #087ea4;
 
             border-radius: 12px;
+            padding: 18px;
 
-            text-align: center;
-        }
-
-        /* MODAL */
-
-        .modal {
-            display: none;
-
-            position: fixed;
-
-            inset: 0;
-
-            background:
-                rgba(0,0,0,0.55);
-
-            z-index: 999;
-
-            padding: 20px;
-
-            overflow-y: auto;
-        }
-
-        .modal-content {
-            background: white;
-
-            max-width: 850px;
-
-            margin: 30px auto;
-
-            border-radius: 17px;
-
-            padding: 26px;
-
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-
-            top: 12px;
-            left: 12px;
-
-            width: 38px;
-            height: 38px;
-
-            border: none;
-
-            border-radius: 50%;
-
-            background: #e2e8f0;
             color: #334155;
-
-            font-size: 21px;
-
-            cursor: pointer;
-        }
-
-        .modal-content h2 {
-            color: #0b3d62;
-
-            margin-bottom: 12px;
-
-            padding-left: 45px;
-        }
-
-        .modal-category {
-            display: inline-block;
-
-            background: #eaf7fb;
-            color: #087ea4;
-
-            padding: 6px 10px;
-
-            border-radius: 7px;
-
-            font-size: 13px;
-
-            font-weight: bold;
-
-            margin-bottom: 15px;
-        }
-
-        .section {
-            margin-top: 20px;
-        }
-
-        .section h3 {
-            color: #087ea4;
-
-            margin-bottom: 8px;
-        }
-
-        .section p,
-        .section li {
-            color: #475569;
-
             line-height: 1.8;
+            font-size: 14px;
         }
 
-        .section ul,
-        .section ol {
-            padding-right: 22px;
+        .notice strong {
+            color: #0b3d62;
         }
 
-        .important {
-            margin-top: 20px;
-
-            padding: 15px;
-
-            border-right: 4px solid #f59e0b;
-
-            background: #fffbeb;
-
-            border-radius: 9px;
-
-            color: #78350f;
-
+        .source-note {
+            margin-top: 18px;
+            color: #64748b;
+            font-size: 12px;
             line-height: 1.7;
         }
 
-        @media (max-width: 800px) {
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .categories {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-        @media (max-width: 500px) {
+        @media (max-width: 700px) {
 
             .header h1 {
                 font-size: 24px;
             }
 
-            .categories {
+            .header p {
+                font-size: 14px;
+            }
+
+            .cards {
                 grid-template-columns: 1fr;
             }
 
@@ -429,8 +191,8 @@
                 padding: 19px;
             }
 
-            .modal-content {
-                padding: 20px;
+            .card {
+                padding: 19px;
             }
 
         }
@@ -439,16 +201,15 @@
 
 </head>
 
-
 <body>
-
 
 <header class="header">
 
     <h1>🇪🇬 التمريض في مصر</h1>
 
     <p>
-        دليلك التعليمي للتعرف على مسارات دراسة التمريض في مصر
+        دليلك للتعرف على مسارات دراسة التمريض
+        والتعليم والتخصصات والفرص المهنية في مصر
     </p>
 
 </header>
@@ -456,623 +217,219 @@
 
 <main class="container">
 
-
     <section class="intro">
 
         <h2>🩺 دليل التمريض في مصر</h2>
 
         <p>
-            تعرف على أهم مسارات دراسة التمريض في مصر،
-            من مدارس التمريض والتعليم الفني إلى المعاهد
-            وكليات التمريض، بالإضافة إلى معلومات القبول
-            والتنسيق والمسارات المهنية.
+            هنا هتلاقي مجموعة من المعلومات والموارد
+            المتعلقة بدراسة التمريض في مصر،
+            بدايةً من مدارس التمريض والمعاهد،
+            مرورًا بكليات التمريض والقبول والتنسيق،
+            وصولًا إلى المسارات المهنية بعد الدراسة.
         </p>
-
-        <span class="last-update">
-            آخر تحديث للمحتوى: 2026
-        </span>
-
-
-        <div class="search-box">
-
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="🔎 ابحث عن مدرسة أو معهد أو كلية أو مسار..."
-            >
-
-        </div>
 
     </section>
 
 
-    <div class="categories">
+    <h2 class="section-title">
+        📚 اختر القسم
+    </h2>
 
-        <button
-            class="category-btn active"
-            data-category="all">
 
-            📚 الكل
+    <section class="cards">
 
-        </button>
 
-        <button
-            class="category-btn"
-            data-category="schools">
+        <a
+            href="nursing-schools.html"
+            class="card"
+        >
 
-            🏫 مدارس التمريض
+            <div class="card-icon">
+                🏫
+            </div>
 
-        </button>
+            <h3>
+                مدارس التمريض
+            </h3>
 
-        <button
-            class="category-btn"
-            data-category="institutes">
+            <p>
+                معلومات عن مدارس التمريض
+                والأنظمة التعليمية وشروط
+                وإجراءات التقديم حسب الجهة
+                المعلنة رسميًا.
+            </p>
 
-            🎓 المعاهد
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
 
-        </button>
+        </a>
 
-        <button
-            class="category-btn"
-            data-category="colleges">
 
-            🏛️ كليات التمريض
 
-        </button>
+        <a
+            href="nursing-institutes.html"
+            class="card"
+        >
 
-        <button
-            class="category-btn"
-            data-category="admission">
+            <div class="card-icon">
+                🏥
+            </div>
 
-            📝 القبول
+            <h3>
+                معاهد التمريض
+            </h3>
 
-        </button>
+            <p>
+                تعرف على أنواع المعاهد
+                والجهات التعليمية والبرامج
+                والمسارات المتاحة للتمريض.
+            </p>
 
-        <button
-            class="category-btn"
-            data-category="careers">
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
 
-            💼 المسارات المهنية
+        </a>
 
-        </button>
+
+
+        <a
+            href="nursing-faculties.html"
+            class="card"
+        >
+
+            <div class="card-icon">
+                🎓
+            </div>
+
+            <h3>
+                كليات التمريض
+            </h3>
+
+            <p>
+                دليل كليات وبرامج التمريض
+                والتخصصات الأكاديمية
+                والمسارات الدراسية.
+            </p>
+
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="nursing-admission.html"
+            class="card"
+        >
+
+            <div class="card-icon">
+                📝
+            </div>
+
+            <h3>
+                القبول
+            </h3>
+
+            <p>
+                تعرف على متطلبات وإجراءات
+                القبول في المسارات المختلفة،
+                مع الاعتماد على المصادر الرسمية
+                عند توفرها.
+            </p>
+
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="nursing-coordination.html"
+            class="card"
+        >
+
+            <div class="card-icon">
+                📊
+            </div>
+
+            <h3>
+                التنسيق
+            </h3>
+
+            <p>
+                معلومات التنسيق والحدود الدنيا
+                يتم تحديثها وفق البيانات الرسمية
+                المعلنة في كل عام.
+            </p>
+
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
+
+        </a>
+
+
+
+        <a
+            href="nursing-career-paths.html"
+            class="card"
+        >
+
+            <div class="card-icon">
+                💼
+            </div>
+
+            <h3>
+                المسارات المهنية
+            </h3>
+
+            <p>
+                تعرف على المسارات المهنية
+                والتخصصات وفرص التطور
+                بعد دراسة التمريض.
+            </p>
+
+            <span class="arrow">
+                عرض التفاصيل ←
+            </span>
+
+        </a>
+
+
+    </section>
+
+
+    <div class="notice">
+
+        <strong>⚠️ تنبيه مهم:</strong>
+
+        المعلومات الخاصة بالقبول والتنسيق
+        والمواعيد والشروط قد تتغير من عام لآخر.
+        لذلك سيتم الاعتماد على المصادر الرسمية
+        والجهات التعليمية المختصة عند إضافة
+        البيانات المتغيرة.
 
     </div>
 
 
-    <div
-        id="loading"
-        class="loading">
+    <div class="source-note">
 
-        ⏳ جاري تحميل دليل التمريض في مصر...
-
-    </div>
-
-
-    <div
-        id="cards"
-        class="cards"
-        style="display:none;">
-
-    </div>
-
-
-    <div
-        id="empty"
-        class="empty">
-
-        🔎
-
-        <br><br>
-
-        لا توجد نتائج مطابقة للبحث.
-
-    </div>
-
-
-    <div
-        id="error"
-        class="error">
-
-        ❌ تعذر تحميل دليل التمريض.
-
-        <br><br>
-
-        تأكد من وجود الملف:
-
-        <strong>
-            data/egyptian-nursing.json
-        </strong>
+        يتم إعداد المعلومات التعليمية والإرشادية
+        بالاعتماد على المصادر الرسمية المتاحة،
+        مثل الجهات الحكومية والجامعات والهيئات
+        التعليمية المختصة.
 
     </div>
 
 </main>
 
 
-<!-- MODAL -->
-
-<div
-    id="modal"
-    class="modal">
-
-    <div class="modal-content">
-
-        <button
-            class="close-btn"
-            onclick="closeModal()">
-
-            ×
-
-        </button>
-
-
-        <h2 id="modalTitle"></h2>
-
-
-        <div
-            id="modalCategory"
-            class="modal-category">
-        </div>
-
-
-        <div
-            id="modalBody">
-        </div>
-
-    </div>
-
-</div>
-
-
-<script>
-
-let data = [];
-
-let currentCategory = "all";
-
-
-const cards =
-    document.getElementById("cards");
-
-const loading =
-    document.getElementById("loading");
-
-const errorBox =
-    document.getElementById("error");
-
-const empty =
-    document.getElementById("empty");
-
-const searchInput =
-    document.getElementById("searchInput");
-
-
-/* =========================
-   LOAD DATA
-========================= */
-
-fetch("data/egyptian-nursing.json")
-
-.then(response => {
-
-    if (!response.ok) {
-
-        throw new Error(
-            "JSON file not found"
-        );
-
-    }
-
-    return response.json();
-
-})
-
-.then(json => {
-
-    if (!Array.isArray(json)) {
-
-        throw new Error(
-            "Invalid JSON"
-        );
-
-    }
-
-    data = json;
-
-    loading.style.display =
-        "none";
-
-    cards.style.display =
-        "grid";
-
-    renderCards();
-
-})
-
-.catch(error => {
-
-    console.error(error);
-
-    loading.style.display =
-        "none";
-
-    errorBox.style.display =
-        "block";
-
-});
-
-
-/* =========================
-   CATEGORY NAME
-========================= */
-
-function categoryName(category) {
-
-    const names = {
-
-        schools:
-            "مدارس التمريض",
-
-        institutes:
-            "المعاهد الفنية",
-
-        colleges:
-            "كليات التمريض",
-
-        admission:
-            "القبول والتقديم",
-
-        careers:
-            "المسارات المهنية"
-
-    };
-
-    return names[category]
-        || "التمريض في مصر";
-
-}
-
-
-/* =========================
-   RENDER
-========================= */
-
-function renderCards() {
-
-    const search =
-        searchInput.value
-        .trim()
-        .toLowerCase();
-
-
-    const filtered =
-        data.filter(item => {
-
-            const categoryMatch =
-                currentCategory === "all"
-                ||
-                item.category === currentCategory;
-
-
-            const text =
-                `
-                ${item.title}
-                ${item.description}
-                ${item.keywords || ""}
-                `
-                .toLowerCase();
-
-
-            const searchMatch =
-                text.includes(search);
-
-
-            return categoryMatch &&
-                   searchMatch;
-
-        });
-
-
-    cards.innerHTML = "";
-
-
-    if (filtered.length === 0) {
-
-        empty.style.display =
-            "block";
-
-        return;
-
-    }
-
-
-    empty.style.display =
-        "none";
-
-
-    filtered.forEach(item => {
-
-        const card =
-            document.createElement(
-                "article"
-            );
-
-
-        card.className =
-            "card";
-
-
-        card.innerHTML = `
-
-            <div class="card-icon">
-                ${item.icon || "🩺"}
-            </div>
-
-            <div class="badge">
-                ${categoryName(item.category)}
-            </div>
-
-            <h3>
-                ${item.title}
-            </h3>
-
-            <p>
-                ${item.description}
-            </p>
-
-            <button
-                class="details-btn"
-                onclick="openModal(${item.id})">
-
-                عرض التفاصيل →
-
-            </button>
-
-        `;
-
-
-        cards.appendChild(card);
-
-    });
-
-}
-
-
-/* =========================
-   FILTER
-========================= */
-
-document
-    .querySelectorAll(".category-btn")
-    .forEach(button => {
-
-        button.addEventListener(
-            "click",
-            () => {
-
-                document
-                    .querySelectorAll(
-                        ".category-btn"
-                    )
-                    .forEach(btn =>
-                        btn.classList.remove(
-                            "active"
-                        )
-                    );
-
-
-                button.classList.add(
-                    "active"
-                );
-
-
-                currentCategory =
-                    button.dataset.category;
-
-
-                renderCards();
-
-            }
-        );
-
-    });
-
-
-/* =========================
-   SEARCH
-========================= */
-
-searchInput.addEventListener(
-    "input",
-    renderCards
-);
-
-
-/* =========================
-   MODAL
-========================= */
-
-function openModal(id) {
-
-    const item =
-        data.find(
-            element =>
-                element.id === id
-        );
-
-
-    if (!item) {
-        return;
-    }
-
-
-    document.getElementById(
-        "modalTitle"
-    ).textContent =
-        item.title;
-
-
-    document.getElementById(
-        "modalCategory"
-    ).textContent =
-        categoryName(item.category);
-
-
-    let html = "";
-
-
-    if (item.overview) {
-
-        html += `
-
-            <div class="section">
-
-                <h3>
-                    📖 نبذة
-                </h3>
-
-                <p>
-                    ${item.overview}
-                </p>
-
-            </div>
-
-        `;
-
-    }
-
-
-    if (
-        item.points &&
-        item.points.length
-    ) {
-
-        html += `
-
-            <div class="section">
-
-                <h3>
-                    📌 أهم المعلومات
-                </h3>
-
-                <ul>
-
-                    ${item.points
-                        .map(
-                            point =>
-                                `<li>${point}</li>`
-                        )
-                        .join("")}
-
-                </ul>
-
-            </div>
-
-        `;
-
-    }
-
-
-    if (
-        item.steps &&
-        item.steps.length
-    ) {
-
-        html += `
-
-            <div class="section">
-
-                <h3>
-                    📝 الخطوات
-                </h3>
-
-                <ol>
-
-                    ${item.steps
-                        .map(
-                            step =>
-                                `<li>${step}</li>`
-                        )
-                        .join("")}
-
-                </ol>
-
-            </div>
-
-        `;
-
-    }
-
-
-    if (item.note) {
-
-        html += `
-
-            <div class="important">
-
-                ⚠️ <strong>مهم:</strong>
-
-                <br>
-
-                ${item.note}
-
-            </div>
-
-        `;
-
-    }
-
-
-    document.getElementById(
-        "modalBody"
-    ).innerHTML = html;
-
-
-    document.getElementById(
-        "modal"
-    ).style.display =
-        "block";
-
-
-    document.body.style.overflow =
-        "hidden";
-
-}
-
-
-function closeModal() {
-
-    document.getElementById(
-        "modal"
-    ).style.display =
-        "none";
-
-
-    document.body.style.overflow =
-        "auto";
-
-}
-
-
-document
-    .getElementById("modal")
-    .addEventListener(
-        "click",
-        function(event) {
-
-            if (
-                event.target === this
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-
-</script>
-
 </body>
-
 </html>
