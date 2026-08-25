@@ -16,12 +16,12 @@
 
     <meta
         name="description"
-        content="قاموس اختصارات التمريض والمصطلحات الطبية المختصرة باللغة الإنجليزية والعربية لطلاب وممارسي التمريض."
+        content="قاموس اختصارات التمريض والاختصارات الطبية الشائعة باللغة الإنجليزية والعربية لطلاب وممارسي التمريض."
     >
 
     <meta
         name="keywords"
-        content="Nursing Abbreviations, Nursing Acronyms, Medical Abbreviations, اختصارات التمريض, الاختصارات الطبية, Nursing Dictionary, بوابة التمريض"
+        content="Nursing Abbreviations, Medical Abbreviations, اختصارات التمريض, اختصارات طبية, Nursing Dictionary, Medical Terms"
     >
 
     <meta
@@ -74,12 +74,9 @@
         }
 
         button,
-        input {
+        input,
+        select {
             font-family: inherit;
-        }
-
-        button {
-            border: 0;
         }
 
         .container {
@@ -87,17 +84,16 @@
             margin: auto;
         }
 
-
-        /* =====================================================
+        /* =========================
            HEADER
-        ====================================================== */
+        ========================== */
 
         .site-header {
             position: sticky;
             top: 0;
             z-index: 9999;
 
-            background: rgba(255, 255, 255, .97);
+            background: rgba(255,255,255,.97);
 
             backdrop-filter: blur(14px);
 
@@ -211,10 +207,9 @@
             font-size: 20px;
         }
 
-
-        /* =====================================================
+        /* =========================
            MOBILE MENU
-        ====================================================== */
+        ========================== */
 
         #mobileMenu {
             display: none;
@@ -245,10 +240,9 @@
             font-size: 13px;
         }
 
-
-        /* =====================================================
+        /* =========================
            HERO
-        ====================================================== */
+        ========================== */
 
         .page-hero {
             padding: 65px 0 55px;
@@ -279,7 +273,7 @@
             border-radius: 50%;
 
             background:
-                rgba(255, 255, 255, .04);
+                rgba(255,255,255,.04);
 
             left: -160px;
             top: -240px;
@@ -296,7 +290,7 @@
             border-radius: 50%;
 
             background:
-                rgba(255, 255, 255, .035);
+                rgba(255,255,255,.035);
 
             right: -130px;
             bottom: -220px;
@@ -322,7 +316,7 @@
             margin-bottom: 20px;
 
             color:
-                rgba(255, 255, 255, .65);
+                rgba(255,255,255,.65);
 
             font-size: 12px;
         }
@@ -339,11 +333,11 @@
             border-radius: 50px;
 
             background:
-                rgba(255, 255, 255, .1);
+                rgba(255,255,255,.1);
 
             border:
                 1px solid
-                rgba(255, 255, 255, .15);
+                rgba(255,255,255,.15);
 
             font-size: 12px;
 
@@ -352,7 +346,7 @@
 
         .page-hero h1 {
             font-size:
-                clamp(34px, 5vw, 55px);
+                clamp(32px, 5vw, 52px);
 
             line-height: 1.2;
 
@@ -367,17 +361,16 @@
             max-width: 760px;
 
             color:
-                rgba(255, 255, 255, .82);
+                rgba(255,255,255,.82);
 
             font-size: 15px;
 
             line-height: 1.9;
         }
 
-
-        /* =====================================================
+        /* =========================
            CONTENT
-        ====================================================== */
+        ========================== */
 
         .content-section {
             padding: 50px 0 70px;
@@ -388,17 +381,16 @@
 
             grid-template-columns:
                 250px
-                minmax(0, 1fr);
+                minmax(0,1fr);
 
             gap: 25px;
 
             align-items: start;
         }
 
-
-        /* =====================================================
+        /* =========================
            SIDEBAR
-        ====================================================== */
+        ========================== */
 
         .sidebar {
             position: sticky;
@@ -454,10 +446,9 @@
             font-weight: 700;
         }
 
-
-        /* =====================================================
+        /* =========================
            MAIN
-        ====================================================== */
+        ========================== */
 
         .dictionary-main {
             min-width: 0;
@@ -477,7 +468,7 @@
 
             box-shadow:
                 0 8px 25px
-                rgba(20, 50, 65, .04);
+                rgba(20,50,65,.04);
         }
 
         .search-card h2 {
@@ -531,7 +522,7 @@
 
             box-shadow:
                 0 0 0 3px
-                rgba(24, 117, 138, .08);
+                rgba(24,117,138,.08);
         }
 
         .search-wrapper span {
@@ -547,10 +538,9 @@
             font-size: 19px;
         }
 
-
-        /* =====================================================
-           LETTER FILTERS
-        ====================================================== */
+        /* =========================
+           FILTERS
+        ========================== */
 
         .filters {
             display: flex;
@@ -592,10 +582,9 @@
             border-color: #0b526b;
         }
 
-
-        /* =====================================================
+        /* =========================
            STATUS
-        ====================================================== */
+        ========================== */
 
         .database-status {
             display: flex;
@@ -621,11 +610,11 @@
             width: 9px;
             height: 9px;
 
-            flex: 0 0 auto;
-
             border-radius: 50%;
 
             background: #f0a500;
+
+            flex-shrink: 0;
         }
 
         .database-status.success .status-dot {
@@ -636,10 +625,9 @@
             background: #dc3545;
         }
 
-
-        /* =====================================================
+        /* =========================
            RESULTS HEADER
-        ====================================================== */
+        ========================== */
 
         .results-header {
             display: flex;
@@ -665,16 +653,15 @@
             font-size: 12px;
         }
 
-
-        /* =====================================================
+        /* =========================
            ABBREVIATIONS GRID
-        ====================================================== */
+        ========================== */
 
         .terms-grid {
             display: grid;
 
             grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(2,minmax(0,1fr));
 
             gap: 13px;
         }
@@ -704,7 +691,7 @@
 
             box-shadow:
                 0 12px 28px
-                rgba(20, 50, 65, .07);
+                rgba(20,50,65,.07);
         }
 
         .term-letter {
@@ -734,7 +721,7 @@
 
             font-size: 20px;
 
-            margin-bottom: 4px;
+            margin-bottom: 5px;
 
             direction: ltr;
 
@@ -743,12 +730,22 @@
             letter-spacing: .4px;
         }
 
-        .term-arabic {
+        .term-full {
             color: #0e7085;
 
             font-size: 14px;
 
             font-weight: 700;
+
+            margin-bottom: 7px;
+        }
+
+        .term-arabic {
+            color: #596f79;
+
+            font-size: 13px;
+
+            font-weight: 600;
 
             margin-bottom: 8px;
         }
@@ -777,10 +774,9 @@
             font-size: 10px;
         }
 
-
-        /* =====================================================
+        /* =========================
            LOADING
-        ====================================================== */
+        ========================== */
 
         .loading-box {
             background: white;
@@ -799,22 +795,6 @@
             font-size: 40px;
 
             margin-bottom: 10px;
-
-            animation:
-                pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.08);
-            }
-
         }
 
         .loading-box h3 {
@@ -829,10 +809,9 @@
             font-size: 13px;
         }
 
-
-        /* =====================================================
+        /* =========================
            NO RESULTS
-        ====================================================== */
+        ========================== */
 
         .no-results {
             display: none;
@@ -865,10 +844,9 @@
             font-size: 13px;
         }
 
-
-        /* =====================================================
+        /* =========================
            ERROR
-        ====================================================== */
+        ========================== */
 
         .error-box {
             display: none;
@@ -899,10 +877,9 @@
             line-height: 1.8;
         }
 
-
-        /* =====================================================
+        /* =========================
            INFO
-        ====================================================== */
+        ========================== */
 
         .info-box {
             margin-top: 25px;
@@ -938,10 +915,9 @@
             line-height: 1.9;
         }
 
-
-        /* =====================================================
+        /* =========================
            FOOTER
-        ====================================================== */
+        ========================== */
 
         .site-footer {
             background: #071f32;
@@ -966,7 +942,7 @@
 
             border-bottom:
                 1px solid
-                rgba(255, 255, 255, .1);
+                rgba(255,255,255,.1);
         }
 
         .footer-brand h3 {
@@ -977,7 +953,7 @@
 
         .footer-brand p {
             color:
-                rgba(255, 255, 255, .58);
+                rgba(255,255,255,.58);
 
             font-size: 12px;
 
@@ -996,7 +972,7 @@
             display: block;
 
             color:
-                rgba(255, 255, 255, .58);
+                rgba(255,255,255,.58);
 
             font-size: 12px;
 
@@ -1021,15 +997,14 @@
             gap: 15px;
 
             color:
-                rgba(255, 255, 255, .4);
+                rgba(255,255,255,.4);
 
             font-size: 10px;
         }
 
-
-        /* =====================================================
+        /* =========================
            TABLET
-        ====================================================== */
+        ========================== */
 
         @media (max-width: 1000px) {
 
@@ -1044,15 +1019,14 @@
             .dictionary-layout {
                 grid-template-columns:
                     210px
-                    minmax(0, 1fr);
+                    minmax(0,1fr);
             }
 
         }
 
-
-        /* =====================================================
+        /* =========================
            MOBILE
-        ====================================================== */
+        ========================== */
 
         @media (max-width: 700px) {
 
@@ -1084,7 +1058,7 @@
             }
 
             .page-hero h1 {
-                font-size: 35px;
+                font-size: 34px;
             }
 
             .page-hero p {
@@ -1150,11 +1124,6 @@
             }
 
         }
-
-
-        /* =====================================================
-           SMALL MOBILE
-        ====================================================== */
 
         @media (max-width: 450px) {
 
@@ -1264,7 +1233,6 @@
             type="button"
             onclick="toggleMobileMenu()"
             aria-label="القائمة"
-            aria-expanded="false"
         >
             ☰
         </button>
@@ -1358,9 +1326,9 @@
 
 
             <p>
-                مرجع شامل لاختصارات التمريض والاختصارات الطبية
+                مرجع سريع لاختصارات التمريض والاختصارات الطبية
                 الشائعة. ابحث عن الاختصار لمعرفة معناه
-                باللغة الإنجليزية والعربية واستخدامه.
+                بالإنجليزية وترجمته وشرحه بالعربية.
             </p>
 
         </div>
@@ -1381,9 +1349,9 @@
         <div class="dictionary-layout">
 
 
-            <!-- =================================================
+            <!-- =========================
                  SIDEBAR
-            ================================================== -->
+            ========================== -->
 
             <aside class="sidebar">
 
@@ -1426,16 +1394,12 @@
             </aside>
 
 
-            <!-- =================================================
+            <!-- =========================
                  MAIN
-            ================================================== -->
+            ========================== -->
 
             <section class="dictionary-main">
 
-
-                <!-- =================================================
-                     SEARCH
-                ================================================== -->
 
                 <div class="search-card">
 
@@ -1444,8 +1408,8 @@
                     </h2>
 
                     <p>
-                        اكتب الاختصار أو معناه باللغة الإنجليزية
-                        أو العربية للبحث داخل قاعدة البيانات.
+                        اكتب الاختصار أو الاسم الكامل أو المعنى
+                        بالعربية للبحث داخل قاعدة بيانات الاختصارات.
                     </p>
 
 
@@ -1458,15 +1422,13 @@
                         <input
                             type="search"
                             id="termSearch"
-                            placeholder="مثال: BP أو ICU أو CPR..."
+                            placeholder="مثال: BP أو Blood Pressure..."
                             autocomplete="off"
-                            aria-label="البحث عن اختصار تمريضي"
+                            aria-label="البحث في اختصارات التمريض"
                         >
 
                     </div>
 
-
-                    <!-- LETTERS -->
 
                     <div class="filters">
 
@@ -1478,222 +1440,41 @@
                             الكل
                         </button>
 
-                        <button
-                            class="filter-button"
-                            data-letter="a"
-                            type="button"
-                        >
-                            A
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="b"
-                            type="button"
-                        >
-                            B
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="c"
-                            type="button"
-                        >
-                            C
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="d"
-                            type="button"
-                        >
-                            D
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="e"
-                            type="button"
-                        >
-                            E
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="f"
-                            type="button"
-                        >
-                            F
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="g"
-                            type="button"
-                        >
-                            G
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="h"
-                            type="button"
-                        >
-                            H
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="i"
-                            type="button"
-                        >
-                            I
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="j"
-                            type="button"
-                        >
-                            J
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="k"
-                            type="button"
-                        >
-                            K
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="l"
-                            type="button"
-                        >
-                            L
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="m"
-                            type="button"
-                        >
-                            M
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="n"
-                            type="button"
-                        >
-                            N
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="o"
-                            type="button"
-                        >
-                            O
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="p"
-                            type="button"
-                        >
-                            P
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="q"
-                            type="button"
-                        >
-                            Q
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="r"
-                            type="button"
-                        >
-                            R
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="s"
-                            type="button"
-                        >
-                            S
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="t"
-                            type="button"
-                        >
-                            T
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="u"
-                            type="button"
-                        >
-                            U
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="v"
-                            type="button"
-                        >
-                            V
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="w"
-                            type="button"
-                        >
-                            W
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="x"
-                            type="button"
-                        >
-                            X
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="y"
-                            type="button"
-                        >
-                            Y
-                        </button>
-
-                        <button
-                            class="filter-button"
-                            data-letter="z"
-                            type="button"
-                        >
-                            Z
-                        </button>
+                        <button class="filter-button" data-letter="a" type="button">A</button>
+                        <button class="filter-button" data-letter="b" type="button">B</button>
+                        <button class="filter-button" data-letter="c" type="button">C</button>
+                        <button class="filter-button" data-letter="d" type="button">D</button>
+                        <button class="filter-button" data-letter="e" type="button">E</button>
+                        <button class="filter-button" data-letter="f" type="button">F</button>
+                        <button class="filter-button" data-letter="g" type="button">G</button>
+                        <button class="filter-button" data-letter="h" type="button">H</button>
+                        <button class="filter-button" data-letter="i" type="button">I</button>
+                        <button class="filter-button" data-letter="j" type="button">J</button>
+                        <button class="filter-button" data-letter="k" type="button">K</button>
+                        <button class="filter-button" data-letter="l" type="button">L</button>
+                        <button class="filter-button" data-letter="m" type="button">M</button>
+                        <button class="filter-button" data-letter="n" type="button">N</button>
+                        <button class="filter-button" data-letter="o" type="button">O</button>
+                        <button class="filter-button" data-letter="p" type="button">P</button>
+                        <button class="filter-button" data-letter="q" type="button">Q</button>
+                        <button class="filter-button" data-letter="r" type="button">R</button>
+                        <button class="filter-button" data-letter="s" type="button">S</button>
+                        <button class="filter-button" data-letter="t" type="button">T</button>
+                        <button class="filter-button" data-letter="u" type="button">U</button>
+                        <button class="filter-button" data-letter="v" type="button">V</button>
+                        <button class="filter-button" data-letter="w" type="button">W</button>
+                        <button class="filter-button" data-letter="x" type="button">X</button>
+                        <button class="filter-button" data-letter="y" type="button">Y</button>
+                        <button class="filter-button" data-letter="z" type="button">Z</button>
 
                     </div>
 
                 </div>
 
 
-                <!-- =================================================
-                     DATABASE STATUS
-                ================================================== -->
+                <!-- =========================
+                     STATUS
+                ========================== -->
 
                 <div
                     class="database-status"
@@ -1709,9 +1490,9 @@
                 </div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      ERROR
-                ================================================== -->
+                ========================== -->
 
                 <div
                     class="error-box"
@@ -1723,16 +1504,16 @@
                     </h3>
 
                     <p id="errorText">
-                        تأكد من وجود ملف:
+                        تأكد من وجود ملف
                         data/nursing-abbreviations.json
                     </p>
 
                 </div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      RESULTS HEADER
-                ================================================== -->
+                ========================== -->
 
                 <div class="results-header">
 
@@ -1750,9 +1531,9 @@
                 </div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      LOADING
-                ================================================== -->
+                ========================== -->
 
                 <div
                     class="loading-box"
@@ -1774,9 +1555,9 @@
                 </div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      TERMS
-                ================================================== -->
+                ========================== -->
 
                 <div
                     class="terms-grid"
@@ -1784,9 +1565,9 @@
                 ></div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      NO RESULTS
-                ================================================== -->
+                ========================== -->
 
                 <div
                     class="no-results"
@@ -1798,32 +1579,34 @@
                     </div>
 
                     <h3>
-                        لم يتم العثور على الاختصار
+                        لم يتم العثور على نتائج
                     </h3>
 
                     <p>
-                        جرّب كتابة الاختصار أو المعنى بطريقة مختلفة.
+                        جرّب كتابة الاختصار أو الاسم الكامل
+                        بطريقة مختلفة.
                     </p>
 
                 </div>
 
 
-                <!-- =================================================
+                <!-- =========================
                      INFO
-                ================================================== -->
+                ========================== -->
 
                 <div class="info-box">
 
                     <h3>
-                        📌 ملاحظة مهمة
+                        📌 ملاحظة تعليمية
                     </h3>
 
                     <p>
-                        بعض الاختصارات الطبية والتمريضية قد يكون لها
-                        أكثر من معنى حسب السياق السريري أو المؤسسة
-                        الصحية. استخدم الاختصار بعد التأكد من معناه
-                        في السياق المستخدم، ولا تعتمد على الاختصارات
-                        كمصدر وحيد لاتخاذ قرار طبي.
+                        الاختصارات المعروضة هنا مخصصة للأغراض
+                        التعليمية والمراجعة. قد تختلف بعض
+                        الاختصارات أو معانيها حسب المؤسسة
+                        الطبية أو السياق السريري، لذلك يجب
+                        الرجوع إلى سياسات المكان والمراجع
+                        المعتمدة عند الاستخدام العملي.
                     </p>
 
                 </div>
@@ -1847,7 +1630,6 @@
     <div class="container">
 
         <div class="footer-top">
-
 
             <div class="footer-brand">
 
@@ -1946,7 +1728,7 @@
    CONFIGURATION
 ===================================================== */
 
-const DATABASE_PATH =
+const DATA_PATH =
     "data/nursing-abbreviations.json";
 
 const RESULTS_PER_PAGE =
@@ -2012,15 +1794,13 @@ const filterButtons =
    GLOBAL DATA
 ===================================================== */
 
-let abbreviations = [];
+let database = [];
 
 let filteredResults = [];
 
 let selectedLetter = "all";
 
 let currentPage = 1;
-
-let searchTimer = null;
 
 
 /* =====================================================
@@ -2034,47 +1814,22 @@ function toggleMobileMenu() {
             "mobileMenu"
         );
 
-    const button =
-        document.querySelector(
-            ".mobile-button"
-        );
-
     if (!menu) {
         return;
     }
 
-
-    const isOpen =
-        menu.style.display === "block";
-
-
-    if (isOpen) {
-
-        menu.style.display =
-            "none";
-
-        if (button) {
-
-            button.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
-
-    } else {
+    if (
+        menu.style.display === "none" ||
+        menu.style.display === ""
+    ) {
 
         menu.style.display =
             "block";
 
-        if (button) {
+    } else {
 
-            button.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-        }
+        menu.style.display =
+            "none";
 
     }
 
@@ -2101,42 +1856,26 @@ function normalizeText(value) {
 function escapeHTML(value) {
 
     return String(value || "")
-        .replace(
-            /&/g,
-            "&amp;"
-        )
-        .replace(
-            /</g,
-            "&lt;"
-        )
-        .replace(
-            />/g,
-            "&gt;"
-        )
-        .replace(
-            /"/g,
-            "&quot;"
-        )
-        .replace(
-            /'/g,
-            "&#039;"
-        );
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
 }
 
 
 /* =====================================================
-   GET ABBREVIATION LETTER
+   GET FIRST LETTER
 ===================================================== */
 
-function getLetter(value) {
+function getTermLetter(term) {
 
     const first =
-        String(value || "")
+        String(term || "")
             .trim()
             .charAt(0)
             .toLowerCase();
-
 
     if (
         first >= "a" &&
@@ -2146,7 +1885,6 @@ function getLetter(value) {
         return first;
 
     }
-
 
     return "other";
 
@@ -2165,12 +1903,10 @@ function setStatus(
     statusText.textContent =
         text;
 
-
     databaseStatus.classList.remove(
         "success",
         "error"
     );
-
 
     if (type) {
 
@@ -2184,7 +1920,7 @@ function setStatus(
 
 
 /* =====================================================
-   NORMALIZE DATA ITEM
+   NORMALIZE DATABASE ITEM
 ===================================================== */
 
 function normalizeItem(item) {
@@ -2197,34 +1933,9 @@ function normalizeItem(item) {
 
 
     /*
-     * دعم أكثر من شكل للـ JSON.
+     * دعم أكثر من شكل محتمل
+     * لملف JSON.
      */
-
-    if (
-        typeof item === "string"
-    ) {
-
-        return {
-
-            abbreviation:
-                item,
-
-            meaning:
-                "",
-
-            arabic:
-                "",
-
-            definition:
-                "",
-
-            category:
-                "Nursing Abbreviations"
-
-        };
-
-    }
-
 
     if (
         typeof item !== "object"
@@ -2235,45 +1946,74 @@ function normalizeItem(item) {
     }
 
 
+    const abbreviation =
+        item.abbreviation ||
+        item.abbr ||
+        item.term ||
+        item.short ||
+        item.code ||
+        "";
+
+
+    const fullForm =
+        item.fullForm ||
+        item.full ||
+        item.meaning ||
+        item.expansion ||
+        item.name ||
+        "";
+
+
+    const arabic =
+        item.arabic ||
+        item.translation ||
+        item.arabicMeaning ||
+        "";
+
+
+    const definition =
+        item.definition ||
+        item.description ||
+        item.explanation ||
+        "";
+
+
+    const category =
+        item.category ||
+        item.type ||
+        "Nursing Abbreviation";
+
+
+    const searchTerms =
+        Array.isArray(
+            item.searchTerms
+        )
+            ? item.searchTerms.join(" ")
+            : (
+                item.searchTerms ||
+                ""
+            );
+
+
     return {
 
-        id:
-            item.id ||
-            "",
-
         abbreviation:
-            item.abbreviation ||
-            item.abbr ||
-            item.term ||
-            item.short ||
-            item.shortForm ||
-            "",
+            String(abbreviation),
 
-        meaning:
-            item.meaning ||
-            item.fullForm ||
-            item.full_form ||
-            item.expansion ||
-            item.expanded ||
-            "",
+        fullForm:
+            String(fullForm),
 
         arabic:
-            item.arabic ||
-            item.arabicMeaning ||
-            item.arabic_meaning ||
-            item.translation ||
-            "",
+            String(arabic),
 
         definition:
-            item.definition ||
-            item.description ||
-            item.explanation ||
-            "",
+            String(definition),
 
         category:
-            item.category ||
-            item.type ||
-            "Nursing Abbreviations"
+            String(category),
+
+        searchTerms:
+            String(searchTerms)
 
     };
 
@@ -2281,133 +2021,7 @@ function normalizeItem(item) {
 
 
 /* =====================================================
-   LOAD DATABASE
-===================================================== */
-
-async function loadDatabase() {
-
-    try {
-
-        setStatus(
-            "جاري تحميل قاعدة بيانات الاختصارات..."
-        );
-
-
-        const response =
-            await fetch(
-                DATABASE_PATH,
-                {
-                    cache: "no-cache"
-                }
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "HTTP " +
-                response.status +
-                " - " +
-                response.statusText
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        if (
-            !Array.isArray(data)
-        ) {
-
-            throw new Error(
-                "صيغة قاعدة البيانات غير صحيحة. يجب أن تكون Array."
-            );
-
-        }
-
-
-        abbreviations =
-            data
-                .map(normalizeItem)
-                .filter(
-                    function(item) {
-
-                        return (
-                            item &&
-                            item.abbreviation
-                        );
-
-                    }
-                );
-
-
-        filteredResults =
-            abbreviations;
-
-
-        loadingBox.style.display =
-            "none";
-
-
-        resultsCount.textContent =
-            "إجمالي الاختصارات: " +
-            abbreviations.length.toLocaleString(
-                "en-US"
-            );
-
-
-        setStatus(
-            "تم تحميل قاعدة بيانات الاختصارات بنجاح — " +
-            abbreviations.length.toLocaleString(
-                "en-US"
-            ) +
-            " اختصار",
-            "success"
-        );
-
-
-        renderTerms(
-            abbreviations
-        );
-
-
-    } catch (error) {
-
-        console.error(
-            "Database Error:",
-            error
-        );
-
-
-        loadingBox.style.display =
-            "none";
-
-
-        errorBox.style.display =
-            "block";
-
-
-        errorText.textContent =
-            "تعذر تحميل قاعدة البيانات. تأكد من وجود الملف: " +
-            DATABASE_PATH +
-            " ثم قم بعمل Hard Refresh.";
-
-
-        setStatus(
-            "فشل تحميل قاعدة بيانات الاختصارات",
-            "error"
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   SEARCHABLE TEXT
+   GET SEARCHABLE TEXT
 ===================================================== */
 
 function getSearchableText(item) {
@@ -2418,32 +2032,29 @@ function getSearchableText(item) {
             item.abbreviation ||
             ""
         ) +
-
         " " +
-
         (
-            item.meaning ||
+            item.fullForm ||
             ""
         ) +
-
         " " +
-
         (
             item.arabic ||
             ""
         ) +
-
         " " +
-
         (
             item.definition ||
             ""
         ) +
-
         " " +
-
         (
             item.category ||
+            ""
+        ) +
+        " " +
+        (
+            item.searchTerms ||
             ""
         )
 
@@ -2456,37 +2067,31 @@ function getSearchableText(item) {
    CREATE CARD
 ===================================================== */
 
-function createTermCard(
-    item
-) {
+function createTermCard(item) {
 
     const abbreviation =
         item.abbreviation ||
-        "Unknown";
-
-
-    const meaning =
-        item.meaning ||
         "—";
 
+    const fullForm =
+        item.fullForm ||
+        "لا يوجد الاسم الكامل.";
 
     const arabic =
         item.arabic ||
         "—";
 
-
     const definition =
         item.definition ||
-        "لا يوجد شرح إضافي متاح لهذا الاختصار.";
-
+        "لا يوجد شرح إضافي لهذا الاختصار.";
 
     const category =
         item.category ||
-        "Nursing Abbreviations";
+        "Nursing Abbreviation";
 
 
     const letter =
-        getLetter(
+        getTermLetter(
             abbreviation
         );
 
@@ -2511,25 +2116,23 @@ function createTermCard(
             )}
         </div>
 
-        <h3 dir="ltr">
+        <h3>
             ${escapeHTML(
                 abbreviation
             )}
         </h3>
+
+        <div class="term-full">
+            ${escapeHTML(
+                fullForm
+            )}
+        </div>
 
         <div class="term-arabic">
             ${escapeHTML(
                 arabic
             )}
         </div>
-
-        <p>
-            <strong>
-                ${escapeHTML(
-                    meaning
-                )}
-            </strong>
-        </p>
 
         <p>
             ${escapeHTML(
@@ -2563,21 +2166,11 @@ function renderTerms(
         "";
 
 
-    const oldPagination =
-        document.getElementById(
-            "pagination"
-        );
-
-
-    if (oldPagination) {
-
-        oldPagination.remove();
-
-    }
-
-
     noResults.style.display =
         "none";
+
+
+    removePagination();
 
 
     if (
@@ -2588,36 +2181,18 @@ function renderTerms(
         noResults.style.display =
             "block";
 
-
         resultsCount.textContent =
             "عدد النتائج: 0";
-
 
         return;
 
     }
 
 
-    const totalPages =
-        Math.ceil(
-            terms.length /
-            RESULTS_PER_PAGE
-        );
-
-
-    if (
-        currentPage > totalPages
-    ) {
-
-        currentPage =
-            totalPages;
-
-    }
-
-
     const start =
         (
-            currentPage - 1
+            currentPage -
+            1
         ) *
         RESULTS_PER_PAGE;
 
@@ -2642,9 +2217,7 @@ function renderTerms(
         function(item) {
 
             fragment.appendChild(
-                createTermCard(
-                    item
-                )
+                createTermCard(item)
             );
 
         }
@@ -2658,38 +2231,34 @@ function renderTerms(
 
     resultsCount.textContent =
         "عدد النتائج: " +
-        terms.length.toLocaleString(
-            "en-US"
-        ) +
+        terms.length.toLocaleString("en-US") +
         " — عرض " +
-        (
-            start + 1
-        ).toLocaleString(
-            "en-US"
-        ) +
-        "–" +
         Math.min(
             end,
             terms.length
-        ).toLocaleString(
-            "en-US"
+        ).toLocaleString("en-US") +
+        " من النتائج";
+
+
+    if (
+        terms.length >
+        RESULTS_PER_PAGE
+    ) {
+
+        renderPagination(
+            terms.length
         );
 
-
-    renderPagination(
-        terms.length
-    );
+    }
 
 }
 
 
 /* =====================================================
-   PAGINATION
+   REMOVE PAGINATION
 ===================================================== */
 
-function renderPagination(
-    total
-) {
+function removePagination() {
 
     const old =
         document.getElementById(
@@ -2702,6 +2271,19 @@ function renderPagination(
         old.remove();
 
     }
+
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+function renderPagination(
+    total
+) {
+
+    removePagination();
 
 
     const totalPages =
@@ -2786,7 +2368,6 @@ function renderPagination(
                     : "pointer"
             };
             font-weight:700;
-            transition:.2s;
         `;
 
 
@@ -2838,7 +2419,6 @@ function renderPagination(
 
 
     pagination.appendChild(
-
         createButton(
             "السابق",
             Math.max(
@@ -2847,13 +2427,8 @@ function renderPagination(
             ),
             currentPage === 1
         )
-
     );
 
-
-    /*
-     * إظهار أرقام صفحات مناسبة
-     */
 
     const startPage =
         Math.max(
@@ -2876,20 +2451,16 @@ function renderPagination(
     ) {
 
         pagination.appendChild(
-
             createButton(
-                String(page),
                 page,
-                false
+                page
             )
-
         );
 
     }
 
 
     pagination.appendChild(
-
         createButton(
             "التالي",
             Math.min(
@@ -2898,7 +2469,6 @@ function renderPagination(
             ),
             currentPage === totalPages
         )
-
     );
 
 
@@ -2910,10 +2480,10 @@ function renderPagination(
 
 
 /* =====================================================
-   APPLY FILTER
+   FILTER DATABASE
 ===================================================== */
 
-function applyFilters() {
+function filterDatabase() {
 
     const query =
         normalizeText(
@@ -2922,11 +2492,18 @@ function applyFilters() {
 
 
     filteredResults =
-        abbreviations.filter(
+        database.filter(
             function(item) {
 
+                if (!item) {
+
+                    return false;
+
+                }
+
+
                 /*
-                 * Letter filter
+                 * فلترة الحرف
                  */
 
                 if (
@@ -2935,7 +2512,7 @@ function applyFilters() {
                 ) {
 
                     const letter =
-                        getLetter(
+                        getTermLetter(
                             item.abbreviation
                         );
 
@@ -2953,7 +2530,7 @@ function applyFilters() {
 
 
                 /*
-                 * Search filter
+                 * البحث النصي
                  */
 
                 if (!query) {
@@ -2981,57 +2558,198 @@ function applyFilters() {
         filteredResults
     );
 
+}
 
-    if (query) {
 
-        if (
-            filteredResults.length
-        ) {
+/* =====================================================
+   LOAD DATABASE
+===================================================== */
 
-            setStatus(
-                "تم العثور على " +
-                filteredResults.length.toLocaleString(
-                    "en-US"
-                ) +
-                " نتيجة",
-                "success"
+async function loadDatabase() {
+
+    try {
+
+        setStatus(
+            "جاري تحميل قاعدة بيانات اختصارات التمريض..."
+        );
+
+
+        const response =
+            await fetch(
+                DATA_PATH,
+                {
+                    cache: "no-cache"
+                }
             );
 
-        } else {
 
-            setStatus(
-                "لم يتم العثور على نتائج",
-                "success"
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status +
+                " - " +
+                response.statusText
+            );
+
+        }
+
+
+        const json =
+            await response.json();
+
+
+        /*
+         * دعم Array مباشر
+         */
+
+        if (
+            Array.isArray(json)
+        ) {
+
+            database =
+                json
+                .map(
+                    normalizeItem
+                )
+                .filter(
+                    Boolean
+                );
+
+        }
+
+        /*
+         * دعم Object يحتوي على data
+         */
+
+        else if (
+            json &&
+            Array.isArray(
+                json.data
+            )
+        ) {
+
+            database =
+                json.data
+                .map(
+                    normalizeItem
+                )
+                .filter(
+                    Boolean
+                );
+
+        }
+
+        /*
+         * دعم Object يحتوي على abbreviations
+         */
+
+        else if (
+            json &&
+            Array.isArray(
+                json.abbreviations
+            )
+        ) {
+
+            database =
+                json.abbreviations
+                .map(
+                    normalizeItem
+                )
+                .filter(
+                    Boolean
+                );
+
+        }
+
+        else {
+
+            throw new Error(
+                "صيغة ملف JSON غير مدعومة."
             );
 
         }
 
-    } else {
 
-        if (
-            selectedLetter ===
-            "all"
-        ) {
+        /*
+         * ترتيب أبجدي
+         */
 
-            setStatus(
-                "تم تحميل قاعدة الاختصارات",
-                "success"
+        database.sort(
+            function(a, b) {
+
+                return a.abbreviation
+                    .localeCompare(
+                        b.abbreviation,
+                        "en",
+                        {
+                            sensitivity:
+                                "base"
+                        }
+                    );
+
+            }
+        );
+
+
+        filteredResults =
+            database;
+
+
+        loadingBox.style.display =
+            "none";
+
+
+        errorBox.style.display =
+            "none";
+
+
+        resultsCount.textContent =
+            "إجمالي الاختصارات: " +
+            database.length.toLocaleString(
+                "en-US"
             );
 
-        } else {
 
-            setStatus(
-                "تم تحميل اختصارات " +
-                selectedLetter.toUpperCase() +
-                " — " +
-                filteredResults.length.toLocaleString(
-                    "en-US"
-                ) +
-                " اختصار",
-                "success"
-            );
+        setStatus(
+            "تم تحميل قاعدة البيانات بنجاح — " +
+            database.length.toLocaleString(
+                "en-US"
+            ) +
+            " اختصار",
+            "success"
+        );
 
-        }
+
+        renderTerms(
+            database
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Database Error:",
+            error
+        );
+
+
+        loadingBox.style.display =
+            "none";
+
+
+        errorBox.style.display =
+            "block";
+
+
+        errorText.textContent =
+            "تعذر تحميل ملف الاختصارات. تأكد من وجود: data/nursing-abbreviations.json وأن صيغة JSON صحيحة.";
+
+
+        setStatus(
+            "فشل تحميل قاعدة البيانات",
+            "error"
+        );
 
     }
 
@@ -3041,6 +2759,10 @@ function applyFilters() {
 /* =====================================================
    SEARCH INPUT
 ===================================================== */
+
+let searchTimer =
+    null;
+
 
 searchInput.addEventListener(
     "input",
@@ -3055,10 +2777,54 @@ searchInput.addEventListener(
             setTimeout(
                 function() {
 
-                    applyFilters();
+                    filterDatabase();
+
+
+                    const query =
+                        normalizeText(
+                            searchInput.value
+                        );
+
+
+                    if (query) {
+
+                        if (
+                            filteredResults.length
+                        ) {
+
+                            setStatus(
+                                "تم العثور على " +
+                                filteredResults.length.toLocaleString(
+                                    "en-US"
+                                ) +
+                                " نتيجة",
+                                "success"
+                            );
+
+                        } else {
+
+                            setStatus(
+                                "لم يتم العثور على نتائج",
+                                "success"
+                            );
+
+                        }
+
+                    } else {
+
+                        setStatus(
+                            "تم تحميل قاعدة البيانات — " +
+                            database.length.toLocaleString(
+                                "en-US"
+                            ) +
+                            " اختصار",
+                            "success"
+                        );
+
+                    }
 
                 },
-                200
+                250
             );
 
     }
@@ -3066,7 +2832,7 @@ searchInput.addEventListener(
 
 
 /* =====================================================
-   LETTER FILTERS
+   LETTER FILTER
 ===================================================== */
 
 filterButtons.forEach(
@@ -3098,7 +2864,37 @@ filterButtons.forEach(
                     );
 
 
-                applyFilters();
+                filterDatabase();
+
+
+                if (
+                    selectedLetter ===
+                    "all"
+                ) {
+
+                    setStatus(
+                        "تم عرض جميع الاختصارات — " +
+                        database.length.toLocaleString(
+                            "en-US"
+                        ) +
+                        " اختصار",
+                        "success"
+                    );
+
+                } else {
+
+                    setStatus(
+                        "اختصارات حرف " +
+                        selectedLetter.toUpperCase() +
+                        " — " +
+                        filteredResults.length.toLocaleString(
+                            "en-US"
+                        ) +
+                        " نتيجة",
+                        "success"
+                    );
+
+                }
 
             }
         );
@@ -3116,16 +2912,39 @@ document.addEventListener(
     function(event) {
 
         /*
-         * "/" يفتح البحث بسرعة
+         * Ctrl + K أو /
+         * للانتقال إلى البحث
          */
 
         if (
-            event.key === "/" &&
-            document.activeElement !==
-                searchInput
+            (
+                event.ctrlKey &&
+                event.key.toLowerCase() === "k"
+            ) ||
+            event.key === "/"
         ) {
 
+            const active =
+                document.activeElement;
+
+
+            if (
+                active &&
+                (
+                    active.tagName ===
+                    "INPUT" ||
+                    active.tagName ===
+                    "TEXTAREA"
+                )
+            ) {
+
+                return;
+
+            }
+
+
             event.preventDefault();
+
 
             searchInput.focus();
 
