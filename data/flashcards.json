@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "subject": "Anatomy",
+        "question": "What is the anatomical position?",
+        "answer": "The standard body position in which a person stands upright, faces forward, keeps the arms at the sides, and has the palms facing forward."
+    },
+    {
+        "id": 2,
+        "subject": "Anatomy",
+        "question": "What is the sagittal plane?",
+        "answer": "A vertical plane that divides the body into right and left portions."
+    },
+    {
+        "id": 3,
+        "subject": "Anatomy",
+        "question": "What is the frontal plane?",
+        "answer": "A vertical plane that divides the body into anterior and posterior portions."
+    },
+    {
+        "id": 4,
+        "subject": "Anatomy",
+        "question": "What is the transverse plane?",
+        "answer": "A horizontal plane that divides the body into superior and inferior portions."
+    },
+    {
+        "id": 5,
+        "subject": "Anatomy",
+        "question": "What does anterior mean?",
+        "answer": "Toward the front of the body."
+    },
+    {
+        "id": 6,
+        "subject": "Anatomy",
+        "question": "What does posterior mean?",
+        "answer": "Toward the back of the body."
+    },
+    {
+        "id": 7,
+        "subject": "Anatomy",
+        "question": "What does superior mean?",
+        "answer": "Toward the head or upper part of the body."
+    },
+    {
+        "id": 8,
+        "subject": "Anatomy",
+        "question": "What does inferior mean?",
+        "answer": "Away from the head or toward the lower part of the body."
+    },
+    {
+        "id": 9,
+        "subject": "Anatomy",
+        "question": "What does medial mean?",
+        "answer": "Toward the midline of the body."
+    },
+    {
+        "id": 10,
+        "subject": "Anatomy",
+        "question": "What does lateral mean?",
+        "answer": "Away from the midline of the body."
+    },
+    {
+        "id": 11,
+        "subject": "Fundamentals",
+        "question": "What is hand hygiene?",
+        "answer": "A procedure used to remove or reduce microorganisms from the hands to prevent the spread of infection."
+    },
+    {
+        "id": 12,
+        "subject": "Fundamentals",
+        "question": "What is asepsis?",
+        "answer": "The practice of preventing contamination by microorganisms and maintaining an environment free from harmful pathogens."
+    },
+    {
+        "id": 13,
+        "subject": "Fundamentals",
+        "question": "What is medical asepsis?",
+        "answer": "Practices used to reduce the number and spread of microorganisms and prevent cross-contamination."
+    },
+    {
+        "id": 14,
+        "subject": "Fundamentals",
+        "question": "What is surgical asepsis?",
+        "answer": "Practices used to eliminate all microorganisms from an object or area and maintain sterility."
+    },
+    {
+        "id": 15,
+        "subject": "Fundamentals",
+        "question": "What are vital signs?",
+        "answer": "Measurements that reflect essential body functions, commonly including temperature, pulse, respiration, and blood pressure."
+    },
+    {
+        "id": 16,
+        "subject": "Fundamentals",
+        "question": "What is body temperature?",
+        "answer": "A measurement of the body's thermal state, reflecting the balance between heat production and heat loss."
+    },
+    {
+        "id": 17,
+        "subject": "Fundamentals",
+        "question": "What is pulse?",
+        "answer": "The rhythmic expansion of an artery produced by the contraction of the heart."
+    },
+    {
+        "id": 18,
+        "subject": "Fundamentals",
+        "question": "What is respiration?",
+        "answer": "The process of inhaling oxygen and exhaling carbon dioxide through breathing."
+    },
+    {
+        "id": 19,
+        "subject": "Fundamentals",
+        "question": "What is blood pressure?",
+        "answer": "The force exerted by circulating blood against the walls of blood vessels."
+    },
+    {
+        "id": 20,
+        "subject": "Fundamentals",
+        "question": "What is the normal adult resting respiratory rate?",
+        "answer": "Approximately 12 to 20 breaths per minute."
+    },
+    {
+        "id": 21,
+        "subject": "Medical-Surgical",
+        "question": "What is inflammation?",
+        "answer": "A protective response of body tissues to injury, infection, or other harmful stimuli."
+    },
+    {
+        "id": 22,
+        "subject": "Medical-Surgical",
+        "question": "What are the classic signs of inflammation?",
+        "answer": "Redness, heat, swelling, pain, and loss of function."
+    },
+    {
+        "id": 23,
+        "subject": "Medical-Surgical",
+        "question": "What is edema?",
+        "answer": "An abnormal accumulation of fluid in the interstitial tissues."
+    },
+    {
+        "id": 24,
+        "subject": "Medical-Surgical",
+        "question": "What is hypertension?",
+        "answer": "A condition characterized by persistently elevated blood pressure."
+    },
+    {
+        "id": 25,
+        "subject": "Medical-Surgical",
+        "question": "What is hypotension?",
+        "answer": "A condition in which blood pressure is abnormally low and may result in inadequate tissue perfusion."
+    },
+    {
+        "id": 26,
+        "subject": "Medical-Surgical",
+        "question": "What is fever?",
+        "answer": "An elevation of body temperature above the normal range, commonly occurring as a response to infection or inflammation."
+    },
+    {
+        "id": 27,
+        "subject": "Medical-Surgical",
+        "question": "What is dehydration?",
+        "answer": "A condition that occurs when the body loses more fluid than it takes in."
+    },
+    {
+        "id": 28,
+        "subject": "Medical-Surgical",
+        "question": "What is shock?",
+        "answer": "A life-threatening condition in which inadequate tissue perfusion results in insufficient oxygen and nutrients reaching body cells."
+    },
+    {
+        "id": 29,
+        "subject": "Community Health",
+        "question": "What is community health nursing?",
+        "answer": "A specialized area of nursing that focuses on promoting and protecting the health of individuals, families, and communities."
+    },
+    {
+        "id": 30,
+        "subject": "Community Health",
+        "question": "What is health promotion?",
+        "answer": "The process of enabling people to increase control over and improve their health."
+    },
+    {
+        "id": 31,
+        "subject": "Community Health",
+        "question": "What is disease prevention?",
+        "answer": "Actions taken to prevent disease, reduce risk factors, detect disease early, or limit its complications."
+    },
+    {
+        "id": 32,
+        "subject": "Community Health",
+        "question": "What is primary prevention?",
+        "answer": "Prevention aimed at stopping disease or injury before it occurs, such as vaccination and health education."
+    },
+    {
+        "id": 33,
+        "subject": "Community Health",
+        "question": "What is secondary prevention?",
+        "answer": "Prevention focused on early detection and prompt treatment of disease."
+    },
+    {
+        "id": 34,
+        "subject": "Community Health",
+        "question": "What is tertiary prevention?",
+        "answer": "Prevention aimed at reducing complications, disability, and improving quality of life after disease has occurred."
+    },
+    {
+        "id": 35,
+        "subject": "Community Health",
+        "question": "What is epidemiology?",
+        "answer": "The study of the distribution and determinants of health-related conditions or events in populations and the application of this knowledge to control health problems."
+    },
+    {
+        "id": 36,
+        "subject": "Community Health",
+        "question": "What is health education?",
+        "answer": "A process of providing people with knowledge and skills that help them make informed decisions and improve their health."
+    },
+    {
+        "id": 37,
+        "subject": "Medical Terms",
+        "question": "What does tachycardia mean?",
+        "answer": "An abnormally fast heart rate, generally defined in adults as a heart rate above 100 beats per minute."
+    },
+    {
+        "id": 38,
+        "subject": "Medical Terms",
+        "question": "What does bradycardia mean?",
+        "answer": "A slower-than-normal heart rate, generally defined in adults as a heart rate below 60 beats per minute."
+    },
+    {
+        "id": 39,
+        "subject": "Medical Terms",
+        "question": "What does dyspnea mean?",
+        "answer": "Difficulty or discomfort in breathing, commonly described as shortness of breath."
+    },
+    {
+        "id": 40,
+        "subject": "Medical Terms",
+        "question": "What does cyanosis mean?",
+        "answer": "A bluish discoloration of the skin or mucous membranes that may occur when there is insufficient oxygenation of the blood."
+    },
+    {
+        "id": 41,
+        "subject": "Medical Terms",
+        "question": "What does edema mean?",
+        "answer": "Swelling caused by an abnormal accumulation of fluid in body tissues."
+    },
+    {
+        "id": 42,
+        "subject": "Medical Terms",
+        "question": "What does nausea mean?",
+        "answer": "An unpleasant sensation of an urge to vomit."
+    },
+    {
+        "id": 43,
+        "subject": "Medical Terms",
+        "question": "What does vomiting mean?",
+        "answer": "The forceful expulsion of stomach contents through the mouth."
+    },
+    {
+        "id": 44,
+        "subject": "Medical Terms",
+        "question": "What does syncope mean?",
+        "answer": "A temporary loss of consciousness caused by a transient reduction in blood flow to the brain."
+    },
+    {
+        "id": 45,
+        "subject": "Medical Terms",
+        "question": "What does prognosis mean?",
+        "answer": "The expected course and outcome of a disease or medical condition."
+    },
+    {
+        "id": 46,
+        "subject": "Pharmacology",
+        "question": "What is a medication?",
+        "answer": "A substance used to prevent, diagnose, treat, or manage a disease or medical condition."
+    },
+    {
+        "id": 47,
+        "subject": "Pharmacology",
+        "question": "What is a side effect?",
+        "answer": "An unintended effect of a medication that occurs in addition to its intended therapeutic effect."
+    },
+    {
+        "id": 48,
+        "subject": "Pharmacology",
+        "question": "What is a therapeutic effect?",
+        "answer": "The desired beneficial effect produced by a medication when it is administered appropriately."
+    },
+    {
+        "id": 49,
+        "subject": "Pharmacology",
+        "question": "What is an adverse drug reaction?",
+        "answer": "A harmful or unintended response to a medication that occurs at normal doses used for prevention, diagnosis, or treatment."
+    },
+    {
+        "id": 50,
+        "subject": "Pharmacology",
+        "question": "What is the generic name of a drug?",
+        "answer": "The standardized nonproprietary name of a medication's active ingredient."
+    }
+]
