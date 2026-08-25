@@ -11,22 +11,12 @@
     >
 
     <title>
-        Anatomy Quizzes | اختبارات التشريح | بوابة التمريض
+        Anatomy Quiz | اختبار التشريح | بوابة التمريض
     </title>
 
     <meta
         name="description"
-        content="اختبارات Anatomy لطلاب التمريض. اختبر معلوماتك في علم التشريح من خلال أسئلة متنوعة بمستويات مختلفة."
-    >
-
-    <meta
-        name="keywords"
-        content="Anatomy Quiz, Anatomy Questions, Nursing Anatomy Quiz, اختبارات التشريح, أسئلة تشريح, تمريض"
-    >
-
-    <meta
-        name="author"
-        content="بوابة التمريض"
+        content="اختبار Anatomy لطلاب التمريض. اختبر معلوماتك في التشريح مع أسئلة متعددة الاختيارات ونتيجة فورية."
     >
 
     <meta
@@ -44,11 +34,6 @@
         href="https://bawabet-altamreed.com/quizzes/anatomy.html"
     >
 
-    <link
-        rel="stylesheet"
-        href="../css/global.css"
-    >
-
     <style>
 
         * {
@@ -57,97 +42,62 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family:
-                Arial,
-                Tahoma,
-                sans-serif;
-
-            background: #f5f8fa;
-
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f4f8fa;
             color: #173247;
-
             line-height: 1.7;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button,
-        input,
-        select {
+        button {
             font-family: inherit;
         }
 
         .container {
-            width:
-                min(
-                    1200px,
-                    calc(100% - 30px)
-                );
-
+            width: min(900px, calc(100% - 24px));
             margin: auto;
         }
 
-        /* =====================================================
+        /* =========================
            HEADER
-        ===================================================== */
+        ========================== */
 
         .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e1e9ed;
             position: sticky;
-
             top: 0;
-
-            z-index: 9999;
-
-            background:
-                rgba(255,255,255,.97);
-
-            backdrop-filter:
-                blur(14px);
-
-            border-bottom:
-                1px solid #e1e9ed;
+            z-index: 100;
         }
 
         .header-inner {
-            min-height: 72px;
+            min-height: 65px;
 
             display: flex;
-
             align-items: center;
+            justify-content: space-between;
 
-            gap: 20px;
+            gap: 15px;
         }
 
         .logo {
             display: flex;
-
             align-items: center;
+            gap: 9px;
 
-            gap: 10px;
-
-            min-width: 205px;
-
-            font-weight: 900;
+            text-decoration: none;
+            color: inherit;
         }
 
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 42px;
+            height: 42px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
-            border-radius: 13px;
+            border-radius: 12px;
 
             background:
                 linear-gradient(
@@ -157,449 +107,212 @@
                 );
 
             color: white;
-
-            font-size: 23px;
+            font-size: 21px;
         }
 
         .logo-text strong {
             display: block;
-
             color: #0b2d46;
-
-            font-size: 17px;
+            font-size: 16px;
         }
 
         .logo-text small {
             display: block;
-
-            color: #78909c;
-
+            color: #7b8b93;
             font-size: 10px;
         }
 
-        .main-nav {
-            flex: 1;
+        .back-link {
+            text-decoration: none;
 
-            display: flex;
-
-            justify-content: center;
-
-            gap: 3px;
-        }
-
-        .main-nav a {
-            padding: 8px 10px;
+            padding: 8px 13px;
 
             border-radius: 9px;
 
-            color: #566873;
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            transition: .2s;
-        }
-
-        .main-nav a:hover,
-        .main-nav a.active {
             background: #edf5f7;
 
-            color: #0b526b;
-        }
-
-        .mobile-button {
-            display: none;
-
-            width: 42px;
-            height: 42px;
-
-            border:
-                1px solid #dfe7ea;
-
-            background: white;
-
-            border-radius: 10px;
-
-            cursor: pointer;
-
-            font-size: 20px;
-        }
-
-        /* =====================================================
-           MOBILE MENU
-        ===================================================== */
-
-        #mobileMenu {
-            display: none;
-
-            background: white;
-
-            border-top:
-                1px solid #e4ebee;
-        }
-
-        .mobile-menu-inner {
-            padding: 15px 0;
-
-            display: grid;
-
-            gap: 7px;
-        }
-
-        .mobile-menu-inner a {
-            padding: 10px 12px;
-
-            border-radius: 9px;
-
-            background: #f7fafb;
-
-            color: #45606d;
-
-            font-size: 13px;
-        }
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .page-hero {
-            padding:
-                65px 0 60px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #082c46,
-                    #0b526b,
-                    #137b8d
-                );
-
-            color: white;
-
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .page-hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 450px;
-            height: 450px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(255,255,255,.04);
-
-            left: -170px;
-            top: -250px;
-        }
-
-        .page-hero::after {
-            content: "";
-
-            position: absolute;
-
-            width: 370px;
-            height: 370px;
-
-            border-radius: 50%;
-
-            background:
-                rgba(255,255,255,.035);
-
-            right: -140px;
-            bottom: -230px;
-        }
-
-        .hero-content {
-            position: relative;
-
-            z-index: 2;
-
-            max-width: 850px;
-        }
-
-        .breadcrumb {
-            display: flex;
-
-            align-items: center;
-
-            flex-wrap: wrap;
-
-            gap: 7px;
-
-            margin-bottom: 20px;
-
-            color:
-                rgba(255,255,255,.65);
+            color: #0b6077;
 
             font-size: 12px;
-        }
-
-        .breadcrumb a:hover {
-            color: white;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-
-            padding:
-                7px 14px;
-
-            border-radius: 50px;
-
-            background:
-                rgba(255,255,255,.1);
-
-            border:
-                1px solid
-                rgba(255,255,255,.15);
-
-            font-size: 12px;
-
-            margin-bottom: 17px;
-        }
-
-        .page-hero h1 {
-            font-size:
-                clamp(35px,5vw,58px);
-
-            line-height: 1.2;
-
-            margin-bottom: 14px;
-        }
-
-        .page-hero h1 span {
-            color: #8be8f0;
-        }
-
-        .page-hero p {
-            max-width: 760px;
-
-            color:
-                rgba(255,255,255,.82);
-
-            font-size: 15px;
-
-            line-height: 1.9;
-        }
-
-        /* =====================================================
-           CONTENT
-        ===================================================== */
-
-        .content-section {
-            padding:
-                50px 0 75px;
-        }
-
-        .quiz-layout {
-            display: grid;
-
-            grid-template-columns:
-                250px
-                minmax(0,1fr);
-
-            gap: 25px;
-
-            align-items: start;
-        }
-
-        /* =====================================================
-           SIDEBAR
-        ===================================================== */
-
-        .sidebar {
-            position: sticky;
-
-            top: 95px;
-
-            background: white;
-
-            border:
-                1px solid #e0e8ec;
-
-            border-radius: 18px;
-
-            padding: 20px;
-        }
-
-        .sidebar-title {
-            font-size: 15px;
-
-            font-weight: 900;
-
-            color: #12334a;
-
-            margin-bottom: 14px;
-        }
-
-        .sidebar-link {
-            display: flex;
-
-            align-items: center;
-
-            gap: 9px;
-
-            padding:
-                10px 11px;
-
-            margin-bottom: 5px;
-
-            border-radius: 9px;
-
-            color: #61737d;
-
-            font-size: 13px;
-
-            transition: .2s;
-        }
-
-        .sidebar-link:hover,
-        .sidebar-link.active {
-            background: #edf6f8;
-
-            color: #0c6278;
-
             font-weight: 700;
         }
 
-        /* =====================================================
+        /* =========================
            MAIN
-        ===================================================== */
+        ========================== */
 
-        .quiz-main {
-            min-width: 0;
+        main {
+            padding: 35px 0 55px;
         }
 
-        /* =====================================================
-           SUBJECT CARD
-        ===================================================== */
+        /* =========================
+           START SCREEN
+        ========================== */
 
-        .subject-card {
+        .start-screen {
+            max-width: 650px;
+            margin: 30px auto 0;
+
             background: white;
 
-            border:
-                1px solid #dfe8ec;
+            border: 1px solid #dfe8ec;
 
-            border-radius: 20px;
+            border-radius: 22px;
 
-            padding: 25px;
+            padding: 35px 25px;
 
-            margin-bottom: 22px;
+            text-align: center;
 
             box-shadow:
-                0 8px 25px
-                rgba(20,50,65,.04);
+                0 12px 35px
+                rgba(20, 50, 65, .06);
         }
 
-        .subject-top {
-            display: flex;
+        .quiz-icon {
+            width: 70px;
+            height: 70px;
 
-            align-items: center;
-
-            gap: 17px;
-
-            margin-bottom: 18px;
-        }
-
-        .subject-icon {
-            width: 65px;
-            height: 65px;
-
-            flex-shrink: 0;
+            margin: 0 auto 15px;
 
             display: flex;
-
             align-items: center;
             justify-content: center;
 
-            border-radius: 17px;
+            border-radius: 20px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #e8f5f7,
-                    #d7eef2
-                );
+            background: #edf6f8;
 
-            font-size: 32px;
+            font-size: 34px;
         }
 
-        .subject-info h2 {
-            color: #12344a;
-
-            font-size: 24px;
-
-            margin-bottom: 3px;
+        .start-screen h1 {
+            color: #0d344b;
+            font-size: 29px;
+            margin-bottom: 7px;
         }
 
-        .subject-info span {
-            color: #78909c;
-
-            font-size: 12px;
+        .start-screen h1 span {
+            color: #0b7188;
         }
 
-        .subject-description {
-            color: #6f8089;
-
+        .start-description {
+            color: #788991;
             font-size: 13px;
-
-            line-height: 1.9;
+            margin-bottom: 25px;
         }
 
-        /* =====================================================
-           STATS
-        ===================================================== */
-
-        .stats-grid {
+        .quiz-info {
             display: grid;
 
             grid-template-columns:
-                repeat(3,1fr);
+                repeat(3, 1fr);
 
             gap: 10px;
 
-            margin-top: 20px;
+            margin-bottom: 25px;
         }
 
-        .stat-box {
-            padding: 14px;
+        .info-item {
+            padding: 13px 8px;
+
+            background: #f7fafb;
+
+            border: 1px solid #e3ecef;
 
             border-radius: 12px;
-
-            background: #f6fafb;
-
-            border:
-                1px solid #e2ecef;
-
-            text-align: center;
         }
 
-        .stat-box strong {
+        .info-item strong {
             display: block;
 
             color: #0b526b;
 
-            font-size: 20px;
+            font-size: 18px;
         }
 
-        .stat-box span {
-            color: #7a8991;
+        .info-item span {
+            color: #7b8b92;
 
-            font-size: 11px;
+            font-size: 10px;
         }
 
-        /* =====================================================
-           SECTION TITLE
-        ===================================================== */
+        .start-options {
+            margin-bottom: 20px;
+        }
 
-        .section-heading {
+        .start-options label {
+            display: block;
+
+            text-align: right;
+
+            color: #4e626c;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            margin-bottom: 7px;
+        }
+
+        #questionCount {
+            width: 100%;
+
+            height: 45px;
+
+            border:
+                1px solid #d9e4e8;
+
+            border-radius: 10px;
+
+            background: white;
+
+            padding: 0 12px;
+
+            color: #173247;
+
+            outline: none;
+        }
+
+        .primary-button {
+            width: 100%;
+
+            height: 48px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b2d46,
+                    #0b7188
+                );
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           QUIZ SCREEN
+        ========================== */
+
+        .quiz-screen {
+            display: none;
+        }
+
+        .quiz-top {
             display: flex;
 
             align-items: center;
@@ -607,541 +320,537 @@
             justify-content: space-between;
 
             gap: 15px;
-
-            margin:
-                28px 0 14px;
-        }
-
-        .section-heading h2 {
-            color: #16364c;
-
-            font-size: 20px;
-        }
-
-        .section-heading span {
-            color: #89969d;
-
-            font-size: 11px;
-        }
-
-        /* =====================================================
-           QUIZ CARDS
-        ===================================================== */
-
-        .quiz-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2,minmax(0,1fr));
-
-            gap: 14px;
-        }
-
-        .quiz-card {
-            background: white;
-
-            border:
-                1px solid #e0e8ec;
-
-            border-radius: 17px;
-
-            padding: 20px;
-
-            transition:
-                transform .2s,
-                box-shadow .2s,
-                border-color .2s;
-        }
-
-        .quiz-card:hover {
-            transform:
-                translateY(-3px);
-
-            border-color:
-                #b7d3da;
-
-            box-shadow:
-                0 12px 28px
-                rgba(20,50,65,.07);
-        }
-
-        .quiz-card-top {
-            display: flex;
-
-            align-items: flex-start;
-
-            justify-content: space-between;
-
-            gap: 10px;
-
-            margin-bottom: 14px;
-        }
-
-        .quiz-number {
-            width: 40px;
-            height: 40px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 11px;
-
-            background: #edf6f8;
-
-            color: #0d6177;
-
-            font-size: 16px;
-
-            font-weight: 900;
-        }
-
-        .quiz-level {
-            padding:
-                5px 9px;
-
-            border-radius: 20px;
-
-            background: #f3f7f8;
-
-            color: #71838b;
-
-            font-size: 10px;
-
-            font-weight: 700;
-        }
-
-        .quiz-card h3 {
-            color: #12344a;
-
-            font-size: 17px;
-
-            margin-bottom: 6px;
-        }
-
-        .quiz-card p {
-            color: #78878f;
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            min-height: 44px;
-        }
-
-        .quiz-meta {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 7px;
-
-            margin:
-                14px 0;
-        }
-
-        .quiz-meta span {
-            padding:
-                5px 8px;
-
-            border-radius: 7px;
-
-            background: #f5f8f9;
-
-            color: #72838b;
-
-            font-size: 10px;
-        }
-
-        .start-button {
-            width: 100%;
-
-            border: none;
-
-            padding:
-                11px 15px;
-
-            border-radius: 10px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0b526b,
-                    #137b8d
-                );
-
-            color: white;
-
-            font-size: 12px;
-
-            font-weight: 800;
-
-            cursor: pointer;
-
-            transition: .2s;
-        }
-
-        .start-button:hover {
-            transform:
-                translateY(-1px);
-
-            box-shadow:
-                0 7px 18px
-                rgba(11,82,107,.2);
-        }
-
-        /* =====================================================
-           LEVELS
-        ===================================================== */
-
-        .levels-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3,1fr);
-
-            gap: 12px;
-        }
-
-        .level-card {
-            background: white;
-
-            border:
-                1px solid #e0e8ec;
-
-            border-radius: 15px;
-
-            padding: 18px;
-
-            text-align: center;
-        }
-
-        .level-icon {
-            font-size: 27px;
-
-            margin-bottom: 7px;
-        }
-
-        .level-card h3 {
-            color: #17384d;
-
-            font-size: 14px;
-
-            margin-bottom: 4px;
-        }
-
-        .level-card p {
-            color: #829097;
-
-            font-size: 10px;
-
-            line-height: 1.7;
-        }
-
-        /* =====================================================
-           CTA
-        ===================================================== */
-
-        .cta-box {
-            margin-top: 25px;
-
-            padding: 25px;
-
-            border-radius: 18px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #082c46,
-                    #0b526b
-                );
-
-            color: white;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
-        }
-
-        .cta-box h2 {
-            font-size: 19px;
-
-            margin-bottom: 5px;
-        }
-
-        .cta-box p {
-            color:
-                rgba(255,255,255,.7);
-
-            font-size: 11px;
-        }
-
-        .cta-button {
-            flex-shrink: 0;
-
-            padding:
-                11px 18px;
-
-            border-radius: 10px;
-
-            background: white;
-
-            color: #0b526b;
-
-            font-size: 12px;
-
-            font-weight: 800;
-        }
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        .site-footer {
-            background: #071f32;
-
-            color: white;
-
-            padding:
-                45px 0 20px;
-        }
-
-        .footer-top {
-            display: grid;
-
-            grid-template-columns:
-                2fr
-                1fr
-                1fr;
-
-            gap: 35px;
-
-            padding-bottom: 30px;
-
-            border-bottom:
-                1px solid
-                rgba(255,255,255,.1);
-        }
-
-        .footer-brand h3 {
-            font-size: 19px;
-
-            margin-bottom: 10px;
-        }
-
-        .footer-brand p {
-            color:
-                rgba(255,255,255,.58);
-
-            font-size: 12px;
-
-            line-height: 1.9;
-
-            max-width: 450px;
-        }
-
-        .footer-column h4 {
-            font-size: 14px;
 
             margin-bottom: 12px;
         }
 
-        .footer-column a {
-            display: block;
-
-            color:
-                rgba(255,255,255,.58);
+        .question-number {
+            color: #60757f;
 
             font-size: 12px;
 
-            margin-bottom: 7px;
+            font-weight: 700;
+        }
+
+        .timer {
+            min-width: 75px;
+
+            padding: 7px 12px;
+
+            border-radius: 9px;
+
+            background: #edf6f8;
+
+            color: #0b6077;
+
+            text-align: center;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+        .timer.warning {
+            background: #fff4df;
+            color: #b36b00;
+        }
+
+        .timer.danger {
+            background: #fff0f0;
+            color: #c53636;
+        }
+
+        .progress-container {
+            height: 7px;
+
+            background: #e5edef;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #0b2d46,
+                    #0b8aa0
+                );
+
+            transition: width .3s;
+        }
+
+        .question-card {
+            background: white;
+
+            border: 1px solid #dfe8ec;
+
+            border-radius: 19px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(20, 50, 65, .05);
+        }
+
+        .topic {
+            display: inline-block;
+
+            padding: 5px 9px;
+
+            border-radius: 7px;
+
+            background: #edf6f8;
+
+            color: #0b6379;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            margin-bottom: 13px;
+        }
+
+        .question-text {
+            color: #12344a;
+
+            font-size: 21px;
+
+            line-height: 1.6;
+
+            margin-bottom: 22px;
+        }
+
+        .options {
+            display: grid;
+
+            gap: 10px;
+        }
+
+        .option {
+            width: 100%;
+
+            min-height: 52px;
+
+            padding: 12px 15px;
+
+            border:
+                1px solid #dce6ea;
+
+            border-radius: 11px;
+
+            background: #fafcfd;
+
+            color: #415965;
+
+            text-align: right;
+
+            cursor: pointer;
 
             transition: .2s;
+
+            font-size: 13px;
         }
 
-        .footer-column a:hover {
-            color: white;
+        .option:hover {
+            border-color: #82bdc9;
+
+            background: #f2f9fa;
         }
 
-        .footer-bottom {
-            padding-top: 17px;
+        .option.selected {
+            border-color: #0b7188;
 
+            background: #eaf6f8;
+
+            color: #084f64;
+
+            font-weight: 700;
+        }
+
+        .option.correct {
+            border-color: #2e9d62;
+
+            background: #eaf8f0;
+
+            color: #217548;
+
+            font-weight: 700;
+        }
+
+        .option.wrong {
+            border-color: #d65353;
+
+            background: #fff0f0;
+
+            color: #ad3636;
+
+            font-weight: 700;
+        }
+
+        .option:disabled {
+            cursor: default;
+        }
+
+        .feedback {
+            display: none;
+
+            margin-top: 17px;
+
+            padding: 14px;
+
+            border-radius: 11px;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+        .feedback.correct {
+            display: block;
+
+            background: #eaf8f0;
+
+            border: 1px solid #c7ead6;
+
+            color: #267348;
+        }
+
+        .feedback.wrong {
+            display: block;
+
+            background: #fff0f0;
+
+            border: 1px solid #f0cccc;
+
+            color: #a33838;
+        }
+
+        .quiz-actions {
             display: flex;
-
-            align-items: center;
 
             justify-content: space-between;
 
-            gap: 15px;
+            gap: 10px;
 
-            color:
-                rgba(255,255,255,.4);
+            margin-top: 18px;
+        }
+
+        .action-button {
+            height: 44px;
+
+            padding: 0 20px;
+
+            border-radius: 10px;
+
+            border:
+                1px solid #d8e4e8;
+
+            background: white;
+
+            color: #48606b;
+
+            cursor: pointer;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .action-button.primary {
+            border-color: #0b6379;
+
+            background: #0b6379;
+
+            color: white;
+        }
+
+        .action-button:disabled {
+            opacity: .45;
+
+            cursor: default;
+        }
+
+        /* =========================
+           RESULT
+        ========================== */
+
+        .result-screen {
+            display: none;
+
+            max-width: 650px;
+
+            margin: 30px auto 0;
+
+            background: white;
+
+            border: 1px solid #dfe8ec;
+
+            border-radius: 22px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 12px 35px
+                rgba(20, 50, 65, .06);
+        }
+
+        .result-icon {
+            font-size: 48px;
+
+            margin-bottom: 8px;
+        }
+
+        .result-screen h2 {
+            color: #0d344b;
+
+            font-size: 27px;
+
+            margin-bottom: 5px;
+        }
+
+        .result-message {
+            color: #7a8991;
+
+            font-size: 13px;
+
+            margin-bottom: 23px;
+        }
+
+        .score-circle {
+            width: 135px;
+            height: 135px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #edf6f8;
+
+            border:
+                8px solid #cfe8ed;
+        }
+
+        .score-circle strong {
+            color: #0b6077;
+
+            font-size: 30px;
+        }
+
+        .score-circle span {
+            color: #7b8b92;
 
             font-size: 10px;
         }
 
-        /* =====================================================
-           TABLET
-        ===================================================== */
+        .result-stats {
+            display: grid;
 
-        @media (max-width: 1000px) {
+            grid-template-columns:
+                repeat(3, 1fr);
 
-            .main-nav {
-                display: none;
-            }
+            gap: 10px;
 
-            .mobile-button {
-                display: block;
-            }
-
-            .quiz-layout {
-                grid-template-columns:
-                    210px
-                    minmax(0,1fr);
-            }
-
+            margin-bottom: 23px;
         }
 
-        /* =====================================================
-           MOBILE
-        ===================================================== */
+        .result-stat {
+            background: #f7fafb;
 
-        @media (max-width: 700px) {
+            border: 1px solid #e3ecef;
 
-            .container {
-                width:
-                    min(
-                        100% - 24px,
-                        1200px
-                    );
-            }
+            border-radius: 11px;
 
-            .header-inner {
-                min-height: 64px;
+            padding: 12px;
+        }
 
-                gap: 9px;
-            }
+        .result-stat strong {
+            display: block;
 
-            .logo {
-                min-width: auto;
-            }
+            color: #153c52;
+
+            font-size: 18px;
+        }
+
+        .result-stat span {
+            color: #7c8b92;
+
+            font-size: 10px;
+        }
+
+        .result-actions {
+            display: grid;
+
+            gap: 9px;
+        }
+
+        /* =========================
+           REVIEW
+        ========================== */
+
+        .review-screen {
+            display: none;
+
+            margin-top: 25px;
+        }
+
+        .review-title {
+            color: #15384e;
+
+            font-size: 20px;
+
+            margin-bottom: 13px;
+        }
+
+        .review-item {
+            background: white;
+
+            border: 1px solid #dfe8ec;
+
+            border-radius: 14px;
+
+            padding: 17px;
+
+            margin-bottom: 10px;
+        }
+
+        .review-question {
+            color: #16384d;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .review-answer {
+            font-size: 12px;
+
+            margin-bottom: 4px;
+        }
+
+        .review-answer.correct {
+            color: #267348;
+        }
+
+        .review-answer.wrong {
+            color: #ad3636;
+        }
+
+        .review-explanation {
+            color: #7a8991;
+
+            font-size: 11px;
+
+            margin-top: 7px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           ERROR
+        ========================== */
+
+        .error-message {
+            display: none;
+
+            max-width: 600px;
+
+            margin: 30px auto;
+
+            background: #fff3f3;
+
+            border: 1px solid #efcccc;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            color: #a33b3b;
+        }
+
+        .error-message h2 {
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+        .error-message p {
+            font-size: 12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 600px) {
 
             .logo-text small {
                 display: none;
             }
 
-            .page-hero {
-                padding:
-                    45px 0 40px;
-            }
-
-            .page-hero h1 {
-                font-size: 35px;
-            }
-
-            .page-hero p {
-                font-size: 13px;
-            }
-
-            .quiz-layout {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .sidebar {
-                position: static;
-
-                padding: 15px;
-
-                display: flex;
-
-                flex-wrap: wrap;
-
-                gap: 5px;
-            }
-
-            .sidebar-title {
-                width: 100%;
-
-                margin-bottom: 5px;
-            }
-
-            .sidebar-link {
-                margin: 0;
-
-                padding:
-                    7px 9px;
-
+            .back-link {
                 font-size: 11px;
+                padding: 7px 10px;
             }
 
-            .quiz-grid {
+            main {
+                padding-top: 20px;
+            }
+
+            .start-screen,
+            .result-screen {
+                padding: 25px 17px;
+            }
+
+            .start-screen h1 {
+                font-size: 25px;
+            }
+
+            .quiz-info,
+            .result-stats {
                 grid-template-columns:
-                    1fr;
+                    repeat(3, 1fr);
             }
 
-            .levels-grid {
-                grid-template-columns:
-                    1fr;
+            .question-card {
+                padding: 19px 15px;
             }
 
-            .stats-grid {
-                grid-template-columns:
-                    repeat(3,1fr);
+            .question-text {
+                font-size: 18px;
             }
 
-            .cta-box {
-                flex-direction: column;
-
-                align-items: flex-start;
+            .option {
+                font-size: 12px;
             }
 
-            .cta-button {
+            .quiz-actions {
+                flex-direction: column-reverse;
+            }
+
+            .action-button {
                 width: 100%;
-
-                text-align: center;
-            }
-
-            .footer-top {
-                grid-template-columns:
-                    1fr 1fr;
-            }
-
-            .footer-brand {
-                grid-column:
-                    1 / -1;
-            }
-
-            .footer-bottom {
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-            }
-
-        }
-
-        @media (max-width: 450px) {
-
-            .stats-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .footer-top {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .footer-brand {
-                grid-column:
-                    auto;
             }
 
         }
@@ -1150,20 +859,14 @@
 
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     HEADER
-====================================================== -->
 
 <header class="site-header">
 
     <div class="container header-inner">
 
         <a
-            href="../index.html"
+            href="../quizzes.html"
             class="logo"
         >
 
@@ -1185,869 +888,361 @@
 
         </a>
 
-
-        <nav
-            class="main-nav"
-            aria-label="القائمة الرئيسية"
+        <a
+            href="../quizzes.html"
+            class="back-link"
         >
-
-            <a href="../index.html">
-                الرئيسية
-            </a>
-
-            <a href="../knowledge.html">
-                المعرفة
-            </a>
-
-            <a href="../drugs.html">
-                الأدوية
-            </a>
-
-            <a href="../tools.html">
-                الأدوات
-            </a>
-
-            <a href="../dictionary.html">
-                القاموس
-            </a>
-
-            <a
-                href="../quizzes.html"
-                class="active"
-            >
-                الاختبارات
-            </a>
-
-            <a href="../egypt.html">
-                تمريض مصر
-            </a>
-
-        </nav>
-
-
-        <button
-            class="mobile-button"
-            type="button"
-            onclick="toggleMobileMenu()"
-            aria-label="القائمة"
-        >
-            ☰
-        </button>
-
-    </div>
-
-
-    <div id="mobileMenu">
-
-        <div class="container mobile-menu-inner">
-
-            <a href="../index.html">
-                🏠 الرئيسية
-            </a>
-
-            <a href="../knowledge.html">
-                🩺 المعرفة التمريضية
-            </a>
-
-            <a href="../drugs.html">
-                💊 مركز الأدوية
-            </a>
-
-            <a href="../tools.html">
-                🧮 الأدوات والحاسبات
-            </a>
-
-            <a href="../dictionary.html">
-                📖 قاموس التمريض
-            </a>
-
-            <a href="../quizzes.html">
-                📝 الاختبارات
-            </a>
-
-            <a href="../egypt.html">
-                🇪🇬 التمريض في مصر
-            </a>
-
-        </div>
+            ← الاختبارات
+        </a>
 
     </div>
 
 </header>
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
-
-<section class="page-hero">
+<main>
 
     <div class="container">
 
-        <div class="hero-content">
+        <!-- =========================
+             START
+        ========================== -->
 
-            <div class="breadcrumb">
+        <section
+            class="start-screen"
+            id="startScreen"
+        >
 
-                <a href="../index.html">
-                    الرئيسية
-                </a>
+            <div class="quiz-icon">
+                🧠
+            </div>
 
-                <span>/</span>
+            <h1>
+                Anatomy <span>Quiz</span>
+            </h1>
 
-                <a href="../quizzes.html">
-                    Nursing Quiz Arena
-                </a>
+            <p class="start-description">
+                اختبر معلوماتك في مادة التشريح
+                من خلال أسئلة متعددة الاختيارات.
+            </p>
 
-                <span>/</span>
+            <div class="quiz-info">
 
-                <span>
-                    Anatomy
+                <div class="info-item">
+
+                    <strong id="totalQuestions">
+                        50
+                    </strong>
+
+                    <span>
+                        سؤال
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <strong>
+                        MCQ
+                    </strong>
+
+                    <span>
+                        نوع الأسئلة
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <strong>
+                        ⏱️
+                    </strong>
+
+                    <span>
+                        مؤقت
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="start-options">
+
+                <label for="questionCount">
+                    عدد الأسئلة
+                </label>
+
+                <select id="questionCount">
+
+                    <option value="10">
+                        10 أسئلة
+                    </option>
+
+                    <option value="20">
+                        20 سؤال
+                    </option>
+
+                    <option value="30">
+                        30 سؤال
+                    </option>
+
+                    <option value="40">
+                        40 سؤال
+                    </option>
+
+                    <option
+                        value="50"
+                        selected
+                    >
+                        50 سؤال
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="startButton"
+            >
+                🚀 ابدأ الاختبار
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             ERROR
+        ========================== -->
+
+        <section
+            class="error-message"
+            id="errorMessage"
+        >
+
+            <h2>
+                ⚠️ تعذر تحميل الأسئلة
+            </h2>
+
+            <p id="errorText">
+                تأكد من وجود ملف:
+                quizzes/data/anatomy.json
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             QUIZ
+        ========================== -->
+
+        <section
+            class="quiz-screen"
+            id="quizScreen"
+        >
+
+            <div class="quiz-top">
+
+                <span
+                    class="question-number"
+                    id="questionNumber"
+                >
+                    السؤال 1 من 50
+                </span>
+
+                <span
+                    class="timer"
+                    id="timer"
+                >
+                    00:00
                 </span>
 
             </div>
 
 
-            <span class="hero-badge">
-                🧠 Nursing Quiz Arena
-            </span>
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
+                ></div>
+
+            </div>
 
 
-            <h1>
+            <article class="question-card">
 
-                Anatomy
-                <span>
-                    Quizzes
+                <span
+                    class="topic"
+                    id="questionTopic"
+                >
+                    Anatomy
                 </span>
 
-            </h1>
+                <h2
+                    class="question-text"
+                    id="questionText"
+                >
+                    جاري تحميل السؤال...
+                </h2>
+
+                <div
+                    class="options"
+                    id="options"
+                ></div>
+
+                <div
+                    class="feedback"
+                    id="feedback"
+                ></div>
+
+                <div class="quiz-actions">
+
+                    <button
+                        type="button"
+                        class="action-button"
+                        id="prevButton"
+                    >
+                        → السابق
+                    </button>
+
+                    <button
+                        type="button"
+                        class="action-button primary"
+                        id="nextButton"
+                        disabled
+                    >
+                        التالي ←
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
 
 
-            <p>
-                اختبر معلوماتك في علم التشريح من خلال مجموعة
-                من الاختبارات والأسئلة المناسبة لطلاب التمريض،
-                بدايةً من الأساسيات وحتى المستويات المتقدمة.
+        <!-- =========================
+             RESULT
+        ========================== -->
+
+        <section
+            class="result-screen"
+            id="resultScreen"
+        >
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <h2>
+                انتهى الاختبار!
+            </h2>
+
+            <p
+                class="result-message"
+                id="resultMessage"
+            >
+                أحسنت!
             </p>
 
-        </div>
+            <div class="score-circle">
 
-    </div>
+                <strong id="scorePercentage">
+                    0%
+                </strong>
 
-</section>
+                <span>
+                    النتيجة
+                </span>
 
+            </div>
 
-<!-- =====================================================
-     CONTENT
-====================================================== -->
+            <div class="result-stats">
 
-<main class="content-section">
+                <div class="result-stat">
 
-    <div class="container">
-
-        <div class="quiz-layout">
-
-
-            <!-- =================================================
-                 SIDEBAR
-            ================================================== -->
-
-            <aside class="sidebar">
-
-                <div class="sidebar-title">
-                    📝 أقسام الاختبارات
-                </div>
-
-
-                <a
-                    href="../quizzes.html"
-                    class="sidebar-link"
-                >
-                    🏆 Quiz Arena
-                </a>
-
-
-                <a
-                    href="anatomy.html"
-                    class="sidebar-link active"
-                >
-                    🧠 Anatomy
-                </a>
-
-
-                <a
-                    href="fundamentals.html"
-                    class="sidebar-link"
-                >
-                    🩺 Fundamentals
-                </a>
-
-
-                <a
-                    href="medical-surgical.html"
-                    class="sidebar-link"
-                >
-                    🏥 Medical-Surgical
-                </a>
-
-
-                <a
-                    href="community-health.html"
-                    class="sidebar-link"
-                >
-                    🌍 Community Health
-                </a>
-
-
-                <a
-                    href="general-surgery.html"
-                    class="sidebar-link"
-                >
-                    🔬 General Surgery
-                </a>
-
-            </aside>
-
-
-            <!-- =================================================
-                 MAIN
-            ================================================== -->
-
-            <section class="quiz-main">
-
-
-                <!-- SUBJECT -->
-
-                <div class="subject-card">
-
-                    <div class="subject-top">
-
-                        <div class="subject-icon">
-                            🧠
-                        </div>
-
-                        <div class="subject-info">
-
-                            <h2>
-                                Anatomy
-                            </h2>
-
-                            <span>
-                                علم التشريح
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <p class="subject-description">
-                        اختبارات شاملة في Anatomy تساعدك على مراجعة
-                        وفهم أساسيات علم التشريح، المصطلحات التشريحية،
-                        أجهزة الجسم، واتجاهات الجسم المختلفة.
-                    </p>
-
-
-                    <div class="stats-grid">
-
-                        <div class="stat-box">
-
-                            <strong>
-                                6+
-                            </strong>
-
-                            <span>
-                                اختبارات
-                            </span>
-
-                        </div>
-
-
-                        <div class="stat-box">
-
-                            <strong>
-                                100+
-                            </strong>
-
-                            <span>
-                                سؤال
-                            </span>
-
-                        </div>
-
-
-                        <div class="stat-box">
-
-                            <strong>
-                                3
-                            </strong>
-
-                            <span>
-                                مستويات
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- QUIZZES -->
-
-                <div class="section-heading">
-
-                    <h2>
-                        📝 اختبارات Anatomy
-                    </h2>
+                    <strong id="correctAnswers">
+                        0
+                    </strong>
 
                     <span>
-                        اختر الاختبار وابدأ الآن
+                        إجابات صحيحة
                     </span>
 
                 </div>
 
-
-                <div class="quiz-grid">
-
-
-                    <!-- QUIZ 1 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                01
-                            </div>
-
-                            <span class="quiz-level">
-                                سهل
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Anatomy Basics
-                        </h3>
-
-
-                        <p>
-                            اختبار شامل على أساسيات علم التشريح
-                            والمصطلحات الأساسية التي يحتاجها طالب التمريض.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 20 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 15 دقيقة
-                            </span>
-
-                            <span>
-                                🟢 Beginner
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('anatomy-basics')"
-                        >
-                            🚀 ابدأ الاختبار
-                        </button>
-
-                    </article>
-
-
-                    <!-- QUIZ 2 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                02
-                            </div>
-
-                            <span class="quiz-level">
-                                سهل
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Anatomical Position
-                        </h3>
-
-
-                        <p>
-                            راجع Anatomical Position واتجاهات الجسم
-                            مثل Superior, Inferior, Medial, Lateral وغيرها.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 20 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 15 دقيقة
-                            </span>
-
-                            <span>
-                                🟢 Beginner
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('anatomical-position')"
-                        >
-                            🚀 ابدأ الاختبار
-                        </button>
-
-                    </article>
-
-
-                    <!-- QUIZ 3 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                03
-                            </div>
-
-                            <span class="quiz-level">
-                                متوسط
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Body Planes & Cavities
-                        </h3>
-
-
-                        <p>
-                            اختبار على مستويات الجسم والتجاويف الرئيسية
-                            مثل Sagittal, Frontal, Transverse وغيرها.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 25 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 18 دقيقة
-                            </span>
-
-                            <span>
-                                🟡 Intermediate
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('body-planes')"
-                        >
-                            🚀 ابدأ الاختبار
-                        </button>
-
-                    </article>
-
-
-                    <!-- QUIZ 4 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                04
-                            </div>
-
-                            <span class="quiz-level">
-                                متوسط
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Skeletal System
-                        </h3>
-
-
-                        <p>
-                            اختبر معلوماتك عن العظام والمفاصل
-                            والهيكل العظمي وأهم المصطلحات المتعلقة به.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 25 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 20 دقيقة
-                            </span>
-
-                            <span>
-                                🟡 Intermediate
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('skeletal-system')"
-                        >
-                            🚀 ابدأ الاختبار
-                        </button>
-
-                    </article>
-
-
-                    <!-- QUIZ 5 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                05
-                            </div>
-
-                            <span class="quiz-level">
-                                متوسط
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Muscular System
-                        </h3>
-
-
-                        <p>
-                            أسئلة متنوعة عن الجهاز العضلي،
-                            أنواع العضلات ووظائفها والمصطلحات الأساسية.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 25 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 20 دقيقة
-                            </span>
-
-                            <span>
-                                🟡 Intermediate
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('muscular-system')"
-                        >
-                            🚀 ابدأ الاختبار
-                        </button>
-
-                    </article>
-
-
-                    <!-- QUIZ 6 -->
-
-                    <article class="quiz-card">
-
-                        <div class="quiz-card-top">
-
-                            <div class="quiz-number">
-                                06
-                            </div>
-
-                            <span class="quiz-level">
-                                متقدم
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Anatomy Challenge
-                        </h3>
-
-
-                        <p>
-                            تحدي شامل يجمع مجموعة من أسئلة Anatomy
-                            لاختبار مدى إتقانك للمادة.
-                        </p>
-
-
-                        <div class="quiz-meta">
-
-                            <span>
-                                ❓ 40 سؤال
-                            </span>
-
-                            <span>
-                                ⏱️ 30 دقيقة
-                            </span>
-
-                            <span>
-                                🔴 Advanced
-                            </span>
-
-                        </div>
-
-
-                        <button
-                            class="start-button"
-                            type="button"
-                            onclick="startQuiz('anatomy-challenge')"
-                        >
-                            🚀 ابدأ التحدي
-                        </button>
-
-                    </article>
+                <div class="result-stat">
+
+                    <strong id="wrongAnswers">
+                        0
+                    </strong>
+
+                    <span>
+                        إجابات خاطئة
+                    </span>
 
                 </div>
 
+                <div class="result-stat">
 
-                <!-- LEVELS -->
+                    <strong id="finalTotal">
+                        0
+                    </strong>
 
-                <div class="section-heading">
-
-                    <h2>
-                        🎯 اختر مستواك
-                    </h2>
-
-                </div>
-
-
-                <div class="levels-grid">
-
-
-                    <div class="level-card">
-
-                        <div class="level-icon">
-                            🟢
-                        </div>
-
-                        <h3>
-                            Beginner
-                        </h3>
-
-                        <p>
-                            مناسب للمبتدئين ومراجعة الأساسيات.
-                        </p>
-
-                    </div>
-
-
-                    <div class="level-card">
-
-                        <div class="level-icon">
-                            🟡
-                        </div>
-
-                        <h3>
-                            Intermediate
-                        </h3>
-
-                        <p>
-                            أسئلة تحتاج إلى فهم جيد للمادة.
-                        </p>
-
-                    </div>
-
-
-                    <div class="level-card">
-
-                        <div class="level-icon">
-                            🔴
-                        </div>
-
-                        <h3>
-                            Advanced
-                        </h3>
-
-                        <p>
-                            تحديات أصعب لاختبار مستوى إتقانك.
-                        </p>
-
-                    </div>
+                    <span>
+                        إجمالي الأسئلة
+                    </span>
 
                 </div>
 
+            </div>
 
-                <!-- CTA -->
+            <div class="result-actions">
 
-                <div class="cta-box">
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="reviewButton"
+                >
+                    📋 مراجعة الإجابات
+                </button>
 
-                    <div>
+                <button
+                    type="button"
+                    class="action-button"
+                    id="restartButton"
+                >
+                    🔄 إعادة الاختبار
+                </button>
 
-                        <h2>
-                            🏆 جاهز تختبر نفسك؟
-                        </h2>
+            </div>
 
-                        <p>
-                            اختار اختبار Anatomy وابدأ التحدي الآن.
-                        </p>
-
-                    </div>
-
-
-                    <a
-                        href="../quizzes.html"
-                        class="cta-button"
-                    >
-                        كل الاختبارات
-                    </a>
-
-                </div>
+        </section>
 
 
-            </section>
+        <!-- =========================
+             REVIEW
+        ========================== -->
 
-        </div>
+        <section
+            class="review-screen"
+            id="reviewScreen"
+        >
+
+            <h2 class="review-title">
+                📋 مراجعة الإجابات
+            </h2>
+
+            <div id="reviewContainer"></div>
+
+        </section>
 
     </div>
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="site-footer">
-
-    <div class="container">
-
-        <div class="footer-top">
-
-
-            <div class="footer-brand">
-
-                <h3>
-                    🩺 بوابة التمريض
-                </h3>
-
-                <p>
-                    مرجع رقمي عربي يهدف إلى جمع المعرفة
-                    والأدوات والمصادر والمعلومات المفيدة
-                    لطلاب وممارسي التمريض في مكان واحد.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    الاختبارات
-                </h4>
-
-                <a href="../quizzes.html">
-                    Nursing Quiz Arena
-                </a>
-
-                <a href="anatomy.html">
-                    Anatomy
-                </a>
-
-                <a href="fundamentals.html">
-                    Fundamentals
-                </a>
-
-                <a href="medical-surgical.html">
-                    Medical-Surgical
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>
-                    روابط سريعة
-                </h4>
-
-                <a href="../index.html">
-                    الرئيسية
-                </a>
-
-                <a href="../dictionary.html">
-                    قاموس التمريض
-                </a>
-
-                <a href="../drugs.html">
-                    مركز الأدوية
-                </a>
-
-                <a href="../tools.html">
-                    الأدوات والحاسبات
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
-            </span>
-
-            <span>
-                Built for Nursing 🩺
-            </span>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<!-- =====================================================
-     JAVASCRIPT
-====================================================== -->
 
 <script>
 
@@ -2055,34 +1250,297 @@
 
 
 /* =====================================================
-   MOBILE MENU
+   CONFIG
 ===================================================== */
 
-function toggleMobileMenu() {
+const QUESTIONS_PATH =
+    "data/anatomy.json";
 
-    const menu =
-        document.getElementById(
-            "mobileMenu"
+const QUESTION_TIME =
+    60;
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const startScreen =
+    document.getElementById(
+        "startScreen"
+    );
+
+const quizScreen =
+    document.getElementById(
+        "quizScreen"
+    );
+
+const resultScreen =
+    document.getElementById(
+        "resultScreen"
+    );
+
+const reviewScreen =
+    document.getElementById(
+        "reviewScreen"
+    );
+
+const errorMessage =
+    document.getElementById(
+        "errorMessage"
+    );
+
+const errorText =
+    document.getElementById(
+        "errorText"
+    );
+
+const totalQuestions =
+    document.getElementById(
+        "totalQuestions"
+    );
+
+const questionCount =
+    document.getElementById(
+        "questionCount"
+    );
+
+const startButton =
+    document.getElementById(
+        "startButton"
+    );
+
+const questionNumber =
+    document.getElementById(
+        "questionNumber"
+    );
+
+const questionTopic =
+    document.getElementById(
+        "questionTopic"
+    );
+
+const questionText =
+    document.getElementById(
+        "questionText"
+    );
+
+const optionsContainer =
+    document.getElementById(
+        "options"
+    );
+
+const feedback =
+    document.getElementById(
+        "feedback"
+    );
+
+const nextButton =
+    document.getElementById(
+        "nextButton"
+    );
+
+const prevButton =
+    document.getElementById(
+        "prevButton"
+    );
+
+const timerElement =
+    document.getElementById(
+        "timer"
+    );
+
+const progressBar =
+    document.getElementById(
+        "progressBar"
+    );
+
+const scorePercentage =
+    document.getElementById(
+        "scorePercentage"
+    );
+
+const correctAnswers =
+    document.getElementById(
+        "correctAnswers"
+    );
+
+const wrongAnswers =
+    document.getElementById(
+        "wrongAnswers"
+    );
+
+const finalTotal =
+    document.getElementById(
+        "finalTotal"
+    );
+
+const resultMessage =
+    document.getElementById(
+        "resultMessage"
+    );
+
+const reviewButton =
+    document.getElementById(
+        "reviewButton"
+    );
+
+const restartButton =
+    document.getElementById(
+        "restartButton"
+    );
+
+const reviewContainer =
+    document.getElementById(
+        "reviewContainer"
+    );
+
+
+/* =====================================================
+   DATA
+===================================================== */
+
+let allQuestions = [];
+
+let quizQuestions = [];
+
+let currentQuestion = 0;
+
+let userAnswers = [];
+
+let timeLeft = 0;
+
+let timerInterval = null;
+
+
+/* =====================================================
+   LOAD QUESTIONS
+===================================================== */
+
+async function loadQuestions() {
+
+    try {
+
+        const response =
+            await fetch(
+                QUESTIONS_PATH,
+                {
+                    cache: "no-cache"
+                }
+            );
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status
+            );
+
+        }
+
+        const data =
+            await response.json();
+
+        if (
+            !Array.isArray(data) ||
+            data.length === 0
+        ) {
+
+            throw new Error(
+                "Invalid questions file"
+            );
+
+        }
+
+        allQuestions = data;
+
+        totalQuestions.textContent =
+            allQuestions.length;
+
+        updateQuestionCountOptions();
+
+    } catch (error) {
+
+        console.error(
+            "Quiz loading error:",
+            error
         );
 
-    if (!menu) {
-        return;
-    }
-
-    if (
-        menu.style.display === "none" ||
-        menu.style.display === ""
-    ) {
-
-        menu.style.display =
-            "block";
-
-    } else {
-
-        menu.style.display =
+        startScreen.style.display =
             "none";
 
+        errorMessage.style.display =
+            "block";
+
+        errorText.textContent =
+            "تعذر تحميل بنك الأسئلة. تأكد من وجود quizzes/data/anatomy.json.";
+
     }
+
+}
+
+
+/* =====================================================
+   UPDATE QUESTION COUNT
+===================================================== */
+
+function updateQuestionCountOptions() {
+
+    const options =
+        Array.from(
+            questionCount.options
+        );
+
+    options.forEach(
+        function(option) {
+
+            const value =
+                Number(
+                    option.value
+                );
+
+            option.disabled =
+                value >
+                allQuestions.length;
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SHUFFLE
+===================================================== */
+
+function shuffle(array) {
+
+    const result =
+        [...array];
+
+    for (
+        let i = result.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() *
+                (i + 1)
+            );
+
+        [
+            result[i],
+            result[j]
+        ] =
+        [
+            result[j],
+            result[i]
+        ];
+
+    }
+
+    return result;
 
 }
 
@@ -2091,64 +1549,948 @@ function toggleMobileMenu() {
    START QUIZ
 ===================================================== */
 
-function startQuiz(
-    quizId
-) {
+function startQuiz() {
 
-    /*
-     * جميع الاختبارات تتجه إلى
-     * quiz.html مع تحديد الاختبار
-     * عن طريق URL Parameter.
-     *
-     * مثال:
-     *
-     * ../quiz.html?quiz=anatomy-basics
-     */
+    const requestedCount =
+        Number(
+            questionCount.value
+        );
 
-    const target =
-        "../quiz.html?quiz=" +
-        encodeURIComponent(
-            quizId
+    const count =
+        Math.min(
+            requestedCount,
+            allQuestions.length
         );
 
 
-    window.location.href =
-        target;
+    quizQuestions =
+        shuffle(
+            allQuestions
+        )
+        .slice(
+            0,
+            count
+        );
+
+
+    /*
+     * Shuffle choices لكل سؤال
+     * مع تحديث الإجابة الصحيحة.
+     */
+
+    quizQuestions =
+        quizQuestions.map(
+            function(question) {
+
+                const choices =
+                    question.options.map(
+                        function(text, index) {
+
+                            return {
+                                text: text,
+                                correct:
+                                    index ===
+                                    question.answer
+                            };
+
+                        }
+                    );
+
+
+                const shuffledChoices =
+                    shuffle(
+                        choices
+                    );
+
+
+                return {
+
+                    ...question,
+
+                    options:
+                        shuffledChoices.map(
+                            function(choice) {
+                                return choice.text;
+                            }
+                        ),
+
+                    answer:
+                        shuffledChoices.findIndex(
+                            function(choice) {
+                                return choice.correct;
+                            }
+                        )
+
+                };
+
+            }
+        );
+
+
+    userAnswers =
+        new Array(
+            quizQuestions.length
+        )
+        .fill(null);
+
+
+    currentQuestion =
+        0;
+
+
+    startScreen.style.display =
+        "none";
+
+    errorMessage.style.display =
+        "none";
+
+    resultScreen.style.display =
+        "none";
+
+    reviewScreen.style.display =
+        "none";
+
+    quizScreen.style.display =
+        "block";
+
+
+    startTimer();
+
+    renderQuestion();
 
 }
 
 
 /* =====================================================
-   KEYBOARD ACCESSIBILITY
+   TIMER
 ===================================================== */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+function startTimer() {
 
-        if (
-            event.key === "Escape"
-        ) {
+    clearInterval(
+        timerInterval
+    );
 
-            const menu =
-                document.getElementById(
-                    "mobileMenu"
+
+    timeLeft =
+        quizQuestions.length *
+        QUESTION_TIME;
+
+
+    updateTimer();
+
+
+    timerInterval =
+        setInterval(
+            function() {
+
+                timeLeft--;
+
+                updateTimer();
+
+
+                if (
+                    timeLeft <= 0
+                ) {
+
+                    clearInterval(
+                        timerInterval
+                    );
+
+                    finishQuiz();
+
+                }
+
+            },
+            1000
+        );
+
+}
+
+
+/* =====================================================
+   UPDATE TIMER
+===================================================== */
+
+function updateTimer() {
+
+    const minutes =
+        Math.floor(
+            timeLeft / 60
+        );
+
+    const seconds =
+        timeLeft % 60;
+
+
+    timerElement.textContent =
+        String(minutes).padStart(
+            2,
+            "0"
+        ) +
+        ":" +
+        String(seconds).padStart(
+            2,
+            "0"
+        );
+
+
+    timerElement.classList.remove(
+        "warning",
+        "danger"
+    );
+
+
+    if (
+        timeLeft <= 30
+    ) {
+
+        timerElement.classList.add(
+            "danger"
+        );
+
+    } else if (
+        timeLeft <= 60
+    ) {
+
+        timerElement.classList.add(
+            "warning"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   RENDER QUESTION
+===================================================== */
+
+function renderQuestion() {
+
+    const question =
+        quizQuestions[
+            currentQuestion
+        ];
+
+
+    if (!question) {
+        return;
+    }
+
+
+    const total =
+        quizQuestions.length;
+
+
+    questionNumber.textContent =
+        "السؤال " +
+        (currentQuestion + 1) +
+        " من " +
+        total;
+
+
+    questionTopic.textContent =
+        question.topic ||
+        "Anatomy";
+
+
+    questionText.textContent =
+        question.question;
+
+
+    progressBar.style.width =
+        (
+            (
+                currentQuestion + 1
+            ) /
+            total *
+            100
+        ) +
+        "%";
+
+
+    optionsContainer.innerHTML =
+        "";
+
+
+    feedback.className =
+        "feedback";
+
+    feedback.textContent =
+        "";
+
+
+    const selectedAnswer =
+        userAnswers[
+            currentQuestion
+        ];
+
+
+    question.options.forEach(
+        function(optionText, index) {
+
+            const button =
+                document.createElement(
+                    "button"
                 );
 
-            if (menu) {
 
-                menu.style.display =
-                    "none";
+            button.type =
+                "button";
+
+
+            button.className =
+                "option";
+
+
+            button.textContent =
+                optionText;
+
+
+            if (
+                selectedAnswer !==
+                null &&
+                selectedAnswer !==
+                undefined
+            ) {
+
+                button.disabled =
+                    true;
+
+
+                if (
+                    index ===
+                    question.answer
+                ) {
+
+                    button.classList.add(
+                        "correct"
+                    );
+
+                }
+
+
+                if (
+                    index ===
+                    selectedAnswer &&
+                    selectedAnswer !==
+                    question.answer
+                ) {
+
+                    button.classList.add(
+                        "wrong"
+                    );
+
+                }
+
+            } else {
+
+                button.addEventListener(
+                    "click",
+                    function() {
+
+                        selectAnswer(
+                            index
+                        );
+
+                    }
+                );
+
+            }
+
+
+            optionsContainer.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    if (
+        selectedAnswer !==
+        null &&
+        selectedAnswer !==
+        undefined
+    ) {
+
+        showFeedback(
+            selectedAnswer
+        );
+
+    }
+
+
+    prevButton.disabled =
+        currentQuestion === 0;
+
+
+    nextButton.disabled =
+        selectedAnswer ===
+        null ||
+        selectedAnswer ===
+        undefined;
+
+
+    nextButton.textContent =
+        currentQuestion ===
+        total - 1
+            ? "إنهاء الاختبار"
+            : "التالي ←";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =====================================================
+   SELECT ANSWER
+===================================================== */
+
+function selectAnswer(
+    selectedIndex
+) {
+
+    const question =
+        quizQuestions[
+            currentQuestion
+        ];
+
+
+    userAnswers[
+        currentQuestion
+    ] =
+        selectedIndex;
+
+
+    const optionButtons =
+        optionsContainer.querySelectorAll(
+            ".option"
+        );
+
+
+    optionButtons.forEach(
+        function(button, index) {
+
+            button.disabled =
+                true;
+
+
+            if (
+                index ===
+                question.answer
+            ) {
+
+                button.classList.add(
+                    "correct"
+                );
+
+            }
+
+
+            if (
+                index ===
+                selectedIndex &&
+                selectedIndex !==
+                question.answer
+            ) {
+
+                button.classList.add(
+                    "wrong"
+                );
 
             }
 
         }
+    );
+
+
+    showFeedback(
+        selectedIndex
+    );
+
+
+    nextButton.disabled =
+        false;
+
+}
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+function showFeedback(
+    selectedIndex
+) {
+
+    const question =
+        quizQuestions[
+            currentQuestion
+        ];
+
+
+    const correct =
+        selectedIndex ===
+        question.answer;
+
+
+    feedback.className =
+        "feedback " +
+        (
+            correct
+                ? "correct"
+                : "wrong"
+        );
+
+
+    feedback.innerHTML =
+        correct
+            ? "<strong>✅ إجابة صحيحة!</strong><br>" +
+              escapeHTML(
+                  question.explanation ||
+                  ""
+              )
+            : "<strong>❌ إجابة خاطئة.</strong><br>" +
+              "الإجابة الصحيحة: " +
+              escapeHTML(
+                  question.options[
+                      question.answer
+                  ]
+              ) +
+              "<br>" +
+              escapeHTML(
+                  question.explanation ||
+                  ""
+              );
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+nextButton.addEventListener(
+    "click",
+    function() {
+
+        if (
+            userAnswers[
+                currentQuestion
+            ] === null ||
+            userAnswers[
+                currentQuestion
+            ] === undefined
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            currentQuestion >=
+            quizQuestions.length - 1
+        ) {
+
+            finishQuiz();
+
+            return;
+
+        }
+
+
+        currentQuestion++;
+
+        renderQuestion();
+
+    }
+);
+
+
+/* =====================================================
+   PREVIOUS
+===================================================== */
+
+prevButton.addEventListener(
+    "click",
+    function() {
+
+        if (
+            currentQuestion <= 0
+        ) {
+
+            return;
+
+        }
+
+
+        currentQuestion--;
+
+        renderQuestion();
+
+    }
+);
+
+
+/* =====================================================
+   FINISH QUIZ
+===================================================== */
+
+function finishQuiz() {
+
+    clearInterval(
+        timerInterval
+    );
+
+
+    let correct =
+        0;
+
+
+    quizQuestions.forEach(
+        function(question, index) {
+
+            if (
+                userAnswers[index] ===
+                question.answer
+            ) {
+
+                correct++;
+
+            }
+
+        }
+    );
+
+
+    const total =
+        quizQuestions.length;
+
+
+    const wrong =
+        total -
+        correct;
+
+
+    const percentage =
+        Math.round(
+            (
+                correct /
+                total
+            ) *
+            100
+        );
+
+
+    correctAnswers.textContent =
+        correct;
+
+
+    wrongAnswers.textContent =
+        wrong;
+
+
+    finalTotal.textContent =
+        total;
+
+
+    scorePercentage.textContent =
+        percentage +
+        "%";
+
+
+    resultMessage.textContent =
+        getResultMessage(
+            percentage
+        );
+
+
+    quizScreen.style.display =
+        "none";
+
+
+    resultScreen.style.display =
+        "block";
+
+
+    reviewScreen.style.display =
+        "none";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =====================================================
+   RESULT MESSAGE
+===================================================== */
+
+function getResultMessage(
+    percentage
+) {
+
+    if (
+        percentage >= 90
+    ) {
+
+        return "🔥 ممتاز جدًا! مستواك رائع في Anatomy.";
+
+    }
+
+
+    if (
+        percentage >= 75
+    ) {
+
+        return "👏 ممتاز! عندك مستوى جيد جدًا.";
+
+    }
+
+
+    if (
+        percentage >= 60
+    ) {
+
+        return "👍 جيد، لكن محتاج مراجعة بعض النقاط.";
+
+    }
+
+
+    return "📚 محتاج تراجع المادة مرة أخرى وتحاول من جديد.";
+
+}
+
+
+/* =====================================================
+   REVIEW
+===================================================== */
+
+reviewButton.addEventListener(
+    "click",
+    function() {
+
+        renderReview();
+
+        reviewScreen.style.display =
+            "block";
+
+        resultScreen.style.display =
+            "none";
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+);
+
+
+/* =====================================================
+   RENDER REVIEW
+===================================================== */
+
+function renderReview() {
+
+    reviewContainer.innerHTML =
+        "";
+
+
+    quizQuestions.forEach(
+        function(question, index) {
+
+            const selected =
+                userAnswers[index];
+
+
+            const isCorrect =
+                selected ===
+                question.answer;
+
+
+            const item =
+                document.createElement(
+                    "article"
+                );
+
+
+            item.className =
+                "review-item";
+
+
+            const selectedText =
+                selected === null ||
+                selected === undefined
+                    ? "لم تتم الإجابة"
+                    : question.options[
+                        selected
+                    ];
+
+
+            const correctText =
+                question.options[
+                    question.answer
+                ];
+
+
+            item.innerHTML = `
+
+                <div class="review-question">
+                    ${index + 1}. ${escapeHTML(
+                        question.question
+                    )}
+                </div>
+
+                <div class="review-answer ${
+                    isCorrect
+                        ? "correct"
+                        : "wrong"
+                }">
+
+                    إجابتك:
+                    ${escapeHTML(
+                        selectedText
+                    )}
+
+                </div>
+
+                ${
+                    !isCorrect
+                        ? `
+                            <div class="review-answer correct">
+                                الإجابة الصحيحة:
+                                ${escapeHTML(
+                                    correctText
+                                )}
+                            </div>
+                          `
+                        : ""
+                }
+
+                <div class="review-explanation">
+                    💡 ${
+                        escapeHTML(
+                            question.explanation ||
+                            ""
+                        )
+                    }
+                </div>
+
+            `;
+
+
+            reviewContainer.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   RESTART
+===================================================== */
+
+restartButton.addEventListener(
+    "click",
+    function() {
+
+        clearInterval(
+            timerInterval
+        );
+
+
+        resultScreen.style.display =
+            "none";
+
+        reviewScreen.style.display =
+            "none";
+
+        startScreen.style.display =
+            "block";
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+);
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(
+    value
+) {
+
+    return String(
+        value || ""
+    )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    );
+
+}
+
+
+/* =====================================================
+   START BUTTON
+===================================================== */
+
+startButton.addEventListener(
+    "click",
+    startQuiz
+);
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadQuestions();
 
     }
 );
 
 </script>
-
 
 </body>
 
