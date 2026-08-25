@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        تقييم الجروح Wound Assessment | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="شرح أساسيات تقييم الجروح Wound Assessment لطلاب التمريض، بما يشمل الموقع والحجم والعمق والأنسجة والإفرازات وحالة الجلد."
+    >
+
+    <meta
+        name="keywords"
+        content="Wound Assessment, تقييم الجروح, Nursing, Nursing Skills, التمريض"
+    >
+
+    <meta name="author" content="بوابة التمريض">
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/article-wound-assessment.html"
+    >
+
+    <link rel="stylesheet" href="css/global.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial,Tahoma,sans-serif;
+            background: #f5f8fa;
+            color: #173247;
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px,calc(100% - 30px));
+            margin: auto;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e1e9ed;
+        }
+
+        .header-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 900;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 13px;
+            background: linear-gradient(135deg,#0b2d46,#18758a);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav a {
+            padding: 8px 10px;
+            color: #5d707a;
+            font-size: 13px;
+        }
+
+        .hero {
+            padding: 65px 0;
+            color: white;
+            background: linear-gradient(135deg,#082c46,#0b4b66,#137b8d);
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            color: rgba(255,255,255,.7);
+            margin-bottom: 18px;
+        }
+
+        .breadcrumb a {
+            color: #8be8f0;
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: clamp(30px,5vw,48px);
+        }
+
+        .hero p {
+            max-width: 800px;
+            color: rgba(255,255,255,.82);
+        }
+
+        .content {
+            padding: 55px 0;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: minmax(0,1fr) 280px;
+            gap: 25px;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #e1e9ed;
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        h2 {
+            color: #0b2d46;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #0b526b;
+        }
+
+        p {
+            color: #536872;
+            font-size: 15px;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .card {
+            padding: 20px;
+            background: #f7fbfc;
+            border: 1px solid #dce8ec;
+            border-radius: 15px;
+        }
+
+        .card-icon {
+            font-size: 30px;
+        }
+
+        .card h3 {
+            margin: 8px 0;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step;
+            margin: 12px 0;
+            padding: 15px 18px 15px 15px;
+            background: #f7fafb;
+            border-radius: 12px;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 50%;
+            background: #0b7085;
+            color: white;
+            font-weight: 900;
+        }
+
+        .note {
+            padding: 18px;
+            background: #eef7f9;
+            border-right: 4px solid #0b7085;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 90px;
+        }
+
+        .side {
+            background: white;
+            border: 1px solid #e1e9ed;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .side h3 {
+            margin-top: 0;
+        }
+
+        .side a {
+            display: block;
+            padding: 7px 0;
+            color: #166a7e;
+            font-size: 13px;
+        }
+
+        .disclaimer {
+            margin-top: 30px;
+            padding: 17px;
+            border-radius: 11px;
+            background: #fff8e8;
+            border: 1px solid #f0dfb0;
+            color: #67572e;
+            font-size: 13px;
+        }
+
+        footer {
+            background: #071f32;
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 35px 0;
+            font-size: 12px;
+        }
+
+        @media(max-width:800px) {
+
+            .nav {
+                display: none;
+            }
+
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .assessment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                🩺
+            </span>
+
+            <strong>
+                بوابة التمريض
+            </strong>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html">الرئيسية</a>
+            <a href="knowledge.html">المعرفة</a>
+            <a href="clinical-guides.html">Clinical Guides</a>
+            <a href="articles.html">المقالات</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="index.html">الرئيسية</a>
+            ←
+            <a href="articles.html">المقالات</a>
+            ←
+            Wound Assessment
+
+        </div>
+
+        <h1>
+            تقييم الجروح
+        </h1>
+
+        <p>
+            Wound Assessment — أساسيات تقييم الجرح
+            وتوثيق خصائصه ومتابعة التغيرات التي تحدث
+            أثناء الرعاية.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<main class="content">
+
+    <div class="container">
+
+        <div class="layout">
+
+
+            <article class="article">
+
+
+                <h2>
+                    ما هو Wound Assessment؟
+                </h2>
+
+                <p>
+                    تقييم الجرح هو عملية منظمة لفحص الجرح
+                    وتحديد خصائصه، مثل الموقع والحجم والعمق
+                    ونوع الأنسجة الموجودة والإفرازات وحالة
+                    الجلد المحيط.
+                </p>
+
+
+                <h2>
+                    أهم عناصر تقييم الجرح
+                </h2>
+
+
+                <div class="assessment-grid">
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            📍
+                        </div>
+
+                        <h3>
+                            الموقع
+                        </h3>
+
+                        <p>
+                            تحديد مكان الجرح بدقة وملاحظة
+                            ما إذا كان هناك أكثر من جرح.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            📏
+                        </div>
+
+                        <h3>
+                            الحجم
+                        </h3>
+
+                        <p>
+                            قياس الطول والعرض وفق طريقة
+                            القياس المستخدمة في المنشأة.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            ↕️
+                        </div>
+
+                        <h3>
+                            العمق
+                        </h3>
+
+                        <p>
+                            تقييم عمق الجرح وتحديد ما إذا كانت
+                            هناك أنسجة أعمق ظاهرة أو متأثرة.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🧬
+                        </div>
+
+                        <h3>
+                            نوع الأنسجة
+                        </h3>
+
+                        <p>
+                            ملاحظة الأنسجة الموجودة داخل قاع
+                            الجرح مثل النسيج الحبيبي أو النسيج
+                            المتنخر.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            💧
+                        </div>
+
+                        <h3>
+                            الإفرازات
+                        </h3>
+
+                        <p>
+                            ملاحظة وجود الإفرازات ووصف
+                            خصائصها وفق نظام التوثيق المستخدم.
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">
+                            🔴
+                        </div>
+
+                        <h3>
+                            الجلد المحيط
+                        </h3>
+
+                        <p>
+                            فحص الجلد المحيط للبحث عن الاحمرار
+                            أو التورم أو التهيج أو التسلخ.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    خطوات التقييم
+                </h2>
+
+
+                <ol class="steps">
+
+                    <li>
+                        التأكد من هوية المريض وشرح الإجراء
+                        والحفاظ على الخصوصية.
+                    </li>
+
+                    <li>
+                        فحص موقع الجرح والجلد المحيط به.
+                    </li>
+
+                    <li>
+                        تقييم أبعاد الجرح بالطريقة المعتمدة.
+                    </li>
+
+                    <li>
+                        تقييم قاع الجرح والأنسجة الظاهرة.
+                    </li>
+
+                    <li>
+                        تقييم الإفرازات والرائحة عند وجودها.
+                    </li>
+
+                    <li>
+                        تقييم الألم والأعراض المصاحبة.
+                    </li>
+
+                    <li>
+                        توثيق النتائج ومقارنتها بالتقييمات السابقة.
+                    </li>
+
+                </ol>
+
+
+                <h2>
+                    علامات تحتاج إلى الانتباه
+                </h2>
+
+                <p>
+                    يجب الانتباه إلى التغيرات الجديدة أو المتزايدة
+                    مثل زيادة الاحمرار أو التورم أو الألم أو ظهور
+                    إفرازات غير معتادة أو تغير واضح في حالة الجرح.
+                    عند وجود علامات مقلقة يجب إبلاغ الفريق الصحي
+                    واتباع سياسة المنشأة.
+                </p>
+
+
+                <div class="note">
+
+                    <strong>
+                        💡 نقطة مهمة للطالب
+                    </strong>
+
+                    <br>
+
+                    لا تكتفِ بوصف الجرح بكلمة مثل "جيد" أو "سيئ".
+                    التوثيق الأفضل يعتمد على وصف موضوعي وقابل
+                    للمتابعة والمقارنة.
+
+                </div>
+
+
+                <h2>
+                    أهمية التوثيق
+                </h2>
+
+                <p>
+                    يساعد التوثيق المنظم على متابعة تطور الجرح
+                    ومقارنة حالته عبر الوقت، كما يسهل التواصل
+                    بين أعضاء الفريق الصحي.
+                </p>
+
+
+                <div class="disclaimer">
+
+                    ⚠️
+                    هذا المحتوى تعليمي ولا يغني عن التدريب
+                    العملي أو سياسات المنشأة الصحية أو تقييم
+                    المريض بواسطة الفريق الطبي المختص.
+
+                </div>
+
+
+            </article>
+
+
+
+            <aside class="sidebar">
+
+                <div class="side">
+
+                    <h3>
+                        📚 مقالات مرتبطة
+                    </h3>
+
+                    <a href="article-patient-assessment.html">
+                        Patient Assessment
+                    </a>
+
+                    <a href="article-infection-control.html">
+                        Infection Control
+                    </a>
+
+                    <a href="article-vital-signs.html">
+                        Vital Signs
+                    </a>
+
+                    <a href="article-medication-five-rights.html">
+                        Five Rights
+                    </a>
+
+                </div>
+
+
+                <div class="side">
+
+                    <h3>
+                        🩺 Clinical Guides
+                    </h3>
+
+                    <a href="clinical-guides.html">
+                        Nursing Procedures
+                    </a>
+
+                    <a href="clinical-guides.html">
+                        Patient Care
+                    </a>
+
+                    <a href="clinical-guides.html">
+                        Infection Control
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<footer>
+
+    🩺 بوابة التمريض
+
+    <br><br>
+
+    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+</footer>
+
+
+</body>
+
+</html>
