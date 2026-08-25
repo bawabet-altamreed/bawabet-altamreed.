@@ -10,18 +10,16 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Nursing Quiz Arena | اختبارات التمريض | بوابة التمريض
-    </title>
+    <title>Nursing Quiz Arena | اختبارات التمريض | بوابة التمريض</title>
 
     <meta
         name="description"
-        content="Nursing Quiz Arena من بوابة التمريض — اختبارات تمريض تفاعلية في التشريح، أساسيات التمريض، Medical-Surgical Nursing، الجراحة، وصحة المجتمع."
+        content="Nursing Quiz Arena من بوابة التمريض. اختبارات تمريضية في Anatomy و Fundamentals و Medical-Surgical و Community Health واختبار شامل."
     >
 
     <meta
         name="keywords"
-        content="Nursing Quiz, Nursing Tests, Nursing Questions, اختبارات تمريض, اسئلة تمريض, امتحانات تمريض, Anatomy Quiz, Fundamentals Quiz, Medical Surgical Quiz"
+        content="Nursing Quiz, Nursing Tests, اختبارات التمريض, Anatomy Quiz, Fundamentals Quiz, Medical Surgical Quiz, Community Health Quiz"
     >
 
     <meta
@@ -74,20 +72,18 @@
         }
 
         button,
-        input,
-        select {
+        input {
             font-family: inherit;
         }
 
         .container {
-            width: min(1200px, calc(100% - 30px));
+            width: min(1150px, calc(100% - 30px));
             margin: auto;
         }
 
-
-        /* =========================================
+        /* =========================
            HEADER
-        ========================================== */
+        ========================== */
 
         .site-header {
             position: sticky;
@@ -98,8 +94,7 @@
 
             backdrop-filter: blur(14px);
 
-            border-bottom:
-                1px solid #e1e9ed;
+            border-bottom: 1px solid #e1e9ed;
         }
 
         .header-inner {
@@ -196,8 +191,7 @@
             width: 42px;
             height: 42px;
 
-            border:
-                1px solid #dfe7ea;
+            border: 1px solid #dfe7ea;
 
             background: white;
 
@@ -208,18 +202,16 @@
             font-size: 20px;
         }
 
-
-        /* =========================================
+        /* =========================
            MOBILE MENU
-        ========================================== */
+        ========================== */
 
         #mobileMenu {
             display: none;
 
             background: white;
 
-            border-top:
-                1px solid #e4ebee;
+            border-top: 1px solid #e4ebee;
         }
 
         .mobile-menu-inner {
@@ -242,17 +234,12 @@
             font-size: 13px;
         }
 
-
-        /* =========================================
+        /* =========================
            HERO
-        ========================================== */
+        ========================== */
 
         .page-hero {
-            position: relative;
-
-            overflow: hidden;
-
-            padding: 70px 0 75px;
+            padding: 60px 0 55px;
 
             background:
                 linear-gradient(
@@ -263,6 +250,10 @@
                 );
 
             color: white;
+
+            position: relative;
+
+            overflow: hidden;
         }
 
         .page-hero::before {
@@ -270,16 +261,15 @@
 
             position: absolute;
 
-            width: 500px;
-            height: 500px;
+            width: 430px;
+            height: 430px;
 
             border-radius: 50%;
 
-            background:
-                rgba(255,255,255,.04);
+            background: rgba(255,255,255,.04);
 
-            left: -180px;
-            top: -280px;
+            left: -160px;
+            top: -240px;
         }
 
         .page-hero::after {
@@ -287,16 +277,15 @@
 
             position: absolute;
 
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
 
             border-radius: 50%;
 
-            background:
-                rgba(255,255,255,.035);
+            background: rgba(255,255,255,.035);
 
-            right: -160px;
-            bottom: -250px;
+            right: -130px;
+            bottom: -220px;
         }
 
         .hero-content {
@@ -305,26 +294,20 @@
             z-index: 2;
 
             max-width: 850px;
-
-            text-align: center;
-
-            margin: auto;
         }
 
         .breadcrumb {
             display: flex;
 
-            justify-content: center;
             align-items: center;
 
             flex-wrap: wrap;
 
             gap: 7px;
 
-            margin-bottom: 22px;
+            margin-bottom: 20px;
 
-            color:
-                rgba(255,255,255,.65);
+            color: rgba(255,255,255,.65);
 
             font-size: 12px;
         }
@@ -336,31 +319,25 @@
         .hero-badge {
             display: inline-flex;
 
-            align-items: center;
-
-            padding: 8px 16px;
+            padding: 7px 14px;
 
             border-radius: 50px;
 
-            background:
-                rgba(255,255,255,.1);
+            background: rgba(255,255,255,.1);
 
-            border:
-                1px solid
-                rgba(255,255,255,.16);
+            border: 1px solid rgba(255,255,255,.15);
 
             font-size: 12px;
 
-            margin-bottom: 18px;
+            margin-bottom: 17px;
         }
 
         .page-hero h1 {
-            font-size:
-                clamp(36px, 6vw, 62px);
+            font-size: clamp(34px, 5vw, 54px);
 
-            line-height: 1.15;
+            line-height: 1.2;
 
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .page-hero h1 span {
@@ -370,81 +347,20 @@
         .page-hero p {
             max-width: 760px;
 
-            margin: auto;
-
-            color:
-                rgba(255,255,255,.82);
+            color: rgba(255,255,255,.82);
 
             font-size: 15px;
 
             line-height: 1.9;
         }
 
-
-        /* =========================================
-           STATS
-        ========================================== */
-
-        .hero-stats {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 12px;
-
-            max-width: 700px;
-
-            margin: 35px auto 0;
-        }
-
-        .hero-stat {
-            padding: 15px;
-
-            border-radius: 14px;
-
-            background:
-                rgba(255,255,255,.08);
-
-            border:
-                1px solid
-                rgba(255,255,255,.1);
-
-            backdrop-filter: blur(5px);
-        }
-
-        .hero-stat strong {
-            display: block;
-
-            font-size: 22px;
-
-            color: white;
-        }
-
-        .hero-stat span {
-            display: block;
-
-            margin-top: 2px;
-
-            color:
-                rgba(255,255,255,.65);
-
-            font-size: 11px;
-        }
-
-
-        /* =========================================
-           MAIN
-        ========================================== */
+        /* =========================
+           CONTENT
+        ========================== */
 
         .content-section {
-            padding: 50px 0 75px;
+            padding: 50px 0 70px;
         }
-
-
-        /* =========================================
-           SECTION TITLE
-        ========================================== */
 
         .section-heading {
             text-align: center;
@@ -453,11 +369,11 @@
         }
 
         .section-heading h2 {
-            color: #12364c;
+            color: #12344a;
 
-            font-size: 27px;
+            font-size: 25px;
 
-            margin-bottom: 6px;
+            margin-bottom: 7px;
         }
 
         .section-heading p {
@@ -466,33 +382,29 @@
             font-size: 13px;
         }
 
-
-        /* =========================================
-           QUIZ CARDS
-        ========================================== */
+        /* =========================
+           QUIZ GRID
+        ========================== */
 
         .quiz-grid {
             display: grid;
 
             grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+                repeat(2, minmax(0, 1fr));
 
-            gap: 17px;
+            gap: 18px;
         }
 
         .quiz-card {
             position: relative;
 
-            overflow: hidden;
-
             background: white;
 
-            border:
-                1px solid #dfe8ec;
+            border: 1px solid #dfe8ec;
 
             border-radius: 18px;
 
-            padding: 22px;
+            padding: 23px;
 
             transition:
                 transform .2s,
@@ -500,28 +412,10 @@
                 border-color .2s;
         }
 
-        .quiz-card::before {
-            content: "";
-
-            position: absolute;
-
-            width: 110px;
-            height: 110px;
-
-            border-radius: 50%;
-
-            background: #edf6f8;
-
-            right: -50px;
-            top: -50px;
-        }
-
         .quiz-card:hover {
-            transform:
-                translateY(-4px);
+            transform: translateY(-4px);
 
-            border-color:
-                #b7d3da;
+            border-color: #b7d3da;
 
             box-shadow:
                 0 14px 30px
@@ -529,10 +423,8 @@
         }
 
         .quiz-icon {
-            position: relative;
-
-            width: 52px;
-            height: 52px;
+            width: 50px;
+            height: 50px;
 
             display: flex;
             align-items: center;
@@ -544,34 +436,18 @@
 
             font-size: 25px;
 
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
 
         .quiz-card h3 {
-            position: relative;
+            color: #12344a;
 
-            color: #12364c;
-
-            font-size: 18px;
+            font-size: 19px;
 
             margin-bottom: 5px;
         }
 
-        .quiz-card .english-name {
-            position: relative;
-
-            color: #0d7186;
-
-            font-size: 11px;
-
-            font-weight: 700;
-
-            margin-bottom: 10px;
-        }
-
         .quiz-card p {
-            position: relative;
-
             color: #77868e;
 
             font-size: 12px;
@@ -579,53 +455,48 @@
             line-height: 1.8;
 
             min-height: 43px;
-
-            margin-bottom: 15px;
         }
 
         .quiz-meta {
-            position: relative;
-
             display: flex;
 
             align-items: center;
 
             flex-wrap: wrap;
 
-            gap: 6px;
+            gap: 7px;
 
-            margin-bottom: 17px;
+            margin: 15px 0;
         }
 
-        .meta-item {
-            padding: 5px 8px;
+        .quiz-meta span {
+            padding: 5px 9px;
 
             border-radius: 7px;
 
             background: #f3f7f8;
 
-            color: #687b84;
+            color: #607780;
 
             font-size: 10px;
+
+            font-weight: 700;
         }
 
         .quiz-button {
-            position: relative;
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
 
             width: 100%;
 
-            height: 43px;
-
-            border: 0;
+            min-height: 42px;
 
             border-radius: 10px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #0b526b,
-                    #137b8d
-                );
+            background: #0b526b;
 
             color: white;
 
@@ -633,140 +504,19 @@
 
             font-weight: 800;
 
-            cursor: pointer;
-
             transition: .2s;
         }
 
         .quiz-button:hover {
-            transform: translateY(-1px);
-
-            box-shadow:
-                0 7px 18px
-                rgba(11,82,107,.2);
+            background: #083f52;
         }
 
+        /* =========================
+           COMPREHENSIVE
+        ========================== */
 
-        /* =========================================
-           LEVEL SECTION
-        ========================================== */
-
-        .levels-section {
-            margin-top: 55px;
-        }
-
-        .levels-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 15px;
-        }
-
-        .level-card {
-            background: white;
-
-            border:
-                1px solid #e0e8ec;
-
-            border-radius: 16px;
-
-            padding: 20px;
-
-            text-align: center;
-        }
-
-        .level-icon {
-            font-size: 28px;
-
-            margin-bottom: 8px;
-        }
-
-        .level-card h3 {
-            color: #17374d;
-
-            font-size: 16px;
-
-            margin-bottom: 5px;
-        }
-
-        .level-card p {
-            color: #7b8991;
-
-            font-size: 11px;
-
-            line-height: 1.8;
-        }
-
-
-        /* =========================================
-           ARENA FEATURES
-        ========================================== */
-
-        .features-section {
-            margin-top: 55px;
-        }
-
-        .features-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 12px;
-        }
-
-        .feature-card {
-            padding: 20px 15px;
-
-            background: white;
-
-            border:
-                1px solid #e0e8ec;
-
-            border-radius: 15px;
-
-            text-align: center;
-        }
-
-        .feature-card .icon {
-            font-size: 25px;
-
-            margin-bottom: 7px;
-        }
-
-        .feature-card h3 {
-            color: #17374d;
-
-            font-size: 14px;
-
-            margin-bottom: 4px;
-        }
-
-        .feature-card p {
-            color: #7d8c93;
-
-            font-size: 10px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================================
-           CTA
-        ========================================== */
-
-        .arena-cta {
-            position: relative;
-
-            overflow: hidden;
-
-            margin-top: 55px;
-
-            padding: 35px 30px;
-
-            border-radius: 20px;
+        .quiz-card.comprehensive {
+            grid-column: 1 / -1;
 
             background:
                 linear-gradient(
@@ -775,101 +525,88 @@
                     #0b526b
                 );
 
+            border-color: transparent;
+
             color: white;
+        }
+
+        .quiz-card.comprehensive .quiz-icon {
+            background: rgba(255,255,255,.12);
+        }
+
+        .quiz-card.comprehensive h3 {
+            color: white;
+        }
+
+        .quiz-card.comprehensive p {
+            color: rgba(255,255,255,.75);
+        }
+
+        .quiz-card.comprehensive .quiz-meta span {
+            background: rgba(255,255,255,.1);
+
+            color: rgba(255,255,255,.8);
+        }
+
+        .quiz-card.comprehensive .quiz-button {
+            background: white;
+
+            color: #0b526b;
+        }
+
+        .quiz-card.comprehensive .quiz-button:hover {
+            background: #edf7f9;
+        }
+
+        /* =========================
+           INFO
+        ========================== */
+
+        .quiz-info {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf7f9,
+                    #f8fbfc
+                );
+
+            border: 1px solid #d9e9ed;
 
             text-align: center;
         }
 
-        .arena-cta::after {
-            content: "";
+        .quiz-info strong {
+            display: block;
 
-            position: absolute;
+            color: #12374d;
 
-            width: 220px;
-            height: 220px;
+            font-size: 15px;
 
-            border-radius: 50%;
-
-            background:
-                rgba(255,255,255,.04);
-
-            left: -70px;
-            bottom: -130px;
+            margin-bottom: 4px;
         }
 
-        .arena-cta h2 {
-            position: relative;
-
-            z-index: 2;
-
-            font-size: 25px;
-
-            margin-bottom: 7px;
-        }
-
-        .arena-cta p {
-            position: relative;
-
-            z-index: 2;
-
-            color:
-                rgba(255,255,255,.7);
+        .quiz-info span {
+            color: #71828a;
 
             font-size: 12px;
-
-            margin-bottom: 18px;
         }
 
-        .cta-button {
-            position: relative;
-
-            z-index: 2;
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            min-width: 180px;
-
-            height: 44px;
-
-            padding: 0 20px;
-
-            border-radius: 10px;
-
-            background: white;
-
-            color: #0b526b;
-
-            font-size: 13px;
-
-            font-weight: 900;
-
-            transition: .2s;
-        }
-
-        .cta-button:hover {
-            transform:
-                translateY(-2px);
-
-            box-shadow:
-                0 10px 25px
-                rgba(0,0,0,.15);
-        }
-
-
-        /* =========================================
+        /* =========================
            FOOTER
-        ========================================== */
+        ========================== */
 
         .site-footer {
             background: #071f32;
 
             color: white;
 
-            padding:
-                45px 0 20px;
+            padding: 40px 0 20px;
         }
 
         .footer-top {
@@ -896,8 +633,7 @@
         }
 
         .footer-brand p {
-            color:
-                rgba(255,255,255,.58);
+            color: rgba(255,255,255,.58);
 
             font-size: 12px;
 
@@ -915,8 +651,7 @@
         .footer-column a {
             display: block;
 
-            color:
-                rgba(255,255,255,.58);
+            color: rgba(255,255,255,.58);
 
             font-size: 12px;
 
@@ -940,16 +675,14 @@
 
             gap: 15px;
 
-            color:
-                rgba(255,255,255,.4);
+            color: rgba(255,255,255,.4);
 
             font-size: 10px;
         }
 
-
-        /* =========================================
+        /* =========================
            TABLET
-        ========================================== */
+        ========================== */
 
         @media (max-width: 1000px) {
 
@@ -961,22 +694,11 @@
                 display: block;
             }
 
-            .quiz-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
-
-            .features-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
         }
 
-
-        /* =========================================
+        /* =========================
            MOBILE
-        ========================================== */
+        ========================== */
 
         @media (max-width: 700px) {
 
@@ -984,7 +706,7 @@
                 width:
                     min(
                         100% - 24px,
-                        1200px
+                        1150px
                     );
             }
 
@@ -1003,43 +725,35 @@
             }
 
             .page-hero {
-                padding:
-                    48px 0 50px;
+                padding: 45px 0 40px;
             }
 
             .page-hero h1 {
-                font-size: 38px;
+                font-size: 35px;
             }
 
             .page-hero p {
                 font-size: 13px;
             }
 
-            .hero-stats {
-                grid-template-columns:
-                    1fr;
+            .content-section {
+                padding: 35px 0 50px;
+            }
 
-                max-width: 280px;
+            .section-heading {
+                margin-bottom: 22px;
+            }
+
+            .section-heading h2 {
+                font-size: 22px;
             }
 
             .quiz-grid {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
-            .levels-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
-            .features-grid {
-                grid-template-columns:
-                    1fr 1fr;
-            }
-
-            .arena-cta {
-                padding:
-                    30px 18px;
+            .quiz-card.comprehensive {
+                grid-column: auto;
             }
 
             .footer-top {
@@ -1053,31 +767,21 @@
             }
 
             .footer-bottom {
-                flex-direction:
-                    column;
+                flex-direction: column;
 
-                align-items:
-                    flex-start;
+                align-items: flex-start;
             }
 
         }
 
-
         @media (max-width: 450px) {
 
-            .features-grid {
-                grid-template-columns:
-                    1fr;
-            }
-
             .footer-top {
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
 
             .footer-brand {
-                grid-column:
-                    auto;
+                grid-column: auto;
             }
 
         }
@@ -1090,9 +794,9 @@
 <body>
 
 
-<!-- ================================================
+<!-- =====================================================
      HEADER
-================================================ -->
+====================================================== -->
 
 <header class="site-header">
 
@@ -1166,7 +870,6 @@
             type="button"
             onclick="toggleMobileMenu()"
             aria-label="فتح القائمة"
-            aria-expanded="false"
         >
             ☰
         </button>
@@ -1213,9 +916,9 @@
 </header>
 
 
-<!-- ================================================
+<!-- =====================================================
      HERO
-================================================ -->
+====================================================== -->
 
 <section class="page-hero">
 
@@ -1244,61 +947,20 @@
 
 
             <h1>
+
                 اختبر
                 <span>
-                    معلوماتك
+                    مستواك
                 </span>
+
             </h1>
 
 
             <p>
-                اختبارات تمريض تفاعلية تساعدك على مراجعة
-                المعلومات وقياس مستواك في أهم مواد التمريض.
-                اختر المادة وابدأ التحدي.
+                اختبارات تمريضية مختارة تساعدك على
+                مراجعة المعلومات وقياس مستواك في أهم
+                مواد التمريض.
             </p>
-
-
-            <div class="hero-stats">
-
-                <div class="hero-stat">
-
-                    <strong>
-                        5+
-                    </strong>
-
-                    <span>
-                        مواد تمريضية
-                    </span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong>
-                        MCQ
-                    </strong>
-
-                    <span>
-                        أسئلة اختيار من متعدد
-                    </span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong>
-                        🏆
-                    </strong>
-
-                    <span>
-                        نتائج وتقييم المستوى
-                    </span>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -1307,586 +969,271 @@
 </section>
 
 
-<!-- ================================================
-     MAIN
-================================================ -->
+<!-- =====================================================
+     QUIZZES
+====================================================== -->
 
 <main class="content-section">
 
     <div class="container">
 
 
-        <!-- =========================================
-             SUBJECTS
-        ========================================== -->
-
-        <section>
-
-            <div class="section-heading">
-
-                <h2>
-                    📚 اختر المادة
-                </h2>
-
-                <p>
-                    ابدأ باختيار المادة التي تريد اختبار نفسك فيها
-                </p>
-
-            </div>
-
-
-            <div class="quiz-grid">
-
-
-                <!-- ANATOMY -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🦴
-                    </div>
-
-                    <h3>
-                        التشريح
-                    </h3>
-
-                    <div class="english-name">
-                        Anatomy
-                    </div>
-
-                    <p>
-                        اختبر معلوماتك في أجهزة الجسم،
-                        الاتجاهات التشريحية، الأعضاء والمصطلحات.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            📝 MCQ
-                        </span>
-
-                        <span class="meta-item">
-                            🎯 مستويات متعددة
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=anatomy"
-                        class="quiz-button"
-                    >
-                        ابدأ اختبار Anatomy →
-                    </a>
-
-                </article>
-
-
-                <!-- FUNDAMENTALS -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🩺
-                    </div>
-
-                    <h3>
-                        أساسيات التمريض
-                    </h3>
-
-                    <div class="english-name">
-                        Fundamentals of Nursing
-                    </div>
-
-                    <p>
-                        أسئلة في أساسيات ومهارات التمريض
-                        والرعاية الأساسية للمريض.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            📝 MCQ
-                        </span>
-
-                        <span class="meta-item">
-                            🎯 مستويات متعددة
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=fundamentals"
-                        class="quiz-button"
-                    >
-                        ابدأ الاختبار →
-                    </a>
-
-                </article>
-
-
-                <!-- MEDICAL SURGICAL -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🏥
-                    </div>
-
-                    <h3>
-                        تمريض باطني جراحي
-                    </h3>
-
-                    <div class="english-name">
-                        Medical-Surgical Nursing
-                    </div>
-
-                    <p>
-                        اختبارات في الحالات المرضية،
-                        الرعاية التمريضية والتدخلات المناسبة.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            📝 MCQ
-                        </span>
-
-                        <span class="meta-item">
-                            🧠 Clinical
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=medical-surgical"
-                        class="quiz-button"
-                    >
-                        ابدأ الاختبار →
-                    </a>
-
-                </article>
-
-
-                <!-- GENERAL SURGERY -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🩹
-                    </div>
-
-                    <h3>
-                        الجراحة العامة
-                    </h3>
-
-                    <div class="english-name">
-                        General Surgery
-                    </div>
-
-                    <p>
-                        راجع معلوماتك في الالتهابات،
-                        الحالات الجراحية والرعاية قبل وبعد العملية.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            📝 MCQ
-                        </span>
-
-                        <span class="meta-item">
-                            🏥 Surgery
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=general-surgery"
-                        class="quiz-button"
-                    >
-                        ابدأ الاختبار →
-                    </a>
-
-                </article>
-
-
-                <!-- COMMUNITY -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🌍
-                    </div>
-
-                    <h3>
-                        تمريض صحة المجتمع
-                    </h3>
-
-                    <div class="english-name">
-                        Community Health Nursing
-                    </div>
-
-                    <p>
-                        اختبارات عن صحة المجتمع،
-                        الوقاية، التثقيف الصحي والأمراض الشائعة.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            📝 MCQ
-                        </span>
-
-                        <span class="meta-item">
-                            🌍 Community
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=community-health"
-                        class="quiz-button"
-                    >
-                        ابدأ الاختبار →
-                    </a>
-
-                </article>
-
-
-                <!-- ALL QUIZZES -->
-
-                <article class="quiz-card">
-
-                    <div class="quiz-icon">
-                        🏆
-                    </div>
-
-                    <h3>
-                        اختبار شامل
-                    </h3>
-
-                    <div class="english-name">
-                        Mixed Nursing Quiz
-                    </div>
-
-                    <p>
-                        تحدٍ شامل يجمع أسئلة من أكثر من مادة
-                        لقياس مستواك بشكل عام.
-                    </p>
-
-                    <div class="quiz-meta">
-
-                        <span class="meta-item">
-                            🔥 Challenge
-                        </span>
-
-                        <span class="meta-item">
-                            🧠 Mixed
-                        </span>
-
-                    </div>
-
-                    <a
-                        href="quiz.html?subject=mixed"
-                        class="quiz-button"
-                    >
-                        ابدأ التحدي →
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             LEVELS
-        ========================================== -->
-
-        <section class="levels-section">
-
-            <div class="section-heading">
-
-                <h2>
-                    🎯 اختر مستواك
-                </h2>
-
-                <p>
-                    الاختبارات مصممة لتناسب مستويات مختلفة
-                </p>
-
-            </div>
-
-
-            <div class="levels-grid">
-
-
-                <div class="level-card">
-
-                    <div class="level-icon">
-                        🟢
-                    </div>
-
-                    <h3>
-                        Beginner
-                    </h3>
-
-                    <p>
-                        مناسب للمراجعة الأساسية
-                        والطلاب الذين يبدأون دراسة الموضوع.
-                    </p>
-
-                </div>
-
-
-                <div class="level-card">
-
-                    <div class="level-icon">
-                        🟡
-                    </div>
-
-                    <h3>
-                        Intermediate
-                    </h3>
-
-                    <p>
-                        أسئلة متوسطة تحتاج إلى فهم
-                        وربط المعلومات ببعضها.
-                    </p>
-
-                </div>
-
-
-                <div class="level-card">
-
-                    <div class="level-icon">
-                        🔴
-                    </div>
-
-                    <h3>
-                        Advanced
-                    </h3>
-
-                    <p>
-                        أسئلة أكثر تحديًا ومواقف
-                        تمريضية تحتاج إلى تفكير سريري.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             FEATURES
-        ========================================== -->
-
-        <section class="features-section">
-
-            <div class="section-heading">
-
-                <h2>
-                    ⚡ نظام الـQuiz Arena
-                </h2>
-
-                <p>
-                    مش مجرد أسئلة — تجربة اختبار كاملة
-                </p>
-
-            </div>
-
-
-            <div class="features-grid">
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        ⏱️
-                    </div>
-
-                    <h3>
-                        Timer
-                    </h3>
-
-                    <p>
-                        وقت محدد للاختبار
-                        لزيادة التحدي.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        📊
-                    </div>
-
-                    <h3>
-                        Progress
-                    </h3>
-
-                    <p>
-                        تابع تقدمك وعدد
-                        الأسئلة التي أجبت عنها.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        💡
-                    </div>
-
-                    <h3>
-                        Explanations
-                    </h3>
-
-                    <p>
-                        معرفة الإجابة الصحيحة
-                        وفهم السبب.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        🏆
-                    </div>
-
-                    <h3>
-                        Results
-                    </h3>
-
-                    <p>
-                        اعرف درجتك ونسبة
-                        نجاحك في الاختبار.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        🔥
-                    </div>
-
-                    <h3>
-                        Challenge
-                    </h3>
-
-                    <p>
-                        اختبارات متنوعة
-                        لرفع مستوى التحدي.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        🎯
-                    </div>
-
-                    <h3>
-                        Levels
-                    </h3>
-
-                    <p>
-                        Beginner وIntermediate
-                        وAdvanced.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        🔄
-                    </div>
-
-                    <h3>
-                        Retry
-                    </h3>
-
-                    <p>
-                        أعد الاختبار وحاول
-                        تحسين نتيجتك.
-                    </p>
-
-                </div>
-
-
-                <div class="feature-card">
-
-                    <div class="icon">
-                        📈
-                    </div>
-
-                    <h3>
-                        Performance
-                    </h3>
-
-                    <p>
-                        تجهيز لنظام تتبع
-                        أداء الطالب مستقبلًا.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             CTA
-        ========================================== -->
-
-        <section class="arena-cta">
+        <div class="section-heading">
 
             <h2>
-                🩺 جاهز للتحدي؟
+                📝 الاختبارات
             </h2>
 
             <p>
-                اختار المادة وابدأ أول اختبار ليك في Nursing Quiz Arena.
+                اختر المادة وابدأ الاختبار
             </p>
 
-            <a
-                href="quiz.html?subject=anatomy"
-                class="cta-button"
-            >
-                🚀 ابدأ أول اختبار
-            </a>
+        </div>
 
-        </section>
+
+        <div class="quiz-grid">
+
+
+            <!-- =========================
+                 ANATOMY
+            ========================== -->
+
+            <article class="quiz-card">
+
+                <div class="quiz-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Anatomy
+                </h3>
+
+                <p>
+                    اختبار في أساسيات علم التشريح
+                    ومصطلحاته واتجاهات الجسم.
+                </p>
+
+                <div class="quiz-meta">
+
+                    <span>
+                        50 سؤال
+                    </span>
+
+                    <span>
+                        Anatomy
+                    </span>
+
+                </div>
+
+                <a
+                    href="quizzes/anatomy.html"
+                    class="quiz-button"
+                >
+                    ابدأ الاختبار →
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 FUNDAMENTALS
+            ========================== -->
+
+            <article class="quiz-card">
+
+                <div class="quiz-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    Fundamentals of Nursing
+                </h3>
+
+                <p>
+                    اختبار في أساسيات ومبادئ
+                    التمريض والرعاية الأساسية للمريض.
+                </p>
+
+                <div class="quiz-meta">
+
+                    <span>
+                        50 سؤال
+                    </span>
+
+                    <span>
+                        Fundamentals
+                    </span>
+
+                </div>
+
+                <a
+                    href="quizzes/fundamentals.html"
+                    class="quiz-button"
+                >
+                    ابدأ الاختبار →
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 MEDICAL SURGICAL
+            ========================== -->
+
+            <article class="quiz-card">
+
+                <div class="quiz-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Medical-Surgical Nursing
+                </h3>
+
+                <p>
+                    اختبار في أساسيات التمريض
+                    الطبي والجراحي.
+                </p>
+
+                <div class="quiz-meta">
+
+                    <span>
+                        50 سؤال
+                    </span>
+
+                    <span>
+                        Medical-Surgical
+                    </span>
+
+                </div>
+
+                <a
+                    href="quizzes/medical-surgical.html"
+                    class="quiz-button"
+                >
+                    ابدأ الاختبار →
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 COMMUNITY HEALTH
+            ========================== -->
+
+            <article class="quiz-card">
+
+                <div class="quiz-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Community Health Nursing
+                </h3>
+
+                <p>
+                    اختبار في مفاهيم صحة المجتمع
+                    والوقاية والتثقيف الصحي.
+                </p>
+
+                <div class="quiz-meta">
+
+                    <span>
+                        50 سؤال
+                    </span>
+
+                    <span>
+                        Community Health
+                    </span>
+
+                </div>
+
+                <a
+                    href="quizzes/community-health.html"
+                    class="quiz-button"
+                >
+                    ابدأ الاختبار →
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 COMPREHENSIVE
+            ========================== -->
+
+            <article class="quiz-card comprehensive">
+
+                <div class="quiz-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Comprehensive Nursing Quiz
+                </h3>
+
+                <p>
+                    اختبار شامل يجمع أسئلة من مواد
+                    التمريض الأساسية لقياس مستواك بشكل عام.
+                </p>
+
+                <div class="quiz-meta">
+
+                    <span>
+                        50 سؤال
+                    </span>
+
+                    <span>
+                        شامل
+                    </span>
+
+                    <span>
+                        All Subjects
+                    </span>
+
+                </div>
+
+                <a
+                    href="quizzes/comprehensive.html"
+                    class="quiz-button"
+                >
+                    ابدأ الاختبار الشامل →
+                </a>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="quiz-info">
+
+            <strong>
+                🎯 كل اختبار يتكون من 50 سؤال
+            </strong>
+
+            <span>
+                اختر المادة المناسبة لك وابدأ الاختبار.
+            </span>
+
+        </div>
+
 
     </div>
 
 </main>
 
 
-<!-- ================================================
+<!-- =====================================================
      FOOTER
-================================================ -->
+====================================================== -->
 
 <footer class="site-footer">
 
     <div class="container">
 
         <div class="footer-top">
+
 
             <div class="footer-brand">
 
@@ -1906,23 +1253,27 @@
             <div class="footer-column">
 
                 <h4>
-                    Nursing Quiz Arena
+                    الاختبارات
                 </h4>
 
-                <a href="quizzes.html">
-                    الاختبارات
-                </a>
-
-                <a href="quiz.html?subject=anatomy">
+                <a href="quizzes/anatomy.html">
                     Anatomy
                 </a>
 
-                <a href="quiz.html?subject=fundamentals">
+                <a href="quizzes/fundamentals.html">
                     Fundamentals
                 </a>
 
-                <a href="quiz.html?subject=medical-surgical">
+                <a href="quizzes/medical-surgical.html">
                     Medical-Surgical
+                </a>
+
+                <a href="quizzes/community-health.html">
+                    Community Health
+                </a>
+
+                <a href="quizzes/comprehensive.html">
+                    الاختبار الشامل
                 </a>
 
             </div>
@@ -1938,12 +1289,12 @@
                     الرئيسية
                 </a>
 
-                <a href="drugs.html">
-                    مركز الأدوية
-                </a>
-
                 <a href="dictionary.html">
                     قاموس التمريض
+                </a>
+
+                <a href="drugs.html">
+                    مركز الأدوية
                 </a>
 
                 <a href="tools.html">
@@ -1951,6 +1302,7 @@
                 </a>
 
             </div>
+
 
         </div>
 
@@ -1972,9 +1324,9 @@
 </footer>
 
 
-<!-- ================================================
+<!-- =====================================================
      JAVASCRIPT
-================================================ -->
+====================================================== -->
 
 <script>
 
@@ -1988,113 +1340,66 @@ function toggleMobileMenu() {
             "mobileMenu"
         );
 
-    const button =
-        document.querySelector(
-            ".mobile-button"
-        );
 
     if (!menu) {
         return;
     }
 
 
-    const isOpen =
-        menu.style.display === "block";
-
-
-    if (isOpen) {
-
-        menu.style.display =
-            "none";
-
-        if (button) {
-
-            button.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
-
-    } else {
+    if (
+        menu.style.display === "none" ||
+        menu.style.display === ""
+    ) {
 
         menu.style.display =
             "block";
 
-        if (button) {
+    } else {
 
-            button.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-        }
+        menu.style.display =
+            "none";
 
     }
 
 }
 
 
-/* =========================================
-   CLOSE MOBILE MENU AFTER CLICK
-========================================= */
+/* إغلاق القائمة عند الضغط على أي رابط */
 
 document
-    .querySelectorAll(
-        "#mobileMenu a"
-    )
-    .forEach(
-        function(link) {
+    .querySelectorAll("#mobileMenu a")
+    .forEach(function(link) {
 
-            link.addEventListener(
-                "click",
-                function() {
+        link.addEventListener(
+            "click",
+            function() {
 
-                    const menu =
-                        document.getElementById(
-                            "mobileMenu"
-                        );
+                const menu =
+                    document.getElementById(
+                        "mobileMenu"
+                    );
 
-                    const button =
-                        document.querySelector(
-                            ".mobile-button"
-                        );
+                if (menu) {
 
-
-                    if (menu) {
-
-                        menu.style.display =
-                            "none";
-
-                    }
-
-
-                    if (button) {
-
-                        button.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
+                    menu.style.display =
+                        "none";
 
                 }
-            );
 
-        }
-    );
+            }
+        );
+
+    });
 
 
-/* =========================================
-   ESCAPE KEY
-========================================= */
+/* إغلاق القائمة عند الرجوع لحجم شاشة كبير */
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+window.addEventListener(
+    "resize",
+    function() {
 
         if (
-            event.key === "Escape"
+            window.innerWidth > 1000
         ) {
 
             const menu =
@@ -2102,26 +1407,10 @@ document.addEventListener(
                     "mobileMenu"
                 );
 
-            const button =
-                document.querySelector(
-                    ".mobile-button"
-                );
-
-
             if (menu) {
 
                 menu.style.display =
                     "none";
-
-            }
-
-
-            if (button) {
-
-                button.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
 
             }
 
