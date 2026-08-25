@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinical Guides | بوابة التمريض</title>
+
+    <meta name="description"
+          content="Clinical Nursing Guides - Nursing Procedures, Patient Care, Infection Control and Clinical Reference | بوابة التمريض">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0b3d62, #087ea4);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            color: #0b3d62;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+            color: #475569;
+        }
+
+        .search-box {
+            margin-top: 18px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #dce6ec;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: #087ea4;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .category-btn {
+            border: none;
+            background: white;
+            padding: 15px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #334155;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.2s;
+        }
+
+        .category-btn:hover {
+            transform: translateY(-2px);
+            border-color: #087ea4;
+        }
+
+        .category-btn.active {
+            background: #087ea4;
+            color: white;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .guide-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-3px);
+            border-color: #087ea4;
+        }
+
+        .guide-icon {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .guide-category {
+            display: inline-block;
+            background: #eaf7fb;
+            color: #087ea4;
+            padding: 5px 9px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .guide-card h3 {
+            color: #0b3d62;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .guide-card p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            width: 100%;
+            border: none;
+            background: #087ea4;
+            color: white;
+            padding: 11px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .view-btn:hover {
+            opacity: 0.9;
+        }
+
+        .empty {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: #64748b;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 16px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            border: none;
+            background: #e2e8f0;
+            color: #334155;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .modal-content h2 {
+            color: #0b3d62;
+            margin-bottom: 15px;
+            padding-left: 40px;
+        }
+
+        .modal-category {
+            display: inline-block;
+            background: #eaf7fb;
+            color: #087ea4;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .modal-section {
+            margin-top: 18px;
+        }
+
+        .modal-section h3 {
+            color: #087ea4;
+            margin-bottom: 8px;
+        }
+
+        .modal-section p,
+        .modal-section li {
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .modal-section ul,
+        .modal-section ol {
+            padding-right: 22px;
+        }
+
+        .loading {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            color: #64748b;
+        }
+
+        .error {
+            background: #fff1f2;
+            color: #be123c;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .guide-card {
+                padding: 17px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <h1>📋 Clinical Guides</h1>
+
+    <p>
+        الدليل السريري للتمريض | بوابة التمريض
+    </p>
+
+</header>
+
+
+<main class="container">
+
+    <section class="intro">
+
+        <h2>🩺 Clinical Nursing Guides</h2>
+
+        <p>
+            مجموعة من الأدلة والمراجع السريرية التي تساعد طلاب
+            التمريض على فهم الإجراءات التمريضية ورعاية المرضى
+            ومكافحة العدوى والمعلومات الإكلينيكية الأساسية.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔎 ابحث عن إجراء أو موضوع تمريضي..."
+            >
+
+        </div>
+
+    </section>
+
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            data-category="all">
+            📚 الكل
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="procedures">
+            🩺 Nursing Procedures
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="patient-care">
+            👤 Patient Care
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="infection-control">
+            🦠 Infection Control
+        </button>
+
+    </div>
+
+
+    <div id="loading" class="loading">
+
+        ⏳ جاري تحميل الأدلة...
+
+    </div>
+
+
+    <div
+        id="guidesGrid"
+        class="guides-grid"
+        style="display:none;">
+    </div>
+
+
+    <div id="empty" class="empty">
+
+        🔎
+        <br><br>
+
+        لا توجد نتائج مطابقة للبحث.
+
+    </div>
+
+
+    <div id="error" class="error">
+
+        ❌ تعذر تحميل Clinical Guides.
+
+        <br><br>
+
+        تأكد من وجود ملف:
+
+        <strong>
+            data/clinical-guides.json
+        </strong>
+
+    </div>
+
+</main>
+
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            onclick="closeGuide()">
+            ×
+        </button>
+
+        <h2 id="modalTitle"></h2>
+
+        <div
+            id="modalCategory"
+            class="modal-category">
+        </div>
+
+        <div
+            id="modalContent">
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let guides = [];
+
+let currentCategory = "all";
+
+
+const loading =
+    document.getElementById("loading");
+
+const guidesGrid =
+    document.getElementById("guidesGrid");
+
+const empty =
+    document.getElementById("empty");
+
+const errorBox =
+    document.getElementById("error");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+/* =========================
+   LOAD GUIDES
+========================= */
+
+fetch("data/clinical-guides.json")
+
+.then(response => {
+
+    if (!response.ok) {
+        throw new Error("JSON file not found");
+    }
+
+    return response.json();
+
+})
+
+.then(data => {
+
+    if (!Array.isArray(data)) {
+        throw new Error("Invalid JSON data");
+    }
+
+    guides = data;
+
+    loading.style.display = "none";
+
+    guidesGrid.style.display = "grid";
+
+    renderGuides();
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    loading.style.display = "none";
+
+    errorBox.style.display = "block";
+
+});
+
+
+/* =========================
+   RENDER GUIDES
+========================= */
+
+function renderGuides() {
+
+    const search =
+        searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered =
+        guides.filter(guide => {
+
+            const matchesCategory =
+                currentCategory === "all" ||
+                guide.category === currentCategory;
+
+
+            const searchableText =
+                `${guide.title}
+                ${guide.description}
+                ${guide.category}
+                ${guide.keywords || ""}`
+                .toLowerCase();
+
+
+            const matchesSearch =
+                searchableText.includes(search);
+
+
+            return matchesCategory &&
+                   matchesSearch;
+
+        });
+
+
+    guidesGrid.innerHTML = "";
+
+
+    if (filtered.length === 0) {
+
+        empty.style.display = "block";
+
+        return;
+
+    }
+
+
+    empty.style.display = "none";
+
+
+    filtered.forEach(guide => {
+
+        const card =
+            document.createElement("article");
+
+        card.className = "guide-card";
+
+
+        card.innerHTML = `
+
+            <div class="guide-icon">
+                ${guide.icon || "🩺"}
+            </div>
+
+            <div class="guide-category">
+                ${getCategoryName(guide.category)}
+            </div>
+
+            <h3>
+                ${guide.title}
+            </h3>
+
+            <p>
+                ${guide.description}
+            </p>
+
+            <button
+                class="view-btn"
+                onclick="openGuide(${guide.id})">
+
+                عرض الدليل →
+
+            </button>
+
+        `;
+
+
+        guidesGrid.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================
+   CATEGORY NAME
+========================= */
+
+function getCategoryName(category) {
+
+    const names = {
+
+        "procedures":
+            "Nursing Procedures",
+
+        "patient-care":
+            "Patient Care",
+
+        "infection-control":
+            "Infection Control",
+
+        "clinical-reference":
+            "Clinical Reference"
+
+    };
+
+
+    return names[category] || "Clinical Guide";
+
+}
+
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+document
+    .querySelectorAll(".category-btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(".category-btn")
+                    .forEach(btn =>
+                        btn.classList.remove("active")
+                    );
+
+
+                button.classList.add("active");
+
+
+                currentCategory =
+                    button.dataset.category;
+
+
+                renderGuides();
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchInput.addEventListener(
+    "input",
+    renderGuides
+);
+
+
+/* =========================
+   OPEN GUIDE
+========================= */
+
+function openGuide(id) {
+
+    const guide =
+        guides.find(item => item.id === id);
+
+
+    if (!guide) {
+        return;
+    }
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent = guide.title;
+
+
+    document.getElementById(
+        "modalCategory"
+    ).textContent =
+        getCategoryName(guide.category);
+
+
+    let html = "";
+
+
+    if (guide.overview) {
+
+        html += `
+
+            <div class="modal-section">
+
+                <h3>📖 Overview</h3>
+
+                <p>
+                    ${guide.overview}
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (
+        guide.indications &&
+        guide.indications.length
+    ) {
+
+        html += `
+
+            <div class="modal-section">
+
+                <h3>📌 Indications</h3>
+
+                <ul>
+
+                    ${guide.indications
+                        .map(item => `<li>${item}</li>`)
+                        .join("")}
+
+                </ul>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (
+        guide.steps &&
+        guide.steps.length
+    ) {
+
+        html += `
+
+            <div class="modal-section">
+
+                <h3>📝 Steps</h3>
+
+                <ol>
+
+                    ${guide.steps
+                        .map(item => `<li>${item}</li>`)
+                        .join("")}
+
+                </ol>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (
+        guide.precautions &&
+        guide.precautions.length
+    ) {
+
+        html += `
+
+            <div class="modal-section">
+
+                <h3>⚠️ Precautions</h3>
+
+                <ul>
+
+                    ${guide.precautions
+                        .map(item => `<li>${item}</li>`)
+                        .join("")}
+
+                </ul>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (guide.notes) {
+
+        html += `
+
+            <div class="modal-section">
+
+                <h3>💡 Clinical Notes</h3>
+
+                <p>
+                    ${guide.notes}
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    document.getElementById(
+        "modalContent"
+    ).innerHTML = html;
+
+
+    document.getElementById(
+        "modal"
+    ).style.display = "block";
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* =========================
+   CLOSE GUIDE
+========================= */
+
+function closeGuide() {
+
+    document.getElementById(
+        "modal"
+    ).style.display = "none";
+
+
+    document.body.style.overflow =
+        "auto";
+
+}
+
+
+document.getElementById("modal")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === this) {
+                closeGuide();
+            }
+
+        }
+    );
+
+
+</script>
+
+</body>
+</html>
