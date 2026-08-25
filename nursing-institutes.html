@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>المعاهد الفنية للتمريض في مصر | بوابة التمريض</title>
+
+    <meta name="description"
+          content="دليل المعاهد الفنية للتمريض والمعاهد الفنية الصحية في مصر، شروط القبول، نظام الدراسة، التخصصات، التدريب والفرص المهنية.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #1e293b;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #0b3d62,
+                #087ea4
+            );
+
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+            opacity: 0.92;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .card h2 {
+            color: #0b3d62;
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #087ea4;
+            margin: 18px 0 8px;
+            font-size: 19px;
+        }
+
+        .intro {
+            font-size: 17px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+            margin-top: 18px;
+        }
+
+        .info-box {
+            background: #eef7fb;
+            border-radius: 12px;
+            padding: 18px;
+
+            border-right:
+                4px solid #087ea4;
+        }
+
+        .info-box strong {
+            display: block;
+            color: #0b3d62;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            padding-right: 24px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        .steps {
+            list-style: none;
+            padding: 0;
+            counter-reset: steps;
+        }
+
+        .steps li {
+            counter-increment: steps;
+
+            background: #f8fafc;
+
+            padding: 14px;
+
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+        }
+
+        .steps li::before {
+            content: counter(steps);
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 30px;
+            height: 30px;
+
+            margin-left: 8px;
+
+            background: #087ea4;
+            color: white;
+
+            border-radius: 50%;
+
+            font-weight: bold;
+        }
+
+        .note {
+            background: #fff8e1;
+
+            border-right:
+                5px solid #f59e0b;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            margin-top: 15px;
+        }
+
+        .warning {
+            background: #fff1f2;
+
+            border-right:
+                5px solid #dc2626;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            margin-top: 15px;
+        }
+
+        .success {
+            background: #ecfdf5;
+
+            border-right:
+                5px solid #16a34a;
+
+            padding: 16px;
+
+            border-radius: 10px;
+
+            margin-top: 15px;
+        }
+
+        .institute-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-top: 15px;
+        }
+
+        .institute {
+            background: #f8fafc;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 10px;
+
+            padding: 13px;
+
+            font-weight: bold;
+
+            color: #334155;
+        }
+
+        .subject-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 10px;
+
+            margin-top: 15px;
+        }
+
+        .subject {
+            background: #eef7fb;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            color: #0b3d62;
+
+            font-weight: bold;
+        }
+
+        .faq {
+            border-top:
+                1px solid #e2e8f0;
+
+            padding-top: 15px;
+
+            margin-top: 15px;
+        }
+
+        .faq strong {
+            display: block;
+
+            color: #087ea4;
+
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 30px;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            background: #0b3d62;
+
+            color: white;
+        }
+
+        footer p {
+            margin: 5px 0;
+
+            opacity: 0.9;
+        }
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .card h2 {
+                font-size: 20px;
+            }
+
+            .info-grid,
+            .institute-list,
+            .subject-list {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🩺 بوابة التمريض</h1>
+
+    <p>
+        دليل المعاهد الفنية للتمريض والصحية في مصر
+    </p>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- INTRO -->
+
+    <section class="card">
+
+        <h2>
+            🏥 المعاهد الفنية للتمريض في مصر
+        </h2>
+
+        <p class="intro">
+
+            المعاهد الفنية للتمريض تُعد أحد المسارات
+            التعليمية المتاحة لدراسة التمريض بعد الثانوية
+            العامة وفقًا لقواعد القبول واللوائح المنظمة
+            لكل مؤسسة.
+
+        </p>
+
+        <div class="note">
+
+            📌 تختلف تفاصيل القبول والمجموع والأعداد
+            المطلوبة من سنة إلى أخرى، لذلك يجب الرجوع
+            إلى إعلان التنسيق والجهة التعليمية الرسمي
+            في سنة التقديم.
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT IS THE INSTITUTE -->
+
+    <section class="card">
+
+        <h2>
+            📚 ما هو المعهد الفني للتمريض؟
+        </h2>
+
+        <p>
+
+            المعهد الفني للتمريض هو مؤسسة تعليمية تقدم
+            برنامجًا متخصصًا في التمريض، ويجمع البرنامج
+            بين الدراسة النظرية والتدريب العملي.
+
+        </p>
+
+        <p style="margin-top:10px;">
+
+            وتوجد معاهد فنية للتمريض تابعة لكليات التمريض
+            بالجامعات، كما توجد معاهد فنية صحية تشرف
+            عليها وزارة الصحة والسكان، وتضم تخصصات
+            صحية متعددة.
+
+        </p>
+
+        <div class="success">
+
+            ✅ وزارة الصحة والسكان توضح أن الإدارة العامة
+            للتعليم الفني الصحي تشرف فنيًا وإداريًا على
+            العملية التعليمية بالمعاهد الفنية الصحية التابعة
+            لها.
+
+        </div>
+
+    </section>
+
+
+    <!-- MINISTRY INSTITUTES -->
+
+    <section class="card">
+
+        <h2>
+            🏛️ المعاهد الفنية الصحية التابعة لوزارة الصحة
+        </h2>
+
+        <p>
+
+            وفقًا لبيانات وزارة الصحة والسكان، توجد
+            معاهد فنية صحية تابعة للوزارة في عدد من
+            المحافظات.
+
+        </p>
+
+        <div class="institute-list">
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بإمبابة
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بطنطا
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي ببنها
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بالإسكندرية
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بالمنصورة
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بالزقازيق
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بالإسماعيلية
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي ببورسعيد
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي ببني سويف
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بأسيوط
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بسوهاج
+            </div>
+
+            <div class="institute">
+                📍 المعهد الفني الصحي بأسوان
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPECIALIZATIONS -->
+
+    <section class="card">
+
+        <h2>
+            🩺 التخصصات والشعب
+        </h2>
+
+        <p>
+
+            المعاهد الفنية الصحية لا تقتصر على التمريض
+            فقط، بل تضم عدة شعب وتخصصات صحية وفقًا
+            للمعهد واللائحة المعتمدة.
+
+        </p>
+
+        <div class="subject-list">
+
+            <div class="subject">
+                👩‍⚕️ فنيات التمريض
+            </div>
+
+            <div class="subject">
+                🏥 تمريض الأورام والجراحات
+            </div>
+
+            <div class="subject">
+                🧠 التمريض النفسي
+            </div>
+
+            <div class="subject">
+                🤰 التوليد وصحة المجتمع
+            </div>
+
+            <div class="subject">
+                🚑 الطوارئ والرعاية الحرجة
+            </div>
+
+            <div class="subject">
+                🏥 الخدمات الطبية العاجلة
+            </div>
+
+            <div class="subject">
+                🔬 فني المعامل
+            </div>
+
+            <div class="subject">
+                ☢️ فني الأشعة
+            </div>
+
+            <div class="subject">
+                🦷 فني الأسنان
+            </div>
+
+            <div class="subject">
+                🧑‍⚕️ المعاونون الصحيون
+            </div>
+
+            <div class="subject">
+                📋 فني التسجيل الطبي
+            </div>
+
+            <div class="subject">
+                ⚙️ فني صيانة الأجهزة الطبية
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMISSION -->
+
+    <section class="card">
+
+        <h2>
+            📝 شروط القبول في المعاهد الفنية للتمريض
+        </h2>
+
+        <p>
+
+            تختلف شروط القبول حسب نوع المعهد والجامعة
+            واللائحة وسنة التقديم.
+
+        </p>
+
+        <h3>
+            من الشروط العامة المتداولة في معاهد فنية
+            للتمريض التابعة للجامعات:
+        </h3>
+
+        <ul>
+
+            <li>
+                الحصول على الثانوية العامة شعبة علمي علوم
+                أو ما يعادلها وفقًا لقواعد المعهد.
+            </li>
+
+            <li>
+                دراسة اللغة الإنجليزية كلغة أولى أو ثانية
+                وفقًا للائحة.
+            </li>
+
+            <li>
+                اجتياز الكشف الطبي.
+            </li>
+
+            <li>
+                اجتياز اختبارات القبول التي تحددها
+                الجهات المختصة عند تطبيقها.
+            </li>
+
+            <li>
+                التقديم من خلال مكتب التنسيق وفقًا
+                للقواعد المنظمة للقبول.
+            </li>
+
+        </ul>
+
+        <div class="warning">
+
+            ⚠️ هذه الشروط ليست بديلًا عن إعلان القبول
+            السنوي. يجب مراجعة شروط المعهد الذي تريد
+            التقديم إليه في سنة التقديم، لأن القواعد قد
+            تتغير.
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDY SYSTEM -->
+
+    <section class="card">
+
+        <h2>
+            🎓 نظام الدراسة
+        </h2>
+
+        <p>
+
+            يختلف نظام الدراسة التفصيلي حسب اللائحة
+            والجهة التعليمية.
+
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <strong>
+                    📖 الدراسة النظرية
+                </strong>
+
+                تشمل مقررات أساسية في علوم التمريض
+                والعلوم الطبية المرتبطة بالمجال.
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>
+                    🏥 التدريب العملي
+                </strong>
+
+                يتضمن تدريبًا عمليًا في بيئات الرعاية
+                الصحية وفقًا لنظام المؤسسة.
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>
+                    🧪 المهارات التمريضية
+                </strong>
+
+                يكتسب الطالب مهارات مرتبطة بتقييم
+                المريض والرعاية والإجراءات التمريضية.
+
+            </div>
+
+
+            <div class="info-box">
+
+                <strong>
+                    👨‍⚕️ التدريب الإجباري
+                </strong>
+
+                بعض برامج الدبلوم الفني للتمريض تتضمن
+                فترة امتياز تدريبية بعد الدراسة وفقًا
+                للائحة المعهد.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DURATION -->
+
+    <section class="card">
+
+        <h2>
+            ⏱️ مدة الدراسة والامتياز
+        </h2>
+
+        <p>
+
+            في عدد من المعاهد الفنية للتمريض التابعة
+            لكليات التمريض بالجامعات، يكون برنامج الدبلوم
+            على مدار سنتين دراسيتين يتبعه تدريب إجباري
+            لمدة ستة أشهر، وفقًا للائحة المؤسسة.
+
+        </p>
+
+        <div class="note">
+
+            📌 مثال: كلية التمريض بجامعة القاهرة توضح
+            أن مدة دراسة دبلوم المعهد الفني للتمريض
+            سنتان دراسيتان يتبعها تدريب إجباري لمدة
+            ستة أشهر.
+
+        </div>
+
+        <p style="margin-top:12px;">
+
+            لذلك لا يُفضل تعميم مدة واحدة على جميع
+            المعاهد؛ راجع اللائحة الخاصة بالمعهد الذي
+            ترغب في الالتحاق به.
+
+        </p>
+
+    </section>
+
+
+    <!-- CURRICULUM -->
+
+    <section class="card">
+
+        <h2>
+            📖 أمثلة على مقررات التمريض
+        </h2>
+
+        <p>
+
+            من المقررات التي تظهر في المناهج المنشورة
+            للمعاهد الفنية الصحية:
+
+        </p>
+
+        <div class="subject-list">
+
+            <div class="subject">
+                🦴 Anatomy — التشريح
+            </div>
+
+            <div class="subject">
+                ❤️ Physiology — وظائف الأعضاء
+            </div>
+
+            <div class="subject">
+                🦠 Microbiology — الميكروبيولوجي
+            </div>
+
+            <div class="subject">
+                🩺 Health Assessment — التقييم الصحي
+            </div>
+
+            <div class="subject">
+                💬 Communication Skills
+            </div>
+
+            <div class="subject">
+                💻 Computer Skills
+            </div>
+
+            <div class="subject">
+                🧠 Psychology — علم النفس
+            </div>
+
+            <div class="subject">
+                📚 Medical Terminology
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION -->
+
+    <section class="card">
+
+        <h2>
+            📝 خطوات التقديم
+        </h2>
+
+        <ol class="steps">
+
+            <li>
+                متابعة إعلان التنسيق والقبول الرسمي.
+            </li>
+
+            <li>
+                معرفة المعاهد والتخصصات المتاحة.
+            </li>
+
+            <li>
+                مراجعة شروط القبول الخاصة بالمعهد.
+            </li>
+
+            <li>
+                تسجيل الرغبات بالطريقة المحددة في
+                التنسيق عند فتحه.
+            </li>
+
+            <li>
+                متابعة نتيجة الترشيح.
+            </li>
+
+            <li>
+                استكمال إجراءات الكشف الطبي والاختبارات
+                والمستندات المطلوبة وفقًا لتعليمات المعهد.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- CAREER -->
+
+    <section class="card">
+
+        <h2>
+            💼 ماذا بعد التخرج؟
+        </h2>
+
+        <p>
+
+            يعتمد المسار المهني على نوع البرنامج
+            والمؤهل والجهة التعليمية والقواعد المنظمة
+            للعمل والتكليف والترخيص.
+
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <strong>
+                    🏥 المستشفيات
+                </strong>
+
+                يمكن أن تشمل مجالات العمل المؤسسات
+                الصحية المختلفة وفقًا للمؤهل والقواعد
+                المنظمة.
+
+            </div>
+
+            <div class="info-box">
+
+                <strong>
+                    🏨 المستشفيات الخاصة
+                </strong>
+
+                قد تتاح فرص العمل بالقطاع الخاص
+                وفقًا لمتطلبات جهة العمل.
+
+            </div>
+
+            <div class="info-box">
+
+                <strong>
+                    🏠 الوحدات والمراكز الصحية
+                </strong>
+
+                قد تشمل مجالات العمل بعض مرافق
+                الرعاية الصحية الأولية وفقًا للمؤهل
+                والوظيفة.
+
+            </div>
+
+            <div class="info-box">
+
+                <strong>
+                    🎓 استكمال الدراسة
+                </strong>
+
+                قد تتاح برامج لاستكمال أو تطوير
+                المؤهل وفقًا للقواعد واللوائح المعتمدة.
+
+            </div>
+
+        </div>
+
+        <div class="note">
+
+            📌 وزارة الصحة تنشر قواعد التكليف للفنيين
+            وخريجي بعض المعاهد، لذلك يجب الرجوع إلى
+            حركة التكليف والقواعد الرسمية وقت التخرج
+            بدل الاعتماد على معلومات قديمة.
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="card">
+
+        <h2>
+            ❓ أسئلة شائعة
+        </h2>
+
+
+        <div class="faq">
+
+            <strong>
+                هل كل المعاهد الفنية للتمريض تابعة لوزارة الصحة؟
+            </strong>
+
+            <p>
+
+                لا. توجد معاهد فنية للتمريض تابعة لكليات
+                التمريض بالجامعات، كما توجد معاهد فنية صحية
+                تابعة لوزارة الصحة وتشرف عليها الإدارة
+                العامة للتعليم الفني الصحي.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq">
+
+            <strong>
+                هل المعهد الفني للتمريض مناسب بعد الثانوية العامة؟
+            </strong>
+
+            <p>
+
+                توجد برامج دبلوم فني للتمريض تقبل الحاصلين
+                على الثانوية العامة شعبة علمي علوم أو ما
+                يعادلها وفقًا لشروط الجهة واللائحة.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq">
+
+            <strong>
+                هل توجد فترة امتياز؟
+            </strong>
+
+            <p>
+
+                نعم، تتضمن بعض برامج الدبلوم الفني للتمريض
+                فترة تدريب إجباري بعد الدراسة، وتوضح بعض
+                اللوائح الرسمية أنها ستة أشهر.
+
+            </p>
+
+        </div>
+
+
+        <div class="faq">
+
+            <strong>
+                هل المجموع المطلوب ثابت كل سنة؟
+            </strong>
+
+            <p>
+
+                لا ينبغي اعتبار أي حد أدنى قديم ثابتًا؛
+                القبول والتنسيق يتغيران حسب السنة والقواعد
+                والأعداد المطلوبة.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <section class="card">
+
+        <h2>
+            ⚠️ تنبيه مهم للطلاب
+        </h2>
+
+        <p>
+
+            معلومات القبول والتنسيق والأعداد المطلوبة
+            والمصاريف ومواعيد التقديم قد تتغير.
+
+        </p>
+
+        <p style="margin-top:10px;">
+
+            قبل اتخاذ قرار التقديم، اعتمد على الموقع
+            الرسمي للجامعة أو وزارة التعليم العالي أو
+            وزارة الصحة والجهة التعليمية التي ستتقدم
+            إليها.
+
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        🩺 بوابة التمريض
+    </p>
+
+    <p>
+        منصة تعليمية لطلاب وممارسي التمريض
+    </p>
+
+    <p>
+        المعلومات التعليمية لا تغني عن الرجوع إلى
+        الجهات الرسمية في قرارات القبول والتنسيق.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
