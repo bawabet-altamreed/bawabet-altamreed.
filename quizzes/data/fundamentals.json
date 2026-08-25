@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary purpose of nursing?",
+    "options": [
+      "To diagnose all diseases",
+      "To promote health, prevent illness, and provide patient care",
+      "To prescribe medications",
+      "To perform surgery"
+    ],
+    "answer": 1,
+    "explanation": "The primary purpose of nursing is to promote health, prevent illness, restore health, and provide care to patients.",
+    "difficulty": "easy",
+    "topic": "Nursing Basics"
+  },
+  {
+    "id": 2,
+    "question": "Which action is most important before providing direct patient care?",
+    "options": [
+      "Checking the patient's room temperature",
+      "Performing hand hygiene",
+      "Opening the patient's chart",
+      "Adjusting the bed"
+    ],
+    "answer": 1,
+    "explanation": "Hand hygiene is one of the most important measures for preventing the transmission of microorganisms.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is considered a basic need?",
+    "options": [
+      "Air",
+      "Luxury",
+      "Entertainment",
+      "Social media"
+    ],
+    "answer": 0,
+    "explanation": "Air is a basic physiological need necessary for human survival.",
+    "difficulty": "easy",
+    "topic": "Basic Human Needs"
+  },
+  {
+    "id": 4,
+    "question": "Which position is commonly used to improve lung expansion in a conscious patient?",
+    "options": [
+      "Supine",
+      "High Fowler's",
+      "Prone",
+      "Trendelenburg"
+    ],
+    "answer": 1,
+    "explanation": "High Fowler's position promotes lung expansion and can make breathing easier for many patients.",
+    "difficulty": "easy",
+    "topic": "Patient Positioning"
+  },
+  {
+    "id": 5,
+    "question": "What is the normal adult resting respiratory rate?",
+    "options": [
+      "4–8 breaths/min",
+      "12–20 breaths/min",
+      "25–35 breaths/min",
+      "40–50 breaths/min"
+    ],
+    "answer": 1,
+    "explanation": "A typical normal resting respiratory rate for an adult is approximately 12–20 breaths per minute.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 6,
+    "question": "Which vital sign measures the force of blood against arterial walls?",
+    "options": [
+      "Pulse",
+      "Temperature",
+      "Blood pressure",
+      "Respiratory rate"
+    ],
+    "answer": 2,
+    "explanation": "Blood pressure measures the force exerted by circulating blood against the walls of blood vessels.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 7,
+    "question": "Which temperature site is commonly considered accurate when properly measured?",
+    "options": [
+      "Rectal",
+      "Hair",
+      "Forehead skin only",
+      "Fingernail"
+    ],
+    "answer": 0,
+    "explanation": "Rectal temperature is often considered a reliable measurement of core body temperature when properly obtained.",
+    "difficulty": "medium",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 8,
+    "question": "What does tachycardia mean?",
+    "options": [
+      "Abnormally slow heart rate",
+      "Abnormally fast heart rate",
+      "Normal heart rate",
+      "Irregular breathing"
+    ],
+    "answer": 1,
+    "explanation": "Tachycardia refers to an abnormally fast heart rate.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 9,
+    "question": "What does bradycardia mean?",
+    "options": [
+      "Abnormally fast heart rate",
+      "Abnormally slow heart rate",
+      "High blood pressure",
+      "Low temperature"
+    ],
+    "answer": 1,
+    "explanation": "Bradycardia refers to an abnormally slow heart rate.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 10,
+    "question": "Which device is commonly used to measure oxygen saturation?",
+    "options": [
+      "Sphygmomanometer",
+      "Pulse oximeter",
+      "Thermometer",
+      "Stethoscope"
+    ],
+    "answer": 1,
+    "explanation": "A pulse oximeter is a noninvasive device used to estimate arterial oxygen saturation.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 11,
+    "question": "Which action is part of the nursing process?",
+    "options": [
+      "Assessment",
+      "Advertising",
+      "Billing",
+      "Marketing"
+    ],
+    "answer": 0,
+    "explanation": "Assessment is the first step of the nursing process, followed by diagnosis, planning, implementation, and evaluation.",
+    "difficulty": "easy",
+    "topic": "Nursing Process"
+  },
+  {
+    "id": 12,
+    "question": "What is the first step of the nursing process?",
+    "options": [
+      "Planning",
+      "Assessment",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 1,
+    "explanation": "Assessment is the first step of the nursing process and involves collecting relevant patient data.",
+    "difficulty": "easy",
+    "topic": "Nursing Process"
+  },
+  {
+    "id": 13,
+    "question": "Which step of the nursing process involves determining whether goals have been achieved?",
+    "options": [
+      "Assessment",
+      "Diagnosis",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 3,
+    "explanation": "Evaluation determines whether the expected outcomes and goals of care have been achieved.",
+    "difficulty": "easy",
+    "topic": "Nursing Process"
+  },
+  {
+    "id": 14,
+    "question": "Which type of data is obtained directly from the patient?",
+    "options": [
+      "Objective data",
+      "Subjective data",
+      "Laboratory data",
+      "Historical data only"
+    ],
+    "answer": 1,
+    "explanation": "Subjective data are information reported by the patient, such as pain or nausea.",
+    "difficulty": "easy",
+    "topic": "Assessment"
+  },
+  {
+    "id": 15,
+    "question": "Which is an example of objective data?",
+    "options": [
+      "Patient reports pain",
+      "Patient says they feel dizzy",
+      "Temperature of 38.5°C",
+      "Patient reports nausea"
+    ],
+    "answer": 2,
+    "explanation": "Objective data are observable or measurable findings, such as temperature, pulse, blood pressure, and laboratory results.",
+    "difficulty": "easy",
+    "topic": "Assessment"
+  },
+  {
+    "id": 16,
+    "question": "Which position places the patient flat on the back?",
+    "options": [
+      "Prone",
+      "Supine",
+      "Lateral",
+      "Sims'"
+    ],
+    "answer": 1,
+    "explanation": "Supine position means the patient is lying flat on the back with the face upward.",
+    "difficulty": "easy",
+    "topic": "Patient Positioning"
+  },
+  {
+    "id": 17,
+    "question": "Which position places the patient lying on the abdomen?",
+    "options": [
+      "Supine",
+      "Prone",
+      "Fowler's",
+      "Lithotomy"
+    ],
+    "answer": 1,
+    "explanation": "Prone position places the patient lying on the abdomen with the face generally turned to one side.",
+    "difficulty": "easy",
+    "topic": "Patient Positioning"
+  },
+  {
+    "id": 18,
+    "question": "Which position is commonly used for some gynecological examinations?",
+    "options": [
+      "Lithotomy",
+      "Prone",
+      "Supine",
+      "Trendelenburg"
+    ],
+    "answer": 0,
+    "explanation": "Lithotomy position is commonly used for certain gynecological and perineal procedures.",
+    "difficulty": "medium",
+    "topic": "Patient Positioning"
+  },
+  {
+    "id": 19,
+    "question": "What is the main purpose of changing a bedridden patient's position regularly?",
+    "options": [
+      "Increase thirst",
+      "Prevent complications such as pressure injuries",
+      "Decrease oxygenation",
+      "Increase body temperature"
+    ],
+    "answer": 1,
+    "explanation": "Regular repositioning helps reduce prolonged pressure and can help prevent pressure injuries and other complications of immobility.",
+    "difficulty": "easy",
+    "topic": "Patient Safety"
+  },
+  {
+    "id": 20,
+    "question": "Which nursing intervention helps prevent falls?",
+    "options": [
+      "Keeping the bed at maximum height",
+      "Keeping frequently used items within reach",
+      "Removing the call bell",
+      "Leaving the floor wet"
+    ],
+    "answer": 1,
+    "explanation": "Keeping essential items and the call bell within the patient's reach helps reduce unnecessary movement and fall risk.",
+    "difficulty": "easy",
+    "topic": "Patient Safety"
+  },
+  {
+    "id": 21,
+    "question": "Which microorganism can be eliminated by antibiotics?",
+    "options": [
+      "Bacteria",
+      "Viruses in all cases",
+      "All fungi",
+      "All parasites"
+    ],
+    "answer": 0,
+    "explanation": "Antibiotics are medications used to treat susceptible bacterial infections; they do not treat viral infections.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 22,
+    "question": "Which link in the chain of infection is the person who can acquire an infection?",
+    "options": [
+      "Reservoir",
+      "Portal of entry",
+      "Susceptible host",
+      "Mode of transmission"
+    ],
+    "answer": 2,
+    "explanation": "The susceptible host is a person who is capable of becoming infected.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 23,
+    "question": "Which method is most effective for preventing the spread of infection in healthcare settings?",
+    "options": [
+      "Hand hygiene",
+      "Wearing perfume",
+      "Opening windows only",
+      "Avoiding patient communication"
+    ],
+    "answer": 0,
+    "explanation": "Proper hand hygiene is one of the most effective ways to prevent transmission of infectious microorganisms.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 24,
+    "question": "What is the purpose of using sterile technique?",
+    "options": [
+      "Increase microorganisms",
+      "Prevent contamination by microorganisms",
+      "Increase room temperature",
+      "Reduce patient communication"
+    ],
+    "answer": 1,
+    "explanation": "Sterile technique is used to prevent contamination with microorganisms during procedures requiring sterility.",
+    "difficulty": "easy",
+    "topic": "Aseptic Technique"
+  },
+  {
+    "id": 25,
+    "question": "Which personal protective equipment is commonly used to protect the hands?",
+    "options": [
+      "Goggles",
+      "Gloves",
+      "Mask",
+      "Gown"
+    ],
+    "answer": 1,
+    "explanation": "Gloves protect the hands from contact with blood, body fluids, secretions, and potentially contaminated materials.",
+    "difficulty": "easy",
+    "topic": "PPE"
+  },
+  {
+    "id": 26,
+    "question": "Which type of isolation is used for infections transmitted by airborne particles?",
+    "options": [
+      "Airborne precautions",
+      "Contact precautions",
+      "Standard precautions only",
+      "Protective environment only"
+    ],
+    "answer": 0,
+    "explanation": "Airborne precautions are used for diseases transmitted through small airborne particles that can remain suspended in the air.",
+    "difficulty": "medium",
+    "topic": "Isolation Precautions"
+  },
+  {
+    "id": 27,
+    "question": "Which route involves administering a medication into the muscle?",
+    "options": [
+      "Intravenous",
+      "Intramuscular",
+      "Subcutaneous",
+      "Oral"
+    ],
+    "answer": 1,
+    "explanation": "Intramuscular administration delivers medication into muscle tissue.",
+    "difficulty": "easy",
+    "topic": "Medication Administration"
+  },
+  {
+    "id": 28,
+    "question": "Which route delivers medication directly into a vein?",
+    "options": [
+      "Subcutaneous",
+      "Intramuscular",
+      "Intravenous",
+      "Oral"
+    ],
+    "answer": 2,
+    "explanation": "Intravenous administration delivers medication directly into the bloodstream through a vein.",
+    "difficulty": "easy",
+    "topic": "Medication Administration"
+  },
+  {
+    "id": 29,
+    "question": "Which route involves placing medication under the tongue?",
+    "options": [
+      "Buccal",
+      "Sublingual",
+      "Intramuscular",
+      "Rectal"
+    ],
+    "answer": 1,
+    "explanation": "Sublingual medication is placed under the tongue for absorption through the oral mucosa.",
+    "difficulty": "easy",
+    "topic": "Medication Administration"
+  },
+  {
+    "id": 30,
+    "question": "Which of the following is one of the traditional rights of medication administration?",
+    "options": [
+      "Right patient",
+      "Right room color",
+      "Right television",
+      "Right visitor"
+    ],
+    "answer": 0,
+    "explanation": "The right patient is one of the fundamental medication administration rights used to promote medication safety.",
+    "difficulty": "easy",
+    "topic": "Medication Safety"
+  },
+  {
+    "id": 31,
+    "question": "What should a nurse do if a medication order is unclear?",
+    "options": [
+      "Guess the intended dose",
+      "Administer the medication anyway",
+      "Clarify the order before administration",
+      "Ask another patient"
+    ],
+    "answer": 2,
+    "explanation": "An unclear or potentially unsafe medication order should be clarified with the appropriate prescriber before administration.",
+    "difficulty": "easy",
+    "topic": "Medication Safety"
+  },
+  {
+    "id": 32,
+    "question": "Which route is generally affected by the first-pass effect?",
+    "options": [
+      "Oral",
+      "Intravenous",
+      "Intramuscular",
+      "Subcutaneous"
+    ],
+    "answer": 0,
+    "explanation": "Orally administered medications may undergo first-pass metabolism in the liver before reaching systemic circulation.",
+    "difficulty": "medium",
+    "topic": "Pharmacology Basics"
+  },
+  {
+    "id": 33,
+    "question": "What is the primary purpose of documentation in nursing?",
+    "options": [
+      "To replace patient care",
+      "To provide an accurate record of patient care",
+      "To entertain staff",
+      "To increase paperwork only"
+    ],
+    "answer": 1,
+    "explanation": "Accurate documentation provides a record of patient assessment, care, interventions, responses, and communication.",
+    "difficulty": "easy",
+    "topic": "Documentation"
+  },
+  {
+    "id": 34,
+    "question": "Which documentation practice is appropriate?",
+    "options": [
+      "Documenting care before it is provided",
+      "Using false information",
+      "Documenting care accurately and promptly",
+      "Deleting unfavorable information"
+    ],
+    "answer": 2,
+    "explanation": "Nursing documentation should be accurate, timely, objective, and based on care that was actually provided.",
+    "difficulty": "easy",
+    "topic": "Documentation"
+  },
+  {
+    "id": 35,
+    "question": "What does patient confidentiality mean?",
+    "options": [
+      "Sharing patient information with everyone",
+      "Protecting private patient information",
+      "Posting patient information online",
+      "Discussing patients in public areas"
+    ],
+    "answer": 1,
+    "explanation": "Patient confidentiality means protecting private health information and sharing it only with authorized individuals for appropriate purposes.",
+    "difficulty": "easy",
+    "topic": "Ethics"
+  },
+  {
+    "id": 36,
+    "question": "Which ethical principle refers to respecting a patient's right to make their own decisions?",
+    "options": [
+      "Autonomy",
+      "Justice",
+      "Fidelity",
+      "Nonmaleficence"
+    ],
+    "answer": 0,
+    "explanation": "Autonomy is the ethical principle that supports a patient's right to make informed decisions about their own care.",
+    "difficulty": "medium",
+    "topic": "Nursing Ethics"
+  },
+  {
+    "id": 37,
+    "question": "Which ethical principle means avoiding harm to the patient?",
+    "options": [
+      "Autonomy",
+      "Beneficence",
+      "Nonmaleficence",
+      "Justice"
+    ],
+    "answer": 2,
+    "explanation": "Nonmaleficence means the obligation to avoid causing harm to the patient.",
+    "difficulty": "medium",
+    "topic": "Nursing Ethics"
+  },
+  {
+    "id": 38,
+    "question": "Which ethical principle means promoting the patient's well-being?",
+    "options": [
+      "Beneficence",
+      "Autonomy",
+      "Justice",
+      "Confidentiality"
+    ],
+    "answer": 0,
+    "explanation": "Beneficence refers to actions intended to promote the well-being and benefit of the patient.",
+    "difficulty": "medium",
+    "topic": "Nursing Ethics"
+  },
+  {
+    "id": 39,
+    "question": "Which action is appropriate when communicating with a patient?",
+    "options": [
+      "Ignoring the patient",
+      "Using active listening",
+      "Interrupting constantly",
+      "Using confusing medical language only"
+    ],
+    "answer": 1,
+    "explanation": "Active listening helps nurses understand the patient's concerns and promotes effective therapeutic communication.",
+    "difficulty": "easy",
+    "topic": "Communication"
+  },
+  {
+    "id": 40,
+    "question": "Which is an example of therapeutic communication?",
+    "options": [
+      "Giving false reassurance",
+      "Changing the subject immediately",
+      "Using an open-ended question",
+      "Arguing with the patient"
+    ],
+    "answer": 2,
+    "explanation": "Open-ended questions encourage patients to express their thoughts and feelings and are useful in therapeutic communication.",
+    "difficulty": "easy",
+    "topic": "Communication"
+  },
+  {
+    "id": 41,
+    "question": "Which nutrient provides the body's main source of energy?",
+    "options": [
+      "Carbohydrates",
+      "Vitamins",
+      "Minerals",
+      "Water"
+    ],
+    "answer": 0,
+    "explanation": "Carbohydrates are a major source of energy for the body.",
+    "difficulty": "easy",
+    "topic": "Nutrition"
+  },
+  {
+    "id": 42,
+    "question": "Which nutrient is especially important for tissue growth and repair?",
+    "options": [
+      "Protein",
+      "Water",
+      "Sodium",
+      "Vitamin C only"
+    ],
+    "answer": 0,
+    "explanation": "Protein provides amino acids needed for tissue growth, maintenance, and repair.",
+    "difficulty": "easy",
+    "topic": "Nutrition"
+  },
+  {
+    "id": 43,
+    "question": "Which electrolyte is especially important for maintaining fluid balance and nerve function?",
+    "options": [
+      "Sodium",
+      "Iron",
+      "Iodine",
+      "Fluoride"
+    ],
+    "answer": 0,
+    "explanation": "Sodium plays an important role in extracellular fluid balance, nerve transmission, and muscle function.",
+    "difficulty": "easy",
+    "topic": "Fluid and Electrolytes"
+  },
+  {
+    "id": 44,
+    "question": "Which finding may indicate dehydration?",
+    "options": [
+      "Moist mucous membranes",
+      "Dark concentrated urine",
+      "Normal skin turgor",
+      "Increased urine output"
+    ],
+    "answer": 1,
+    "explanation": "Dark, concentrated urine can be a sign of inadequate fluid intake or dehydration.",
+    "difficulty": "easy",
+    "topic": "Fluid Balance"
+  },
+  {
+    "id": 45,
+    "question": "Which method is commonly used to assess pain intensity in an alert adult patient?",
+    "options": [
+      "Pain rating scale",
+      "Blood type",
+      "Height measurement",
+      "Respiratory culture"
+    ],
+    "answer": 0,
+    "explanation": "A pain rating scale allows an alert adult patient to communicate the intensity of their pain.",
+    "difficulty": "easy",
+    "topic": "Pain Management"
+  },
+  {
+    "id": 46,
+    "question": "Which scale is commonly used to assess level of consciousness?",
+    "options": [
+      "Glasgow Coma Scale",
+      "Braden Scale",
+      "APGAR only",
+      "BMI scale"
+    ],
+    "answer": 0,
+    "explanation": "The Glasgow Coma Scale assesses level of consciousness using eye opening, verbal response, and motor response.",
+    "difficulty": "easy",
+    "topic": "Patient Assessment"
+  },
+  {
+    "id": 47,
+    "question": "Which scale is commonly used to assess pressure injury risk?",
+    "options": [
+      "Braden Scale",
+      "Glasgow Coma Scale",
+      "Apgar Score",
+      "Pain scale"
+    ],
+    "answer": 0,
+    "explanation": "The Braden Scale is commonly used to assess a patient's risk of developing pressure injuries.",
+    "difficulty": "medium",
+    "topic": "Patient Safety"
+  },
+  {
+    "id": 48,
+    "question": "What is the primary purpose of a nursing care plan?",
+    "options": [
+      "To organize individualized patient care",
+      "To replace medical records",
+      "To diagnose diseases independently",
+      "To eliminate communication"
+    ],
+    "answer": 0,
+    "explanation": "A nursing care plan organizes individualized nursing interventions and expected outcomes based on the patient's needs.",
+    "difficulty": "easy",
+    "topic": "Nursing Care Plan"
+  },
+  {
+    "id": 49,
+    "question": "Which action demonstrates safe patient identification before medication administration?",
+    "options": [
+      "Identify the patient by room number only",
+      "Use appropriate patient identifiers",
+      "Ask another patient for the name",
+      "Skip identification if the patient is familiar"
+    ],
+    "answer": 1,
+    "explanation": "Using appropriate patient identifiers helps ensure that medications and procedures are provided to the correct patient.",
+    "difficulty": "easy",
+    "topic": "Patient Safety"
+  },
+  {
+    "id": 50,
+    "question": "Which action should the nurse take first when a patient suddenly becomes unresponsive?",
+    "options": [
+      "Leave the patient alone",
+      "Assess responsiveness and initiate emergency assessment",
+      "Give oral medication",
+      "Document the event before assessment"
+    ],
+    "answer": 1,
+    "explanation": "When a patient suddenly becomes unresponsive, the nurse should immediately assess responsiveness and initiate the appropriate emergency response according to clinical protocol.",
+    "difficulty": "medium",
+    "topic": "Emergency Nursing"
+  }
+]
