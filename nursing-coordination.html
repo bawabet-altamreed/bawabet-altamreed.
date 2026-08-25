@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>تنسيق التمريض في مصر | بوابة التمريض</title>
+
+    <meta name="description"
+          content="دليل تنسيق التمريض في مصر. تعرف على نظام التنسيق الإلكتروني، ترتيب الرغبات، خطوات التسجيل، متابعة النتيجة وأهم النصائح للطلاب.">
+
+    <meta name="keywords"
+          content="تنسيق التمريض, تنسيق التمريض في مصر, تنسيق كليات التمريض, تنسيق المعاهد, التنسيق الإلكتروني, كليات التمريض, بوابة التمريض">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f4f8fb;
+            color: #1e293b;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b3d62, #087ea4);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.92;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .hero h2 {
+            color: #0b3d62;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .notice {
+            margin-top: 18px;
+            background: #eef7fb;
+            border-right: 5px solid #087ea4;
+            padding: 16px;
+            border-radius: 10px;
+            color: #334155;
+        }
+
+        .section-title {
+            color: #0b3d62;
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card h3 {
+            color: #087ea4;
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            color: #475569;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .step {
+            background: white;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            min-width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #087ea4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .step h3 {
+            color: #0b3d62;
+            margin-bottom: 5px;
+        }
+
+        .step p {
+            color: #475569;
+        }
+
+        .info-box {
+            background: white;
+            padding: 24px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .info-box h3 {
+            color: #0b3d62;
+            margin-bottom: 12px;
+        }
+
+        .info-box ul {
+            padding-right: 23px;
+        }
+
+        .info-box li {
+            margin-bottom: 9px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-right: 5px solid #f97316;
+            color: #7c2d12;
+        }
+
+        .warning h3 {
+            color: #9a3412;
+        }
+
+        .success {
+            background: #ecfdf5;
+            border-right: 5px solid #16a34a;
+            color: #166534;
+        }
+
+        .success h3 {
+            color: #166534;
+        }
+
+        .important {
+            background: #eff6ff;
+            border-right: 5px solid #2563eb;
+        }
+
+        .important h3 {
+            color: #1d4ed8;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .primary-btn {
+            background: #087ea4;
+            color: white;
+        }
+
+        .secondary-btn {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        th {
+            background: #0b3d62;
+            color: white;
+            padding: 14px;
+            text-align: center;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #0b3d62;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero,
+            .card,
+            .info-box {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 21px;
+            }
+
+            .step {
+                padding: 16px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>📊 تنسيق التمريض في مصر</h1>
+
+    <p>
+        دليلك لفهم التنسيق واختيار الرغبات بشكل صحيح
+    </p>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- INTRO -->
+
+    <section class="hero">
+
+        <h2>🎓 ما هو تنسيق التمريض؟</h2>
+
+        <p>
+            تنسيق القبول هو النظام الذي يتم من خلاله
+            تنظيم ترشيح الطلاب للجامعات والمعاهد وفقًا
+            للقواعد والضوابط المعلنة لكل سنة دراسية.
+        </p>
+
+        <div class="notice">
+
+            ℹ️
+            تختلف الحدود الدنيا والقواعد ومراحل التنسيق
+            من عام إلى آخر، لذلك لا تعتبر أرقام السنوات
+            السابقة حدًا أدنى ثابتًا للقبول في السنوات
+            التالية.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TYPES -->
+
+    <h2 class="section-title">
+        🩺 أين يمكن أن يظهر التمريض في التنسيق؟
+    </h2>
+
+
+    <div class="cards">
+
+
+        <article class="card">
+
+            <h3>
+                🎓 كليات التمريض
+            </h3>
+
+            <p>
+                تظهر الكليات والبرامج المتاحة للطالب وفق
+                نوع الشهادة وقواعد القبول المعلنة في
+                سنة التنسيق.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>
+                🏫 المعاهد
+            </h3>
+
+            <p>
+                قد تشمل قوائم التنسيق بعض المعاهد التي
+                تكون متاحة وفق قواعد القبول والحدود الدنيا
+                المعلنة في كل مرحلة.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>
+                🔄 التحويلات وتقليل الاغتراب
+            </h3>
+
+            <p>
+                قد تفتح الوزارة خدمات التحويل أو تقليل
+                الاغتراب وفق القواعد والمواعيد التي يتم
+                الإعلان عنها خلال موسم التنسيق.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <h3>
+                📋 مراحل التنسيق
+            </h3>
+
+            <p>
+                يمكن أن يتم التنسيق على مراحل وفق شرائح
+                المجموع والقواعد التي تعلنها الجهات
+                المختصة.
+            </p>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- STEPS -->
+
+    <h2 class="section-title">
+        📝 خطوات التسجيل في التنسيق الإلكتروني
+    </h2>
+
+
+    <section class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <div>
+
+                <h3>
+                    ادخل إلى موقع التنسيق الرسمي
+                </h3>
+
+                <p>
+                    استخدم الموقع الرسمي للتنسيق وتجنب
+                    المواقع والروابط غير المعروفة.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <div>
+
+                <h3>
+                    سجل بيانات الدخول
+                </h3>
+
+                <p>
+                    استخدم البيانات المطلوبة حسب نوع الشهادة
+                    والتعليمات الظاهرة على الموقع.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <div>
+
+                <h3>
+                    راجع الكليات والمعاهد المتاحة
+                </h3>
+
+                <p>
+                    تعرف على الخيارات المتاحة أمامك قبل
+                    ترتيب الرغبات.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                4
+            </div>
+
+            <div>
+
+                <h3>
+                    رتب الرغبات
+                </h3>
+
+                <p>
+                    رتب اختياراتك وفق أولوياتك الفعلية
+                    وليس بناءً على توقعات صفحات السوشيال
+                    ميديا.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                5
+            </div>
+
+            <div>
+
+                <h3>
+                    راجع البيانات جيدًا
+                </h3>
+
+                <p>
+                    قبل الحفظ أو التسجيل النهائي، راجع
+                    ترتيب الرغبات والبيانات التي أدخلتها.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                6
+            </div>
+
+            <div>
+
+                <h3>
+                    احتفظ ببيانات التسجيل
+                </h3>
+
+                <p>
+                    احتفظ بنسخة أو صورة من بيانات الرغبات
+                    وإيصال أو إثبات التسجيل إذا توفر.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- HOW TO CHOOSE -->
+
+    <h2 class="section-title">
+        🧠 كيف ترتب رغباتك؟
+    </h2>
+
+
+    <section class="info-box important">
+
+        <h3>
+            ترتيب الرغبات قرار مهم
+        </h3>
+
+        <ul>
+
+            <li>
+                ضع الكلية أو المعهد الذي تريده فعلًا في
+                ترتيب مناسب لرغبتك.
+            </li>
+
+            <li>
+                لا ترتب الرغبات اعتمادًا على توقعات صفحات
+                غير رسمية فقط.
+            </li>
+
+            <li>
+                راجع الكليات المتاحة طبقًا لنوع شهادتك.
+            </li>
+
+            <li>
+                انتبه لقواعد التوزيع الجغرافي إن كانت
+                مطبقة على حالتك.
+            </li>
+
+            <li>
+                راجع قواعد السنة الحالية قبل تأكيد الرغبات.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- MINIMUM -->
+
+    <h2 class="section-title">
+        📈 الحد الأدنى للقبول
+    </h2>
+
+
+    <section class="info-box">
+
+        <h3>
+            هل يوجد مجموع ثابت للتمريض؟
+        </h3>
+
+        <p>
+            لا يوجد رقم واحد يمكن اعتباره حدًا أدنى ثابتًا
+            لكل كليات ومعاهد التمريض في جميع السنوات.
+        </p>
+
+        <p>
+            الحد الأدنى يتأثر بقواعد القبول والطاقة
+            الاستيعابية وأعداد الطلاب والمرحلة ونوع
+            الشهادة والجهة التعليمية.
+        </p>
+
+        <div class="notice">
+
+            🎯
+            استخدم أرقام السنوات السابقة للمقارنة وفهم
+            الاتجاه العام فقط، ولا تعتبرها ضمانًا للقبول.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DIFFERENCE -->
+
+    <h2 class="section-title">
+        🔍 الفرق بين التنسيق والقبول
+    </h2>
+
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        التنسيق
+                    </th>
+
+                    <th>
+                        القبول
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        تسجيل وترتيب الرغبات
+                    </td>
+
+                    <td>
+                        الترشيح والالتحاق بالجهة
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        يعتمد على القواعد المعلنة
+                    </td>
+
+                    <td>
+                        يتطلب استيفاء شروط الجهة
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        يتم خلال مراحل ومواعيد محددة
+                    </td>
+
+                    <td>
+                        تليه إجراءات تقديم الملفات والقيد
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- IMPORTANT -->
+
+    <h2 class="section-title">
+        ⚠️ أخطاء شائعة
+    </h2>
+
+
+    <section class="info-box warning">
+
+        <h3>
+            خليك واخد بالك من الحاجات دي
+        </h3>
+
+        <ul>
+
+            <li>
+                الاعتماد على تنسيق سنة قديمة كأنه تنسيق السنة
+                الحالية.
+            </li>
+
+            <li>
+                ترتيب الرغبات بشكل عشوائي.
+            </li>
+
+            <li>
+                الاعتماد على منشور غير رسمي بدل المصدر الرسمي.
+            </li>
+
+            <li>
+                الدخول إلى روابط مجهولة تطلب بيانات شخصية.
+            </li>
+
+            <li>
+                تجاهل المواعيد النهائية لتسجيل الرغبات.
+            </li>
+
+            <li>
+                عدم مراجعة الرغبات قبل تأكيدها.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- 2026 -->
+
+    <h2 class="section-title">
+        📅 تنسيق العام الجامعي 2026 / 2027
+    </h2>
+
+
+    <section class="info-box success">
+
+        <h3>
+            آخر تحديث
+        </h3>
+
+        <p>
+            أعلنت وزارة التعليم العالي استعدادها لانطلاق
+            أعمال التنسيق الإلكتروني للقبول بالجامعات
+            الحكومية والمعاهد للعام الجامعي 2026 / 2027.
+        </p>
+
+        <p>
+            كما أكدت الوزارة أهمية متابعة المنصات الرسمية
+            للحصول على المواعيد والإجراءات والبيانات
+            المحدثة لكل مرحلة.
+        </p>
+
+        <p>
+            لذلك سيتم تحديث هذه الصفحة عند صدور بيانات
+            رسمية جديدة تخص التنسيق.
+        </p>
+
+    </section>
+
+
+
+    <!-- OFFICIAL SOURCES -->
+
+    <h2 class="section-title">
+        🌐 المصادر الرسمية
+    </h2>
+
+
+    <section class="info-box">
+
+        <p>
+            للحصول على أحدث المعلومات، استخدم المصادر
+            الرسمية فقط.
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                class="btn primary-btn"
+                href="https://tansik.digital.gov.eg/"
+                target="_blank"
+                rel="noopener">
+                🌐 موقع التنسيق الإلكتروني
+            </a>
+
+
+            <a
+                class="btn secondary-btn"
+                href="https://mohesr.gov.eg/"
+                target="_blank"
+                rel="noopener">
+                🎓 وزارة التعليم العالي
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="buttons">
+
+        <a
+            href="../index.html"
+            class="btn primary-btn">
+            ← العودة إلى الرئيسية
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        🩺 بوابة التمريض
+    </p>
+
+    <p>
+        دليل تعليمي لطلاب التمريض في مصر
+    </p>
+
+    <p>
+        © 2026 بوابة التمريض
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
