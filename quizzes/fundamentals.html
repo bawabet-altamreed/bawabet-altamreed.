@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundamentals of Nursing Quiz | بوابة التمريض</title>
+
+    <meta name="description"
+          content="Test your knowledge of Fundamentals of Nursing with 50 nursing questions. بوابة التمريض">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #172b4d;
+        }
+
+        .quiz-container {
+            width: 92%;
+            max-width: 850px;
+            margin: 35px auto;
+        }
+
+        .quiz-header {
+            background: linear-gradient(135deg, #0b3d91, #1677c8);
+            color: white;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .quiz-header h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+
+        .quiz-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .info-box {
+            flex: 1;
+            min-width: 120px;
+            background: white;
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-box strong {
+            display: block;
+            font-size: 18px;
+            color: #0b3d91;
+            margin-bottom: 4px;
+        }
+
+        .progress-wrapper {
+            background: #dfe8ef;
+            height: 9px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #1677c8;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-number {
+            color: #1677c8;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .question {
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 22px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8ee;
+            border-radius: 12px;
+            background: #fff;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .option:hover {
+            border-color: #1677c8;
+            background: #f1f8ff;
+        }
+
+        .option.selected {
+            border-color: #1677c8;
+            background: #e8f4ff;
+        }
+
+        .option.correct {
+            border-color: #198754;
+            background: #e8f7ee;
+        }
+
+        .option.wrong {
+            border-color: #dc3545;
+            background: #fff0f1;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f4f8fb;
+            border-left: 4px solid #1677c8;
+            line-height: 1.6;
+        }
+
+        .explanation.show {
+            display: block;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            border: none;
+            padding: 13px 24px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .next-btn {
+            background: #0b3d91;
+            color: white;
+        }
+
+        .next-btn:disabled {
+            background: #aeb8c2;
+            cursor: not-allowed;
+        }
+
+        .result {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .result h2 {
+            color: #0b3d91;
+            margin-top: 0;
+        }
+
+        .score {
+            font-size: 42px;
+            font-weight: bold;
+            color: #1677c8;
+            margin: 15px 0;
+        }
+
+        .restart-btn {
+            background: #1677c8;
+            color: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 18px;
+        }
+
+        .error {
+            text-align: center;
+            padding: 30px;
+            background: #fff0f1;
+            color: #b42318;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .quiz-container {
+                width: 95%;
+                margin: 20px auto;
+            }
+
+            .quiz-header h1 {
+                font-size: 23px;
+            }
+
+            .question {
+                font-size: 18px;
+            }
+
+            .question-card {
+                padding: 18px;
+            }
+
+            .option {
+                font-size: 15px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <div class="quiz-header">
+        <h1>🩺 Fundamentals of Nursing</h1>
+        <p>اختبار أساسيات التمريض</p>
+    </div>
+
+    <div id="loading" class="loading">
+        جاري تحميل الاختبار...
+    </div>
+
+    <div id="quizArea" style="display:none;">
+
+        <div class="quiz-info">
+            <div class="info-box">
+                <strong id="questionCounter">1 / 50</strong>
+                السؤال
+            </div>
+
+            <div class="info-box">
+                <strong id="scoreDisplay">0</strong>
+                الدرجة
+            </div>
+
+            <div class="info-box">
+                <strong id="answeredDisplay">0</strong>
+                تم الحل
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div class="question-card">
+
+            <div id="questionNumber" class="question-number">
+                Question 1
+            </div>
+
+            <div id="questionText" class="question">
+                Loading...
+            </div>
+
+            <div id="options" class="options"></div>
+
+            <div id="explanation" class="explanation"></div>
+
+            <div class="actions">
+                <button
+                    id="nextBtn"
+                    class="btn next-btn"
+                    disabled>
+                    السؤال التالي →
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="result" class="result">
+
+        <h2>🎉 انتهى الاختبار</h2>
+
+        <div class="score" id="finalScore">
+            0 / 50
+        </div>
+
+        <p id="resultMessage"></p>
+
+        <button
+            class="btn restart-btn"
+            onclick="restartQuiz()">
+            إعادة الاختبار
+        </button>
+
+    </div>
+
+    <div id="error" class="error" style="display:none;">
+        <h3>⚠️ تعذر تحميل الاختبار</h3>
+        <p>
+            تأكد من وجود ملف
+            <strong>fundamental.json</strong>
+            داخل مجلد
+            <strong>quizzes</strong>.
+        </p>
+    </div>
+
+</div>
+
+
+<script>
+
+let questions = [];
+let currentQuestion = 0;
+let score = 0;
+let answered = 0;
+let selectedAnswer = null;
+
+
+/* =========================
+   LOAD QUESTIONS
+========================= */
+
+fetch("fundamental.json")
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error("JSON file not found");
+        }
+
+        return response.json();
+    })
+    .then(data => {
+
+        questions = data;
+
+        if (!Array.isArray(questions) || questions.length === 0) {
+            throw new Error("Invalid questions data");
+        }
+
+        /*
+         * الاختبار الأساسي 50 سؤال.
+         * لو الملف يحتوي على أكثر من 50 سؤال
+         * نستخدم أول 50 فقط.
+         */
+
+        questions = questions.slice(0, 50);
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("quizArea").style.display = "block";
+
+        showQuestion();
+
+    })
+    .catch(error => {
+
+        console.error(error);
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("error").style.display = "block";
+
+    });
+
+
+/* =========================
+   SHOW QUESTION
+========================= */
+
+function showQuestion() {
+
+    selectedAnswer = null;
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("questionCounter").textContent =
+        `${currentQuestion + 1} / ${questions.length}`;
+
+    document.getElementById("questionNumber").textContent =
+        `Question ${currentQuestion + 1}`;
+
+    document.getElementById("questionText").textContent =
+        question.question;
+
+    document.getElementById("scoreDisplay").textContent =
+        score;
+
+    document.getElementById("answeredDisplay").textContent =
+        answered;
+
+    const progress =
+        ((currentQuestion) / questions.length) * 100;
+
+    document.getElementById("progressBar").style.width =
+        `${progress}%`;
+
+    const optionsContainer =
+        document.getElementById("options");
+
+    optionsContainer.innerHTML = "";
+
+    question.options.forEach((option, index) => {
+
+        const button = document.createElement("button");
+
+        button.className = "option";
+        button.textContent = option;
+
+        button.onclick = () => selectAnswer(index);
+
+        optionsContainer.appendChild(button);
+
+    });
+
+    document.getElementById("explanation").classList.remove("show");
+    document.getElementById("explanation").innerHTML = "";
+
+    document.getElementById("nextBtn").disabled = true;
+
+    if (currentQuestion === questions.length - 1) {
+        document.getElementById("nextBtn").textContent =
+            "إنهاء الاختبار ✓";
+    } else {
+        document.getElementById("nextBtn").textContent =
+            "السؤال التالي →";
+    }
+}
+
+
+/* =========================
+   SELECT ANSWER
+========================= */
+
+function selectAnswer(index) {
+
+    if (selectedAnswer !== null) {
+        return;
+    }
+
+    selectedAnswer = index;
+
+    const question = questions[currentQuestion];
+
+    const options =
+        document.querySelectorAll(".option");
+
+    options.forEach((option, i) => {
+
+        if (i === index) {
+            option.classList.add("selected");
+        }
+
+        if (i === question.answer) {
+            option.classList.add("correct");
+        }
+
+    });
+
+    if (index === question.answer) {
+
+        score++;
+
+    } else {
+
+        options[index].classList.add("wrong");
+
+    }
+
+    answered++;
+
+    document.getElementById("scoreDisplay").textContent =
+        score;
+
+    document.getElementById("answeredDisplay").textContent =
+        answered;
+
+
+    /* Explanation */
+
+    if (question.explanation) {
+
+        const explanation =
+            document.getElementById("explanation");
+
+        explanation.innerHTML =
+            `<strong>💡 Explanation:</strong><br>${question.explanation}`;
+
+        explanation.classList.add("show");
+    }
+
+    document.getElementById("nextBtn").disabled = false;
+}
+
+
+/* =========================
+   NEXT QUESTION
+========================= */
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+
+    if (selectedAnswer === null) {
+        return;
+    }
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+
+        showQuestion();
+
+    } else {
+
+        finishQuiz();
+
+    }
+
+});
+
+
+/* =========================
+   FINISH QUIZ
+========================= */
+
+function finishQuiz() {
+
+    document.getElementById("quizArea").style.display =
+        "none";
+
+    document.getElementById("result").style.display =
+        "block";
+
+    document.getElementById("finalScore").textContent =
+        `${score} / ${questions.length}`;
+
+    const percentage =
+        Math.round((score / questions.length) * 100);
+
+    let message = "";
+
+    if (percentage >= 90) {
+
+        message =
+            "🔥 ممتاز جدًا! مستواك رائع في Fundamentals of Nursing.";
+
+    } else if (percentage >= 75) {
+
+        message =
+            "👏 ممتاز! لديك مستوى جيد جدًا.";
+
+    } else if (percentage >= 60) {
+
+        message =
+            "👍 جيد، لكن يمكنك مراجعة بعض النقاط.";
+
+    } else {
+
+        message =
+            "📚 محتاج مراجعة أكثر. حاول مرة أخرى وطور نتيجتك.";
+
+    }
+
+    document.getElementById("resultMessage").textContent =
+        `${message} نتيجتك: ${percentage}%`;
+}
+
+
+/* =========================
+   RESTART
+========================= */
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+    score = 0;
+    answered = 0;
+    selectedAnswer = null;
+
+    document.getElementById("result").style.display =
+        "none";
+
+    document.getElementById("quizArea").style.display =
+        "block";
+
+    showQuestion();
+}
+
+</script>
+
+</body>
+</html>
