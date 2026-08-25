@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "What is the normal adult body temperature approximately?",
+    "options": [
+      "35°C",
+      "37°C",
+      "39°C",
+      "41°C"
+    ],
+    "answer": 1,
+    "explanation": "The normal average adult body temperature is approximately 37°C, although it can vary slightly.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 2,
+    "question": "Which vital sign measures the force of blood against the walls of the arteries?",
+    "options": [
+      "Pulse",
+      "Respiration",
+      "Blood pressure",
+      "Temperature"
+    ],
+    "answer": 2,
+    "explanation": "Blood pressure measures the force exerted by circulating blood against the walls of the arteries.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 3,
+    "question": "What is the normal resting respiratory rate for an adult?",
+    "options": [
+      "4–8 breaths/min",
+      "12–20 breaths/min",
+      "25–35 breaths/min",
+      "40–50 breaths/min"
+    ],
+    "answer": 1,
+    "explanation": "A normal resting respiratory rate for most adults is approximately 12–20 breaths per minute.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 4,
+    "question": "Which pulse site is commonly used to assess the pulse at the wrist?",
+    "options": [
+      "Carotid",
+      "Femoral",
+      "Radial",
+      "Apical"
+    ],
+    "answer": 2,
+    "explanation": "The radial pulse is palpated at the wrist on the thumb side.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 5,
+    "question": "Which term describes difficulty breathing?",
+    "options": [
+      "Apnea",
+      "Dyspnea",
+      "Bradypnea",
+      "Tachycardia"
+    ],
+    "answer": 1,
+    "explanation": "Dyspnea is the medical term for difficult or uncomfortable breathing.",
+    "difficulty": "easy",
+    "topic": "Respiratory System"
+  },
+  {
+    "id": 6,
+    "question": "Which oxygen saturation level is generally considered normal in a healthy adult?",
+    "options": [
+      "70–75%",
+      "80–85%",
+      "95–100%",
+      "105–110%"
+    ],
+    "answer": 2,
+    "explanation": "In most healthy adults, oxygen saturation is generally around 95–100%.",
+    "difficulty": "easy",
+    "topic": "Respiratory System"
+  },
+  {
+    "id": 7,
+    "question": "Which respiratory condition is characterized by narrowing and inflammation of the airways?",
+    "options": [
+      "Asthma",
+      "Fracture",
+      "Anemia",
+      "Cystitis"
+    ],
+    "answer": 0,
+    "explanation": "Asthma involves airway inflammation and narrowing that can cause wheezing, coughing, and difficulty breathing.",
+    "difficulty": "easy",
+    "topic": "Respiratory Disorders"
+  },
+  {
+    "id": 8,
+    "question": "Which sound is commonly associated with narrowed airways in asthma?",
+    "options": [
+      "Wheezing",
+      "Crackles only",
+      "Pleural friction only",
+      "Absent bowel sounds"
+    ],
+    "answer": 0,
+    "explanation": "Wheezing is a high-pitched sound commonly caused by narrowed airways.",
+    "difficulty": "easy",
+    "topic": "Respiratory Disorders"
+  },
+  {
+    "id": 9,
+    "question": "Which disease is characterized by chronic airflow limitation?",
+    "options": [
+      "COPD",
+      "Appendicitis",
+      "Gastritis",
+      "Cystitis"
+    ],
+    "answer": 0,
+    "explanation": "Chronic obstructive pulmonary disease (COPD) is characterized by persistent airflow limitation.",
+    "difficulty": "medium",
+    "topic": "Respiratory Disorders"
+  },
+  {
+    "id": 10,
+    "question": "Which position can help improve breathing in a patient with respiratory distress?",
+    "options": [
+      "High Fowler's position",
+      "Flat supine position",
+      "Prone position only",
+      "Trendelenburg position"
+    ],
+    "answer": 0,
+    "explanation": "High Fowler's position can improve lung expansion and make breathing easier for many patients.",
+    "difficulty": "easy",
+    "topic": "Respiratory Nursing Care"
+  },
+  {
+    "id": 11,
+    "question": "Which chamber of the heart pumps blood into the pulmonary artery?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left atrium",
+      "Left ventricle"
+    ],
+    "answer": 1,
+    "explanation": "The right ventricle pumps deoxygenated blood through the pulmonary artery toward the lungs.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 12,
+    "question": "Which artery is the main artery leaving the left ventricle?",
+    "options": [
+      "Pulmonary artery",
+      "Aorta",
+      "Carotid artery",
+      "Femoral artery"
+    ],
+    "answer": 1,
+    "explanation": "The aorta is the main artery that carries oxygenated blood from the left ventricle to systemic circulation.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 13,
+    "question": "Which symptom is commonly associated with angina pectoris?",
+    "options": [
+      "Chest discomfort",
+      "Ear pain",
+      "Skin rash",
+      "Increased urine output"
+    ],
+    "answer": 0,
+    "explanation": "Angina commonly presents as chest discomfort caused by temporary inadequate blood flow to the heart muscle.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular Disorders"
+  },
+  {
+    "id": 14,
+    "question": "Which condition occurs when the heart cannot pump enough blood to meet the body's needs?",
+    "options": [
+      "Heart failure",
+      "Appendicitis",
+      "Cystitis",
+      "Gastritis"
+    ],
+    "answer": 0,
+    "explanation": "Heart failure occurs when the heart cannot pump sufficient blood to meet the body's requirements.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular Disorders"
+  },
+  {
+    "id": 15,
+    "question": "Which symptom may indicate fluid overload in a patient with heart failure?",
+    "options": [
+      "Peripheral edema",
+      "Dry skin only",
+      "Decreased body weight",
+      "Increased appetite"
+    ],
+    "answer": 0,
+    "explanation": "Peripheral edema can occur when excess fluid accumulates in tissues, commonly seen in heart failure.",
+    "difficulty": "medium",
+    "topic": "Heart Failure"
+  },
+  {
+    "id": 16,
+    "question": "Which laboratory value is commonly monitored when assessing blood glucose?",
+    "options": [
+      "Blood glucose level",
+      "Hemoglobin only",
+      "Serum calcium only",
+      "White blood cell count only"
+    ],
+    "answer": 0,
+    "explanation": "Blood glucose measurement is used to assess the current level of glucose in the blood.",
+    "difficulty": "easy",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 17,
+    "question": "Which hormone lowers blood glucose levels?",
+    "options": [
+      "Insulin",
+      "Glucagon",
+      "Adrenaline",
+      "Cortisol"
+    ],
+    "answer": 0,
+    "explanation": "Insulin lowers blood glucose by helping glucose enter cells and promoting storage of glucose.",
+    "difficulty": "easy",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 18,
+    "question": "Which condition is characterized by abnormally high blood glucose levels?",
+    "options": [
+      "Hypoglycemia",
+      "Hyperglycemia",
+      "Hypotension",
+      "Hypothermia"
+    ],
+    "answer": 1,
+    "explanation": "Hyperglycemia means that blood glucose is higher than the normal range.",
+    "difficulty": "easy",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 19,
+    "question": "Which finding may indicate hypoglycemia?",
+    "options": [
+      "Sweating and shakiness",
+      "Warm dry skin only",
+      "Slow wound healing only",
+      "Increased thirst only"
+    ],
+    "answer": 0,
+    "explanation": "Sweating, shakiness, weakness, and confusion can occur when blood glucose becomes too low.",
+    "difficulty": "medium",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 20,
+    "question": "Which organ produces insulin?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Kidney",
+      "Spleen"
+    ],
+    "answer": 1,
+    "explanation": "Insulin is produced by beta cells in the islets of Langerhans of the pancreas.",
+    "difficulty": "easy",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 21,
+    "question": "Which organ is primarily responsible for filtering the blood and producing urine?",
+    "options": [
+      "Heart",
+      "Kidney",
+      "Lung",
+      "Stomach"
+    ],
+    "answer": 1,
+    "explanation": "The kidneys filter blood and remove waste products and excess substances through urine formation.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 22,
+    "question": "Which structure carries urine from the kidney to the bladder?",
+    "options": [
+      "Urethra",
+      "Ureter",
+      "Renal artery",
+      "Nephron"
+    ],
+    "answer": 1,
+    "explanation": "The ureters transport urine from each kidney to the urinary bladder.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 23,
+    "question": "Which symptom is commonly associated with a urinary tract infection?",
+    "options": [
+      "Burning during urination",
+      "Improved vision",
+      "Increased hearing",
+      "Chest expansion"
+    ],
+    "answer": 0,
+    "explanation": "Dysuria, or burning and discomfort during urination, is a common symptom of urinary tract infection.",
+    "difficulty": "easy",
+    "topic": "Urinary Disorders"
+  },
+  {
+    "id": 24,
+    "question": "Which finding may be associated with dehydration?",
+    "options": [
+      "Dry mucous membranes",
+      "Excessive edema",
+      "Increased urine output",
+      "Moist skin with fluid overload"
+    ],
+    "answer": 0,
+    "explanation": "Dry mucous membranes, thirst, decreased urine output, and weakness can occur with dehydration.",
+    "difficulty": "easy",
+    "topic": "Fluid and Electrolytes"
+  },
+  {
+    "id": 25,
+    "question": "Which electrolyte is especially important for cardiac and muscle function?",
+    "options": [
+      "Potassium",
+      "Nitrogen",
+      "Oxygen",
+      "Carbon dioxide"
+    ],
+    "answer": 0,
+    "explanation": "Potassium plays an important role in normal cardiac, nerve, and muscle function.",
+    "difficulty": "medium",
+    "topic": "Electrolytes"
+  },
+  {
+    "id": 26,
+    "question": "Which organ is primarily responsible for producing bile?",
+    "options": [
+      "Liver",
+      "Stomach",
+      "Kidney",
+      "Spleen"
+    ],
+    "answer": 0,
+    "explanation": "The liver produces bile, which helps with the digestion and absorption of fats.",
+    "difficulty": "easy",
+    "topic": "Digestive System"
+  },
+  {
+    "id": 27,
+    "question": "Which organ stores bile?",
+    "options": [
+      "Pancreas",
+      "Gallbladder",
+      "Stomach",
+      "Small intestine"
+    ],
+    "answer": 1,
+    "explanation": "The gallbladder stores and concentrates bile produced by the liver.",
+    "difficulty": "easy",
+    "topic": "Digestive System"
+  },
+  {
+    "id": 28,
+    "question": "Which condition involves inflammation of the appendix?",
+    "options": [
+      "Appendicitis",
+      "Gastritis",
+      "Cystitis",
+      "Hepatitis"
+    ],
+    "answer": 0,
+    "explanation": "Appendicitis is inflammation of the appendix and may require urgent medical evaluation.",
+    "difficulty": "easy",
+    "topic": "Digestive Disorders"
+  },
+  {
+    "id": 29,
+    "question": "Which symptom is commonly associated with appendicitis?",
+    "options": [
+      "Right lower quadrant abdominal pain",
+      "Pain only in the left shoulder",
+      "Nasal congestion",
+      "Ear discharge"
+    ],
+    "answer": 0,
+    "explanation": "Appendicitis commonly causes abdominal pain that may localize to the right lower quadrant.",
+    "difficulty": "medium",
+    "topic": "Appendicitis"
+  },
+  {
+    "id": 30,
+    "question": "Which condition is characterized by inflammation of the stomach lining?",
+    "options": [
+      "Gastritis",
+      "Cystitis",
+      "Bronchitis",
+      "Arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Gastritis refers to inflammation of the stomach lining.",
+    "difficulty": "easy",
+    "topic": "Digestive Disorders"
+  },
+  {
+    "id": 31,
+    "question": "Which type of diabetes usually requires insulin from the time of diagnosis?",
+    "options": [
+      "Type 1 diabetes",
+      "Type 2 diabetes",
+      "Gestational diabetes only",
+      "Prediabetes"
+    ],
+    "answer": 0,
+    "explanation": "People with type 1 diabetes require insulin because their pancreas produces little or no insulin.",
+    "difficulty": "medium",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 32,
+    "question": "Which test reflects average blood glucose control over approximately 2–3 months?",
+    "options": [
+      "HbA1c",
+      "Pulse oximetry",
+      "ECG",
+      "Chest X-ray"
+    ],
+    "answer": 0,
+    "explanation": "HbA1c reflects average blood glucose levels over approximately the previous 2–3 months.",
+    "difficulty": "medium",
+    "topic": "Diabetes"
+  },
+  {
+    "id": 33,
+    "question": "Which blood component is primarily responsible for clotting?",
+    "options": [
+      "Red blood cells",
+      "Platelets",
+      "Plasma glucose",
+      "Neurons"
+    ],
+    "answer": 1,
+    "explanation": "Platelets play a major role in blood clot formation and stopping bleeding.",
+    "difficulty": "easy",
+    "topic": "Hematology"
+  },
+  {
+    "id": 34,
+    "question": "Which blood cells are primarily responsible for fighting infection?",
+    "options": [
+      "Red blood cells",
+      "White blood cells",
+      "Platelets",
+      "Erythrocytes only"
+    ],
+    "answer": 1,
+    "explanation": "White blood cells are major components of the immune system and help fight infection.",
+    "difficulty": "easy",
+    "topic": "Hematology"
+  },
+  {
+    "id": 35,
+    "question": "Which condition is characterized by a decrease in hemoglobin or red blood cells?",
+    "options": [
+      "Anemia",
+      "Hypertension",
+      "Asthma",
+      "Arthritis"
+    ],
+    "answer": 0,
+    "explanation": "Anemia is a condition involving reduced red blood cell mass or hemoglobin, which can reduce oxygen-carrying capacity.",
+    "difficulty": "easy",
+    "topic": "Hematology"
+  },
+  {
+    "id": 36,
+    "question": "Which symptom is commonly associated with anemia?",
+    "options": [
+      "Fatigue",
+      "Increased energy",
+      "Improved exercise tolerance",
+      "Excessive urination only"
+    ],
+    "answer": 0,
+    "explanation": "Fatigue and weakness are common symptoms of anemia due to reduced oxygen delivery to tissues.",
+    "difficulty": "easy",
+    "topic": "Anemia"
+  },
+  {
+    "id": 37,
+    "question": "Which hormone is produced by the thyroid gland?",
+    "options": [
+      "Insulin",
+      "Thyroxine",
+      "Adrenaline",
+      "Insulin-like growth factor only"
+    ],
+    "answer": 1,
+    "explanation": "The thyroid gland produces thyroid hormones, including thyroxine (T4), which help regulate metabolism.",
+    "difficulty": "easy",
+    "topic": "Endocrine System"
+  },
+  {
+    "id": 38,
+    "question": "Which condition results from excessive thyroid hormone activity?",
+    "options": [
+      "Hyperthyroidism",
+      "Hypothyroidism",
+      "Anemia",
+      "Hypoglycemia"
+    ],
+    "answer": 0,
+    "explanation": "Hyperthyroidism occurs when the thyroid gland produces excessive thyroid hormone.",
+    "difficulty": "easy",
+    "topic": "Endocrine Disorders"
+  },
+  {
+    "id": 39,
+    "question": "Which symptom may occur with hypothyroidism?",
+    "options": [
+      "Cold intolerance",
+      "Severe heat intolerance only",
+      "Markedly increased metabolism",
+      "Persistent tachycardia only"
+    ],
+    "answer": 0,
+    "explanation": "Hypothyroidism can cause fatigue, weight gain, dry skin, and increased sensitivity to cold.",
+    "difficulty": "medium",
+    "topic": "Endocrine Disorders"
+  },
+  {
+    "id": 40,
+    "question": "Which system is primarily responsible for defending the body against infection?",
+    "options": [
+      "Immune system",
+      "Skeletal system",
+      "Digestive system only",
+      "Urinary system only"
+    ],
+    "answer": 0,
+    "explanation": "The immune system protects the body against pathogens and other harmful substances.",
+    "difficulty": "easy",
+    "topic": "Immune System"
+  },
+  {
+    "id": 41,
+    "question": "Which condition is caused by an abnormal growth of cells?",
+    "options": [
+      "Cancer",
+      "Dehydration",
+      "Hypothermia",
+      "Fracture"
+    ],
+    "answer": 0,
+    "explanation": "Cancer involves uncontrolled abnormal cell growth that can invade surrounding tissues or spread to other areas.",
+    "difficulty": "easy",
+    "topic": "Oncology"
+  },
+  {
+    "id": 42,
+    "question": "Which nursing action is important when caring for a patient receiving chemotherapy?",
+    "options": [
+      "Monitor for adverse effects",
+      "Ignore vital signs",
+      "Avoid assessing the patient",
+      "Stop all prescribed medications"
+    ],
+    "answer": 0,
+    "explanation": "Patients receiving chemotherapy require careful monitoring for adverse effects, complications, and response to treatment.",
+    "difficulty": "easy",
+    "topic": "Oncology Nursing"
+  },
+  {
+    "id": 43,
+    "question": "Which condition involves inflammation of a joint?",
+    "options": [
+      "Arthritis",
+      "Gastritis",
+      "Bronchitis",
+      "Cystitis"
+    ],
+    "answer": 0,
+    "explanation": "Arthritis refers to inflammation and disorders affecting one or more joints.",
+    "difficulty": "easy",
+    "topic": "Musculoskeletal Disorders"
+  },
+  {
+    "id": 44,
+    "question": "Which nursing intervention is important for a patient with limited mobility?",
+    "options": [
+      "Encourage appropriate mobility and repositioning",
+      "Keep the patient completely immobile",
+      "Avoid skin assessment",
+      "Restrict all movement without indication"
+    ],
+    "answer": 0,
+    "explanation": "Appropriate mobility and regular repositioning can help reduce complications related to immobility, including pressure injuries.",
+    "difficulty": "easy",
+    "topic": "Musculoskeletal Nursing"
+  },
+  {
+    "id": 45,
+    "question": "Which complication can occur from prolonged immobility?",
+    "options": [
+      "Pressure injury",
+      "Improved circulation",
+      "Increased muscle strength",
+      "Improved respiratory function"
+    ],
+    "answer": 0,
+    "explanation": "Prolonged immobility increases the risk of pressure injuries, muscle weakness, venous stasis, and other complications.",
+    "difficulty": "easy",
+    "topic": "Nursing Care"
+  },
+  {
+    "id": 46,
+    "question": "Which nursing assessment is especially important for a patient experiencing acute pain?",
+    "options": [
+      "Pain assessment",
+      "Hair color assessment only",
+      "Height measurement only",
+      "Eye color assessment only"
+    ],
+    "answer": 0,
+    "explanation": "Pain should be assessed systematically, including location, intensity, quality, timing, and factors that relieve or worsen it.",
+    "difficulty": "easy",
+    "topic": "Pain Management"
+  },
+  {
+    "id": 47,
+    "question": "Which pain scale is commonly used to assess pain intensity in an alert adult?",
+    "options": [
+      "0–10 numeric scale",
+      "0–2 scale only",
+      "50–100 scale",
+      "Alphabetical scale only"
+    ],
+    "answer": 0,
+    "explanation": "The 0–10 numeric rating scale is commonly used to assess pain intensity in many alert adults.",
+    "difficulty": "easy",
+    "topic": "Pain Management"
+  },
+  {
+    "id": 48,
+    "question": "Which finding may indicate infection?",
+    "options": [
+      "Fever",
+      "Normal temperature only",
+      "Improved appetite only",
+      "Normal pulse only"
+    ],
+    "answer": 0,
+    "explanation": "Fever can be a sign of infection, although infection may occur without fever in some patients.",
+    "difficulty": "easy",
+    "topic": "Infection"
+  },
+  {
+    "id": 49,
+    "question": "Which nursing practice is most important for preventing the spread of infection?",
+    "options": [
+      "Hand hygiene",
+      "Avoiding patient assessment",
+      "Using the same gloves between patients",
+      "Skipping environmental cleaning"
+    ],
+    "answer": 0,
+    "explanation": "Proper hand hygiene is one of the most important measures for preventing transmission of microorganisms.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 50,
+    "question": "Which principle is essential when caring for a patient with a chronic disease?",
+    "options": [
+      "Promote self-care and patient education",
+      "Ignore the patient's concerns",
+      "Avoid teaching the patient",
+      "Discourage adherence to treatment"
+    ],
+    "answer": 0,
+    "explanation": "Nursing care for chronic illness should support self-management, education, adherence to treatment, and the patient's quality of life.",
+    "difficulty": "medium",
+    "topic": "Chronic Disease Nursing"
+  }
+]
