@@ -306,6 +306,7 @@
             <div class="options" id="optionsContainer"></div>
 
             <div class="navigation">
+
                 <button
                     type="button"
                     class="prev-btn"
@@ -331,6 +332,7 @@
                     style="display:none;">
                     إنهاء الاختبار
                 </button>
+
             </div>
 
         </section>
@@ -342,7 +344,9 @@
         <h2>🎉 انتهى الاختبار</h2>
 
         <div class="score">
-            <span id="score">0</span> / <span id="resultTotal">50</span>
+            <span id="score">0</span>
+            /
+            <span id="resultTotal">50</span>
         </div>
 
         <p class="result-message" id="resultMessage"></p>
@@ -366,29 +370,53 @@
     let currentQuestion = 0;
     let userAnswers = [];
 
-    const questionText = document.getElementById("questionText");
-    const questionNumber = document.getElementById("questionNumber");
-    const optionsContainer = document.getElementById("optionsContainer");
+    const questionText =
+        document.getElementById("questionText");
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const submitBtn = document.getElementById("submitBtn");
+    const questionNumber =
+        document.getElementById("questionNumber");
 
-    const progressBar = document.getElementById("progressBar");
+    const optionsContainer =
+        document.getElementById("optionsContainer");
 
-    const quizArea = document.getElementById("quizArea");
-    const loading = document.getElementById("loading");
-    const result = document.getElementById("result");
-    const errorBox = document.getElementById("errorBox");
+    const prevBtn =
+        document.getElementById("prevBtn");
 
-    const totalQuestions = document.getElementById("totalQuestions");
-    const resultTotal = document.getElementById("resultTotal");
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+    const submitBtn =
+        document.getElementById("submitBtn");
+
+    const progressBar =
+        document.getElementById("progressBar");
+
+    const quizArea =
+        document.getElementById("quizArea");
+
+    const loading =
+        document.getElementById("loading");
+
+    const result =
+        document.getElementById("result");
+
+    const errorBox =
+        document.getElementById("errorBox");
+
+    const totalQuestions =
+        document.getElementById("totalQuestions");
+
+    const resultTotal =
+        document.getElementById("resultTotal");
+
 
     /*
-        تحميل أسئلة Medical-Surgical من ملف JSON
+        تحميل أسئلة Medical-Surgical
+        من ملف JSON
     */
 
     fetch("../data/medical-surgical.json")
+
         .then(response => {
 
             if (!response.ok) {
@@ -396,12 +424,15 @@
             }
 
             return response.json();
+
         })
+
         .then(data => {
 
             if (!Array.isArray(data) || data.length === 0) {
                 throw new Error("No questions found");
             }
+
 
             /*
                 نستخدم أول 50 سؤال فقط
@@ -410,140 +441,242 @@
 
             questions = data.slice(0, 50);
 
-            userAnswers = new Array(questions.length).fill(null);
 
-            totalQuestions.textContent = questions.length;
-            resultTotal.textContent = questions.length;
+            userAnswers =
+                new Array(questions.length).fill(null);
 
-            loading.style.display = "none";
-            quizArea.style.display = "block";
+
+            totalQuestions.textContent =
+                questions.length;
+
+            resultTotal.textContent =
+                questions.length;
+
+
+            loading.style.display =
+                "none";
+
+            quizArea.style.display =
+                "block";
+
 
             showQuestion();
 
         })
+
         .catch(error => {
 
             console.error(error);
 
-            loading.style.display = "none";
+            loading.style.display =
+                "none";
 
-            errorBox.style.display = "block";
+            errorBox.style.display =
+                "block";
 
             errorBox.innerHTML = `
-                <strong>تعذر تحميل الاختبار.</strong><br><br>
-                تأكد من وجود ملف:
-                <br>
-                <b>data/medical-surgical.json</b>
+
+                <strong>
+                    تعذر تحميل الاختبار.
+                </strong>
+
                 <br><br>
+
+                تأكد من وجود ملف:
+
+                <br>
+
+                <b>
+                    data/medical-surgical.json
+                </b>
+
+                <br><br>
+
                 وتأكد أن ملف JSON صحيح.
+
             `;
+
         });
 
 
     function showQuestion() {
 
-        const question = questions[currentQuestion];
+        const question =
+            questions[currentQuestion];
+
 
         questionNumber.textContent =
             `Question ${currentQuestion + 1} of ${questions.length}`;
 
-        questionText.textContent = question.question;
+
+        questionText.textContent =
+            question.question;
+
 
         optionsContainer.innerHTML = "";
 
+
         question.options.forEach((option, index) => {
 
-            const label = document.createElement("label");
+            const label =
+                document.createElement("label");
 
-            label.className = "option";
 
-            if (userAnswers[currentQuestion] === index) {
+            label.className =
+                "option";
+
+
+            if (
+                userAnswers[currentQuestion] === index
+            ) {
+
                 label.classList.add("selected");
+
             }
 
+
             label.innerHTML = `
+
                 <input
                     type="radio"
                     name="question"
                     value="${index}"
-                    ${userAnswers[currentQuestion] === index ? "checked" : ""}
+                    ${
+                        userAnswers[currentQuestion] === index
+                            ? "checked"
+                            : ""
+                    }
                 >
 
                 <span class="option-text">
-                    ${String.fromCharCode(65 + index)}. ${option}
+
+                    ${String.fromCharCode(65 + index)}.
+                    ${option}
+
                 </span>
+
             `;
 
-            label.addEventListener("click", function () {
 
-                userAnswers[currentQuestion] = index;
+            label.addEventListener(
+                "click",
+                function () {
 
-                document.querySelectorAll(".option").forEach(item => {
-                    item.classList.remove("selected");
-                });
+                    userAnswers[currentQuestion] =
+                        index;
 
-                label.classList.add("selected");
 
-                label.querySelector("input").checked = true;
+                    document
+                        .querySelectorAll(".option")
+                        .forEach(item => {
 
-            });
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        });
+
+
+                    label.classList.add(
+                        "selected"
+                    );
+
+
+                    label.querySelector(
+                        "input"
+                    ).checked = true;
+
+                }
+            );
+
 
             optionsContainer.appendChild(label);
 
         });
 
+
         updateNavigation();
+
         updateProgress();
+
     }
 
 
     function updateNavigation() {
 
-        prevBtn.disabled = currentQuestion === 0;
+        prevBtn.disabled =
+            currentQuestion === 0;
 
-        if (currentQuestion === questions.length - 1) {
 
-            nextBtn.style.display = "none";
-            submitBtn.style.display = "block";
+        if (
+            currentQuestion ===
+            questions.length - 1
+        ) {
+
+            nextBtn.style.display =
+                "none";
+
+            submitBtn.style.display =
+                "block";
 
         } else {
 
-            nextBtn.style.display = "block";
-            submitBtn.style.display = "none";
+            nextBtn.style.display =
+                "block";
+
+            submitBtn.style.display =
+                "none";
 
         }
+
     }
 
 
     function updateProgress() {
 
         const progress =
-            ((currentQuestion + 1) / questions.length) * 100;
+            ((currentQuestion + 1) /
+                questions.length) * 100;
 
-        progressBar.style.width = progress + "%";
+
+        progressBar.style.width =
+            progress + "%";
+
     }
 
 
     function nextQuestion() {
 
-        if (userAnswers[currentQuestion] === null) {
+        if (
+            userAnswers[currentQuestion] === null
+        ) {
 
-            alert("من فضلك اختر إجابة أولًا.");
+            alert(
+                "من فضلك اختر إجابة أولًا."
+            );
 
             return;
+
         }
 
-        if (currentQuestion < questions.length - 1) {
+
+        if (
+            currentQuestion <
+            questions.length - 1
+        ) {
 
             currentQuestion++;
 
             showQuestion();
 
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         }
+
     }
 
 
@@ -555,90 +688,139 @@
 
             showQuestion();
 
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         }
+
     }
 
 
     function submitQuiz() {
 
-        if (userAnswers[currentQuestion] === null) {
+        if (
+            userAnswers[currentQuestion] === null
+        ) {
 
-            alert("من فضلك اختر إجابة أولًا.");
+            alert(
+                "من فضلك اختر إجابة أولًا."
+            );
 
             return;
+
         }
 
+
         const unanswered =
-            userAnswers.filter(answer => answer === null).length;
+            userAnswers.filter(
+                answer => answer === null
+            ).length;
+
 
         if (unanswered > 0) {
 
-            const confirmSubmit = confirm(
-                `يوجد ${unanswered} سؤال بدون إجابة.\nهل تريد إنهاء الاختبار؟`
-            );
+            const confirmSubmit =
+                confirm(
+                    `يوجد ${unanswered} سؤال بدون إجابة.\nهل تريد إنهاء الاختبار؟`
+                );
+
 
             if (!confirmSubmit) {
                 return;
             }
+
         }
+
 
         let score = 0;
 
-        questions.forEach((question, index) => {
 
-            if (userAnswers[index] === question.answer) {
-                score++;
+        questions.forEach(
+            (question, index) => {
+
+                if (
+                    userAnswers[index] ===
+                    question.answer
+                ) {
+
+                    score++;
+
+                }
+
             }
+        );
 
-        });
 
         showResult(score);
+
     }
 
 
     function showResult(score) {
 
-        quizArea.style.display = "none";
-        result.style.display = "block";
+        quizArea.style.display =
+            "none";
 
-        document.getElementById("score").textContent = score;
+
+        result.style.display =
+            "block";
+
+
+        document.getElementById(
+            "score"
+        ).textContent = score;
+
 
         const percentage =
-            Math.round((score / questions.length) * 100);
+            Math.round(
+                (score / questions.length) * 100
+            );
+
 
         let message = "";
 
+
         if (percentage >= 90) {
 
-            message = "🔥 ممتاز جدًا! مستواك رائع في Medical-Surgical Nursing.";
+            message =
+                "🔥 ممتاز جدًا! مستواك رائع في Medical-Surgical Nursing.";
 
         } else if (percentage >= 75) {
 
-            message = "👏 ممتاز! مستواك جيد جدًا، استمر في المراجعة.";
+            message =
+                "👏 ممتاز! مستواك جيد جدًا، استمر في المراجعة.";
 
         } else if (percentage >= 60) {
 
-            message = "👍 جيد، لكن محتاج مراجعة بعض النقاط.";
+            message =
+                "👍 جيد، لكن محتاج مراجعة بعض النقاط.";
 
         } else {
 
-            message = "📚 محتاج مراجعة أكتر. حاول مرة أخرى وركز على الأخطاء.";
+            message =
+                "📚 محتاج مراجعة أكتر. حاول مرة أخرى وركز على الأخطاء.";
 
         }
 
-        document.getElementById("resultMessage").textContent =
+
+        document.getElementById(
+            "resultMessage"
+        ).textContent =
             `${message} نتيجتك: ${percentage}%`;
 
-        progressBar.style.width = "100%";
+
+        progressBar.style.width =
+            "100%";
+
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     }
 
 
@@ -646,18 +828,29 @@
 
         currentQuestion = 0;
 
-        userAnswers =
-            new Array(questions.length).fill(null);
 
-        result.style.display = "none";
-        quizArea.style.display = "block";
+        userAnswers =
+            new Array(
+                questions.length
+            ).fill(null);
+
+
+        result.style.display =
+            "none";
+
+
+        quizArea.style.display =
+            "block";
+
 
         showQuestion();
+
 
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     }
 
 </script>
