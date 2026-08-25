@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="قاموس المصطلحات الطبية والتمريضية لطلاب وممارسي التمريض. ابحث عن أكثر من 98 ألف مصطلح طبي باللغة الإنجليزية والعربية."
+        content="قاموس المصطلحات الطبية والتمريضية لطلاب التمريض. ابحث في آلاف المصطلحات الطبية باللغة العربية والإنجليزية مع التعريفات."
     >
 
     <meta
@@ -48,6 +48,7 @@
         rel="stylesheet"
         href="../css/global.css"
     >
+
 
     <style>
 
@@ -83,9 +84,10 @@
             margin: auto;
         }
 
-        /* =========================
+
+        /* =====================================================
            HEADER
-        ========================== */
+        ====================================================== */
 
         .site-header {
             position: sticky;
@@ -206,9 +208,10 @@
             font-size: 20px;
         }
 
-        /* =========================
+
+        /* =====================================================
            MOBILE MENU
-        ========================== */
+        ====================================================== */
 
         #mobileMenu {
             display: none;
@@ -239,9 +242,10 @@
             font-size: 13px;
         }
 
-        /* =========================
+
+        /* =====================================================
            HERO
-        ========================== */
+        ====================================================== */
 
         .page-hero {
             padding: 65px 0 55px;
@@ -367,9 +371,10 @@
             line-height: 1.9;
         }
 
-        /* =========================
+
+        /* =====================================================
            CONTENT
-        ========================== */
+        ====================================================== */
 
         .content-section {
             padding: 50px 0 70px;
@@ -387,9 +392,10 @@
             align-items: start;
         }
 
-        /* =========================
+
+        /* =====================================================
            SIDEBAR
-        ========================== */
+        ====================================================== */
 
         .sidebar {
             position: sticky;
@@ -445,9 +451,10 @@
             font-weight: 700;
         }
 
-        /* =========================
+
+        /* =====================================================
            MAIN
-        ========================== */
+        ====================================================== */
 
         .dictionary-main {
             min-width: 0;
@@ -537,9 +544,10 @@
             font-size: 19px;
         }
 
-        /* =========================
+
+        /* =====================================================
            FILTERS
-        ========================== */
+        ====================================================== */
 
         .filters {
             display: flex;
@@ -581,9 +589,10 @@
             border-color: #0b526b;
         }
 
-        /* =========================
-           STATUS
-        ========================== */
+
+        /* =====================================================
+           DATABASE STATUS
+        ====================================================== */
 
         .database-status {
             display: flex;
@@ -612,6 +621,8 @@
             border-radius: 50%;
 
             background: #f0a500;
+
+            flex-shrink: 0;
         }
 
         .database-status.success .status-dot {
@@ -622,9 +633,10 @@
             background: #dc3545;
         }
 
-        /* =========================
+
+        /* =====================================================
            RESULTS HEADER
-        ========================== */
+        ====================================================== */
 
         .results-header {
             display: flex;
@@ -650,9 +662,10 @@
             font-size: 12px;
         }
 
-        /* =========================
+
+        /* =====================================================
            TERMS GRID
-        ========================== */
+        ====================================================== */
 
         .terms-grid {
             display: grid;
@@ -691,6 +704,18 @@
                 rgba(20,50,65,.07);
         }
 
+        .term-top {
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            gap: 12px;
+
+            margin-bottom: 10px;
+        }
+
         .term-letter {
             width: 36px;
             height: 36px;
@@ -710,19 +735,23 @@
 
             font-weight: 900;
 
-            margin-bottom: 13px;
+            flex-shrink: 0;
         }
 
         .term-card h3 {
+            flex: 1;
+
             color: #12344a;
 
             font-size: 17px;
 
-            margin-bottom: 4px;
+            margin: 0;
 
             direction: ltr;
 
             text-align: left;
+
+            word-break: break-word;
         }
 
         .term-arabic {
@@ -735,15 +764,17 @@
             margin-bottom: 8px;
         }
 
-        .term-card p {
-            color: #77868e;
+        .term-definition {
+            color: #667982;
 
             font-size: 12px;
 
-            line-height: 1.8;
+            line-height: 1.9;
+
+            white-space: pre-line;
         }
 
-        .term-tag {
+        .term-source {
             display: inline-block;
 
             margin-top: 13px;
@@ -759,9 +790,10 @@
             font-size: 10px;
         }
 
-        /* =========================
+
+        /* =====================================================
            LOADING
-        ========================== */
+        ====================================================== */
 
         .loading-box {
             background: white;
@@ -780,6 +812,25 @@
             font-size: 40px;
 
             margin-bottom: 10px;
+
+            animation:
+                pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
         }
 
         .loading-box h3 {
@@ -794,9 +845,10 @@
             font-size: 13px;
         }
 
-        /* =========================
+
+        /* =====================================================
            NO RESULTS
-        ========================== */
+        ====================================================== */
 
         .no-results {
             display: none;
@@ -829,9 +881,10 @@
             font-size: 13px;
         }
 
-        /* =========================
+
+        /* =====================================================
            ERROR
-        ========================== */
+        ====================================================== */
 
         .error-box {
             display: none;
@@ -862,9 +915,10 @@
             line-height: 1.8;
         }
 
-        /* =========================
+
+        /* =====================================================
            INFO
-        ========================== */
+        ====================================================== */
 
         .info-box {
             margin-top: 25px;
@@ -900,9 +954,72 @@
             line-height: 1.9;
         }
 
-        /* =========================
+
+        /* =====================================================
+           PAGINATION
+        ====================================================== */
+
+        #pagination {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 7px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+        .page-button {
+            min-width: 40px;
+
+            height: 38px;
+
+            padding: 0 12px;
+
+            border:
+                1px solid #dce7ea;
+
+            border-radius: 9px;
+
+            background: white;
+
+            color: #526a75;
+
+            cursor: pointer;
+
+            font-weight: 700;
+
+            transition: .2s;
+        }
+
+        .page-button:hover:not(:disabled) {
+            border-color: #0b526b;
+
+            color: #0b526b;
+        }
+
+        .page-button.active {
+            background: #0b526b;
+
+            color: white;
+
+            border-color: #0b526b;
+        }
+
+        .page-button:disabled {
+            opacity: .45;
+
+            cursor: default;
+        }
+
+
+        /* =====================================================
            FOOTER
-        ========================== */
+        ====================================================== */
 
         .site-footer {
             background: #071f32;
@@ -987,9 +1104,10 @@
             font-size: 10px;
         }
 
-        /* =========================
+
+        /* =====================================================
            TABLET
-        ========================== */
+        ====================================================== */
 
         @media (max-width: 1000px) {
 
@@ -1009,9 +1127,10 @@
 
         }
 
-        /* =========================
+
+        /* =====================================================
            MOBILE
-        ========================== */
+        ====================================================== */
 
         @media (max-width: 700px) {
 
@@ -1090,6 +1209,14 @@
                     1fr;
             }
 
+            .results-header {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 4px;
+            }
+
             .footer-top {
                 grid-template-columns:
                     1fr 1fr;
@@ -1109,6 +1236,7 @@
             }
 
         }
+
 
         @media (max-width: 450px) {
 
@@ -1311,9 +1439,9 @@
 
 
             <p>
-                قاموس ضخم للمصطلحات الطبية والتمريضية.
-                ابحث عن المصطلح باللغة الإنجليزية أو العربية
-                واستعرض النتائج بسرعة.
+                ابحث في قاعدة المصطلحات الطبية والتمريضية
+                باللغة العربية أو الإنجليزية، واستعرض
+                التعريفات والمعلومات المرتبطة بكل مصطلح.
             </p>
 
         </div>
@@ -1334,9 +1462,7 @@
         <div class="dictionary-layout">
 
 
-            <!-- =========================
-                 SIDEBAR
-            ========================== -->
+            <!-- SIDEBAR -->
 
             <aside class="sidebar">
 
@@ -1373,18 +1499,18 @@
                     href="../dictionary.html"
                     class="sidebar-link"
                 >
-                    🔎 البحث في القاموس
+                    🔎 الصفحة الرئيسية للقاموس
                 </a>
 
             </aside>
 
 
-            <!-- =========================
-                 MAIN DICTIONARY
-            ========================== -->
+            <!-- MAIN -->
 
             <section class="dictionary-main">
 
+
+                <!-- SEARCH -->
 
                 <div class="search-card">
 
@@ -1393,8 +1519,8 @@
                     </h2>
 
                     <p>
-                        اكتب المصطلح باللغة الإنجليزية أو العربية.
-                        سيتم البحث داخل قاعدة البيانات الضخمة للمصطلحات.
+                        يمكنك البحث بالاسم الإنجليزي أو العربي
+                        أو جزء من الكلمة أو المرادفات المتاحة.
                     </p>
 
 
@@ -1407,8 +1533,9 @@
                         <input
                             type="search"
                             id="termSearch"
-                            placeholder="مثال: Anatomy أو abdomen..."
+                            placeholder="مثال: Anatomy أو Abdomen أو ضغط الدم..."
                             autocomplete="off"
+                            aria-label="البحث عن مصطلح طبي"
                         >
 
                     </div>
@@ -1456,9 +1583,7 @@
                 </div>
 
 
-                <!-- =========================
-                     STATUS
-                ========================== -->
+                <!-- STATUS -->
 
                 <div
                     class="database-status"
@@ -1468,15 +1593,13 @@
                     <span class="status-dot"></span>
 
                     <span id="statusText">
-                        جاري تحميل قاعدة بيانات المصطلحات...
+                        جاري تحميل قواعد المصطلحات الطبية...
                     </span>
 
                 </div>
 
 
-                <!-- =========================
-                     ERROR
-                ========================== -->
+                <!-- ERROR -->
 
                 <div
                     class="error-box"
@@ -1484,20 +1607,18 @@
                 >
 
                     <h3>
-                        ⚠️ تعذر تحميل قاعدة البيانات
+                        ⚠️ تعذر تحميل قاعدة المصطلحات
                     </h3>
 
                     <p id="errorText">
-                        تأكد من وجود:
-                        data/search-index.json
+                        تأكد من وجود ملفات قاعدة البيانات داخل:
+                        data/medical/
                     </p>
 
                 </div>
 
 
-                <!-- =========================
-                     RESULTS HEADER
-                ========================== -->
+                <!-- RESULTS HEADER -->
 
                 <div class="results-header">
 
@@ -1515,9 +1636,7 @@
                 </div>
 
 
-                <!-- =========================
-                     LOADING
-                ========================== -->
+                <!-- LOADING -->
 
                 <div
                     class="loading-box"
@@ -1533,15 +1652,13 @@
                     </h3>
 
                     <p>
-                        لحظات ويتم عرض المصطلحات.
+                        يتم الآن تحميل وتجميع قواعد المصطلحات.
                     </p>
 
                 </div>
 
 
-                <!-- =========================
-                     TERMS
-                ========================== -->
+                <!-- TERMS -->
 
                 <div
                     class="terms-grid"
@@ -1549,9 +1666,7 @@
                 ></div>
 
 
-                <!-- =========================
-                     NO RESULTS
-                ========================== -->
+                <!-- NO RESULTS -->
 
                 <div
                     class="no-results"
@@ -1567,15 +1682,14 @@
                     </h3>
 
                     <p>
-                        جرّب كتابة المصطلح بطريقة مختلفة.
+                        جرّب كتابة المصطلح باللغة الإنجليزية أو العربية
+                        أو استخدم جزءًا من الاسم.
                     </p>
 
                 </div>
 
 
-                <!-- =========================
-                     INFO
-                ========================== -->
+                <!-- INFO -->
 
                 <div class="info-box">
 
@@ -1584,10 +1698,9 @@
                     </h3>
 
                     <p>
-                        هذه المصطلحات مقدمة لأغراض تعليمية
-                        ومراجعة معلومات التمريض. لا تُستخدم
-                        المعلومات الموجودة هنا كبديل عن التقييم
-                        الطبي أو التوجيه من المختصين.
+                        هذه المصطلحات مقدمة لأغراض تعليمية ومراجعة
+                        معلومات التمريض. لا تُستخدم المعلومات الموجودة
+                        هنا كبديل عن التقييم الطبي أو التوجيه من المختصين.
                     </p>
 
                 </div>
@@ -1611,6 +1724,7 @@
     <div class="container">
 
         <div class="footer-top">
+
 
             <div class="footer-brand">
 
@@ -1646,7 +1760,7 @@
                 </a>
 
                 <a href="../dictionary.html">
-                    البحث
+                    الصفحة الرئيسية للقاموس
                 </a>
 
             </div>
@@ -1675,6 +1789,7 @@
                 </a>
 
             </div>
+
 
         </div>
 
@@ -1706,17 +1821,32 @@
 
 
 /* =====================================================
-   CONFIGURATION
+   DATABASE CONFIGURATION
 ===================================================== */
 
-const SEARCH_INDEX_PATH =
-    "data/search-index.json";
+const DATABASE_FILES = [
 
-const TERMS_PATH =
-    "data/terms/";
+    {
+        path: "data/medical/anatomy.json",
+        source: "Anatomy"
+    },
+
+    {
+        path: "data/medical/physiology.json",
+        source: "Physiology"
+    },
+
+    {
+        path: "data/medical/medical-dictionary.json",
+        source: "Medical Dictionary"
+    }
+
+];
 
 
 const RESULTS_PER_PAGE = 40;
+
+const MAX_SEARCH_RESULTS = 300;
 
 
 /* =====================================================
@@ -1724,49 +1854,69 @@ const RESULTS_PER_PAGE = 40;
 ===================================================== */
 
 const searchInput =
-    document.getElementById("termSearch");
+    document.getElementById(
+        "termSearch"
+    );
 
 const termsGrid =
-    document.getElementById("termsGrid");
+    document.getElementById(
+        "termsGrid"
+    );
 
 const resultsCount =
-    document.getElementById("resultsCount");
+    document.getElementById(
+        "resultsCount"
+    );
 
 const noResults =
-    document.getElementById("noResults");
+    document.getElementById(
+        "noResults"
+    );
 
 const loadingBox =
-    document.getElementById("loadingBox");
+    document.getElementById(
+        "loadingBox"
+    );
 
 const databaseStatus =
-    document.getElementById("databaseStatus");
+    document.getElementById(
+        "databaseStatus"
+    );
 
 const statusText =
-    document.getElementById("statusText");
+    document.getElementById(
+        "statusText"
+    );
 
 const errorBox =
-    document.getElementById("errorBox");
+    document.getElementById(
+        "errorBox"
+    );
 
 const errorText =
-    document.getElementById("errorText");
+    document.getElementById(
+        "errorText"
+    );
 
 const filterButtons =
-    document.querySelectorAll(".filter-button");
+    document.querySelectorAll(
+        ".filter-button"
+    );
 
 
 /* =====================================================
-   GLOBAL DATA
+   GLOBAL STATE
 ===================================================== */
 
-let searchIndex = [];
-
-let loadedTerms = {};
-
-let selectedLetter = "all";
+let allTerms = [];
 
 let currentResults = [];
 
+let selectedLetter = "all";
+
 let currentPage = 1;
+
+let searchTimer = null;
 
 
 /* =====================================================
@@ -1776,7 +1926,9 @@ let currentPage = 1;
 function toggleMobileMenu() {
 
     const menu =
-        document.getElementById("mobileMenu");
+        document.getElementById(
+            "mobileMenu"
+        );
 
     if (!menu) {
         return;
@@ -1787,11 +1939,13 @@ function toggleMobileMenu() {
         menu.style.display === ""
     ) {
 
-        menu.style.display = "block";
+        menu.style.display =
+            "block";
 
     } else {
 
-        menu.style.display = "none";
+        menu.style.display =
+            "none";
 
     }
 
@@ -1804,9 +1958,53 @@ function toggleMobileMenu() {
 
 function normalizeText(value) {
 
-    return String(value || "")
+    return String(value ?? "")
         .toLowerCase()
+        .normalize("NFKC")
+        .replace(/\s+/g, " ")
         .trim();
+
+}
+
+
+/* =====================================================
+   ARABIC NORMALIZATION
+===================================================== */
+
+function normalizeArabic(value) {
+
+    return String(value ?? "")
+        .normalize("NFKC")
+        .replace(/[أإآ]/g, "ا")
+        .replace(/ة/g, "ه")
+        .replace(/ى/g, "ي")
+        .replace(/ؤ/g, "و")
+        .replace(/ئ/g, "ي")
+        .replace(/ـ/g, "")
+        .replace(/[\u064B-\u065F\u0670]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+
+/* =====================================================
+   SEARCH NORMALIZATION
+===================================================== */
+
+function searchableText(value) {
+
+    const original =
+        normalizeText(value);
+
+    const arabic =
+        normalizeArabic(value);
+
+    return (
+        original +
+        " " +
+        arabic
+    );
 
 }
 
@@ -1817,38 +2015,12 @@ function normalizeText(value) {
 
 function escapeHTML(value) {
 
-    return String(value || "")
+    return String(value ?? "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
-
-}
-
-
-/* =====================================================
-   GET LETTER
-===================================================== */
-
-function getTermLetter(term) {
-
-    const first =
-        String(term || "")
-            .trim()
-            .charAt(0)
-            .toLowerCase();
-
-    if (
-        first >= "a" &&
-        first <= "z"
-    ) {
-
-        return first;
-
-    }
-
-    return "other";
 
 }
 
@@ -1862,7 +2034,8 @@ function setStatus(
     type = ""
 ) {
 
-    statusText.textContent = text;
+    statusText.textContent =
+        text;
 
     databaseStatus.classList.remove(
         "success",
@@ -1881,252 +2054,390 @@ function setStatus(
 
 
 /* =====================================================
-   LOAD SEARCH INDEX
+   GET FIRST VALUE
 ===================================================== */
 
-async function loadSearchIndex() {
-
-    try {
-
-        setStatus(
-            "جاري تحميل فهرس البحث..."
-        );
-
-        const response =
-            await fetch(
-                SEARCH_INDEX_PATH,
-                {
-                    cache: "no-cache"
-                }
-            );
-
-        if (!response.ok) {
-
-            throw new Error(
-                "HTTP " +
-                response.status +
-                " - " +
-                response.statusText
-            );
-
-        }
-
-        searchIndex =
-            await response.json();
-
-
-        if (
-            !Array.isArray(searchIndex)
-        ) {
-
-            throw new Error(
-                "صيغة search-index.json غير صحيحة."
-            );
-
-        }
-
-
-        setStatus(
-            "تم تحميل فهرس البحث بنجاح — " +
-            searchIndex.length.toLocaleString("en-US") +
-            " مصطلح",
-            "success"
-        );
-
-
-        loadingBox.style.display =
-            "none";
-
-
-        resultsCount.textContent =
-            "إجمالي المصطلحات: " +
-            searchIndex.length.toLocaleString("en-US");
-
-
-        /*
-         * لا نعرض 98 ألف عنصر عند فتح الصفحة.
-         * نعرض مجموعة أولية فقط.
-         */
-
-        showInitialTerms();
-
-
-    } catch (error) {
-
-        console.error(
-            "Search Index Error:",
-            error
-        );
-
-
-        loadingBox.style.display =
-            "none";
-
-        errorBox.style.display =
-            "block";
-
-        errorText.textContent =
-            "تعذر تحميل قاعدة البيانات. تأكد من وجود: data/search-index.json ثم قم بعمل Hard Refresh.";
-
-        setStatus(
-            "فشل تحميل قاعدة البيانات",
-            "error"
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   LOAD LETTER FILE
-===================================================== */
-
-async function loadLetterFile(
-    letter
+function getFirstValue(
+    object,
+    keys
 ) {
 
     if (
-        loadedTerms[letter]
+        !object ||
+        typeof object !== "object"
     ) {
 
-        return loadedTerms[letter];
+        return "";
 
     }
 
 
-    const path =
-        TERMS_PATH +
-        letter +
-        ".json";
-
-
-    try {
-
-        const response =
-            await fetch(
-                path,
-                {
-                    cache: "default"
-                }
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "HTTP " +
-                response.status
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
+    for (
+        const key of keys
+    ) {
 
         if (
-            !Array.isArray(data)
+            object[key] !== undefined &&
+            object[key] !== null &&
+            String(object[key]).trim() !== ""
         ) {
 
-            throw new Error(
-                "ملف " +
-                letter +
-                ".json ليس Array."
-            );
+            return object[key];
 
         }
 
-
-        loadedTerms[letter] =
-            data;
-
-
-        return data;
-
-
-    } catch (error) {
-
-        console.error(
-            "Letter file error:",
-            letter,
-            error
-        );
-
-
-        throw error;
-
     }
+
+
+    return "";
 
 }
 
 
 /* =====================================================
-   GET INDEX ITEM DATA
+   ARRAY TO TEXT
 ===================================================== */
 
-function parseIndexItem(item) {
+function valueToText(value) {
+
+    if (
+        Array.isArray(value)
+    ) {
+
+        return value
+            .map(
+                item =>
+                    valueToText(item)
+            )
+            .filter(Boolean)
+            .join(", ");
+
+    }
+
+
+    if (
+        value &&
+        typeof value === "object"
+    ) {
+
+        return Object.values(value)
+            .map(
+                item =>
+                    valueToText(item)
+            )
+            .filter(Boolean)
+            .join(", ");
+
+    }
+
+
+    return String(
+        value ?? ""
+    ).trim();
+
+}
+
+
+/* =====================================================
+   EXTRACT RAW RECORDS
+===================================================== */
+
+function extractRecords(
+    json
+) {
+
+    if (
+        Array.isArray(json)
+    ) {
+
+        return json;
+
+    }
+
+
+    if (
+        json &&
+        typeof json === "object"
+    ) {
+
+        const possibleKeys = [
+
+            "terms",
+            "data",
+            "items",
+            "records",
+            "entries",
+            "medicalTerms",
+            "medical_terms"
+
+        ];
+
+
+        for (
+            const key of possibleKeys
+        ) {
+
+            if (
+                Array.isArray(
+                    json[key]
+                )
+            ) {
+
+                return json[key];
+
+            }
+
+        }
+
+
+        /*
+         * لو الـJSON عبارة عن object
+         * والمفاتيح نفسها هي المصطلحات.
+         */
+
+        const values =
+            Object.values(json);
+
+
+        if (
+            values.length &&
+            values.every(
+                item =>
+                    item &&
+                    typeof item === "object"
+            )
+        ) {
+
+            return values;
+
+        }
+
+    }
+
+
+    return [];
+
+}
+
+
+/* =====================================================
+   NORMALIZE RECORD
+===================================================== */
+
+function normalizeRecord(
+    raw,
+    source
+) {
+
+    if (
+        raw === null ||
+        raw === undefined
+    ) {
+
+        return null;
+
+    }
+
 
     /*
-     * الصيغة المتوقعة:
-     *
-     * [term, id, file]
-     *
+     * لو السجل String فقط
      */
 
     if (
-        Array.isArray(item)
+        typeof raw === "string"
     ) {
+
+        const term =
+            raw.trim();
+
+        if (!term) {
+            return null;
+        }
 
         return {
 
-            term:
-                item[0] || "",
-
             id:
-                item[1] || "",
+                term,
 
-            file:
-                item[2] || ""
+            term:
+                term,
+
+            arabic:
+                "",
+
+            definition:
+                "",
+
+            synonyms:
+                "",
+
+            category:
+                source,
+
+            source:
+                source,
+
+            sourceFile:
+                source
 
         };
 
     }
 
 
-    /*
-     * دعم إضافي لو الملف كان Objects.
-     */
-
     if (
-        item &&
-        typeof item === "object"
+        typeof raw !== "object"
     ) {
 
-        return {
+        return null;
 
-            term:
-                item.term || "",
+    }
 
-            id:
-                item.id || "",
 
-            file:
-                item.file ||
-                item.letter ||
-                ""
+    const term =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "term",
+                    "name",
+                    "title",
+                    "english",
+                    "englishTerm",
+                    "english_term",
+                    "medicalTerm",
+                    "medical_term",
+                    "word"
+                ]
+            )
+        );
 
-        };
+
+    const arabic =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "arabic",
+                    "arabicTerm",
+                    "arabic_term",
+                    "translation",
+                    "meaning",
+                    "meaningArabic",
+                    "arabicMeaning",
+                    "ar",
+                    "العربي",
+                    "الترجمة"
+                ]
+            )
+        );
+
+
+    const definition =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "definition",
+                    "description",
+                    "explanation",
+                    "details",
+                    "definitionArabic",
+                    "arabicDefinition",
+                    "definition_ar",
+                    "تعريف",
+                    "التعريف"
+                ]
+            )
+        );
+
+
+    const synonyms =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "synonyms",
+                    "synonym",
+                    "aliases",
+                    "alternativeNames",
+                    "alternative_names",
+                    "searchTerms",
+                    "search_terms",
+                    "keywords"
+                ]
+            )
+        );
+
+
+    const category =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "category",
+                    "specialty",
+                    "type",
+                    "section",
+                    "subject"
+                ]
+            )
+        );
+
+
+    const id =
+        valueToText(
+            getFirstValue(
+                raw,
+                [
+                    "id",
+                    "_id",
+                    "slug",
+                    "key"
+                ]
+            )
+        );
+
+
+    /*
+     * لو مفيش term صريح،
+     * نحاول استخدام اسم المفتاح.
+     */
+
+    if (!term) {
+
+        return null;
 
     }
 
 
     return {
 
-        term: "",
-        id: "",
-        file: ""
+        id:
+            id ||
+            term,
+
+        term:
+            term,
+
+        arabic:
+            arabic,
+
+        definition:
+            definition,
+
+        synonyms:
+            synonyms,
+
+        category:
+            category ||
+            source,
+
+        source:
+            source,
+
+        sourceFile:
+            source
 
     };
 
@@ -2134,51 +2445,430 @@ function parseIndexItem(item) {
 
 
 /* =====================================================
-   FIND TERM IN LETTER FILE
+   CREATE SEARCH FIELD
 ===================================================== */
 
-function findTermInFile(
-    data,
-    id,
-    term
+function buildSearchField(
+    item
 ) {
 
-    const normalizedTerm =
-        normalizeText(term);
+    return [
+
+        item.term,
+
+        item.arabic,
+
+        item.definition,
+
+        item.synonyms,
+
+        item.category,
+
+        item.source
+
+    ]
+    .map(
+        value =>
+            searchableText(value)
+    )
+    .join(" ");
+
+}
 
 
-    return data.find(
-        function(item) {
+/* =====================================================
+   CREATE UNIQUE KEY
+===================================================== */
 
-            if (!item) {
-                return false;
-            }
+function createUniqueKey(
+    item
+) {
+
+    const english =
+        normalizeText(
+            item.term
+        );
+
+    const arabic =
+        normalizeArabic(
+            item.arabic
+        );
+
+    return (
+        english +
+        "|" +
+        arabic
+    );
+
+}
 
 
-            if (
-                String(item.id || "") ===
-                String(id || "")
-            ) {
+/* =====================================================
+   REMOVE DUPLICATES
+===================================================== */
 
-                return true;
+function removeDuplicates(
+    records
+) {
 
-            }
-
-
-            if (
-                normalizeText(item.term) ===
-                normalizedTerm
-            ) {
-
-                return true;
-
-            }
+    const map =
+        new Map();
 
 
-            return false;
+    for (
+        const item of records
+    ) {
+
+        if (!item) {
+            continue;
+        }
+
+
+        const key =
+            createUniqueKey(
+                item
+            );
+
+
+        if (
+            !key ||
+            key === "|"
+        ) {
+
+            continue;
+
+        }
+
+
+        /*
+         * لو نفس المصطلح موجود أكثر من مرة،
+         * نفضل السجل الذي يحتوي على تعريف عربي
+         * ومعلومات أكثر.
+         */
+
+        if (
+            !map.has(key)
+        ) {
+
+            map.set(
+                key,
+                item
+            );
+
+            continue;
+
+        }
+
+
+        const existing =
+            map.get(key);
+
+
+        const existingScore =
+            scoreRecord(
+                existing
+            );
+
+        const newScore =
+            scoreRecord(
+                item
+            );
+
+
+        if (
+            newScore >
+            existingScore
+        ) {
+
+            map.set(
+                key,
+                item
+            );
+
+        }
+
+    }
+
+
+    return Array.from(
+        map.values()
+    );
+
+}
+
+
+/* =====================================================
+   RECORD SCORE
+===================================================== */
+
+function scoreRecord(
+    item
+) {
+
+    let score = 0;
+
+
+    if (item.term) {
+        score += 2;
+    }
+
+    if (item.arabic) {
+        score += 4;
+    }
+
+    if (item.definition) {
+        score += 5;
+    }
+
+    if (item.synonyms) {
+        score += 2;
+    }
+
+    if (item.category) {
+        score += 1;
+    }
+
+
+    return score;
+
+}
+
+
+/* =====================================================
+   SORT TERMS
+===================================================== */
+
+function sortTerms(
+    records
+) {
+
+    return records.sort(
+        function(a, b) {
+
+            return normalizeText(
+                a.term
+            ).localeCompare(
+                normalizeText(
+                    b.term
+                ),
+                "en",
+                {
+                    sensitivity:
+                        "base"
+                }
+            );
 
         }
     );
+
+}
+
+
+/* =====================================================
+   LOAD DATABASE FILE
+===================================================== */
+
+async function loadDatabaseFile(
+    config
+) {
+
+    const response =
+        await fetch(
+            config.path,
+            {
+                cache: "default"
+            }
+        );
+
+
+    if (
+        !response.ok
+    ) {
+
+        throw new Error(
+            config.path +
+            " — HTTP " +
+            response.status
+        );
+
+    }
+
+
+    const json =
+        await response.json();
+
+
+    const records =
+        extractRecords(
+            json
+        );
+
+
+    const normalized =
+        records
+            .map(
+                raw =>
+                    normalizeRecord(
+                        raw,
+                        config.source
+                    )
+            )
+            .filter(Boolean);
+
+
+    return normalized;
+
+}
+
+
+/* =====================================================
+   LOAD ALL DATABASES
+===================================================== */
+
+async function loadAllDatabases() {
+
+    setStatus(
+        "جاري تحميل قاعدة Anatomy..."
+    );
+
+
+    const loaded =
+        [];
+
+
+    const errors =
+        [];
+
+
+    for (
+        const database
+        of DATABASE_FILES
+    ) {
+
+        try {
+
+            setStatus(
+                "جاري تحميل " +
+                database.source +
+                "..."
+            );
+
+
+            const records =
+                await loadDatabaseFile(
+                    database
+                );
+
+
+            loaded.push(
+                ...records
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Database load error:",
+                database.path,
+                error
+            );
+
+
+            errors.push(
+                database
+            );
+
+        }
+
+    }
+
+
+    /*
+     * لو فشل كل شيء
+     */
+
+    if (
+        loaded.length === 0
+    ) {
+
+        throw new Error(
+            "لم يتم تحميل أي سجل من قواعد البيانات."
+        );
+
+    }
+
+
+    allTerms =
+        removeDuplicates(
+            loaded
+        );
+
+
+    sortTerms(
+        allTerms
+    );
+
+
+    /*
+     * تجهيز حقل البحث
+     */
+
+    allTerms.forEach(
+        function(item) {
+
+            item._search =
+                buildSearchField(
+                    item
+                );
+
+        }
+    );
+
+
+    return {
+
+        totalLoaded:
+            loaded.length,
+
+        totalUnique:
+            allTerms.length,
+
+        errors:
+            errors
+
+    };
+
+}
+
+
+/* =====================================================
+   GET LETTER
+===================================================== */
+
+function getTermLetter(
+    term
+) {
+
+    const first =
+        String(
+            term || ""
+        )
+        .trim()
+        .charAt(0)
+        .toLowerCase();
+
+
+    if (
+        first >= "a" &&
+        first <= "z"
+    ) {
+
+        return first;
+
+    }
+
+
+    return "other";
 
 }
 
@@ -2192,26 +2882,35 @@ function createTermCard(
 ) {
 
     const term =
-        item.term || "Unknown";
+        item.term ||
+        "Unknown";
+
 
     const arabic =
-        item.arabic || "—";
+        item.arabic ||
+        "—";
+
 
     const definition =
         item.definition ||
-        "لا يوجد تعريف متاح لهذا المصطلح.";
+        "";
 
-    const category =
-        item.category ||
+
+    const source =
+        item.source ||
         "Medical Terms";
 
 
     const letter =
-        getTermLetter(term);
+        getTermLetter(
+            term
+        );
 
 
     const article =
-        document.createElement("article");
+        document.createElement(
+            "article"
+        );
 
 
     article.className =
@@ -2220,28 +2919,48 @@ function createTermCard(
 
     article.innerHTML = `
 
-        <div class="term-letter">
-            ${escapeHTML(
-                letter === "other"
-                    ? "#"
-                    : letter.toUpperCase()
-            )}
+        <div class="term-top">
+
+            <div class="term-letter">
+                ${escapeHTML(
+                    letter === "other"
+                        ? "#"
+                        : letter.toUpperCase()
+                )}
+            </div>
+
+            <h3>
+                ${escapeHTML(term)}
+            </h3>
+
         </div>
 
-        <h3>
-            ${escapeHTML(term)}
-        </h3>
+        ${
+            arabic
+                ? `
+                    <div class="term-arabic">
+                        ${escapeHTML(arabic)}
+                    </div>
+                  `
+                : ""
+        }
 
-        <div class="term-arabic">
-            ${escapeHTML(arabic)}
-        </div>
+        ${
+            definition
+                ? `
+                    <p class="term-definition">
+                        ${escapeHTML(definition)}
+                    </p>
+                  `
+                : `
+                    <p class="term-definition">
+                        لا يوجد تعريف عربي متاح لهذا المصطلح في قاعدة البيانات.
+                    </p>
+                  `
+        }
 
-        <p>
-            ${escapeHTML(definition)}
-        </p>
-
-        <span class="term-tag">
-            ${escapeHTML(category)}
+        <span class="term-source">
+            ${escapeHTML(source)}
         </span>
 
     `;
@@ -2253,91 +2972,20 @@ function createTermCard(
 
 
 /* =====================================================
-   RENDER TERMS
+   REMOVE OLD PAGINATION
 ===================================================== */
 
-function renderTerms(
-    terms
-) {
+function removePagination() {
 
-    termsGrid.innerHTML =
-        "";
-
-    noResults.style.display =
-        "none";
-
-
-    if (
-        !terms ||
-        terms.length === 0
-    ) {
-
-        noResults.style.display =
-            "block";
-
-        resultsCount.textContent =
-            "عدد النتائج: 0";
-
-        return;
-
-    }
-
-
-    const start =
-        (currentPage - 1) *
-        RESULTS_PER_PAGE;
-
-
-    const end =
-        start +
-        RESULTS_PER_PAGE;
-
-
-    const pageTerms =
-        terms.slice(
-            start,
-            end
+    const pagination =
+        document.getElementById(
+            "pagination"
         );
 
 
-    const fragment =
-        document.createDocumentFragment();
+    if (pagination) {
 
-
-    pageTerms.forEach(
-        function(item) {
-
-            fragment.appendChild(
-                createTermCard(item)
-            );
-
-        }
-    );
-
-
-    termsGrid.appendChild(
-        fragment
-    );
-
-
-    resultsCount.textContent =
-        "عدد النتائج: " +
-        terms.length.toLocaleString("en-US") +
-        " — عرض " +
-        Math.min(
-            end,
-            terms.length
-        ).toLocaleString("en-US") +
-        " من النتائج";
-
-
-    if (
-        terms.length > RESULTS_PER_PAGE
-    ) {
-
-        renderPagination(
-            terms.length
-        );
+        pagination.remove();
 
     }
 
@@ -2345,24 +2993,14 @@ function renderTerms(
 
 
 /* =====================================================
-   PAGINATION
+   RENDER PAGINATION
 ===================================================== */
 
 function renderPagination(
     total
 ) {
 
-    const old =
-        document.getElementById(
-            "pagination"
-        );
-
-
-    if (old) {
-
-        old.remove();
-
-    }
+    removePagination();
 
 
     const totalPages =
@@ -2382,35 +3020,43 @@ function renderPagination(
 
 
     const pagination =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
     pagination.id =
         "pagination";
 
 
-    pagination.style.cssText = `
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:8px;
-        flex-wrap:wrap;
-        margin-top:25px;
-    `;
-
-
-    function createButton(
+    function addButton(
         text,
         page,
+        active = false,
         disabled = false
     ) {
 
         const button =
-            document.createElement("button");
+            document.createElement(
+                "button"
+            );
 
 
         button.type =
             "button";
+
+
+        button.className =
+            "page-button";
+
+
+        if (active) {
+
+            button.classList.add(
+                "active"
+            );
+
+        }
 
 
         button.textContent =
@@ -2419,19 +3065,6 @@ function renderPagination(
 
         button.disabled =
             disabled;
-
-
-        button.style.cssText = `
-            min-width:40px;
-            height:38px;
-            padding:0 12px;
-            border:1px solid #dce7ea;
-            border-radius:9px;
-            background:${page === currentPage ? "#0b526b" : "white"};
-            color:${page === currentPage ? "white" : "#526a75"};
-            cursor:${disabled ? "default" : "pointer"};
-            font-weight:700;
-        `;
 
 
         if (!disabled) {
@@ -2443,22 +3076,30 @@ function renderPagination(
                     currentPage =
                         page;
 
-                    renderTerms(
-                        currentResults
-                    );
 
-                    window.scrollTo({
-                        top:
-                            document
-                                .querySelector(
-                                    ".results-header"
-                                )
-                                .offsetTop -
-                            80,
+                    renderResults();
 
-                        behavior:
-                            "smooth"
-                    });
+
+                    const header =
+                        document.querySelector(
+                            ".results-header"
+                        );
+
+
+                    if (header) {
+
+                        window.scrollTo({
+
+                            top:
+                                header.offsetTop -
+                                85,
+
+                            behavior:
+                                "smooth"
+
+                        });
+
+                    }
 
                 }
             );
@@ -2466,20 +3107,21 @@ function renderPagination(
         }
 
 
-        return button;
+        pagination.appendChild(
+            button
+        );
 
     }
 
 
-    pagination.appendChild(
-        createButton(
-            "السابق",
-            Math.max(
-                1,
-                currentPage - 1
-            ),
-            currentPage === 1
-        )
+    addButton(
+        "السابق",
+        Math.max(
+            1,
+            currentPage - 1
+        ),
+        false,
+        currentPage === 1
     );
 
 
@@ -2503,25 +3145,23 @@ function renderPagination(
         page++
     ) {
 
-        pagination.appendChild(
-            createButton(
-                page,
-                page
-            )
+        addButton(
+            page,
+            page,
+            page === currentPage
         );
 
     }
 
 
-    pagination.appendChild(
-        createButton(
-            "التالي",
-            Math.min(
-                totalPages,
-                currentPage + 1
-            ),
-            currentPage === totalPages
-        )
+    addButton(
+        "التالي",
+        Math.min(
+            totalPages,
+            currentPage + 1
+        ),
+        false,
+        currentPage === totalPages
     );
 
 
@@ -2533,187 +3173,136 @@ function renderPagination(
 
 
 /* =====================================================
-   LOAD TERMS FROM INDEX
+   RENDER RESULTS
 ===================================================== */
 
-async function resolveIndexResults(
-    indexResults
-) {
+function renderResults() {
 
-    const grouped =
-        {};
+    termsGrid.innerHTML =
+        "";
 
 
-    indexResults.forEach(
-        function(rawItem) {
-
-            const item =
-                parseIndexItem(
-                    rawItem
-                );
+    noResults.style.display =
+        "none";
 
 
-            if (
-                !item.term
-            ) {
-
-                return;
-
-            }
+    removePagination();
 
 
-            let file =
-                String(
-                    item.file || ""
+    if (
+        !currentResults ||
+        currentResults.length === 0
+    ) {
+
+        noResults.style.display =
+            "block";
+
+
+        resultsCount.textContent =
+            "عدد النتائج: 0";
+
+
+        return;
+
+    }
+
+
+    const start =
+        (
+            currentPage -
+            1
+        ) *
+        RESULTS_PER_PAGE;
+
+
+    const end =
+        start +
+        RESULTS_PER_PAGE;
+
+
+    const pageItems =
+        currentResults.slice(
+            start,
+            end
+        );
+
+
+    const fragment =
+        document.createDocumentFragment();
+
+
+    pageItems.forEach(
+        function(item) {
+
+            fragment.appendChild(
+                createTermCard(
+                    item
                 )
-                .toLowerCase();
-
-
-            /*
-             * لو file يحتوي على ".json"
-             * نحذف الامتداد.
-             */
-
-            file =
-                file.replace(
-                    /\.json$/i,
-                    ""
-                );
-
-
-            /*
-             * لو الملف غير موجود في
-             * Search Index نحاول تحديده
-             * من أول حرف.
-             */
-
-            if (!file) {
-
-                file =
-                    getTermLetter(
-                        item.term
-                    );
-
-            }
-
-
-            if (
-                !grouped[file]
-            ) {
-
-                grouped[file] =
-                    [];
-
-            }
-
-
-            grouped[file].push(
-                item
             );
 
         }
     );
 
 
-    const resolved =
-        [];
+    termsGrid.appendChild(
+        fragment
+    );
 
 
-    const groups =
-        Object.keys(
-            grouped
-        );
+    resultsCount.textContent =
+        "عدد النتائج: " +
+        currentResults
+            .length
+            .toLocaleString("en-US") +
+        " — عرض " +
+        (
+            start + 1
+        )
+        .toLocaleString("en-US") +
+        "–" +
+        Math.min(
+            end,
+            currentResults.length
+        )
+        .toLocaleString("en-US");
 
 
-    for (
-        const file of groups
-    ) {
-
-        try {
-
-            const data =
-                await loadLetterFile(
-                    file
-                );
-
-
-            grouped[file].forEach(
-                function(indexItem) {
-
-                    const fullItem =
-                        findTermInFile(
-                            data,
-                            indexItem.id,
-                            indexItem.term
-                        );
-
-
-                    if (
-                        fullItem
-                    ) {
-
-                        resolved.push(
-                            fullItem
-                        );
-
-                    }
-
-                }
-            );
-
-
-        } catch (error) {
-
-            console.error(
-                "Failed loading:",
-                file,
-                error
-            );
-
-        }
-
-    }
-
-
-    return resolved;
+    renderPagination(
+        currentResults.length
+    );
 
 }
 
 
 /* =====================================================
-   INITIAL TERMS
+   FILTER BY LETTER
 ===================================================== */
 
-async function showInitialTerms() {
+function filterByLetter(
+    records,
+    letter
+) {
 
-    /*
-     * أول تحميل:
-     * نستخدم أول 40 عنصر فقط.
-     */
+    if (
+        letter === "all"
+    ) {
 
-    const firstItems =
-        searchIndex.slice(
-            0,
-            RESULTS_PER_PAGE
-        );
+        return records;
 
-
-    const terms =
-        await resolveIndexResults(
-            firstItems
-        );
+    }
 
 
-    currentResults =
-        terms;
+    return records.filter(
+        function(item) {
 
+            return (
+                getTermLetter(
+                    item.term
+                ) ===
+                letter
+            );
 
-    currentPage =
-        1;
-
-
-    renderTerms(
-        terms
+        }
     );
 
 }
@@ -2723,11 +3312,16 @@ async function showInitialTerms() {
    SEARCH
 ===================================================== */
 
-let searchTimer =
-    null;
+function performSearch() {
 
+    if (
+        !allTerms.length
+    ) {
 
-async function performSearch() {
+        return;
+
+    }
+
 
     const query =
         normalizeText(
@@ -2735,225 +3329,186 @@ async function performSearch() {
         );
 
 
-    /*
-     * بدون بحث
-     */
-
-    if (!query) {
-
-        currentPage =
-            1;
+    const queryArabic =
+        normalizeArabic(
+            searchInput.value
+        );
 
 
-        if (
-            selectedLetter ===
-            "all"
-        ) {
-
-            await showInitialTerms();
-
-            return;
-
-        }
-
-
-        /*
-         * فلترة حسب الحرف
-         */
-
-        const letter =
-            selectedLetter;
-
-
-        try {
-
-            const data =
-                await loadLetterFile(
-                    letter
-                );
-
-
-            currentResults =
-                data;
-
-
-            renderTerms(
-                data
-            );
-
-
-        } catch (error) {
-
-            console.error(
-                error
-            );
-
-            noResults.style.display =
-                "block";
-
-        }
-
-
-        return;
-
-    }
-
-
-    setStatus(
-        "جاري البحث..."
-    );
+    let results =
+        allTerms;
 
 
     /*
-     * البحث داخل Search Index
+     * فلترة بالحرف
      */
 
-    const matches =
-        searchIndex.filter(
-            function(rawItem) {
-
-                const item =
-                    parseIndexItem(
-                        rawItem
-                    );
-
-
-                const term =
-                    normalizeText(
-                        item.term
-                    );
-
-
-                return term.includes(
-                    query
-                );
-
-            }
+    results =
+        filterByLetter(
+            results,
+            selectedLetter
         );
 
 
     /*
-     * فلترة بالحرف أيضًا
+     * البحث
      */
 
-    const filteredMatches =
-        matches.filter(
-            function(rawItem) {
+    if (query) {
 
-                if (
-                    selectedLetter ===
-                    "all"
-                ) {
+        results =
+            results.filter(
+                function(item) {
 
-                    return true;
+                    const searchable =
+                        item._search ||
+                        "";
+
+
+                    return (
+                        searchable.includes(
+                            query
+                        ) ||
+                        searchable.includes(
+                            queryArabic
+                        )
+                    );
 
                 }
-
-
-                const item =
-                    parseIndexItem(
-                        rawItem
-                    );
-
-
-                const file =
-                    String(
-                        item.file || ""
-                    )
-                    .toLowerCase()
-                    .replace(
-                        /\.json$/i,
-                        ""
-                    );
-
-
-                return (
-                    file ===
-                    selectedLetter
-                );
-
-            }
-        );
-
-
-    /*
-     * نأخذ عددًا محدودًا من النتائج
-     * حتى لا نحمل آلاف العناصر.
-     */
-
-    const limitedMatches =
-        filteredMatches.slice(
-            0,
-            200
-        );
-
-
-    if (
-        limitedMatches.length === 0
-    ) {
-
-        currentResults =
-            [];
-
-        renderTerms(
-            []
-        );
-
-
-        resultsCount.textContent =
-            "عدد النتائج: 0";
-
-
-        setStatus(
-            "لم يتم العثور على نتائج",
-            "success"
-        );
-
-
-        return;
+            );
 
     }
 
 
-    try {
+    /*
+     * ترتيب النتائج بحيث يبدأ
+     * التطابق التام ثم يبدأ بـ...
+     */
 
-        const resolved =
-            await resolveIndexResults(
-                limitedMatches
+    if (query) {
+
+        const normalizedQuery =
+            normalizeText(
+                query
             );
 
 
-        currentResults =
-            resolved;
+        results =
+            results.slice()
+                .sort(
+                    function(a, b) {
+
+                        const aTerm =
+                            normalizeText(
+                                a.term
+                            );
+
+                        const bTerm =
+                            normalizeText(
+                                b.term
+                            );
 
 
-        currentPage =
-            1;
+                        const aExact =
+                            aTerm ===
+                            normalizedQuery
+                                ? 0
+                                : 1;
 
 
-        renderTerms(
-            resolved
+                        const bExact =
+                            bTerm ===
+                            normalizedQuery
+                                ? 0
+                                : 1;
+
+
+                        if (
+                            aExact !==
+                            bExact
+                        ) {
+
+                            return (
+                                aExact -
+                                bExact
+                            );
+
+                        }
+
+
+                        const aStarts =
+                            aTerm.startsWith(
+                                normalizedQuery
+                            )
+                                ? 0
+                                : 1;
+
+
+                        const bStarts =
+                            bTerm.startsWith(
+                                normalizedQuery
+                            )
+                                ? 0
+                                : 1;
+
+
+                        return (
+                            aStarts -
+                            bStarts
+                        );
+
+                    }
+                );
+
+    }
+
+
+    /*
+     * منع تحميل عدد ضخم جدًا
+     * من النتائج في نفس الوقت.
+     */
+
+    currentResults =
+        results.slice(
+            0,
+            MAX_SEARCH_RESULTS
         );
 
 
+    currentPage =
+        1;
+
+
+    renderResults();
+
+
+    if (query) {
+
+        if (
+            currentResults.length
+        ) {
+
+            setStatus(
+                "تم العثور على " +
+                currentResults.length.toLocaleString("en-US") +
+                " نتيجة مطابقة.",
+                "success"
+            );
+
+        } else {
+
+            setStatus(
+                "لم يتم العثور على نتائج مطابقة.",
+                "success"
+            );
+
+        }
+
+    } else {
+
         setStatus(
-            "تم العثور على " +
-            filteredMatches.length.toLocaleString("en-US") +
-            " نتيجة",
+            "تم تحديث النتائج.",
             "success"
-        );
-
-
-    } catch (error) {
-
-        console.error(
-            error
-        );
-
-
-        setStatus(
-            "حدث خطأ أثناء البحث",
-            "error"
         );
 
     }
@@ -2962,30 +3517,37 @@ async function performSearch() {
 
 
 /* =====================================================
-   SEARCH INPUT
+   SHOW ALL TERMS
 ===================================================== */
 
-searchInput.addEventListener(
-    "input",
-    function() {
+function showAllTerms() {
 
-        clearTimeout(
-            searchTimer
+    currentResults =
+        filterByLetter(
+            allTerms,
+            selectedLetter
         );
 
 
-        searchTimer =
-            setTimeout(
-                performSearch,
-                300
-            );
+    currentPage =
+        1;
 
-    }
-);
+
+    renderResults();
+
+
+    setStatus(
+        "تم تحميل " +
+        allTerms.length.toLocaleString("en-US") +
+        " مصطلح فريد.",
+        "success"
+    );
+
+}
 
 
 /* =====================================================
-   LETTER FILTER
+   FILTER BUTTONS
 ===================================================== */
 
 filterButtons.forEach(
@@ -2993,7 +3555,7 @@ filterButtons.forEach(
 
         button.addEventListener(
             "click",
-            async function() {
+            function() {
 
                 filterButtons.forEach(
                     function(btn) {
@@ -3017,144 +3579,284 @@ filterButtons.forEach(
                     );
 
 
-                /*
-                 * لو اختار الكل
-                 */
-
-                if (
-                    selectedLetter ===
-                    "all"
-                ) {
-
-                    searchInput.value =
-                        "";
-
-                    await showInitialTerms();
-
-                    setStatus(
-                        "تم تحميل القاموس",
-                        "success"
-                    );
-
-                    return;
-
-                }
+                currentPage =
+                    1;
 
 
-                /*
-                 * تحميل ملف الحرف فقط
-                 */
-
-                try {
-
-                    setStatus(
-                        "جاري تحميل مصطلحات " +
-                        selectedLetter.toUpperCase() +
-                        "..."
-                    );
-
-
-                    const data =
-                        await loadLetterFile(
-                            selectedLetter
-                        );
-
-
-                    let filtered =
-                        data;
-
-
-                    const query =
-                        normalizeText(
-                            searchInput.value
-                        );
-
-
-                    if (query) {
-
-                        filtered =
-                            data.filter(
-                                function(item) {
-
-                                    const searchable =
-                                        normalizeText(
-                                            (
-                                                item.term ||
-                                                ""
-                                            ) +
-                                            " " +
-                                            (
-                                                item.arabic ||
-                                                ""
-                                            ) +
-                                            " " +
-                                            (
-                                                item.definition ||
-                                                ""
-                                            ) +
-                                            " " +
-                                            (
-                                                item.searchTerms || []
-                                            )
-                                        );
-
-
-                                    return searchable.includes(
-                                        query
-                                    );
-
-                                }
-                            );
-
-                    }
-
-
-                    currentResults =
-                        filtered;
-
-
-                    currentPage =
-                        1;
-
-
-                    renderTerms(
-                        filtered
-                    );
-
-
-                    setStatus(
-                        "تم تحميل مصطلحات " +
-                        selectedLetter.toUpperCase() +
-                        " — " +
-                        data.length.toLocaleString("en-US") +
-                        " مصطلح",
-                        "success"
-                    );
-
-
-                } catch (error) {
-
-                    console.error(
-                        error
-                    );
-
-
-                    setStatus(
-                        "تعذر تحميل ملف الحرف",
-                        "error"
-                    );
-
-
-                    noResults.style.display =
-                        "block";
-
-                }
+                performSearch();
 
             }
         );
 
     }
 );
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    function() {
+
+        clearTimeout(
+            searchTimer
+        );
+
+
+        searchTimer =
+            setTimeout(
+                function() {
+
+                    performSearch();
+
+                },
+                180
+            );
+
+    }
+);
+
+
+/* =====================================================
+   URL SEARCH PARAMETER
+===================================================== */
+
+function loadSearchFromURL() {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const search =
+        params.get(
+            "search"
+        );
+
+
+    if (
+        search
+    ) {
+
+        searchInput.value =
+            search;
+
+    }
+
+}
+
+
+/* =====================================================
+   UPDATE URL
+===================================================== */
+
+function updateURL() {
+
+    const value =
+        searchInput.value.trim();
+
+
+    const url =
+        new URL(
+            window.location.href
+        );
+
+
+    if (value) {
+
+        url.searchParams.set(
+            "search",
+            value
+        );
+
+    } else {
+
+        url.searchParams.delete(
+            "search"
+        );
+
+    }
+
+
+    window.history.replaceState(
+        {},
+        "",
+        url
+    );
+
+}
+
+
+/* =====================================================
+   SEARCH WITH URL SYNC
+===================================================== */
+
+const originalPerformSearch =
+    performSearch;
+
+
+function performSearchWithURL() {
+
+    originalPerformSearch();
+
+    updateURL();
+
+}
+
+
+/*
+ * نستبدل الحدث
+ */
+
+searchInput.oninput =
+    function() {
+
+        clearTimeout(
+            searchTimer
+        );
+
+
+        searchTimer =
+            setTimeout(
+                performSearchWithURL,
+                180
+            );
+
+    };
+
+
+/* =====================================================
+   INITIALIZATION
+===================================================== */
+
+async function initializeDictionary() {
+
+    try {
+
+        loadSearchFromURL();
+
+
+        setStatus(
+            "جاري تحميل قواعد المصطلحات..."
+        );
+
+
+        const result =
+            await loadAllDatabases();
+
+
+        loadingBox.style.display =
+            "none";
+
+
+        /*
+         * لو بعض الملفات فشلت
+         * لكن ملفات أخرى اشتغلت.
+         */
+
+        if (
+            result.errors.length
+        ) {
+
+            errorBox.style.display =
+                "block";
+
+
+            errorText.textContent =
+                "تم تحميل " +
+                result.totalUnique.toLocaleString("en-US") +
+                " مصطلحًا، لكن تعذر تحميل بعض الملفات: " +
+                result.errors
+                    .map(
+                        item =>
+                            item.source
+                    )
+                    .join("، ") +
+                ".";
+
+
+            setStatus(
+                "تم تحميل القاموس جزئيًا.",
+                "error"
+            );
+
+        } else {
+
+            errorBox.style.display =
+                "none";
+
+
+            setStatus(
+                "تم تحميل " +
+                result.totalUnique.toLocaleString("en-US") +
+                " مصطلح فريد من " +
+                result.totalLoaded.toLocaleString("en-US") +
+                " سجل.",
+                "success"
+            );
+
+        }
+
+
+        /*
+         * لو فيه بحث جاي من dictionary.html
+         */
+
+        if (
+            searchInput.value.trim()
+        ) {
+
+            performSearch();
+
+        } else {
+
+            currentResults =
+                allTerms.slice(
+                    0,
+                    MAX_SEARCH_RESULTS
+                );
+
+
+            currentPage =
+                1;
+
+
+            renderResults();
+
+        }
+
+
+    } catch (error) {
+
+        console.error(
+            "Dictionary initialization error:",
+            error
+        );
+
+
+        loadingBox.style.display =
+            "none";
+
+
+        errorBox.style.display =
+            "block";
+
+
+        errorText.textContent =
+            "تعذر تحميل قواعد البيانات الطبية. تأكد من وجود الملفات الثلاثة داخل data/medical/ وأنها بصيغة JSON صحيحة.";
+
+
+        setStatus(
+            "فشل تحميل قاعدة البيانات.",
+            "error"
+        );
+
+    }
+
+}
 
 
 /* =====================================================
@@ -3165,7 +3867,7 @@ document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-        loadSearchIndex();
+        initializeDictionary();
 
     }
 );
