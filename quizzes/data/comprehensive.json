@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Which term means toward the midline of the body?",
+    "options": [
+      "Lateral",
+      "Medial",
+      "Distal",
+      "Posterior"
+    ],
+    "answer": 1,
+    "explanation": "Medial means toward or nearer to the midline of the body.",
+    "difficulty": "easy",
+    "topic": "Anatomy"
+  },
+  {
+    "id": 2,
+    "question": "Which plane divides the body into superior and inferior portions?",
+    "options": [
+      "Sagittal plane",
+      "Frontal plane",
+      "Transverse plane",
+      "Oblique plane"
+    ],
+    "answer": 2,
+    "explanation": "The transverse plane divides the body into superior and inferior portions.",
+    "difficulty": "easy",
+    "topic": "Anatomy"
+  },
+  {
+    "id": 3,
+    "question": "Which chamber of the heart pumps oxygenated blood to the systemic circulation?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left atrium",
+      "Left ventricle"
+    ],
+    "answer": 3,
+    "explanation": "The left ventricle pumps oxygenated blood into the aorta and systemic circulation.",
+    "difficulty": "easy",
+    "topic": "Anatomy"
+  },
+  {
+    "id": 4,
+    "question": "What is the functional unit of the kidney?",
+    "options": [
+      "Neuron",
+      "Alveolus",
+      "Nephron",
+      "Osteon"
+    ],
+    "answer": 2,
+    "explanation": "The nephron is the functional unit of the kidney.",
+    "difficulty": "easy",
+    "topic": "Anatomy"
+  },
+  {
+    "id": 5,
+    "question": "Where does most gas exchange occur in the lungs?",
+    "options": [
+      "Trachea",
+      "Bronchi",
+      "Alveoli",
+      "Larynx"
+    ],
+    "answer": 2,
+    "explanation": "Gas exchange between air and blood occurs mainly in the alveoli.",
+    "difficulty": "easy",
+    "topic": "Anatomy"
+  },
+  {
+    "id": 6,
+    "question": "What is the first step of the nursing process?",
+    "options": [
+      "Planning",
+      "Assessment",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 1,
+    "explanation": "Assessment is the first step of the nursing process and involves collecting patient data.",
+    "difficulty": "easy",
+    "topic": "Nursing Process"
+  },
+  {
+    "id": 7,
+    "question": "Which nursing process step involves identifying the patient's health problems?",
+    "options": [
+      "Assessment",
+      "Diagnosis",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 1,
+    "explanation": "Nursing diagnosis involves identifying patient problems based on assessment data.",
+    "difficulty": "easy",
+    "topic": "Nursing Process"
+  },
+  {
+    "id": 8,
+    "question": "Which position is commonly used to facilitate lung expansion in a conscious patient?",
+    "options": [
+      "Fowler's position",
+      "Prone position",
+      "Lithotomy position",
+      "Trendelenburg position"
+    ],
+    "answer": 0,
+    "explanation": "Fowler's position elevates the upper body and can facilitate breathing and lung expansion.",
+    "difficulty": "easy",
+    "topic": "Patient Positioning"
+  },
+  {
+    "id": 9,
+    "question": "What is the normal resting respiratory rate for an adult?",
+    "options": [
+      "4–8 breaths/min",
+      "12–20 breaths/min",
+      "25–35 breaths/min",
+      "40–50 breaths/min"
+    ],
+    "answer": 1,
+    "explanation": "A normal resting respiratory rate for most adults is approximately 12–20 breaths per minute.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 10,
+    "question": "Which route of medication administration generally provides the fastest systemic effect?",
+    "options": [
+      "Oral",
+      "Subcutaneous",
+      "Intravenous",
+      "Topical"
+    ],
+    "answer": 2,
+    "explanation": "Intravenous administration delivers medication directly into the bloodstream and generally produces a rapid systemic effect.",
+    "difficulty": "easy",
+    "topic": "Medication Administration"
+  },
+  {
+    "id": 11,
+    "question": "Which device is commonly used to measure oxygen saturation?",
+    "options": [
+      "Sphygmomanometer",
+      "Pulse oximeter",
+      "Stethoscope",
+      "Thermometer"
+    ],
+    "answer": 1,
+    "explanation": "A pulse oximeter estimates peripheral oxygen saturation and pulse rate.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 12,
+    "question": "Which action is most important before administering medication to a patient?",
+    "options": [
+      "Check the patient's room number only",
+      "Verify the patient's identity",
+      "Ask another patient for confirmation",
+      "Skip checking the medication label"
+    ],
+    "answer": 1,
+    "explanation": "The nurse should correctly identify the patient before medication administration to reduce medication errors.",
+    "difficulty": "easy",
+    "topic": "Medication Safety"
+  },
+  {
+    "id": 13,
+    "question": "What is the main purpose of hand hygiene in nursing practice?",
+    "options": [
+      "Improve skin appearance",
+      "Prevent transmission of microorganisms",
+      "Reduce patient anxiety",
+      "Increase blood pressure"
+    ],
+    "answer": 1,
+    "explanation": "Hand hygiene is one of the most important measures for preventing transmission of microorganisms.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 14,
+    "question": "Which type of precautions are used for patients with infections transmitted by large respiratory droplets?",
+    "options": [
+      "Contact precautions",
+      "Droplet precautions",
+      "Airborne precautions",
+      "Protective isolation only"
+    ],
+    "answer": 1,
+    "explanation": "Droplet precautions are used for infections transmitted through respiratory droplets.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 15,
+    "question": "Which pulse site is commonly used for routine assessment in adults?",
+    "options": [
+      "Radial artery",
+      "Temporal artery",
+      "Dorsalis pedis only",
+      "Carotid artery only"
+    ],
+    "answer": 0,
+    "explanation": "The radial pulse at the wrist is commonly used for routine pulse assessment in adults.",
+    "difficulty": "easy",
+    "topic": "Vital Signs"
+  },
+  {
+    "id": 16,
+    "question": "What is the priority nursing action for a patient experiencing severe difficulty breathing?",
+    "options": [
+      "Ignore the complaint",
+      "Assess airway and breathing",
+      "Offer a meal",
+      "Encourage the patient to walk"
+    ],
+    "answer": 1,
+    "explanation": "Airway and breathing are immediate priorities when a patient has severe respiratory difficulty.",
+    "difficulty": "medium",
+    "topic": "Patient Care"
+  },
+  {
+    "id": 17,
+    "question": "Which condition is characterized by elevated blood glucose levels?",
+    "options": [
+      "Hypoglycemia",
+      "Hyperglycemia",
+      "Hypotension",
+      "Bradycardia"
+    ],
+    "answer": 1,
+    "explanation": "Hyperglycemia refers to an abnormally high level of glucose in the blood.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 18,
+    "question": "Which hormone lowers blood glucose levels?",
+    "options": [
+      "Insulin",
+      "Adrenaline",
+      "Cortisol",
+      "Thyroxine"
+    ],
+    "answer": 0,
+    "explanation": "Insulin lowers blood glucose by promoting glucose uptake and storage.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 19,
+    "question": "Which symptom is commonly associated with hypoglycemia?",
+    "options": [
+      "Sweating and tremors",
+      "Dry skin only",
+      "Slow wound healing only",
+      "Increased body temperature only"
+    ],
+    "answer": 0,
+    "explanation": "Sweating, tremors, hunger, weakness, and confusion can occur with hypoglycemia.",
+    "difficulty": "medium",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 20,
+    "question": "Which organ is primarily affected by hepatitis?",
+    "options": [
+      "Heart",
+      "Liver",
+      "Kidney",
+      "Lung"
+    ],
+    "answer": 1,
+    "explanation": "Hepatitis is inflammation of the liver.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 21,
+    "question": "Which symptom is commonly associated with pneumonia?",
+    "options": [
+      "Cough and difficulty breathing",
+      "Hair loss",
+      "Joint deformity",
+      "Hearing improvement"
+    ],
+    "answer": 0,
+    "explanation": "Pneumonia commonly presents with cough, fever, and difficulty breathing.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 22,
+    "question": "Which position may help a patient with severe dyspnea breathe more comfortably?",
+    "options": [
+      "High Fowler's position",
+      "Flat supine position",
+      "Prone position only",
+      "Trendelenburg position"
+    ],
+    "answer": 0,
+    "explanation": "High Fowler's position can improve chest expansion and ease breathing in many patients with dyspnea.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 23,
+    "question": "Which condition results from inadequate blood flow to the heart muscle?",
+    "options": [
+      "Myocardial ischemia",
+      "Appendicitis",
+      "Gastritis",
+      "Nephritis"
+    ],
+    "answer": 0,
+    "explanation": "Myocardial ischemia occurs when blood and oxygen supply to the heart muscle is inadequate.",
+    "difficulty": "medium",
+    "topic": "Cardiovascular"
+  },
+  {
+    "id": 24,
+    "question": "Which blood pressure reading is generally considered hypertensive in an adult?",
+    "options": [
+      "90/60 mmHg",
+      "100/70 mmHg",
+      "120/80 mmHg",
+      "160/100 mmHg"
+    ],
+    "answer": 3,
+    "explanation": "A blood pressure of 160/100 mmHg is clearly elevated and indicates hypertension.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular"
+  },
+  {
+    "id": 25,
+    "question": "Which organ is responsible for filtering blood and producing urine?",
+    "options": [
+      "Liver",
+      "Kidneys",
+      "Heart",
+      "Pancreas"
+    ],
+    "answer": 1,
+    "explanation": "The kidneys filter the blood and produce urine.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 26,
+    "question": "What is the main goal of community health nursing?",
+    "options": [
+      "Treat only hospitalized patients",
+      "Promote health and prevent disease in populations",
+      "Perform surgery",
+      "Provide anesthesia"
+    ],
+    "answer": 1,
+    "explanation": "Community health nursing focuses strongly on health promotion, disease prevention, and improving population health.",
+    "difficulty": "easy",
+    "topic": "Community Health"
+  },
+  {
+    "id": 27,
+    "question": "Which level of prevention aims to prevent disease before it occurs?",
+    "options": [
+      "Primary prevention",
+      "Secondary prevention",
+      "Tertiary prevention",
+      "Rehabilitation only"
+    ],
+    "answer": 0,
+    "explanation": "Primary prevention aims to prevent disease before it develops.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 28,
+    "question": "Which is an example of primary prevention?",
+    "options": [
+      "Vaccination",
+      "Cancer treatment",
+      "Physical rehabilitation after stroke",
+      "Treatment of complications"
+    ],
+    "answer": 0,
+    "explanation": "Vaccination is a primary prevention measure because it helps prevent disease before it occurs.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 29,
+    "question": "Which level of prevention focuses on early detection and treatment?",
+    "options": [
+      "Primary prevention",
+      "Secondary prevention",
+      "Tertiary prevention",
+      "Primordial prevention"
+    ],
+    "answer": 1,
+    "explanation": "Secondary prevention focuses on early detection and prompt treatment of disease.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 30,
+    "question": "Which is an example of secondary prevention?",
+    "options": [
+      "Health education",
+      "Vaccination",
+      "Screening test",
+      "Rehabilitation"
+    ],
+    "answer": 2,
+    "explanation": "Screening tests are used to detect disease early and are examples of secondary prevention.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 31,
+    "question": "Which level of prevention aims to reduce disability and restore function?",
+    "options": [
+      "Primary",
+      "Secondary",
+      "Tertiary",
+      "Primordial"
+    ],
+    "answer": 2,
+    "explanation": "Tertiary prevention focuses on reducing complications, disability, and improving function after disease occurs.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 32,
+    "question": "Which is an important component of a healthy lifestyle?",
+    "options": [
+      "Regular physical activity",
+      "Smoking regularly",
+      "Skipping sleep",
+      "Avoiding all fluids"
+    ],
+    "answer": 0,
+    "explanation": "Regular physical activity is an important component of a healthy lifestyle.",
+    "difficulty": "easy",
+    "topic": "Health Promotion"
+  },
+  {
+    "id": 33,
+    "question": "Which factor can significantly affect community health?",
+    "options": [
+      "Housing conditions",
+      "Eye color",
+      "Hair length",
+      "Shoe size"
+    ],
+    "answer": 0,
+    "explanation": "Housing conditions are an important social and environmental determinant of health.",
+    "difficulty": "easy",
+    "topic": "Community Health"
+  },
+  {
+    "id": 34,
+    "question": "Which method is commonly used to provide health education to a group?",
+    "options": [
+      "Health talk",
+      "Ignoring questions",
+      "Withholding information",
+      "Avoiding communication"
+    ],
+    "answer": 0,
+    "explanation": "Health talks are commonly used to provide organized health education to groups.",
+    "difficulty": "easy",
+    "topic": "Health Education"
+  },
+  {
+    "id": 35,
+    "question": "What is the main purpose of immunization?",
+    "options": [
+      "Prevent infectious diseases",
+      "Increase body temperature",
+      "Cause infection",
+      "Replace antibiotics"
+    ],
+    "answer": 0,
+    "explanation": "Immunization stimulates protection against specific infectious diseases.",
+    "difficulty": "easy",
+    "topic": "Immunization"
+  },
+  {
+    "id": 36,
+    "question": "Which practice helps prevent the spread of intestinal infections?",
+    "options": [
+      "Safe water and proper hand hygiene",
+      "Sharing contaminated utensils",
+      "Poor food storage",
+      "Ignoring sanitation"
+    ],
+    "answer": 0,
+    "explanation": "Safe water, sanitation, food hygiene, and proper hand hygiene help prevent intestinal infections.",
+    "difficulty": "easy",
+    "topic": "Environmental Health"
+  },
+  {
+    "id": 37,
+    "question": "Which nursing action helps prevent pressure injuries in an immobile patient?",
+    "options": [
+      "Regular repositioning",
+      "Keeping the patient in one position",
+      "Ignoring skin condition",
+      "Avoiding assessment"
+    ],
+    "answer": 0,
+    "explanation": "Regular repositioning reduces prolonged pressure and helps prevent pressure injuries.",
+    "difficulty": "easy",
+    "topic": "Fundamentals"
+  },
+  {
+    "id": 38,
+    "question": "Which item is considered personal protective equipment?",
+    "options": [
+      "Gloves",
+      "Stethoscope only",
+      "Bed sheet",
+      "Patient chart"
+    ],
+    "answer": 0,
+    "explanation": "Gloves are a form of personal protective equipment used to reduce exposure to infectious material.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 39,
+    "question": "What should a nurse do after removing gloves?",
+    "options": [
+      "Perform hand hygiene",
+      "Touch the patient's face",
+      "Reuse disposable gloves",
+      "Skip hand hygiene"
+    ],
+    "answer": 0,
+    "explanation": "Hand hygiene should be performed after glove removal because contamination can occur during removal.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 40,
+    "question": "Which ethical principle refers to respecting a patient's right to make decisions about their own care?",
+    "options": [
+      "Autonomy",
+      "Justice",
+      "Nonmaleficence",
+      "Fidelity"
+    ],
+    "answer": 0,
+    "explanation": "Autonomy is the ethical principle that supports a patient's right to make informed decisions about their own care.",
+    "difficulty": "medium",
+    "topic": "Nursing Ethics"
+  },
+  {
+    "id": 41,
+    "question": "Which ethical principle means avoiding harm to the patient?",
+    "options": [
+      "Beneficence",
+      "Autonomy",
+      "Nonmaleficence",
+      "Justice"
+    ],
+    "answer": 2,
+    "explanation": "Nonmaleficence means the obligation to avoid causing harm.",
+    "difficulty": "medium",
+    "topic": "Nursing Ethics"
+  },
+  {
+    "id": 42,
+    "question": "Which action is appropriate when documenting patient care?",
+    "options": [
+      "Document accurately and promptly",
+      "Document care before providing it",
+      "Erase information without explanation",
+      "Use false information"
+    ],
+    "answer": 0,
+    "explanation": "Nursing documentation should be accurate, timely, objective, and based on care actually provided.",
+    "difficulty": "easy",
+    "topic": "Documentation"
+  },
+  {
+    "id": 43,
+    "question": "Which finding should the nurse report immediately?",
+    "options": [
+      "Sudden severe difficulty breathing",
+      "Patient requesting water",
+      "Patient asking about visiting hours",
+      "Mild hunger"
+    ],
+    "answer": 0,
+    "explanation": "Sudden severe difficulty breathing can indicate a life-threatening problem and requires immediate assessment and intervention.",
+    "difficulty": "medium",
+    "topic": "Patient Safety"
+  },
+  {
+    "id": 44,
+    "question": "Which assessment is performed first when using the ABC approach?",
+    "options": [
+      "Circulation",
+      "Airway",
+      "Disability",
+      "Exposure"
+    ],
+    "answer": 1,
+    "explanation": "In the ABC approach, airway is assessed first, followed by breathing and circulation.",
+    "difficulty": "easy",
+    "topic": "Emergency Nursing"
+  },
+  {
+    "id": 45,
+    "question": "What does BMI primarily assess?",
+    "options": [
+      "Relationship between weight and height",
+      "Blood pressure",
+      "Oxygen saturation",
+      "Heart rhythm"
+    ],
+    "answer": 0,
+    "explanation": "BMI is a screening measure based on a person's weight relative to height.",
+    "difficulty": "easy",
+    "topic": "Health Assessment"
+  },
+  {
+    "id": 46,
+    "question": "Which symptom may indicate infection?",
+    "options": [
+      "Fever",
+      "Normal temperature",
+      "Normal appetite only",
+      "Normal pulse only"
+    ],
+    "answer": 0,
+    "explanation": "Fever can be a sign of infection, although infection may occur without fever in some patients.",
+    "difficulty": "easy",
+    "topic": "Medical-Surgical"
+  },
+  {
+    "id": 47,
+    "question": "Which type of microorganism requires a host cell to reproduce?",
+    "options": [
+      "Virus",
+      "Bacterium",
+      "Fungus",
+      "Protozoan"
+    ],
+    "answer": 0,
+    "explanation": "Viruses require living host cells to replicate.",
+    "difficulty": "easy",
+    "topic": "Microbiology"
+  },
+  {
+    "id": 48,
+    "question": "Which action is most effective for breaking the chain of infection in routine nursing care?",
+    "options": [
+      "Proper hand hygiene",
+      "Sharing equipment without cleaning",
+      "Ignoring isolation precautions",
+      "Reusing contaminated gloves"
+    ],
+    "answer": 0,
+    "explanation": "Proper hand hygiene is one of the most effective ways to interrupt transmission of microorganisms.",
+    "difficulty": "easy",
+    "topic": "Infection Control"
+  },
+  {
+    "id": 49,
+    "question": "Which approach is most appropriate when communicating with a patient?",
+    "options": [
+      "Active listening and clear communication",
+      "Ignoring the patient's concerns",
+      "Using confusing medical terms only",
+      "Interrupting continuously"
+    ],
+    "answer": 0,
+    "explanation": "Active listening, empathy, and clear communication help establish an effective therapeutic relationship.",
+    "difficulty": "easy",
+    "topic": "Communication"
+  },
+  {
+    "id": 50,
+    "question": "What is the main goal of nursing care?",
+    "options": [
+      "Promote health, prevent illness, and provide safe patient care",
+      "Only administer medications",
+      "Only record vital signs",
+      "Only treat physical symptoms"
+    ],
+    "answer": 0,
+    "explanation": "Nursing care aims to promote health, prevent illness, support recovery, relieve suffering, and provide safe, patient-centered care.",
+    "difficulty": "easy",
+    "topic": "Nursing Fundamentals"
+  }
+]
