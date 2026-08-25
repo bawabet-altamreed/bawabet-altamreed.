@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        أساسيات مكافحة العدوى | Infection Control | بوابة التمريض
+    </title>
+
+    <meta
+        name="description"
+        content="شرح أساسيات مكافحة العدوى لطلاب التمريض، ويشمل نظافة اليدين، معدات الوقاية الشخصية، الاحتياطات القياسية وسلسلة العدوى."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/article-infection-control.html"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            font-family:Arial,Tahoma,sans-serif;
+            background:#f5f8fa;
+            color:#173247;
+            line-height:1.9;
+        }
+
+        a {
+            text-decoration:none;
+            color:inherit;
+        }
+
+        .container {
+            width:min(1000px,calc(100% - 30px));
+            margin:auto;
+        }
+
+        .site-header {
+            background:white;
+            border-bottom:1px solid #e1e9ed;
+            padding:15px 0;
+        }
+
+        .header-inner {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:15px;
+        }
+
+        .logo {
+            display:flex;
+            align-items:center;
+            gap:10px;
+        }
+
+        .logo-icon {
+            width:45px;
+            height:45px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:13px;
+            background:linear-gradient(135deg,#0b2d46,#18758a);
+            color:white;
+            font-size:23px;
+        }
+
+        .logo strong {
+            color:#0b2d46;
+            font-size:18px;
+        }
+
+        .back-link {
+            padding:9px 14px;
+            border-radius:10px;
+            background:#edf6f8;
+            color:#0b526b;
+            font-size:13px;
+            font-weight:800;
+        }
+
+        .article-hero {
+            background:linear-gradient(135deg,#082c46,#137b8d);
+            color:white;
+            padding:65px 0;
+        }
+
+        .category {
+            display:inline-block;
+            padding:6px 12px;
+            border-radius:30px;
+            background:rgba(255,255,255,.12);
+            font-size:12px;
+            font-weight:800;
+            margin-bottom:18px;
+        }
+
+        h1 {
+            font-size:clamp(32px,5vw,52px);
+            line-height:1.3;
+            margin-bottom:15px;
+        }
+
+        .hero-description {
+            max-width:760px;
+            color:rgba(255,255,255,.82);
+            font-size:16px;
+        }
+
+        .article-content {
+            background:white;
+            margin:35px auto;
+            padding:40px;
+            border-radius:22px;
+            border:1px solid #e1e9ed;
+        }
+
+        .article-content h2 {
+            color:#0b2d46;
+            font-size:25px;
+            margin:35px 0 12px;
+        }
+
+        .article-content h3 {
+            color:#12667c;
+            font-size:19px;
+            margin:22px 0 8px;
+        }
+
+        .article-content p {
+            color:#4d626d;
+            margin-bottom:14px;
+        }
+
+        .article-content ul {
+            padding-right:25px;
+            margin-bottom:18px;
+        }
+
+        .article-content li {
+            color:#4d626d;
+            margin-bottom:7px;
+        }
+
+        .info-box {
+            background:#eef7f9;
+            border-right:5px solid #137b8d;
+            padding:18px;
+            border-radius:12px;
+            margin:22px 0;
+        }
+
+        .warning {
+            background:#fff8e8;
+            border-right:5px solid #d69e2e;
+            padding:18px;
+            border-radius:12px;
+            margin:25px 0;
+        }
+
+        .chain {
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:12px;
+            margin:20px 0;
+        }
+
+        .chain-card {
+            padding:17px;
+            text-align:center;
+            background:#f8fbfc;
+            border:1px solid #e1e9ed;
+            border-radius:13px;
+        }
+
+        .chain-card strong {
+            display:block;
+            color:#0b526b;
+            margin-bottom:5px;
+        }
+
+        .ppe {
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:12px;
+        }
+
+        .ppe-card {
+            background:#f8fbfc;
+            border:1px solid #e1e9ed;
+            border-radius:13px;
+            padding:18px;
+        }
+
+        .ppe-card strong {
+            display:block;
+            color:#0b526b;
+            margin-bottom:5px;
+        }
+
+        .disclaimer {
+            background:#f5f7f8;
+            border:1px solid #dfe7ea;
+            padding:20px;
+            border-radius:14px;
+            margin-top:35px;
+            font-size:13px;
+            color:#667780;
+        }
+
+        .site-footer {
+            background:#071f32;
+            color:white;
+            padding:30px 0;
+            text-align:center;
+            font-size:12px;
+        }
+
+        @media(max-width:700px) {
+
+            .article-content {
+                padding:23px 18px;
+            }
+
+            .chain,
+            .ppe {
+                grid-template-columns:1fr;
+            }
+
+            .article-hero {
+                padding:45px 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                🩺
+            </span>
+
+            <strong>
+                بوابة التمريض
+            </strong>
+
+        </a>
+
+        <a
+            href="articles.html"
+            class="back-link"
+        >
+            ← كل المقالات
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="article-hero">
+
+    <div class="container">
+
+        <span class="category">
+            INFECTION CONTROL
+        </span>
+
+        <h1>
+            أساسيات مكافحة العدوى
+            <br>
+            Infection Control
+        </h1>
+
+        <p class="hero-description">
+            مقدمة مبسطة لطلاب التمريض حول منع انتقال العدوى،
+            نظافة اليدين، الاحتياطات القياسية ومعدات الوقاية
+            الشخصية.
+        </p>
+
+    </div>
+
+</section>
+
+
+<main class="container">
+
+<article class="article-content">
+
+    <p>
+        مكافحة العدوى هي مجموعة من الممارسات والإجراءات
+        التي تهدف إلى تقليل خطر انتقال العدوى داخل أماكن
+        الرعاية الصحية وحماية المرضى والعاملين والزوار.
+    </p>
+
+
+    <div class="info-box">
+
+        <strong>
+            🧼 أهم قاعدة في مكافحة العدوى:
+        </strong>
+
+        <br>
+
+        نظافة اليدين في الأوقات المناسبة وبالطريقة الصحيحة
+        من أهم الإجراءات الأساسية للحد من انتقال الميكروبات
+        في الرعاية الصحية.
+
+    </div>
+
+
+    <h2>
+        🔗 سلسلة العدوى
+    </h2>
+
+    <p>
+        لفهم كيفية انتقال العدوى يمكن دراسة ما يسمى
+        Chain of Infection، والتي تتكون من حلقات مترابطة.
+        كسر أي حلقة من هذه السلسلة يمكن أن يساعد في منع
+        انتقال العدوى.
+    </p>
+
+    <div class="chain">
+
+        <div class="chain-card">
+            <strong>1. Infectious Agent</strong>
+            العامل المسبب للعدوى
+        </div>
+
+        <div class="chain-card">
+            <strong>2. Reservoir</strong>
+            الخزان أو المصدر
+        </div>
+
+        <div class="chain-card">
+            <strong>3. Portal of Exit</strong>
+            منفذ الخروج
+        </div>
+
+        <div class="chain-card">
+            <strong>4. Mode of Transmission</strong>
+            طريقة الانتقال
+        </div>
+
+        <div class="chain-card">
+            <strong>5. Portal of Entry</strong>
+            منفذ الدخول
+        </div>
+
+        <div class="chain-card">
+            <strong>6. Susceptible Host</strong>
+            الشخص القابل للإصابة
+        </div>
+
+    </div>
+
+
+    <h2>
+        🧼 نظافة اليدين
+    </h2>
+
+    <p>
+        يجب إجراء نظافة اليدين في المواقف المناسبة وفق
+        الإرشادات المعتمدة. وتشمل الخيارات استخدام الماء
+        والصابون أو مطهر اليدين الكحولي عندما يكون مناسبًا.
+    </p>
+
+    <h3>
+        أمثلة على المواقف المهمة
+    </h3>
+
+    <ul>
+        <li>قبل ملامسة المريض.</li>
+        <li>قبل إجراء مهمة نظيفة أو معقمة.</li>
+        <li>بعد التعرض أو احتمال التعرض لسوائل الجسم.</li>
+        <li>بعد ملامسة المريض.</li>
+        <li>بعد ملامسة البيئة المحيطة بالمريض.</li>
+    </ul>
+
+
+    <h2>
+        🧤 معدات الوقاية الشخصية PPE
+    </h2>
+
+    <p>
+        تُستخدم معدات الوقاية الشخصية عندما يكون هناك خطر
+        محتمل للتعرض للدم أو سوائل الجسم أو المواد المعدية.
+        ويُختار نوع معدات الوقاية بناءً على مستوى الخطر.
+    </p>
+
+    <div class="ppe">
+
+        <div class="ppe-card">
+
+            <strong>
+                🧤 Gloves
+            </strong>
+
+            القفازات.
+
+        </div>
+
+        <div class="ppe-card">
+
+            <strong>
+                😷 Mask
+            </strong>
+
+            الكمامة.
+
+        </div>
+
+        <div class="ppe-card">
+
+            <strong>
+                🥽 Eye Protection
+            </strong>
+
+            حماية العينين عند الحاجة.
+
+        </div>
+
+        <div class="ppe-card">
+
+            <strong>
+                🥼 Gown
+            </strong>
+
+            واقي أو رداء الحماية عند الحاجة.
+
+        </div>
+
+    </div>
+
+
+    <h2>
+        🧪 الاحتياطات القياسية
+    </h2>
+
+    <p>
+        Standard Precautions هي مجموعة من ممارسات الوقاية
+        التي تُطبق وفق تقييم الخطر عند تقديم الرعاية لجميع
+        المرضى، بغض النظر عن حالة العدوى المعروفة لديهم.
+    </p>
+
+    <ul>
+        <li>نظافة اليدين.</li>
+        <li>استخدام معدات الوقاية المناسبة حسب الخطر.</li>
+        <li>التعامل الآمن مع الأدوات الحادة.</li>
+        <li>التعامل المناسب مع الأدوات والمعدات المستخدمة.</li>
+        <li>التنظيف والتطهير وفق الإجراءات المعتمدة.</li>
+        <li>التعامل الآمن مع البياضات والنفايات حسب النظام.</li>
+    </ul>
+
+
+    <h2>
+        💉 السلامة عند التعامل مع الأدوات الحادة
+    </h2>
+
+    <p>
+        يجب التعامل مع الإبر والأدوات الحادة بحذر لتقليل
+        خطر الإصابات ونقل العدوى.
+    </p>
+
+    <ul>
+        <li>تجنب التعامل غير الضروري مع الأدوات الحادة.</li>
+        <li>التخلص منها في حاويات الأدوات الحادة المخصصة.</li>
+        <li>عدم ترك الأدوات الحادة في أماكن غير آمنة.</li>
+        <li>اتباع سياسة المؤسسة عند حدوث وخز أو تعرض مهني.</li>
+    </ul>
+
+
+    <h2>
+        🧽 التنظيف والتطهير والتعقيم
+    </h2>
+
+    <h3>
+        Cleaning
+    </h3>
+
+    <p>
+        إزالة الأوساخ والمواد العضوية من الأسطح أو الأدوات.
+    </p>
+
+    <h3>
+        Disinfection
+    </h3>
+
+    <p>
+        عملية تهدف إلى تقليل أو القضاء على كثير من
+        الكائنات الدقيقة الممرضة على الأسطح والأدوات
+        وفق المادة والطريقة المستخدمة.
+    </p>
+
+    <h3>
+        Sterilization
+    </h3>
+
+    <p>
+        عملية تهدف إلى القضاء على جميع أشكال الحياة
+        الميكروبية، بما في ذلك الأبواغ، باستخدام عملية
+        معتمدة ومتحكم فيها.
+    </p>
+
+
+    <div class="warning">
+
+        <strong>
+            ⚠️ مهم:
+        </strong>
+
+        <br>
+
+        إجراءات مكافحة العدوى قد تختلف حسب نوع الإجراء
+        والبيئة الصحية وسياسة المنشأة. يجب دائمًا اتباع
+        البروتوكولات والإرشادات المعتمدة في مكان التدريب
+        أو العمل.
+
+    </div>
+
+
+    <div class="disclaimer">
+
+        <strong>
+            Medical Disclaimer
+        </strong>
+
+        <br><br>
+
+        هذا المقال تعليمي لطلاب وممارسي التمريض، ولا يُغني
+        عن التدريب العملي أو سياسات مكافحة العدوى المعتمدة
+        أو الإرشادات الرسمية للمنشأة الصحية.
+
+    </div>
+
+</article>
+
+</main>
+
+
+<footer class="site-footer">
+
+    © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+
+</footer>
+
+</body>
+
+</html>
