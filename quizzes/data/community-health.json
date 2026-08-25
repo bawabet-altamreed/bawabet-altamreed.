@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "What is the main goal of community health nursing?",
+    "options": [
+      "Treat diseases only",
+      "Promote health and prevent disease",
+      "Perform surgery",
+      "Dispense medications only"
+    ],
+    "answer": 1,
+    "explanation": "The main goal of community health nursing is to promote health, prevent disease, and improve the health of individuals, families, and communities.",
+    "difficulty": "easy",
+    "topic": "Introduction to Community Health Nursing"
+  },
+  {
+    "id": 2,
+    "question": "Community health nursing focuses primarily on:",
+    "options": [
+      "Individuals only",
+      "Families only",
+      "Groups and populations",
+      "Hospital patients only"
+    ],
+    "answer": 2,
+    "explanation": "Community health nursing focuses on populations, groups, families, and individuals within the community.",
+    "difficulty": "easy",
+    "topic": "Introduction to Community Health Nursing"
+  },
+  {
+    "id": 3,
+    "question": "Which level of prevention aims to prevent disease before it occurs?",
+    "options": [
+      "Primary prevention",
+      "Secondary prevention",
+      "Tertiary prevention",
+      "Rehabilitation"
+    ],
+    "answer": 0,
+    "explanation": "Primary prevention aims to prevent the occurrence of disease through measures such as immunization, health education, and healthy lifestyles.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 4,
+    "question": "Which is an example of primary prevention?",
+    "options": [
+      "Screening for breast cancer",
+      "Rehabilitation after stroke",
+      "Immunization",
+      "Treatment of pneumonia"
+    ],
+    "answer": 2,
+    "explanation": "Immunization is a primary prevention measure because it helps prevent disease before it develops.",
+    "difficulty": "easy",
+    "topic": "Primary Prevention"
+  },
+  {
+    "id": 5,
+    "question": "Which level of prevention focuses on early detection of disease?",
+    "options": [
+      "Primary prevention",
+      "Secondary prevention",
+      "Tertiary prevention",
+      "Primordial prevention"
+    ],
+    "answer": 1,
+    "explanation": "Secondary prevention focuses on early detection and prompt treatment of disease.",
+    "difficulty": "easy",
+    "topic": "Levels of Prevention"
+  },
+  {
+    "id": 6,
+    "question": "Which is an example of secondary prevention?",
+    "options": [
+      "Health education",
+      "Immunization",
+      "Blood pressure screening",
+      "Rehabilitation"
+    ],
+    "answer": 2,
+    "explanation": "Blood pressure screening can detect hypertension early and is therefore an example of secondary prevention.",
+    "difficulty": "easy",
+    "topic": "Secondary Prevention"
+  },
+  {
+    "id": 7,
+    "question": "Which level of prevention focuses on reducing complications and disability?",
+    "options": [
+      "Primary prevention",
+      "Secondary prevention",
+      "Tertiary prevention",
+      "Health promotion"
+    ],
+    "answer": 2,
+    "explanation": "Tertiary prevention aims to reduce complications, disability, and the effects of an established disease.",
+    "difficulty": "easy",
+    "topic": "Tertiary Prevention"
+  },
+  {
+    "id": 8,
+    "question": "Which is an example of tertiary prevention?",
+    "options": [
+      "Vaccination",
+      "Health education",
+      "Rehabilitation after stroke",
+      "Screening test"
+    ],
+    "answer": 2,
+    "explanation": "Rehabilitation after stroke helps reduce disability and improve function, making it a tertiary prevention activity.",
+    "difficulty": "easy",
+    "topic": "Tertiary Prevention"
+  },
+  {
+    "id": 9,
+    "question": "What is health promotion?",
+    "options": [
+      "Treating disease only",
+      "Helping people improve control over their health",
+      "Providing surgery",
+      "Giving antibiotics to everyone"
+    ],
+    "answer": 1,
+    "explanation": "Health promotion helps individuals and communities increase control over and improve their health.",
+    "difficulty": "easy",
+    "topic": "Health Promotion"
+  },
+  {
+    "id": 10,
+    "question": "Which factor can strongly influence community health?",
+    "options": [
+      "Environment",
+      "Education",
+      "Socioeconomic conditions",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "Environmental, educational, social, and economic conditions can all influence the health of a community.",
+    "difficulty": "easy",
+    "topic": "Determinants of Health"
+  },
+  {
+    "id": 11,
+    "question": "What is epidemiology?",
+    "options": [
+      "Study of medications",
+      "Study of disease distribution and determinants in populations",
+      "Study of surgical procedures",
+      "Study of anatomy only"
+    ],
+    "answer": 1,
+    "explanation": "Epidemiology is the study of the distribution and determinants of health-related conditions in populations.",
+    "difficulty": "medium",
+    "topic": "Epidemiology"
+  },
+  {
+    "id": 12,
+    "question": "What does incidence measure?",
+    "options": [
+      "All existing cases",
+      "New cases occurring during a specified period",
+      "Deaths only",
+      "Recovered patients only"
+    ],
+    "answer": 1,
+    "explanation": "Incidence measures the occurrence of new cases of a disease in a population during a specified period.",
+    "difficulty": "medium",
+    "topic": "Epidemiology"
+  },
+  {
+    "id": 13,
+    "question": "What does prevalence measure?",
+    "options": [
+      "New cases only",
+      "Existing cases in a population",
+      "Deaths only",
+      "Risk factors only"
+    ],
+    "answer": 1,
+    "explanation": "Prevalence refers to the proportion of a population that has a disease or condition at a specific time or during a specified period.",
+    "difficulty": "medium",
+    "topic": "Epidemiology"
+  },
+  {
+    "id": 14,
+    "question": "Which measure describes the number of deaths in a population?",
+    "options": [
+      "Morbidity",
+      "Mortality",
+      "Incidence",
+      "Prevalence"
+    ],
+    "answer": 1,
+    "explanation": "Mortality refers to death within a population.",
+    "difficulty": "easy",
+    "topic": "Health Statistics"
+  },
+  {
+    "id": 15,
+    "question": "What is morbidity?",
+    "options": [
+      "Occurrence of illness or disease",
+      "Number of births",
+      "Number of deaths",
+      "Population growth"
+    ],
+    "answer": 0,
+    "explanation": "Morbidity refers to illness, disease, or other health conditions occurring within a population.",
+    "difficulty": "easy",
+    "topic": "Health Statistics"
+  },
+  {
+    "id": 16,
+    "question": "Which is an important source of epidemiological data?",
+    "options": [
+      "Vital statistics",
+      "Disease surveillance",
+      "Census data",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "Vital statistics, surveillance systems, census data, and health records are important sources of epidemiological information.",
+    "difficulty": "medium",
+    "topic": "Epidemiology"
+  },
+  {
+    "id": 17,
+    "question": "What is communicable disease?",
+    "options": [
+      "A disease caused only by genetics",
+      "A disease that can be transmitted from one person or source to another",
+      "A disease caused by aging",
+      "A disease that never spreads"
+    ],
+    "answer": 1,
+    "explanation": "A communicable disease is an infectious disease that can be transmitted directly or indirectly from an infected source to another person.",
+    "difficulty": "easy",
+    "topic": "Communicable Diseases"
+  },
+  {
+    "id": 18,
+    "question": "Which microorganism can cause tuberculosis?",
+    "options": [
+      "Mycobacterium tuberculosis",
+      "Plasmodium",
+      "Candida albicans",
+      "Hepatitis virus"
+    ],
+    "answer": 0,
+    "explanation": "Tuberculosis is primarily caused by the bacterium Mycobacterium tuberculosis.",
+    "difficulty": "easy",
+    "topic": "Communicable Diseases"
+  },
+  {
+    "id": 19,
+    "question": "Which disease is commonly transmitted through contaminated food or water?",
+    "options": [
+      "Cholera",
+      "Tetanus",
+      "Rabies",
+      "Influenza"
+    ],
+    "answer": 0,
+    "explanation": "Cholera is commonly transmitted through ingestion of food or water contaminated with Vibrio cholerae.",
+    "difficulty": "easy",
+    "topic": "Communicable Diseases"
+  },
+  {
+    "id": 20,
+    "question": "Which measure is most effective for preventing many foodborne diseases?",
+    "options": [
+      "Proper hand hygiene and food handling",
+      "Avoiding exercise",
+      "Taking antibiotics regularly",
+      "Sleeping more"
+    ],
+    "answer": 0,
+    "explanation": "Proper hand hygiene, safe food preparation, and appropriate food storage help prevent many foodborne infections.",
+    "difficulty": "easy",
+    "topic": "Disease Prevention"
+  },
+  {
+    "id": 21,
+    "question": "Which disease is transmitted primarily by mosquitoes?",
+    "options": [
+      "Malaria",
+      "Tetanus",
+      "Tuberculosis",
+      "Measles"
+    ],
+    "answer": 0,
+    "explanation": "Malaria is transmitted to humans through the bite of infected female Anopheles mosquitoes.",
+    "difficulty": "easy",
+    "topic": "Vector-Borne Diseases"
+  },
+  {
+    "id": 22,
+    "question": "What is a vector?",
+    "options": [
+      "A type of medication",
+      "An organism that transmits an infectious agent",
+      "A vaccine",
+      "A laboratory test"
+    ],
+    "answer": 1,
+    "explanation": "A vector is a living organism, such as a mosquito, that can transmit an infectious agent between hosts.",
+    "difficulty": "easy",
+    "topic": "Vector-Borne Diseases"
+  },
+  {
+    "id": 23,
+    "question": "Which vaccine-preventable disease is characterized by a cough and fever and can cause serious complications?",
+    "options": [
+      "Measles",
+      "Hypertension",
+      "Diabetes",
+      "Asthma"
+    ],
+    "answer": 0,
+    "explanation": "Measles is a highly contagious viral disease that can cause serious complications, especially in unvaccinated individuals.",
+    "difficulty": "easy",
+    "topic": "Immunization"
+  },
+  {
+    "id": 24,
+    "question": "What is the main purpose of vaccination?",
+    "options": [
+      "To cause disease",
+      "To stimulate immunity against specific infections",
+      "To replace antibiotics",
+      "To increase blood pressure"
+    ],
+    "answer": 1,
+    "explanation": "Vaccines stimulate the immune system to develop protection against specific infectious diseases.",
+    "difficulty": "easy",
+    "topic": "Immunization"
+  },
+  {
+    "id": 25,
+    "question": "Which type of immunity develops after receiving a vaccine?",
+    "options": [
+      "Artificial active immunity",
+      "Natural passive immunity",
+      "Artificial passive immunity",
+      "No immunity"
+    ],
+    "answer": 0,
+    "explanation": "Vaccination stimulates the person's own immune system to develop protection, which is artificial active immunity.",
+    "difficulty": "medium",
+    "topic": "Immunization"
+  },
+  {
+    "id": 26,
+    "question": "What is herd immunity?",
+    "options": [
+      "Immunity in animals only",
+      "Protection of a population when enough people are immune",
+      "A type of medication",
+      "A type of infection"
+    ],
+    "answer": 1,
+    "explanation": "Herd immunity occurs when a sufficiently large proportion of a population is immune, reducing the spread of an infectious disease.",
+    "difficulty": "medium",
+    "topic": "Immunization"
+  },
+  {
+    "id": 27,
+    "question": "Which is an important component of environmental health?",
+    "options": [
+      "Safe water",
+      "Proper waste disposal",
+      "Clean air",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "Safe water, proper waste disposal, clean air, food safety, and sanitation are all important components of environmental health.",
+    "difficulty": "easy",
+    "topic": "Environmental Health"
+  },
+  {
+    "id": 28,
+    "question": "Why is safe drinking water important?",
+    "options": [
+      "It prevents waterborne diseases",
+      "It increases infection",
+      "It causes dehydration",
+      "It replaces vaccination"
+    ],
+    "answer": 0,
+    "explanation": "Safe drinking water helps prevent diseases transmitted through contaminated water.",
+    "difficulty": "easy",
+    "topic": "Environmental Health"
+  },
+  {
+    "id": 29,
+    "question": "Which method helps reduce mosquito breeding?",
+    "options": [
+      "Allowing stagnant water to remain",
+      "Removing standing water",
+      "Leaving containers uncovered",
+      "Increasing waste around homes"
+    ],
+    "answer": 1,
+    "explanation": "Removing or covering sources of standing water helps reduce mosquito breeding sites.",
+    "difficulty": "easy",
+    "topic": "Environmental Health"
+  },
+  {
+    "id": 30,
+    "question": "What is proper waste management important for?",
+    "options": [
+      "Preventing environmental contamination and disease",
+      "Increasing pests",
+      "Increasing pollution",
+      "Reducing sanitation"
+    ],
+    "answer": 0,
+    "explanation": "Proper waste management reduces environmental contamination, pests, injuries, and transmission of disease.",
+    "difficulty": "easy",
+    "topic": "Environmental Health"
+  },
+  {
+    "id": 31,
+    "question": "What is family health nursing?",
+    "options": [
+      "Care provided only to hospitalized patients",
+      "Nursing care focused on the health of families",
+      "Surgical treatment",
+      "Laboratory testing only"
+    ],
+    "answer": 1,
+    "explanation": "Family health nursing focuses on promoting, maintaining, and improving the health of families.",
+    "difficulty": "easy",
+    "topic": "Family Health Nursing"
+  },
+  {
+    "id": 32,
+    "question": "What is the first step in the nursing process?",
+    "options": [
+      "Planning",
+      "Assessment",
+      "Implementation",
+      "Evaluation"
+    ],
+    "answer": 1,
+    "explanation": "Assessment is the first step of the nursing process and involves collecting relevant information about the client.",
+    "difficulty": "easy",
+    "topic": "Community Nursing Process"
+  },
+  {
+    "id": 33,
+    "question": "Which activity is part of community assessment?",
+    "options": [
+      "Collecting health data",
+      "Ignoring community needs",
+      "Avoiding the population",
+      "Treating one patient only"
+    ],
+    "answer": 0,
+    "explanation": "Community assessment includes collecting and analyzing data to identify the health needs and problems of a community.",
+    "difficulty": "easy",
+    "topic": "Community Assessment"
+  },
+  {
+    "id": 34,
+    "question": "What is a home visit?",
+    "options": [
+      "A visit by the nurse to provide care in the client's home",
+      "A hospital admission",
+      "A laboratory procedure",
+      "A surgical operation"
+    ],
+    "answer": 0,
+    "explanation": "A home visit allows the community health nurse to provide assessment, education, and nursing care in the client's home environment.",
+    "difficulty": "easy",
+    "topic": "Home Visits"
+  },
+  {
+    "id": 35,
+    "question": "Which is an important principle of a home visit?",
+    "options": [
+      "Respecting the family's privacy",
+      "Ignoring the home environment",
+      "Forcing the family to accept care",
+      "Avoiding communication"
+    ],
+    "answer": 0,
+    "explanation": "The nurse should respect the family's privacy, culture, values, and autonomy during a home visit.",
+    "difficulty": "easy",
+    "topic": "Home Visits"
+  },
+  {
+    "id": 36,
+    "question": "What is health education?",
+    "options": [
+      "Providing information to help people make informed health decisions",
+      "Giving medication without explanation",
+      "Treating disease only",
+      "Performing surgery"
+    ],
+    "answer": 0,
+    "explanation": "Health education provides individuals and communities with knowledge and skills that support healthy decisions and behaviors.",
+    "difficulty": "easy",
+    "topic": "Health Education"
+  },
+  {
+    "id": 37,
+    "question": "Which method is usually effective when teaching a small group?",
+    "options": [
+      "Group discussion",
+      "Ignoring participants",
+      "No communication",
+      "Silent observation only"
+    ],
+    "answer": 0,
+    "explanation": "Group discussion encourages participation, questions, and exchange of ideas among learners.",
+    "difficulty": "easy",
+    "topic": "Health Education"
+  },
+  {
+    "id": 38,
+    "question": "Which factor should the nurse consider when planning health education?",
+    "options": [
+      "Health literacy of the audience",
+      "Learning needs",
+      "Cultural background",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "Effective health education should consider the learners' health literacy, needs, culture, language, and level of understanding.",
+    "difficulty": "medium",
+    "topic": "Health Education"
+  },
+  {
+    "id": 39,
+    "question": "What is maternal health mainly concerned with?",
+    "options": [
+      "Health of women during pregnancy, childbirth, and postpartum period",
+      "Treatment of fractures",
+      "Dental care only",
+      "Eye diseases only"
+    ],
+    "answer": 0,
+    "explanation": "Maternal health includes the health and well-being of women during pregnancy, childbirth, and the postpartum period.",
+    "difficulty": "easy",
+    "topic": "Maternal and Child Health"
+  },
+  {
+    "id": 40,
+    "question": "Why is antenatal care important?",
+    "options": [
+      "To detect and manage potential problems during pregnancy",
+      "To prevent all pregnancies",
+      "To replace childbirth",
+      "To avoid health education"
+    ],
+    "answer": 0,
+    "explanation": "Antenatal care helps monitor maternal and fetal health and allows early detection and management of potential complications.",
+    "difficulty": "easy",
+    "topic": "Maternal and Child Health"
+  },
+  {
+    "id": 41,
+    "question": "Which is an important component of child health?",
+    "options": [
+      "Immunization",
+      "Nutrition",
+      "Growth monitoring",
+      "All of the above"
+    ],
+    "answer": 3,
+    "explanation": "Child health services include immunization, adequate nutrition, growth and development monitoring, and disease prevention.",
+    "difficulty": "easy",
+    "topic": "Maternal and Child Health"
+  },
+  {
+    "id": 42,
+    "question": "What is the main purpose of growth monitoring in children?",
+    "options": [
+      "Detect growth problems early",
+      "Increase disease",
+      "Prevent all infections",
+      "Replace immunization"
+    ],
+    "answer": 0,
+    "explanation": "Growth monitoring helps identify abnormal growth patterns and nutritional or health problems at an early stage.",
+    "difficulty": "easy",
+    "topic": "Child Health"
+  },
+  {
+    "id": 43,
+    "question": "Which lifestyle factor can increase the risk of cardiovascular disease?",
+    "options": [
+      "Regular physical activity",
+      "Smoking",
+      "Balanced diet",
+      "Healthy weight"
+    ],
+    "answer": 1,
+    "explanation": "Smoking is an important modifiable risk factor for cardiovascular disease and many other health conditions.",
+    "difficulty": "easy",
+    "topic": "Noncommunicable Diseases"
+  },
+  {
+    "id": 44,
+    "question": "Which is an example of a noncommunicable disease?",
+    "options": [
+      "Diabetes mellitus",
+      "Measles",
+      "Cholera",
+      "Influenza"
+    ],
+    "answer": 0,
+    "explanation": "Diabetes mellitus is a noncommunicable disease and is not spread from person to person like infectious diseases.",
+    "difficulty": "easy",
+    "topic": "Noncommunicable Diseases"
+  },
+  {
+    "id": 45,
+    "question": "Which behavior helps prevent many noncommunicable diseases?",
+    "options": [
+      "Regular physical activity",
+      "Smoking",
+      "Excessive alcohol use",
+      "Poor diet"
+    ],
+    "answer": 0,
+    "explanation": "Regular physical activity is an important healthy behavior that can reduce the risk of several noncommunicable diseases.",
+    "difficulty": "easy",
+    "topic": "Health Promotion"
+  },
+  {
+    "id": 46,
+    "question": "What is occupational health?",
+    "options": [
+      "Protection and promotion of workers' health and safety",
+      "Treatment of hospital patients only",
+      "Study of anatomy",
+      "Treatment of children only"
+    ],
+    "answer": 0,
+    "explanation": "Occupational health focuses on protecting and promoting the health, safety, and well-being of workers.",
+    "difficulty": "easy",
+    "topic": "Occupational Health"
+  },
+  {
+    "id": 47,
+    "question": "Which is an example of a workplace hazard?",
+    "options": [
+      "Chemical exposure",
+      "Proper ventilation",
+      "Protective equipment",
+      "Safety training"
+    ],
+    "answer": 0,
+    "explanation": "Chemical exposure can be a workplace hazard and may cause injury or illness if not properly controlled.",
+    "difficulty": "easy",
+    "topic": "Occupational Health"
+  },
+  {
+    "id": 48,
+    "question": "What is disaster preparedness?",
+    "options": [
+      "Planning and preparing before a disaster occurs",
+      "Ignoring potential disasters",
+      "Waiting until after the disaster",
+      "Avoiding emergency plans"
+    ],
+    "answer": 0,
+    "explanation": "Disaster preparedness involves planning, training, organizing resources, and preparing systems before a disaster occurs.",
+    "difficulty": "easy",
+    "topic": "Disaster Management"
+  },
+  {
+    "id": 49,
+    "question": "Which action is important during a community health emergency?",
+    "options": [
+      "Clear communication and coordination",
+      "Ignoring information",
+      "Spreading rumors",
+      "Avoiding teamwork"
+    ],
+    "answer": 0,
+    "explanation": "Clear communication, coordination, accurate information, and teamwork are essential during community health emergencies.",
+    "difficulty": "medium",
+    "topic": "Disaster Management"
+  },
+  {
+    "id": 50,
+    "question": "Which statement best describes the role of a community health nurse?",
+    "options": [
+      "The nurse only treats hospitalized patients",
+      "The nurse promotes health, prevents disease, provides education, and supports individuals and communities",
+      "The nurse performs surgery independently",
+      "The nurse only administers medications"
+    ],
+    "answer": 1,
+    "explanation": "Community health nurses have a broad role that includes health promotion, disease prevention, education, assessment, advocacy, and care of individuals, families, and communities.",
+    "difficulty": "medium",
+    "topic": "Community Health Nursing"
+  }
+]
