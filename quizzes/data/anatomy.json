@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Which position is considered the standard anatomical position?",
+    "options": [
+      "Standing upright with palms facing forward",
+      "Standing upright with palms facing backward",
+      "Lying flat on the back",
+      "Sitting with arms crossed"
+    ],
+    "answer": 0,
+    "explanation": "The standard anatomical position is standing upright, facing forward, with the arms at the sides and palms facing forward.",
+    "difficulty": "easy",
+    "topic": "Anatomical Position"
+  },
+  {
+    "id": 2,
+    "question": "Which term means closer to the head?",
+    "options": [
+      "Inferior",
+      "Superior",
+      "Distal",
+      "Lateral"
+    ],
+    "answer": 1,
+    "explanation": "Superior means toward the head or upper part of the body.",
+    "difficulty": "easy",
+    "topic": "Body Directions"
+  },
+  {
+    "id": 3,
+    "question": "Which term means farther away from the point of attachment of a limb?",
+    "options": [
+      "Proximal",
+      "Medial",
+      "Distal",
+      "Superior"
+    ],
+    "answer": 2,
+    "explanation": "Distal means farther from the point of attachment or origin of a body part.",
+    "difficulty": "easy",
+    "topic": "Body Directions"
+  },
+  {
+    "id": 4,
+    "question": "Which term means toward the midline of the body?",
+    "options": [
+      "Lateral",
+      "Medial",
+      "Distal",
+      "Posterior"
+    ],
+    "answer": 1,
+    "explanation": "Medial means toward or nearer to the midline of the body.",
+    "difficulty": "easy",
+    "topic": "Body Directions"
+  },
+  {
+    "id": 5,
+    "question": "Which term means toward the back of the body?",
+    "options": [
+      "Anterior",
+      "Superior",
+      "Posterior",
+      "Medial"
+    ],
+    "answer": 2,
+    "explanation": "Posterior means toward the back or rear side of the body.",
+    "difficulty": "easy",
+    "topic": "Body Directions"
+  },
+  {
+    "id": 6,
+    "question": "Which term means closer to the body's surface?",
+    "options": [
+      "Deep",
+      "Superficial",
+      "Distal",
+      "Inferior"
+    ],
+    "answer": 1,
+    "explanation": "Superficial describes a structure that is closer to the surface of the body.",
+    "difficulty": "easy",
+    "topic": "Body Directions"
+  },
+  {
+    "id": 7,
+    "question": "Which plane divides the body into right and left portions?",
+    "options": [
+      "Frontal plane",
+      "Transverse plane",
+      "Sagittal plane",
+      "Oblique plane"
+    ],
+    "answer": 2,
+    "explanation": "The sagittal plane divides the body into right and left portions.",
+    "difficulty": "easy",
+    "topic": "Body Planes"
+  },
+  {
+    "id": 8,
+    "question": "Which plane divides the body into anterior and posterior portions?",
+    "options": [
+      "Frontal plane",
+      "Sagittal plane",
+      "Transverse plane",
+      "Median plane"
+    ],
+    "answer": 0,
+    "explanation": "The frontal, or coronal, plane divides the body into anterior and posterior portions.",
+    "difficulty": "easy",
+    "topic": "Body Planes"
+  },
+  {
+    "id": 9,
+    "question": "Which plane divides the body into superior and inferior portions?",
+    "options": [
+      "Sagittal plane",
+      "Frontal plane",
+      "Transverse plane",
+      "Median plane"
+    ],
+    "answer": 2,
+    "explanation": "The transverse plane divides the body into superior and inferior portions.",
+    "difficulty": "easy",
+    "topic": "Body Planes"
+  },
+  {
+    "id": 10,
+    "question": "Which cavity contains the brain?",
+    "options": [
+      "Thoracic cavity",
+      "Cranial cavity",
+      "Abdominal cavity",
+      "Pelvic cavity"
+    ],
+    "answer": 1,
+    "explanation": "The brain is located within the cranial cavity of the skull.",
+    "difficulty": "easy",
+    "topic": "Body Cavities"
+  },
+  {
+    "id": 11,
+    "question": "Which cavity contains the lungs?",
+    "options": [
+      "Cranial cavity",
+      "Thoracic cavity",
+      "Pelvic cavity",
+      "Abdominal cavity"
+    ],
+    "answer": 1,
+    "explanation": "The lungs are located within the thoracic cavity.",
+    "difficulty": "easy",
+    "topic": "Body Cavities"
+  },
+  {
+    "id": 12,
+    "question": "Which muscle separates the thoracic cavity from the abdominal cavity?",
+    "options": [
+      "Intercostal muscle",
+      "Diaphragm",
+      "Rectus abdominis",
+      "Pectoralis major"
+    ],
+    "answer": 1,
+    "explanation": "The diaphragm separates the thoracic cavity from the abdominal cavity and plays an important role in respiration.",
+    "difficulty": "easy",
+    "topic": "Body Cavities"
+  },
+  {
+    "id": 13,
+    "question": "Which cavity contains most of the digestive organs?",
+    "options": [
+      "Cranial cavity",
+      "Thoracic cavity",
+      "Abdominal cavity",
+      "Vertebral cavity"
+    ],
+    "answer": 2,
+    "explanation": "Most major digestive organs are located in the abdominal cavity.",
+    "difficulty": "easy",
+    "topic": "Body Cavities"
+  },
+  {
+    "id": 14,
+    "question": "Which cavity contains the urinary bladder?",
+    "options": [
+      "Pelvic cavity",
+      "Cranial cavity",
+      "Thoracic cavity",
+      "Pleural cavity"
+    ],
+    "answer": 0,
+    "explanation": "The urinary bladder is located in the pelvic cavity.",
+    "difficulty": "easy",
+    "topic": "Body Cavities"
+  },
+  {
+    "id": 15,
+    "question": "How many bones are normally present in an adult human skeleton?",
+    "options": [
+      "106",
+      "206",
+      "306",
+      "406"
+    ],
+    "answer": 1,
+    "explanation": "An adult human skeleton normally contains approximately 206 bones.",
+    "difficulty": "easy",
+    "topic": "Skeletal System"
+  },
+  {
+    "id": 16,
+    "question": "Which is the longest bone in the human body?",
+    "options": [
+      "Tibia",
+      "Humerus",
+      "Femur",
+      "Radius"
+    ],
+    "answer": 2,
+    "explanation": "The femur is the longest and one of the strongest bones in the human body.",
+    "difficulty": "easy",
+    "topic": "Bones"
+  },
+  {
+    "id": 17,
+    "question": "Which bone is located in the upper arm?",
+    "options": [
+      "Femur",
+      "Humerus",
+      "Tibia",
+      "Ulna"
+    ],
+    "answer": 1,
+    "explanation": "The humerus is the long bone of the upper arm.",
+    "difficulty": "easy",
+    "topic": "Bones"
+  },
+  {
+    "id": 18,
+    "question": "Which bone is located in the thigh?",
+    "options": [
+      "Femur",
+      "Fibula",
+      "Radius",
+      "Humerus"
+    ],
+    "answer": 0,
+    "explanation": "The femur is the long bone located in the thigh.",
+    "difficulty": "easy",
+    "topic": "Bones"
+  },
+  {
+    "id": 19,
+    "question": "Which bone protects the brain?",
+    "options": [
+      "Sternum",
+      "Scapula",
+      "Skull",
+      "Pelvis"
+    ],
+    "answer": 2,
+    "explanation": "The skull surrounds and protects the brain.",
+    "difficulty": "easy",
+    "topic": "Bones"
+  },
+  {
+    "id": 20,
+    "question": "Which bone is commonly known as the kneecap?",
+    "options": [
+      "Patella",
+      "Tibia",
+      "Fibula",
+      "Talus"
+    ],
+    "answer": 0,
+    "explanation": "The patella is the kneecap and is located at the front of the knee joint.",
+    "difficulty": "easy",
+    "topic": "Bones"
+  },
+  {
+    "id": 21,
+    "question": "Which bone forms the main part of the forehead?",
+    "options": [
+      "Temporal bone",
+      "Frontal bone",
+      "Occipital bone",
+      "Parietal bone"
+    ],
+    "answer": 1,
+    "explanation": "The frontal bone forms the forehead and part of the anterior skull.",
+    "difficulty": "medium",
+    "topic": "Skull"
+  },
+  {
+    "id": 22,
+    "question": "Which type of joint is found at the shoulder?",
+    "options": [
+      "Hinge joint",
+      "Pivot joint",
+      "Ball-and-socket joint",
+      "Fixed joint"
+    ],
+    "answer": 2,
+    "explanation": "The shoulder is a ball-and-socket joint that allows movement in many directions.",
+    "difficulty": "easy",
+    "topic": "Joints"
+  },
+  {
+    "id": 23,
+    "question": "Which type of joint is found at the elbow?",
+    "options": [
+      "Hinge joint",
+      "Ball-and-socket joint",
+      "Pivot joint",
+      "Saddle joint"
+    ],
+    "answer": 0,
+    "explanation": "The elbow is primarily a hinge joint, allowing flexion and extension.",
+    "difficulty": "easy",
+    "topic": "Joints"
+  },
+  {
+    "id": 24,
+    "question": "Which joint allows rotation of the head from side to side?",
+    "options": [
+      "Hinge joint",
+      "Pivot joint",
+      "Saddle joint",
+      "Plane joint"
+    ],
+    "answer": 1,
+    "explanation": "The atlantoaxial joint is a pivot joint that allows rotation of the head.",
+    "difficulty": "medium",
+    "topic": "Joints"
+  },
+  {
+    "id": 25,
+    "question": "Which type of joint is found between the skull bones?",
+    "options": [
+      "Ball-and-socket joint",
+      "Hinge joint",
+      "Suture",
+      "Pivot joint"
+    ],
+    "answer": 2,
+    "explanation": "Sutures are fibrous joints that connect the bones of the skull.",
+    "difficulty": "medium",
+    "topic": "Joints"
+  },
+  {
+    "id": 26,
+    "question": "Which type of muscle is under voluntary control?",
+    "options": [
+      "Cardiac muscle",
+      "Smooth muscle",
+      "Skeletal muscle",
+      "Visceral muscle"
+    ],
+    "answer": 2,
+    "explanation": "Skeletal muscle is generally under voluntary control and is responsible for body movement.",
+    "difficulty": "easy",
+    "topic": "Muscular System"
+  },
+  {
+    "id": 27,
+    "question": "Which muscle tissue is found in the heart?",
+    "options": [
+      "Skeletal muscle",
+      "Smooth muscle",
+      "Cardiac muscle",
+      "Connective tissue"
+    ],
+    "answer": 2,
+    "explanation": "Cardiac muscle is the specialized muscle tissue that forms the heart.",
+    "difficulty": "easy",
+    "topic": "Muscular System"
+  },
+  {
+    "id": 28,
+    "question": "Which type of muscle is found in the walls of many internal organs?",
+    "options": [
+      "Skeletal muscle",
+      "Smooth muscle",
+      "Cardiac muscle",
+      "Striated voluntary muscle"
+    ],
+    "answer": 1,
+    "explanation": "Smooth muscle is found in the walls of many hollow internal organs and blood vessels.",
+    "difficulty": "easy",
+    "topic": "Muscular System"
+  },
+  {
+    "id": 29,
+    "question": "Which muscle is primarily responsible for flexing the elbow?",
+    "options": [
+      "Biceps brachii",
+      "Triceps brachii",
+      "Quadriceps",
+      "Gastrocnemius"
+    ],
+    "answer": 0,
+    "explanation": "The biceps brachii is an important muscle involved in flexion of the elbow.",
+    "difficulty": "easy",
+    "topic": "Muscular System"
+  },
+  {
+    "id": 30,
+    "question": "Which muscle is primarily responsible for extending the elbow?",
+    "options": [
+      "Biceps brachii",
+      "Triceps brachii",
+      "Deltoid",
+      "Pectoralis minor"
+    ],
+    "answer": 1,
+    "explanation": "The triceps brachii is the major muscle responsible for elbow extension.",
+    "difficulty": "easy",
+    "topic": "Muscular System"
+  },
+  {
+    "id": 31,
+    "question": "What is the basic functional unit of the nervous system?",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Alveolus",
+      "Osteon"
+    ],
+    "answer": 0,
+    "explanation": "The neuron is the basic functional cell of the nervous system and transmits nerve signals.",
+    "difficulty": "easy",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 32,
+    "question": "Which part of the brain is primarily responsible for balance and coordination?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla oblongata",
+      "Hypothalamus"
+    ],
+    "answer": 1,
+    "explanation": "The cerebellum plays an important role in balance, posture, and coordination of movement.",
+    "difficulty": "easy",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 33,
+    "question": "Which part of the brain is mainly responsible for higher cognitive functions?",
+    "options": [
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla",
+      "Spinal cord"
+    ],
+    "answer": 0,
+    "explanation": "The cerebrum is involved in conscious thought, memory, language, sensation, and voluntary movement.",
+    "difficulty": "medium",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 34,
+    "question": "What is the main function of the spinal cord?",
+    "options": [
+      "Digest food",
+      "Pump blood",
+      "Transmit nerve signals between the brain and body",
+      "Produce red blood cells"
+    ],
+    "answer": 2,
+    "explanation": "The spinal cord transmits nervous signals between the brain and the rest of the body and participates in reflexes.",
+    "difficulty": "easy",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 35,
+    "question": "Which division of the nervous system includes the brain and spinal cord?",
+    "options": [
+      "Peripheral nervous system",
+      "Central nervous system",
+      "Autonomic nervous system",
+      "Somatic nervous system"
+    ],
+    "answer": 1,
+    "explanation": "The central nervous system consists of the brain and spinal cord.",
+    "difficulty": "easy",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 36,
+    "question": "Which division of the autonomic nervous system is associated with the fight-or-flight response?",
+    "options": [
+      "Parasympathetic",
+      "Sympathetic",
+      "Somatic",
+      "Sensory"
+    ],
+    "answer": 1,
+    "explanation": "The sympathetic nervous system prepares the body for stressful or emergency situations, commonly called the fight-or-flight response.",
+    "difficulty": "medium",
+    "topic": "Nervous System"
+  },
+  {
+    "id": 37,
+    "question": "Which chamber of the heart pumps oxygenated blood to the systemic circulation?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left atrium",
+      "Left ventricle"
+    ],
+    "answer": 3,
+    "explanation": "The left ventricle pumps oxygenated blood into the aorta and systemic circulation.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 38,
+    "question": "Which chamber receives deoxygenated blood from the body?",
+    "options": [
+      "Right atrium",
+      "Left atrium",
+      "Right ventricle",
+      "Left ventricle"
+    ],
+    "answer": 0,
+    "explanation": "The right atrium receives deoxygenated blood returning from the body through the venae cavae.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 39,
+    "question": "Which blood vessels carry blood away from the heart?",
+    "options": [
+      "Veins",
+      "Arteries",
+      "Capillaries",
+      "Venules"
+    ],
+    "answer": 1,
+    "explanation": "Arteries carry blood away from the heart.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 40,
+    "question": "Which blood vessels are the primary site of exchange between blood and tissues?",
+    "options": [
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Aorta"
+    ],
+    "answer": 2,
+    "explanation": "Capillaries have very thin walls that allow exchange of gases, nutrients, and waste products between blood and tissues.",
+    "difficulty": "easy",
+    "topic": "Cardiovascular System"
+  },
+  {
+    "id": 41,
+    "question": "What is the main function of red blood cells?",
+    "options": [
+      "Fight infection",
+      "Transport oxygen",
+      "Produce antibodies",
+      "Form hormones"
+    ],
+    "answer": 1,
+    "explanation": "Red blood cells contain hemoglobin and primarily transport oxygen throughout the body.",
+    "difficulty": "easy",
+    "topic": "Blood"
+  },
+  {
+    "id": 42,
+    "question": "Where does most gas exchange occur in the lungs?",
+    "options": [
+      "Trachea",
+      "Bronchi",
+      "Alveoli",
+      "Larynx"
+    ],
+    "answer": 2,
+    "explanation": "The alveoli are tiny air sacs where oxygen and carbon dioxide are exchanged between the air and blood.",
+    "difficulty": "easy",
+    "topic": "Respiratory System"
+  },
+  {
+    "id": 43,
+    "question": "Which structure prevents food from entering the trachea during swallowing?",
+    "options": [
+      "Epiglottis",
+      "Uvula",
+      "Tonsil",
+      "Diaphragm"
+    ],
+    "answer": 0,
+    "explanation": "The epiglottis helps cover the entrance to the airway during swallowing.",
+    "difficulty": "medium",
+    "topic": "Respiratory System"
+  },
+  {
+    "id": 44,
+    "question": "Which organ is primarily responsible for absorbing nutrients from digested food?",
+    "options": [
+      "Stomach",
+      "Large intestine",
+      "Small intestine",
+      "Esophagus"
+    ],
+    "answer": 2,
+    "explanation": "The small intestine is the main site for digestion and absorption of nutrients.",
+    "difficulty": "easy",
+    "topic": "Digestive System"
+  },
+  {
+    "id": 45,
+    "question": "Which organ produces bile?",
+    "options": [
+      "Pancreas",
+      "Gallbladder",
+      "Liver",
+      "Stomach"
+    ],
+    "answer": 2,
+    "explanation": "The liver produces bile, which helps digest and absorb fats.",
+    "difficulty": "easy",
+    "topic": "Digestive System"
+  },
+  {
+    "id": 46,
+    "question": "What is the main function of the large intestine?",
+    "options": [
+      "Absorb most amino acids",
+      "Absorb water and form feces",
+      "Produce insulin",
+      "Pump blood"
+    ],
+    "answer": 1,
+    "explanation": "The large intestine absorbs water and electrolytes and helps form and store feces.",
+    "difficulty": "easy",
+    "topic": "Digestive System"
+  },
+  {
+    "id": 47,
+    "question": "Which organs filter the blood and produce urine?",
+    "options": [
+      "Lungs",
+      "Kidneys",
+      "Liver",
+      "Pancreas"
+    ],
+    "answer": 1,
+    "explanation": "The kidneys filter the blood, regulate fluid and electrolyte balance, and produce urine.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 48,
+    "question": "What is the functional unit of the kidney?",
+    "options": [
+      "Neuron",
+      "Alveolus",
+      "Nephron",
+      "Osteon"
+    ],
+    "answer": 2,
+    "explanation": "The nephron is the functional unit of the kidney and is responsible for filtering blood and forming urine.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 49,
+    "question": "Which organ stores urine before it is eliminated from the body?",
+    "options": [
+      "Kidney",
+      "Ureter",
+      "Urinary bladder",
+      "Urethra"
+    ],
+    "answer": 2,
+    "explanation": "The urinary bladder temporarily stores urine before it is expelled through the urethra.",
+    "difficulty": "easy",
+    "topic": "Urinary System"
+  },
+  {
+    "id": 50,
+    "question": "Which hormone helps regulate blood glucose by lowering its level?",
+    "options": [
+      "Insulin",
+      "Adrenaline",
+      "Thyroxine",
+      "Cortisol"
+    ],
+    "answer": 0,
+    "explanation": "Insulin is produced by the pancreas and helps lower blood glucose by promoting glucose uptake and storage.",
+    "difficulty": "medium",
+    "topic": "Endocrine System"
+  }
+]
