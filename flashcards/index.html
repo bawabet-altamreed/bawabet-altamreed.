@@ -1,0 +1,1008 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Flashcards | بوابة التمريض</title>
+
+<meta name="description" content="Nursing Flashcards - بطاقات تعليمية لطلاب التمريض من بوابة التمريض.">
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f8fb;
+        color: #1e293b;
+        min-height: 100vh;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #0b3d62, #087ea4);
+        color: white;
+        padding: 22px 15px;
+        text-align: center;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .header h1 {
+        font-size: 28px;
+        margin-bottom: 7px;
+    }
+
+    .header p {
+        font-size: 15px;
+        opacity: 0.9;
+    }
+
+    .container {
+        width: 94%;
+        max-width: 900px;
+        margin: 25px auto;
+    }
+
+    .top-card {
+        background: white;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        margin-bottom: 18px;
+    }
+
+    .top-card h2 {
+        color: #0b3d62;
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .top-card p {
+        color: #64748b;
+        line-height: 1.7;
+    }
+
+    .filters {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+        flex-wrap: wrap;
+    }
+
+    select,
+    .filter-btn {
+        border: 1px solid #dbe5eb;
+        background: white;
+        padding: 11px 14px;
+        border-radius: 9px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    select {
+        flex: 1;
+        min-width: 180px;
+        color: #334155;
+    }
+
+    .filter-btn {
+        background: #eef7fb;
+        color: #087ea4;
+        font-weight: bold;
+    }
+
+    .progress-card {
+        background: white;
+        padding: 15px 18px;
+        border-radius: 14px;
+        margin-bottom: 18px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .progress-info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        color: #475569;
+        font-size: 14px;
+        margin-bottom: 9px;
+    }
+
+    .progress-container {
+        background: #dbe7ee;
+        height: 9px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        width: 0%;
+        height: 100%;
+        background: #087ea4;
+        transition: width 0.3s ease;
+    }
+
+    .flashcard-wrapper {
+        perspective: 1200px;
+        margin-bottom: 18px;
+    }
+
+    .flashcard {
+        width: 100%;
+        min-height: 360px;
+        position: relative;
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+    }
+
+    .flashcard.flipped {
+        transform: rotateY(180deg);
+    }
+
+    .card-face {
+        position: absolute;
+        width: 100%;
+        min-height: 360px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+
+        background: white;
+        border-radius: 18px;
+        padding: 30px 25px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-front {
+        border-top: 5px solid #087ea4;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        border-top: 5px solid #0b3d62;
+    }
+
+    .card-label {
+        color: #087ea4;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 18px;
+    }
+
+    .card-subject {
+        display: inline-block;
+        background: #eef7fb;
+        color: #087ea4;
+        padding: 7px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+
+    .card-text {
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 1.7;
+        max-width: 750px;
+    }
+
+    .card-back .card-text {
+        font-size: 21px;
+        color: #334155;
+    }
+
+    .flip-hint {
+        margin-top: 25px;
+        color: #94a3b8;
+        font-size: 13px;
+    }
+
+    .controls {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .control-btn {
+        flex: 1;
+        border: none;
+        border-radius: 10px;
+        padding: 14px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .control-btn:hover {
+        transform: translateY(-1px);
+        opacity: 0.92;
+    }
+
+    .previous-btn {
+        background: #e2e8f0;
+        color: #334155;
+    }
+
+    .next-btn {
+        background: #087ea4;
+        color: white;
+    }
+
+    .favorite-btn {
+        background: #fff7ed;
+        color: #c2410c;
+    }
+
+    .favorite-btn.active {
+        background: #ffedd5;
+    }
+
+    .extra-controls {
+        display: flex;
+        gap: 10px;
+    }
+
+    .extra-btn {
+        flex: 1;
+        border: 1px solid #dbe5eb;
+        background: white;
+        color: #475569;
+        padding: 11px;
+        border-radius: 9px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .loading,
+    .error {
+        background: white;
+        padding: 35px 20px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .error {
+        background: #fff1f2;
+        color: #be123c;
+    }
+
+    .empty {
+        text-align: center;
+        padding: 35px 20px;
+        background: white;
+        border-radius: 15px;
+        color: #64748b;
+    }
+
+    @media (max-width: 600px) {
+
+        .header h1 {
+            font-size: 23px;
+        }
+
+        .container {
+            width: 95%;
+            margin: 18px auto;
+        }
+
+        .card-face,
+        .flashcard {
+            min-height: 330px;
+        }
+
+        .card-face {
+            padding: 25px 18px;
+        }
+
+        .card-text {
+            font-size: 21px;
+        }
+
+        .card-back .card-text {
+            font-size: 18px;
+        }
+
+        .controls {
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            min-width: 45%;
+        }
+    }
+</style>
+
+</head><body><header class="header">
+    <h1>🧠 Flashcards</h1>
+    <p>بطاقات تعليمية لطلاب التمريض | بوابة التمريض</p>
+</header><main class="container"><section class="top-card">
+
+    <h2>🧠 Nursing Flashcards</h2>
+
+    <p>
+        اختبر نفسك بطريقة سريعة وفعالة.
+        اضغط على البطاقة لإظهار الإجابة.
+    </p>
+
+    <div class="filters">
+
+        <select id="subjectFilter">
+            <option value="all">📚 كل المواد</option>
+        </select>
+
+        <button
+            class="filter-btn"
+            id="shuffleBtn"
+            type="button">
+            🔀 عشوائي
+        </button>
+
+    </div>
+
+</section>
+
+<div
+    id="loading"
+    class="loading">
+    ⏳ جاري تحميل الـ Flashcards...
+</div>
+
+<div
+    id="error"
+    class="error"
+    style="display:none;">
+</div>
+
+<section
+    id="flashcardsArea"
+    style="display:none;">
+
+    <div class="progress-card">
+
+        <div class="progress-info">
+            <span>
+                البطاقة
+                <strong id="currentNumber">1</strong>
+                من
+                <strong id="totalNumber">0</strong>
+            </span>
+
+            <span id="percentage">
+                0%
+            </span>
+        </div>
+
+        <div class="progress-container">
+            <div
+                class="progress-bar"
+                id="progressBar">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flashcard-wrapper">
+
+        <div
+            class="flashcard"
+            id="flashcard">
+
+            <div class="card-face card-front">
+
+                <div class="card-label">
+                    ❓ السؤال
+                </div>
+
+                <div
+                    class="card-text"
+                    id="questionText">
+                </div>
+
+                <div
+                    class="card-subject"
+                    id="frontSubject">
+                </div>
+
+                <div class="flip-hint">
+                    👆 اضغط على البطاقة لرؤية الإجابة
+                </div>
+
+            </div>
+
+            <div class="card-face card-back">
+
+                <div class="card-label">
+                    ✅ الإجابة
+                </div>
+
+                <div
+                    class="card-text"
+                    id="answerText">
+                </div>
+
+                <div
+                    class="card-subject"
+                    id="backSubject">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <button
+            type="button"
+            class="control-btn previous-btn"
+            id="previousBtn">
+            ← السابق
+        </button>
+
+        <button
+            type="button"
+            class="control-btn favorite-btn"
+            id="favoriteBtn">
+            ☆ المفضلة
+        </button>
+
+        <button
+            type="button"
+            class="control-btn next-btn"
+            id="nextBtn">
+            التالي →
+        </button>
+
+    </div>
+
+    <div class="extra-controls">
+
+        <button
+            type="button"
+            class="extra-btn"
+            id="resetBtn">
+            🔄 إعادة البداية
+        </button>
+
+        <button
+            type="button"
+            class="extra-btn"
+            id="favoritesFilterBtn">
+            ⭐ عرض المفضلة
+        </button>
+
+    </div>
+
+</section>
+
+<div
+    id="empty"
+    class="empty"
+    style="display:none;">
+
+    ⭐ لا توجد Flashcards في هذا القسم حاليًا.
+
+</div>
+
+</main><script>
+
+let allCards = [];
+let cards = [];
+
+let currentIndex = 0;
+let showFavoritesOnly = false;
+
+const loading = document.getElementById("loading");
+const errorBox = document.getElementById("error");
+const flashcardsArea = document.getElementById("flashcardsArea");
+const emptyBox = document.getElementById("empty");
+
+const flashcard = document.getElementById("flashcard");
+
+const questionText = document.getElementById("questionText");
+const answerText = document.getElementById("answerText");
+
+const frontSubject = document.getElementById("frontSubject");
+const backSubject = document.getElementById("backSubject");
+
+const currentNumber = document.getElementById("currentNumber");
+const totalNumber = document.getElementById("totalNumber");
+const percentage = document.getElementById("percentage");
+const progressBar = document.getElementById("progressBar");
+
+const subjectFilter = document.getElementById("subjectFilter");
+
+const previousBtn = document.getElementById("previousBtn");
+const nextBtn = document.getElementById("nextBtn");
+const favoriteBtn = document.getElementById("favoriteBtn");
+
+const shuffleBtn = document.getElementById("shuffleBtn");
+const resetBtn = document.getElementById("resetBtn");
+const favoritesFilterBtn =
+    document.getElementById("favoritesFilterBtn");
+
+
+/* =========================
+   LOAD FLASHCARDS
+========================= */
+
+fetch("../data/flashcards.json")
+
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error("JSON file not found");
+        }
+
+        return response.json();
+
+    })
+
+    .then(data => {
+
+        if (!Array.isArray(data) || data.length === 0) {
+            throw new Error("No flashcards found");
+        }
+
+        allCards = data;
+
+        createSubjects();
+
+        cards = [...allCards];
+
+        loading.style.display = "none";
+        flashcardsArea.style.display = "block";
+
+        showCard();
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        loading.style.display = "none";
+
+        errorBox.style.display = "block";
+
+        errorBox.innerHTML = `
+            <strong>❌ تعذر تحميل الـ Flashcards.</strong>
+            <br><br>
+            تأكد من وجود الملف:
+            <br>
+            <b>data/flashcards.json</b>
+            <br><br>
+            وتأكد أن ملف JSON صحيح.
+        `;
+
+    });
+
+
+/* =========================
+   CREATE SUBJECT FILTER
+========================= */
+
+function createSubjects() {
+
+    const subjects = [
+        ...new Set(
+            allCards.map(card => card.subject)
+        )
+    ];
+
+    subjects.forEach(subject => {
+
+        const option =
+            document.createElement("option");
+
+        option.value = subject;
+        option.textContent = "📚 " + subject;
+
+        subjectFilter.appendChild(option);
+
+    });
+
+}
+
+
+/* =========================
+   SHOW CARD
+========================= */
+
+function showCard() {
+
+    if (cards.length === 0) {
+
+        flashcardsArea.style.display = "none";
+        emptyBox.style.display = "block";
+
+        return;
+    }
+
+    emptyBox.style.display = "none";
+    flashcardsArea.style.display = "block";
+
+    if (currentIndex >= cards.length) {
+        currentIndex = cards.length - 1;
+    }
+
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    }
+
+    const card = cards[currentIndex];
+
+    flashcard.classList.remove("flipped");
+
+    questionText.textContent =
+        card.question;
+
+    answerText.textContent =
+        card.answer;
+
+    frontSubject.textContent =
+        card.subject || "Nursing";
+
+    backSubject.textContent =
+        card.subject || "Nursing";
+
+    currentNumber.textContent =
+        currentIndex + 1;
+
+    totalNumber.textContent =
+        cards.length;
+
+    const progress =
+        ((currentIndex + 1) / cards.length) * 100;
+
+    progressBar.style.width =
+        progress + "%";
+
+    percentage.textContent =
+        Math.round(progress) + "%";
+
+    updateFavoriteButton();
+    updateNavigation();
+
+}
+
+
+/* =========================
+   FLIP CARD
+========================= */
+
+flashcard.addEventListener("click", () => {
+
+    flashcard.classList.toggle("flipped");
+
+});
+
+
+/* =========================
+   NEXT
+========================= */
+
+nextBtn.addEventListener("click", () => {
+
+    if (cards.length === 0) {
+        return;
+    }
+
+    if (currentIndex < cards.length - 1) {
+
+        currentIndex++;
+
+    } else {
+
+        currentIndex = 0;
+
+    }
+
+    showCard();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* =========================
+   PREVIOUS
+========================= */
+
+previousBtn.addEventListener("click", () => {
+
+    if (cards.length === 0) {
+        return;
+    }
+
+    if (currentIndex > 0) {
+
+        currentIndex--;
+
+    } else {
+
+        currentIndex = cards.length - 1;
+
+    }
+
+    showCard();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* =========================
+   FAVORITES
+========================= */
+
+function getFavorites() {
+
+    return JSON.parse(
+        localStorage.getItem("nursingFlashcardFavorites")
+    ) || [];
+
+}
+
+
+function saveFavorites(favorites) {
+
+    localStorage.setItem(
+        "nursingFlashcardFavorites",
+        JSON.stringify(favorites)
+    );
+
+}
+
+
+function isFavorite(card) {
+
+    const favorites = getFavorites();
+
+    return favorites.includes(card.id);
+
+}
+
+
+favoriteBtn.addEventListener("click", () => {
+
+    if (cards.length === 0) {
+        return;
+    }
+
+    const card = cards[currentIndex];
+
+    let favorites = getFavorites();
+
+    if (favorites.includes(card.id)) {
+
+        favorites =
+            favorites.filter(id => id !== card.id);
+
+    } else {
+
+        favorites.push(card.id);
+
+    }
+
+    saveFavorites(favorites);
+
+    updateFavoriteButton();
+
+});
+
+
+function updateFavoriteButton() {
+
+    if (cards.length === 0) {
+        return;
+    }
+
+    const card = cards[currentIndex];
+
+    if (isFavorite(card)) {
+
+        favoriteBtn.textContent =
+            "★ في المفضلة";
+
+        favoriteBtn.classList.add("active");
+
+    } else {
+
+        favoriteBtn.textContent =
+            "☆ المفضلة";
+
+        favoriteBtn.classList.remove("active");
+
+    }
+
+}
+
+
+/* =========================
+   FILTER SUBJECT
+========================= */
+
+subjectFilter.addEventListener("change", () => {
+
+    const subject =
+        subjectFilter.value;
+
+    if (subject === "all") {
+
+        cards = [...allCards];
+
+    } else {
+
+        cards =
+            allCards.filter(
+                card => card.subject === subject
+            );
+
+    }
+
+    if (showFavoritesOnly) {
+
+        cards = cards.filter(
+            card => isFavorite(card)
+        );
+
+    }
+
+    currentIndex = 0;
+
+    showCard();
+
+});
+
+
+/* =========================
+   FAVORITES FILTER
+========================= */
+
+favoritesFilterBtn.addEventListener(
+    "click",
+    () => {
+
+        showFavoritesOnly =
+            !showFavoritesOnly;
+
+        updateCardsFilter();
+
+    }
+);
+
+
+function updateCardsFilter() {
+
+    const subject =
+        subjectFilter.value;
+
+    if (subject === "all") {
+
+        cards = [...allCards];
+
+    } else {
+
+        cards =
+            allCards.filter(
+                card => card.subject === subject
+            );
+
+    }
+
+    if (showFavoritesOnly) {
+
+        cards =
+            cards.filter(
+                card => isFavorite(card)
+            );
+
+        favoritesFilterBtn.textContent =
+            "📚 عرض الكل";
+
+    } else {
+
+        favoritesFilterBtn.textContent =
+            "⭐ عرض المفضلة";
+
+    }
+
+    currentIndex = 0;
+
+    showCard();
+
+}
+
+
+/* =========================
+   SHUFFLE
+========================= */
+
+shuffleBtn.addEventListener("click", () => {
+
+    for (
+        let i = cards.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() * (i + 1)
+            );
+
+        [
+            cards[i],
+            cards[j]
+        ] = [
+            cards[j],
+            cards[i]
+        ];
+
+    }
+
+    currentIndex = 0;
+
+    showCard();
+
+});
+
+
+/* =========================
+   RESET
+========================= */
+
+resetBtn.addEventListener("click", () => {
+
+    currentIndex = 0;
+
+    showCard();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+function updateNavigation() {
+
+    if (cards.length <= 1) {
+
+        previousBtn.disabled = true;
+        nextBtn.disabled = true;
+
+    } else {
+
+        previousBtn.disabled = false;
+        nextBtn.disabled = false;
+
+    }
+
+}
+
+</script></body>
+</html>
