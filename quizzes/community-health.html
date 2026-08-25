@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Community Health Nursing Quiz | بوابة التمريض</title>
+
+    <meta name="description" content="Community Health Nursing Quiz - اختبار مادة صحة المجتمع لطلاب التمريض من بوابة التمريض.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0b3d62, #087ea4);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 850px;
+            margin: 25px auto;
+        }
+
+        .quiz-info {
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .quiz-info h2 {
+            color: #0b3d62;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .info-box {
+            background: #eef7fb;
+            padding: 9px 13px;
+            border-radius: 8px;
+        }
+
+        .progress-container {
+            background: #dbe7ee;
+            height: 9px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #087ea4;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            margin-bottom: 18px;
+        }
+
+        .question-number {
+            color: #087ea4;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .question {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            border: 2px solid #dce6ec;
+            border-radius: 10px;
+            padding: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+            background: #fff;
+        }
+
+        .option:hover {
+            border-color: #087ea4;
+            background: #f2fbfe;
+        }
+
+        .option.selected {
+            border-color: #087ea4;
+            background: #eaf8fc;
+        }
+
+        .option input {
+            display: none;
+        }
+
+        .option-text {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        button {
+            border: none;
+            border-radius: 9px;
+            padding: 13px 22px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .prev-btn {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .next-btn,
+        .submit-btn {
+            background: #087ea4;
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            opacity: 0.92;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .result h2 {
+            color: #0b3d62;
+            margin-bottom: 15px;
+        }
+
+        .score {
+            font-size: 42px;
+            font-weight: bold;
+            color: #087ea4;
+            margin: 15px 0;
+        }
+
+        .result-message {
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .restart-btn {
+            background: #0b3d62;
+            color: white;
+        }
+
+        .loading {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .error {
+            background: #fff1f2;
+            color: #be123c;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .question {
+                font-size: 18px;
+            }
+
+            .question-card {
+                padding: 18px;
+            }
+
+            .option-text {
+                font-size: 15px;
+            }
+
+            .navigation button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>🩺 بوابة التمريض</h1>
+    <p>Community Health Nursing Quiz</p>
+</header>
+
+<main class="container">
+
+    <section class="quiz-info">
+
+        <h2>Community Health Nursing</h2>
+
+        <div class="info-row">
+
+            <div class="info-box">
+                📝 <span id="totalQuestions">50</span> سؤال
+            </div>
+
+            <div class="info-box">
+                🎯 اختر إجابة واحدة لكل سؤال
+            </div>
+
+            <div class="info-box">
+                📚 Community Health
+            </div>
+
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+    </section>
+
+
+    <div id="loading" class="loading">
+        جاري تحميل الاختبار...
+    </div>
+
+
+    <div id="quizArea" style="display:none;">
+
+        <section class="question-card">
+
+            <div class="question-number" id="questionNumber">
+                Question 1 of 50
+            </div>
+
+            <div class="question" id="questionText"></div>
+
+            <div class="options" id="optionsContainer"></div>
+
+
+            <div class="navigation">
+
+                <button
+                    type="button"
+                    class="prev-btn"
+                    id="prevBtn"
+                    onclick="previousQuestion()"
+                    disabled>
+                    السابق
+                </button>
+
+
+                <button
+                    type="button"
+                    class="next-btn"
+                    id="nextBtn"
+                    onclick="nextQuestion()">
+                    التالي
+                </button>
+
+
+                <button
+                    type="button"
+                    class="submit-btn"
+                    id="submitBtn"
+                    onclick="submitQuiz()"
+                    style="display:none;">
+                    إنهاء الاختبار
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <section class="result" id="result">
+
+        <h2>🎉 انتهى الاختبار</h2>
+
+        <div class="score">
+
+            <span id="score">0</span>
+            /
+            <span id="resultTotal">50</span>
+
+        </div>
+
+        <p class="result-message" id="resultMessage"></p>
+
+        <button
+            type="button"
+            class="restart-btn"
+            onclick="restartQuiz()">
+            إعادة الاختبار
+        </button>
+
+    </section>
+
+
+    <div id="errorBox" class="error" style="display:none;"></div>
+
+</main>
+
+
+<script>
+
+    let questions = [];
+
+    let currentQuestion = 0;
+
+    let userAnswers = [];
+
+
+    const questionText =
+        document.getElementById("questionText");
+
+    const questionNumber =
+        document.getElementById("questionNumber");
+
+    const optionsContainer =
+        document.getElementById("optionsContainer");
+
+
+    const prevBtn =
+        document.getElementById("prevBtn");
+
+    const nextBtn =
+        document.getElementById("nextBtn");
+
+    const submitBtn =
+        document.getElementById("submitBtn");
+
+
+    const progressBar =
+        document.getElementById("progressBar");
+
+
+    const quizArea =
+        document.getElementById("quizArea");
+
+    const loading =
+        document.getElementById("loading");
+
+    const result =
+        document.getElementById("result");
+
+    const errorBox =
+        document.getElementById("errorBox");
+
+
+    const totalQuestions =
+        document.getElementById("totalQuestions");
+
+    const resultTotal =
+        document.getElementById("resultTotal");
+
+
+    /*
+        Load Community Health questions
+        from JSON file
+    */
+
+    fetch("../data/community-health.json")
+
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error("JSON file not found");
+            }
+
+            return response.json();
+
+        })
+
+        .then(data => {
+
+            if (!Array.isArray(data) || data.length === 0) {
+                throw new Error("No questions found");
+            }
+
+
+            /*
+                Use only the first 50 questions.
+            */
+
+            questions = data.slice(0, 50);
+
+
+            userAnswers =
+                new Array(questions.length).fill(null);
+
+
+            totalQuestions.textContent =
+                questions.length;
+
+            resultTotal.textContent =
+                questions.length;
+
+
+            loading.style.display = "none";
+
+            quizArea.style.display = "block";
+
+
+            showQuestion();
+
+        })
+
+        .catch(error => {
+
+            console.error(error);
+
+
+            loading.style.display = "none";
+
+            errorBox.style.display = "block";
+
+
+            errorBox.innerHTML = `
+
+                <strong>
+                    تعذر تحميل الاختبار.
+                </strong>
+
+                <br><br>
+
+                تأكد من وجود ملف:
+
+                <br>
+
+                <b>
+                    data/community-health.json
+                </b>
+
+                <br><br>
+
+                وتأكد أن ملف JSON صحيح.
+
+            `;
+
+        });
+
+
+
+    function showQuestion() {
+
+        const question =
+            questions[currentQuestion];
+
+
+        questionNumber.textContent =
+            `Question ${currentQuestion + 1} of ${questions.length}`;
+
+
+        questionText.textContent =
+            question.question;
+
+
+        optionsContainer.innerHTML = "";
+
+
+        question.options.forEach((option, index) => {
+
+            const label =
+                document.createElement("label");
+
+
+            label.className = "option";
+
+
+            if (
+                userAnswers[currentQuestion] === index
+            ) {
+
+                label.classList.add("selected");
+
+            }
+
+
+            label.innerHTML = `
+
+                <input
+                    type="radio"
+                    name="question"
+                    value="${index}"
+                    ${
+                        userAnswers[currentQuestion] === index
+                            ? "checked"
+                            : ""
+                    }
+                >
+
+                <span class="option-text">
+
+                    ${String.fromCharCode(65 + index)}.
+                    ${option}
+
+                </span>
+
+            `;
+
+
+            label.addEventListener(
+                "click",
+                function () {
+
+                    userAnswers[currentQuestion] =
+                        index;
+
+
+                    document
+                        .querySelectorAll(".option")
+                        .forEach(item => {
+
+                            item.classList.remove(
+                                "selected"
+                            );
+
+                        });
+
+
+                    label.classList.add(
+                        "selected"
+                    );
+
+
+                    label.querySelector(
+                        "input"
+                    ).checked = true;
+
+                }
+            );
+
+
+            optionsContainer.appendChild(label);
+
+        });
+
+
+        updateNavigation();
+
+        updateProgress();
+
+    }
+
+
+
+    function updateNavigation() {
+
+        prevBtn.disabled =
+            currentQuestion === 0;
+
+
+        if (
+            currentQuestion ===
+            questions.length - 1
+        ) {
+
+            nextBtn.style.display =
+                "none";
+
+            submitBtn.style.display =
+                "block";
+
+        } else {
+
+            nextBtn.style.display =
+                "block";
+
+            submitBtn.style.display =
+                "none";
+
+        }
+
+    }
+
+
+
+    function updateProgress() {
+
+        const progress =
+            ((currentQuestion + 1) /
+                questions.length) * 100;
+
+
+        progressBar.style.width =
+            progress + "%";
+
+    }
+
+
+
+    function nextQuestion() {
+
+        if (
+            userAnswers[currentQuestion] === null
+        ) {
+
+            alert(
+                "من فضلك اختر إجابة أولًا."
+            );
+
+            return;
+
+        }
+
+
+        if (
+            currentQuestion <
+            questions.length - 1
+        ) {
+
+            currentQuestion++;
+
+            showQuestion();
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    }
+
+
+
+    function previousQuestion() {
+
+        if (currentQuestion > 0) {
+
+            currentQuestion--;
+
+            showQuestion();
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+    }
+
+
+
+    function submitQuiz() {
+
+        if (
+            userAnswers[currentQuestion] === null
+        ) {
+
+            alert(
+                "من فضلك اختر إجابة أولًا."
+            );
+
+            return;
+
+        }
+
+
+        const unanswered =
+            userAnswers.filter(
+                answer => answer === null
+            ).length;
+
+
+        if (unanswered > 0) {
+
+            const confirmSubmit =
+                confirm(
+                    `يوجد ${unanswered} سؤال بدون إجابة.\nهل تريد إنهاء الاختبار؟`
+                );
+
+
+            if (!confirmSubmit) {
+                return;
+            }
+
+        }
+
+
+        let score = 0;
+
+
+        questions.forEach(
+            (question, index) => {
+
+                if (
+                    userAnswers[index] ===
+                    question.answer
+                ) {
+
+                    score++;
+
+                }
+
+            }
+        );
+
+
+        showResult(score);
+
+    }
+
+
+
+    function showResult(score) {
+
+        quizArea.style.display =
+            "none";
+
+
+        result.style.display =
+            "block";
+
+
+        document.getElementById(
+            "score"
+        ).textContent = score;
+
+
+        const percentage =
+            Math.round(
+                (score / questions.length) * 100
+            );
+
+
+        let message = "";
+
+
+        if (percentage >= 90) {
+
+            message =
+                "🔥 ممتاز جدًا! مستواك رائع في Community Health Nursing.";
+
+        } else if (percentage >= 75) {
+
+            message =
+                "👏 ممتاز! مستواك جيد جدًا، استمر في المراجعة.";
+
+        } else if (percentage >= 60) {
+
+            message =
+                "👍 جيد، لكن محتاج مراجعة بعض النقاط.";
+
+        } else {
+
+            message =
+                "📚 محتاج مراجعة أكتر. حاول مرة أخرى وركز على الأخطاء.";
+
+        }
+
+
+        document.getElementById(
+            "resultMessage"
+        ).textContent =
+            `${message} نتيجتك: ${percentage}%`;
+
+
+        progressBar.style.width =
+            "100%";
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+
+    function restartQuiz() {
+
+        currentQuestion = 0;
+
+
+        userAnswers =
+            new Array(
+                questions.length
+            ).fill(null);
+
+
+        result.style.display =
+            "none";
+
+
+        quizArea.style.display =
+            "block";
+
+
+        showQuestion();
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
