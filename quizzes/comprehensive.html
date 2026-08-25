@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الاختبار الشامل | بوابة التمريض</title>
+
+    <meta name="description" content="اختبار شامل في مواد التمريض - بوابة التمريض">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f3d5e, #087ea4);
+            color: white;
+            padding: 22px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 850px;
+            margin: 25px auto;
+        }
+
+        .quiz-info {
+            background: white;
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .quiz-info h2 {
+            color: #0f3d5e;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #f1f7fa;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box strong {
+            display: block;
+            color: #087ea4;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .progress-container {
+            background: #dce8ef;
+            height: 9px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 18px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #087ea4;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .question-number {
+            color: #087ea4;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .question {
+            font-size: 21px;
+            line-height: 1.7;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            border: 2px solid #e2e8f0;
+            background: #fff;
+            padding: 14px;
+            border-radius: 11px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 16px;
+        }
+
+        .option:hover {
+            border-color: #087ea4;
+            background: #f4fbfd;
+        }
+
+        .option.selected {
+            border-color: #087ea4;
+            background: #e5f6fa;
+        }
+
+        .option.correct {
+            border-color: #16a34a;
+            background: #dcfce7;
+        }
+
+        .option.wrong {
+            border-color: #dc2626;
+            background: #fee2e2;
+        }
+
+        .option.disabled {
+            cursor: default;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            background: #f1f7fa;
+            border-right: 4px solid #087ea4;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            flex: 1;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #nextBtn {
+            background: #087ea4;
+            color: white;
+        }
+
+        #nextBtn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        #prevBtn {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .result {
+            display: none;
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .result h2 {
+            color: #0f3d5e;
+            margin-bottom: 15px;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #087ea4;
+            margin: 15px 0;
+        }
+
+        .result-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .restart-btn {
+            background: #087ea4;
+            color: white;
+            width: 100%;
+        }
+
+        .loading {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .question {
+                font-size: 18px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .option {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🩺 بوابة التمريض</h1>
+    <p>الاختبار الشامل في التمريض</p>
+</header>
+
+<div class="container">
+
+    <div class="quiz-info">
+        <h2>📝 الاختبار الشامل</h2>
+
+        <p>
+            اختبار شامل يجمع أسئلة من أهم مواد التمريض.
+            اختبر معلوماتك واستعد للامتحانات.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <strong id="totalQuestions">50</strong>
+                سؤال
+            </div>
+
+            <div class="info-box">
+                <strong id="currentQuestion">1</strong>
+                السؤال الحالي
+            </div>
+
+            <div class="info-box">
+                <strong id="score">0</strong>
+                الدرجة
+            </div>
+
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">
+        ⏳ جاري تحميل الأسئلة...
+    </div>
+
+    <div class="error" id="error">
+        ❌ تعذر تحميل أسئلة الاختبار.
+        <br>
+        تأكد من وجود ملف
+        <strong>comprehensive.json</strong>
+    </div>
+
+    <div class="question-card" id="questionCard" style="display:none;">
+
+        <div class="question-number" id="questionNumber">
+            السؤال 1 من 50
+        </div>
+
+        <div class="question" id="questionText"></div>
+
+        <div class="options" id="options"></div>
+
+        <div class="explanation" id="explanation"></div>
+
+        <div class="buttons">
+
+            <button id="prevBtn">
+                ← السابق
+            </button>
+
+            <button id="nextBtn" disabled>
+                التالي →
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="result" id="result">
+
+        <h2>🎉 انتهى الاختبار!</h2>
+
+        <div class="score" id="finalScore">
+            0 / 50
+        </div>
+
+        <div class="result-message" id="resultMessage"></div>
+
+        <button class="restart-btn" onclick="restartQuiz()">
+            🔄 إعادة الاختبار
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+let questions = [];
+let currentIndex = 0;
+let score = 0;
+let userAnswers = [];
+
+const loading = document.getElementById("loading");
+const errorBox = document.getElementById("error");
+const questionCard = document.getElementById("questionCard");
+const resultBox = document.getElementById("result");
+
+const questionText = document.getElementById("questionText");
+const questionNumber = document.getElementById("questionNumber");
+const optionsContainer = document.getElementById("options");
+const explanation = document.getElementById("explanation");
+
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+const progressBar = document.getElementById("progressBar");
+const currentQuestionElement = document.getElementById("currentQuestion");
+const scoreElement = document.getElementById("score");
+const totalQuestionsElement = document.getElementById("totalQuestions");
+
+
+// تحميل الأسئلة
+async function loadQuestions() {
+
+    try {
+
+        const response = await fetch("../data/comprehensive.json");
+
+        if (!response.ok) {
+            throw new Error("JSON file not found");
+        }
+
+        questions = await response.json();
+
+        if (!Array.isArray(questions) || questions.length === 0) {
+            throw new Error("Invalid questions data");
+        }
+
+        // نأخذ 50 سؤال فقط
+        questions = questions.slice(0, 50);
+
+        userAnswers = new Array(questions.length).fill(null);
+
+        totalQuestionsElement.textContent = questions.length;
+
+        loading.style.display = "none";
+        questionCard.style.display = "block";
+
+        showQuestion();
+
+    } catch (error) {
+
+        console.error(error);
+
+        loading.style.display = "none";
+        errorBox.style.display = "block";
+
+    }
+
+}
+
+
+// عرض السؤال
+function showQuestion() {
+
+    const current = questions[currentIndex];
+
+    questionText.textContent = current.question;
+
+    questionNumber.textContent =
+        `السؤال ${currentIndex + 1} من ${questions.length}`;
+
+    currentQuestionElement.textContent =
+        currentIndex + 1;
+
+    scoreElement.textContent = score;
+
+    optionsContainer.innerHTML = "";
+
+    explanation.style.display = "none";
+    explanation.textContent = "";
+
+    nextBtn.disabled = true;
+
+    const savedAnswer = userAnswers[currentIndex];
+
+    current.options.forEach((option, index) => {
+
+        const optionElement = document.createElement("div");
+
+        optionElement.className = "option";
+
+        optionElement.textContent = option;
+
+        optionElement.onclick = () => selectAnswer(index);
+
+        optionsContainer.appendChild(optionElement);
+
+    });
+
+    // لو السؤال كان متجاوب عليه قبل كده
+    if (savedAnswer !== null) {
+
+        showAnswer(savedAnswer);
+
+    }
+
+    updateButtons();
+    updateProgress();
+
+}
+
+
+// اختيار الإجابة
+function selectAnswer(selectedIndex) {
+
+    if (userAnswers[currentIndex] !== null) {
+        return;
+    }
+
+    userAnswers[currentIndex] = selectedIndex;
+
+    const current = questions[currentIndex];
+
+    if (selectedIndex === current.answer) {
+        score++;
+    }
+
+    scoreElement.textContent = score;
+
+    showAnswer(selectedIndex);
+
+}
+
+
+// إظهار الإجابة
+function showAnswer(selectedIndex) {
+
+    const current = questions[currentIndex];
+
+    const optionElements =
+        document.querySelectorAll(".option");
+
+    optionElements.forEach((element, index) => {
+
+        element.classList.add("disabled");
+
+        element.onclick = null;
+
+        if (index === current.answer) {
+            element.classList.add("correct");
+        }
+
+        if (
+            index === selectedIndex &&
+            selectedIndex !== current.answer
+        ) {
+            element.classList.add("wrong");
+        }
+
+    });
+
+    explanation.textContent =
+        "💡 " + current.explanation;
+
+    explanation.style.display = "block";
+
+    nextBtn.disabled = false;
+
+}
+
+
+// التالي
+nextBtn.addEventListener("click", () => {
+
+    if (currentIndex < questions.length - 1) {
+
+        currentIndex++;
+
+        showQuestion();
+
+    } else {
+
+        finishQuiz();
+
+    }
+
+});
+
+
+// السابق
+prevBtn.addEventListener("click", () => {
+
+    if (currentIndex > 0) {
+
+        currentIndex--;
+
+        showQuestion();
+
+    }
+
+});
+
+
+// تحديث الأزرار
+function updateButtons() {
+
+    if (currentIndex === 0) {
+
+        prevBtn.disabled = true;
+
+    } else {
+
+        prevBtn.disabled = false;
+
+    }
+
+    if (currentIndex === questions.length - 1) {
+
+        nextBtn.textContent = "إنهاء الاختبار ✓";
+
+    } else {
+
+        nextBtn.textContent = "التالي →";
+
+    }
+
+}
+
+
+// تحديث شريط التقدم
+function updateProgress() {
+
+    const progress =
+        ((currentIndex + 1) / questions.length) * 100;
+
+    progressBar.style.width =
+        progress + "%";
+
+}
+
+
+// إنهاء الاختبار
+function finishQuiz() {
+
+    questionCard.style.display = "none";
+    resultBox.style.display = "block";
+
+    const percentage =
+        Math.round((score / questions.length) * 100);
+
+    document.getElementById("finalScore").textContent =
+        `${score} / ${questions.length}`;
+
+    let message = "";
+
+    if (percentage >= 90) {
+
+        message = "🏆 ممتاز جدًا! مستواك رائع.";
+
+    } else if (percentage >= 75) {
+
+        message = "👏 ممتاز! استمر في المراجعة.";
+
+    } else if (percentage >= 60) {
+
+        message = "👍 جيد، لكن تحتاج إلى المزيد من المراجعة.";
+
+    } else {
+
+        message = "📚 محتاج تراجع أكتر، ومتستسلمش.";
+
+    }
+
+    document.getElementById("resultMessage").textContent =
+        `${message} — النتيجة: ${percentage}%`;
+
+}
+
+
+// إعادة الاختبار
+function restartQuiz() {
+
+    currentIndex = 0;
+    score = 0;
+
+    userAnswers =
+        new Array(questions.length).fill(null);
+
+    resultBox.style.display = "none";
+    questionCard.style.display = "block";
+
+    scoreElement.textContent = "0";
+
+    showQuestion();
+
+}
+
+
+// تشغيل الاختبار
+loadQuestions();
+
+</script>
+
+</body>
+</html>
