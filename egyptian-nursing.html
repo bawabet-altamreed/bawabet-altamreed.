@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>التمريض في مصر | بوابة التمريض</title>
+
+    <meta name="description"
+          content="دليل التمريض في مصر - مدارس التمريض والمعاهد وكليات التمريض والقبول والتنسيق والمسارات المهنية.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f8fb;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(
+                135deg,
+                #0b3d62,
+                #087ea4
+            );
+
+            color: white;
+            padding: 28px 15px;
+            text-align: center;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .intro {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .intro h2 {
+            color: #0b3d62;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .last-update {
+            margin-top: 14px;
+            display: inline-block;
+
+            background: #eef7fb;
+            color: #087ea4;
+
+            padding: 7px 11px;
+            border-radius: 8px;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .search-box {
+            margin-top: 18px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 16px;
+
+            border: 2px solid #dce6ec;
+            border-radius: 11px;
+
+            font-size: 16px;
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: #087ea4;
+        }
+
+        .categories {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 22px;
+        }
+
+        .category-btn {
+            border: none;
+
+            background: white;
+            color: #334155;
+
+            padding: 15px 10px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.06);
+
+            transition: 0.2s;
+        }
+
+        .category-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .category-btn.active {
+            background: #087ea4;
+            color: white;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 21px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.06);
+
+            border: 2px solid transparent;
+
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #087ea4;
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+
+            background: #eaf7fb;
+            color: #087ea4;
+
+            padding: 5px 9px;
+
+            border-radius: 7px;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #0b3d62;
+
+            font-size: 20px;
+
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            color: #64748b;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .details-btn {
+            width: 100%;
+
+            border: none;
+
+            background: #087ea4;
+            color: white;
+
+            padding: 11px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+        .details-btn:hover {
+            opacity: 0.9;
+        }
+
+        .empty {
+            display: none;
+
+            background: white;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            color: #64748b;
+        }
+
+        .loading {
+            background: white;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            color: #64748b;
+        }
+
+        .error {
+            display: none;
+
+            background: #fff1f2;
+            color: #be123c;
+
+            padding: 22px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        /* MODAL */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(0,0,0,0.55);
+
+            z-index: 999;
+
+            padding: 20px;
+
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            background: white;
+
+            max-width: 850px;
+
+            margin: 30px auto;
+
+            border-radius: 17px;
+
+            padding: 26px;
+
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+
+            top: 12px;
+            left: 12px;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #e2e8f0;
+            color: #334155;
+
+            font-size: 21px;
+
+            cursor: pointer;
+        }
+
+        .modal-content h2 {
+            color: #0b3d62;
+
+            margin-bottom: 12px;
+
+            padding-left: 45px;
+        }
+
+        .modal-category {
+            display: inline-block;
+
+            background: #eaf7fb;
+            color: #087ea4;
+
+            padding: 6px 10px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section h3 {
+            color: #087ea4;
+
+            margin-bottom: 8px;
+        }
+
+        .section p,
+        .section li {
+            color: #475569;
+
+            line-height: 1.8;
+        }
+
+        .section ul,
+        .section ol {
+            padding-right: 22px;
+        }
+
+        .important {
+            margin-top: 20px;
+
+            padding: 15px;
+
+            border-right: 4px solid #f59e0b;
+
+            background: #fffbeb;
+
+            border-radius: 9px;
+
+            color: #78350f;
+
+            line-height: 1.7;
+        }
+
+        @media (max-width: 800px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .categories {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                padding: 19px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <h1>🇪🇬 التمريض في مصر</h1>
+
+    <p>
+        دليلك التعليمي للتعرف على مسارات دراسة التمريض في مصر
+    </p>
+
+</header>
+
+
+<main class="container">
+
+
+    <section class="intro">
+
+        <h2>🩺 دليل التمريض في مصر</h2>
+
+        <p>
+            تعرف على أهم مسارات دراسة التمريض في مصر،
+            من مدارس التمريض والتعليم الفني إلى المعاهد
+            وكليات التمريض، بالإضافة إلى معلومات القبول
+            والتنسيق والمسارات المهنية.
+        </p>
+
+        <span class="last-update">
+            آخر تحديث للمحتوى: 2026
+        </span>
+
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔎 ابحث عن مدرسة أو معهد أو كلية أو مسار..."
+            >
+
+        </div>
+
+    </section>
+
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            data-category="all">
+
+            📚 الكل
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="schools">
+
+            🏫 مدارس التمريض
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="institutes">
+
+            🎓 المعاهد
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="colleges">
+
+            🏛️ كليات التمريض
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="admission">
+
+            📝 القبول
+
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="careers">
+
+            💼 المسارات المهنية
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="loading"
+        class="loading">
+
+        ⏳ جاري تحميل دليل التمريض في مصر...
+
+    </div>
+
+
+    <div
+        id="cards"
+        class="cards"
+        style="display:none;">
+
+    </div>
+
+
+    <div
+        id="empty"
+        class="empty">
+
+        🔎
+
+        <br><br>
+
+        لا توجد نتائج مطابقة للبحث.
+
+    </div>
+
+
+    <div
+        id="error"
+        class="error">
+
+        ❌ تعذر تحميل دليل التمريض.
+
+        <br><br>
+
+        تأكد من وجود الملف:
+
+        <strong>
+            data/egyptian-nursing.json
+        </strong>
+
+    </div>
+
+</main>
+
+
+<!-- MODAL -->
+
+<div
+    id="modal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-btn"
+            onclick="closeModal()">
+
+            ×
+
+        </button>
+
+
+        <h2 id="modalTitle"></h2>
+
+
+        <div
+            id="modalCategory"
+            class="modal-category">
+        </div>
+
+
+        <div
+            id="modalBody">
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let data = [];
+
+let currentCategory = "all";
+
+
+const cards =
+    document.getElementById("cards");
+
+const loading =
+    document.getElementById("loading");
+
+const errorBox =
+    document.getElementById("error");
+
+const empty =
+    document.getElementById("empty");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+/* =========================
+   LOAD DATA
+========================= */
+
+fetch("data/egyptian-nursing.json")
+
+.then(response => {
+
+    if (!response.ok) {
+
+        throw new Error(
+            "JSON file not found"
+        );
+
+    }
+
+    return response.json();
+
+})
+
+.then(json => {
+
+    if (!Array.isArray(json)) {
+
+        throw new Error(
+            "Invalid JSON"
+        );
+
+    }
+
+    data = json;
+
+    loading.style.display =
+        "none";
+
+    cards.style.display =
+        "grid";
+
+    renderCards();
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    loading.style.display =
+        "none";
+
+    errorBox.style.display =
+        "block";
+
+});
+
+
+/* =========================
+   CATEGORY NAME
+========================= */
+
+function categoryName(category) {
+
+    const names = {
+
+        schools:
+            "مدارس التمريض",
+
+        institutes:
+            "المعاهد الفنية",
+
+        colleges:
+            "كليات التمريض",
+
+        admission:
+            "القبول والتقديم",
+
+        careers:
+            "المسارات المهنية"
+
+    };
+
+    return names[category]
+        || "التمريض في مصر";
+
+}
+
+
+/* =========================
+   RENDER
+========================= */
+
+function renderCards() {
+
+    const search =
+        searchInput.value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered =
+        data.filter(item => {
+
+            const categoryMatch =
+                currentCategory === "all"
+                ||
+                item.category === currentCategory;
+
+
+            const text =
+                `
+                ${item.title}
+                ${item.description}
+                ${item.keywords || ""}
+                `
+                .toLowerCase();
+
+
+            const searchMatch =
+                text.includes(search);
+
+
+            return categoryMatch &&
+                   searchMatch;
+
+        });
+
+
+    cards.innerHTML = "";
+
+
+    if (filtered.length === 0) {
+
+        empty.style.display =
+            "block";
+
+        return;
+
+    }
+
+
+    empty.style.display =
+        "none";
+
+
+    filtered.forEach(item => {
+
+        const card =
+            document.createElement(
+                "article"
+            );
+
+
+        card.className =
+            "card";
+
+
+        card.innerHTML = `
+
+            <div class="card-icon">
+                ${item.icon || "🩺"}
+            </div>
+
+            <div class="badge">
+                ${categoryName(item.category)}
+            </div>
+
+            <h3>
+                ${item.title}
+            </h3>
+
+            <p>
+                ${item.description}
+            </p>
+
+            <button
+                class="details-btn"
+                onclick="openModal(${item.id})">
+
+                عرض التفاصيل →
+
+            </button>
+
+        `;
+
+
+        cards.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+document
+    .querySelectorAll(".category-btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".category-btn"
+                    )
+                    .forEach(btn =>
+                        btn.classList.remove(
+                            "active"
+                        )
+                    );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                currentCategory =
+                    button.dataset.category;
+
+
+                renderCards();
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   SEARCH
+========================= */
+
+searchInput.addEventListener(
+    "input",
+    renderCards
+);
+
+
+/* =========================
+   MODAL
+========================= */
+
+function openModal(id) {
+
+    const item =
+        data.find(
+            element =>
+                element.id === id
+        );
+
+
+    if (!item) {
+        return;
+    }
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        item.title;
+
+
+    document.getElementById(
+        "modalCategory"
+    ).textContent =
+        categoryName(item.category);
+
+
+    let html = "";
+
+
+    if (item.overview) {
+
+        html += `
+
+            <div class="section">
+
+                <h3>
+                    📖 نبذة
+                </h3>
+
+                <p>
+                    ${item.overview}
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (
+        item.points &&
+        item.points.length
+    ) {
+
+        html += `
+
+            <div class="section">
+
+                <h3>
+                    📌 أهم المعلومات
+                </h3>
+
+                <ul>
+
+                    ${item.points
+                        .map(
+                            point =>
+                                `<li>${point}</li>`
+                        )
+                        .join("")}
+
+                </ul>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (
+        item.steps &&
+        item.steps.length
+    ) {
+
+        html += `
+
+            <div class="section">
+
+                <h3>
+                    📝 الخطوات
+                </h3>
+
+                <ol>
+
+                    ${item.steps
+                        .map(
+                            step =>
+                                `<li>${step}</li>`
+                        )
+                        .join("")}
+
+                </ol>
+
+            </div>
+
+        `;
+
+    }
+
+
+    if (item.note) {
+
+        html += `
+
+            <div class="important">
+
+                ⚠️ <strong>مهم:</strong>
+
+                <br>
+
+                ${item.note}
+
+            </div>
+
+        `;
+
+    }
+
+
+    document.getElementById(
+        "modalBody"
+    ).innerHTML = html;
+
+
+    document.getElementById(
+        "modal"
+    ).style.display =
+        "block";
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeModal() {
+
+    document.getElementById(
+        "modal"
+    ).style.display =
+        "none";
+
+
+    document.body.style.overflow =
+        "auto";
+
+}
+
+
+document
+    .getElementById("modal")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+</script>
+
+</body>
+
+</html>
