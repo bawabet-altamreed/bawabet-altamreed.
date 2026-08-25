@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1,
+        "title": "Hand Hygiene",
+        "category": "infection-control",
+        "icon": "🧼",
+        "description": "Proper hand hygiene is one of the most important methods for preventing healthcare-associated infections.",
+        "keywords": "hand washing hand hygiene infection control غسل اليدين مكافحة العدوى",
+        "overview": "Hand hygiene is the process of cleaning hands to remove microorganisms and reduce the transmission of infection.",
+        "indications": [
+            "Before touching a patient.",
+            "Before performing a clean or aseptic procedure.",
+            "After body fluid exposure.",
+            "After touching a patient.",
+            "After touching patient surroundings."
+        ],
+        "steps": [
+            "Remove rings, watches and bracelets when appropriate.",
+            "Wet hands with clean running water.",
+            "Apply an adequate amount of soap.",
+            "Rub all surfaces of the hands thoroughly.",
+            "Clean between fingers and around the thumbs.",
+            "Rinse hands thoroughly.",
+            "Dry hands with a clean disposable towel.",
+            "Use the towel to turn off the faucet when necessary."
+        ],
+        "precautions": [
+            "Keep fingernails short and clean.",
+            "Avoid artificial nails in clinical areas when prohibited.",
+            "Cover cuts or abrasions with appropriate dressings."
+        ],
+        "notes": "Hand hygiene should be performed according to the clinical situation and institutional infection-control policy."
+    },
+
+    {
+        "id": 2,
+        "title": "Vital Signs Assessment",
+        "category": "procedures",
+        "icon": "🌡️",
+        "description": "Basic assessment of temperature, pulse, respiration and blood pressure.",
+        "keywords": "vital signs temperature pulse respiration blood pressure العلامات الحيوية",
+        "overview": "Vital signs provide important information about a patient's physiological status.",
+        "indications": [
+            "Initial patient assessment.",
+            "Routine monitoring.",
+            "Before and after certain procedures.",
+            "When a patient's condition changes."
+        ],
+        "steps": [
+            "Explain the procedure to the patient.",
+            "Perform hand hygiene.",
+            "Ensure the patient is in an appropriate position.",
+            "Measure temperature using the appropriate method.",
+            "Assess pulse rate and rhythm.",
+            "Count respiratory rate and observe respiratory pattern.",
+            "Measure blood pressure using the correct cuff size.",
+            "Document the findings."
+        ],
+        "precautions": [
+            "Use the correct equipment.",
+            "Use an appropriate blood pressure cuff size.",
+            "Compare abnormal findings with previous readings when available."
+        ],
+        "notes": "Abnormal vital signs should be assessed in relation to the patient's overall clinical condition."
+    },
+
+    {
+        "id": 3,
+        "title": "Patient Bed Bath",
+        "category": "patient-care",
+        "icon": "🛏️",
+        "description": "Basic principles of providing a bed bath while maintaining patient comfort, privacy and safety.",
+        "keywords": "bed bath bathing patient care حمام المريض العناية بالمريض",
+        "overview": "A bed bath is provided to patients who are unable to bathe independently.",
+        "indications": [
+            "Patients with limited mobility.",
+            "Patients on bed rest.",
+            "Patients who cannot safely use the bathroom."
+        ],
+        "steps": [
+            "Explain the procedure to the patient.",
+            "Provide privacy and maintain a comfortable room temperature.",
+            "Perform hand hygiene and prepare equipment.",
+            "Maintain the patient's privacy throughout the procedure.",
+            "Clean the body systematically.",
+            "Change water or supplies when necessary.",
+            "Dry the skin carefully, especially skin folds.",
+            "Reposition the patient safely.",
+            "Document the care provided when required."
+        ],
+        "precautions": [
+            "Maintain patient dignity and privacy.",
+            "Avoid exposing unnecessary areas of the body.",
+            "Check water temperature before use.",
+            "Observe the skin for redness, irritation or pressure areas."
+        ],
+        "notes": "Patient comfort, dignity and safety should be maintained throughout the procedure."
+    },
+
+    {
+        "id": 4,
+        "title": "Personal Protective Equipment (PPE)",
+        "category": "infection-control",
+        "icon": "🥽",
+        "description": "Selection and appropriate use of personal protective equipment in healthcare settings.",
+        "keywords": "PPE gloves gown mask goggles personal protective equipment معدات الوقاية الشخصية",
+        "overview": "Personal protective equipment is used to reduce exposure to infectious materials and protect healthcare workers and patients.",
+        "indications": [
+            "Potential contact with blood or body fluids.",
+            "Procedures involving respiratory secretions.",
+            "Contact precautions.",
+            "Droplet or airborne precautions according to the clinical situation."
+        ],
+        "steps": [
+            "Assess the expected exposure risk.",
+            "Select appropriate PPE.",
+            "Perform hand hygiene.",
+            "Don PPE in the appropriate sequence.",
+            "Perform the required patient-care activity.",
+            "Remove PPE carefully to avoid contamination.",
+            "Perform hand hygiene after removal."
+        ],
+        "precautions": [
+            "Use PPE appropriate to the expected exposure.",
+            "Avoid touching the face while wearing contaminated gloves.",
+            "Dispose of single-use PPE according to facility policy."
+        ],
+        "notes": "PPE selection should follow the healthcare facility's infection-prevention policies and the type of anticipated exposure."
+    },
+
+    {
+        "id": 5,
+        "title": "Medication Administration Safety",
+        "category": "clinical-reference",
+        "icon": "💊",
+        "description": "Essential safety principles for medication administration by nurses.",
+        "keywords": "medication administration medication safety drugs الأدوية إعطاء الدواء",
+        "overview": "Medication administration requires careful verification, accurate documentation and monitoring for therapeutic effects and adverse reactions.",
+        "indications": [
+            "Administration of prescribed medications.",
+            "Monitoring therapeutic response.",
+            "Monitoring for adverse effects."
+        ],
+        "steps": [
+            "Verify the medication order.",
+            "Confirm the patient's identity using approved identifiers.",
+            "Check the medication, dose, route and timing.",
+            "Assess relevant patient information before administration.",
+            "Administer the medication using the appropriate technique.",
+            "Monitor the patient as appropriate.",
+            "Document medication administration."
+        ],
+        "precautions": [
+            "Check allergies before administration.",
+            "Follow institutional medication-safety policies.",
+            "Clarify unclear or incomplete medication orders.",
+            "Never administer a medication that cannot be safely identified."
+        ],
+        "notes": "Medication administration should always follow the current prescription and the policies of the healthcare facility."
+    },
+
+    {
+        "id": 6,
+        "title": "Pressure Injury Prevention",
+        "category": "patient-care",
+        "icon": "🛡️",
+        "description": "Basic nursing measures to reduce the risk of pressure injuries in vulnerable patients.",
+        "keywords": "pressure injury pressure ulcer prevention skin care قرح الفراش الوقاية",
+        "overview": "Pressure injury prevention focuses on reducing prolonged pressure and protecting skin and tissue integrity.",
+        "indications": [
+            "Patients with limited mobility.",
+            "Patients with reduced sensation.",
+            "Patients at increased risk of skin breakdown.",
+            "Patients requiring prolonged bed rest."
+        ],
+        "steps": [
+            "Assess the patient's skin and risk factors.",
+            "Keep the skin clean and dry.",
+            "Reposition the patient according to the care plan.",
+            "Use appropriate pressure-relieving surfaces when indicated.",
+            "Encourage adequate nutrition and hydration when appropriate.",
+            "Document skin assessment and preventive interventions."
+        ],
+        "precautions": [
+            "Avoid unnecessary friction and shear.",
+            "Inspect pressure-prone areas regularly.",
+            "Do not massage areas of suspected tissue injury."
+        ],
+        "notes": "Prevention should be individualized according to the patient's mobility, skin condition and overall clinical status."
+    }
+]
