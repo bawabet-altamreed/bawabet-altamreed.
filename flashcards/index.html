@@ -1,438 +1,2317 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Flashcards | بوابة التمريض</title>
 
-<meta name="description" content="Nursing Flashcards - بطاقات تعليمية لطلاب التمريض من بوابة التمريض.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <title>
+        بوابة التمريض | أكبر مرجع رقمي للتمريض في مصر
+    </title>
 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f8fb;
-        color: #1e293b;
-        min-height: 100vh;
-    }
+    <meta
+        name="description"
+        content="بوابة التمريض هي مرجع رقمي شامل لطلاب وممارسي التمريض في مصر. اكتشف الأدوية، المهارات التمريضية، الحاسبات، المصطلحات، الاختبارات، الأدلة السريرية، الوظائف، الأخبار والمصادر."
+    >
 
-    .header {
-        background: linear-gradient(135deg, #0b3d62, #087ea4);
-        color: white;
-        padding: 22px 15px;
-        text-align: center;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-    }
+    <meta
+        name="keywords"
+        content="بوابة التمريض, تمريض, تمريض مصر, Nursing Egypt, Nursing, Nursing Students, أدوية, دليل الأدوية, مهارات التمريض, حاسبات التمريض, قاموس التمريض, اختبارات التمريض, Clinical Guides, وظائف التمريض"
+    >
 
-    .header h1 {
-        font-size: 28px;
-        margin-bottom: 7px;
-    }
+    <meta
+        name="author"
+        content="بوابة التمريض"
+    >
 
-    .header p {
-        font-size: 15px;
-        opacity: 0.9;
-    }
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    .container {
-        width: 94%;
-        max-width: 900px;
-        margin: 25px auto;
-    }
+    <meta
+        name="theme-color"
+        content="#0b2d46"
+    >
 
-    .top-card {
-        background: white;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        margin-bottom: 18px;
-    }
+    <link
+        rel="canonical"
+        href="https://bawabet-altamreed.com/"
+    >
 
-    .top-card h2 {
-        color: #0b3d62;
-        margin-bottom: 8px;
-        font-size: 22px;
-    }
 
-    .top-card p {
-        color: #64748b;
-        line-height: 1.7;
-    }
+    <!-- =====================================================
+         SEO ENHANCEMENTS
+    ====================================================== -->
 
-    .filters {
-        display: flex;
-        gap: 10px;
-        margin-top: 16px;
-        flex-wrap: wrap;
-    }
+    <meta
+        name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
 
-    select,
-    .filter-btn {
-        border: 1px solid #dbe5eb;
-        background: white;
-        padding: 11px 14px;
-        border-radius: 9px;
-        font-size: 14px;
-        cursor: pointer;
-    }
+    <meta
+        name="bingbot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
 
-    select {
-        flex: 1;
-        min-width: 180px;
-        color: #334155;
-    }
+    <meta
+        name="language"
+        content="Arabic"
+    >
 
-    .filter-btn {
-        background: #eef7fb;
-        color: #087ea4;
-        font-weight: bold;
-    }
+    <meta
+        name="geo.region"
+        content="EG"
+    >
 
-    .progress-card {
-        background: white;
-        padding: 15px 18px;
-        border-radius: 14px;
-        margin-bottom: 18px;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    }
+    <meta
+        name="geo.placename"
+        content="Egypt"
+    >
 
-    .progress-info {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        color: #475569;
-        font-size: 14px;
-        margin-bottom: 9px;
-    }
+    <meta
+        name="content-language"
+        content="ar"
+    >
 
-    .progress-container {
-        background: #dbe7ee;
-        height: 9px;
-        border-radius: 20px;
-        overflow: hidden;
-    }
+    <link
+        rel="alternate"
+        hreflang="ar"
+        href="https://bawabet-altamreed.com/"
+    >
 
-    .progress-bar {
-        width: 0%;
-        height: 100%;
-        background: #087ea4;
-        transition: width 0.3s ease;
-    }
+    <link
+        rel="alternate"
+        hreflang="x-default"
+        href="https://bawabet-altamreed.com/"
+    >
 
-    .flashcard-wrapper {
-        perspective: 1200px;
-        margin-bottom: 18px;
-    }
 
-    .flashcard {
-        width: 100%;
-        min-height: 360px;
-        position: relative;
-        cursor: pointer;
-        transform-style: preserve-3d;
-        transition: transform 0.6s ease;
-    }
+    <!-- =====================================================
+         SOCIAL MEDIA / SHARING
+    ====================================================== -->
 
-    .flashcard.flipped {
-        transform: rotateY(180deg);
-    }
+    <meta
+        property="og:locale"
+        content="ar_EG"
+    >
 
-    .card-face {
-        position: absolute;
-        width: 100%;
-        min-height: 360px;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
+    <meta
+        property="og:locale:alternate"
+        content="en_US"
+    >
 
-        background: white;
-        border-radius: 18px;
-        padding: 30px 25px;
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    <meta
+        name="twitter:title"
+        content="بوابة التمريض | أكبر مرجع رقمي للتمريض في مصر"
+    >
 
-        text-align: center;
+    <meta
+        name="twitter:description"
+        content="مرجع رقمي شامل لطلاب وممارسي التمريض في مصر: الأدوية، المهارات، المصطلحات، الحاسبات، الاختبارات، الأدلة السريرية، الوظائف والمصادر."
+    >
 
-        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    }
 
-    .card-front {
-        border-top: 5px solid #087ea4;
-    }
+    <!-- =====================================================
+         STRUCTURED DATA — WEBSITE
+    ====================================================== -->
 
-    .card-back {
-        transform: rotateY(180deg);
-        border-top: 5px solid #0b3d62;
-    }
+    <script type="application/ld+json">
 
-    .card-label {
-        color: #087ea4;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 18px;
-    }
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
 
-    .card-subject {
-        display: inline-block;
-        background: #eef7fb;
-        color: #087ea4;
-        padding: 7px 12px;
-        border-radius: 20px;
-        font-size: 13px;
-        margin-top: 18px;
-    }
+        "name": "بوابة التمريض",
 
-    .card-text {
-        font-size: 25px;
-        font-weight: bold;
-        line-height: 1.7;
-        max-width: 750px;
-    }
+        "alternateName": [
+            "Bawabet Al Tamreed",
+            "Bawabet Altamreed",
+            "بوابة التمريض مصر",
+            "Nursing Egypt"
+        ],
 
-    .card-back .card-text {
-        font-size: 21px;
-        color: #334155;
-    }
+        "url": "https://bawabet-altamreed.com/",
 
-    .flip-hint {
-        margin-top: 25px;
-        color: #94a3b8;
-        font-size: 13px;
-    }
+        "description": "مرجع رقمي عربي شامل لطلاب وممارسي التمريض في مصر.",
 
-    .controls {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 18px;
-    }
+        "inLanguage": "ar-EG",
 
-    .control-btn {
-        flex: 1;
-        border: none;
-        border-radius: 10px;
-        padding: 14px;
-        font-size: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.2s;
-    }
+        "potentialAction": {
+            "@type": "SearchAction",
 
-    .control-btn:hover {
-        transform: translateY(-1px);
-        opacity: 0.92;
-    }
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://bawabet-altamreed.com/search.html?q={search_term_string}"
+            },
 
-    .previous-btn {
-        background: #e2e8f0;
-        color: #334155;
-    }
-
-    .next-btn {
-        background: #087ea4;
-        color: white;
-    }
-
-    .favorite-btn {
-        background: #fff7ed;
-        color: #c2410c;
-    }
-
-    .favorite-btn.active {
-        background: #ffedd5;
-    }
-
-    .extra-controls {
-        display: flex;
-        gap: 10px;
-    }
-
-    .extra-btn {
-        flex: 1;
-        border: 1px solid #dbe5eb;
-        background: white;
-        color: #475569;
-        padding: 11px;
-        border-radius: 9px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .loading,
-    .error {
-        background: white;
-        padding: 35px 20px;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    }
-
-    .error {
-        background: #fff1f2;
-        color: #be123c;
-    }
-
-    .empty {
-        text-align: center;
-        padding: 35px 20px;
-        background: white;
-        border-radius: 15px;
-        color: #64748b;
-    }
-
-    @media (max-width: 600px) {
-
-        .header h1 {
-            font-size: 23px;
+            "query-input": "required name=search_term_string"
         }
+    }
+
+    </script>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA — ORGANIZATION
+    ====================================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "Organization",
+
+        "name": "بوابة التمريض",
+
+        "alternateName": "Bawabet Al Tamreed",
+
+        "url": "https://bawabet-altamreed.com/",
+
+        "description": "مرجع رقمي عربي متخصص في التمريض وعلومه ومصادره وأدواته.",
+
+        "areaServed": {
+            "@type": "Country",
+            "name": "Egypt"
+        },
+
+        "knowsAbout": [
+            "Nursing",
+            "Nursing Education",
+            "Nursing Skills",
+            "Medical Terminology",
+            "Pharmacology",
+            "Clinical Nursing",
+            "Nursing Calculators",
+            "Nursing Exams",
+            "Nursing in Egypt"
+        ]
+    }
+
+    </script>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA — WEBSITE SECTIONS
+    ====================================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "ItemList",
+
+        "name": "أقسام بوابة التمريض",
+
+        "description": "الأقسام الرئيسية والخدمات المتاحة في بوابة التمريض.",
+
+        "itemListElement": [
+
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "مركز الأدوية",
+                "url": "https://bawabet-altamreed.com/drugs.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المعرفة التمريضية",
+                "url": "https://bawabet-altamreed.com/knowledge.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "الحاسبات والأدوات",
+                "url": "https://bawabet-altamreed.com/tools.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "قاموس التمريض",
+                "url": "https://bawabet-altamreed.com/dictionary.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "اختبارات التمريض",
+                "url": "https://bawabet-altamreed.com/quizzes.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Flashcards",
+                "url": "https://bawabet-altamreed.com/flashcards/index.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "Clinical Guides",
+                "url": "https://bawabet-altamreed.com/clinical-guides.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 8,
+                "name": "التمريض في مصر",
+                "url": "https://bawabet-altamreed.com/egyptian-nursing.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 9,
+                "name": "وظائف التمريض",
+                "url": "https://bawabet-altamreed.com/jobs.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 10,
+                "name": "أخبار التمريض",
+                "url": "https://bawabet-altamreed.com/news.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 11,
+                "name": "Nursing Resources",
+                "url": "https://bawabet-altamreed.com/resources.html"
+            },
+
+            {
+                "@type": "ListItem",
+                "position": 12,
+                "name": "مقالات التمريض",
+                "url": "https://bawabet-altamreed.com/articles.html"
+            }
+
+        ]
+    }
+
+    </script>
+
+
+    <!-- =====================================================
+         STRUCTURED DATA — WEBSITE PAGE
+    ====================================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@type": "WebPage",
+
+        "name": "بوابة التمريض | أكبر مرجع رقمي للتمريض في مصر",
+
+        "url": "https://bawabet-altamreed.com/",
+
+        "description": "بوابة التمريض هي مرجع رقمي شامل لطلاب وممارسي التمريض في مصر.",
+
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "بوابة التمريض",
+            "url": "https://bawabet-altamreed.com/"
+        },
+
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Nursing"
+            },
+            {
+                "@type": "Thing",
+                "name": "Nursing Education"
+            },
+            {
+                "@type": "Thing",
+                "name": "Medical Terminology"
+            },
+            {
+                "@type": "Thing",
+                "name": "Pharmacology"
+            },
+            {
+                "@type": "Thing",
+                "name": "Nursing Skills"
+            }
+        ],
+
+        "inLanguage": "ar-EG"
+    }
+
+    </script>
+
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="بوابة التمريض | مرجع التمريض في مصر"
+    >
+
+    <meta
+        property="og:description"
+        content="أدوية، مهارات تمريض، حاسبات، مصطلحات، اختبارات، أدلة سريرية، وظائف وأخبار التمريض في مكان واحد."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bawabet-altamreed.com/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="بوابة التمريض"
+    >
+
+
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background: #f5f8fa;
+            color: #173247;
+            line-height: 1.7;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
 
         .container {
-            width: 95%;
-            margin: 18px auto;
+            width: min(1240px, calc(100% - 40px));
+            margin: auto;
         }
 
-        .card-face,
-        .flashcard {
-            min-height: 330px;
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+
+            background: rgba(255,255,255,0.96);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid #e3eaee;
         }
 
-        .card-face {
-            padding: 25px 18px;
+
+        .header-inner {
+            min-height: 74px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 25px;
         }
 
-        .card-text {
-            font-size: 21px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            min-width: 210px;
+
+            font-weight: 900;
         }
 
-        .card-back .card-text {
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b2d46,
+                    #18758a
+                );
+
+            color: white;
+
+            font-size: 24px;
+        }
+
+
+        .logo-text strong {
+            display: block;
+            color: #0b2d46;
             font-size: 18px;
         }
 
-        .controls {
+
+        .logo-text small {
+            display: block;
+            color: #78909c;
+            font-size: 9px;
+            line-height: 1.5;
+            margin-top: 2px;
+            white-space: nowrap;
+        }
+
+
+        .logo-text small b {
+            color: #0b526b;
+            font-weight: 900;
+        }
+
+
+        .main-nav {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 3px;
+        }
+
+
+        .main-nav a {
+            padding: 9px 10px;
+
+            border-radius: 9px;
+
+            color: #536772;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            transition: .2s ease;
+        }
+
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            background: #edf5f7;
+            color: #0b526b;
+        }
+
+
+        .header-search {
+            display: flex;
+            align-items: center;
+
+            width: 210px;
+
+            background: #f1f5f7;
+
+            border: 1px solid #e0e8ec;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+        }
+
+
+        .header-search input {
+            width: 100%;
+
+            border: 0;
+            outline: 0;
+
+            background: transparent;
+
+            padding: 10px;
+
+            font-size: 13px;
+        }
+
+
+        .header-search button {
+            width: 42px;
+            height: 42px;
+
+            border: 0;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            font-size: 17px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+
+            padding: 85px 0 70px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #082c46 0%,
+                    #0b4b66 55%,
+                    #137b8d 100%
+                );
+
+            color: white;
+        }
+
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.045);
+
+            top: -260px;
+            left: -170px;
+        }
+
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.04);
+
+            bottom: -250px;
+            right: -130px;
+        }
+
+
+        /*
+         * HERO GRID
+         * تم ضبطه ليستوعب:
+         * 1 — المحتوى الرئيسي
+         * 2 — Developer Card
+         * 3 — Hero Panel
+         */
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.4fr)
+                minmax(240px, .6fr)
+                minmax(270px, .7fr);
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+
+        .hero-badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,.17);
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(40px, 5vw, 67px);
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+
+            font-weight: 900;
+        }
+
+
+        .hero h1 span {
+            color: #8be8f0;
+        }
+
+
+        .hero-description {
+            max-width: 750px;
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: rgba(255,255,255,.85);
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =====================================================
+           GLOBAL SEARCH
+        ===================================================== */
+
+        .global-search {
+            position: relative;
+
+            max-width: 800px;
+        }
+
+
+        .global-search input {
+            width: 100%;
+
+            height: 66px;
+
+            border: 0;
+
+            outline: none;
+
+            border-radius: 17px;
+
+            padding:
+                0 60px 0 125px;
+
+            font-size: 16px;
+
+            color: #17202a;
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,.2);
+        }
+
+
+        .search-icon {
+            position: absolute;
+
+            right: 21px;
+
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            font-size: 23px;
+        }
+
+
+        .global-search button {
+            position: absolute;
+
+            left: 8px;
+            top: 8px;
+            bottom: 8px;
+
+            width: 105px;
+
+            border: 0;
+
+            border-radius: 11px;
+
+            background: #0b2d46;
+
+            color: white;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+
+        .popular-searches {
+            display: flex;
+
+            align-items: center;
+
             flex-wrap: wrap;
+
+            gap: 9px;
+
+            margin-top: 15px;
+
+            font-size: 12px;
+
+            color: rgba(255,255,255,.7);
         }
 
-        .control-btn {
-            min-width: 45%;
+
+        .popular-searches a {
+            padding: 5px 10px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,.08);
+
+            transition: .2s;
         }
-    }
-</style>
 
-</head><body><header class="header">
-    <h1>🧠 Flashcards</h1>
-    <p>بطاقات تعليمية لطلاب التمريض | بوابة التمريض</p>
-</header><main class="container"><section class="top-card">
 
-    <h2>🧠 Nursing Flashcards</h2>
+        .popular-searches a:hover {
+            background:
+                rgba(255,255,255,.16);
+        }
 
-    <p>
-        اختبر نفسك بطريقة سريعة وفعالة.
-        اضغط على البطاقة لإظهار الإجابة.
-    </p>
 
-    <div class="filters">
+        /* =====================================================
+           HERO SIDE
+        ===================================================== */
 
-        <select id="subjectFilter">
-            <option value="all">📚 كل المواد</option>
-        </select>
+        .hero-panel {
+            position: relative;
+
+            min-height: 330px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .hero-main-card {
+            width: 270px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 28px;
+
+            background:
+                rgba(255,255,255,.1);
+
+            border:
+                1px solid
+                rgba(255,255,255,.16);
+
+            backdrop-filter:
+                blur(10px);
+
+            box-shadow:
+                0 25px 60px
+                rgba(0,0,0,.15);
+        }
+
+
+        .hero-main-card-icon {
+            font-size: 65px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero-main-card h2 {
+            margin-bottom: 7px;
+        }
+
+
+        .hero-main-card p {
+            color:
+                rgba(255,255,255,.7);
+
+            font-size: 13px;
+        }
+
+
+        .floating {
+            position: absolute;
+
+            padding: 12px 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            border-radius: 14px;
+
+            background: white;
+
+            color: #183447;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,.16);
+
+            font-size: 12px;
+        }
+
+
+        .floating strong {
+            display: block;
+        }
+
+
+        .floating small {
+            display: block;
+            color: #83939b;
+        }
+
+
+        .floating.one {
+            top: 30px;
+            right: 0;
+        }
+
+
+        .floating.two {
+            bottom: 40px;
+            left: 0;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        .section {
+            padding: 75px 0;
+        }
+
+
+        .section.alt {
+            background: white;
+        }
+
+
+        .section-heading {
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .section-heading h2 {
+            font-size: 31px;
+
+            color: #102f46;
+
+            margin-bottom: 5px;
+        }
+
+
+        .section-heading p {
+            color: #73838c;
+
+            font-size: 14px;
+        }
+
+
+        .section-link {
+            color: #12667c;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           MAIN SERVICES
+        ===================================================== */
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .service-card {
+            position: relative;
+
+            min-height: 205px;
+
+            padding: 25px;
+
+            background: white;
+
+            border:
+                1px solid #e0e8ec;
+
+            border-radius: 20px;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease,
+                border-color .2s ease;
+
+            overflow: hidden;
+        }
+
+
+        .service-card::after {
+            content: "";
+
+            position: absolute;
+
+            width: 90px;
+            height: 90px;
+
+            border-radius: 50%;
+
+            background:
+                #eef7f9;
+
+            left: -30px;
+            bottom: -35px;
+        }
+
+
+        .service-card:hover {
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #b9d6dc;
+
+            box-shadow:
+                0 18px 40px
+                rgba(20,50,65,.09);
+        }
+
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background: #eef6f8;
+
+            font-size: 28px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .service-card h3 {
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .service-card p {
+            color: #71818a;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        .service-arrow {
+            position: absolute;
+
+            left: 20px;
+            bottom: 18px;
+
+            color: #15677d;
+
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           TOOLS
+        ===================================================== */
+
+        .tools-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 17px;
+        }
+
+
+        .tool-card {
+            position: relative;
+
+            padding: 23px;
+
+            background: #f8fbfc;
+
+            border:
+                1px solid #e2eaed;
+
+            border-radius: 18px;
+
+            transition: .2s;
+        }
+
+
+        .tool-card:hover {
+            background: white;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,.06);
+        }
+
+
+        .tool-card-icon {
+            font-size: 31px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .tool-card h3 {
+            font-size: 17px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .tool-card p {
+            color: #77868d;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           FEATURED
+        ===================================================== */
+
+        .featured-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .featured-card {
+            padding: 30px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid #e1e9ed;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f1f8fa
+                );
+        }
+
+
+        .featured-icon {
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-card h3 {
+            font-size: 21px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .featured-card p {
+            color: #73828a;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .featured-button {
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            background: #0b2d46;
+
+            color: white;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           TOPICS
+        ===================================================== */
+
+        .topics-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+
+        .topic-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 17px;
+
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 15px;
+
+            transition: .2s;
+        }
+
+
+        .topic-card:hover {
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #a8ccd4;
+        }
+
+
+        .topic-icon {
+            width: 45px;
+            height: 45px;
+
+            flex: 0 0 45px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #edf6f8;
+
+            font-size: 22px;
+        }
+
+
+        .topic-card strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+
+        .topic-card small {
+            color: #7b8a92;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           EGYPT BANNER
+        ===================================================== */
+
+        .egypt-banner {
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 45px;
+
+            border-radius: 27px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b2d46,
+                    #146b80
+                );
+
+            color: white;
+        }
+
+
+        .egypt-banner-content {
+            max-width: 780px;
+        }
+
+
+        .egypt-banner h2 {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .egypt-banner p {
+            color:
+                rgba(255,255,255,.78);
+
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .banner-button {
+            display: inline-block;
+
+            padding: 11px 18px;
+
+            background: white;
+
+            color: #0b2d46;
+
+            border-radius: 11px;
+
+            font-weight: 800;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           ARTICLES
+        ===================================================== */
+
+        .articles-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .article-card {
+            overflow: hidden;
+
+            background: white;
+
+            border:
+                1px solid #e1e9ed;
+
+            border-radius: 19px;
+        }
+
+
+        .article-image {
+            height: 145px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dceff3,
+                    #edf7f9
+                );
+
+            font-size: 48px;
+        }
+
+
+        .article-body {
+            padding: 22px;
+        }
+
+
+        .article-category {
+            color: #168097;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        .article-body h3 {
+            margin:
+                7px 0 8px;
+
+            font-size: 18px;
+        }
+
+
+        .article-body p {
+            color: #75858c;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        .article-body a {
+            color: #0d6378;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            text-align: center;
+
+            padding: 75px 20px;
+
+            background:
+                #eef6f8;
+        }
+
+
+        .cta h2 {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .cta p {
+            color: #71818a;
+
+            margin-bottom: 22px;
+        }
+
+
+        .cta-button {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 12px;
+
+            background: #0b2d46;
+
+            color: white;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            background: #071f32;
+
+            color: white;
+
+            padding:
+                60px 0 25px;
+        }
+
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                2fr
+                1fr
+                1fr
+                1fr;
+
+            gap: 45px;
+
+            padding-bottom: 40px;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.1);
+        }
+
+
+        .footer-brand h3 {
+            font-size: 21px;
+
+            margin-bottom: 13px;
+        }
+
+
+        .footer-brand p {
+            max-width: 430px;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+
+            font-size: 15px;
+        }
+
+
+        .footer-column a {
+            display: block;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size: 13px;
+
+            margin-bottom: 9px;
+
+            transition: .2s;
+        }
+
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+
+        .footer-bottom {
+            padding-top: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color:
+                rgba(255,255,255,.45);
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           MOBILE MENU BUTTON
+        ===================================================== */
+
+        .mobile-button {
+            display: none;
+
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid #dfe7ea;
+
+            background: white;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            font-size: 21px;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .main-nav {
+                display: none;
+            }
+
+
+            .header-search {
+                margin-right: auto;
+            }
+
+
+            .mobile-button {
+                display: block;
+            }
+
+
+            /*
+             * HERO TABLET
+             */
+
+            .hero-inner {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 30px;
+            }
+
+
+            .hero-content {
+                grid-column: 1 / -1;
+            }
+
+
+            .hero-panel {
+                grid-column: 1 / -1;
+            }
+
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .tools-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .topics-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+
+            .footer-grid {
+                grid-template-columns:
+                    2fr 1fr 1fr;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width:
+                    min(
+                        100% - 24px,
+                        1240px
+                    );
+            }
+
+
+            .header-inner {
+                min-height: 64px;
+
+                gap: 10px;
+            }
+
+
+            .logo {
+                min-width: auto;
+            }
+
+
+            .logo-text small {
+                display: none;
+            }
+
+
+            .header-search {
+                display: none;
+            }
+
+
+            .hero {
+                padding:
+                    55px 0 50px;
+            }
+
+
+            .hero-inner {
+                grid-template-columns:
+                    1fr;
+
+                gap: 35px;
+
+                text-align: center;
+            }
+
+
+            .hero-content {
+                grid-column: auto;
+                margin: auto;
+            }
+
+
+            .hero-panel {
+                grid-column: auto;
+            }
+
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+
+            .hero-panel {
+                min-height: 250px;
+            }
+
+
+            .hero-main-card {
+                width: 240px;
+            }
+
+
+            .floating {
+                display: none;
+            }
+
+
+            .global-search input {
+                height: 59px;
+
+                padding:
+                    0 50px 0 100px;
+
+                font-size: 14px;
+            }
+
+
+            .global-search button {
+                width: 82px;
+            }
+
+
+            .popular-searches {
+                justify-content: center;
+            }
+
+
+            .section {
+                padding:
+                    55px 0;
+            }
+
+
+            .section-heading {
+                flex-direction: column;
+
+                align-items:
+                    flex-start;
+            }
+
+
+            .section-heading h2 {
+                font-size: 26px;
+            }
+
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+            }
+
+
+            .service-card {
+                min-height: 190px;
+
+                padding: 17px;
+            }
+
+
+            .service-card h3 {
+                font-size: 16px;
+            }
+
+
+            .service-card p {
+                font-size: 12px;
+            }
+
+
+            .tools-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+            }
+
+
+            .featured-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .topics-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .articles-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .egypt-banner {
+                padding: 30px 22px;
+            }
+
+
+            .egypt-banner h2 {
+                font-size: 25px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 30px;
+            }
+
+
+            .footer-brand {
+                grid-column:
+                    1 / -1;
+            }
+
+
+            .footer-bottom {
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .services-grid,
+            .tools-grid,
+            .topics-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+
+            .hero-badge {
+                font-size: 11px;
+            }
+
+
+            .quick-link {
+                font-size: 12px;
+            }
+
+
+            .footer-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body id="top">
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <span class="logo-icon">
+                🩺
+            </span>
+
+            <span class="logo-text">
+
+                <strong>
+                    بوابة التمريض
+                </strong>
+
+                <small>
+                    تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
+                    <b>احــــــمــــــد بــــــــســـــــام</b>
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav
+            class="main-nav"
+            aria-label="القائمة الرئيسية"
+        >
+
+            <a
+                href="index.html"
+                class="active"
+            >
+                الرئيسية
+            </a>
+
+            <a href="knowledge.html">
+                المعرفة
+            </a>
+
+            <a href="drugs.html">
+                الأدوية
+            </a>
+
+            <a href="tools.html">
+                الأدوات
+            </a>
+
+            <a href="dictionary.html">
+                القاموس
+            </a>
+
+            <a href="quizzes.html">
+                الاختبارات
+            </a>
+
+            <a href="egyptian-nursing.html">
+                تمريض مصر
+            </a>
+
+        </nav>
+
+
+        <form
+            class="header-search"
+            id="headerSearch"
+        >
+
+            <input
+                type="search"
+                id="headerSearchInput"
+                placeholder="بحث..."
+                aria-label="البحث في بوابة التمريض"
+            >
+
+            <button
+                type="submit"
+                aria-label="بحث"
+            >
+                🔎
+            </button>
+
+        </form>
+
 
         <button
-            class="filter-btn"
-            id="shuffleBtn"
-            type="button">
-            🔀 عشوائي
+            class="mobile-button"
+            type="button"
+            onclick="toggleMobileMenu()"
+            aria-label="القائمة"
+        >
+            ☰
         </button>
 
     </div>
 
-</section>
 
-<div
-    id="loading"
-    class="loading">
-    ⏳ جاري تحميل الـ Flashcards...
-</div>
-
-<div
-    id="error"
-    class="error"
-    style="display:none;">
-</div>
-
-<section
-    id="flashcardsArea"
-    style="display:none;">
-
-    <div class="progress-card">
-
-        <div class="progress-info">
-            <span>
-                البطاقة
-                <strong id="currentNumber">1</strong>
-                من
-                <strong id="totalNumber">0</strong>
-            </span>
-
-            <span id="percentage">
-                0%
-            </span>
-        </div>
-
-        <div class="progress-container">
-            <div
-                class="progress-bar"
-                id="progressBar">
-            </div>
-        </div>
-
-    </div>
-
-    <div class="flashcard-wrapper">
+    <div
+        id="mobileMenu"
+        style="
+            display:none;
+            background:white;
+            border-top:1px solid #e4ebee;
+        "
+    >
 
         <div
-            class="flashcard"
-            id="flashcard">
+            class="container"
+            style="
+                padding:15px 0;
+                display:grid;
+                gap:7px;
+            "
+        >
 
-            <div class="card-face card-front">
+            <a href="index.html">
+                🏠 الرئيسية
+            </a>
 
-                <div class="card-label">
-                    ❓ السؤال
+            <a href="knowledge.html">
+                🩺 المعرفة التمريضية
+            </a>
+
+            <a href="drugs.html">
+                💊 مركز الأدوية
+            </a>
+
+            <a href="tools.html">
+                🧮 الأدوات والحاسبات
+            </a>
+
+            <a href="dictionary.html">
+                📖 قاموس التمريض
+            </a>
+
+            <a href="quizzes.html">
+                📝 الاختبارات
+            </a>
+
+            <a href="flashcards/index.html">
+                🧠 Flashcards
+            </a>
+
+            <a href="clinical-guides.html">
+                📋 Clinical Guides
+            </a>
+
+            <a href="egyptian-nursing.html">
+                🇪🇬 التمريض في مصر
+            </a>
+
+            <a href="jobs.html">
+                💼 وظائف التمريض
+            </a>
+
+            <a href="news.html">
+                📰 أخبار التمريض
+            </a>
+
+            <a href="resources.html">
+                📚 Resources
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-inner">
+
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                🇪🇬 المرجع الرقمي للتمريض في مصر
+            </span>
+
+
+            <h1>
+
+                كل ما تحتاجه في
+                <span>
+                    التمريض
+                </span>
+                في مكان واحد
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                ابحث عن دواء، تعلّم مهارة تمريض،
+                اكتشف مصطلحًا طبيًا، استخدم حاسبة،
+                اختبر معلوماتك أو استكشف أحدث محتوى
+                تمريضي.
+
+            </p>
+
+
+            <div class="popular-searches">
+
+                <span>
+                    الأكثر بحثًا:
+                </span>
+
+                <a href="drugs.html">
+                    <span>💊</span>
+                    الأدوية
+                </a>
+
+                <a href="dictionary.html">
+                    <span>📖</span>
+                    المصطلحات
+                </a>
+
+                <a href="tools.html">
+                    <span>🧮</span>
+                    الحاسبات
+                </a>
+
+                <a href="clinical-guides.html">
+                    <span>🩺</span>
+                    المهارات
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="developer-card">
+
+            <div class="developer-icon">
+                👨‍💻
+            </div>
+
+            <span class="developer-label">
+                تم تطوير وبرمجة وتنفيذ الموقع
+            </span>
+
+            <h2>
+                Ahmed Bassam
+            </h2>
+
+            <p>
+                (احـــمـــد بـــســـام)
+            </p>
+
+            <div class="developer-line"></div>
+
+            <small>
+                Founder & Developer
+            </small>
+
+        </div>
+
+
+        <div class="hero-panel">
+
+            <div class="hero-main-card">
+
+                <div class="hero-main-card-icon">
+                    🩺
                 </div>
 
-                <div
-                    class="card-text"
-                    id="questionText">
-                </div>
+                <h2>
+                    Nursing Knowledge
+                </h2>
 
-                <div
-                    class="card-subject"
-                    id="frontSubject">
-                </div>
+                <p>
+                    تعلم • ابحث • احسب • اختبر • اكتشف
+                </p>
 
-                <div class="flip-hint">
-                    👆 اضغط على البطاقة لرؤية الإجابة
+            </div>
+
+
+            <div class="floating one">
+
+                <span>
+                    💊
+                </span>
+
+                <div>
+
+                    <strong>
+                        Drug Center
+                    </strong>
+
+                    <small>
+                        دليل الأدوية
+                    </small>
+
                 </div>
 
             </div>
 
-            <div class="card-face card-back">
 
-                <div class="card-label">
-                    ✅ الإجابة
-                </div>
+            <div class="floating two">
 
-                <div
-                    class="card-text"
-                    id="answerText">
-                </div>
+                <span>
+                    🧮
+                </span>
 
-                <div
-                    class="card-subject"
-                    id="backSubject">
+                <div>
+
+                    <strong>
+                        Nursing Tools
+                    </strong>
+
+                    <small>
+                        أدوات وحاسبات
+                    </small>
+
                 </div>
 
             </div>
@@ -441,568 +2320,1278 @@
 
     </div>
 
-    <div class="controls">
+</section>
 
-        <button
-            type="button"
-            class="control-btn previous-btn"
-            id="previousBtn">
-            ← السابق
-        </button>
 
-        <button
-            type="button"
-            class="control-btn favorite-btn"
-            id="favoriteBtn">
-            ☆ المفضلة
-        </button>
 
-        <button
-            type="button"
-            class="control-btn next-btn"
-            id="nextBtn">
-            التالي →
-        </button>
+<!-- =====================================================
+     MAIN SERVICES
+====================================================== -->
 
-    </div>
+<section class="section">
 
-    <div class="extra-controls">
+    <div class="container">
 
-        <button
-            type="button"
-            class="extra-btn"
-            id="resetBtn">
-            🔄 إعادة البداية
-        </button>
+        <div class="section-heading">
 
-        <button
-            type="button"
-            class="extra-btn"
-            id="favoritesFilterBtn">
-            ⭐ عرض المفضلة
-        </button>
+            <div>
+
+                <h2>
+                    استكشف بوابة التمريض
+                </h2>
+
+                <p>
+                    أهم الأقسام والخدمات التي ستجدها داخل الموقع.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <a href="drugs.html" class="service-card">
+
+                <div class="service-icon">
+                    💊
+                </div>
+
+                <h3>
+                    مركز الأدوية
+                </h3>
+
+                <p>
+                    ابحث عن الدواء أو المادة الفعالة
+                    واعرف المعلومات التعليمية الأساسية.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="knowledge.html" class="service-card">
+
+                <div class="service-icon">
+                    🩺
+                </div>
+
+                <h3>
+                    المعرفة التمريضية
+                </h3>
+
+                <p>
+                    مقالات وشروحات ومعلومات تمريضية
+                    منظمة وسهلة الوصول.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="tools.html" class="service-card">
+
+                <div class="service-icon">
+                    🧮
+                </div>
+
+                <h3>
+                    الحاسبات والأدوات
+                </h3>
+
+                <p>
+                    أدوات وحاسبات تعليمية تساعدك
+                    في الدراسة والتدريب.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="dictionary.html" class="service-card">
+
+                <div class="service-icon">
+                    📖
+                </div>
+
+                <h3>
+                    قاموس التمريض
+                </h3>
+
+                <p>
+                    مصطلحات طبية وتمريضية
+                    بالعربي والإنجليزي والاختصارات.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="quizzes.html" class="service-card">
+
+                <div class="service-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Nursing Quiz
+                </h3>
+
+                <p>
+                    اختبر معلوماتك من خلال اختبارات
+                    وأسئلة تمريضية متنوعة.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="flashcards/index.html" class="service-card">
+
+                <div class="service-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Flashcards
+                </h3>
+
+                <p>
+                    راجع المعلومات والمصطلحات
+                    بطريقة سريعة وتفاعلية.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="clinical-guides.html" class="service-card">
+
+                <div class="service-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Clinical Guides
+                </h3>
+
+                <p>
+                    أدلة ومراجع سريعة للمهارات
+                    والممارسات التمريضية.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="egyptian-nursing.html" class="service-card">
+
+                <div class="service-icon">
+                    🇪🇬
+                </div>
+
+                <h3>
+                    التمريض في مصر
+                </h3>
+
+                <p>
+                    الدراسة والقبول والمدارس والمعاهد
+                    والكليات والمسارات المهنية.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="jobs.html" class="service-card">
+
+                <div class="service-icon">
+                    💼
+                </div>
+
+                <h3>
+                    وظائف التمريض
+                </h3>
+
+                <p>
+                    فرص العمل والتدريب والمسارات
+                    المهنية للممرضين.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="news.html" class="service-card">
+
+                <div class="service-icon">
+                    📰
+                </div>
+
+                <h3>
+                    أخبار التمريض
+                </h3>
+
+                <p>
+                    أخبار وتحديثات وفرص جديدة
+                    تخص مجال التمريض.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="resources.html" class="service-card">
+
+                <div class="service-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Nursing Resources
+                </h3>
+
+                <p>
+                    مراجع وموارد ومواد مفيدة
+                    لطلاب وممارسي التمريض.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+
+            <a href="articles.html" class="service-card">
+
+                <div class="service-icon">
+                    ✍️
+                </div>
+
+                <h3>
+                    مقالات التمريض
+                </h3>
+
+                <p>
+                    مقالات متخصصة قابلة للبحث
+                    والاكتشاف عبر Google.
+                </p>
+
+                <span class="service-arrow">
+                    ←
+                </span>
+
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<div
-    id="empty"
-    class="empty"
-    style="display:none;">
-
-    ⭐ لا توجد Flashcards في هذا القسم حاليًا.
-
-</div>
-
-</main><script>
-
-let allCards = [];
-let cards = [];
-
-let currentIndex = 0;
-let showFavoritesOnly = false;
-
-const loading = document.getElementById("loading");
-const errorBox = document.getElementById("error");
-const flashcardsArea = document.getElementById("flashcardsArea");
-const emptyBox = document.getElementById("empty");
-
-const flashcard = document.getElementById("flashcard");
-
-const questionText = document.getElementById("questionText");
-const answerText = document.getElementById("answerText");
-
-const frontSubject = document.getElementById("frontSubject");
-const backSubject = document.getElementById("backSubject");
-
-const currentNumber = document.getElementById("currentNumber");
-const totalNumber = document.getElementById("totalNumber");
-const percentage = document.getElementById("percentage");
-const progressBar = document.getElementById("progressBar");
-
-const subjectFilter = document.getElementById("subjectFilter");
-
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
-const favoriteBtn = document.getElementById("favoriteBtn");
-
-const shuffleBtn = document.getElementById("shuffleBtn");
-const resetBtn = document.getElementById("resetBtn");
-const favoritesFilterBtn =
-    document.getElementById("favoritesFilterBtn");
 
 
-/* =========================
-   LOAD FLASHCARDS
-========================= */
+<!-- =====================================================
+     TOOLS
+====================================================== -->
 
-fetch("../data/flashcards.json")
+<section class="section alt">
 
-    .then(response => {
+    <div class="container">
 
-        if (!response.ok) {
-            throw new Error("JSON file not found");
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    🧮 أدوات التمريض
+                </h2>
+
+                <p>
+                    أدوات سريعة للاستخدام أثناء الدراسة والتدريب.
+                </p>
+
+            </div>
+
+            <a
+                href="tools.html"
+                class="section-link"
+            >
+                عرض كل الأدوات ←
+            </a>
+
+        </div>
+
+
+        <div class="tools-grid">
+
+
+            <a
+                href="tools.html#iv-drip-rate"
+                class="tool-card"
+            >
+
+                <div class="tool-card-icon">
+                    💧
+                </div>
+
+                <h3>
+                    IV Drip Rate
+                </h3>
+
+                <p>
+                    حساب معدل التنقيط.
+                </p>
+
+            </a>
+
+
+            <a
+                href="tools.html#iv-flow-rate"
+                class="tool-card"
+            >
+
+                <div class="tool-card-icon">
+                    💉
+                </div>
+
+                <h3>
+                    IV Flow Rate
+                </h3>
+
+                <p>
+                    حساب معدل التدفق.
+                </p>
+
+            </a>
+
+
+            <a
+                href="tools.html#bmi"
+                class="tool-card"
+            >
+
+                <div class="tool-card-icon">
+                    ⚖️
+                </div>
+
+                <h3>
+                    BMI Calculator
+                </h3>
+
+                <p>
+                    حساب مؤشر كتلة الجسم.
+                </p>
+
+            </a>
+
+
+            <a
+                href="tools.html#gcs"
+                class="tool-card"
+            >
+
+                <div class="tool-card-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    GCS Calculator
+                </h3>
+
+                <p>
+                    Glasgow Coma Scale.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED
+====================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    ⭐ ابدأ من هنا
+                </h2>
+
+                <p>
+                    أقسام أساسية تستحق الزيارة أولًا.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="featured-grid">
+
+
+            <article class="featured-card">
+
+                <div class="featured-icon">
+                    💊
+                </div>
+
+                <h3>
+                    دليل الأدوية
+                </h3>
+
+                <p>
+                    ابحث عن الدواء بالاسم التجاري
+                    أو المادة الفعالة للوصول إلى
+                    المعلومات التعليمية المتاحة.
+                </p>
+
+                <a
+                    href="drugs.html"
+                    class="featured-button"
+                >
+                    افتح دليل الأدوية
+                </a>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="featured-icon">
+                    📋
+                </div>
+
+                <h3>
+                    المهارات والأدلة السريرية
+                </h3>
+
+                <p>
+                    تعلّم خطوات المهارات التمريضية
+                    والمعلومات المرتبطة بالممارسة
+                    السريرية.
+                </p>
+
+                <a
+                    href="clinical-guides.html"
+                    class="featured-button"
+                >
+                    استكشف الأدلة
+                </a>
+
+            </article>
+
+
+            <article class="featured-card">
+
+                <div class="featured-icon">
+                    📝
+                </div>
+
+                <h3>
+                    اختبر نفسك
+                </h3>
+
+                <p>
+                    اختبارات وأسئلة تساعدك على
+                    مراجعة معلوماتك التمريضية.
+                </p>
+
+                <a
+                    href="quizzes.html"
+                    class="featured-button"
+                >
+                    ابدأ الاختبار
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOPICS
+====================================================== -->
+
+<section class="section alt" id="topics">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    📚 عالم التمريض
+                </h2>
+
+                <p>
+                    الموقع مش مجرد شرح مواد دراسية؛
+                    ده مرجع تمريضي متكامل.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="topics-grid">
+
+
+            <a href="clinical-guides.html" class="topic-card">
+
+                <span class="topic-icon">
+                    🩺
+                </span>
+
+                <span>
+
+                    <strong>
+                        Nursing Skills
+                    </strong>
+
+                    <small>
+                        المهارات التمريضية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="drugs.html" class="topic-card">
+
+                <span class="topic-icon">
+                    💊
+                </span>
+
+                <span>
+
+                    <strong>
+                        Drug Information
+                    </strong>
+
+                    <small>
+                        معلومات الأدوية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="dictionary.html" class="topic-card">
+
+                <span class="topic-icon">
+                    📖
+                </span>
+
+                <span>
+
+                    <strong>
+                        Medical Terminology
+                    </strong>
+
+                    <small>
+                        المصطلحات الطبية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="tools.html" class="topic-card">
+
+                <span class="topic-icon">
+                    🧮
+                </span>
+
+                <span>
+
+                    <strong>
+                        Medical Calculators
+                    </strong>
+
+                    <small>
+                        الحاسبات الطبية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="knowledge.html" class="topic-card">
+
+                <span class="topic-icon">
+                    🧪
+                </span>
+
+                <span>
+
+                    <strong>
+                        Lab Tests
+                    </strong>
+
+                    <small>
+                        التحاليل والفحوصات
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="knowledge.html" class="topic-card">
+
+                <span class="topic-icon">
+                    🫀
+                </span>
+
+                <span>
+
+                    <strong>
+                        Medical Conditions
+                    </strong>
+
+                    <small>
+                        الحالات المرضية
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="egyptian-nursing.html" class="topic-card">
+
+                <span class="topic-icon">
+                    🇪🇬
+                </span>
+
+                <span>
+
+                    <strong>
+                        Nursing in Egypt
+                    </strong>
+
+                    <small>
+                        التمريض في مصر
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <a href="jobs.html" class="topic-card">
+
+                <span class="topic-icon">
+                    💼
+                </span>
+
+                <span>
+
+                    <strong>
+                        Nursing Careers
+                    </strong>
+
+                    <small>
+                        الوظائف والمسار المهني
+                    </small>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EGYPT
+====================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="egypt-banner">
+
+            <div class="egypt-banner-content">
+
+                <h2>
+                    🇪🇬 التمريض في مصر
+                </h2>
+
+                <p>
+                    دليل خاص بكل ما يهم طالب وممارس التمريض
+                    في مصر: الدراسة، القبول، المدارس، المعاهد،
+                    الكليات، المسارات المهنية والفرص.
+                </p>
+
+                <a
+                    href="egyptian-nursing.html"
+                    class="banner-button"
+                >
+                    اكتشف التمريض في مصر
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARTICLES
+====================================================== -->
+
+<section class="section alt">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    📰 أحدث المقالات
+                </h2>
+
+                <p>
+                    محتوى تمريضي جديد يساعدك في التعلم والبحث.
+                </p>
+
+            </div>
+
+            <a
+                href="articles.html"
+                class="section-link"
+            >
+                كل المقالات ←
+            </a>
+
+        </div>
+
+
+        <div class="articles-grid">
+
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    🩺
+                </div>
+
+                <div class="article-body">
+
+                    <span class="article-category">
+                        NURSING BASICS
+                    </span>
+
+                    <h3>
+                        أساسيات العلامات الحيوية
+                    </h3>
+
+                    <p>
+                        أهم المعلومات التي يحتاج طالب
+                        التمريض إلى معرفتها عن العلامات الحيوية.
+                    </p>
+
+                    <a href="articles.html">
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    💊
+                </div>
+
+                <div class="article-body">
+
+                    <span class="article-category">
+                        PHARMACOLOGY
+                    </span>
+
+                    <h3>
+                        أساسيات التعامل مع الأدوية
+                    </h3>
+
+                    <p>
+                        مفاهيم أساسية تساعدك على فهم
+                        معلومات الأدوية بطريقة منظمة.
+                    </p>
+
+                    <a href="articles.html">
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="article-card">
+
+                <div class="article-image">
+                    🧼
+                </div>
+
+                <div class="article-body">
+
+                    <span class="article-category">
+                        INFECTION CONTROL
+                    </span>
+
+                    <h3>
+                        أساسيات مكافحة العدوى
+                    </h3>
+
+                    <p>
+                        مراجعة سريعة للمفاهيم الأساسية
+                        في Infection Control.
+                    </p>
+
+                    <a href="articles.html">
+                        اقرأ المقال ←
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            🩺 ابدأ رحلتك في بوابة التمريض
+        </h2>
+
+        <p>
+            ابحث عن المعلومة التي تحتاجها الآن.
+        </p>
+
+        <a
+            href="#top"
+            class="cta-button"
+            onclick="
+                window.scrollTo({
+                    top:0,
+                    behavior:'smooth'
+                });
+                return false;
+            "
+        >
+            ابدأ البحث 🔎
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    🩺 بوابة التمريض
+                </h3>
+
+                <p>
+                    مرجع رقمي عربي يهدف إلى جمع المعرفة
+                    والأدوات والمصادر والمعلومات المفيدة
+                    لطلاب وممارسي التمريض في مكان واحد.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    المعرفة
+                </h4>
+
+                <a href="knowledge.html">
+                    المعرفة التمريضية
+                </a>
+
+                <a href="clinical-guides.html">
+                    Clinical Guides
+                </a>
+
+                <a href="dictionary.html">
+                    قاموس التمريض
+                </a>
+
+                <a href="flashcards/index.html">
+                    Flashcards
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    الخدمات
+                </h4>
+
+                <a href="drugs.html">
+                    مركز الأدوية
+                </a>
+
+                <a href="tools.html">
+                    الحاسبات والأدوات
+                </a>
+
+                <a href="quizzes.html">
+                    الاختبارات
+                </a>
+
+                <a href="resources.html">
+                    Resources
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    التمريض في مصر
+                </h4>
+
+                <a href="egyptian-nursing.html">
+                    الدراسة والقبول
+                </a>
+
+                <a href="jobs.html">
+                    وظائف التمريض
+                </a>
+
+                <a href="news.html">
+                    أخبار التمريض
+                </a>
+
+                <a href="articles.html">
+                    المقالات
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div
+            class="footer-grid"
+            style="
+                margin-top:35px;
+                padding-top:30px;
+                grid-template-columns:repeat(3,1fr);
+             "
+        >
+
+            <div class="footer-column">
+
+                <h4>
+                    بوابة التمريض
+                </h4>
+
+                <a href="about.html">
+                    من نحن
+                </a>
+
+                <a href="contact.html">
+                    تواصل معنا
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    قانوني
+                </h4>
+
+                <a href="privacy.html">
+                    سياسة الخصوصية
+                </a>
+
+                <a href="terms.html">
+                    الشروط والأحكام
+                </a>
+
+                <a href="medical-disclaimer.html">
+                    إخلاء المسؤولية الطبية
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    تنبيه
+                </h4>
+
+                <a href="medical-disclaimer.html">
+                    المعلومات للتثقيف فقط
+                </a>
+
+                <a href="contact.html">
+                    الإبلاغ عن خطأ
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+            </span>
+
+            <span>
+                Built for Nursing 🩺
+            </span>
+
+        </div>
+
+
+        <div
+            style="
+                margin-top:20px;
+                padding-top:18px;
+                border-top:1px solid rgba(255,255,255,.08);
+                text-align:center;
+                color:rgba(255,255,255,.65);
+                font-size:13px;
+                line-height:2;
+            "
+        >
+
+            تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
+
+            <strong
+                style="
+                    color:#8be8f0;
+                    font-size:15px;
+                    font-weight:900;
+                "
+            >
+                احــــــمــــــد بــــــــســـــــام
+            </strong>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    function toggleMobileMenu() {
+
+        const menu =
+            document.getElementById("mobileMenu");
+
+        if (
+            menu.style.display === "none" ||
+            menu.style.display === ""
+        ) {
+
+            menu.style.display = "block";
+
+        } else {
+
+            menu.style.display = "none";
+
         }
 
-        return response.json();
+    }
 
-    })
 
-    .then(data => {
 
-        if (!Array.isArray(data) || data.length === 0) {
-            throw new Error("No flashcards found");
+    /* =====================================================
+       GLOBAL SEARCH
+    ===================================================== */
+
+    function performSearch(query) {
+
+        query =
+            query.trim();
+
+        if (!query) {
+
+            return;
+
         }
 
-        allCards = data;
 
-        createSubjects();
+        /*
+         * البحث الحقيقي سنبنيه لاحقًا
+         * داخل search.html.
+         *
+         * من الآن الرابط ثابت.
+         */
 
-        cards = [...allCards];
-
-        loading.style.display = "none";
-        flashcardsArea.style.display = "block";
-
-        showCard();
-
-    })
-
-    .catch(error => {
-
-        console.error(error);
-
-        loading.style.display = "none";
-
-        errorBox.style.display = "block";
-
-        errorBox.innerHTML = `
-            <strong>❌ تعذر تحميل الـ Flashcards.</strong>
-            <br><br>
-            تأكد من وجود الملف:
-            <br>
-            <b>data/flashcards.json</b>
-            <br><br>
-            وتأكد أن ملف JSON صحيح.
-        `;
-
-    });
-
-
-/* =========================
-   CREATE SUBJECT FILTER
-========================= */
-
-function createSubjects() {
-
-    const subjects = [
-        ...new Set(
-            allCards.map(card => card.subject)
-        )
-    ];
-
-    subjects.forEach(subject => {
-
-        const option =
-            document.createElement("option");
-
-        option.value = subject;
-        option.textContent = "📚 " + subject;
-
-        subjectFilter.appendChild(option);
-
-    });
-
-}
-
-
-/* =========================
-   SHOW CARD
-========================= */
-
-function showCard() {
-
-    if (cards.length === 0) {
-
-        flashcardsArea.style.display = "none";
-        emptyBox.style.display = "block";
-
-        return;
-    }
-
-    emptyBox.style.display = "none";
-    flashcardsArea.style.display = "block";
-
-    if (currentIndex >= cards.length) {
-        currentIndex = cards.length - 1;
-    }
-
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    }
-
-    const card = cards[currentIndex];
-
-    flashcard.classList.remove("flipped");
-
-    questionText.textContent =
-        card.question;
-
-    answerText.textContent =
-        card.answer;
-
-    frontSubject.textContent =
-        card.subject || "Nursing";
-
-    backSubject.textContent =
-        card.subject || "Nursing";
-
-    currentNumber.textContent =
-        currentIndex + 1;
-
-    totalNumber.textContent =
-        cards.length;
-
-    const progress =
-        ((currentIndex + 1) / cards.length) * 100;
-
-    progressBar.style.width =
-        progress + "%";
-
-    percentage.textContent =
-        Math.round(progress) + "%";
-
-    updateFavoriteButton();
-    updateNavigation();
-
-}
-
-
-/* =========================
-   FLIP CARD
-========================= */
-
-flashcard.addEventListener("click", () => {
-
-    flashcard.classList.toggle("flipped");
-
-});
-
-
-/* =========================
-   NEXT
-========================= */
-
-nextBtn.addEventListener("click", () => {
-
-    if (cards.length === 0) {
-        return;
-    }
-
-    if (currentIndex < cards.length - 1) {
-
-        currentIndex++;
-
-    } else {
-
-        currentIndex = 0;
+        window.location.href =
+            "search.html?q=" +
+            encodeURIComponent(query);
 
     }
 
-    showCard();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
 
-});
+    /*
+     * تم حذف مستمع globalSearch القديم لأنه
+     * لا يوجد حاليًا في الصفحة عنصر باسم:
+     *
+     * #globalSearch
+     * #globalSearchInput
+     *
+     * وتم الإبقاء على بحث الهيدر الموجود فعليًا.
+     */
 
 
-/* =========================
-   PREVIOUS
-========================= */
+    const headerSearch =
+        document.getElementById("headerSearch");
 
-previousBtn.addEventListener("click", () => {
 
-    if (cards.length === 0) {
-        return;
-    }
+    if (headerSearch) {
 
-    if (currentIndex > 0) {
+        headerSearch.addEventListener(
+            "submit",
+            function(event) {
 
-        currentIndex--;
+                event.preventDefault();
 
-    } else {
+                const input =
+                    document.getElementById(
+                        "headerSearchInput"
+                    );
 
-        currentIndex = cards.length - 1;
+                if (input) {
 
-    }
+                    performSearch(
+                        input.value
+                    );
 
-    showCard();
+                }
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-
-/* =========================
-   FAVORITES
-========================= */
-
-function getFavorites() {
-
-    return JSON.parse(
-        localStorage.getItem("nursingFlashcardFavorites")
-    ) || [];
-
-}
-
-
-function saveFavorites(favorites) {
-
-    localStorage.setItem(
-        "nursingFlashcardFavorites",
-        JSON.stringify(favorites)
-    );
-
-}
-
-
-function isFavorite(card) {
-
-    const favorites = getFavorites();
-
-    return favorites.includes(card.id);
-
-}
-
-
-favoriteBtn.addEventListener("click", () => {
-
-    if (cards.length === 0) {
-        return;
-    }
-
-    const card = cards[currentIndex];
-
-    let favorites = getFavorites();
-
-    if (favorites.includes(card.id)) {
-
-        favorites =
-            favorites.filter(id => id !== card.id);
-
-    } else {
-
-        favorites.push(card.id);
-
-    }
-
-    saveFavorites(favorites);
-
-    updateFavoriteButton();
-
-});
-
-
-function updateFavoriteButton() {
-
-    if (cards.length === 0) {
-        return;
-    }
-
-    const card = cards[currentIndex];
-
-    if (isFavorite(card)) {
-
-        favoriteBtn.textContent =
-            "★ في المفضلة";
-
-        favoriteBtn.classList.add("active");
-
-    } else {
-
-        favoriteBtn.textContent =
-            "☆ المفضلة";
-
-        favoriteBtn.classList.remove("active");
-
-    }
-
-}
-
-
-/* =========================
-   FILTER SUBJECT
-========================= */
-
-subjectFilter.addEventListener("change", () => {
-
-    const subject =
-        subjectFilter.value;
-
-    if (subject === "all") {
-
-        cards = [...allCards];
-
-    } else {
-
-        cards =
-            allCards.filter(
-                card => card.subject === subject
-            );
-
-    }
-
-    if (showFavoritesOnly) {
-
-        cards = cards.filter(
-            card => isFavorite(card)
+            }
         );
 
     }
 
-    currentIndex = 0;
-
-    showCard();
-
-});
+</script>
 
 
-/* =========================
-   FAVORITES FILTER
-========================= */
+</body>
 
-favoritesFilterBtn.addEventListener(
-    "click",
-    () => {
-
-        showFavoritesOnly =
-            !showFavoritesOnly;
-
-        updateCardsFilter();
-
-    }
-);
-
-
-function updateCardsFilter() {
-
-    const subject =
-        subjectFilter.value;
-
-    if (subject === "all") {
-
-        cards = [...allCards];
-
-    } else {
-
-        cards =
-            allCards.filter(
-                card => card.subject === subject
-            );
-
-    }
-
-    if (showFavoritesOnly) {
-
-        cards =
-            cards.filter(
-                card => isFavorite(card)
-            );
-
-        favoritesFilterBtn.textContent =
-            "📚 عرض الكل";
-
-    } else {
-
-        favoritesFilterBtn.textContent =
-            "⭐ عرض المفضلة";
-
-    }
-
-    currentIndex = 0;
-
-    showCard();
-
-}
-
-
-/* =========================
-   SHUFFLE
-========================= */
-
-shuffleBtn.addEventListener("click", () => {
-
-    for (
-        let i = cards.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        const j =
-            Math.floor(
-                Math.random() * (i + 1)
-            );
-
-        [
-            cards[i],
-            cards[j]
-        ] = [
-            cards[j],
-            cards[i]
-        ];
-
-    }
-
-    currentIndex = 0;
-
-    showCard();
-
-});
-
-
-/* =========================
-   RESET
-========================= */
-
-resetBtn.addEventListener("click", () => {
-
-    currentIndex = 0;
-
-    showCard();
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-function updateNavigation() {
-
-    if (cards.length <= 1) {
-
-        previousBtn.disabled = true;
-        nextBtn.disabled = true;
-
-    } else {
-
-        previousBtn.disabled = false;
-        nextBtn.disabled = false;
-
-    }
-
-}
-
-</script></body>
 </html>
