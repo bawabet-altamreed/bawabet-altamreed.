@@ -13,7 +13,7 @@
     <title>
         بوابة التمريض | أكبر مرجع رقمي للتمريض في مصر
     </title>
-        
+
     <meta
         name="description"
         content="بوابة التمريض هي مرجع رقمي شامل لطلاب وممارسي التمريض في مصر. اكتشف الأدوية، المهارات التمريضية، الحاسبات، المصطلحات، الاختبارات، الأدلة السريرية، الوظائف، الأخبار والمصادر."
@@ -44,7 +44,8 @@
         href="https://bawabet-altamreed.com/"
     >
 
-       <!-- =====================================================
+
+    <!-- =====================================================
          SEO ENHANCEMENTS
     ====================================================== -->
 
@@ -357,7 +358,7 @@
         "inLanguage": "ar-EG"
     }
 
-    </script> 
+    </script>
 
 
     <!-- =====================================================
@@ -519,18 +520,19 @@
 
 
         .logo-text small {
-    display: block;
-    color: #78909c;
-    font-size: 9px;
-    line-height: 1.5;
-    margin-top: 2px;
-    white-space: nowrap;
-}
+            display: block;
+            color: #78909c;
+            font-size: 9px;
+            line-height: 1.5;
+            margin-top: 2px;
+            white-space: nowrap;
+        }
 
-.logo-text small b {
-    color: #0b526b;
-    font-weight: 900;
-}
+
+        .logo-text small b {
+            color: #0b526b;
+            font-weight: 900;
+        }
 
 
         .main-nav {
@@ -667,6 +669,14 @@
         }
 
 
+        /*
+         * HERO GRID
+         * تم ضبطه ليستوعب:
+         * 1 — المحتوى الرئيسي
+         * 2 — Developer Card
+         * 3 — Hero Panel
+         */
+
         .hero-inner {
             position: relative;
             z-index: 2;
@@ -675,9 +685,10 @@
 
             grid-template-columns:
                 minmax(0, 1.4fr)
-                minmax(300px, .6fr);
+                minmax(240px, .6fr)
+                minmax(270px, .7fr);
 
-            gap: 60px;
+            gap: 35px;
 
             align-items: center;
         }
@@ -1669,6 +1680,28 @@
             }
 
 
+            /*
+             * HERO TABLET
+             */
+
+            .hero-inner {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 30px;
+            }
+
+
+            .hero-content {
+                grid-column: 1 / -1;
+            }
+
+
+            .hero-panel {
+                grid-column: 1 / -1;
+            }
+
+
             .services-grid {
                 grid-template-columns:
                     repeat(3, 1fr);
@@ -1749,7 +1782,13 @@
 
 
             .hero-content {
+                grid-column: auto;
                 margin: auto;
+            }
+
+
+            .hero-panel {
+                grid-column: auto;
             }
 
 
@@ -1935,7 +1974,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 
 <!-- =====================================================
@@ -1958,14 +1997,14 @@
 
             <span class="logo-text">
 
-    <strong>
-        بوابة التمريض
-    </strong>
+                <strong>
+                    بوابة التمريض
+                </strong>
 
-    <small>
-        تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
-        <b>احــــــمــــــد بــــــــســـــــام</b>
-    </small>
+                <small>
+                    تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
+                    <b>احــــــمــــــد بــــــــســـــــام</b>
+                </small>
 
             </span>
 
@@ -2004,7 +2043,7 @@
                 الاختبارات
             </a>
 
-            <a href="egypt.html">
+            <a href="egyptian-nursing.html">
                 تمريض مصر
             </a>
 
@@ -2020,9 +2059,13 @@
                 type="search"
                 id="headerSearchInput"
                 placeholder="بحث..."
+                aria-label="البحث في بوابة التمريض"
             >
 
-            <button type="submit">
+            <button
+                type="submit"
+                aria-label="بحث"
+            >
                 🔎
             </button>
 
@@ -2059,18 +2102,53 @@
             "
         >
 
-            <a href="index.html">🏠 الرئيسية</a>
-            <a href="knowledge.html">🩺 المعرفة التمريضية</a>
-            <a href="drugs.html">💊 مركز الأدوية</a>
-            <a href="tools.html">🧮 الأدوات والحاسبات</a>
-            <a href="dictionary.html">📖 قاموس التمريض</a>
-            <a href="quizzes.html">📝 الاختبارات</a>
-            <a href="flashcards.html">🧠 Flashcards</a>
-            <a href="clinical-guides.html">📋 Clinical Guides</a>
-            <a href="egyptian-nursing.html">🇪🇬 التمريض في مصر</a>
-            <a href="jobs.html">💼 وظائف التمريض</a>
-            <a href="news.html">📰 أخبار التمريض</a>
-            <a href="resources.html">📚 Resources</a>
+            <a href="index.html">
+                🏠 الرئيسية
+            </a>
+
+            <a href="knowledge.html">
+                🩺 المعرفة التمريضية
+            </a>
+
+            <a href="drugs.html">
+                💊 مركز الأدوية
+            </a>
+
+            <a href="tools.html">
+                🧮 الأدوات والحاسبات
+            </a>
+
+            <a href="dictionary.html">
+                📖 قاموس التمريض
+            </a>
+
+            <a href="quizzes.html">
+                📝 الاختبارات
+            </a>
+
+            <a href="flashcards/index.html">
+                🧠 Flashcards
+            </a>
+
+            <a href="clinical-guides.html">
+                📋 Clinical Guides
+            </a>
+
+            <a href="egyptian-nursing.html">
+                🇪🇬 التمريض في مصر
+            </a>
+
+            <a href="jobs.html">
+                💼 وظائف التمريض
+            </a>
+
+            <a href="news.html">
+                📰 أخبار التمريض
+            </a>
+
+            <a href="resources.html">
+                📚 Resources
+            </a>
 
         </div>
 
@@ -2096,8 +2174,9 @@
 
             <span class="hero-badge">
                 🇪🇬 المرجع الرقمي للتمريض في مصر
-             </span>
-            
+            </span>
+
+
             <h1>
 
                 كل ما تحتاجه في
@@ -2108,6 +2187,7 @@
 
             </h1>
 
+
             <p class="hero-description">
 
                 ابحث عن دواء، تعلّم مهارة تمريض،
@@ -2117,61 +2197,64 @@
 
             </p>
 
-           <div class="popular-searches">
 
-    <span>
-        الأكثر بحثًا:
-    </span>
+            <div class="popular-searches">
 
-    <a href="drugs.html">
-        <span>💊</span>
-        الأدوية
-    </a>
+                <span>
+                    الأكثر بحثًا:
+                </span>
 
-    <a href="dictionary.html">
-        <span>📖</span>
-        المصطلحات
-    </a>
+                <a href="drugs.html">
+                    <span>💊</span>
+                    الأدوية
+                </a>
 
-    <a href="tools.html">
-        <span>🧮</span>
-        الحاسبات
-    </a>
+                <a href="dictionary.html">
+                    <span>📖</span>
+                    المصطلحات
+                </a>
 
-    <a href="clinical-guides.html">
-        <span>🩺</span>
-        المهارات
-    </a>
+                <a href="tools.html">
+                    <span>🧮</span>
+                    الحاسبات
+                </a>
 
-</div> 
+                <a href="clinical-guides.html">
+                    <span>🩺</span>
+                    المهارات
+                </a>
+
+            </div>
 
         </div>
+
 
         <div class="developer-card">
 
-    <div class="developer-icon">
-        👨‍💻
-    </div>
+            <div class="developer-icon">
+                👨‍💻
+            </div>
 
-    <span class="developer-label">
-        تم تطوير وبرمجة وتنفيذ الموقع
-    </span>
+            <span class="developer-label">
+                تم تطوير وبرمجة وتنفيذ الموقع
+            </span>
 
-    <h2>
-        Ahmed Bassam
-    </h2>
+            <h2>
+                Ahmed Bassam
+            </h2>
 
-    <p>
-        (احـــمـــد بـــســـام)
-    </p>
+            <p>
+                (احـــمـــد بـــســـام)
+            </p>
 
-    <div class="developer-line"></div>
+            <div class="developer-line"></div>
 
-    <small>
-        Founder & Developer
-    </small>
+            <small>
+                Founder & Developer
+            </small>
 
         </div>
+
 
         <div class="hero-panel">
 
@@ -3231,7 +3314,7 @@
                     قاموس التمريض
                 </a>
 
-                <a href="flashcards.html">
+                <a href="flashcards/index.html">
                     Flashcards
                 </a>
 
@@ -3269,7 +3352,7 @@
                     التمريض في مصر
                 </h4>
 
-                <a href="egypt.html">
+                <a href="egyptian-nursing.html">
                     الدراسة والقبول
                 </a>
 
@@ -3291,8 +3374,9 @@
         </div>
 
 
-        <div class="footer-grid"
-             style="
+        <div
+            class="footer-grid"
+            style="
                 margin-top:35px;
                 padding-top:30px;
                 grid-template-columns:repeat(3,1fr);
@@ -3358,42 +3442,47 @@
 
         <div class="footer-bottom">
 
-    <span>
-        © 2026 بوابة التمريض — جميع الحقوق محفوظة.
-    </span>
+            <span>
+                © 2026 بوابة التمريض — جميع الحقوق محفوظة.
+            </span>
 
-    <span>
-        Built for Nursing 🩺
-    </span>
+            <span>
+                Built for Nursing 🩺
+            </span>
 
-</div>
+        </div>
 
 
-<div
-    style="
-        margin-top:20px;
-        padding-top:18px;
-        border-top:1px solid rgba(255,255,255,.08);
-        text-align:center;
-        color:rgba(255,255,255,.65);
-        font-size:13px;
-        line-height:2;
-    "
->
+        <div
+            style="
+                margin-top:20px;
+                padding-top:18px;
+                border-top:1px solid rgba(255,255,255,.08);
+                text-align:center;
+                color:rgba(255,255,255,.65);
+                font-size:13px;
+                line-height:2;
+            "
+        >
 
-    تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
-    
-    <strong
-        style="
-            color:#8be8f0;
-            font-size:15px;
-            font-weight:900;
-        "
-    >
-        احــــــمــــــد بــــــــســـــــام
-    </strong>
+            تم تطوير وبرمجة وتنفيذ هذا الموقع من قبل :
 
-</div>
+            <strong
+                style="
+                    color:#8be8f0;
+                    font-size:15px;
+                    font-weight:900;
+                "
+            >
+                احــــــمــــــد بــــــــســـــــام
+            </strong>
+
+        </div>
+
+    </div>
+
+</footer>
+
 
 
 <!-- =====================================================
@@ -3459,31 +3548,24 @@
 
 
 
-    document
-        .getElementById("globalSearch")
-        .addEventListener(
-            "submit",
-            function(event) {
-
-                event.preventDefault();
-
-                const input =
-                    document.getElementById(
-                        "globalSearchInput"
-                    );
-
-                performSearch(
-                    input.value
-                );
-
-            }
-        );
+    /*
+     * تم حذف مستمع globalSearch القديم لأنه
+     * لا يوجد حاليًا في الصفحة عنصر باسم:
+     *
+     * #globalSearch
+     * #globalSearchInput
+     *
+     * وتم الإبقاء على بحث الهيدر الموجود فعليًا.
+     */
 
 
+    const headerSearch =
+        document.getElementById("headerSearch");
 
-    document
-        .getElementById("headerSearch")
-        .addEventListener(
+
+    if (headerSearch) {
+
+        headerSearch.addEventListener(
             "submit",
             function(event) {
 
@@ -3494,12 +3576,18 @@
                         "headerSearchInput"
                     );
 
-                performSearch(
-                    input.value
-                );
+                if (input) {
+
+                    performSearch(
+                        input.value
+                    );
+
+                }
 
             }
         );
+
+    }
 
 </script>
 
