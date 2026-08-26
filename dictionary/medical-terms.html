@@ -3750,54 +3750,23 @@ async function initializeDictionary() {
             "none";
 
 
-        /*
-         * لو بعض الملفات فشلت
-         * لكن ملفات أخرى اشتغلت.
-         */
+       /*
+ * DATABASE STATUS
+ *
+ * القاموس يعمل حتى لو كان هناك
+ * اختلاف بسيط أو ملف لم يتم تحميله.
+ * لا نعرض رسالة خطأ للمستخدم طالما
+ * توجد قاعدة بيانات محملة ويمكن استخدامها.
+ */
 
-        if (
-            result.errors.length
-        ) {
+errorBox.style.display = "none";
 
-            errorBox.style.display =
-                "block";
-
-
-            errorText.textContent =
-                "تم تحميل " +
-                result.totalUnique.toLocaleString("en-US") +
-                " مصطلحًا، لكن تعذر تحميل بعض الملفات: " +
-                result.errors
-                    .map(
-                        item =>
-                            item.source
-                    )
-                    .join("، ") +
-                ".";
-
-
-            setStatus(
-                "تم تحميل القاموس جزئيًا.",
-                "error"
-            );
-
-        } else {
-
-            errorBox.style.display =
-                "none";
-
-
-            setStatus(
-                "تم تحميل " +
-                result.totalUnique.toLocaleString("en-US") +
-                " مصطلح فريد من " +
-                result.totalLoaded.toLocaleString("en-US") +
-                " سجل.",
-                "success"
-            );
-
-        }
-
+setStatus(
+    "تم تحميل " +
+    result.totalUnique.toLocaleString("en-US") +
+    " مصطلحًا.",
+    "success"
+); 
 
         /*
          * لو فيه بحث جاي من dictionary.html
